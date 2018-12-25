@@ -1,0 +1,81 @@
+* {
+	font-family:"Open Sans","Droid Sans","Trebuchet MS","Ariel",Helvetica,sans-serif;
+}
+
+#header {
+	border-bottom:3px dotted #aaa;
+}
+
+#header h1 {
+	font-family:"Lora","Liberation Serif","Droid Serif","Times New Roman",serif;
+}
+
+#container {
+	border-radius:12px;
+	background-color:white;
+	padding:1em;
+}
+
+#nav {
+	padding-top:1em;
+}
+
+#nav ul {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+
+#nav ul li {
+	margin:0.5em;
+}
+
+#nav ul li a {
+	font-weight:bold;
+	display:block;
+	background-color:rgb(204, 221, 255);
+	padding:0.5em;
+	border-radius:6px;
+	border:2px solid white;
+	text-decoration:none;
+	color:black;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+#nav ul li a:hover {
+	border:2px solid #aaa;
+}
+
+#nav ul li a.current {
+	
+	background-color:rgb(204, 255, 204);
+}
+
+#content {
+	padding:1em;
+}
+
+@media (min-width: 768px) {
+  .nav { width: 25%}
+  .content { width: 75%; }
+  #content p,#content li {
+    text-align:justify;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+  	background-color:#aaa;
+  }
+  #container {
+	width:75%;
+	margin-left:auto;
+	margin-right:auto;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);  
+  }
+}
+
+
