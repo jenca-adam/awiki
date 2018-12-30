@@ -89,6 +89,7 @@ def edit_page(pagename):
             mdf.meta['title']=form['title'].data
             mdf.markdown='\n'.join(form['markdown'].data.splitlines())
             mdf.save()
+            os.system('hg add %s' % mdf.basename+'.md')
             os.system('hg commit %s -m %s' % (mdf.basename+'.md',form['commit_message'].data))
             return redirect('/view/'+pagename)
     else:
