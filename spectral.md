@@ -13,6 +13,4 @@
 [arXiv:1811.12407](https://arxiv.org/abs/1811.12407)
 
 
-jkcnsjcnakn [link na pdf](/static/pdf/notesv8.pdf)
-
-nieconieco
+j
