@@ -18,7 +18,11 @@ $\mathcal N(\Phi)$.
  
 ## Papers
 
-1. W. Arveson, The asymptotic lift of a completely positive map, Journal of Functional Analysis 248 (2007), 202-224
-1. R. Carbone, Y. Patraut, Homogeneous open quantum random walk on a lattice, Journal of Statistical Physics 160 (2015), 1125-1153
+1. [arveson2007theasymptotic](/static/other/arveson2007theasymptotic.pdf): W. Arveson, The asymptotic lift of a completely positive map, Journal of Functional Analysis 248 (2007), 202-224
+1. [batkai2012decomposition](/static/other/batkai2012decomposition.pdf): Decomposition of operator semigroups on $W^\*$ -algebras, Semigroup Forum 84 (2012),  8–24, arxiv:1106.0287 
+1. [carbone2015homogeneous](/static/other/carbone2015homogeneous.pdf): R. Carbone, Y. Patraut, Homogeneous open quantum random walk on a lattice, Journal of Statistical Physics 160 (2015), 1125-1153
+1. [carbone2015environment](/static/other/carbone2015environment.pdf): R. Carbone, E. Sasso. V. Umanita, Environment induced decoherence for Markovian evolutions, JMP 56 (2015), 092704
+1. [groh1984spectrum](/static/other/groh1984spectrum.pdf): U. Groh, Spectrum and asymptotic behaviour of completely positive maps on $B(\mathcal H)$, Math. Japonica 29 (1984), 395-402
+
 
 ## To read

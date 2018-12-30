@@ -2,15 +2,15 @@
 ---
 ## Priority
 
-* Tensor products of dimension effect algebras [DEA](tpdea)
+* [Tensor products of dimension effect algebras](tpdea)
 
 ---
 
 ## Finishing
 
-* Decoherence-free subalgebras [DFS](decoherence)
+* [Decoherence-free subalgebras](decoherence)
 
-* Spectral effect algegras [SEA](spectral)
+* [Spectral effect algebras](spectral)
 
 ---
 
