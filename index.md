@@ -1,11 +1,5 @@
-{title: Index}
+{title: Moje wiki}
 ---
-Toto je koreňová stránka. Link na [page](page).
+Markdown sem.
 
-Osstavec.
-
-skusme newline
-
-este raz
-
-$a\oplus b$
+dkdlkdk
