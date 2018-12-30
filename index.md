@@ -4,4 +4,4 @@ Markdown sem.
 
 dkdlkdk
 
-(novastranka)[Nová stránka]
+[Nová stránka](novastranka)
