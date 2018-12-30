@@ -8,11 +8,11 @@
 
 ## Drafts
 
-* [Tensor products of DEA](/static/pdf/nejake.pdf):
+* [Tensor products of DEA](/static/pdf/tpdea.pdf):
 
  An effect algebra tensor product of dimension effect algebras (DEA) is a DEA. 
 
-* [Real interval as DEA](/static/pdf/nejake.pdf):
+* [Real interval as DEA](/static/pdf/interval.pdf):
 
 The interval $[0,1]$ in $\mathbb R$ as a direct limit of finite MV-algebras.
 
@@ -22,6 +22,7 @@ The interval $[0,1]$ in $\mathbb R$ as a direct limit of finite MV-algebras.
 
 ## Papers
 
+1. A. Jenčová, S. Pulmannová: [A note on effect algebras and dimension theory of AF C*-algebras](/static/pdf/ROMP08.pdf), Reports on Mathematical Physics 62 (2008), pp. 205-218 
 
 ## To read
 
