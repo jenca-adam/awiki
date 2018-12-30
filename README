@@ -1,7 +1,9 @@
 Je treba mat nainstalovane tieto pythonovske baliky
-pre Python 3 (nie 2!)
+pre Python 3 (nie Python 2!)
 
 * PyYAML
 * Flask
 * WTForms
+
+Wiki bezi na http://localhost:5000/
 
