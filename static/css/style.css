@@ -56,6 +56,42 @@
 	padding:1em;
 }
 
+#editbutton {
+	border: 1px solid blue;
+	margin:0.5em;
+	width:5em;
+	float:right;
+}
+
+#editbutton a {
+	color:blue;
+	background-color:#ccf;
+	text-decoration:none;
+	display:block;
+	padding:0.5em;
+}
+
+#editbutton a:hover {
+	background-color:#eef;
+}
+	
+
+#mddiv textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width:100%;
+	height:20em;
+}
+
+.formlabel {
+	text-align:right;
+}
+
+.formerrors li {
+	color: red;
+}
+
 @media (min-width: 768px) {
   .nav { width: 25%}
   .content { width: 75%; }
