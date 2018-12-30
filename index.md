@@ -3,3 +3,5 @@
 Markdown sem.
 
 dkdlkdk
+
+(novastranka)[Nová stránka]
