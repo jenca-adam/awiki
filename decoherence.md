@@ -14,7 +14,7 @@ The decoherence-free subalgebra of a channel on $B(\mathcal H)$, in the presence
 
 1. In the case with faithful normal  invariant state (FNIS), one can study the spectral gap and the exponential decay outside 
 $\mathcal N(\Phi)$.
-1. Describe the decoherence-free subalgebra without FNIS, using the paper [arveson](/static/pdf/nejake.pdf))
+1. Describe the decoherence-free subalgebra without FNIS, using the paper [arveson2007theasymptotic](/static/other/asy.pdf)
  
 ## Papers
 
