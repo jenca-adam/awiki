@@ -8,6 +8,8 @@
 
 ## Drafts
 
+ blbsl
+
 * [Tensor products of DEA](/static/pdf/tpdea.pdf):
 
  An effect algebra tensor product of dimension effect algebras (DEA) is a DEA. 
