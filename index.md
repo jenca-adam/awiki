@@ -1,3 +1,3 @@
-{title: Moja Wiki}
+{title: Tvoja Wiki}
 ---
-nejaky markdown
+nejaky markdown (in8 str8aNka)[hocico]
