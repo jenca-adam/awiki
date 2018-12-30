@@ -22,8 +22,3 @@ $\mathcal N(\Phi)$.
 1. R. Carbone, Y. Patraut, Homogeneous open quantum random walk on a lattice, Journal of Statistical Physics 160 (2015), 1125-1153
 
 ## To read
-
-
-jkcnsjcnakn [link na pdf](/static/pdf/nejake.pdf)
-
-nieconieco
