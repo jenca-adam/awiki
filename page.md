@@ -1,4 +1,4 @@
-title: Title is this
+{title: Title is this}
 ---
  * sjjsj
  * shshsh
@@ -6,3 +6,4 @@ title: Title is this
 $\int\sin(x)dx$
 
 ssk lsklsk lkh hsjhj
+sskslkskls
