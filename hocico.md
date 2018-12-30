@@ -1,3 +1,3 @@
 {title: Zasa wiki}
 ---
-jkcnsjcnakn
+jkcnsjcnakn [link na pdf](/static/pdf/nejake.pdf)
