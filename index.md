@@ -4,6 +4,7 @@
 
 * [Tensor products of dimension effect algebras](tpdea)
 * [Sandwiched Rényi divergences and sufficiency](sandwiched)
+* [Comparison of quantum channels](comparison)
 
 ---
 
@@ -18,6 +19,8 @@
 
 * [Sufficiency on von Neumann algebras](sufficiency)
 * [Quantum statistical experiments](experiment)
+* [Fisher information for Gaussian experiments](fisher)
+* [Incompatibility witnesses](witnesses)
 ---
 
 ## On hold
