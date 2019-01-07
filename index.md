@@ -24,12 +24,17 @@
 ---
 
 ## On hold
+
+* [The state-effect monad](state-effect)
+
 ---
 
 ## Finished
 ---
 
 ## Zombies
+
+* [On $C^*$-extremality](cextremal)
 
 
 nejaky markdown [text linku](hocico)
