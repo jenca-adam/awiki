@@ -15,6 +15,9 @@
 ---
 
 ## Alive
+
+* [Sufficiency on von Neumann algebras](sufficiency)
+* [Quantum statistical experiments](experiment)
 ---
 
 ## On hold
