@@ -16,13 +16,15 @@ class MarkdownFile(object):
     def __init__(self,basename):
         
         self.basename=basename
-        self.html=""
-        self.markdown=""
-        self.meta={"title":""}
-    
+        self.html=''
+        self.markdown=''
+        self.meta={'title':''}
+        self.filename='pages/%s/page.md' % self.basename
+        self.dirname='pages/%s' % self.dirname
+
     def load(self):
 
-        markdown_lines=open('pages/%s/page.md' % self.basename).readlines()
+        markdown_lines=open(self.filename).readlines()
         yaml_lines=[]
         while True:
             yaml_line=markdown_lines.pop(0) 
@@ -34,8 +36,10 @@ class MarkdownFile(object):
         self.html=markdown.markdown(self.markdown)
 
     def save(self):
-
-        fp=open(self.basename+'.md','w')
+        
+        if not os.path.exists(self.dirname):
+            os.mkdir(self.dirname)
+        fp=open(self.filename,'w')
         fp.write(yaml.dump(self.meta))
         fp.write('---\n')
         fp.write(self.markdown)
