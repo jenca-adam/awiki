@@ -20,7 +20,7 @@ class MarkdownFile(object):
         self.markdown=''
         self.meta={'title':''}
         self.filename='pages/%s/page.md' % self.basename
-        self.dirname='pages/%s' % self.dirname
+        self.dirname='pages/%s' % self.basename
 
     def load(self):
 
