@@ -1,4 +1,4 @@
-{title: Tensor product of DEA}
+{title: Tensor product of dimension effect algebras}
 ---
 ## People
 
@@ -26,4 +26,3 @@ The interval $[0,1]$ in $\mathbb R$ as a direct limit of finite MV-algebras.
 1. A. Jenčová, S. Pulmannová: [A note on effect algebras and dimension theory of AF C*-algebras](/static/pdf/ROMP08.pdf), Reports on Mathematical Physics 62 (2008), pp. 205-218 
 
 ## To read
-
