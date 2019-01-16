@@ -7,7 +7,7 @@
 
 ## Drafts
 
- [try link](newpage)
+ [try link](decoherence/pdfname.pdf)
 
 * [Decoherence-free subalgebra](/static/pdf/MultiFixedF1.pdf)
 
