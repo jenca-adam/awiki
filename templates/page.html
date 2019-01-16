@@ -4,17 +4,6 @@
   <div class="header block" id="header">
     <h1>{{meta.title}}</h1>
   </div>
-  <div class="nav block" id="nav">
-    <ul>
-    {% for md_file in md_files %} 
-    <li><a href="/view/{{md_file.basename}}"
-        {% if current==md_file.basename %}
-        class="current"
-        {% endif %}>
-        {{md_file.meta.title}}</a></li>
-    {% endfor %}
-    </ul>
-  </div>
   <div class="content block" id="content">
   <div id="editbutton">
   <a href="/edit/{{current}}">Edit</a>

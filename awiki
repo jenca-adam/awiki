@@ -22,7 +22,7 @@ class MarkdownFile(object):
     
     def load(self):
 
-        markdown_lines=open(self.basename+'.md').readlines()
+        markdown_lines=open('pages/%s/page.md' % self.basename).readlines()
         yaml_lines=[]
         while True:
             yaml_line=markdown_lines.pop(0) 
@@ -41,18 +41,6 @@ class MarkdownFile(object):
         fp.write(self.markdown)
         fp.close()
 
-def get_md_files():
-
-    fnm_stats=[(os.stat(fnm),fnm) for fnm in glob.glob('*.md')]
-    fnm_stats=[(stat[ST_CTIME],fnm) for stat,fnm in fnm_stats if S_ISREG(stat[ST_MODE])]
-    fnm_stats.sort()
-    md_files=[]
-    for stat,fnm in fnm_stats:
-        mdf=MarkdownFile(fnm.rsplit(".",1)[0])
-        mdf.load()
-        md_files.append(mdf)
-    return md_files
-
 
 @app.route('/view/<string:pagename>')
 def view_page(pagename):
@@ -62,10 +50,9 @@ def view_page(pagename):
         mdf.load()
     except FileNotFoundError:
         return redirect('/edit/'+pagename) 
-    md_files=get_md_files()       
     env=Environment(loader=FileSystemLoader('templates'))
     t=env.get_template('page.html')
-    return t.render(md_files=md_files,meta=mdf.meta,content=mdf.html,current=pagename)
+    return t.render(meta=mdf.meta,content=mdf.html,current=mdf.basename)
 
 class EditForm(Form):
     title=StringField('Title',[validators.required()])
@@ -81,7 +68,6 @@ def edit_page(pagename):
         mdf.load()
     except FileNotFoundError:
         pass
-    md_files=get_md_files()          
     env=Environment(loader=FileSystemLoader('templates'))
     if request.method=='POST':
         form=EditForm(request.form)
@@ -97,7 +83,7 @@ def edit_page(pagename):
         form['title'].process_data(mdf.meta['title'])
         form['markdown'].process_data(mdf.markdown)
     t=env.get_template('edit_page.html')
-    return t.render(md_files=md_files,meta=mdf.meta,content=mdf.html,current=pagename,form=form)
+    return t.render(meta=mdf.meta,content=mdf.html,form=form)
 
 @app.route('/')
 def index():

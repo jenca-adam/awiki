@@ -93,8 +93,7 @@
 }
 
 @media (min-width: 768px) {
-  .nav { width: 25%}
-  .content { width: 75%; }
+  .content { width: 100%; }
   #content p,#content li {
     text-align:justify;
   }
