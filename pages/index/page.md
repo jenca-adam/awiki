@@ -36,5 +36,3 @@
 
 * [On $C^*$-extremality](cextremal)
 
-
-nejaky markdown [text linku](hocico)
