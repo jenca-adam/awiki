@@ -1,0 +1,24 @@
+#!/usr/bin/env python3 
+import os
+import sys
+import glob
+import markdown
+import argparse
+from bs4 import BeautifulSoup
+
+parser=argparse.ArgumentParser()
+parser.add_argument('pagename')
+args=parser.parse_args()
+pagename=args.pagename.split('/')[-1]
+md=open('pages/%s/page.md' % pagename).read()
+html=markdown.markdown(md,extensions=['tables'])
+soup=BeautifulSoup(html,"lxml")
+for anchor in soup.find_all('a'):
+    href=anchor['href']
+    if '/' not in href:
+        for bibfile in glob.glob('pages/%s/*.bib' % href):
+            sys.stdout.write(open(bibfile).read())
+        
+    
+
+

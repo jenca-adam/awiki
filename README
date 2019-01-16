@@ -1,9 +1,10 @@
 Je treba mat nainstalovane tieto pythonovske baliky
-pre Python 3 (nie Python 2!)
+pre Python 3
 
 * PyYAML
 * Flask
 * WTForms
+* BeautifulSoup
 
 Wiki bezi na http://localhost:5000/
 
