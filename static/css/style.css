@@ -92,6 +92,14 @@
 	color: red;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
 @media (min-width: 768px) {
   .content { width: 100%; }
   #content p,#content li {

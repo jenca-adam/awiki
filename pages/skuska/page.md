@@ -1,6 +1,7 @@
 {title: Skuska}
 ---
-tata skusa
+
+[link na pdf](skuska/pdfname.pdf)
 
 First Header  | Second Header
 ------------- | -------------

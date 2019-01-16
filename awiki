@@ -2,9 +2,10 @@
 import os
 import sys
 import glob
+import mimetypes
 from stat import S_ISREG, ST_CTIME, ST_MODE
 
-from flask import Flask,request,url_for,redirect
+from flask import Flask,request,url_for,redirect,Response
 from wtforms import Form,validators,TextAreaField,StringField
 import yaml
 import markdown
@@ -34,7 +35,7 @@ class MarkdownFile(object):
             yaml_lines.append(yaml_line)
         self.meta=yaml.load("".join(yaml_lines))
         self.markdown="".join(markdown_lines)
-        self.html=markdown.markdown(self.markdown)
+        self.html=markdown.markdown(self.markdown,extensions=['tables'])
 
     def save(self):
         
@@ -58,6 +59,13 @@ def view_page(pagename):
     env=Environment(loader=FileSystemLoader('templates'))
     t=env.get_template('page.html')
     return t.render(meta=mdf.meta,content=mdf.html,current=mdf.basename)
+
+@app.route('/view/<string:pagename>/<string:attachment>')
+def view_attachment(pagename,attachment):
+    
+    mimetype,encoding=mimetypes.guess_type(attachment)
+    content=open('pages/%s/%s' % (pagename,attachment),'rb').read()
+    return Response(content,mimetype=mimetype)
 
 class EditForm(Form):
     title=StringField('Title',[validators.required()])
