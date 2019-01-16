@@ -27,5 +27,3 @@ The interval $[0,1]$ in $\mathbb R$ as a direct limit of finite MV-algebras.
 
 ## To read
 
-
-nejaky markdown [text linku](hocico)
