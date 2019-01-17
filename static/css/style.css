@@ -56,22 +56,32 @@
 	padding:1em;
 }
 
-#editbutton {
-	border: 1px solid blue;
+#buttons {
 	margin:0.5em;
-	width:5em;
+	width:10em;
 	float:right;
 }
 
-#editbutton a {
+#buttons ul {
+	text-align:right;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+#buttons ul li {
+	display:inline;
+}
+
+#buttons a {
+	border: 1px solid blue;
 	color:blue;
 	background-color:#ccf;
 	text-decoration:none;
-	display:block;
 	padding:0.5em;
 }
 
-#editbutton a:hover {
+#buttons a:hover {
 	background-color:#eef;
 }
 	

@@ -3,9 +3,10 @@ import os
 import sys
 import glob
 import mimetypes
+from bs4 import BeautifulSoup
 from stat import S_ISREG, ST_CTIME, ST_MODE
 
-from flask import Flask,request,url_for,redirect,Response
+from flask import Flask,request,url_for,redirect,Response,abort
 from wtforms import Form,validators,TextAreaField,StringField
 import yaml
 import markdown
@@ -59,6 +60,24 @@ def view_page(pagename):
     env=Environment(loader=FileSystemLoader('templates'))
     t=env.get_template('page.html')
     return t.render(meta=mdf.meta,content=mdf.html,current=mdf.basename)
+
+@app.route('/makebib/<string:pagename>.bib')
+def get_bib(pagename):
+   
+    mdf=MarkdownFile(pagename)
+    try:
+        mdf.load()
+    except FileNotFoundError:
+        abort(404)
+    soup=BeautifulSoup(mdf.html,"lxml")
+    bibfiles=[]
+    for anchor in soup.find_all('a'):
+        href=anchor['href']
+        if '/' not in href:
+            for bibfile in glob.glob('pages/%s/*.bib' % href):
+                bibfiles.append(open(bibfile).read())
+    return Response(''.join(bibfiles),mimetype='application/x-bibtex')
+    
 
 @app.route('/view/<string:pagename>/<string:attachment>')
 def view_attachment(pagename,attachment):
