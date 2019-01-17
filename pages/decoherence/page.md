@@ -1,4 +1,4 @@
-{title: Decoherence-free}
+title: Decoherence-free
 ---
 ## People
 
@@ -13,8 +13,7 @@ The decoherence-free subalgebra of a channel on $B(\mathcal H)$, in the presence
 
 ## To do
 
-* Finish the Pauli example: invariant states?
-* Rewrite the beginning of Section 2 (before proof of Thm. 1)
+* Rewrite the beginning of Section 2 (before proof of Thm. 1) Check the equality in def. of $\mathcal M_r$!
 * Section 4 (OQRW's) rewrite the beginning, check it ! Maybe only for homogeneous? 
 
 
@@ -31,6 +30,6 @@ $\mathcal N(\Phi)$.
 1. [carbone2015homogeneous](/static/other/carbone2015homogeneous.pdf): R. Carbone, Y. Patraut, Homogeneous open quantum random walk on a lattice, Journal of Statistical Physics 160 (2015), 1125-1153
 1. [carbone2015environment](/static/other/carbone2015environment.pdf): R. Carbone, E. Sasso. V. Umanita, Environment induced decoherence for Markovian evolutions, JMP 56 (2015), 092704
 1. [groh1984spectrum](/static/other/groh1984spectrum.pdf): U. Groh, Spectrum and asymptotic behaviour of completely positive maps on $B(\mathcal H)$, Math. Japonica 29 (1984), 395-402
-
+1.[hellmich2011quantum](/static/otherhellmich2011quantum)
 
 ## To read
