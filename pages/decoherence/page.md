@@ -11,6 +11,13 @@
 
 The decoherence-free subalgebra of a channel on $B(\mathcal H)$, in the presence of a faithful normal  invariant state. It is proved that this subalgebra coincides with the subalgebra of the Glicksberg-jacobs-DeLeeuw decomposition. The structure of this subalgebra and the subalgebra of fixed points is studied and a notion of a period is defined also in the reducible case. Homogeneous open quantum random walks are studied as examples, including one irreducible without invariant states.
 
+## To do
+
+* Finish the Pauli example: invariant states?
+* Rewrite the beginning of Section 2 (before proof of Thm. 1)
+* Section 4 (OQRW's) rewrite the beginning, check it ! Maybe only for homogeneous? 
+
+
 ## Ideas
 
 1. In the case with faithful normal  invariant state (FNIS), one can study the spectral gap and the exponential decay outside 
