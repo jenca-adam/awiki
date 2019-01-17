@@ -42,7 +42,7 @@ class MarkdownFile(object):
         if not os.path.exists(self.dirname):
             os.mkdir(self.dirname)
         fp=open(self.filename,'w')
-        fp.write(yaml.dump(self.meta))
+        fp.write(yaml.dump(self.meta,default_flow_style=False))
         fp.write('---\n')
         fp.write(self.markdown)
         fp.close()
