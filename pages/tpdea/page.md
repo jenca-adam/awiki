@@ -12,7 +12,7 @@ title: Tensor product of dimension effect algebras
 
  An effect algebra tensor product of dimension effect algebras (DEA) is a DEA. 
 
-* [Tensor product of finite MV-algebras]{/static/pdf/tensor.pdf)
+* [Tensor product of finite MV-algebras](/static/pdf/tensor.pdf)
 
 The proof of this fact is rewritten.
 
