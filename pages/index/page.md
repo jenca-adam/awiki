@@ -1,4 +1,4 @@
-{title: My projects}
+title: My projects
 ---
 ## Priority
 
@@ -23,6 +23,12 @@
 * [Incompatibility witnesses](witnesses)
 ---
 
+
+## Seminar notes
+
+* [Convex set constructions and tensor products](seminar_convex)
+* [Entropy in category theory](entropy)
+
 ## On hold
 
 * [The state-effect monad](state-effect)
@@ -35,4 +41,3 @@
 ## Zombies
 
 * [On $C^*$-extremality](cextremal)
-
