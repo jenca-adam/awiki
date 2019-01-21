@@ -41,3 +41,9 @@ title: My projects
 ## Zombies
 
 * [On $C^*$-extremality](cextremal)
+
+---
+
+## To referee
+
+Due [22.3.2019](/static/other/haapasalo2019compatibility)
