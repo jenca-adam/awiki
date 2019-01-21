@@ -27,7 +27,7 @@ title: My projects
 ## Seminar notes
 
 * [Convex set constructions and tensor products](seminar_convex)
-* [Entropy in category theory](entropy)
+* [Entropy in category theory](seminar_entropy)
 
 ## On hold
 
