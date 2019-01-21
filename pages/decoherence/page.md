@@ -1,4 +1,4 @@
-title: Decoherence-free subalgebras foe quantum channels
+title: Decoherence-free subalgebras for quantum channels
 ---
 ## People
 
