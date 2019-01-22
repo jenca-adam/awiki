@@ -5,7 +5,7 @@ title: gour2019comparison
 **Comparison of bipartite channels:**
 More generally, is there a superchannel $\Theta^{AB}$, such that $\Phi^{BR}=(\Theta^{AB}\otimes I_R)(\Psi^{AR})$?
 
-This is characterized using extended conditional min-entropies. 
+This is characterized using **extended conditional min-entropies**. 
 
 
 
