@@ -8,11 +8,11 @@ title: Tensor product of dimension effect algebras
 
 ## Drafts and notes
 
-* [Tensor products of DEA](/tpdea/main_file.pdf):
+* [Tensor products of DEA](tpdea/main_file.pdf):
 
  An effect algebra tensor product of dimension effect algebras (DEA) is a DEA. 
 
-* [Tensor product of finite MV-algebras](/tpdea/note_tensorMV.pdf) is a finite MV-algebra.
+* [Tensor product of finite MV-algebras](tpdea/note_tensorMV.pdf) is a finite MV-algebra.
 
 The proof of this fact is rewritten.
 
