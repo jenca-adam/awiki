@@ -7,17 +7,17 @@ title: Decoherence-free subalgebras for quantum channels
 
 ## Drafts
 
-* [Decoherence-free subalgebra](/static/pdf/MultiFixedF_01.pdf)
+* [Decoherence-free subalgebra](/decoherence/main_file.pdf)
 
 The decoherence-free subalgebra of a channel on $B(\mathcal H)$, in the presence of a faithful normal  invariant state. It is proved that this subalgebra coincides with the subalgebra of the Glicksberg-jacobs-DeLeeuw decomposition. The structure of this subalgebra and the subalgebra of fixed points is studied and a notion of a period is defined also in the reducible case. Homogeneous open quantum random walks are studied as examples, including one irreducible without invariant states.
 
-* [Notes on JDG-splitting](/static/pdf/jdg.pdf)
+* [Notes on JDG-splitting](/decoherence/jdg.pdf)
 
 ## To do
 
-* Rewrite the beginning of Section 2 (before proof of Thm. 1) Check the equality in def. of $\mathcal M_r$!
-* Section 4 (OQRW's) rewrite the beginning, check it ! Maybe only for homogeneous? 
-
+* Rewrite the beginning of Section 2 (before proof of Thm. 1) ~~Check the equality in def. of $\mathcal M_r$!~~ (*done in notes on JDG-splitting*)
+* Section 4 (OQRWs) rewrite the beginning, check it! ~~Maybe only for homogeneous?~~ (*we have a non-homogeneous example!*) 
+* Something for Introduction? (Some QIT in finite dimensions? M.M. Wolf, etc?)
 
 ## Ideas
 
