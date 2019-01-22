@@ -1,6 +1,6 @@
-{title: gour2019comparison}
+title: gour2019comparison
 ---
-**Comparison of quantum channels:** Is there a superchannel $\Theta^{AB}$ that maps $\Psi^A_1,\dots,\Psi_n^A$ to $\Phi^B_1,\dots,\Phi_n^B? 
+**Comparison of quantum channels:** Is there a superchannel $\Theta^{AB}$ that maps $\Psi^A_1,\dots,\Psi_n^A$ to $\Phi^B_1,\dots,\Phi_n^B$? 
  
 **Comparison of bipartite channels:**
 More generally, is there a superchannel $\Theta^{AB}$, such that $\Phi^{BR}=(\Theta^{AB}\otimes I_R)(\Psi^{AR})$?
