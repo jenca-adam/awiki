@@ -44,7 +44,8 @@ title: My projects
 
 ---
 
-## To referee
+## Duties
 
-Due [26.1.2019]()
-Due [22.3.2019](/static/other/haapasalo2019compatibility)
+* [referee](referee)
+
+
