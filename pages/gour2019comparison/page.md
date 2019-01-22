@@ -1,5 +1,13 @@
 title: gour2019comparison
 ---
+## Reference
+
+G. Gour, Comparison of Quantum Channels by Superchannels, submitted to IEEE Transactions on Information Theory, 2019
+
+arxiv:1808.02607
+
+## Content
+
 **Comparison of quantum channels:** Is there a superchannel $\Theta^{AB}$ that maps $\Psi^A_1,\dots,\Psi_n^A$ to $\Phi^B_1,\dots,\Phi_n^B$? 
  
 **Comparison of bipartite channels:**
@@ -9,11 +17,7 @@ This is characterized using **extended conditional min-entropies**.
 
 
 
-## Reference
 
-G. Gour, Comparison of Quantum Channels by Superchannels, submitted to IEEE Transactions on Information Theory, 2019
-
-arxiv:1808.02607
 
 
 ## File
