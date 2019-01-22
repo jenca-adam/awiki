@@ -40,7 +40,7 @@ title: My projects
 
 ## Zombies
 
-* [On $C^*$-extremality](cextremal)
+* [On $C^\*$-extremality](cextremal)
 
 ---
 

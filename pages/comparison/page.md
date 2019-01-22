@@ -11,4 +11,4 @@ my arxiv papers (isit, randomization)
 
 ## Papers
 
-Gour, etc.
+* [gour](gour2019comparison)

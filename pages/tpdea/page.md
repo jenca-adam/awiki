@@ -16,7 +16,7 @@ title: Tensor product of dimension effect algebras
 
 The proof of this fact is rewritten.
 
-* [Real interval as DEA](/tpdea/note_interval.pdf):
+* [Real interval as DEA](tpdea/note_interval.pdf):
 
 The interval $[0,1]$ in $\mathbb R$ as a direct limit of finite MV-algebras.
 
