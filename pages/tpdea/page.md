@@ -8,15 +8,15 @@ title: Tensor product of dimension effect algebras
 
 ## Drafts and notes
 
-* [Tensor products of DEA](/static/pdf/tpdea.pdf):
+* [Tensor products of DEA](/tpdea/main_file.pdf):
 
  An effect algebra tensor product of dimension effect algebras (DEA) is a DEA. 
 
-* [Tensor product of finite MV-algebras](/static/pdf/tensor.pdf) is a finite MV-algebra.
+* [Tensor product of finite MV-algebras](/tpdea/note_tensorMV.pdf) is a finite MV-algebra.
 
 The proof of this fact is rewritten.
 
-* [Real interval as DEA](/static/pdf/interval.pdf):
+* [Real interval as DEA](/tpdea/note_interval.pdf):
 
 The interval $[0,1]$ in $\mathbb R$ as a direct limit of finite MV-algebras.
 
@@ -25,7 +25,6 @@ The interval $[0,1]$ in $\mathbb R$ as a direct limit of finite MV-algebras.
 There is an adjunction between the categories EA and POA-groups  with order unit, the unigroup functor is the left adjoint, taking unit interval the right.
 The unit $\eta_E$ is an isomorphism iff $E$ is an interval effect algebra.
 
-The two definitions of [tensor product of EAs](/static/pdf/tpea.jpg)) 
 
 
 ## Ideas
