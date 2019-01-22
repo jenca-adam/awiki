@@ -18,11 +18,11 @@ arxiv:1808.02607
 
 ## File
 
-[gour2019comparison](/gour2019comparison/file.pdf)
+[gour2019comparison](gour2019comparison/file.pdf)
 
 ## Notes
 
-[My notes](/gour2019comparison/my_notes.pdf)
+[My notes](gour2019comparison/my_notes.pdf)
 
 ## Interesting references
 
