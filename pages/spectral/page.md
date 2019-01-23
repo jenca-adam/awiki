@@ -1,4 +1,4 @@
-{title: Spectral effect algebras}
+title: Spectral effect algebras
 ---
 ## People
 
@@ -6,13 +6,13 @@
 
 ## Drafts
 
-* [Spectral effect algebras](/static/pdf/notesv8.pdf)
+* [Spectral effect algebras](spectral/file.pdf)
 
 ## ArXiv
 
 [arXiv:1811.12407](https://arxiv.org/abs/1811.12407)
 
-## Remarks
+## Feedback
 
 ### By J. van de Wetering
 
@@ -26,3 +26,23 @@ When my theorem applies the answer is yes. The conditions for when it applies do
 1. If you can find a spectral order unit space where the contexts have different cardinalities, then the lattice can't have the covering property, so that the sharp effects don't correspond to a projective geometry, and hence the sharp effects don't really correspond to 'projections' of subspaces of the order unit space.
 1. One way in which you do get an interesting duality is the assumption of what Alfsen and Schultz call 'symmetry of transition probabilities'. 
 1. Another way you might find examples of spectral order unit spaces that don't allow a sequential product is by looking at non-self-dual homogeneous cones.
+
+### By Quantum
+
+Dear Martin Plávala,
+
+After a careful discussion with other editors of Quantum, we 
+understand that your paper may be useful in the context of quantum 
+foundations. However, we feel that the paper lacks an explanation of 
+the possible implications of the results in this context. After all, 
+Quantum is a journal on quantum science, and this should appear 
+somehow and somewhere in the paper.
+Therefore, we would like to propose you to revise your paper adding 
+some introductory material and conclusions on why effect algebras and 
+your results are relevant in the context of quantum science. 
+Afterwards we will be happy to consider again your paper, and send it 
+to referees with knowledge on quantum foundations.
+
+Best regards,
+
+Roman Orus
