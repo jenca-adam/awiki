@@ -5,6 +5,7 @@ pre Python 3
 * Flask
 * WTForms
 * BeautifulSoup
+* Markdown
 
 Wiki bezi na http://localhost:5000/
 
