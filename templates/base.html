@@ -17,13 +17,21 @@ MathJax.Hub.Config({
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 });
 </script>
+
 <script type="text/javascript" async
    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+<script src="/static/codemirror/codemirror.js"></script>
+<link rel="stylesheet" href="/static/codemirror/codemirror.css">
+<script src="/static/codemirror/mode/markdown/markdown.js"></script>
 </head>
 <body>
 {% block content %}
 {% endblock %}
 </body>
+<script type="text/javascript">
+var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("markdown"))
+</script>
+</head>
 </html>
