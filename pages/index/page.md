@@ -24,7 +24,7 @@ title: My projects
 ---
 
 
-## Seminar notes
+## Seminar notes 
 
 * [Convex set constructions and tensor products](seminar_convex)
 * [Entropy in category theory](seminar_entropy)
@@ -48,5 +48,4 @@ title: My projects
 
 * [referee](referee)
 * [students](students)
-
 
