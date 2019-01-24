@@ -25,13 +25,22 @@ MathJax.Hub.Config({
 <script src="/static/codemirror/codemirror.js"></script>
 <link rel="stylesheet" href="/static/codemirror/codemirror.css">
 <script src="/static/codemirror/mode/markdown/markdown.js"></script>
+<script src="/static/codemirror/dialog.js"></script>
+<link rel="stylesheet" href="/static/codemirror/dialog.css">
+<script src="/static/codemirror/searchcursor.js"></script>
+<script src="/static/codemirror/vim.js"></script>
 </head>
+<link rel="stylesheet" href="/static/codemirror/darcula.css">
 <body>
 {% block content %}
 {% endblock %}
 </body>
 <script type="text/javascript">
-var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("markdown"))
+var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("markdown"),
+  {lineWrapping:true,
+  theme:"darcula",
+  showCursorWhenSelecting: true
+  });
 </script>
 </head>
 </html>
