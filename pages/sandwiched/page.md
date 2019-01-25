@@ -20,6 +20,9 @@ title: "Sandwiched R\xE9nyi divergences"
 
 ## To do
 
+Any positive map $\Phi: L_1(\mathcal M)\to L_1(\mathcal N)$ restricts to a positive contraction $L_p(\mathcal M,\varphi)\to L_p(\mathcal N,\varphi_0)$. 
+Find the adjoints and related maps $L_p(\mathcal M)\to L_p(\mathcal N)$, etc.  
+
 ### Bounds on DPI
 
 In jencova2018renyi, some bounds on DPI for $\alpha>1$ are derived. 
