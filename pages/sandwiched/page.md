@@ -14,4 +14,8 @@ title: "Sandwiched R\xE9nyi divergences"
 * sufficiency of channels by equa;lity in DPI also for $\alpha\in (1/2,1)$
 
 
+## Related
+
+[berta2018renyi](berta2018renyi)
+
 ## To do
