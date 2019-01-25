@@ -14,6 +14,7 @@ title: G. Gour, Comparison of quantum channels, 2019
 
 [Revised file](gour2019/revised_file.pdf)
 
+**Decision:** accept
 
 
 
