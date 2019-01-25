@@ -1,11 +1,11 @@
-{title: "Sandwiched R\xE9nyi divergences"}
+title: "Sandwiched R\xE9nyi divergences"
 ---
 ## Published 
 
 [Rényi Relative Entropies and Noncommutative $L_p$-Spaces](/static/pdf/jencova2018renyi.pdf)
 
 * extension of the sandwiched Rényi divergences to normal positive linear functionals on a von Neumann algebra for $\alpha>1$
-* proof that this is the same as [Berta_Scholz-Tomamichel]
+* proof that this is the same as [berta2018renyi](berta2018renyi)
 *  Araki relative entropy is monotone under positive trace-preserving maps 
 * suffciency of channels by equality in DPI
 
@@ -22,4 +22,3 @@
 
 
 ## To do
-
