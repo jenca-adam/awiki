@@ -30,14 +30,14 @@ This is characterized using **extended conditional min-entropies**.
 
 ## Interesting references
 
-* Comparison for quantum states: [arxiv:1708.04302](https://arxiv.org/pdf/1708.04302.pdf), [arxiv:1803.02945](https://arxiv.org/pdf/1803.02945.pdf)
-* Resource theories of quantum processes: [arxiv:1807.05610](https://arxiv.org/pdf/1807.05610.pdf), [arxiv:1805.04045](https://arxiv.org/pdf/1805.04045.pdf), 
-[arxiv:1809.09592](https://arxiv.org/pdf/1805.09592.pdf), [arxiv:1710.04710](https://arxiv.org/pdf/1710.04710.pdf), [arxiv:1704.03710](https://arxiv.org/pdf/1704.03710.pdf)
-* Discrimination of channels: [arxiv:1808.01498](https://arxiv.org/pdf/1808.01498.pdf)
-[arxiv:1807.11939](https://arxiv.org/pdf/1807.11939.pdf)
-[arxiv:1604.08197](https://arxiv.org/pdf/1604.08197.pdf)
-[arxiv:1408.3373](https://arxiv.org/pdf/1408.3373.pdf)
-* Smooth extended min-entropy: [arxiv:1807.05354](https://arxiv.org/pdf/1807.05354.pdf)
-* Extending divergences to channels: [arxiv:1709.01111](https://arxiv.org/pdf/1709.01111.pdf) 
+* Comparison for quantum states: [arxiv:1708.04302](https://arxiv.org/abs/1708.04302), [arxiv:1803.02945](https://arxiv.org/abs/1803.02945)
+* Resource theories of quantum processes: [arxiv:1807.05610](https://arxiv.org/abs/1807.05610), [arxiv:1805.04045](https://arxiv.org/abs/1805.04045), 
+[arxiv:1809.09592](https://arxiv.org/abs/1805.09592), [arxiv:1710.04710](https://arxiv.org/abs/1710.04710), [arxiv:1704.03710](https://arxiv.org/abs/1704.03710)
+* Discrimination of channels: [arxiv:1808.01498](https://arxiv.org/abs/1808.01498)
+[arxiv:1807.11939](https://arxiv.org/abs/1807.11939)
+[arxiv:1604.08197](https://arxiv.org/abs/1604.08197)
+[arxiv:1408.3373](https://arxiv.org/abs/1408.3373)
+* Smooth extended min-entropy: [arxiv:1807.05354](https://arxiv.org/abs/1807.05354)
+* Extending divergences to channels: [arxiv:1709.01111](https://arxiv.org/abs/1709.01111) 
 
 [arxiv:](https://arxiv.org/pdf/.pdf)
