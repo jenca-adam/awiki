@@ -20,7 +20,11 @@ title: "Sandwiched R\xE9nyi divergences"
 
 ## To do
 
-* In jencova2018renyi, some bounds on DPI are derived. Check these in special cases:
+### Bounds on DPI
+
+In jencova2018renyi, some bounds on DPI for $\alpha>1$ are derived. 
+
+* Check these bounds in special cases:
     * commutative algebras
     * finite dimensional ??
     * the channel is a conditional expectation or embedding (hm.)
