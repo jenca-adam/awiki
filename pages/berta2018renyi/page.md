@@ -13,6 +13,7 @@ title: berta2018renyi
 * The AM-norm duality implies some duality of the divergences for $\alpha$ and $\alpha^\*:=\frac{\alpha}{2\alpha-1}$
 
 Properties: 
+  
   1. $\alpha\to D\_\alpha$ is continuous and increasing;
   
   1. limiting cases $\alpha=1/2,\infty$;
@@ -26,7 +27,6 @@ Properties:
   1. An application to hypothesis testing is suggested: using Steins lemma in 
 [jaksic2012entropic](jaksic2012entropic), [jaksic2012quantum](jaksic2012quantum) and strong converse in [mosonyi2015quantum](mosonyi2015quantum),
 a strong converse for von Neumann algebras is conjectured.
-
 
 
 
