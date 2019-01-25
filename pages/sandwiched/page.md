@@ -2,7 +2,7 @@ title: "Sandwiched R\xE9nyi divergences"
 ---
 ## Published 
 
-[ijencova2018renyi](jencova2018renyi)
+[jencova2018renyi](jencova2018renyi)
 
 
 ## Draft 
