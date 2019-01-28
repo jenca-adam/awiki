@@ -28,5 +28,5 @@ Find the adjoints and related maps $L_p(\mathcal M)\to L_p(\mathcal N)$, etc.</d
            * commutative algebras
            * finite dimensional ??
            * the channel is a conditional expectation or embedding (hm.)
-      * find bounds for DPI also for $\alpha\in \[1/2,1)$. Something similar to  [arXiv:1505.04661](https://arxiv.org/abs/1505.04661)
+      * find bounds for DPI also for $\alpha\in \[1/2,1)$. Something similar to  [arXiv:1505.04661](https://arxiv.org/abs/1505.04661), or better [arXiv:1509.07127](https://arxiv.org/abs/1509.07127)
       * can these be used to find bounds for $\alpha>1$ (by duality $\alpha\mapsto \alpha^\*$)?
