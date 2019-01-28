@@ -5,6 +5,7 @@ title: My projects
 * [Tensor products of dimension effect algebras](tpdea)
 * [Sandwiched Rényi divergences and sufficiency](sandwiched)
 * [Comparison of quantum channels](comparison)
+[link](link)
 
 ---
 
@@ -48,4 +49,3 @@ title: My projects
 
 * [referee](referee)
 * [students](students)
-
