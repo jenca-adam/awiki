@@ -42,6 +42,8 @@ title: Spectral effect algebras
 
 [chiribella2011informational](chiribella2011informational)
 
+[wetering2018aneffect](wetering2018aneffect)
+
 
 ## Feedback
 
