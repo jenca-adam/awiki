@@ -14,6 +14,8 @@ title: Spectral effect algebras
 
 ## To read
 
+[gudder2018spectral](gudder2018spectral)
+
 ### Spectrality
 
 [alfsen2003geometry](alfsen2003geometry)
@@ -21,6 +23,10 @@ title: Spectral effect algebras
 [barnum2015entropy](barnum2015entropy)
 
 [harremoes2017quantum](harremoes2017quantum)
+
+### Sequential products
+
+
 
 ## Feedback
 
