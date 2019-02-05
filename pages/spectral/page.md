@@ -30,6 +30,10 @@ title: Spectral effect algebras
 
 [wetering2018sequential](wetering2018sequential)
 
+### Foundations
+
+[chiribella2011informational](chiribella2011informational)
+
 
 ## Feedback
 
