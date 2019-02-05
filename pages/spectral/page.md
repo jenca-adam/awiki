@@ -14,7 +14,7 @@ title: Spectral effect algebras
 
 ## To read
 
-[gudder2018spectral](gudder2018spectral)
+[gudder2018convex](gudder2018convex)
 
 ### Spectrality
 
