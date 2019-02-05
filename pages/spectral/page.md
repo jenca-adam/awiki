@@ -17,7 +17,9 @@ title: Spectral effect algebras
 ### Spectrality
 
 [alfsen2003geometry](alfsen2003geometry)
+
 [barnum2015entropy](barnum2015entropy)
+
 [harremoes2017quantum](harremoes2017quantum)
 
 ## Feedback
