@@ -26,6 +26,9 @@ title: Spectral effect algebras
 
 ### Sequential products
 
+[wetering2018three](wetering2018three)
+
+[wetering2018sequential](wetering2018sequential)
 
 
 ## Feedback
