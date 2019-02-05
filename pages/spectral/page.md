@@ -12,6 +12,13 @@ title: Spectral effect algebras
 
 [arXiv:1811.12407](https://arxiv.org/abs/1811.12407)
 
+## My questions
+
+* Is the algebra of effects on a spectral convex set (as in [alfsen2003geometry](alfsen2003geometry)) a spectral effect algebra?
+     * Consider the strange examples by A-S of spectral sets and the algebra of effect on these. 
+* Symmetric transition probabilities give a spectral calculus. Does this imply that we can define a sequential product (via Jordan product via (A+B)^2)? 
+Can we use [wetering2018sequential](wetering2018sequential) to show that we get an Euclidean Jordan algebra?
+
 ## To read
 
 [gudder2018convex](gudder2018convex)
