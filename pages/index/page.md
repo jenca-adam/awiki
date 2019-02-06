@@ -54,5 +54,5 @@ title: My projects
 
 ## Papers
 
-* [notmyown](sandwiched/notmyown)
-* [myown](sandwiched/myown)
+* [notmyown](notmyown)
+* [myown](myown)
