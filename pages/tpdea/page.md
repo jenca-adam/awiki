@@ -8,9 +8,9 @@ title: Tensor product of dimension effect algebras
 
 ## Drafts and notes
 
-* [Tensor products of DEA](tpdea/main_file.pdf): An effect algebra tensor product of dimension effect algebras (DEA) is a DEA. 
+* [Tensor products of DEA](tpdea/main_file.pdf): Main draft. An effect algebra tensor product of dimension effect algebras (DEA) is a DEA. 
 
-* [Tensor product of spectral effect algebras](tpdea/note_tensorMV.pdf) is a spectral EA. The proof of this fact is rewritten.
+* [Tensor product of spectral effect algebras](tpdea/note_tensorMV.pdf) is a spectral EA. The proof of this fact is rewritten. <span style="color:green"> **added to Main draft**</span>
 
 * [Real interval as DEA](tpdea/note_interval.pdf): The interval $[0,1]$ in $\mathbb R$ as a direct limit of finite MV-algebras.
 
