@@ -1,6 +1,5 @@
-title: Martin Plávala
+title: "Martin Pl\xE1vala"
 ---
-
 **Názov práce:** Neklasické efekty na zovšeobecnených kvantových kanáloch
 
 **Anotácia:** Neklasické javy v kvantovej teórii sa často skúmajú v rámci tzv. všeobecných probabilistických teórií. Tento prístup umožňuje podobné javy  kvantifikovať a tým špecifikovať miesto v kvantovej teórie v širšej hierarchii neklasických teórií. Cieľom predkladanej práce je skúmať vlastnosti meraní a kanálov v týchto všeobecnejších teóriach, predovšetkým (ne)kompatibilitu a jej vzťah k iným javom ako je nelokalita alebo steering. Práca sa bude zameriavať na neklasické vlastnosti kvantových kanálov.
@@ -13,4 +12,7 @@ title: Martin Plávala
 the non-classical properties of quantum channels. 
 
   
+**Oponenti** ?? (Návrh) *Bužek/Zlatoš(?!), Sergei Filippov, Markus M\"uller*
+
+
  
