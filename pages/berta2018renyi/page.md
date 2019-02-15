@@ -9,7 +9,8 @@ title: berta2018renyi
 ## Content
 
 * An extension of sandwiched Rényi divergences for all $\alpha\in \[1/2,1)\cup (1,\infty)$. The definition uses Araki-Masuda $L_p$-norms. The basic space is the GNS Hilbert space.
-* The AM-norm duality implies some duality of the divergences for $\alpha$ and $\alpha^\*:=\frac{\alpha}{2\alpha-1}$
+Or any Hilbert space carrying a representation of $\mathcal M$ with a representing vector for the state $\psi$.
+* *Remark: Norm duality implies some duality of the divergences for $\alpha$ and $\alpha^\*:=\frac{\alpha}{2\alpha-1}$*
 * Properties: 
     1. $\alpha\to D\_\alpha$ is continuous and increasing;
     1. limiting cases $\alpha=1/2,\infty$;
@@ -19,6 +20,5 @@ title: berta2018renyi
 * An application to hypothesis testing is suggested: using Steins lemma in 
 [jaksic2012entropic](jaksic2012entropic), [jaksic2012quantum](jaksic2012quantum) and strong converse in [mosonyi2015quantum](mosonyi2015quantum),
 a strong converse for von Neumann algebras is conjectured.
-
 
 
