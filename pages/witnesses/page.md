@@ -7,10 +7,9 @@ title: Incompatibility witnesses
 
 ## Notes
 
-* notes by Alessandro, Teiko, Claudio on [witnesses](toigo.pdf)
-* my notes on [witnesses](aj_witnesses.pdf)
-* my notes on [spectrahedra](aj_spectrahedra.pdf)
-* notes by Andreas and Ion on spectrahedra and [gpt](bluhm.pdf)
+* notes by Alessandro, Teiko, Claudio on [witnesses](witnesses/toigo.pdf)
+* my notes on [witnesses](witnesses/aj_witnesses.pdf)
+* my notes on [spectrahedra](witnesses/aj_spectrahedra.pdf)
+* notes by Andreas and Ion on spectrahedra and [gpt](witnesses/bluhm.pdf)
 
 ## Papers
-
