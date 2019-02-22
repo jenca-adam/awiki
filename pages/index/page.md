@@ -51,8 +51,8 @@ title: My projects
 |---|-----------|-----------------|------------------|
 | P | [dimension](tpdea)  | [Renyi](sandwiched)           | [witnesses](witnesses)        |
 | U | cirkus    | [dfs](decoherence)             |        |
-| S |   [dfs](decoherence)    | skype Raffaella | seminar priprava |
-| S | [seminar](seminar-entropy)   |                 |                  |
+| S |   [dfs](decoherence)    | skype Raffaella |  [seminar](seminar-entropy) priprava |
+| S | seminar   |                 |                  |
 | P |           |                 |                  |
 
 
