@@ -45,6 +45,19 @@ title: My projects
 
 ---
 
+## Plans
+
+|   |           |                 |                  |
+|---|-----------|-----------------|------------------|
+| P | [dimension](tpdea)  | Renyi           | witnesses        |
+| U | cirkus    | dfs             | dfs/Renyi        |
+| S | dfs       | skype Raffaella | seminar priprava |
+| S | seminar   |                 |                  |
+| P |           |                 |                  |
+
+
+---
+
 ## Duties
 
 * [referee](referee)
