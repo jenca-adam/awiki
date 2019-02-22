@@ -49,10 +49,10 @@ title: My projects
 
 |   |           |                 |                  |
 |---|-----------|-----------------|------------------|
-| P | [dimension](tpdea)  | Renyi           | witnesses        |
-| U | cirkus    | dfs             | dfs/Renyi        |
-| S | dfs       | skype Raffaella | seminar priprava |
-| S | seminar   |                 |                  |
+| P | [dimension](tpdea)  | [Renyi](sandwiched)           | [witnesses](witnesses)        |
+| U | cirkus    | [dfs](decoherence)             |        |
+| S |   [dfs](decoherence)    | skype Raffaella | seminar priprava |
+| S | [seminar](seminar)   |                 |                  |
 | P |           |                 |                  |
 
 
