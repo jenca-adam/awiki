@@ -13,3 +13,10 @@ title: Incompatibility witnesses
 * notes by Andreas and Ion on spectrahedra and [gpt](witnesses/bluhm.pdf)
 
 ## Papers
+
+
+## To read
+
+[auburn2017alice](auburn2017alice)
+
+
