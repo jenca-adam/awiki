@@ -15,5 +15,9 @@ title: jencova2018renyi
 * Araki relative entropy is monotone under positive trace-preserving maps
 * suffciency of channels by equality in DPI
 
+## Remarks
+
+[Mistakes!!](jencova2018renyi/mistakes.pdf)
+
 
 

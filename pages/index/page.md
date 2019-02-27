@@ -45,6 +45,19 @@ title: My projects
 
 ---
 
+## Plans
+
+|   |           |                 |                  |
+|---|-----------|-----------------|------------------|
+| P | [dimension](tpdea)  | [Renyi](sandwiched)           | [witnesses](witnesses)        |
+| U | cirkus    | [dfs](decoherence)             |        |
+| S |   [dfs](decoherence)    | skype Raffaella |  [seminar](seminar-entropy) priprava |
+| S | seminar   |                 |                  |
+| P |           |                 |                  |
+
+
+---
+
 ## Duties
 
 * [referee](referee)

@@ -12,4 +12,7 @@ title: "Martin Pl\xE1vala"
 the non-classical properties of quantum channels. 
 
   
+**Oponenti** ?? (Návrh) *Bužek/Zlatoš(?!), Sergei Filippov, Markus M\"uller*
+
+
  
