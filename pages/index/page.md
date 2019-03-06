@@ -2,7 +2,7 @@ title: My projects
 ---
 ## Priority
 
-* [Tensor products of dimension effect algebras](tpdea)
+
 * [Sandwiched Rényi divergences and sufficiency](sandwiched)
 * [Comparison of quantum channels](comparison)
 
@@ -12,6 +12,7 @@ title: My projects
 ## Finishing
 
 * [Decoherence-free subalgebras](decoherence)
+* [Tensor products of dimension effect algebras](tpdea)
 * [Spectral effect algebras](spectral)
 
 ---
