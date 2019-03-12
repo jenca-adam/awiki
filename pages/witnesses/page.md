@@ -19,4 +19,12 @@ title: Incompatibility witnesses
 
 [auburn2017alice](auburn2017alice)
 
+## GPT
+
+* extremal measurements?
+* measurements on polysimplexes (or more general products): 
+     * a product state space is a special subset of the product of cones
+     * in convex cones, product=coproduct (finite)
+     * measurement = map from product extends to a map from coproduct of cones = coproduct of maps 
+     * extremal?     
 
