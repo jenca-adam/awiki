@@ -1,6 +1,5 @@
-{title: Comparison of quantum channels}
+title: Comparison of quantum channels
 ---
-
 ## Published
 
 my ISIT paper
@@ -11,4 +10,5 @@ my arxiv papers (isit, randomization)
 
 ## Papers
 
-* [gour](gour2019comparison)
+* [gour2019comparison](gour2019comparison)
+* [gour2018quantum](gour2018quantum)
