@@ -12,3 +12,4 @@ my arxiv papers (isit, randomization)
 
 * [gour2019comparison](gour2019comparison)
 * [gour2018quantum](gour2018quantum)
+* [buscemi2017comparison](buscemi2017comparison)
