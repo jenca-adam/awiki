@@ -1,6 +1,5 @@
 title: gour2018quantum
 ---
-
 ## Reference
 
 G. Gour, D. Jennings, F. Buscemi, R. Duan, I. Marvian, Quantum majorization and a complete set of entropic conditions for quantum thermodynamics, Nature Communications 9, Article number: 5352 (2018) 
@@ -24,7 +23,10 @@ for all channels $\Phi: B(\mathcal H_A)\to  B(\mathcal H\_{A'})$, the channels c
 	    here a twirling map (cond. exp?) is applied to $\Phi\otimes id(\rho^{AB})$ and $\Phi\otimes id(\sigma^{AC})$
 
      * Thermodynamics: whatever...
-
+     
+ ## Interesting references
+ 
+ * matrix majorization [dahl1999matrix](dahl1999matrix)
 
 
 
