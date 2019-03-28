@@ -2,11 +2,11 @@ title: Comparison of quantum channels
 ---
 ## Published
 
-my ISIT paper
+my [ISIT](jencova2016isit) paper
 
 ## Arxiv
 
-my arxiv papers (isit, randomization)
+my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014randomization](jencova2014randomization)
 
 
 
