@@ -33,4 +33,6 @@ The unit $\eta_E$ is an isomorphism iff $E$ is an interval effect algebra.
 
 1. A. Jenčová, S. Pulmannová: [A note on effect algebras and dimension theory of AF C*-algebras](/static/pdf/ROMP08.pdf), Reports on Mathematical Physics 62 (2008), pp. 205-218 
 
-## To read
+## Status
+
+paper sent to Order
