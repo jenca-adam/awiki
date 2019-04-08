@@ -1,4 +1,4 @@
-title: E. Haapasalo, Compatibility of covariant quantum channels, 2019
+title: E. Haapasalo,  2019
 ---
 
 **Paper:** E. Haapasalo, Compatibility of covariant quantum channels with emphasis on Weyl symmetry

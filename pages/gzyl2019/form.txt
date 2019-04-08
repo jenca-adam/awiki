@@ -1,0 +1,110 @@
+Title of article: 
+Author/s:
+
+Review Form
+
+Please rate the article on the presented criteria. Use the standard rating form and chose the appropriate rating for each criterion. Please, provide comments to assist the authors in improving the quality of their manuscripts.
+
+Review Criteria:
+Review criteria standardize the review process and make the result comparable. The criteria are each expressed by a keyword that summarizes their meaning. Because all reviewers should base their judgment on the same interpretation of the keywords, they have to be defined and explained. Reviewed articles are checked for originality, significance, technical soundness, relevance, presentation and their adequacy of citations. The reviewer also estimates the amount of rewriting that is required to make the article publishable and gives a statement on his or her expertise on the topic.
+
+The Scale
+A unified scale on the review items is also necessary to compare article ratings. The scale is always divided into five units, while the first represents the lowest rating, the last one the highest. The middle is just average. The lowest rating is always listed first. The units of the scale are described by words or short sentences like "poor", "average" or "excellent" to help the author to choose the appropriate rating. Descriptions are less conceptional than numbers.
+
+Originality
+The aspect of originality or novelty is concerned with an article's degree of innovation. Articles which cover aspects of a topic which are newly introduced, or which have only rarely been treated before, receive high originality ratings. What is also a decisive factor concerning the originality rating is whether an article has or has not been previously published. Articles which consist mainly of well established and renowned material may not be considered "original".
+[ ] poor
+[ ] needs improvements
+[ ] average
+[ ] good
+[ ] excellent
+
+Significance
+A high significance rating indicates an article's considerable contribution to a certain area of research. Thus, articles which present substantial new insights will achieve a high rating.
+[ ] poor
+[ ] needs improvements
+[ ] average
+[ ] good
+[ ] excellent
+
+Technical Soundness
+The technical soundness rating denotes the author's academic handling of technology and its terminology. References to nonexistent or even unrealistic technologies will devalue the technical soundness rating, unless the article explicitly describes new approaches to experimental technology. The appropriate description of technical facts is also covered by the technical soundness criterion.
+[ ] poor
+[ ] needs improvements
+[ ] average
+[ ] good
+[ ] excellent
+
+Relevance
+Articles relevant to topics of the scope. The relevance rating is decisive in that it describes whether or not an article fits into the journal. What characterizes a relevant article is that it is typically recognized by an appropriate audience.
+[ ] poor
+[ ] needs improvements
+[ ] average
+[ ] good
+[ ] excellent
+
+Presentation
+The presentation rating comprises the article's readability, the employment of graphical material, language usage, formal aspects, and the appropriate use of technical terminology. A properly structured article not only eases the reading process, but also promotes a proper understanding.
+[ ] poor
+[ ] needs improvements
+[ ] average
+[ ] good
+[ ] excellent
+
+Adequacy of Citations
+The adequacy of citations rating provides information about the accuracy of references and the appropriateness of citations of articles. Not only do references serve to corroborate research results, they also aid the interested reader in gaining a deeper insight into a specific topic. If references are either too general, or too specific, and hard to come by, the adequacy of citations rating can be expected to be lower on the scale.
+[ ] poor
+[ ] needs improvements
+[ ] average
+[ ] good
+[ ] excellent
+
+Referee's Expertise on the Topic
+Referees need to state how far they are familiar with the topic of an article. The referees' level of expertise is another useful tool for evaluating the overall rating. What this implies is that an article's rating by a referee with a high level of expertise is expected to differ from a rating given by a relative novice to the respective field of research.
+[ ] novice
+[ ] intermediate
+[ ] average
+[ ] experienced
+[ ] expert
+
+Amount of Rewriting Required
+The amount of rewriting factor shall provide an overview of the overall status of an article, i.e. its need for adjustments and the expected amount of time necessary to put it into adequate shape. If an article requires only minor modifications, but is acceptable otherwise, the amount of rewriting can be considered "little" (indicating a positive rating). For articles which are not usable, and which would require a considerable degree of re-engineering in order to become publishable, the amount of rewriting can be considered "much".
+[ ] very much
+[ ] much
+[ ] average
+[ ] little
+[ ] very little
+
+Review Summary
+The Review summary and the result of the review are treated confidentially and are not exposed to the author. The author receives the recommendations from "Comments to the Author".
+
+The article is
+[ ] not accepted
+[ ] accepted with annotations
+[ ] accepted
+
+Overall rating
+[ ] poor
+[ ] needs improvements
+[ ] average
+[ ] good
+[ ] excellent
+
+Comments to the Author:
+Please, make comments to the author to help to improve the quality of his or her manuscript. Main Contributions sum up the ideas of the article. Positive and negative aspects represent the reviewers impression of the article. Further comments can be used to note small corrections like orthographic mistakes. The comments to the author are mandatory.
+
+Main Contributions:
+
+
+Positive Aspects:
+
+
+Negative Aspects:
+
+
+This is the main reason why I accept/reject the paper.
+
+
+Further Comments:
+
+

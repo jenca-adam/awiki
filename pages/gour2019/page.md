@@ -1,4 +1,4 @@
-title: G. Gour, Comparison of quantum channels, 2019
+title: G. Gour, 2019
 ---
 **Paper:** G. Gour, Comparison of quantum channels by superchannels, 2019
 
