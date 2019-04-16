@@ -38,3 +38,6 @@ I(Q_1\cup Q_2|P_1\cup P_2)= g^{-1}\left(\frac{w(Q_1)g(I(Q_1|P_1))+w(Q_2)g(I(Q_2|
 $$
 
 Then $g_\alpha$ and $g_1$ linear are the only possible functions and then $I=I_\alpha$, where
+$$
+I_\alpha(Q|P)=\frac{1}{\alpha-1}\log\left(\frac{\sum_i q_i^\alpha p_i^{1-\alpha}}{\sum q_i}\right)
+$$
