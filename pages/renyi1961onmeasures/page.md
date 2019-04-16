@@ -17,9 +17,8 @@ Postulates for Rényi $\alpha$-entropies (for generalized probability distributi
 1. $H(\{1/2\})=1$
 1. additivity: $H(P\otimes Q)=H(P)+H(Q)$
 1. weighted mean value: there is a continuous strictly monotone function $g$ such that 
-\[
+$$
 H(P\cup Q)= g^{-1}\frac{w(P)H(P)+w(Q)H(Q)}{w(P)+w(Q)}
-\]
+$$
 if $w(P)+w(Q)\le 1$
-
 
