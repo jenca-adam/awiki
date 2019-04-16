@@ -5,7 +5,7 @@ title: Entropy in category theory
 * We study characterizations of entropy on a simplex:
 
 some classical [shannon1948amathematical](/static/other/shannon1948amathematical.pdf), ([faddeev1956kponiatju](/static/other/faddeev1956kponiatju.pdf), 
-[renyi1961onmeasures](/static/other/renyi1961onmeasures.pdf),
+[renyi1961onmeasures](renyi1961onmeasures),
 
 and some from category theory [baez2011acharacterization](baez2011acharacterization) (Leinster,...). 
 

@@ -22,5 +22,18 @@ M. M\" uller-Lennert et al, On quantum Rényi entropies: a new generalization an
        $$ 
 
  
-    By [renyi1961onmeasures](renyi1961onmeasures)
-    
+   By [renyi1961onmeasures](renyi1961onmeasures), $g$ must be linear or exponential. The postulates **do not** determine a unique quantum divergence.
+   
+   A question: do the axioms imply **data processing inequality?** (in the non-commutative case). Equivalence to joint convexity (concavity) (Prop. 1)
+
+* standard quantum Rényi relative entropy (from Petz quasi entropies): the axioms and DPI **only** for $\alpha\in (0,1)\cup (1,2]$    
+* sandwiched quantum Rényi relative entropy: definition, properties:
+      1. satisfies axioms for $\alpha\in [1/2)\cup (1,\infty)$
+      1. positive definite (for normalized states)
+      1. dominance: $\rho, \sigma,\sigma'$, $\sigma\le \sigma'$, then $D(\rho\|\sigma)\ge D(\rho\|\sigma')$ 
+      1. limit values: $\alpha\to \infty$: relative max-entropy
+                       $\alpha\to^\pm 1$: quantum relative entropy
+      1. DPI
+* conditional entropies: $H(A|B)\_\rho =\sup\_{\sigma_B} D(\rho\_{AB}\| id\_{A}\otimes \sigma\_B)$  
+  supremum over subnormalized densities   
+ 
