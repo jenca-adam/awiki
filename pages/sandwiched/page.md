@@ -18,6 +18,10 @@ title: "Sandwiched R\xE9nyi divergences"
 
 [berta2018renyi](berta2018renyi)
 
+## Study 
+
+[renyi1961onmeasures](renyi1961onmeasures)
+
 ## To do
 
 * Finish the draft! [notes](sandwiched/notes.pdf)
