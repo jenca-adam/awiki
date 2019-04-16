@@ -13,8 +13,8 @@ California Press (1961)
 **Postulates for Rényi entropies** (for generalized probability distributions: $w(P)=\sum_i p_i\le 1$):
  
 1. symmetry
-1. continuity od $p\mapsto H({p})$, $p\in (0, 1]$
-1. normalization  $H(\{1/2\})=1$
+1. continuity of $p\mapsto H({p})$, $p\in (0, 1]$
+1. normalization:  $H(\{1/2\})=1$
 1. additivity: $H(P\otimes Q)=H(P)+H(Q)$
 1. generalized mean value: there is a continuous strictly monotone function $g$ such that 
 $$
@@ -29,8 +29,8 @@ Shannon entropy if $g$ is linear, $H_\alpha$, $1\ne \alpha>0$ obtained if $g=g_\
 (generalized probability distributions $P=(p_1,\dots,p_n)$, $p_i>0$, $Q=(q_1,\dots, q_n)$)
 
 1. symmetry
-2. ''monotonicity'': if $p_i\le q_i$ $\forall i$, then $I(Q|P)\ge 0$; if $p_i\ge q_i$ $\forall i$, then $I(Q|P)\le 0$
-1. normalization $I(\{1\}|\{1/2\})=1$
+2. order: if $p_i\le q_i$ $\forall i$, then $I(Q|P)\ge 0$; if $p_i\ge q_i$ $\forall i$, then $I(Q|P)\le 0$
+1. normalization: $I(\{1\}|\{1/2\})=1$
 1. additivity: $I(P_1\otimes P_2| Q_1\otimes Q_2)=I(P_1|Q_1)+ I(P_2|Q_2)$
 1. generalized mean value: there is a continuous strictly monotone function $g$ such that if $w(Q_1)+w(Q_2)\le1$, $w(P_1)+w(P_2)\le 1$
 $$
