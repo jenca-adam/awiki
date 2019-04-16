@@ -31,7 +31,7 @@ Shannon entropy if $g$ is linear, $H_\alpha$, $1\ne \alpha>0$ obtained if $g=g_\
 1. symmetry
 2. ''monotonicity'': if $p_i\le q_i$ $\forall i$, then $I(Q|P)\ge 0$; if $p_i\ge q_i$ $\forall i$, then $I(Q|P)\le 0$
 1. normalization $I(\{1\}|\{1/2\})=1$
-1. I(P_1\otimes P_2| Q_1\otimes Q_2)=I(P_1|Q_1)+ I(P_2|Q_2)$
+1. additivity: $I(P_1\otimes P_2| Q_1\otimes Q_2)=I(P_1|Q_1)+ I(P_2|Q_2)$
 1. generalized mean value: there is a continuous strictly monotone function $g$ such that if $w(Q_1)+w(Q_2)\le1$, $w(P_1)+w(P_2)\le 1$
 $$
 I(Q_1\cup Q_2|P_1\cup P_2)= g^{-1}\left(\frac{w(Q_1)g(I(Q_1|P_1))+w(Q_2)g(I(Q_2|P_2))}{w(Q_1)+w(Q_2)}\right)
