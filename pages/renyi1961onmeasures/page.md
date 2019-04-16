@@ -26,8 +26,8 @@ Shannon entropy if $g$ is linear, $H_\alpha$, $1\ne \alpha>0$ obtained if $g=g_\
 
 **Postulates for Rényi relative entropies**:  *amount of info obtained if observing $P$ instead of $Q$*
 
-(generalized probability distributions $P=\{p_1,\dots,p_n\}$, $p_i>0$, $Q=\{q_1,\dots, q_n\}$)
-
+(generalized probability distributions $P=(p_1,\dots,p_n)$, $p_i>0$, $Q=(q_1,\dots, q_n)$)
+\}
 1. symmetry
 2. ''monotonicity'': if $p_i\le q_i$ $\forall i$, then $I(Q|P)\ge 0$; if $p_i\ge q_i$ $\forall i$, then $I(Q|P)\le 0$
 1. normalization $I(\{1\}|\{1/2\})=1$
