@@ -23,6 +23,9 @@ title: "Sandwiched R\xE9nyi divergences"
 
 * postulates for classical Rényi relative entropy:
 [renyi1961onmeasures](renyi1961onmeasures) 
+* quantum versions of Rényi relative entropy:
+[mullerlennert2013onquantum](mullerlennert2013onquantum)
+
 
 
 ## To do
