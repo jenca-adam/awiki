@@ -18,9 +18,12 @@ title: "Sandwiched R\xE9nyi divergences"
 
 [berta2018renyi](berta2018renyi)
 
+
 ## Study 
 
-[renyi1961onmeasures](renyi1961onmeasures)
+* postulates for classical Rényi relative entropy:
+[renyi1961onmeasures](renyi1961onmeasures) 
+
 
 ## To do
 
