@@ -13,7 +13,7 @@ California Press (1961)
 **Postulates for Rényi entropies** (for generalized probability distributions: $w(P)=\sum_i p_i\le 1$):
  
 1. symmetry
-1. continuity od $p\mapsto H(\{p\})$, $p\in (0, 1]$
+1. continuity od $p\mapsto H({p})$, $p\in (0, 1]$
 1. normalization  $H(\{1/2\})=1$
 1. additivity: $H(P\otimes Q)=H(P)+H(Q)$
 1. generalized mean value: there is a continuous strictly monotone function $g$ such that 
