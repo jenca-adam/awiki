@@ -10,3 +10,6 @@ title: E. Haapasalo,  2019
 
 [File](haapasalo2019/file.pdf)
 
+[Report](haapasalo2019/report.pdf)
+
+
