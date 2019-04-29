@@ -24,7 +24,7 @@ if $w(P)+w(Q)\le 1$
 
 Shannon entropy if $g$ is linear, $H_\alpha$, $1\ne \alpha>0$ obtained if $g=g_\alpha$, $g_\alpha(x)=2^{(\alpha-1)x}$.
 
-**Postulates for Rényi relative entropies**:  *amount of info obtained if observing $P$ instead of $Q$*
+**Postulates for Rényi relative entropies**:  *amount of info obtained if observing $Q$ instead of $P$*
 
 (generalized probability distributions $P=(p_1,\dots,p_n)$, $p_i>0$, $Q=(q_1,\dots, q_n)$)
 
