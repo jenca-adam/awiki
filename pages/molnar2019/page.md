@@ -10,3 +10,5 @@ title: L. Molnár, Quantum Rényi relative entropies, 2019
 
 [File](molnar2019/file.pdf)
 
+[Report](molnar2019/report.pdf)
+
