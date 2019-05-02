@@ -12,4 +12,8 @@ title: E. Haapasalo,  2019
 
 [Report](haapasalo2019/report.pdf)
 
+[response](haapasalo2019/response.pdf)
+
+[revised](haapasalo2019/revised.pdf)
+
 
