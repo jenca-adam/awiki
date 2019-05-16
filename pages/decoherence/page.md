@@ -13,11 +13,14 @@ The decoherence-free subalgebra of a channel on $B(\mathcal H)$, in the presence
 
 * [Notes on JDG-splitting](decoherence/jdg.pdf)
 
+## Final
+
+* [submitted to AHP](decoherence/submitted.pdf)
+
+* [arxiv: ]()
+
 ## To do
 
-* Rewrite the beginning of Section 2 (before proof of Thm. 1) <del>Check the equality in def. of $\mathcal M_r$!</del>(*done in notes on JDG-splitting*)
-* Section 4 (OQRWs) rewrite the beginning, check it! <del>Maybe only for homogeneous?</del> (*we have a non-homogeneous example!*) 
-* Something for Introduction? (Some QIT in finite dimensions? M.M. Wolf, etc?)
 * Read the paper [wolf2010theinverse](wolf2010theinverse)
 
 ## Ideas
