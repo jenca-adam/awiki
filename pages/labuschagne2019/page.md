@@ -10,3 +10,5 @@ title: Labuschagne and  Majewski, Dynamics on noncommutative Orlicz spaces, 2019
 
 [File](labuschagne2019/file.pdf)
 
+[Report](labuschagne2019/report.pdf)
+
