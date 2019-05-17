@@ -19,6 +19,8 @@ title: Incompatibility witnesses
 
 [auburn2017alice](auburn2017alice)
 
+[bluhm2018joint](bluhm2018joint)
+
 ## GPT
 
 * extremal measurements?
