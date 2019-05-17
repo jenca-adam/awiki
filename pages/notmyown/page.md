@@ -8,35 +8,35 @@ title: Not my own papers
 ### B
 [baez2011acharacterization](baez2011acharacterization), [berta2018renyi](berta2018renyi), [barnum2015entropy](barnum2015entropy), [bluhm2018joint](bluhm2018joint), [buscemi2017comparison](buscemi2017comparison)
 
-# C
+### C
 [chiribella2011informational](chiribella2011informational), 
 
-# D
+### D
 [dahl1999matrix](dahl1999matrix),
 
-# F
+### F
 [farenick2013approximately](farenick2013approximately), 
 
-# G
+### G
 
 [gour2018quantum](gour2018quantum), [gour2019comparison](gour2019comparison), [gudder2018convex](gudder2018convex), 
 
-# H
+### H
 
 [harremoes2017quantum](harremoes2017quantum), 
 
-# K
+### K
 [kimura2010distinguishability](kimura2010distinguishability), 
 
-# M
+### M
 [mullerlennert2013onquantum](mullerlennert2013onquantum), 
 
-# R
+### R
 [renyi1961onmeasures](renyi1961onmeasures), 
 
-# T
+### T
 [tomamichel2016quantum](tomamichel2016quantum), 
 
-# W
+### W
 [wetering2018aneffect](wetering2018aneffect), [wetering2018sequential](wetering2018sequential), [wetering2018three](wetering2018three),
 [wolf2010theinverse](wolf2010theinverse)
