@@ -1,6 +1,5 @@
 title: Labuschagne and  Majewski, Dynamics on noncommutative Orlicz spaces, 2019
 ---
-
 **Paper:** L. E. Labuschagne and W. A. Majewski, Dynamics on noncommutative Orlicz spaces, 2019
 
 **Journal:** IDAQP
@@ -12,3 +11,5 @@ title: Labuschagne and  Majewski, Dynamics on noncommutative Orlicz spaces, 2019
 
 [Report](labuschagne2019/report.pdf)
 
+
+**My decision** reject
