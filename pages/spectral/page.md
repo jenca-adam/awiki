@@ -12,6 +12,10 @@ title: Spectral effect algebras
 
 [arXiv:1811.12407](https://arxiv.org/abs/1811.12407)
 
+## Status
+
+Accepted in Quantum
+
 
 ## To read
 
