@@ -26,7 +26,8 @@ title: Not my own papers
 [harremoes2017quantum](harremoes2017quantum), 
 
 ### K
-[kimura2010distinguishability](kimura2010distinguishability), 
+[kimura2010distinguishability](kimura2010distinguishability), [kubicki2019resource](kubicki2019resource), 
+
 
 ### M
 [mullerlennert2013onquantum](mullerlennert2013onquantum), 

@@ -16,3 +16,5 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 * [gour2018quantum](gour2018quantum) comparison of bipartite states, resource theories
 * [buscemi2017comparison](buscemi2017comparison) comparison of channels by post-processings (degradability) 
 * [farenick2013approximately](farenick2013approximately) approximate cleanness (*comparison by pre-processings?*)
+* [kubicki2019resource](kubicki2019resource) no-programming theorem and Banach space theory (type 2 constants)
+
