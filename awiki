@@ -34,7 +34,7 @@ class MarkdownFile(object):
             if yaml_line.startswith('---'):
                 break
             yaml_lines.append(yaml_line)
-        self.meta=yaml.load("".join(yaml_lines))
+        self.meta=yaml.safe_load("".join(yaml_lines))
         self.markdown="".join(markdown_lines)
         self.html=markdown.markdown(self.markdown,extensions=['tables'])
 
