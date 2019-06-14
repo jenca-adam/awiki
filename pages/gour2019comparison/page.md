@@ -4,7 +4,8 @@ title: gour2019comparison
 
 G. Gour, Comparison of Quantum Channels by Superchannels, submitted to IEEE Transactions on Information Theory, 2019
 
-arxiv:1808.02607
+[arxiv:1808.02607](https://arxiv.org/abs/1808.02607)
+
 
 ## Content
 
