@@ -24,6 +24,5 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 Let $\rho\_{AB} \in B(\mathcal H\_{AB})^+$, then $H\_{min}(A|B)\_\rho=-\log  K\_{min}(A|B)\_\rho$, where
 $$
-K_{min}(A|B)\_\rho=\inf\{\mathrm{Tr} [\sigma_A], \rho\_{\AB}\le \sigma_A\otimes I_B.
+K_{min}(A|B)\_\rho=\inf\{\mathrm{Tr} (\sigma_A), \rho\_{\AB}\le \sigma_A\otimes I_B.
 $$
-
