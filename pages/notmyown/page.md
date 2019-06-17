@@ -9,7 +9,7 @@ title: Not my own papers
 [baez2011acharacterization](baez2011acharacterization),  [barnum2015entropy](barnum2015entropy), [berta2018renyi](berta2018renyi), [bluhm2018joint](bluhm2018joint), [buscemi2017comparison](buscemi2017comparison)
 
 ### C
-[chiribella2011informational](chiribella2011informational), 
+[chiribella2011informational](chiribella2011informational), [chiribella2016optimal](chiribella2016optimal)
 
 ### D
 [dahl1999matrix](dahl1999matrix),
