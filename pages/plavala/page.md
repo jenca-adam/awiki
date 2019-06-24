@@ -12,7 +12,23 @@ title: "Martin Pl\xE1vala"
 the non-classical properties of quantum channels. 
 
   
-**Oponenti** ?? (Návrh) *Bužek/Zlatoš(?!), Sergei Filippov, Markus M\"uller*
+**Oponenti** Vladimír Bužek, Markus Huber, Milan Mosonyi
 
 
- 
+**Posudok** (sketch) Všeobecné probabilistické teórie (GPT) sú často využívané na výskum základov kvantovej mechaniky.
+Tento prístup poskytuje vhodné prostriedky na štúdium neklasických javov, známych z kvatovej teórie, v širšej  triede fyzikálnych teórií, kde je možné tieto javy kvantifikovať a porovnávať v jednotlivých teóriách. GPT sú založené na operačných pojmoch ako sú stavy, efekty a merania, a umožňuje popis uvedených javov v rámci teórie usporiadaných vektorových priestorov, ich tenzorových súčinov a morfizmov.
+
+Dizertačná práca Martina Plávalu sa zameriava predovšetkým na výskum nekompatibility meraní a kanálov v kvantovej teórii a v  GPT. 
+Pozostáva z piatich publikovaných článkov a dlhšieho úvodu, kde sú stručne, ale veľmi zrozumiteľne a čitateľne,
+uvedené základné definície GPT a zhrnuté  najdôležitejšie výsledky práce. Z výsledkov by som chcela vyzdvihnúť najmä dva samostatné články autora. V prvom z nich sa venuje veľmi prirodzenej otázke či nekomatibilné efekty existujú v každej neklasickej teórii a 
+predstavuje pekný geometrický argument dokazujúci kladnú odpoveď. V ďalšom popisuje nekompatibilitu kanálov v GPT pomocou formalizmu, 
+ktorý umožňuje vyjadriť nekompatibilitu kvantových kanálov ako semidefinitný program a tiež prirodzene vedie k zovšeobecneniu steeringu a Bellovej nelokality na kanály v GPT.
+
+Ďalšie tri články boli napísané so spoluautormi, ale aspoň pokiaľ môžem posúdiť, sú tiež z veľkej časti založené na originálnych myšlienkach Martina Plávalu. V jednom z článkov, ktoré sme napísali spolu, sú popísané maximálne nekompatibilné efekty v GPT a sú charakterizované teórie, ktoré také dvojice obsahujú. Štvrtý článok bol napísaný počas pobytu na Univerzite v Turku, kde spolupracoval s prof. Heinosaarim a jeho študentom.  Tento článok popisuje merania, ktoré sú kompatibilné so všetkými kanálmi resp. so všetkými meraniami a ukazuje, že na rozdiel od kvantovej teórie tieto dve podmienky nie sú ekvivalentné v niektorých GPT. 
+Posledný článok práce je venovaný trochu inej problematike, ktorá súvisí so základmi kvantovej mechaniky. Bol napísaný na podnet
+M. Plávalu a na základe jeho nápadu na  odpoveď na otvorený problém postulovaný v článku S. Guddera o počte kontextov v spektrálnych efektových algebrách. 
+
+Záverom ...
+
+
+
