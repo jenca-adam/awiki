@@ -15,7 +15,7 @@ title: Not my own papers
 [dahl1999matrix](dahl1999matrix),
 
 ### F
-[farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator) 
+[farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator), [fritz2017spectrahedral](fritz2017spectrahedral) 
 
 ### G
 
@@ -37,7 +37,7 @@ title: Not my own papers
 
 ### P
 
-[paulsen1996themaximal](paulsen1996themaximal), [paulsen2011operator](paulsen2011operator)
+[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [paulsen2011operator](paulsen2011operator)
 
 ### R
 
