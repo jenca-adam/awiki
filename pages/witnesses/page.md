@@ -17,7 +17,7 @@ title: Incompatibility witnesses
 
 ## To read
 
-[auburn2017alice](auburn2017alice)
+[aubrun2017alice](aubrun2017alice)
 
 [bluhm2018joint](bluhm2018joint)
 
