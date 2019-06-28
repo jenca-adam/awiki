@@ -21,6 +21,17 @@ title: Incompatibility witnesses
 
 [bluhm2018joint](bluhm2018joint)
 
+
+**Operator spaces/systems**
+
 [paulsen2011operator](paulsen2011operator)
 
+[farenick2012operator](farenick2012operator)
 
+[paulsen1996themaximal](paulsen1996themaximal)
+
+***Spectrahedra/matrix convex sets***
+
+[passer2018minimal](passer2018minimal)
+
+[fritz2017spectrahedral](fritz2017spectrahedral)

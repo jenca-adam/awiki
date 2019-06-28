@@ -15,7 +15,7 @@ title: Not my own papers
 [dahl1999matrix](dahl1999matrix),
 
 ### F
-[farenick2013approximately](farenick2013approximately), 
+[farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator) 
 
 ### G
 
@@ -26,13 +26,21 @@ title: Not my own papers
 [harremoes2017quantum](harremoes2017quantum), 
 
 ### K
+
 [kimura2010distinguishability](kimura2010distinguishability), [kubicki2019resource](kubicki2019resource), 
 
 
 ### M
+
 [mullerlennert2013onquantum](mullerlennert2013onquantum), 
 
+
+### P
+
+[paulsen1996themaximal](paulsen1996themaximal), [paulsen2011operator](paulsen2011operator)
+
 ### R
+
 [renyi1961onmeasures](renyi1961onmeasures), 
 
 ### T
