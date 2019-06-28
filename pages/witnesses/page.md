@@ -30,7 +30,7 @@ title: Incompatibility witnesses
 
 [paulsen1996themaximal](paulsen1996themaximal)
 
-***Spectrahedra/matrix convex sets***
+**Spectrahedra/matrix convex sets**
 
 [passer2018minimal](passer2018minimal)
 
