@@ -24,11 +24,10 @@ uvedené základné definície GPT a zhrnuté  najdôležitejšie výsledky prá
 predstavuje pekný geometrický argument dokazujúci kladnú odpoveď. V ďalšom popisuje nekompatibilitu kanálov v GPT pomocou formalizmu, 
 ktorý umožňuje vyjadriť nekompatibilitu kvantových kanálov ako semidefinitný program a tiež prirodzene vedie k zovšeobecneniu steeringu a Bellovej nelokality na kanály v GPT.
 
-Ďalšie tri články boli napísané so spoluautormi, ale aspoň pokiaľ môžem posúdiť, sú tiež z veľkej časti založené na originálnych myšlienkach Martina Plávalu. V jednom z článkov, ktoré sme napísali spolu, sú popísané maximálne nekompatibilné efekty v GPT a sú charakterizované teórie, ktoré také dvojice obsahujú. Štvrtý článok bol napísaný počas pobytu na Univerzite v Turku, kde spolupracoval s prof. Heinosaarim a jeho študentom.  Tento článok popisuje merania, ktoré sú kompatibilné so všetkými kanálmi resp. so všetkými meraniami a ukazuje, že na rozdiel od kvantovej teórie tieto dve podmienky nie sú ekvivalentné v niektorých GPT. 
-Posledný článok práce je venovaný trochu inej problematike, ktorá súvisí so základmi kvantovej mechaniky. Bol napísaný na podnet
-M. Plávalu a na základe jeho nápadu na  odpoveď na otvorený problém postulovaný v článku S. Guddera o počte kontextov v spektrálnych efektových algebrách. 
+ Naše dva spoločné články  sú tiež z veľkej časti založené na originálnych myšlienkach doktoranda. 
+V jednom z mich sú popísané maximálne nekompatibilné efekty v GPT a sú charakterizované teórie, ktoré také dvojice obsahujú. Druhý článok je venovaný trochu inej problematike, ktorá súvisí so základmi kvantovej mechaniky. Bol napísaný na podnet M. Plávalu a na základe jeho nápadu na  odpoveď na otvorený problém postulovaný v článku S. Guddera o počte kontextov v spektrálnych efektových algebrách. Súčasťou práce je aj článok napísaný počas pobytu na Univerzite v Turku, kde spolupracoval s prof. Heinosaarim a jeho študentom.  Tento článok popisuje merania, ktoré sú kompatibilné so všetkými kanálmi resp. so všetkými meraniami a ukazuje, že na rozdiel od kvantovej teórie tieto dve podmienky nie sú ekvivalentné v niektorých GPT. 
 
-Záverom ...
+Záverom konštatujem, že predkladaná práca jednoznačne spĺňa požiadavky na doktorandské dizertačné práce. Úvod je napísaný veľmi prehľadne a čitateľne, uvedené články boli publikované vo vysoko kvalitných časopisoch. Doktorand  bez najmenších pochybností preukázal, že je schopný samostatne vedecky pracovať na vysokej úrovni, ako aj spolupracovať s členmi medzinárodnej vedeckej komunity. Preto rozhodne odporúčam dizertačnú prácu RNDr. Martina Plávalu na obhajobu.
 
 
 
