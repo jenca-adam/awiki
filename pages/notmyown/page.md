@@ -3,7 +3,7 @@ title: Not my own papers
 ## A list
 
 ### A
-[alfsen2003geometry](alfsen2003geometry), [auburn2017alice](auburn2017alice), 
+[alfsen2003geometry](alfsen2003geometry), [auburn2017alice](auburn2017alice) [aubrun2018universal](aubrun2018universal), 
 
 ### B
 [baez2011acharacterization](baez2011acharacterization),  [barnum2015entropy](barnum2015entropy), [berta2018renyi](berta2018renyi), [bluhm2018joint](bluhm2018joint), [buscemi2017comparison](buscemi2017comparison)
