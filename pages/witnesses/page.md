@@ -11,14 +11,21 @@ title: Incompatibility witnesses
 * my notes on [witnesses](witnesses/aj_witnesses.pdf)
 * my notes on [spectrahedra](witnesses/aj_spectrahedra.pdf)
 * notes by Andreas and Ion on spectrahedra and [gpt](witnesses/bluhm.pdf)
+* my notes on witnesses and [symmetric state spaces](witnesses/notes_symmetric.pdf)
 
 ## Papers
 
 **Incompatibility**
 
-[jencova2018incompatibility](jencova2018incompatibility)
+[jencova2018incompatible](jencova2018incompatible)
 
 [plavala2016allmeasurements](plavala2016allmeasurements)
+
+
+## Talks
+
+* My [Genoa 2018](witnesses/genoa2018.pdf) talk
+* My [Lyon 2019](witnesses/lyon2019.pdf) talk
 
 ## To read
 
