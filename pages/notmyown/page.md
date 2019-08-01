@@ -37,7 +37,8 @@ title: Not my own papers
 
 ### P
 
-[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [paulsen2011operator](paulsen2011operator)
+[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [paulsen2011operator](paulsen2011operator),
+ [plavala2016allmeasurements](plavala2016allmeasurements)
 
 ### R
 

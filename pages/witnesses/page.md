@@ -16,11 +16,12 @@ title: Incompatibility witnesses
 
 **Incompatibility**
 
-[jencova2018incompatibility](encova2018incompatibility)
+[jencova2018incompatibility](jencova2018incompatibility)
 
-[plavala]
+[plavala2016allmeasurements](plavala2016allmeasurements)
 
 ## To read
+
 [aubrun2018universal](aubrun2018universal)
 
 [aubrun2017alice](aubrun2017alice)
