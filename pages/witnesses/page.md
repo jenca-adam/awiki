@@ -14,6 +14,11 @@ title: Incompatibility witnesses
 
 ## Papers
 
+**Incompatibility**
+
+[jencova2018incompatibility](encova2018incompatibility)
+
+[plavala]
 
 ## To read
 [aubrun2018universal](aubrun2018universal)
