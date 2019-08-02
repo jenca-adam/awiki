@@ -8,6 +8,9 @@ my [ISIT](jencova2016isit) paper
 
 my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014randomization](jencova2014randomization)
 
+## Talks
+
+* my [banff2019](comparison/banff2019.pdf) talk
 
 
 ## Papers
@@ -23,7 +26,6 @@ My papers:
 * [farenick2013approximately](farenick2013approximately) approximate cleanness (*comparison by pre-processings?*)
 * [kubicki2019resource](kubicki2019resource) no-programming theorem and Banach space theory (type 2 constants)
 * [chiribella2016optimal](chiribella2016optimal) conditional min-entropy for networks
-
 
 
 
