@@ -16,10 +16,11 @@ title: Incompatibility witnesses
 ## Questions
 
 * the cross norm gamma [defined here](witnesses/notes_symmetric.pdf), the dual cross norm is on $A\otimes \ell_1^k$, that is
-on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positive extensions, as in [the b-n notes](witnesses/bluhm.pdf).
+on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positive extensions, as in [the b-n notes](witnesses/bluhm.pdf)
+* related to previous: map extensions and conic programming
 * incompatibility on $W$ - the min tensor product of two quantum state spaces (two qubits)
 * relations of incompatibility, free spectrahedra, operator systems and norms - one should write some notes on this
-* 
+* measurements with more outcomes
 
 ## Papers
 
