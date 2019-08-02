@@ -13,6 +13,14 @@ title: Incompatibility witnesses
 * notes by Andreas and Ion on spectrahedra and [gpt](witnesses/bluhm.pdf)
 * my notes on witnesses and [symmetric state spaces](witnesses/notes_symmetric.pdf)
 
+## Questions
+
+* the cross norm gamma [defined here](witnesses/notes_symmetric.pdf), the dual cross norm is on $A\otimes \ell_1^k$, that is
+on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positive extensions, as in [the b-n notes](witnesses/bluhm.pdf).
+* incompatibility on $W$ - the min tensor product of two quantum state spaces (two qubits)
+* relations of incompatibility, free spectrahedra, operator systems and norms - one should write some notes on this
+* 
+
 ## Papers
 
 **Incompatibility**
