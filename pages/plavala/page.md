@@ -19,4 +19,4 @@ the non-classical properties of quantum channels.
 
 **Obhajoba**  26. 8. 2019, 11:00
 
-**Posudky oponentov** [huber](plavala/posudok_huber.pdf), [buzek](plavala/posudok_buzek.doc), [mosonyi](plavala/posudok/mosonyi.pdf)
+**Posudky oponentov** [huber](plavala/posudok_huber.pdf), [buzek](plavala/posudok_buzek.pdf), [mosonyi](plavala/posudok_mosonyi.pdf)
