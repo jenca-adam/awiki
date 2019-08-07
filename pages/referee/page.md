@@ -5,7 +5,7 @@ title: To referee
 Due [27.5.2019](gzyl2019)
 
 
-Due [7.8.2019](carlen2019)
+<del>Due [7.8.2019](carlen2019)</del> Done.
 
 <del>Due [26.1.2019](gour2019)</del> Done.
 
