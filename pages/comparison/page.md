@@ -22,7 +22,7 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 * [buscemi2019aninformation](buscemi2019aninformation) quantum dichotomies
 * [alberti1980aproblem](alberti1980aproblem) Alberti-Uhlmann theorem
 * [alberti1985onthesimultaneous](alberti1985onthesimultaneous) stochastic transformations between tuples of normal states
-
+* [matsumoto2010reverse](matsumoto2010reverse) reverse tests and quantum relative entropy
 
 
 ### Tools
