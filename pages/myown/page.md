@@ -8,5 +8,6 @@ title: My own papers
 1. [jencova2015comparison](jencova2015comparison)
 1. [jencova2014randomization](jencova2014randomization)
 1. [jencova2014base](jencova2014base)
+1. [jencova2019onthe](jencova2019onthe)
 1. [jencova201]()
 
