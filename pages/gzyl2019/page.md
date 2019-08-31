@@ -9,4 +9,6 @@ title: H. Gzyl, F. Nielsen 2019
 
 [File](gzyl2019/file.pdf)
 
-[review form](gzyl2019/form.txt)
+[review form](gzyl2019/review_form.txt)
+
+**Decision** reject

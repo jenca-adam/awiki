@@ -15,4 +15,8 @@ the non-classical properties of quantum channels.
 **Oponenti** Vladimír Bužek, Markus Huber, Milan Mosonyi
 
 
-**Posudok** [tu](plavala/plavala_posudok.doc) 
+**Posudoki školiteľa** [tu](plavala/plavala_posudok.doc) 
+
+**Obhajoba**  26. 8. 2019, 11:00
+
+**Posudky oponentov** [huber](plavala/posudok_huber.pdf), [buzek](plavala/posudok_buzek.pdf), [mosonyi](plavala/posudok_mosonyi.pdf)

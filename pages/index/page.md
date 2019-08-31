@@ -13,7 +13,7 @@ title: My projects
 
 * [Decoherence-free subalgebras](decoherence)
 * [Tensor products of dimension effect algebras](tpdea)
-* [Spectral effect algebras](spectral)
+
 
 ---
 
@@ -30,6 +30,7 @@ title: My projects
 
 * [Convex set constructions and tensor products](seminar_convex)
 * [Entropy in category theory](seminar_entropy)
+---
 
 ## On hold
 
@@ -38,6 +39,9 @@ title: My projects
 ---
 
 ## Finished
+
+* [Spectral effect algebras](spectral)
+
 ---
 
 ## Zombies

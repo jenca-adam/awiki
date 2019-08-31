@@ -1,5 +1,6 @@
-Title of article: 
-Author/s:
+Title of article: Bruhat-Tits geometry of the probability simplex and its
+connection to the maximum entropy method 
+Author/s: H. Gzyl and F. Nielsen
 
 Review Form
 
@@ -14,7 +15,7 @@ A unified scale on the review items is also necessary to compare article ratings
 Originality
 The aspect of originality or novelty is concerned with an article's degree of innovation. Articles which cover aspects of a topic which are newly introduced, or which have only rarely been treated before, receive high originality ratings. What is also a decisive factor concerning the originality rating is whether an article has or has not been previously published. Articles which consist mainly of well established and renowned material may not be considered "original".
 [ ] poor
-[ ] needs improvements
+[x] needs improvements
 [ ] average
 [ ] good
 [ ] excellent
@@ -22,7 +23,7 @@ The aspect of originality or novelty is concerned with an article's degree of in
 Significance
 A high significance rating indicates an article's considerable contribution to a certain area of research. Thus, articles which present substantial new insights will achieve a high rating.
 [ ] poor
-[ ] needs improvements
+[x] needs improvements
 [ ] average
 [ ] good
 [ ] excellent
@@ -40,12 +41,12 @@ Articles relevant to topics of the scope. The relevance rating is decisive in th
 [ ] poor
 [ ] needs improvements
 [ ] average
-[ ] good
+[x] good
 [ ] excellent
 
 Presentation
 The presentation rating comprises the article's readability, the employment of graphical material, language usage, formal aspects, and the appropriate use of technical terminology. A properly structured article not only eases the reading process, but also promotes a proper understanding.
-[ ] poor
+[x] poor
 [ ] needs improvements
 [ ] average
 [ ] good
@@ -56,7 +57,7 @@ The adequacy of citations rating provides information about the accuracy of refe
 [ ] poor
 [ ] needs improvements
 [ ] average
-[ ] good
+[x] good
 [ ] excellent
 
 Referee's Expertise on the Topic
@@ -64,13 +65,13 @@ Referees need to state how far they are familiar with the topic of an article. T
 [ ] novice
 [ ] intermediate
 [ ] average
-[ ] experienced
+[x] experienced
 [ ] expert
 
 Amount of Rewriting Required
 The amount of rewriting factor shall provide an overview of the overall status of an article, i.e. its need for adjustments and the expected amount of time necessary to put it into adequate shape. If an article requires only minor modifications, but is acceptable otherwise, the amount of rewriting can be considered "little" (indicating a positive rating). For articles which are not usable, and which would require a considerable degree of re-engineering in order to become publishable, the amount of rewriting can be considered "much".
 [ ] very much
-[ ] much
+[x] much
 [ ] average
 [ ] little
 [ ] very little
@@ -79,13 +80,13 @@ Review Summary
 The Review summary and the result of the review are treated confidentially and are not exposed to the author. The author receives the recommendations from "Comments to the Author".
 
 The article is
-[ ] not accepted
+[x] not accepted
 [ ] accepted with annotations
 [ ] accepted
 
 Overall rating
 [ ] poor
-[ ] needs improvements
+[x] needs improvements
 [ ] average
 [ ] good
 [ ] excellent
@@ -93,18 +94,42 @@ Overall rating
 Comments to the Author:
 Please, make comments to the author to help to improve the quality of his or her manuscript. Main Contributions sum up the ideas of the article. Positive and negative aspects represent the reviewers impression of the article. Further comments can be used to note small corrections like orthographic mistakes. The comments to the author are mandatory.
 
-Main Contributions:
+Main Contributions: The authors show that the exponential families of
+probability distributions over a finite sets are obtained as geodesics with
+respect to a Riemannian geometry obtained from a group action on the
+probability simplex. They also provide a geometric interpretation of the
+maximum entropy principle.
 
 
-Positive Aspects:
+Positive Aspects: The idea of obtaining the geometry of exponential families
+is interesting, although not new. It can be nicely described on the simplex.
 
 
-Negative Aspects:
+Negative Aspects: 
+-The ideas are not new, in particular, the main idea is from
+the papers [10],[11] of one of the authors. Basically, this construction is
+already present in [18], (together with the connection to Bruhat-Tits spaces,
+which is not explained in the present paper at all). The ''gemetric
+interpretation of maximum entropy method'' presented in Sec. 4 is a special
+case of the well-known projection theorem by Amari [2].
+- The paper is poorly written, with lots of mistakes, typos, nonsensical
+  sentences, et.  In particular, Sec. 4 is a complete mess.  I will not go
+  into details, just a remark: the displayed equation starting with
+  S(p,p(t))\le 0 on p. 9 holds _only_ if p(t)\in P_\mu
+- It is not clear what is the purpose of Sec. 5 or how it is related to
+  anything in the paper.
+
+
 
 
 This is the main reason why I accept/reject the paper.
 
+Not sufficiently original, lots of mistakes, badly written. Obviously not
+worth reading for the authors themselves.
+
+
 
 Further Comments:
 
-
+There is a lot of further mistakes, but it is pointless writing them all out.
+Three typos in names at one page (p.2) is already beyond the mark.
