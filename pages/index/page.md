@@ -13,7 +13,7 @@ title: My projects
 
 * [Decoherence-free subalgebras](decoherence)
 * [Tensor products of dimension effect algebras](tpdea)
-* [Spectral effect algebras](spectral)
+
 
 ---
 
@@ -38,6 +38,8 @@ title: My projects
 ---
 
 ## Finished
+
+* [Spectral effect algebras](spectral)
 ---
 
 ## Zombies
