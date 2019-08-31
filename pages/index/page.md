@@ -30,6 +30,7 @@ title: My projects
 
 * [Convex set constructions and tensor products](seminar_convex)
 * [Entropy in category theory](seminar_entropy)
+---
 
 ## On hold
 
@@ -40,6 +41,7 @@ title: My projects
 ## Finished
 
 * [Spectral effect algebras](spectral)
+
 ---
 
 ## Zombies
