@@ -1,5 +1,8 @@
 title: Spectral effect algebras
 ---
+
+[The paper](jencova2019onthe)
+
 ## People
 
 * Martin Plávala
