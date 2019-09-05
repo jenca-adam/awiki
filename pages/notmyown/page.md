@@ -47,6 +47,9 @@ title: Not my own papers
 ### T
 [takagi2019general](takagi2019general), [tomamichel2016quantum](tomamichel2016quantum), 
 
+### V
+[vetterlein2019orthogonality](vetterlein2019orthogonality)
+
 ### W
 [wetering2018aneffect](wetering2018aneffect), [wetering2018sequential](wetering2018sequential), [wetering2018three](wetering2018three),
 [wolf2010theinverse](wolf2010theinverse)
