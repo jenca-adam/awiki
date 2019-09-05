@@ -35,6 +35,8 @@ title: Spectral effect algebras
 
 ### Foundations
 
+[vetterlein2019orthogonality](vetterlein2019orthogonality)
+
 [chiribella2011informational](chiribella2011informational)
 
 [wetering2018aneffect](wetering2018aneffect)

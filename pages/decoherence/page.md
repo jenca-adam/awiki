@@ -19,7 +19,7 @@ The decoherence-free subalgebra of a channel on $B(\mathcal H)$, in the presence
 
 * [arxiv:1905.00857](https://arxiv.org/abs/1905.00857)
 
-[referee report](decoherence/report.pdf)
+[referee report](decoherence/report.pdf)  (decision: accept)
 
 ## To do
 
