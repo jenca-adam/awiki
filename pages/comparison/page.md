@@ -12,6 +12,12 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 * my [banff2019](comparison/banff2019.pdf) talk
 
+## In preparation
+
+* comparison by superchannels (some generalization of the banff talk)
+
+
+
 
 ## Papers
 

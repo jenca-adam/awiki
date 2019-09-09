@@ -8,6 +8,6 @@ Ryuji Takagi, Bartosz Regula, General resource theories in quantum mechanics and
 
 [arXiv:1901.08127](https://arxiv.org/abs/1901.08127)
 
-[latest version](comparison/takagi.pdf) (July 2019, Banff)
+[latest version](takagi2019general/takagi.pdf) (July 2019, Banff)
 
   		
