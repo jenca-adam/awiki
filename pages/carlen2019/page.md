@@ -12,4 +12,8 @@ title: E. Carlen, A. Vershynina,  2019
 
 **Decision**  Major revision
 
+[answer](carlen2019/answer.pdf)
 
+[revision](carlen2019/revision.pdf)
+
+**Revised due: 16.10. 2019**

@@ -6,8 +6,11 @@ Bipartite System in General Probabilistic Theory
  
 **Journal:** EasyChair, review for AQIS19 (19th Asian Quantum Information Science Conference)
 
+**Due:** 15.6.2019
+
 [file](aray2019/file.pdf)
 
 
+**Decision:** (weak) accept
 
 
