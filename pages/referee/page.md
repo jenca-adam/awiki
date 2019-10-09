@@ -1,7 +1,6 @@
 title: To referee
 ---
-
-Due [7.8.2019](carlen2019) (revision)
+Due [16.10.2019](carlen2019) (revision)
 
 Due [27.10.2019](shahbazi2019)
 
