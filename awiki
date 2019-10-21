@@ -87,9 +87,9 @@ def view_attachment(pagename,attachment):
     return Response(content,mimetype=mimetype)
 
 class EditForm(Form):
-    title=StringField('Title',[validators.required()])
-    markdown=TextAreaField('',[validators.required()])
-    commit_message=StringField('Commit message',[validators.required()])
+    title=StringField('Title',[validators.DataRequired()])
+    markdown=TextAreaField('',[validators.DataRequired()])
+    commit_message=StringField('Commit message',[validators.DataRequired()])
 
 
 @app.route('/edit/<string:pagename>',methods=['GET','POST'])

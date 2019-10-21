@@ -3,6 +3,8 @@ title: To referee
 
 Due [27.10.2019](shahbazi2019)
 
+Due [30.11.2019](pitrik2019)
+
 Due [8.12.2019](podsedkowska2019)
 
 
