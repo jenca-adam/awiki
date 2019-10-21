@@ -17,3 +17,6 @@ title: E. Carlen, A. Vershynina,  2019
 [revision](carlen2019/revision.pdf)
 
 **Revised due: 16.10. 2019**
+
+[report revised](carlen2019/report_revised.pdf)
+
