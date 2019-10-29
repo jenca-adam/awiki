@@ -1,7 +1,6 @@
 title: To referee
 ---
 
-
 Due [30.11.2019](pitrik2019)
 
 Due [8.12.2019](podsedkowska2019)
@@ -25,4 +24,4 @@ Due [8.12.2019](podsedkowska2019)
 
 <del>Due [16.10.2019](carlen2019) (revision)</del>  Done.
 
-<del>Due [27.10.2019](shahbazi2019)<\del> Done.
+<del>Due [27.10.2019](shahbazi2019)</del> Done.
