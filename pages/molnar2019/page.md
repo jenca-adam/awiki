@@ -1,6 +1,5 @@
-title: L. Molnár, Quantum Rényi relative entropies, 2019
+title: "L. Moln\xE1r, Quantum R\xE9nyi relative entropies, 2019"
 ---
-
 **Paper:** L. Molnár,Quantum R\'enyi relative entropies on density spaces of $C^\*$-algebras: their symmetries and their essential difference 
 
 **Journal:** Journal of Functional Analysis
@@ -12,3 +11,4 @@ title: L. Molnár, Quantum Rényi relative entropies, 2019
 
 [Report](molnar2019/report.pdf)
 
+**Decision:** accept
