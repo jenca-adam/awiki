@@ -11,7 +11,9 @@ title: "Martin Pl\xE1vala"
 **Annotation:** Non-classical features of quantum theory are often studied in the framework of so-called general probabilistic theories. In this approach, such features can be quantified and may specify the place of quantum theory within a broader hierarchy of non-classical theories. The aim of the thesis is to study  properties of measurements and channels in these more general theories, especially (in)compatibility and its relation to other effects such as nonlocality or steering. The thesis will be focused on 
 the non-classical properties of quantum channels. 
 
-  
+
+**Thesis:** [link](http://www.st.fmph.uniba.sk/~plavala1/dissertation-thesis.pdf)
+
 **Oponenti:** Vladimír Bužek, Markus Huber, Milan Mosonyi
 
 
