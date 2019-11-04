@@ -1,0 +1,11 @@
+
+The paper attempts to extend the classical MDL technique to quantum statistics. The idea in itself might be interesting, but the paper has serious weaknesses and cannot be published: 
+
+1. The classical MDL is not really introduced. The corresponding section is half a page long and contains nothing but the definition of a universal model. There is no explanation of the classical technique whatsoever, and no motivation why a quantum counterpart might be interesting. 
+
+2. The quantum definition is just a straightforward extension, with no discussion of its justification. The main part of the paper only deals with the Q-universal situation, where one may safely assume that all the densities are diagonal with respect to the given basis. This is just like the classical situation and the classical results are taken straightforwardly. There is no way to extend the techniques to more general cases.  
+
+3. The paper is badly written, with many typos, omissions, confusing or not previously introduced notations, etc. Some really trivial things are proved at length (e.g. Lemmas 1 and 2), while more involved results are just "straightforward" or a "direct consequence".  
+
+4. There are also peculiarities: the first two sentences of the introduction are taken verbatim from the abstract of [10], the paper has 28 items in the reference list but only 6 are actually cited in the text. 
+
