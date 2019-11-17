@@ -19,12 +19,18 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 
 
-## Papers
+## Plan to read
+
+### Comparison
+
+Read the first two and check references:
+
+* [takagi2019general](takagi2019general) operational characterization of comparison (equality)
+* [dallarno2019extension](dallarno2019extension) 
 
 * [gour2019comparison](gour2019comparison) comparison of bipartite channels by superchannels
 * [gour2018quantum](gour2018quantum) comparison of bipartite states, resource theories
 * [buscemi2017comparison](buscemi2017comparison) comparison of channels by post-processings (degradability)
-* [takagi2019general](takagi2019general) operational characterization of comparison (equality)
 * [buscemi2019aninformation](buscemi2019aninformation) quantum dichotomies
 * [alberti1980aproblem](alberti1980aproblem) Alberti-Uhlmann theorem
 * [alberti1985onthesimultaneous](alberti1985onthesimultaneous) stochastic transformations between tuples of normal states
