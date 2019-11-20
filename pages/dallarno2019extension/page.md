@@ -12,7 +12,7 @@ title: dallarno2019extension
 
 This paper is quite badly written. Check some of the references:
 
-[arxiv:1609.07846](https://arxiv.org/abs/1609.07846)
+[dallarno2017device](dallarno2017device)
 
 [arxiv:1702.00575](https://arxiv.org/abs/1702.00575)
 

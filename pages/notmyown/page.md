@@ -12,7 +12,8 @@ title: Not my own papers
 [chiribella2011informational](chiribella2011informational), [chiribella2016optimal](chiribella2016optimal)
 
 ### D
-[dahl1999matrix](dahl1999matrix),
+[dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),
+[dallarno2019extension](dallarno2019extension)
 
 ### F
 [farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator), [fritz2017spectrahedral](fritz2017spectrahedral) 

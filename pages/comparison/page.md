@@ -37,6 +37,8 @@ Read the first two and check references:
 * [matsumoto2010reverse](matsumoto2010reverse) reverse tests and quantum relative entropy
 
 
+
+
 ### Tools
 
 * [jencova2014base](jencova2014base) base section norms and properties
