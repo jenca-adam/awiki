@@ -45,6 +45,10 @@ title: Not my own papers
 
 [renyi1961onmeasures](renyi1961onmeasures), 
 
+### S
+
+[skrzypczyp2019robustness](skrzypczyp2019robustness),
+
 ### T
 [takagi2019general](takagi2019general), [tomamichel2016quantum](tomamichel2016quantum), 
 

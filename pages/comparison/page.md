@@ -16,7 +16,12 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 * comparison by superchannels (some generalization of the banff talk)
 
+### Remarks
 
+* For the BS category: check some Pavian papers!
+
+* For simulations of measurements: [dallarno2019extension](dallarno2019extension) (preprocessing), Teiko etc. (sets of
+  measurements), [skrzypczyk2019robustness](skrzypczyk2019robustness) (postprocessings)
 
 
 ## Plan to read

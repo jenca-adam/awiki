@@ -29,10 +29,10 @@ $$
 $$
 \pi_y=t_y+\sum_{k=1}^3 S_{y,k}\sigma_k,\quad t_y=\frac12\mathrm{Tr}(\pi_y), \qquad \rho=\sigma_0+\sum_{k=1}^3 \alpha_k\sigma_k.
 $$
-Let $q\in \mathbb R^n$ be the vector $q_y=\mathrm{Tr}[\pi_y\rho]$, then we have $q=t+S\alpha$, where $t=\\{t_y\\}$ and
+Let $q\in \mathbb R^n$ be the vector $q_y=\mathrm{Tr}[\pi_y\rho]$, then we have $q=t+2S\alpha$, where $t=\\{t_y\\}$ and
 $\alpha=\\{\alpha_y\\}$ are $n$-dim. vectors and $S=\\{S_{y,k}\\}$ is an $n\times 3$- matrix. Then
 $$
-\mathcal S_1(\pi):=\\{ \\{\mathrm{Tr}[\pi_y\rho]\\},\ \rho \mbox{ is a state}\\}= t+ SB(\mathbb R^3),\qquad (B(\mathbb R^3) \mbox{ is the unit ball in }\mathbb R^3).
+\mathcal S_1(\pi):=\\{ \\{\mathrm{Tr}[\pi_y\rho]\\},\ \rho \mbox{ is a state}\\}= t+ 2SB(\mathbb R^3),\qquad (B(\mathbb R^3) \mbox{ is the unit ball in }\mathbb R^3).
 $$
 The last set is some (degenerate)  ellipsoid embedded in $\mathbb R^n$ ($n$ is the number of outcomes of $\pi$). It is characterized using
 constrained quadratic optimalization. 
