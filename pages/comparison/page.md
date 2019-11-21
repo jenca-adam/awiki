@@ -10,7 +10,7 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 ## Talks
 
-* my [banff2019](comparison/banff2019.pdf) talk
+* my [banff2019](comparison/banff2019.pdf) talk: comparison of bipartite channels
 
 ## In preparation
 
@@ -56,6 +56,5 @@ Read the first two and check references:
  
 * [farenick2013approximately](farenick2013approximately) approximate cleanness (*comparison by pre-processings?*)
 * [kubicki2019resource](kubicki2019resource) no-programming theorem and Banach space theory (type 2 constants)
-
 
 
