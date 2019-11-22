@@ -12,7 +12,7 @@ title: Not my own papers
 [chiribella2011informational](chiribella2011informational), [chiribella2016optimal](chiribella2016optimal)
 
 ### D
-[dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),
+[dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),[dallarno2019device](dallarno2019device), [dallarno2019data](dallarno2019data),
 [dallarno2019extension](dallarno2019extension)
 
 ### F
@@ -47,7 +47,7 @@ title: Not my own papers
 
 ### S
 
-[skrzypczyp2019robustness](skrzypczyp2019robustness),
+[skrzypczyk2019robustness](skrzypczyk2019robustness),
 
 ### T
 [takagi2019general](takagi2019general), [tomamichel2016quantum](tomamichel2016quantum), 
