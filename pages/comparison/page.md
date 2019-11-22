@@ -20,7 +20,7 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 * For the BS category: check some Pavian papers!
 
-* Inclusion of ranges of measurements and simulability: check the paper [buscemi2005clean](buscemi2005clean). There is a counterexample that inclusion of ranges implies existence of even a positive map! Check also Thm. 7.2 there.
+* Inclusion of ranges of measurements and simulability: check the paper [buscemi2005clean](buscemi2005clean). There is a counterexample that show that inclusion of ranges does not imply existence of even a positive map! Check also Thm. 7.2 there.
 
 * For simulations of measurements: [dallarno2019extension](dallarno2019extension) (preprocessing), Teiko etc. (sets of
   measurements), [skrzypczyk2019robustness](skrzypczyk2019robustness) (postprocessings)
@@ -84,7 +84,6 @@ Read the first two and check references:
 * [alberti1980aproblem](alberti1980aproblem) Alberti-Uhlmann theorem
 * [alberti1985onthesimultaneous](alberti1985onthesimultaneous) stochastic transformations between tuples of normal states
 * [matsumoto2010reverse](matsumoto2010reverse) reverse tests and quantum relative entropy
-
 
 
 
