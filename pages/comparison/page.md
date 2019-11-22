@@ -23,8 +23,50 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 * For simulations of measurements: [dallarno2019extension](dallarno2019extension) (preprocessing), Teiko etc. (sets of
   measurements), [skrzypczyk2019robustness](skrzypczyk2019robustness) (postprocessings)
 
+### Tools
+
+* [jencova2014base](jencova2014base) base section norms and properties
+* [chiribella2016optimal](chiribella2016optimal) conditional min-entropy for networks
+
+
+
+
+### Related: 
+ 
+* [farenick2013approximately](farenick2013approximately) approximate cleanness (*comparison by pre-processings?*)
+* [kubicki2019resource](kubicki2019resource) no-programming theorem and Banach space theory (type 2 constants)
+
+
+## Further ideas
+
+* Look at the classical randomization theorem (Strasser, Le Cam, Torgersen), check the relation to weak-strong
+  convergence of experiments. What do we get for quantum?
+
+* Preprocessing simulability of measurements: what about inclusion/distance of ranges?
+
+* Comparison by classical input/output correlations: Shannon c-c channels, Buscemi et al., should be similarly extended
+
+* Comparison by LOCC??
+
+
+## Reading
+
+### Data-driven, device-independent
+
+
+* [dallarno2019extension](dallarno2019extension) 
+* [dallarno2017device](dallarno2017device)
+* [dallarno2019device](dallarno2019device)
+* [dallarno2019data](dallarno2019data)
+
+
 
 ## Plan to read
+
+* Buscemi:  comparison, Lorenz curves, dichotomies
+
+* Matsumoto: all related
+
 
 ### Comparison
 
@@ -43,18 +85,5 @@ Read the first two and check references:
 
 
 
-
-### Tools
-
-* [jencova2014base](jencova2014base) base section norms and properties
-* [chiribella2016optimal](chiribella2016optimal) conditional min-entropy for networks
-
-
-
-
-### Related: 
- 
-* [farenick2013approximately](farenick2013approximately) approximate cleanness (*comparison by pre-processings?*)
-* [kubicki2019resource](kubicki2019resource) no-programming theorem and Banach space theory (type 2 constants)
 
 

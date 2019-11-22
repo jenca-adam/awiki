@@ -16,7 +16,7 @@ This paper is quite badly written. Check some of the references:
 
 [dallarno2019device](dallarno2019device)
 
-[arxiv:1805.01159](https://arxiv.org/abs/1805.01159)
+[dallarno2019data](dallarno2019data)
 
 [arxiv:1812.08470](https://arxiv.org/abs/1812.08470)
 
