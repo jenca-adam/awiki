@@ -13,7 +13,7 @@ title: Not my own papers
 
 ### D
 [dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),[dallarno2019device](dallarno2019device), [dallarno2019data](dallarno2019data),
-[dallarno2019extension](dallarno2019extension)
+[dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension)
 
 ### F
 [farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator), [fritz2017spectrahedral](fritz2017spectrahedral) 

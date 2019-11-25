@@ -46,6 +46,19 @@ $$
 ## Results
 
 1. $ddi(\\{p_x\\}|\mathbb S)$ is a singleton for any set of outcome distributions $\\{p_x\\}\subset \mathbb R^n$ if and only if the state space is
-   a (hyper)sphere. 
+   a (hyper)sphere. (Thm. 1)
 
-     *  
+     * *In the proof, the assumptionn is for all subsets $\mathcal X\subset \mathbb R^n$. But is this the same? They use
+       subsets invariant under orthogonal matrices, which the probability distributions clearly are not.*
+ 
+1. For any given state space $\mathbb S$, the range of an info-complete measurement $M$ identifies $M$ up to gauge
+   symmetries. (Thm. 2)
+
+      * *This is because an IC measurement $M$ is invertible. Something more general is proved using Moore-Penrose
+        inverses.*
+
+1. A set $\mathcal S$ of states is OC for any IC measurement iff $ddi(\mathcal S|\mathbb S)=\mathbb S$. (Thm. 3)
+
+      * *This is not formulated clearly (in Supplemental), for all or for any?*
+
+1. Similarly for sets of states.
