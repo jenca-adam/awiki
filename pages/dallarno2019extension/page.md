@@ -1,6 +1,5 @@
 title: dallarno2019extension
 ---
-
 ## Reference
 
  M. Dall'Arno, F. Buscemi, V. Scarani, Extension of the Alberti-Ulhmann criterion beyond qubit dichotomies, 
@@ -18,8 +17,7 @@ This paper is quite badly written. Check some of the references:
 
 [dallarno2019data](dallarno2019data)
 
-[arxiv:1812.08470](https://arxiv.org/abs/1812.08470)
+[dallarno2019data1](dallarno2019data1)
 
 [arxiv:1905.04895](https://arxiv.org/abs/1905.04895)
-
 
