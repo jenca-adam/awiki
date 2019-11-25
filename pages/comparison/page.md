@@ -60,6 +60,7 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 * [dallarno2017device](dallarno2017device)
 * [dallarno2019device](dallarno2019device)
 * [dallarno2019data](dallarno2019data)
+* [dallarno2019data1](dallarno2019data1)
 
 
 
@@ -84,6 +85,5 @@ Read the first two and check references:
 * [alberti1980aproblem](alberti1980aproblem) Alberti-Uhlmann theorem
 * [alberti1985onthesimultaneous](alberti1985onthesimultaneous) stochastic transformations between tuples of normal states
 * [matsumoto2010reverse](matsumoto2010reverse) reverse tests and quantum relative entropy
-
 
 
