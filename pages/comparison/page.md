@@ -20,7 +20,12 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 * For the BS category: check some Pavian papers!
 
+* Just after the general randomization Thm.: chceck the cases of two measurements and of two sets of states, compare to
+  [takagi2019general](takagi2019general)
+
 * Inclusion of ranges of measurements and simulability: check the paper [buscemi2005clean](buscemi2005clean). There is a counterexample that show that inclusion of ranges does not imply existence of even a positive map! Check also Thm. 7.2 there.
+
+* Preprocessing simulability of measurements: what about inclusion/distance of ranges?
 
 * For simulations of measurements: [dallarno2019extension](dallarno2019extension) (preprocessing), Teiko etc. (sets of
   measurements), [skrzypczyk2019robustness](skrzypczyk2019robustness) (postprocessings)
@@ -44,7 +49,6 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 * Look at the classical randomization theorem (Strasser, Le Cam, Torgersen), check the relation to weak-strong
   convergence of experiments. What do we get for quantum?
 
-* Preprocessing simulability of measurements: what about inclusion/distance of ranges?
 
 * Comparison by classical input/output correlations: Shannon c-c channels, Buscemi et al., should be similarly extended
 
