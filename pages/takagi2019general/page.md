@@ -41,9 +41,19 @@ Ryuji Takagi, Bartosz Regula, General resource theories in quantum mechanics and
 
 [Gour, Chitambar](https://arxiv.org/abs/1806.06107) 
 
+
+
+[Buscemi et al](https://arxiv.org/abs/1710.04710) quantum memories
+
 ### Measurement simulability
 
-[Oszmaniec](https://arxiv.org/abs/1807.08449) Simulation of all POVM by PVM and postselection
+[Oszmaniec...](https://arxiv.org/abs/1807.08449) Simulation of all POVM by PVM and postselection
 
 
-  		
+[Acin...](https://arxiv.org/abs/1705.06343) Simulability of sets of measurements
+
+[skrzypczyk2019robustness](skrzypczyk2019robustness) measurement informativeness
+
++ more by Skrzypczyk...
+
+
