@@ -1,7 +1,6 @@
 title: To referee
 ---
 
-Due [29.11.2019](dallarno2019)
 
 Due [30.11.2019](pitrik2019)
 
@@ -28,3 +27,6 @@ Due [8.12.2019](podsedkowska2019)
 7. <del>Due [16.10.2019](carlen2019) (revision)</del>  Done.
 
 8. <del>Due [27.10.2019](shahbazi2019)</del> Done.
+
+9. <del>Due [29.11.2019](dallarno2019)</del> Done.
+
