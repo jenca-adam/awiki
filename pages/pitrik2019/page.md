@@ -8,6 +8,6 @@ title: J. Pitrik, D. Virosztek,  Hellinger distances, 2019
 
 [file](pitrik2019/file.pdf)
 
-[report](/report.pdf)
+[report](pitrik2019/report.pdf)
 
 **Decision:** 
