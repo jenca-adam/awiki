@@ -10,4 +10,4 @@ title: J. Pitrik, D. Virosztek,  Hellinger distances, 2019
 
 [report](pitrik2019/report.pdf)
 
-**Decision:** 
+**Decision:** minor revision
