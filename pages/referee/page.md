@@ -3,7 +3,6 @@ title: To referee
 
 
 
-Due [8.12.2019](podsedkowska2019)
 
 
 ###Reviews finished 2019
@@ -30,4 +29,7 @@ Due [8.12.2019](podsedkowska2019)
 9. <del>Due [29.11.2019](dallarno2019)</del> Done.
  
 9. <del>Due [30.11.2019](pitrik2019)</del> Done.
+
+10. <del>Due [8.12.2019](podsedkowska2019)</del> Done.
+ 
 
