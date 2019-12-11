@@ -11,7 +11,7 @@ title: H. Podsedkowska, SSA, 2019
 
 [file](podsedkowska2019/file.pdf)
 
-[report]()
+[report](podsedkowska2019/report.pdf)
 
 **Decision:**
 
