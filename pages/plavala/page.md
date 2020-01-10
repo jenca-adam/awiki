@@ -1,5 +1,17 @@
 title: "Martin Pl\xE1vala"
 ---
+**Údaje**
+
+* typ vedeckej výchovy: interný
+* pracovisko: MÚ SAV
+* nástup: 1.9.2015
+* dizertačná skúška: 16. 5. 2017
+* obhajoba: 26. 8: 2019
+* číslo a názov vedného odboru: 9-1-9 aplikovaná matematika
+* fakulta udeľujúca vedeckú hodnosť: FMFI UK
+
+
+
 **Názov práce:** Neklasické efekty na zovšeobecnených kvantových kanáloch
 
 **Anotácia:** Neklasické javy v kvantovej teórii sa často skúmajú v rámci tzv. všeobecných probabilistických teórií. Tento prístup umožňuje podobné javy  kvantifikovať a tým špecifikovať miesto v kvantovej teórie v širšej hierarchii neklasických teórií. Cieľom predkladanej práce je skúmať vlastnosti meraní a kanálov v týchto všeobecnejších teóriach, predovšetkým (ne)kompatibilitu a jej vzťah k iným javom ako je nelokalita alebo steering. Práca sa bude zameriavať na neklasické vlastnosti kvantových kanálov.
