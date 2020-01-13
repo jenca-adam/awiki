@@ -12,5 +12,9 @@ title: M. Dall'Arno, F. Buscemi, V. Scarani, Extension of Alberti-Uhlmann, 2019
 
 [report](dallarno2019/report.pdf)
 
-**Decision:**
+**Decision:** rewrite
+
+[response](dallarno2019/response-letter.pdf)
+
+[revised](dallarno2019/revised.pdf)
 

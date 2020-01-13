@@ -13,5 +13,9 @@ title: H. Podsedkowska, SSA, 2019
 
 [report](podsedkowska2019/report.pdf)
 
-**Decision:**
+**Decision:** revision
+
+[revised](podsedkowska2019/revised.pdf)
+
+**Revised due:** 2.2.2020
 
