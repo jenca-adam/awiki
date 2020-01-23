@@ -21,11 +21,13 @@ The decoherence-free subalgebra of a channel on $B(\mathcal H)$, in the presence
 
 * [referee report](decoherence/report.pdf)  (decision: accept)
 
-* [published version (online first)](decoherence/published_fo.pdf)
+* [published version](carbone2020onperiod)
 
 ## To do
 
 * Read the paper [wolf2010theinverse](wolf2010theinverse)
+* read the paper [albert2019asymptotics](albert2019asymptotics)
+
 
 ## Ideas
 

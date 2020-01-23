@@ -3,6 +3,7 @@ title: Not my own papers
 ## A list
 
 ### A
+[albert2019asymptotics](albert2019asymptotics),
 [alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [alfsen2003geometry](alfsen2003geometry), [auburn2017alice](auburn2017alice) [aubrun2018universal](aubrun2018universal), 
 
 ### B
