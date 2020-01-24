@@ -20,7 +20,9 @@ Victor V. Albert, Asymptotics of quantum channels: conserved quantities, an adia
   <dd> $\mathcal{A}^\ddagger(J)=e^{-i\Delta}J, \ \Delta\in \mathbb R$</dd>
 </dl>
 <div style="background-color:rgba(0, 0, 0, 0.0470588);  text-align:center; vertical-align: middle; padding:10px 0;">
-   *Only trivial Jordan blocks for peripheral eigenvalues?? See Prop. 6.2. in MMW Guided Tour*
+   *Only trivial Jordan blocks for peripheral eigenvalues??* See Prop. 6.2. in [MMW Guided
+Tour](http://www-m5.ma.tum.de/foswiki/pub/M5/Allgemeines/MichaelWolf/QChannelLecture.pdf) and 
+[wolf2010theinverse](wolf2010theinverse)
 </div>
 * **Asymptotic projection**: 
 $\quad \mathcal{P}\_{\mathcal{A}}\equiv \lim\_{m\to\infty} \mathcal{A}^{\alpha\_m}$
@@ -63,4 +65,18 @@ e^{i\Delta} \mbox{ peripheral spectrum},\ \mu \mbox{ degeneracies}$$
 	$$
         The other direction is not true.
 
-* **Extension to general channels**:
+* **Extension to general channels**: Any faithful channel $\mathcal E$ can be extended to a channel $\mathcal A$  with a decaying (transient)  subspace,  such that $\mathcal E$ acts on the largest invariant subspace for $\mathcal A$. Kraus operators for $\mathcal A$:
+$$
+A^\ell=\begin{pmatrix} E\_\ell & A\_1^\ell\\\
+                             0 & A\_2^\ell 
+        \end{pmatrix},\qquad \sum_\ell E_\ell=P,\quad \sum_\ell E_\ell^\dagger A_1^\ell=0,\quad \sum_\ell \left(A_1^{\ell\dagger}A_1^\ell+ A_2^{\ell\dagger}A_2^\ell\right)=I-P      $$
+<div style="background-color:rgba(0, 0, 0, 0.0470588);  text-align:center; vertical-align:middle; padding:10px 0;"> 
+  *Conversely, any quantum channel $\mathcal A$ has such a block decomposition, where $\mathcal E$ acts on the largest
+invariant subspace for $\mathcal A$ ??*
+</div>
+<div style="background-color:rgba(0, 0, 0, 0.0470588);  text-align:center; vertical-align:middle; padding:10px 0;"> 
+  *The largest invariant subspace can be determined via an algorithm [Cirillo and Ticozzi, J.Phys. A Mat. Theor.
+48:085302, 2015](cirillo)*
+</div>
+
+
