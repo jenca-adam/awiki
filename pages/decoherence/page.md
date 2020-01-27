@@ -27,7 +27,7 @@ The decoherence-free subalgebra of a channel on $B(\mathcal H)$, in the presence
 
 * Read the paper [wolf2010theinverse](wolf2010theinverse)
 * read the paper [cirillo2015decompositions](cirillo2015decompositions)
-* 
+* read the paper [arxiv:1208.0764](https://arxiv.org/abs/1208.0764)
 
 ## Read papers
 
