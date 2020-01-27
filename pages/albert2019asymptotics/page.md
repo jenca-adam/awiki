@@ -11,6 +11,7 @@ Victor V. Albert, Asymptotics of quantum channels: conserved quantities, an adia
 ## Contents
 
 * A **quantum channel** $\\mathcal{A}$ on $B(\\mathcal{H})$ in finite dimensions, $\mathcal{A}^\ddagger$ the adjoint. 
+Kraus representation: $\mathcal A=\sum_\ell A_\ell\cdot A_\ell^\dagger$
 <dl>
   <dt> right rotating points</dt>
   <dd> $\mathcal{A}(\Psi)=e^{i\Delta}\Psi, \ \Delta\in \mathbb R$</dd> 
@@ -67,7 +68,7 @@ e^{i\Delta} \mbox{ peripheral spectrum},\ \mu \mbox{ degeneracies}$$
 
 * **Extension to general channels**: Any faithful channel $\mathcal E$ can be extended to a channel $\mathcal A$  with a decaying (transient)  subspace,  such that $\mathcal E$ acts on the largest invariant subspace for $\mathcal A$. Kraus operators for $\mathcal A$:
 $$
-A^\ell=\begin{pmatrix} E\_\ell & A\_1^\ell\\\
+A_\ell=\begin{pmatrix} E\_\ell & A\_1^\ell\\\
                              0 & A\_2^\ell 
         \end{pmatrix},\qquad \sum_\ell E_\ell=P,\quad \sum_\ell E_\ell^\dagger A_1^\ell=0,\quad \sum_\ell \left(A_1^{\ell\dagger}A_1^\ell+ A_2^{\ell\dagger}A_2^\ell\right)=I-P      $$
 <div style="background-color:rgba(0, 0, 0, 0.0470588);  text-align:center; vertical-align:middle; padding:10px 0;"> 
@@ -78,5 +79,67 @@ invariant subspace for $\mathcal A$ ??*
   *The largest invariant subspace can be determined via an algorithm [Cirillo and Ticozzi, J.Phys. A Mat. Theor.
 48:085302, 2015](cirillo)*
 </div>
+	* $\mathcal A$ has the same rotating points as $\mathcal E$ 
 
+	* **Prop. 3.**: The conserved quantities of $\mathcal A$ with eigenvalues $e^{i\Delta}$ are
+	$$
+	J=J_1+J_2=J_1-(\mathcal A-e^{i\Delta})^{-1}_2(J_1),\qquad J_1 \mbox{ is the conserved quantity of } \mathcal E 
+	$$
+<div style="background-color:rgba(0, 0, 0, 0.0470588);  text-align:center; vertical-align:middle; padding:10px 0;">
+        *Here $\mathcal A_2(\rho)=Q\mathcal A(Q\rho Q)Q$?  Some ''brute force'' calculations.*
+</div>
+<div style="background-color:rgba(255, 0, 0, 0.2);  text-align:center; vertical-align:middle; padding:10px 0;">
+   Strašne sa mi nepáčia tie jeho divné označenia (ktoré to ani neviem zopakovať)!     
+</div>
 
+* **Structure of the asymptotic subspace**: (range of $\mathcal P\_{\mathcal A}$ - spanned by rotating vectors)
+	* By Prop. 3: $\mathcal P\_{\mathcal A}=\mathcal P\_{\mathcal E}+ \mathcal P\_{\mathcal A}(Q\cdot Q)$, the
+	  second part maps $Q\cdot Q$ into the subspace spanned by the rotating vectors (all in $P\cdot P$).
+
+	* **Decoherence-free subspaces**: $\mathcal E$ (the restriction to maximal invariant subspace) is a unitary
+	  conjugation: 
+	$$
+	  E_\ell=a_\ell U, \qquad \sum_\ell |a_\ell|^2=1,\ U\mbox{ unitary}
+	$$
+<div style="background-color:rgba(0, 0, 0, 0.0470588);  text-align:center; vertical-align:middle; padding:10px 0;">
+	*Not the same as DFA!*
+</div>
+	$$
+	\mathcal P_{\mathcal E}=P\cdot P,\qquad  \Psi_\Delta=J_\Delta= |x\rangle\langle x'|,\ |x\rangle \mbox{ the eigenvectors of } U,\quad \Delta=e^{i(\lambda_x-\lambda_{x'})}   \mbox{ (conserved quantities for } \mathcal E)
+	$$
+	* **Irreducible channels**: $\mathcal E$ is irreducible $\equiv$ admits a unique fixed point $\rho$  (which is faithful)
+<div style="background-color:rgba(0, 0, 0, 0.0470588);  text-align:center; vertical-align:middle; padding:10px 0;">
+	*The same results as e.g. Evans and Hoeg-...*
+</div>
+	All conserved quantities are powers of a unitary $J$, with eigenvalues $\omega^n$, $\omega=e^{i\frac{2\pi}N}$
+	$\equiv$ peripheral eigenvalues of $\mathcal E$. $J$ must commute with $\rho$ 
+	(otherwise $J\rho J^\dagger$ is another fixed point). The corresponding rotating points are $J^n\rho$
+<div style="background-color:rgba(0, 0, 0, 0.0470588);  text-align:center; vertical-align:middle; padding:10px 0;">
+	*All of this can be seen from Prop. 1*
+</div>
+	We have
+	$$
+	\mathcal P_{\mathcal E}(\cdot)=N \sum_{n\in \mathbb Z^N} \mathrm{Tr}\,\\{\Pi_n(\cdot)\\}\Pi_n\rho,\qquad
+	J=\sum_n\omega^n\Pi_n \mbox{ polar decomposition of } J
+	$$
+	For $\mathcal P_{\mathcal A}$: $J=J_1+J_2$ as above.
+
+	* **Noiseless subsystems**: Here 
+	$$
+	E^\ell=U\otimes R_\ell,\qquad U \mbox{ unitary}, \ R_\ell \mbox{ Kraus operators of an irreducible channel}
+	$$
+	    1. Rotating points:  $|x\rangle\langle x'|\otimes J^n\rho$
+	    2. Conserved quantities (for $\mathcal E$): $|x\rangle\langle x'|\otimes J^n$
+	* **Most general information-preserving structure**: 
+	$$
+	E_\ell=\bigoplus_\chi U_\chi\otimes R_\chi
+	$$
+<div style="background-color:rgba(0, 0, 0, 0.0470588);  text-align:center; vertical-align:middle; padding:10px 0;">
+	*This should be proved in [1006.1358](https://arxiv.org/abs/1006.1358). Is there any relation to sufficient
+	subalgebras??*
+</div>
+
+    Conserved quantities  for $\mathcal E$ form a matrix algebra, but not necessarily for  $\mathcal A$.
+
+* **Applications**: Adiabaticity, Matrix product states
+	
