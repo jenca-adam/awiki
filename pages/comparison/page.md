@@ -19,7 +19,7 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 ### References
 
-* Comparison of statistical experiments: [ISIT](jencova2016isit), [buscemi2012comparison](buscemi2012comparison), [matsumoto]()
+* Comparison of statistical experiments: [ISIT](jencova2016isit), [buscemi2012comparison](buscemi2012comparison), [matsumoto2010aquantum](matsumoto2010aquantum)
 * simulability of measurements: [skrzypczyk2019robustness](skrzypczyk2019robustness),
 [guerini2017operational](guerini2017operational)(\*)
 

@@ -40,7 +40,7 @@ title: Not my own papers
 
 ### M
 
-[mullerlennert2013onquantum](mullerlennert2013onquantum), [matsumoto2010reverse](matsumoto2010reverse) 
+[matsumoto2010aquantum](matsumoto2010aquantum), [mullerlennert2013onquantum](mullerlennert2013onquantum), [matsumoto2010reverse](matsumoto2010reverse) 
 
 
 ### P
