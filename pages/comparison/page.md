@@ -16,9 +16,29 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 * comparison by superchannels (some generalization of the banff talk)
 
+
+### References
+
+* Comparison of statistical experiments: [ISIT](jencova2016isit), [buscemi2012comparison](buscemi2012comparison), [matsumoto]()
+* simulability of measurements: [skrzypczyk2019robustness](skrzypczyk2019robustness),
+[guerini2017operational](guerini2017operational)(\*)
+
+* resource theories of quantum channels [liu2019resource](liu2019resource) (\*)
+
+* comparison of quantum channels   [buscemi2017comparison](buscemi2017comparison)
+[ISIT](jencova2016isit), [jencova2014randomization](jencova2014randomization), 
+[gour2019comparison](gour2019comparison), [buscemi2015degradable](buscemi2015degradable), [takagi2019general](takagi2019general)
+
+
+
+
+
+
+
+
+
 ### Remarks
 
-* For the BS category: check some Pavian papers!
 
 * Just after the general randomization Thm.: chceck the cases of two measurements and of two sets of states, compare to
   [takagi2019general](takagi2019general)
