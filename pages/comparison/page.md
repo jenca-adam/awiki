@@ -21,7 +21,7 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 * Comparison of statistical experiments: [ISIT](jencova2016isit), [buscemi2012comparison](buscemi2012comparison), [matsumoto2010aquantum](matsumoto2010aquantum)
 * simulability of measurements: [skrzypczyk2019robustness](skrzypczyk2019robustness),
-[guerini2017operational](guerini2017operational)(\*)
+[guerini2017operational](guerini2017operational)
 
 * resource theories of quantum channels [liu2019resource](liu2019resource) (\*)
 
@@ -30,7 +30,7 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 [gour2019comparison](gour2019comparison), [buscemi2015degradable](buscemi2015degradable), [takagi2019general](takagi2019general)
 
 
-
+* operational theories [chiribella2011informational](chiribella2011informational), [chiribella2016quantum](chiribella2016quantum), [bisio2019theoretical](bisio2019theoretical) (higher order theories)
 
 
 
