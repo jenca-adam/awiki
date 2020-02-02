@@ -31,6 +31,9 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 
 * operational theories [chiribella2011informational](chiribella2011informational), [chiribella2016quantum](chiribella2016quantum), [bisio2019theoretical](bisio2019theoretical) (higher order theories)
+[lami2018nonclassical](lami2018nonclassical) (GPT, references?)
+
+* misc [jencova2017conditions](jencova2017conditions) channels as a state space 
 
 
 

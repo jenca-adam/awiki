@@ -10,6 +10,7 @@ title: My own papers
 1. [jencova2014base](jencova2014base)
 1. [jencova2019onthe](jencova2019onthe)
 1. [carbone2020onperiod](carbone2020onperiod)
+1. [jencova2017conditions](jencova2017conditions)
 
 1. [jencova201]()
 
