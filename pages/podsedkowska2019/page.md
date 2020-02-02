@@ -1,7 +1,5 @@
-
-title: H. Podsedkowska, SSA, 2019 
+title: H. Podsedkowska, SSA, 2019
 ---
-
 **Paper:** H. Podsedkowska, Strong subadditivity of quantum mechanical entropy for semifinite von Neumann algebras
   
 
@@ -19,3 +17,4 @@ title: H. Podsedkowska, SSA, 2019
 
 **Revised due:** 2.2.2020
 
+**Final decision:** Accept
