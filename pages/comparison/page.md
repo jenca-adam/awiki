@@ -19,6 +19,8 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 ### References
 
+* Classical comparison of experiments: [lecam, torgersen, blackwell]() 
+
 * Comparison of statistical experiments: [ISIT](jencova2016isit), [buscemi2012comparison](buscemi2012comparison), [matsumoto2010aquantum](matsumoto2010aquantum)
 * simulability of measurements: [skrzypczyk2019robustness](skrzypczyk2019robustness),
 [guerini2017operational](guerini2017operational)
@@ -33,10 +35,16 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 * operational theories [chiribella2011informational](chiribella2011informational), [chiribella2016quantum](chiribella2016quantum), [bisio2019theoretical](bisio2019theoretical) (higher order theories)
 [lami2018nonclassical](lami2018nonclassical) (GPT, references?)
 
-* misc [jencova2017conditions](jencova2017conditions) channels as a state space 
+* misc [jencova2017conditions](jencova2017conditions) channels as a state space,
+[chiribella2009theoretical](chiribella2009theoretical) quantum networks
 
+* [other references](BIBs): strasser1985mathematical: minimax thm.
 
+kitaev1997quantum, watrous2011theory: diamond norm
 
+renner2008security, konig2009theoperational: cond. min entropy, operational interpretation
+
+chiribella2008memory, gutoski2012onameasure: N-diamond norm, testers
 
 
 
