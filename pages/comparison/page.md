@@ -19,7 +19,8 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 ### References
 
-* Classical comparison of experiments: [lecam, torgersen, blackwell]() 
+* Classical comparison of experiments: [blackwell1951comparison](blackwell1951comparison),  [lecam1964sufficiency](lecam1964sufficiency), [torgersen]() 
+  channels: [shannon]
 
 * Comparison of statistical experiments: [ISIT](jencova2016isit), [buscemi2012comparison](buscemi2012comparison), [matsumoto2010aquantum](matsumoto2010aquantum)
 * simulability of measurements: [skrzypczyk2019robustness](skrzypczyk2019robustness),

@@ -7,7 +7,7 @@ title: Not my own papers
 [alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [alfsen2003geometry](alfsen2003geometry), [auburn2017alice](auburn2017alice) [aubrun2018universal](aubrun2018universal), 
 
 ### B
-[baez2011acharacterization](baez2011acharacterization),  [barnum2015entropy](barnum2015entropy), [berta2018renyi](berta2018renyi), [bluhm2018joint](bluhm2018joint), [buscemi2005clean](buscemi2005clean), [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
+[baez2011acharacterization](baez2011acharacterization),  [barnum2015entropy](barnum2015entropy), [berta2018renyi](berta2018renyi), [blackwell1951comparison](blackwell1951comparison), [bluhm2018joint](bluhm2018joint), [buscemi2005clean](buscemi2005clean), [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
 [chiribella2011informational](chiribella2011informational), [chiribella2016optimal](chiribella2016optimal),
@@ -35,7 +35,7 @@ title: Not my own papers
 
 ### L
 
-[liu2019resource](liu2019resource)
+[lecam1964sufficiency](lecam1964sufficiency), [liu2019resource](liu2019resource)
 
 
 ### M
