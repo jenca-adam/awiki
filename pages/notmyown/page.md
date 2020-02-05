@@ -22,6 +22,7 @@ title: Not my own papers
 
 ### G
 
+[ganesan2019quantum](ganesan2019quantum),
 [gour2018quantum](gour2018quantum), [gour2019comparison](gour2019comparison), 
 [guerini2017operational](guerini2017operational),   [gudder2018convex](gudder2018convex), 
 

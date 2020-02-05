@@ -1,7 +1,7 @@
-title:
+title: Miscelaneous bib
 ---
 
-## Reference
+Some bibs of misc papers
 
 
-[arxiv: ]()
+

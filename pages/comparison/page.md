@@ -19,7 +19,7 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 ### References
 
-* Classical comparison of experiments: [blackwell1951comparison](blackwell1951comparison),  [lecam1964sufficiency](lecam1964sufficiency), [torgersen]() 
+* Classical comparison of experiments: [blackwell1951comparison](blackwell1951comparison),  [lecam1964sufficiency](lecam1964sufficiency),  
   channels: [shannon]
 
 * Comparison of statistical experiments: [ISIT](jencova2016isit), [buscemi2012comparison](buscemi2012comparison), [matsumoto2010aquantum](matsumoto2010aquantum)
@@ -31,13 +31,14 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 * comparison of quantum channels   [buscemi2017comparison](buscemi2017comparison)
 [ISIT](jencova2016isit), [jencova2014randomization](jencova2014randomization), 
 [gour2019comparison](gour2019comparison), [buscemi2015degradable](buscemi2015degradable), [takagi2019general](takagi2019general)
-
+[ganesan2019quantum](ganesan2019quantum) infinite dimensional (Gao)
 
 * operational theories [chiribella2011informational](chiribella2011informational), [chiribella2016quantum](chiribella2016quantum), [bisio2019theoretical](bisio2019theoretical) (higher order theories)
 [lami2018nonclassical](lami2018nonclassical) (GPT, references?)
 
 * misc [jencova2017conditions](jencova2017conditions) channels as a state space,
 [chiribella2009theoretical](chiribella2009theoretical) quantum networks
+
 
 * [other references](BIBs): strasser1985mathematical: minimax thm.
 
