@@ -26,7 +26,7 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 * simulability of measurements: [skrzypczyk2019robustness](skrzypczyk2019robustness),
 [guerini2017operational](guerini2017operational)
 
-* resource theories of quantum channels [liu2019resource](liu2019resource) (\*)
+* resource theories of quantum channels [liu2019resource](liu2019resource) (\*), [liu2019operational](liu2019operational) (\*)
 
 * comparison of quantum channels   [buscemi2017comparison](buscemi2017comparison)
 [ISIT](jencova2016isit), [jencova2014randomization](jencova2014randomization), 
