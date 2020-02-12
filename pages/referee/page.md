@@ -1,7 +1,6 @@
 title: To referee
 ---
 
-Due [12.2.2020](dallarno2019) (revised)
 
 Due [29.2.2020](coll2020) (ISIT conference paper)
 
@@ -9,6 +8,8 @@ Due [29.2.2020](coll2020) (ISIT conference paper)
 ### Reviews finished 2020
 
 1. <del>Due [2.2.2020](podsedkowska2019) (revised)</del>  Done.
+
+1. <del>Due [12.2.2020](dallarno2019) (revised)</del>  Done.
 
 ### Reviews finished 2019
 
