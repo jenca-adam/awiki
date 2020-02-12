@@ -2,11 +2,16 @@ title: Comparison of quantum channels
 ---
 ## Published
 
-my [ISIT](jencova2016isit) paper
+* my [ISIT](jencova2016isit) paper
 
 ## Arxiv
 
-my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014randomization](jencova2014randomization)
+
+* [jencova2020ageneral](jencova2020ageneral) comparison of quantum channels + GPT
+
+*  [jencova2015comparison](jencova2015comparison) extension of the ISIT paper
+* [jencova2014randomization](jencova2014randomization) the first paper
+
 
 ## Talks
 
@@ -14,67 +19,48 @@ my arxiv papers: [jencova2015comparison](jencova2015comparison), [jencova2014ran
 
 ## In preparation
 
-* comparison by superchannels (some generalization of the banff talk)
+* A general theory of comparison of quantum channels (and beyond): 
+[jencova2020ageneral](jencova2020ageneral)
 
 
-### References
+    * some extension  of the Banff talk
 
-* Classical comparison of experiments: [blackwell1951comparison](blackwell1951comparison),  [lecam1964sufficiency](lecam1964sufficiency),  
+
+## References
+
+* Classical comparison of experiments: [blackwell1951comparison](blackwell1951comparison),  [lecam1964sufficiency](lecam1964sufficiency), [torgersen] 
   channels: [shannon]
 
-* Comparison of statistical experiments: [ISIT](jencova2016isit), [buscemi2012comparison](buscemi2012comparison), [matsumoto2010aquantum](matsumoto2010aquantum)
+* Comparison of statistical experiments: [buscemi2012comparison](buscemi2012comparison), [matsumoto2010aquantum](matsumoto2010aquantum)
+
+* Alberti-Uhlmann theorem: [alberti1980aproblem](alberti1980aproblem) Alberti-Uhlmann theorem, [alberti1985onthesimultaneous](alberti1985onthesimultaneous) stochastic transformations between tuples of normal states
+
+
+
 * simulability of measurements: [skrzypczyk2019robustness](skrzypczyk2019robustness),
 [guerini2017operational](guerini2017operational)
 
 * resource theories of quantum channels [liu2019resource](liu2019resource) (\*), [liu2019operational](liu2019operational) (\*)
 
-* comparison of quantum channels   [buscemi2017comparison](buscemi2017comparison)
-[ISIT](jencova2016isit), [jencova2014randomization](jencova2014randomization), 
-[gour2019comparison](gour2019comparison), [buscemi2015degradable](buscemi2015degradable), [takagi2019general](takagi2019general)
+* comparison of quantum channels   [buscemi2017comparison](buscemi2017comparison),
+[gour2019comparison](gour2019comparison), [gour2018quantum](gour2018quantum) comparison of bipartite states, resource theories, [buscemi2015degradable](buscemi2015degradable), [takagi2019general](takagi2019general)
 [ganesan2019quantum](ganesan2019quantum) infinite dimensional (Gao)
 
 * operational theories [chiribella2011informational](chiribella2011informational), [chiribella2016quantum](chiribella2016quantum), [bisio2019theoretical](bisio2019theoretical) (higher order theories)
 [lami2018nonclassical](lami2018nonclassical) (GPT, references?)
 
-* misc [jencova2017conditions](jencova2017conditions) channels as a state space,
-[chiribella2009theoretical](chiribella2009theoretical) quantum networks
-
-
-* [other references](BIBs): strasser1985mathematical: minimax thm.
-
-kitaev1997quantum, watrous2011theory: diamond norm
-
-renner2008security, konig2009theoperational: cond. min entropy, operational interpretation
-
-chiribella2008memory, gutoski2012onameasure: N-diamond norm, testers
+* quantum networks, combs, etc. [chiribella2009theoretical](chiribella2009theoretical), [chiribella2016optimal](chiribella2016optimal): conditional min-entropy for networks
+, [jencova2014base](jencova2014base)
 
 
 
-### Remarks
+* misc: [jencova2017conditions](jencova2017conditions) channels as a state space,
+   
 
 
-* Just after the general randomization Thm.: chceck the cases of two measurements and of two sets of states, compare to
-  [takagi2019general](takagi2019general)
+* [other references](BIBs): (strasser1985mathematical: minimax thm., kitaev1997quantum, watrous2011theory: diamond norm,
+  renner2008security, konig2009theoperational: cond. min entropy, operational interpretation, chiribella2008memory, gutoski2012onameasure: N-diamond norm, testers
 
-* Inclusion of ranges of measurements and simulability: check the paper [buscemi2005clean](buscemi2005clean). There is a counterexample that show that inclusion of ranges does not imply existence of even a positive map! Check also Thm. 7.2 there.
-
-* Preprocessing simulability of measurements: what about inclusion/distance of ranges?
-
-* For simulations of measurements: [dallarno2019extension](dallarno2019extension) (preprocessing), Teiko etc. (sets of
-  measurements), [skrzypczyk2019robustness](skrzypczyk2019robustness) (postprocessings)
-
-### Tools
-
-* [jencova2014base](jencova2014base) base section norms and properties
-* [chiribella2016optimal](chiribella2016optimal) conditional min-entropy for networks
-
-
-
-
-### Related: 
- 
-* [farenick2013approximately](farenick2013approximately) approximate cleanness (*comparison by pre-processings?*)
-* [kubicki2019resource](kubicki2019resource) no-programming theorem and Banach space theory (type 2 constants)
 
 
 ## Further ideas
@@ -86,6 +72,11 @@ chiribella2008memory, gutoski2012onameasure: N-diamond norm, testers
 * Comparison by classical input/output correlations: Shannon c-c channels, Buscemi et al., should be similarly extended
 
 * Comparison by LOCC??
+
+## Related?: 
+ 
+* [farenick2013approximately](farenick2013approximately) approximate cleanness (*comparison by pre-processings?*)
+* [kubicki2019resource](kubicki2019resource) no-programming theorem and Banach space theory (type 2 constants)
 
 
 ## Reading
@@ -103,24 +94,24 @@ chiribella2008memory, gutoski2012onameasure: N-diamond norm, testers
 
 ## Plan to read
 
-* Buscemi:  comparison, Lorenz curves, dichotomies
+* Buscemi:  comparison, Lorenz curves, dichotomies:
+    *  [buscemi2015degradable](buscemi2015degradable)
+
+    * [buscemi2017comparison](buscemi2017comparison)
+    
+    * [buscemi2019aninformation](buscemi2019aninformation) quantum dichotomies
+
+    * [dallarno2019extension](dallarno2019extension) extension of Alberti- Uhlman thm to more than two qubits
+
+    
+
+
 
 * Matsumoto: all related
+    * [matsumoto2010reverse](matsumoto2010reverse) reverse tests and quantum relative entropy
 
 
-### Comparison
 
-Read the first two and check references:
 
-* [takagi2019general](takagi2019general) operational characterization of comparison (equality)
-* [dallarno2019extension](dallarno2019extension) 
-
-* [gour2019comparison](gour2019comparison) comparison of bipartite channels by superchannels
-* [gour2018quantum](gour2018quantum) comparison of bipartite states, resource theories
-* [buscemi2017comparison](buscemi2017comparison) comparison of channels by post-processings (degradability)
-* [buscemi2019aninformation](buscemi2019aninformation) quantum dichotomies
-* [alberti1980aproblem](alberti1980aproblem) Alberti-Uhlmann theorem
-* [alberti1985onthesimultaneous](alberti1985onthesimultaneous) stochastic transformations between tuples of normal states
-* [matsumoto2010reverse](matsumoto2010reverse) reverse tests and quantum relative entropy
 
 
