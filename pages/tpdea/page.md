@@ -26,13 +26,15 @@ The unit $\eta_E$ is an isomorphism iff $E$ is an interval effect algebra.
 1. What about tensor product of interval EAs? Maybe RDP.
 1. <del>Tensor product of dimension effect algebras is the unit interval in the tensor products of their universal groups. For $\mathbb R[0,1]$, this is as below. </del> 
 <span style="color:green"> **done, see  draft.**</span>
-1. The effect algebra tensor product   $[0,1]\otimes [0,1]$ can be identified as follows:  Take $\mathbb R$ as a vector space over $\mathbb Q$ and take the tensor product $\mathbb R\otimes_{\mathbb Q}\mathbb R$, with the smallest cone such that it becomes a partially ordered abelian group such that the tensor product of positive elements is positive.  Take the interval $[0,1\otimes 1]$ in this ordered group. 
+1. The effect algebra tensor product   $[0,1]\otimes [0,1]$ can be identified as follows:  Take $\mathbb R$ as a vector space over $\mathbb Q$ and take the tensor product $\mathbb R\otimes\_{\mathbb Q}\mathbb R$, with the smallest cone such that it becomes a partially ordered abelian group such that the tensor product of positive elements is positive.  Take the interval $[0,1\otimes 1]$ in this ordered group. 
 
 
 ## Papers
 
-1. A. Jenčová, S. Pulmannová: [A note on effect algebras and dimension theory of AF C*-algebras](/static/pdf/ROMP08.pdf), Reports on Mathematical Physics 62 (2008), pp. 205-218 
+1. A. Jenčová, S. Pulmannová: [A note on effect algebras and dimension theory of AF C\*-algebras](/static/pdf/ROMP08.pdf), Reports on Mathematical Physics 62 (2008), pp. 205-218 
 
 ## Status
 
-paper sent to Order
+* [arxiv:1902.11031](https://arxiv.org/abs/1902.11031)
+
+* paper sent to Order
