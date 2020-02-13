@@ -4,16 +4,15 @@ title: My projects
 
 
 * [Sandwiched Rényi divergences and sufficiency](sandwiched)
-* [Comparison of quantum channels](comparison)
 
 
 ---
 
 ## Finishing
 
-* [Decoherence-free subalgebras](decoherence)
 * [Tensor products of dimension effect algebras](tpdea)
 
+* [Comparison of quantum channels](comparison)
 
 ---
 
@@ -42,6 +41,8 @@ title: My projects
 
 * [Spectral effect algebras](spectral)
 
+* [Decoherence-free subalgebras](decoherence)
+
 ---
 
 ## Zombies
@@ -50,25 +51,24 @@ title: My projects
 
 ---
 
-## Plans
-
-* [collaboration](collaboration)
-
-
-
-
-
-
----
-
-## Duties
-
-* [referee](referee)
-* [students](students)
-
----
-
 ## Papers
 
 * [notmyown](notmyown)
 * [myown](myown)
+---
+
+## Work
+
+* [preprints](mypreprints)
+
+* [reading](reading)
+
+* [work plans](work)
+
+### Duties 
+
+* [referee](referee)
+
+* [students](students)
+
+
