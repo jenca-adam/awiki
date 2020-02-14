@@ -5,42 +5,49 @@ title: Decoherence-free subalgebras for quantum channels
 * Raffaella Carbone
 
 
-## Drafts
+## Reading
 
-* [Decoherence-free subalgebra](decoherence/main_file.pdf)
+Finite dimensions:
 
-The decoherence-free subalgebra of a channel on $B(\mathcal H)$, in the presence of a faithful normal  invariant state. It is proved that this subalgebra coincides with the subalgebra of the Glicksberg-jacobs-DeLeeuw decomposition. The structure of this subalgebra and the subalgebra of fixed points is studied and a notion of a period is defined also in the reducible case. Homogeneous open quantum random walks are studied as examples, including one irreducible without invariant states.
+* [x]  [albert2019asymptotics](albert2019asymptotics)
+* [ ]  [wolf2010theinverse](wolf2010theinverse)
+* [ ]  [cirillo2015decompositions](cirillo2015decompositions)
+* [ ]  [arxiv:1208.0764](https://arxiv.org/abs/1208.0764) Novotny, Jex,...
+* [ ]  [bardet2017estimating](bardet2017estimating) 
+* [ ]  [arxiv:1803.05379](https://arxiv.org/abs/1803.05379) Bardet, I., Rouze, C.
+
+
+General (maybe useful)
+
+* [ ]  [arveson2007theasymptotic](arveson2007theasymptotic)
+* [ ]  [arveson2008lifting](arveson2008lifting)
+
+
+
+
+
+
+## Notes
 
 * [Notes on JDG-splitting](decoherence/jdg.pdf)
 
-## Final
+## Finished
 
-* [submitted to AHP](decoherence/submitted.pdf)
+1. The decoherence-free subalgebra of a channel on $B(\mathcal H)$, in the presence of a faithful normal  invariant state. It is proved that this subalgebra coincides with the subalgebra of the Glicksberg-jacobs-DeLeeuw decomposition. The structure of this subalgebra and the subalgebra of fixed points is studied and a notion of a period is defined also in the reducible case. Homogeneous open quantum random walks are studied as examples, including one irreducible without invariant states.
 
-* [arxiv:1905.00857](https://arxiv.org/abs/1905.00857)
+    * [arxiv:1905.00857](https://arxiv.org/abs/1905.00857)
+    * [referee report](decoherence/report.pdf)  (decision: accept)
+    * [published version](carbone2020onperiod)
 
-* [referee report](decoherence/report.pdf)  (decision: accept)
 
-* [published version](carbone2020onperiod)
 
-## To do
-
-* Read the paper [wolf2010theinverse](wolf2010theinverse)
-* read the paper [cirillo2015decompositions](cirillo2015decompositions)
-* read the paper [arxiv:1208.0764](https://arxiv.org/abs/1208.0764) Novotny, Jex,...
-* read the paper [arxiv:1803.05379](https://arxiv.org/abs/1803.05379) Bardet, I., Rouze, C.
-
-## Read papers
-
-* Finite dimensions:
- [albert2019asymptotics](albert2019asymptotics)
 
 
 ## Ideas
 
 1. In the case with faithful normal  invariant state (FNIS), one can study the spectral gap and the exponential decay outside 
 $\mathcal N(\Phi)$.
-1. Describe the decoherence-free subalgebra without FNIS, using the paper [arveson2007theasymptotic](/static/other/arveson2007theasymptotic.pdf)
+1. Describe the decoherence-free subalgebra without FNIS, using the paper [arveson2007theasymptotic](arveson2007theasymptotic)
  
 ## Papers
 

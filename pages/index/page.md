@@ -4,14 +4,13 @@ title: My projects
 
 
 * [Sandwiched Rényi divergences and sufficiency](sandwiched)
-
+* [Decoherence-free subalgebras](decoherence)
 
 ---
 
 ## Finishing
 
 * [Tensor products of dimension effect algebras](tpdea)
-
 * [Comparison of quantum channels](comparison)
 
 ---
@@ -41,7 +40,6 @@ title: My projects
 
 * [Spectral effect algebras](spectral)
 
-* [Decoherence-free subalgebras](decoherence)
 
 ---
 
