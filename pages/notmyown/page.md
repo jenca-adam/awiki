@@ -4,7 +4,8 @@ title: Not my own papers
 
 ### A
 [albert2019asymptotics](albert2019asymptotics),
-[alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [alfsen2003geometry](alfsen2003geometry), [auburn2017alice](auburn2017alice) [aubrun2018universal](aubrun2018universal), 
+[alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [alfsen2003geometry](alfsen2003geometry), 
+[arveson2007theasymptotic](arveson2007theasymptotic), [arveson2008lifting](arveson2008lifting), [auburn2017alice](auburn2017alice) [aubrun2018universal](aubrun2018universal), 
 
 ### B
 [baez2011acharacterization](baez2011acharacterization),  [barnum2015entropy](barnum2015entropy), [berta2018renyi](berta2018renyi), [blackwell1951comparison](blackwell1951comparison), [bluhm2018joint](bluhm2018joint), [buscemi2005clean](buscemi2005clean), [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
