@@ -37,7 +37,7 @@ General (maybe useful)
 
     * [arxiv:1905.00857](https://arxiv.org/abs/1905.00857)
     * [referee report](decoherence/report.pdf)  (decision: accept)
-    * [published version](carbone2020onperiod)
+    * published version [carbone2020onperiod](carbone2020onperiod)
 
 
 
