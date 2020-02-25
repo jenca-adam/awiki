@@ -11,3 +11,5 @@ title: Plans/diary
 [ ]  poslať článok do IEEE (comparison)
 
 [ ]  [Rényi II](sandwiched) - aspoň začať
+
+[ ]  reading for [decoherence](decoherence)
