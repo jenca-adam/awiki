@@ -2,12 +2,12 @@ title: Plans/diary
 ---
 **24.-28.2. 2020**
 
-[ ] recenzia (ISIT?)
+[ ]  recenzia (ISIT?)
  
-[ ] schôdza vegy - príprava
+[ ]  schôdza vegy - príprava
 
-[ ] zoznam zmien - CHSH
+[ ]  zoznam zmien - CHSH
 
-[ ] poslať článok do IEEE (comparison)
+[ ]  poslať článok do IEEE (comparison)
 
-[ ] Rényi II - aspoň začať
+[ ]  [Rényi II](sandwiched) - aspoň začať

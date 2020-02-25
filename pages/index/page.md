@@ -59,7 +59,6 @@ title: My projects
 
 * [preprints](mypreprints)
 
-* [reading](reading)
 
 * [work plans](work)
 
