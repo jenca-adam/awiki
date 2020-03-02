@@ -1,6 +1,5 @@
 title: Plans/diary
 ---
-
 **2.3.-6.3. 2020**
 
 
@@ -14,7 +13,7 @@ title: Plans/diary
 
 [ ]  reading: Bardet, Jex
 
-
+[ ]  poriadok v kancelárii a na stránkach (awiki, savba)!
 
 **24.-28.2. 2020**
 
