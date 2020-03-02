@@ -6,6 +6,8 @@ title: E. Haapasalo, J-P. Pellonpaa, Constructing extremal observables, 2020
 
 **Due:** 23.3.2020
 
+[link](https://mc04.manuscriptcentral.com/jphysa-iop)
+
 [file](haapasalo2020/file.pdf)
 
 [report](/report.pdf)

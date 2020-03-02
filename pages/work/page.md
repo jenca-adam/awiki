@@ -12,6 +12,10 @@ title: Plans/diary
 
 [ ]  revision článok do FSS so Sylviou
 
+[ ]  reading: Bardet, Jex
+
+
+
 **24.-28.2. 2020**
 
 [X]  recenzia (ISIT?)

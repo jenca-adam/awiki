@@ -8,6 +8,8 @@ title: Bullock, Heinosaari, Quantum state discrimination, 2020
 
 **Due:** 17.3.2020
 
+[link](https://mc04.manuscriptcentral.com/jphysa-iop)
+
 [file](bullock2020/file.pdf)
 
 [report](bullock2020/report.pdf)
