@@ -1,0 +1,1023 @@
+body
+	{
+	font-family: sans-serif;
+	font-size: 12pt;
+	color: black;
+	background-color: white;
+	text-align: left;
+	}
+
+h1	{
+	font-size: large;
+	font-weight: bold;
+	}
+	
+h2	{
+	font-size: medium;
+	font-weight: bold;
+	line-height: 10pt;
+	}
+	
+h3	{
+	font-size: medium;
+	font-weight: bold;
+	line-height: 10pt;
+	}
+
+h3.HelpItem	{
+	font-size: medium;
+	font-weight: bold;
+	line-height: 10pt;
+	text-decoration: underline;
+	}
+
+table {
+  padding: 0px;
+  margin: 0px;
+  text-align: left
+}
+
+tr {
+  padding: 0px;
+  margin: 0px;
+}
+
+td {
+  padding: 0px;
+  margin: 0px;
+  text-align: left
+}
+
+.footer {
+  border-top-style: solid;
+  border-top-color: black;
+  border-top-width: 1px;
+  font-size: x-small;
+  text-align: center;
+}
+
+table.MainContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+td.Content {
+  background-color: white;
+  padding-bottom: 5mm;
+}
+
+
+/* tabbed styles */
+#MainMenu {
+  padding: 3px 0;
+  margin: 0;
+  border-bottom: 1px solid #778;
+  font: bold 12px Verdana, sans-serif;
+}
+
+#MainMenu li {
+  list-style: none;
+  margin: 0;
+  display: inline;
+}
+
+#MainMenu li a {
+  padding: 3px 0.5em;
+  margin-left: 3px;
+  border: 1px solid #778;
+  border-bottom: none;
+  background: #DDE;
+  text-decoration: none;
+}
+
+#MainMenu li a:active {color: #000;}
+#MainMenu li a:visited {color: #000;}
+#MainMenu li a:hover {color: #000; background: #AAE;
+  border-color: #227; cursor: pointer;}
+
+/* "current tab" style */
+#MainMenu li a#ActiveMainMenu {background: #EEE; border-bottom: 1px solid #EEE;}
+
+
+/* tabbed styles */
+#SubMenu {
+  padding: 3px 0;
+  margin: 0;
+  border-bottom: 1px solid #778;
+  font: bold 12px Verdana, sans-serif;
+}
+
+#SubMenu li {
+  list-style: none;
+  margin: 0;
+  display: inline;
+}
+
+#SubMenu li a {
+  padding: 3px 0.5em;
+  margin-left: 3px;
+  border: 1px solid #778;
+  border-bottom: none;
+  background: #DDE;
+  text-decoration: none;
+}
+
+#SubMenu li a:link {color: #000;}
+#SubMenu li a:visited {color: #000;}
+#SubMenu li a:hover {color: #000; background: #AAE;
+  border-color: #227;}
+
+/* "current tab" style */
+#SubMenu li a#ActiveSubMenu {background: white; border-bottom: 1px solid white;}
+
+td.paperitem {
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-style: none;
+  border-top-style: solid;
+  border-width: 1px;
+  border-color: #aaaaaa;
+  padding: 1px;
+  padding-top: 5px;
+}
+
+th {
+  color: black;
+  background-color: inherit;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 10pt;
+}
+
+/*
+table.TCChairList, table.RCMemberList {
+  border-color: black;
+  border-width: 1px;
+  border-style: none;
+  border-collapse: collapse;
+  width: 100%;
+}
+*/
+
+#PaperList {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#PaperList input {
+  font-size: 0.7em;
+  background-color: white;
+  border: 1px solid black;
+}
+
+#PaperList input:hover {
+  background-color: #CCC;
+  border: 1px solid red;
+}
+
+#PaperList tr {
+  border-style: none;
+}
+
+#PaperList tr.Accepted {
+  background-color: #bbffbb;
+}
+
+#PaperList tr.AcceptedPoster {
+  background-color: #eeffff;
+}
+
+#PaperList tr.Rejected {
+  background-color: #ffbbbb;
+}
+
+#PaperList tr.Maybe {
+  background-color: #bbbbff;
+}
+
+#PaperList tr.Undecided {
+  background-color: #ffffbb;
+}
+
+#PaperList tr.NoReview {
+  background-color: #ffffbb;
+}
+
+#PaperList tr.Incomplete {
+  background-color: #ffbbbb;
+}
+
+#PaperList tr.Submitted {
+  background-color: #bbffbb;
+}
+
+#PaperList tr.FLAGGED {
+  background-color: #ffbb00;
+}
+
+#PaperList tr:first-child {
+  background-color: white;
+}
+
+#PaperList tr.Top td {
+  border-top: 3px double black;
+}
+
+#PaperList tr.Bottom td {
+  border-bottom: 3px double black;
+}
+
+#PaperList td {
+  border: 1px solid gray;
+}
+
+/****************/
+#PaperList td table {
+
+}
+
+#PaperList td table td {
+
+}
+/****************/
+
+#PaperList tr.Top td {
+  padding-top: 3px;
+}
+
+#PaperList tr.Bottom td {
+  padding-bottom: 3px;
+}
+
+#PaperList td.PaperTitle {
+  padding: 0 6px;
+  border-bottom-style: none;
+  vertical-align: top;
+}
+
+#PaperList td.PaperViewButton {
+  padding: 0 6px;
+}
+
+#PaperList td.PaperData {
+  text-align: center;
+  padding: 0 6px;
+}
+
+#PaperList td.RightLine {
+  text-align: right !important;
+}
+
+#PaperList td.PaperStatus {
+  font-size: 0.8em;
+  text-align: right;
+  padding: 0 4px;
+}
+
+#PaperList td.PaperTopic {
+  font-size: 0.8em;
+  padding: 0 6px;
+  border-top-style: none;
+}
+
+#PaperList td.PaperSession {
+  font-size: 0.8em;
+  text-align: right;
+  padding: 0 6px;
+}
+
+div.authorlist {
+  font-size: 12px;
+  height: 14px;
+  overflow: hidden;
+  vertical-align: top;
+  margin-left: 1.4cm;
+  font-style: italic;
+}
+
+div.tpclist {
+  font-size: 12px;
+  height: 14px;
+  overflow: hidden;
+  vertical-align: top;
+  margin-left: 1.8cm;
+  font-weight: bold;
+  text-align: left;
+}
+
+
+/*********************************/
+
+#TCChairList {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#TCChairList input {
+  font-size: 0.7em;
+  background-color: white;
+  border: 1px solid black;
+  padding: 2px;
+}
+
+#TCChairList input:hover {
+  background-color: #CCC;
+  border: 1px solid red;
+}
+
+#TCChairList tr {
+}
+
+#TCChairList tr:first-child {
+  background-color: white;
+}
+
+#TCChairList td {
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
+  padding: 2px;
+  vertical-align: top;
+}
+
+#TCChairList table.Details td {
+  border: none;
+  padding: 0;
+}
+
+/*********************************/
+
+#TCSOList {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#TCSOList input {
+  font-size: 0.7em;
+  background-color: white;
+  border: 1px solid black;
+  padding: 2px;
+}
+
+#TCSOList input:hover {
+  background-color: #CCC;
+  border: 1px solid red;
+}
+
+#TCSOList tr {
+}
+
+#TCSOList tr:first-child {
+  background-color: white;
+}
+
+#TCSOList td {
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
+  padding: 2px;
+  vertical-align: top;
+}
+
+#TCSOList table.Details td {
+  border: none;
+  padding: 0;
+}
+
+/*********************************/
+
+#RCMemberList {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#RCMemberList input {
+  font-size: 0.7em;
+  background-color: white;
+  border: 1px solid black;
+  padding: 2px;
+}
+
+#RCMemberList input:hover {
+  background-color: #CCC;
+  border: 1px solid red;
+}
+
+#RCMemberList tr:first-child {
+  background-color: white;
+}
+
+#RCMemberList td {
+  background-color: #ffffbb;
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
+  padding: 2px;
+  vertical-align: top;
+}
+
+#RCMemberList td.Data {
+  text-align: center;
+}
+
+/*********************************/
+
+#ReviewerList {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#ReviewerList input {
+  font-size: 0.7em;
+  background-color: white;
+  border: 1px solid black;
+  padding: 2px;
+}
+
+#ReviewerList input:hover {
+  background-color: #CCC;
+  border: 1px solid red;
+}
+
+#ReviewerList tr:first-child {
+  background-color: white;
+}
+
+#ReviewerList td {
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
+  padding: 2px;
+  vertical-align: top;
+}
+
+#ReviewerList td.Data {
+  text-align: center;
+}
+
+table.PaperView {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+table.PaperView tr:nth-child(odd) {
+  background-color: #eeeeee !important;
+}
+table.PaperView tr:nth-child(even) {
+  background-color: #ffffff !important;
+}
+table.PaperView td, td.PaperView {
+  padding: 2px;
+  border: 1px solid black;
+  border-width: 1px 0;
+  vertical-align: top;
+}
+td.PaperSubViewOuter {
+  padding: 0 !important;
+}
+table.PaperSubView {
+  font-size: smaller;
+  margin: 0;
+  border-collapse: collapse;
+  border-style: none;
+  width: 100%;
+}
+table.PaperSubView td {
+  padding: 1px;
+  border-style: none;
+}
+
+
+table.ReviewerView {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+table.ReviewerView tr:nth-child(odd) {
+  background-color: #eeeeee !important;
+}
+table.ReviewerView tr:nth-child(even) {
+  background-color: #ffffff !important;
+}
+table.ReviewerView td, td.ReviewerView {
+  padding: 2px;
+  border: 1px solid black;
+  border-width: 1px 0;
+  vertical-align: top;
+}
+td.ReviewerSubViewOuter {
+  padding: 0 !important;
+}
+table.ReviewerSubView {
+  font-size: smaller;
+  margin: 0;
+  border-collapse: collapse;
+  border-style: none;
+  width: 100%;
+}
+table.ReviewerSubView td {
+  padding: 1px;
+  border-style: none;
+}
+
+table.ReviewView {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-collapse: collapse;
+}
+
+td.ReviewView {
+  border-style: none;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-right-style: dotted;
+  border-width: 1px;
+  padding: 6px;
+}
+
+table.SessionList {
+  border-collapse: collapse;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  margin-top: 10px;
+}
+
+td.SessionList {
+  border-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-color: black;
+  border-width: 1px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+a.papertitlelink:link
+	{
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	padding: 3px;
+	border-style: none;
+	}
+a.papertitlelink:visited
+	{
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	padding: 3px;
+	border-style: none;
+	}
+a.papertitlelink:hover
+	{
+	color: black;
+	background-color: #ddddff;
+	text-decoration: none;
+	padding: 2px;
+	border-style: dashed;
+	border-width: 1px;
+	}
+a.papertitlelink:active
+	{
+	color: black;
+	background-color: #ddddff;
+	text-decoration: none;
+	padding: 2px;
+	border-style: dashed;
+	border-width: 1px;
+	}
+
+a.papertitlelinkrej:link
+	{
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	padding: 3px;
+	border-style: none;
+	}
+a.papertitlelinkrej:visited
+	{
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	padding: 3px;
+	border-style: none;
+	}
+a.papertitlelinkrej:hover
+	{
+	color: black;
+	background-color: #ffdddd;
+	text-decoration: none;
+	padding: 2px;
+	border-style: dashed;
+	border-width: 1px;
+	}
+a.papertitlelinkrej:active
+	{
+	color: black;
+	background-color: #ffdddd;
+	text-decoration: none;
+	padding: 2px;
+	border-style: dashed;
+	border-width: 1px;
+	}
+	 
+a.papertitlelinkacc:link
+	{
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	padding: 3px;
+	border-style: none;
+	}
+a.papertitlelinkacc:visited
+	{
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	padding: 3px;
+	border-style: none;
+	}
+a.papertitlelinkacc:hover
+	{
+	color: black;
+	background-color: #ddffdd;
+	text-decoration: none;
+	padding: 2px;
+	border-style: dashed;
+	border-width: 1px;
+	}
+a.papertitlelinkacc:active
+	{
+	color: black;
+	background-color: #ddffdd;
+	text-decoration: none;
+	padding: 2px;
+	border-style: dashed;
+	border-width: 1px;
+	}
+	 
+a.email:link
+	{
+	color: blue;
+	background-color: transparent;
+	text-decoration: none;
+	padding: 3px;
+	border-style: none;
+	}
+a.email:visited
+	{
+	color: blue;
+	background-color: transparent;
+	text-decoration: none;
+	padding: 3px;
+	border-style: none;
+	}
+a.email:hover
+	{
+	color: black;
+	background-color: #ddffdd;
+	text-decoration: none;
+	padding: 2px;
+	border-style: dashed;
+	border-width: 1px;
+	}
+a.email:active
+	{
+	color: black;
+	background-color: #ddffdd;
+	text-decoration: none;
+	padding: 2px;
+	border-style: dashed;
+	border-width: 1px;
+	}	
+
+
+a.menuLink:link
+	{
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+	}
+a.menuLink:visited
+	{
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+	}
+a.menuLink:hover
+	{
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	}
+a.menuLink:active
+	{
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+	}	
+
+
+a:link
+	{
+	color: blue;
+	background-color: transparent;
+	text-decoration: none;
+	}
+a:visited
+	{
+	color: blue;
+	background-color: transparent;
+	text-decoration: none;
+	}
+a:hover
+	{
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	}
+a:active
+	{
+	color: blue;
+	background-color: transparent;
+	text-decoration: none;
+	}	
+table.outerListFilter {
+  border-collapse: collapse;
+  border-style: none;
+}
+table.outerListFilter td {
+  padding: 0;
+  border: 1px solid #aaa;
+  border-width: 1px 0;
+}
+table.listFilter {
+  border-collapse: collapse;
+  border-style: none;
+  width: 100%;
+}
+table.listFilter tr {
+}
+table.listFilter td {
+  border: 1px solid #aaa;
+  border-width: 0 1px;
+  padding: 2px;
+}
+
+td.SessionAuthorList {
+  font-size: 9pt;
+  font-style: italic;
+  padding-left: 1em;
+}
+
+table#ACGridView {
+  border-collapse: collapse;
+  border-style: none;
+  margin: 0;
+  width: 100%;
+}
+table#ACGridView th {
+  vertical-align: bottom;
+  border: 1px solid black;
+  padding: 2px 10px 2px 2px;
+}
+table#ACGridView td {
+  border: 1px solid black;
+  padding: 1px 4px;
+  text-align: center;
+}
+table#ACGridView td.ACReviewerName {
+ text-align: center;
+ vertical-align: bottom;
+ line-height: 90%;
+ padding: 5px;
+}
+table#JustifyComment {
+  border-collapse: collapse;
+  border-style: none;
+}
+table#JustifyComment tr {
+}
+table#JustifyComment td {
+  border-top: 1px solid black;
+}
+table.RAssessment {
+  border-collapse: collapse;
+  border: 1px solid black;
+  font-size: 12px;
+}
+table.RAssessment td {
+  border: 1px solid black;
+  padding: 4px 0;
+}
+table.RAssessment td.horAcc {
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+}
+table.RAssessment td.vertJust {
+  line-height: 90%;
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+}
+table.RAssessment td.numLabel {
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+}
+table.RAssessment td.input {
+  height: 12px;
+  width: 12px;
+}
+table#AvgScores {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+table#AvgScores td {
+  border: 1px solid black;
+  border-width: 0 1px;
+  text-align: center;
+  padding: 0 10px;
+}
+table#RAssessment td.input input {
+  background-color: blue;
+  color: red;
+}
+div#awds {
+  display: inline;
+}
+table#assessmentlegend {
+  border-collapse: collapse;
+  border: 1px solid black;
+  font-size: 11px;
+}
+table#assessmentlegend td {
+  border: 1px solid black;
+  padding: 1px 2px;
+  text-align: left;
+}
+table#assessmentlegend th {
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  font-size: 11px;
+}
+
+/*Javascript AutoComplete for reviewers*/
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-no-suggestion { padding: 2px 5px;}
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: bold; color: #000; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { font-weight: bold; font-size: 16px; color: #000; display: block; border-bottom: 1px solid #000; }
+
+input.ajaxComp{ font-size: 14px; padding: 5px; border: 1px solid #CCC; display: block; margin: 0; width:550px;}
+
+table#ReviewPaperStats {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+table#ReviewPaperStats th {
+  padding: 2px 5px;
+}
+table#ReviewPaperStats td {
+  border: 1px solid gray;
+  padding: 2px 5px;
+  text-align: right;
+}
+table#ReviewPaperStats td.t {
+  text-align: left;
+  width: 16em;
+}
+table#ReviewPaperStats tr.pct {
+  border-bottom: 2px solid black;
+}
+table#ReviewPaperStats tr.pct td {
+  font-size: 75%;
+  color: #666;
+  padding: 1px 5px;
+}
+table#ReviewPaperStats tr.title {
+  border-top: 2px solid black;
+}
+table#ReviewPaperStats td.bl {
+  border-left: 2px solid black;
+}
+
+table#ReviewSessionStats {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+table#ReviewSessionStats th {
+  padding: 2px 5px;
+}
+table#ReviewSessionStats td {
+  border: 1px solid gray;
+  padding: 2px 5px;
+  text-align: right;
+}
+table#ReviewSessionStats td.t {
+  text-align: left;
+  width: 16em;
+}
+table#ReviewSessionStats tr.pct {
+  border-bottom: 2px solid black;
+}
+table#ReviewSessionStats tr.pct td {
+  font-size: 75%;
+  color: #666;
+  padding: 1px 5px;
+}
+table#ReviewSessionStats tr.title {
+  border-top: 2px solid black;
+}
+table#ReviewSessionStats td.bl {
+  border-left: 2px solid black;
+}
+table.Discussion {
+  
+}
+table.Discussion td:first-child {
+  border-right: 1px solid black;
+  width: 14em;
+  max-width: 14em;
+  min-width: 14em;
+  font-size: 0.8em;
+}
+table.Discussion td {
+  padding: 2px 5px;
+}
+table.RecentDiscussion {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table.RecentDiscussion td.other {
+  border-right: 1px solid black;
+  width: 14em;
+  max-width: 14em;
+  min-width: 14em;
+  font-size: 0.8em;
+}
+table.RecentDiscussion td {
+  padding: 2px 5px;
+  border: 1px solid black;
+}
+table.RecentDiscussion td.comment {
+}
+table #TPCMeet {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 2px 2px;
+}
+table #TPCMeet tr {
+
+}
+table #TPCMeet td {
+  border: 1px solid gray;
+  padding: 2px 6px;
+}
+table #TPCMeet tr.NoResponse {
+  background-color: #ddd;
+}
+table #TPCMeet tr.WillAttend {
+  background-color: #dfd;
+}
+table #TPCMeet tr.MaybeAttend {
+  background-color: #ddf;
+}
+table #TPCMeet tr.NotAttend {
+  background-color: #fdd;
+}
+table #TPCMeet tr.NoResponseServ {
+  background-color: #ddd;
+}
+table #TPCMeet tr.WillServ {
+  background-color: #dfd;
+}
+table #TPCMeet tr.DeclServ {
+  background-color: #fdd;
+}
+table #TPCMeet tr.NoResponse td.AttVal {
+
+}
+table #TPCMeet tr.WillAttend td.AttVal {
+
+}
+table #TPCMeet tr.MaybeAttend td.AttVal {
+
+}
+table #TPCMeet tr.NotAttend td.AttVal {
+
+}
+table #TPCMeet tr.Total {
+
+}
+
+

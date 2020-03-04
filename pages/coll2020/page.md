@@ -8,6 +8,6 @@ title: A.B. Coll, G. Vazquez-Villar, J.R. Fonollosa, ISIT paper
 
 [file](coll2020/file.pdf)
 
-[report](coll2020/report.pdf)
+[report](coll2020/ISIT 2020 Paper Evaluation Form.html)
 
-**Decision:**
+**Decision:** borderline
