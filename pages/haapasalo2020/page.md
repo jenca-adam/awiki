@@ -10,6 +10,6 @@ title: E. Haapasalo, J-P. Pellonpaa, Constructing extremal observables, 2020
 
 [file](haapasalo2020/file.pdf)
 
-[report](/report.pdf)
+[report](haapasalo2020/report.pdf)
 
-**Decision:**
+**Decision:** accept
