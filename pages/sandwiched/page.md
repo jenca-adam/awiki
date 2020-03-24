@@ -5,6 +5,20 @@ title: "Sandwiched R\xE9nyi divergences"
 [jencova2018renyi](jencova2018renyi)
 
 
+## Poster
+
+* [biid Barcelona, 2016](sandwiched/lpposter.pdf)
+
+
+## Talks
+
+* [bedlewo2018](sandwiched/bedlewo2018.pdf)
+* [cambridge2018](sandwiched/cambridge2018.pdf)
+* [lodz2018](sandwiched/lodz2018.pdf)
+* [bilkent2019](sandwiched/bilkent2019.pdf)
+
+
+
 ## Draft 
 
 [Rényi Relative Entropies and Noncommutative $L_p$-Spaces II](sandwiched/part2.pdf)
@@ -22,10 +36,13 @@ title: "Sandwiched R\xE9nyi divergences"
 ## Study 
 
 * postulates for classical Rényi relative entropy:
-[renyi1961onmeasures](renyi1961onmeasures) 
+    
+    [renyi1961onmeasures](renyi1961onmeasures) 
+
 * quantum versions of Rényi relative entropy:
-[mullerlennert2013onquantum](mullerlennert2013onquantum)i
-[tomamichel2016quantum](tomamichel2016quantum)
+    
+    [mullerlennert2013onquantum](mullerlennert2013onquantum)
+    [tomamichel2016quantum](tomamichel2016quantum)
 
 
 
