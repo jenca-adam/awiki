@@ -18,7 +18,7 @@ title: My work
 ---
 
 
-## Some chimeras
+## On hold for now
 
 * [Quantum statistical experiments](experiment)
 
