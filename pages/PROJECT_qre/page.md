@@ -16,11 +16,14 @@ title: Project Quantum relative entropy
 
 * finishing the draft
 
-* to be added (?): refinement of DPI by using the result for $\alpha>1$, rewritten it terms of the $L_p(\mathcal M)$
-  norm. Maybe use related [maps](PROJECT_qre/dual_maps.pdf) $L_p(\mathcal M)\to L_p(\mathcal N)$
+* to be added (?): 
+    * refinement of DPI by using the result for $\alpha>1$, rewritten it terms of the $L_p(\mathcal M)$ norm. Maybe use related [maps](PROJECT_qre/dual_maps.pdf) $L_p(\mathcal M)\to L_p(\mathcal N)$
+    *  as above for $\alpha<1$, look at the paper by [arxiv:1604.02119](https://arxiv.org/abs/1604.02119) (Leditzky et
+       al)
+    * this gives equality conditions: for $\alpha>1$ also for positive maps, in finite dims - the condition in [arxiv:1604.02119](https://arxiv.org/abs/1604.02119). This is mentioned also in the (Leditzky et al) paper, see also the [notes with Datta and Wilde from BIID15](PROJECT_qre/djw_biid_notes.pdf) 
+
 
 * see also [notes](PROJECT_qre/notes.pdf) (?)
-
 
 
 ###  For $\alpha>1$:  
