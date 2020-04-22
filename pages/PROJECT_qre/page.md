@@ -72,7 +72,7 @@ Papers:
 * noncommutative $L_p$-spaces:
 
     - [terp](terp1981lpspaces)
-    - [kosaki]()
+    - [kosaki](kosaki1984applications)
     - [kosakiuc]()
     - [araki]()
     - [pisier]()
