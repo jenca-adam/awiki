@@ -37,7 +37,7 @@ title: Not my own papers
 
 ### L
 
-[lecam1964sufficiency](lecam1964sufficiency), [liu2019resource](liu2019resource)
+[lecam1964sufficiency](lecam1964sufficiency), [leditzky2017data](leditzky2017data), [liu2019resource](liu2019resource)
 
 
 ### M
