@@ -33,7 +33,7 @@ title: Not my own papers
 
 ### K
 
-[kimura2010distinguishability](kimura2010distinguishability), [kubicki2019resource](kubicki2019resource), 
+[kimura2010distinguishability](kimura2010distinguishability), [kosaki1984applications](kosaki1984applications), [kubicki2019resource](kubicki2019resource), 
 
 ### L
 
