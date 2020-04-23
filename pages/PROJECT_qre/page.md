@@ -73,7 +73,7 @@ Papers:
 
     - [terp](terp1981lpspaces)
     - [kosaki](kosaki1984applications)
-    - [kosakiuc]()
+    - [kosakiuc](kosaki1984applicationsuc)
     - [araki]()
     - [pisier]()
 
