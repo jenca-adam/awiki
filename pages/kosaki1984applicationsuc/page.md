@@ -1,4 +1,4 @@
-title: Kosaki: Applications of uniform convexity... 
+title: Kosaki, Applications of uniform convexity 
 ---
 
 ## Reference

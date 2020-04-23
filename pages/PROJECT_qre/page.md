@@ -15,6 +15,8 @@ title: Project Quantum relative entropy
 
 * finishing the draft
 
+* inequalities with standard Rényi relative entropy (as in [wilde2018optimized](wilde2018optimized) in finite dimensions)
+
 * to be added (?): 
     * refinement of DPI by using the result for $\alpha>1$, rewritten it terms of the $L_p(\mathcal M)$ norm. Maybe use related [maps](PROJECT_qre/dual_maps.pdf) $L_p(\mathcal M)\to L_p(\mathcal N)$
     *  as above for $\alpha<1$,  **not done**
@@ -71,11 +73,11 @@ Papers:
 
 * noncommutative $L_p$-spaces:
 
-    - [terp](terp1981lpspaces)
-    - [kosaki](kosaki1984applications)
-    - [kosakiuc](kosaki1984applicationsuc)
-    - [araki]()
-    - [pisier]()
+    - M. Terp [notes](terp1981lpspaces)
+    - H. Kosaki [$L_p$-spaces](kosaki1984applications), [uniform convexity](kosaki1984applicationsuc)
+    - H. Araki and T. Masuda [$L_p$-spaces](araki1982positive)
+    - G. Pisier and Q. Xu [handbook paper](pisier2003noncommutative), Xu [lecture notes](xu2007operator), 
+Junge and Xu [inequalities](junge2003noncommutative) extensions of conditional expectations to $L_p$-spaces
 
 ---
 

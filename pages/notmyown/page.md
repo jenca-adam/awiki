@@ -4,7 +4,7 @@ title: Not my own papers
 
 ### A
 [albert2019asymptotics](albert2019asymptotics),
-[alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [alfsen2003geometry](alfsen2003geometry), 
+[alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [alfsen2003geometry](alfsen2003geometry), [araki1982positive](araki1982positive),
 [arveson2007theasymptotic](arveson2007theasymptotic), [arveson2008lifting](arveson2008lifting), [auburn2017alice](auburn2017alice) [aubrun2018universal](aubrun2018universal), 
 
 ### B
@@ -47,7 +47,7 @@ title: Not my own papers
 
 ### P
 
-[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [paulsen2011operator](paulsen2011operator),
+[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [paulsen2011operator](paulsen2011operator), [pisier2003noncommutative](pisier2003noncommutative),
  [plavala2016allmeasurements](plavala2016allmeasurements)
 
 ### R
@@ -65,5 +65,8 @@ title: Not my own papers
 [vetterlein2019orthogonality](vetterlein2019orthogonality)
 
 ### W
-[wetering2018aneffect](wetering2018aneffect), [wetering2018sequential](wetering2018sequential), [wetering2018three](wetering2018three),
+[wetering2018aneffect](wetering2018aneffect), [wetering2018sequential](wetering2018sequential), [wetering2018three](wetering2018three), [wilde2018optimized](wilde2018optimized),
 [wolf2010theinverse](wolf2010theinverse)
+
+### X
+[xu2007operator](xu2007operator)
