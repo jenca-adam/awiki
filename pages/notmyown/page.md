@@ -24,12 +24,13 @@ title: Not my own papers
 ### G
 
 [ganesan2019quantum](ganesan2019quantum),
-[gour2018quantum](gour2018quantum), [gour2019comparison](gour2019comparison), 
+[gour2018quantum](gour2018quantum), [gour2019comparison](gour2019comparison),
+[gu2019interpolation](gu2019interpolation), 
 [guerini2017operational](guerini2017operational),   [gudder2018convex](gudder2018convex), 
 
 ### H
 
-[harremoes2017quantum](harremoes2017quantum), 
+[harremoes2017quantum](harremoes2017quantum), [hiai2018quantum](hiai2018quantum) 
 
 ### K
 

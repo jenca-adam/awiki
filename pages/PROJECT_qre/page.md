@@ -67,9 +67,18 @@ Papers:
 
 * quantum versions of Rényi relative entropy:
     
-    - [mullerlennert2013onquantum](mullerlennert2013onquantum)
-    - [tomamichel2016quantum](tomamichel2016quantum)
-    - [hiai2020](hiai2020) 	
+    - [mullerlennert2013onquantum](mullerlennert2013onquantum) - finite dimensional
+    - [tomamichel2016quantum](tomamichel2016quantum) - finite dim (survey)
+    - [hiai2020](hiai2020) - $f$-divergences on von Neumann algebras (survey)
+    - [hiai2018quantum](hiai2018quantum) - standard $f$-divergences, standard Rényi relative entropies
+    - [berta2018renyi](berta2018renyi) - sandwiched Rényi relative entropies, von Neumann algebras
+    - [gu2019interpolation](gu2019interpolation) -  sandwiched Rényi relative entropies by Haagerup (quasi)
+      $L_p$-spaces with $p>0$.
+
+* further on Rényi relative entropy:
+
+    - [arxiv:1909.01906](https://arxiv.org/abs/1909.01906) Gao, Junge, Laracquente: rel. entropy for von Neumann
+      subalgebras
 
 * noncommutative $L_p$-spaces:
 
@@ -78,6 +87,8 @@ Papers:
     - H. Araki and T. Masuda [$L_p$-spaces](araki1982positive)
     - G. Pisier and Q. Xu [handbook paper](pisier2003noncommutative), Xu [lecture notes](xu2007operator), 
 Junge and Xu [inequalities](junge2003noncommutative) extensions of conditional expectations to $L_p$-spaces
+
+* further [bibliography](BIBs)
 
 ---
 
