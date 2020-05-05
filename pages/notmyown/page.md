@@ -19,7 +19,7 @@ title: Not my own papers
 [dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension)
 
 ### F
-[farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator), [fritz2017spectrahedral](fritz2017spectrahedral) 
+[farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator), [frank2013monotonicity](frank2013monotonicity),  [fritz2017spectrahedral](fritz2017spectrahedral) 
 
 ### G
 

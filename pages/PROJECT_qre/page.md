@@ -67,8 +67,14 @@ Papers:
 
 * quantum versions of Rényi relative entropy:
     
+    finite dimensional:
+
     - [mullerlennert2013onquantum](mullerlennert2013onquantum) - finite dimensional
     - [tomamichel2016quantum](tomamichel2016quantum) - finite dim (survey)
+    - [frank2013monotonicity](frank2013monotonicity) - variational expression, monotonicity
+
+    infinite dimensional:
+
     - [hiai2020](hiai2020) - $f$-divergences on von Neumann algebras (survey)
     - [hiai2018quantum](hiai2018quantum) - standard $f$-divergences, standard Rényi relative entropies
     - [berta2018renyi](berta2018renyi) - sandwiched Rényi relative entropies, von Neumann algebras
