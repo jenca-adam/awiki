@@ -22,6 +22,8 @@ title: Hiai's manuscript, 2020
 * [kosaki variational
 expression](https://drive.google.com/file/d/1ca8BKVX1qBKHPLyKvVkutX0CQIA7pFwQ/view?usp=sharing)
 
-* standard $f$-divergences [hiai2018quantum ](hiai2018quantum)
+* standard $f$-divergences [hiai2018quantum](hiai2018quantum)
+
+* maximal $f$-divergences [hiai2019quantum](hiai2019quantum)
 
 

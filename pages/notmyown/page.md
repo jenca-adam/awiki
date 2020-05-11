@@ -30,7 +30,8 @@ title: Not my own papers
 
 ### H
 
-[harremoes2017quantum](harremoes2017quantum), [hiai2018quantum](hiai2018quantum) 
+[harremoes2017quantum](harremoes2017quantum), [hiai2018quantum](hiai2018quantum), [hiai2019quantum](hiai2019quantum) 
+
 
 ### K
 
@@ -43,7 +44,7 @@ title: Not my own papers
 
 ### M
 
-[matsumoto2010aquantum](matsumoto2010aquantum), [mullerlennert2013onquantum](mullerlennert2013onquantum), [matsumoto2010reverse](matsumoto2010reverse) 
+[matsumoto2010aquantum](matsumoto2010aquantum), [matsumoto2015anew](matsumoto2015anew), [mullerlennert2013onquantum](mullerlennert2013onquantum), [matsumoto2010reverse](matsumoto2010reverse) 
 
 
 ### P
