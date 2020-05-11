@@ -26,4 +26,7 @@ expression](https://drive.google.com/file/d/1ca8BKVX1qBKHPLyKvVkutX0CQIA7pFwQ/vi
 
 * maximal $f$-divergences [hiai2019quantum](hiai2019quantum)
 
+* measured $f$-divergences: new
 
+    - minimal ''monotone quantum $f$-divergence''
+    - variational expressions: [berta2017onvariational](berta2017onvariational)
