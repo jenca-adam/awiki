@@ -72,3 +72,7 @@ title: Not my own papers
 
 ### X
 [xu2007operator](xu2007operator)
+
+### Z
+
+[zalinescu2002convex](zalinescu2002convex)

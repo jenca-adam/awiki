@@ -94,6 +94,12 @@ Papers:
     - G. Pisier and Q. Xu [handbook paper](pisier2003noncommutative), Xu [lecture notes](xu2007operator), 
 Junge and Xu [inequalities](junge2003noncommutative) extensions of conditional expectations to $L_p$-spaces
 
+* uniform convexity, smoothness
+
+    - Zalinescu [convex analysis](BOOK_zalinescu2002convex)
+    - Diestel [geometry of Banach spaces](BOOK_diestel1975geometry)
+
+
 * further [bibliography](BIBs)
 
 ---
