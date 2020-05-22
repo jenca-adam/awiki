@@ -2,10 +2,9 @@ title: To referee
 ---
 
 
-
 Due [11.5.2020](REF_brasil2020)
 
-Due [13.5.2020](hiai2020)
+
 
 ### Reviews finished 2020
 
@@ -21,6 +20,8 @@ Due [13.5.2020](hiai2020)
 1. <del>Due [29.2.2020](coll2020) (ISIT conference paper)</del> Done.
 
 1. <del>Due [30.4.2020](REF_chakraborty2020)</del>  Done.
+
+1. <del>Due [13.5.2020](hiai2020)</del> Done.
 
 ### Reviews finished 2019
 
