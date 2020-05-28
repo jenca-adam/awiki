@@ -1,7 +1,6 @@
 title: To referee
 ---
 
-Due [11.5.2020](REF_brasil2020)
 
 
 
@@ -21,6 +20,8 @@ Due [11.5.2020](REF_brasil2020)
 1. <del>Due [30.4.2020](REF_chakraborty2020)</del>  Done.
 
 1. <del>Due [13.5.2020](hiai2020) monograph for Springer</del> Done.
+
+1. <del>Due [11.5.2020](REF_brasil2020)</del> Done.
 
 ### Reviews finished 2019
 
