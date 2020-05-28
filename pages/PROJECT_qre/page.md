@@ -31,6 +31,9 @@ title: Project Quantum relative entropy
 
 ###  For $\alpha>1$:  
 
+
+
+
 [jencova2018renyi](jencova2018renyi) (published)
 
 *Beware of [mistakes](jencova2018renyi/mistakes.pdf) in the published version!*
@@ -58,7 +61,7 @@ Papers:
 
 * (finite dim) Mosonyi and Ogawa, 
 * (infinite dim) Jaksic and Pillet??, last part of [berta2018renyi](berta2018renyi)
-
+* Relative entropy: proper formula [hiai1991theproper](hiai1991theproper)
 ---
 
 ## Study 
