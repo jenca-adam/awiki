@@ -16,7 +16,7 @@ title: Not my own papers
 
 ### D
 [dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),[dallarno2019device](dallarno2019device), [dallarno2019data](dallarno2019data),
-[dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension)
+[dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension), [diestel1975geometry](BOOK_diestel1975geometry)
 
 ### F
 [farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator), [frank2013monotonicity](frank2013monotonicity),  [fritz2017spectrahedral](fritz2017spectrahedral) 
@@ -75,4 +75,4 @@ title: Not my own papers
 
 ### Z
 
-[zalinescu2002convex](zalinescu2002convex)
+[zalinescu2002convex](BOOK_zalinescu2002convex)

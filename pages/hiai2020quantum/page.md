@@ -2,22 +2,19 @@
 title: Hiai's manuscript, 2020
 ---
 
-**Paper:** F. Hiai, Quantum f-Divergences in von Neumann Algebras
+## Reference 
 
-**Journal:** book proposal for Springer
+ F. Hiai, Quantum f-Divergences in von Neumann Algebras,  book proposal for Springer
 
-**Due:** 13.5.2020
 
 [link]()
 
-[file](hiai2020/file.pdf)
-
-[report](/report.pdf)
-
-**Decision:**
+[file](hiai2020quantum/file.pdf)
 
 
-### Some notes
+
+
+## Some notes
 
 * [kosaki variational
 expression](https://drive.google.com/file/d/1ca8BKVX1qBKHPLyKvVkutX0CQIA7pFwQ/view?usp=sharing)
@@ -30,3 +27,5 @@ expression](https://drive.google.com/file/d/1ca8BKVX1qBKHPLyKvVkutX0CQIA7pFwQ/vi
 
     - minimal ''monotone quantum $f$-divergence''
     - variational expressions: [berta2017onvariational](berta2017onvariational)
+
+

@@ -21,7 +21,9 @@ title: Project Quantum relative entropy
     * refinement of DPI by using the result for $\alpha>1$, rewritten it terms of the $L_p(\mathcal M)$ norm. Maybe use related [maps](PROJECT_qre/dual_maps.pdf) $L_p(\mathcal M)\to L_p(\mathcal N)$
     *  as above for $\alpha<1$,  **not done**
     * this gives equality conditions: for $\alpha>1$ also for positive maps, in finite dims - the condition in 
- [leditzky2017data](leditzky2017data). This is mentioned also in the (Leditzky et al) paper, see also the [notes with Datta and Wilde from BIID15](PROJECT_qre/djw_biid_notes.pdf) 
+ [leditzky2017data](leditzky2017data). This is mentioned also in the (Leditzky et al) paper, see also the [notes with Datta and Wilde from BIID15](PROJECT_qre/djw_biid_notes.pdf)
+    * variational expression for $\alpha\in [1/2,1)\cup (1,\infty]$ 
+    * DPI with respect to *positive* trace preserving maps
 
 
 * see also [notes](PROJECT_qre/notes.pdf) (?)
@@ -75,7 +77,7 @@ Papers:
 
     infinite dimensional:
 
-    - [hiai2020](hiai2020) - $f$-divergences on von Neumann algebras (survey)
+    - [hiai2020](hiai2020quantum) - $f$-divergences on von Neumann algebras (survey)
     - [hiai2018quantum](hiai2018quantum) - standard $f$-divergences, standard Rényi relative entropies
     - [berta2018renyi](berta2018renyi) - sandwiched Rényi relative entropies, von Neumann algebras
     - [gu2019interpolation](gu2019interpolation) -  sandwiched Rényi relative entropies by Haagerup (quasi)
