@@ -8,4 +8,5 @@ F. Hiai, D. Petz, The proper formula for relative entropy and its asymptotics in
 
 [link](https://drive.google.com/file/d/1CEI_5YWXyNR9-opd3QkSwIx9ilOaAagT/view?usp=sharing)
 
+[link2](https://projecteuclid.org/euclid.cmp/1104248844)
 
