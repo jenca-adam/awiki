@@ -15,13 +15,12 @@ title: jencova2018renyi
 * proof that this is the same as [berta2018renyi](berta2018renyi);
 * DPI with respect to positive trace-preserving maps;
 * Araki relative entropy is monotone under positive trace-preserving maps;
-* suffciency of channels by equality in DPI.
+* suffciency of 2-positive trace preserving maps by equality in DPI.
 
-Part 2 [jencova2020renyi](jencova2020renyi) - for $\alpha\in \[1/2,1)$.
+Part 2: [jencova2020renyi](jencova2020renyi) - for $\alpha\in \[1/2,1)$.
 
 ## Remarks
 
 [Mistakes!!](jencova2018renyi/mistakes.pdf)
-
 
 
