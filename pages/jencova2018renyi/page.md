@@ -17,10 +17,8 @@ title: jencova2018renyi
 * Araki relative entropy is monotone under positive trace-preserving maps;
 * suffciency of 2-positive trace preserving maps by equality in DPI.
 
-Part 2: [jencova2020renyi](jencova2020renyi) - for $\alpha\in \[1/2,1)$.
-
 ## Remarks
 
-[Mistakes!!](jencova2018renyi/mistakes.pdf)
+* [Mistakes!!](jencova2018renyi/mistakes.pdf)
 
-
+* Part 2: [jencova2020renyi](jencova2020renyi) - for $\alpha\in \[1/2,1)$
