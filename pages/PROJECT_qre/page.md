@@ -13,20 +13,8 @@ title: Project Quantum relative entropy
 ### For $\alpha\in \[1/2,1)$: 
 
 
-* finishing the draft
+[jencova2020renyi](jencova2020renyi) (submitted) 
 
-* inequalities with standard Rényi relative entropy (as in [wilde2018optimized](wilde2018optimized) in finite dimensions)
-
-* to be added (?): 
-    * refinement of DPI by using the result for $\alpha>1$, rewritten it terms of the $L_p(\mathcal M)$ norm. Maybe use related [maps](PROJECT_qre/dual_maps.pdf) $L_p(\mathcal M)\to L_p(\mathcal N)$
-    *  as above for $\alpha<1$,  **not done**
-    * this gives equality conditions: for $\alpha>1$ also for positive maps, in finite dims - the condition in 
- [leditzky2017data](leditzky2017data). This is mentioned also in the (Leditzky et al) paper, see also the [notes with Datta and Wilde from BIID15](PROJECT_qre/djw_biid_notes.pdf)
-    * variational expression for $\alpha\in [1/2,1)\cup (1,\infty]$ 
-    * DPI with respect to *positive* trace preserving maps
-
-
-* see also [notes](PROJECT_qre/notes.pdf) (?)
 
 
 ###  For $\alpha>1$:  
@@ -37,6 +25,15 @@ title: Project Quantum relative entropy
 [jencova2018renyi](jencova2018renyi) (published)
 
 *Beware of [mistakes](jencova2018renyi/mistakes.pdf) in the published version!*
+
+
+### Discussions and notes
+
+* [notes with Datta and Wilde from BIID15](PROJECT_qre/djw_biid_notes.pdf)
+* [maps](PROJECT_qre/dual_maps.pdf) - maps on $L_q(\mathcal M)$, related to $\Phi: L_1(\mathcal M)\to L_1(\mathcal N)$ and a
+  (faithful) $\varphi\in \mathcal M_*^+$. 
+* [notes](PROJECT_qre/notes.pdf) - some DPI lower bounds
+
 
 
 ## Recoverability in von Neumann algebras
