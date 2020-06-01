@@ -1,14 +1,13 @@
-title: Rényi relative entropies, part II  
+title: "R\xE9nyi relative entropies, part II"
 ---
-
 ## Reference
 
-A. Jenčová, Rényi relative entropies and noncommutative $L_p$-spaces II, arxiv:1707.0004
+A. Jenčová, Rényi relative entropies and noncommutative $L_p$-spaces II, arxiv:1707.00047
 
 
 [file](/file.pdf)
 
-[arxiv:1707.0004](https://arxiv.org/abs/1707.0004)
+[arxiv:1707.00047](https://arxiv.org/abs/1707.00047)
 
 
 
@@ -30,5 +29,4 @@ submitted to AHP
 * DPI with respect to all *positive* trace preserving maps;
 
 * equality implies sufficiency for 2-positive trace preserving maps, $s(\psi)\le s(\varphi)$.
-
 
