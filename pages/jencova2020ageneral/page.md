@@ -6,9 +6,11 @@ title: jencova2020ageneral
 Anna Jenčová, A general theory of comparison of quantum channels (and beyond), 
  arXiv:2002.04240
 
-
-
 [arxiv:2002.04240](https://arxiv.org/abs/2002.04240)
+
+## Status
+
+submitted to IEEE transactions in IT
 
 ## Contents
 

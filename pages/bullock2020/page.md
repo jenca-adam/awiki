@@ -14,5 +14,5 @@ title: Bullock, Heinosaari, Quantum state discrimination, 2020
 
 [report](bullock2020/report.pdf)
 
-**Decision:**
+**Decision:** reject
 

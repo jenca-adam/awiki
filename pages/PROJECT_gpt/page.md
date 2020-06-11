@@ -1,17 +1,28 @@
-title: Incompatibility witnesses
+title: Project General probabilistic theories
 ---
-## People
+**About:** General probabilistic theories, incompatibility: characterization, degree, witnesses  
 
+**People:**
+* Martin Plávala
 * Teiko Heinosaari, Alessandro Toigo, Claudio Carmelli
-* Andreas Bluhm. Ion Nechita
+* Andreas Bluhm, Ion Nechita
 
-## Notes
+---
+
+## Incompatibility
+
+### Characterization as ETB maps, witnesses: 
+
+[jencova2018incompatible](jencova2018incompatible) (published)
+
+### Further work (notes)
 
 * notes by Alessandro, Teiko, Claudio on [witnesses](witnesses/toigo.pdf)
 * my notes on [witnesses](witnesses/aj_witnesses.pdf)
 * my notes on [spectrahedra](witnesses/aj_spectrahedra.pdf)
 * notes by Andreas and Ion on spectrahedra and [gpt](witnesses/bluhm.pdf)
 * my notes on witnesses and [symmetric state spaces](witnesses/notes_symmetric.pdf)
+
 
 ## Questions
 
@@ -25,8 +36,6 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 ## Papers
 
 **Incompatibility**
-
-[jencova2018incompatible](jencova2018incompatible)
 
 [plavala2016allmeasurements](plavala2016allmeasurements)
 
