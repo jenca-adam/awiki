@@ -9,6 +9,8 @@ title: Project Quantum relative entropy
 
 ## Sandwiched Rényi relative entropy in von Neumann algebras
 
+**directory: /work**/lpspaces
+
 
 ### For $\alpha\in \[1/2,1)$: 
 
@@ -118,5 +120,5 @@ Junge and Xu [inequalities](junge2003noncommutative) extensions of conditional e
 * [lodz2018](/static/pdf/lodz2018.pdf)
 * [bilkent2019](/static/pdf/bilkent2019.pdf)
 
-
+## Published papers
 
