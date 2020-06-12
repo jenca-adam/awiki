@@ -44,7 +44,9 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 
 
 
-### Characterization as ETB maps, witnesses: 
+### Characterization as ETB maps, witnesses:
+
+**directory:/work**/compatibility/nonclassical 
 
 [jencova2018incompatible](jencova2018incompatible) (published)
 
