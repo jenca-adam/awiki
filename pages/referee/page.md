@@ -7,46 +7,46 @@ title: To referee
 ### Reviews finished 2020
 
 
-1. <del>Due [2.2.2020](podsedkowska2019) (revised)</del>  Done.
+1. <del>Due [2.2.2020](REF_podsedkowska2019) (revised)</del>  Done.
 
-1. <del>Due [12.2.2020](dallarno2019) (revised)</del>  Done.
+1. <del>Due [12.2.2020](REF_dallarno2019) (revised)</del>  Done.
 
 1. <del>Due [17.3.2020](REF_bullock2020)</del>  Done.
 
-1. <del>Due [23.3.2020](haapasalo2020)</del>  Done.
+1. <del>Due [23.3.2020](REF_haapasalo2020)</del>  Done.
 
 1. <del>Due [29.2.2020](REF_coll2020) (ISIT conference paper)</del> Done.
 
 1. <del>Due [30.4.2020](REF_chakraborty2020)</del>  Done.
 
-1. <del>Due [13.5.2020](hiai2020) monograph for Springer</del> Done.
+1. <del>Due [13.5.2020](REF_hiai2020) monograph for Springer</del> Done.
 
 1. <del>Due [11.5.2020](REF_brasil2020)</del> Done.
 
 ### Reviews finished 2019
 
 
-1. <del>Due [26.1.2019](gour2019)</del> Done.
+1. <del>Due [26.1.2019](REF_gour2019)</del> Done.
 
-1. <del>Due [23.4.2019](molnar2019)</del> Done.
+1. <del>Due [23.4.2019](REF_molnar2019)</del> Done.
 
-2. <del>Due [8.5.2019](labuschagne2019)</del> Done.
+2. <del>Due [8.5.2019](REF_labuschagne2019)</del> Done.
 
-3. <del>Due [25.5. 2019](haapasalo2019)</del> Done.
+3. <del>Due [25.5. 2019](REF_haapasalo2019)</del> Done.
 
 4. <del>Due [15.6.2019](REF_aray2019)</del>  Done.
 
-5. <del>Due [27.5.2019](gzyl2019)</del> Done.
+5. <del>Due [27.5.2019](REF_gzyl2019)</del> Done.
 
 6. <del>Due [7.8.2019](REF_carlen2019)</del> Done.
 
 7. <del>Due [16.10.2019](REF_carlen2019) (revision)</del>  Done.
 
-8. <del>Due [27.10.2019](shahbazi2019)</del> Done.
+8. <del>Due [27.10.2019](REF_shahbazi2019)</del> Done.
 
-9. <del>Due [29.11.2019](dallarno2019)</del> Done.
+9. <del>Due [29.11.2019](REF_dallarno2019)</del> Done.
  
-9. <del>Due [30.11.2019](pitrik2019)</del> Done.
+9. <del>Due [30.11.2019](REF_pitrik2019)</del> Done.
 
-10. <del>Due [8.12.2019](podsedkowska2019)</del> Done.
+10. <del>Due [8.12.2019](REF_podsedkowska2019)</del> Done.
  
