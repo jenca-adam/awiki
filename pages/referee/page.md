@@ -11,11 +11,11 @@ title: To referee
 
 1. <del>Due [12.2.2020](dallarno2019) (revised)</del>  Done.
 
-1. <del>Due [17.3.2020](bullock2020)</del>  Done.
+1. <del>Due [17.3.2020](REF_bullock2020)</del>  Done.
 
 1. <del>Due [23.3.2020](haapasalo2020)</del>  Done.
 
-1. <del>Due [29.2.2020](coll2020) (ISIT conference paper)</del> Done.
+1. <del>Due [29.2.2020](REF_coll2020) (ISIT conference paper)</del> Done.
 
 1. <del>Due [30.4.2020](REF_chakraborty2020)</del>  Done.
 
@@ -34,13 +34,13 @@ title: To referee
 
 3. <del>Due [25.5. 2019](haapasalo2019)</del> Done.
 
-4. <del>Due [15.6.2019](aray2019)</del>  Done.
+4. <del>Due [15.6.2019](REF_aray2019)</del>  Done.
 
 5. <del>Due [27.5.2019](gzyl2019)</del> Done.
 
-6. <del>Due [7.8.2019](carlen2019)</del> Done.
+6. <del>Due [7.8.2019](REF_carlen2019)</del> Done.
 
-7. <del>Due [16.10.2019](carlen2019) (revision)</del>  Done.
+7. <del>Due [16.10.2019](REF_carlen2019) (revision)</del>  Done.
 
 8. <del>Due [27.10.2019](shahbazi2019)</del> Done.
 
