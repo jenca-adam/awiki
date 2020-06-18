@@ -57,7 +57,7 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 
 **directory /work** /chsh  
 
-* Implementations of the PR-box by quantum channels [arxiv paper]
+* Implementations of the PR-box by quantum channels [arxiv paper](jencova2019onthestructure)
 
 ---
 
