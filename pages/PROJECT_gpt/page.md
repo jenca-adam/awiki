@@ -33,6 +33,13 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 * measurements with more outcomes
 
 
+**To do:**
+
+* read again my notes and Lyon talk (prepare talk for Miso)
+* read AGAIN the notes by Andreas and Ion (from my perspective, relation to mine ?)
+* read the paper [aubrun2018universal](aubrun2018universal)  (also in peparation for the talk)
+
+
 
 ### Witnesses by testing problems
 

@@ -122,3 +122,5 @@ Junge and Xu [inequalities](junge2003noncommutative) extensions of conditional e
 
 ## Published papers
 
+[jencova2018renyi](jencova2018renyi) 
+
