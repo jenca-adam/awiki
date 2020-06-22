@@ -49,7 +49,7 @@ title: Not my own papers
 
 ### P
 
-[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [paulsen2011operator](paulsen2011operator), [pisier2003noncommutative](pisier2003noncommutative),
+[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [paulsen2002completely](BOOK_paulsen2002completely), [paulsen2011operator](paulsen2011operator), [pisier2003noncommutative](pisier2003noncommutative),
  [plavala2016allmeasurements](plavala2016allmeasurements)
 
 ### R
