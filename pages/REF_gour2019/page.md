@@ -6,13 +6,13 @@ title: G. Gour, 2019
 
 **Due: 26. 1. 2019**
 
-[File](gour2019/file.pdf)
+[File](REF_gour2019/file.pdf)
 
-[Report](gour2019/report.pdf) 
+[Report](REF_gour2019/report.pdf) 
 
-[Reply](gour2019/reply.pdf)
+[Reply](REF_gour2019/reply.pdf)
 
-[Revised file](gour2019/revised_file.pdf)
+[Revised file](REF_gour2019/revised_file.pdf)
 
 **Decision:** accept
 

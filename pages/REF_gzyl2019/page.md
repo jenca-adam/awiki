@@ -7,8 +7,8 @@ title: H. Gzyl, F. Nielsen 2019
 **Due: 27.5.2019**
 
 
-[File](gzyl2019/file.pdf)
+[File](REF_gzyl2019/file.pdf)
 
-[review form](gzyl2019/review_form.txt)
+[review form](REF_gzyl2019/review_form.txt)
 
 **Decision** reject
