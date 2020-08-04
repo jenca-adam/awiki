@@ -1,7 +1,6 @@
 title: Zoznam doktorandov
 ---
 **Meno a priezvsko:** Ing. Ferdinand Čapka
-
 **Začiatok štúdia:** 2019
 
 **Školiteľ:** Holá
@@ -53,5 +52,4 @@ title: Zoznam doktorandov
 
 **Pozn.:**
 ---
-
 
