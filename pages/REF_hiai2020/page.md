@@ -16,6 +16,10 @@ title: Hiai's manuscript, 2020
 
 **Decision:** accept
 
+[reply](REF_hiai2020/reply.pdf)
+
+[revised (link)](https://drive.google.com/file/d/1sKHtjNUgdO6zFYLC2JsHSN0uwqIW4GUc/view?usp=sharing)
+
 
 ### Some notes
 
