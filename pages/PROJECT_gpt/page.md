@@ -76,6 +76,8 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 
 [bluhm2018joint](bluhm2018joint)
 
+[lami2018ultimate](lami2018ultimate)
+
 **Incompatibility**
 
 [plavala2016allmeasurements](plavala2016allmeasurements)
