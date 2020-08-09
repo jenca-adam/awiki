@@ -10,7 +10,7 @@ title: Project General probabilistic theories
 
 ---
 
-## Incompatibility
+## 1. Incompatibility
 
 
 ### Witnesses, spectrahedra, cross norms
@@ -58,7 +58,7 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 [jencova2018incompatible](jencova2018incompatible) (published)
 
 
-## CHSH
+## 1. CHSH
 
 **people:**  Martin
 
