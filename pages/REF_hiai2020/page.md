@@ -10,9 +10,9 @@ title: Hiai's manuscript, 2020
 
 [link]()
 
-[file](hiai2020/file.pdf)
+[file](REF_hiai2020/file.pdf)
 
-[report](hiai2020/report.pdf)
+[report](REF_hiai2020/report.pdf)
 
 **Decision:** accept
 

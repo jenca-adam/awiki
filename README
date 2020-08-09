@@ -6,6 +6,7 @@ pre Python 3
 * WTForms
 * BeautifulSoup
 * Markdown
+* LXML
 
 Wiki bezi na http://localhost:5000/
 

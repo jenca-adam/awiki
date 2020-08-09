@@ -10,9 +10,9 @@ title: Bullock, Heinosaari, Quantum state discrimination, 2020
 
 [link](https://mc04.manuscriptcentral.com/jphysa-iop)
 
-[file](bullock2020/file.pdf)
+[file](REF_bullock2020/file.pdf)
 
-[report](bullock2020/report.pdf)
+[report](REF_bullock2020/report.pdf)
 
 **Decision:** reject
 

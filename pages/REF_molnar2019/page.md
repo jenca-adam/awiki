@@ -7,8 +7,8 @@ title: "L. Moln\xE1r, Quantum R\xE9nyi relative entropies, 2019"
 **Due: 23.4.2019**
 
 
-[File](molnar2019/file.pdf)
+[File](REF_molnar2019/file.pdf)
 
-[Report](molnar2019/report.pdf)
+[Report](REF_molnar2019/report.pdf)
 
 **Decision:** accept

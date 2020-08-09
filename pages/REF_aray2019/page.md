@@ -8,7 +8,7 @@ Bipartite System in General Probabilistic Theory
 
 **Due:** 15.6.2019
 
-[file](aray2019/file.pdf)
+[file](REF_aray2019/file.pdf)
 
 
 **Decision:** (weak) accept

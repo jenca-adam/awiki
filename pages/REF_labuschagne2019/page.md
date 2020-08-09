@@ -7,9 +7,9 @@ title: Labuschagne and  Majewski, Dynamics on noncommutative Orlicz spaces, 2019
 **Due: 8.5.2019**
 
 
-[File](labuschagne2019/file.pdf)
+[File](REF_labuschagne2019/file.pdf)
 
-[Report](labuschagne2019/report.pdf)
+[Report](REF_labuschagne2019/report.pdf)
 
 
 **My decision** reject
