@@ -83,6 +83,8 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 
 **Operator spaces/systems**
 
+[paulsen2002completely](BOOK_paulsen2002completely)
+
 [paulsen2011operator](paulsen2011operator)
 
 [farenick2012operator](farenick2012operator)
@@ -107,4 +109,3 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 ## Published papers
 
 [jencova2018incompatible](jencova2018incompatible) (published)
-
