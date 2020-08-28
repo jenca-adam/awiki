@@ -5,6 +5,7 @@ title: To referee
 Due [24.8.2020](REF_khrennikov2020)
 
 
+
 ### Reviews finished 2020
 
 
@@ -23,6 +24,8 @@ Due [24.8.2020](REF_khrennikov2020)
 1. <del>Due [13.5.2020](REF_hiai2020) monograph for Springer</del> Done.
 
 1. <del>Due [11.5.2020](REF_brasil2020)</del> Done.
+
+1. <del>Due [27.8.2020](REF_chakraborty2020)</del> Done.
 
 ### Reviews finished 2019
 
