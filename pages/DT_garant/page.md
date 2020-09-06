@@ -27,7 +27,7 @@ title: Zoznam doktorandov
 
 ---
 
-**Meno a priezvisko:** Mgr. Ivana Krajňáková  **Finished**
+**Meno a priezvisko:** Mgr. Ivana Krajňáková  **Finished**    
 **Začiatok štúdia:** 2016   
 **Školiteľ:** Jirásková  
 **Téma:** Finite automata and operational complexity (Konečné automaty a operačná zložitosť) 
@@ -60,7 +60,7 @@ Descriptional Complexity of Formal Systems - 19th IFIP WG 1.02 International Con
 
 ---
 
-**Meno a priezvisko:** Mgr. Dušana Babicová  **Finished**
+**Meno a priezvisko:** Mgr. Dušana Babicová  **Finished**    
 **Začiatok štúdia:** 2016  
 **Školiteľ:** Frič (Papčo)
 **Téma:** Uncertainty, Structures and Categories (Neurčitosť, štruktúry a kategórie)  
