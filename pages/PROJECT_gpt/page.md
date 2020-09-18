@@ -10,10 +10,10 @@ title: Project General probabilistic theories
 
 ---
 
-## Incompatibility
+## A. Incompatibility
 
 
-### Witnesses, spectrahedra, cross norms
+### 1. Witnesses, spectrahedra, cross norms
 
 **people:** Ion, Andreas
 
@@ -41,7 +41,7 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 
 
 
-### Witnesses by testing problems
+### 2. Witnesses by testing problems
 
 **people:**  Teiko, Alessandro, Claudio
 
@@ -51,14 +51,14 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 
 
 
-### Characterization as ETB maps, witnesses:
+### 3. Characterization as ETB maps, witnesses:
 
 **directory:/work**/compatibility/nonclassical 
 
 [jencova2018incompatible](jencova2018incompatible) (published)
 
 
-## CHSH
+## B. CHSH
 
 **people:**  Martin
 
@@ -76,12 +76,16 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 
 [bluhm2018joint](bluhm2018joint)
 
+[lami2018ultimate](lami2018ultimate)
+
 **Incompatibility**
 
 [plavala2016allmeasurements](plavala2016allmeasurements)
 
 
 **Operator spaces/systems**
+
+[paulsen2002completely](BOOK_paulsen2002completely)
 
 [paulsen2011operator](paulsen2011operator)
 
@@ -107,4 +111,3 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 ## Published papers
 
 [jencova2018incompatible](jencova2018incompatible) (published)
-

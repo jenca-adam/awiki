@@ -10,4 +10,4 @@ title: Khrennikov contextuality, 2020
 
 [report](REF_khrennikov2020/report.pdf)
 
-**Decision:**
+**Decision:** Reject

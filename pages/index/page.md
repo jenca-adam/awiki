@@ -1,6 +1,5 @@
 title: My work
 ---
-
 ## My projects
 
 * [Quantum relative entropies, channels and sufficiency](PROJECT_qre)
@@ -48,11 +47,11 @@ title: My work
 
 ---
 
-### Duties 
+## Duties 
 
 * [referee](referee)
-
 * [students](students)
+* [garant DS](DT_garant)
 
 ---
 
@@ -88,6 +87,5 @@ title: My work
 ## Finished
 
 * [Spectral effect algebras](spectral)
-
 
 
