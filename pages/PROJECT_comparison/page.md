@@ -15,7 +15,7 @@ title: Comparison of quantum channels
 
 ## Talks
 
-* my [banff2019](comparison/banff2019.pdf) talk: comparison of bipartite channels
+* my [banff2019](PROJECT_comparison/banff2019.pdf) talk: comparison of bipartite channels
 
 ## In preparation
 

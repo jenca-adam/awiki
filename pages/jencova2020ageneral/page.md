@@ -10,7 +10,10 @@ Anna Jenčová, A general theory of comparison of quantum channels (and beyond),
 
 ## Status
 
-submitted to IEEE transactions in IT
+submitted to IEEE Transactions in IT    
+referee reports: [report1](jencova2020ageneral/report1.pdf), [report2](jencova2020ageneral/report2.pdf)
+
+
 
 ## Contents
 
