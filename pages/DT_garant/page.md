@@ -47,7 +47,6 @@ WOS:
 1. Galina Jirásková, Ivana Krajňáková: Square on deterministic, alternating, and Boolean finite automata,
 International Journal of Foundations of Computer Science, vol. 30(6-7), pp. 1117--1134 (2019)
 
-Konferencie:
 
 1. Michal Hospodar, Galina Jirásková, Ivana Krajňáková: Operations on Boolean and alternating finite automata,
 In Fedor V. Fomin, Vladimir V. Podolskii (eds.): Computer Science -- Theory and Applications -- 13th International Computer Science Symposium in Russia, CSR 2018, Moscow, Russia, June 6--10, 2018, Proceedings.
