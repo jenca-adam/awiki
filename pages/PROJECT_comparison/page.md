@@ -24,7 +24,7 @@ title: Comparison of quantum channels
 
 
     * some extension  of the Banff talk
-
+    * to study: [coecke2016amathematical](coecke2016amathematical)
 
 ## References
 

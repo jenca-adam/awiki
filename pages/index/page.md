@@ -8,7 +8,7 @@ title: My work
 
 * [Comparison](PROJECT_comparison)
 
-* [Channels, subalgebras, decoherence](PROJECT_raffaella)
+* [Channels, subalgebras, decoherence](PROJECT_decoherence)
 
 * [Effect algebras](PROJECT_ea)
 

@@ -80,7 +80,7 @@ LR^\epsilon(\mathcal N)=\inf_{\frac12\\|\mathcal N'-\mathcal N\\|_\diamond} LR(\
 * **One-shot resource erasure:** $\epsilon$-resource-destruction cost:
 \\[
 \mathsf{COST}^\epsilon(\mathcal N)=\min\\{ \log(k), \ \exists \mbox{ free }\mathcal F,\mathcal M,\  \\{p_i,\mathcal U_i,\mathcal
-V_i\\}\mbox{ ensemble of pairs of free reversible channels}, s.t. \frac12\\|\sum_{i=1}^k p_i\mathcal V_i\circ(\mathcal N\otimes
+V_i\\}\mbox{ ensemble of pairs of free reversible channels}, s.t.\\\ \frac12\\|\sum_{i=1}^k p_i\mathcal V_i\circ(\mathcal N\otimes
 \mathcal F)\mathcal U_i-\mathcal M\\|_\diamond \le \epsilon\\}
 \\]
     * **Thm. 10:** some bounds for $\mathsf{COST}^\epsilon$ (in smooth $LR$).
