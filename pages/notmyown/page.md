@@ -11,15 +11,16 @@ title: Not my own papers
 [baez2011acharacterization](baez2011acharacterization),  [barnum2015entropy](barnum2015entropy), [berta2017onvariational](berta2017onvariational),  [berta2018renyi](berta2018renyi), [blackwell1951comparison](blackwell1951comparison), [bluhm2018joint](bluhm2018joint), [buscemi2005clean](buscemi2005clean), [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
-[chiribella2011informational](chiribella2011informational), [chiribella2016optimal](chiribella2016optimal),
-[cirillo2015decompositions](cirillo2015decompositions)
+[carbone2020absorption](carbone2020absorption), [coecke2016amathematical](coecke2016amathematical), [chiribella2011informational](chiribella2011informational), [chiribella2016optimal](chiribella2016optimal),
+[cirillo2015decompositions](cirillo2015decompositions), [chitambar2019quantum](chitambar2019quantum)
+
 
 ### D
 [dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),[dallarno2019device](dallarno2019device), [dallarno2019data](dallarno2019data),
 [dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension), [diestel1975geometry](BOOK_diestel1975geometry)
 
 ### F
-[farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator), [frank2013monotonicity](frank2013monotonicity),  [fritz2017spectrahedral](fritz2017spectrahedral) 
+[farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator), [frank2013monotonicity](frank2013monotonicity),  [fritz2017resource](fritz2017resource), [fritz2017spectrahedral](fritz2017spectrahedral) 
 
 ### G
 

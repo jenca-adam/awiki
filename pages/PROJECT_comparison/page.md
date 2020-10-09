@@ -24,7 +24,12 @@ title: Comparison of quantum channels
 
 
     * some extension  of the Banff talk
-    * to study: [coecke2016amathematical](coecke2016amathematical)
+ 
+### To study: 
+
+* Resource theories:     
+    * categorial [coecke2016amathematical](coecke2016amathematical), [fritz2017resource](fritz2017resource)    
+    * other [chitambar2019quantum](chitambar2019quantum)
 
 ## References
 
