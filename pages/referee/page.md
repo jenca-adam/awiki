@@ -2,7 +2,10 @@ title: To referee
 ---
 
 
-Due [24.8.2020](REF_khrennikov2020)
+* Due [13.11.2020](REF_haapasalo2020a)    
+* Due [30.11.2020](REF_plosker2020)
+
+Due [24.8.2020](REF_khrennikov2020) cancelled??
 
 
 
