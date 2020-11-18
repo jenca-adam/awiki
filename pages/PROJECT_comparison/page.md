@@ -31,10 +31,12 @@ title: Comparison of quantum channels
     * categorical [coecke2016amathematical](coecke2016amathematical), [fritz2017resource](fritz2017resource)    
     * other [chitambar2019quantum](chitambar2019quantum)
 
-* Resource theories of quantum channels [liu2019resource](liu2019resource) (\*), [liu2019operational](liu2019operational) (\*), [gour2019theentanglement](gour2019theentanglement), [gour2020dynamical](gour2020dynamical)
+* Resource theories of quantum channels:
+    * [liu2019resource](liu2019resource) (\*), [liu2019operational](liu2019operational) (\*), 
+    * [gour2019theentanglement](gour2019theentanglement), [gour2020dynamical](gour2020dynamical)
 
 
-## References
+### References
 
 * Classical comparison of experiments: [blackwell1951comparison](blackwell1951comparison),  [lecam1964sufficiency](lecam1964sufficiency), [torgersen] 
   channels: [shannon]
@@ -67,11 +69,11 @@ title: Comparison of quantum channels
 
 
 * [other references](BIBs): (strasser1985mathematical: minimax thm., kitaev1997quantum, watrous2011theory: diamond norm,
-  renner2008security, konig2009theoperational: cond. min entropy, operational interpretation, chiribella2008memory, gutoski2012onameasure: N-diamond norm, testers; plavala2019notes: the BS(NC) category
+  renner2008security, konig2009theoperational: cond. min entropy, operational interpretation, chiribella2008memory, gutoski2012onameasure: N-diamond norm, testers; plavala2019notes: the BS(NC) category)
 
+---
 
-
-## Further ideas
+## Further ideas/to do
 
 * Look at the classical randomization theorem (Strasser, Le Cam, Torgersen), check the relation to weak-strong
   convergence of experiments. What do we get for quantum?
@@ -79,7 +81,14 @@ title: Comparison of quantum channels
 
 * Comparison by classical input/output correlations: Shannon c-c channels, Buscemi et al., should be similarly extended
 
-* Comparison by LOCC??
+* BS-category: monoidal structures (symmetric)
+
+* converting $m$ copies to $n$ copies? Some asymptotics?    
+    * related reading: [gour2019theentanglement](gour2019theentanglement), [gour2020dynamical](gour2020dynamical),
+   [regula2020fundamental](regula2020fundamental), [fang2020nogo](fang2020nogo)
+
+---
+  
 
 ## Related?: 
  
@@ -111,9 +120,7 @@ title: Comparison of quantum channels
 
     * [dallarno2019extension](dallarno2019extension) extension of Alberti- Uhlman thm to more than two qubits
 
-    
-
-
+   
 
 * Matsumoto: all related
     * [matsumoto2010reverse](matsumoto2010reverse) reverse tests and quantum relative entropy
