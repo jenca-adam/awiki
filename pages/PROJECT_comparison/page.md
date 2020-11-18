@@ -28,8 +28,11 @@ title: Comparison of quantum channels
 ### To study: 
 
 * Resource theories:     
-    * categorial [coecke2016amathematical](coecke2016amathematical), [fritz2017resource](fritz2017resource)    
+    * categorical [coecke2016amathematical](coecke2016amathematical), [fritz2017resource](fritz2017resource)    
     * other [chitambar2019quantum](chitambar2019quantum)
+
+* Resource theories of quantum channels [liu2019resource](liu2019resource) (\*), [liu2019operational](liu2019operational) (\*), [gour2019theentanglement](gour2019theentanglement), [gour2020dynamical](gour2020dynamical)
+
 
 ## References
 
@@ -45,7 +48,7 @@ title: Comparison of quantum channels
 * simulability of measurements: [skrzypczyk2019robustness](skrzypczyk2019robustness),
 [guerini2017operational](guerini2017operational)
 
-* resource theories of quantum channels [liu2019resource](liu2019resource) (\*), [liu2019operational](liu2019operational) (\*)
+
 
 * comparison of quantum channels   [buscemi2017comparison](buscemi2017comparison),
 [gour2019comparison](gour2019comparison), [gour2018quantum](gour2018quantum) comparison of bipartite states, resource theories, [buscemi2015degradable](buscemi2015degradable), [takagi2019general](takagi2019general)
@@ -64,7 +67,7 @@ title: Comparison of quantum channels
 
 
 * [other references](BIBs): (strasser1985mathematical: minimax thm., kitaev1997quantum, watrous2011theory: diamond norm,
-  renner2008security, konig2009theoperational: cond. min entropy, operational interpretation, chiribella2008memory, gutoski2012onameasure: N-diamond norm, testers
+  renner2008security, konig2009theoperational: cond. min entropy, operational interpretation, chiribella2008memory, gutoski2012onameasure: N-diamond norm, testers; plavala2019notes: the BS(NC) category
 
 
 
