@@ -34,7 +34,7 @@ title: Effect algebras
 **People:** Martin    
 **Directory:**/work/context
 
-[spectral](spectral)
+[spectral](spectra<F3>l)
 
 **Papers:**
 

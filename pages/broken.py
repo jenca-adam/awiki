@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 import os,re
 pattern=re.compile('\D*\d{4}\D*')
 basic=os.getcwd()

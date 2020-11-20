@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import os,re
 dirnamepattern=r'^[^R][^E][^F]\D*\d{4}\D*$'
 for d in os.listdir('.'):
@@ -13,5 +13,5 @@ for d in os.listdir('.'):
             with open('page.md')as file:
                 string=file.read()
             if not re.search(filepattern,string):
-                print(d)
+                print(f'[{d}]({d})')
         os.chdir('..')
