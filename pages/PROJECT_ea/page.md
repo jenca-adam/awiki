@@ -1,19 +1,21 @@
 title: Effect algebras
 ---
 **About:** Anything about effect algebras    
-**People:**
-* Sylvia Pulmannová,  Gejza Jenča
+**People:**        
+
+* Sylvia Pulmannová,  Gejza Jenča    
 * Martin Plávala
 ---
 
 ## Spectral effect algebras 
 
-### Spectral EA: Foulis vs.Alfsen-Schultz
+### Foulis vs. Alfsen-Schultz
 
 **People:** Sylvia    
 **Directory:** /work/spectral
 
-**References:**
+**:**
+
 * Foulis spectrality [foulis]()   
 * Rickart JB-algebras are (Foulis) spectral       
 * Alfsen-Schultz spectrality [BOOK_alfsen2003geometry](BOOK_alfsen2003geometry),
@@ -27,20 +29,20 @@ title: Effect algebras
 
 
 
-
-### Spectral EA in the sense of Gudder
+### Contexts in spectral EA
 
 **People:** Martin    
 **Directory:**/work/context
 
-* Gudder spectral effect algebras in finite dimensions  [gudder2018convex](gudder2018convex)  
-* Main question: number of context in spectral EAs    
-* Answer: one or infinitely many
-* Some examples (Alfsen-Schultz spectral convex sets in finite dimensions)
+[spectral](spectral)
 
-**Paper:**
+**Papers:**
 
-[jencova2019onthe](jencova2019onthe) (published)
+* [jencova2019onthe](jencova2019onthe) (published)
+
+**Talks:**
+
+* [ssaos2019](PROJECT_ea/ssaos2019.pdf)
 
 ---
 
@@ -51,8 +53,6 @@ title: Effect algebras
 
 
 **Notes and ideas:**
-
-* [Tensor product of spectral effect algebras](tpdea/note_tensorMV.pdf) is a spectral EA. The proof of this fact is rewritten. <span style="color:green"> **added to Main draft**</span>
 
 * Notes from the discussion with Sylvia and Gejza:     
  There is an adjunction between the categories EA and POA-groups  with order unit, the unigroup functor is the left adjoint, taking unit interval the right.

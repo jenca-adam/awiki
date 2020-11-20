@@ -1,18 +1,15 @@
 title: Spectral effect algebras
 ---
 
-## People
+**People:**
 
 * Martin Plávala
 
 
-## ArXiv
+**Paper:**
+[jencova2019onthe](jencova2019onthe)(published)
 
-[arXiv:1811.12407](https://arxiv.org/abs/1811.12407)
 
-## Status
-
-[Published in Quantum](jencova2019onthe)
 
 ## Talks
 
