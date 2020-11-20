@@ -5,15 +5,12 @@ title: "R\xE9nyi relative entropies, part II"
 A. Jenčová, Rényi relative entropies and noncommutative $L_p$-spaces II, arxiv:1707.00047
 
 
-[file](/file.pdf)
 
 [arxiv:1707.00047](https://arxiv.org/abs/1707.00047)
 
 
 
-## Status
-
-submitted to AHP
+**Status:** submitted to AHP
 
 
 ## Contents

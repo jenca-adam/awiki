@@ -8,11 +8,9 @@ Anna Jenčová, A general theory of comparison of quantum channels (and beyond),
 
 [arxiv:2002.04240](https://arxiv.org/abs/2002.04240)
 
-## Status
-
-submitted to IEEE Transactions in IT    
-referee reports: [report1](jencova2020ageneral/report1.pdf), [report2](jencova2020ageneral/report2.pdf)
-
+**Status:** submitted to IEEE Transactions in IT  
+  
+**referee reports:** [report1](jencova2020ageneral/report1.pdf), [report2](jencova2020ageneral/report2.pdf)
 
 
 ## Contents
@@ -25,6 +23,7 @@ referee reports: [report1](jencova2020ageneral/report1.pdf), [report2](jencova20
     
     * post-processing
     * pre-processing (+ distance of ranges)
+    * LOCC superchannels on bipartite channels	
     * superchannels applied on a part of bipartite channels
     * Classical simulations of sets of measurements
 

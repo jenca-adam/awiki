@@ -23,21 +23,28 @@ title: Project General probabilistic theories
 * notes by Andreas and Ion on spectrahedra and [gpt, v1](PROJECT_gpt/bluhm.pdf), [updated, v2](PROJECT_gpt/bluhm2.pdf)
 * my notes on witnesses and [symmetric state spaces](PROJECT_gpt/notes_symmetric.pdf)
 
-**Questions:**
+**paper**
 
-* the cross norm $\gamma$ [defined here](PROJECT_gpt/notes_symmetric.pdf), the dual cross norm is on $A\otimes \ell_1^k$, that is
-on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positive extensions, as in [the b-n notes](PROJECT_gpt/bluhm.pdf): $\gamma^\*(f_1,\dots,f_k)\le 1$ iff a positive extension exists 
-* related to previous: map extensions and conic programming
+[bluhm2020incompatibility](bluhm2020incompatibility)
+
+
+**conference abstracts**
+
+* [QIP](PROJECT_gpt/qip_abstract.pdf)    
+* [AQIS](PROJECT_gpt/aqis_abstract.pdf)
+
+
+**further questions:**
+
 * incompatibility on $W$ - the min tensor product of two quantum state spaces (two qubits)
 * relations of incompatibility, free spectrahedra, operator systems and norms - one should write some notes on this
-* measurements with more outcomes
+* a characterization similar to tensor norms for measurements with more outcomes
+* incompatibility of qubit effects and 1-summing norm: see the paper [gordon1969onpabsolutely](gordon1969onpabsolutely)
 
 
-**To do:**
 
-* read again my notes and Lyon talk (prepare talk for Miso)
-* read AGAIN the notes by Andreas and Ion (from my perspective, relation to mine ?)
-* read the paper [aubrun2018universal](aubrun2018universal)  (also in peparation for the talk)
+
+
 
 
 
@@ -57,6 +64,7 @@ on $k$-tuples $f_1,\dots,f_k\in A(K)$. This should relate to existence of positi
 
 [jencova2018incompatible](jencova2018incompatible) (published)
 
+---
 
 ## B. CHSH
 
