@@ -85,6 +85,7 @@ for link in sys.argv[1:]:
     print(f'{YELLOW}Directory name:{name}{RESET}')
     try:
         os.mkdir(name)
+        os.chdir(name)
     except FileExistsError:
         if '--force' in sys.argv:
             os.chdir(name)
@@ -108,8 +109,9 @@ for link in sys.argv[1:]:
     linkid=linkmatch.groups()[0]
     print(linkid)
     linkstr=f'[arxiv:{linkid}]({link})'
-    pagestring=f'title: {name}\n---\n\n\n##Reference\n\n\t{(", ").join(data["authors"])}; {data["title"]};{data["jrefs"]}; {" ".join(data["date"])}\n\n\n{linkstr}'
+    pagestring=f'title: {name}\n---\n\n\n## Reference\n\n\t{(", ").join(data["authors"])}; {data["title"]};{data["jrefs"]}; {" ".join(data["date"])}\n\n\n{linkstr}'
     print(f'{name}/page.md:\n\n{CYAN}{pagestring}{RESET}')
+    print(os.getcwd())
     with open('page.md','w')as f:
         f.write(pagestring)
     if '--test'in sys.argv:
