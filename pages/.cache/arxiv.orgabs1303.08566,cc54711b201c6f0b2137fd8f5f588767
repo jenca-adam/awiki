@@ -1,0 +1,21 @@
+status: 301
+date: Sun, 22 Nov 2020 20:08:57 GMT
+server: Apache
+strict-transport-security: max-age=31536000
+location: https://arxiv.org/abs/1303.8566
+content-security-policy: frame-ancestors 'none'
+x-frame-options: SAMEORIGIN
+vary: Cookie,Accept-Encoding,User-Agent
+set-cookie: browser=109.230.52.107.1606075737619899; path=/; max-age=946080000; domain=.arxiv.org, arxiv_browse=eyJjb250aW5lbnQiOnsiY29kZSI6IkVVIiwibmFtZSI6IkV1cm9wZSJ9LCJpbnN0aXR1dGlvbiI6bnVsbH0.X7rFWQ.udiVaRLbdG1iZKGwuBijiP_bObs; HttpOnly
+content-type: text/html; charset=utf-8
+content-length: 235
+-content-encoding: gzip
+-x-permanent-redirect-url: https://arxiv.org/abs/1303.8566
+content-location: https://arxiv.org/abs/1303.08566
+-varied-accept-encoding: gzip, deflate
+-varied-user-agent: Python-httplib2/0.18.1 (gzip)
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>Redirecting...</title>
+<h1>Redirecting...</h1>
+<p>You should be redirected automatically to target URL: <a href="/abs/1303.8566">/abs/1303.8566</a>.  If not click the link.
