@@ -16,3 +16,5 @@ syntax: glob
 *.spl
 *.png
 *.synctex.gz
+.cache/*
+
