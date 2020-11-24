@@ -20,4 +20,4 @@ title: My own papers
 1. [jencova2017conditions](jencova2017conditions)
 1. [jenčová2019observables](jenčová2019observables)
 1. [jencova201]()
-
+1. [jencova2006arelation](jencova2006arelation)

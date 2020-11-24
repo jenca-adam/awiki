@@ -12,15 +12,17 @@ BOLD = '\033[1m'
 RED=colorama.Fore.RED
 GREEN=colorama.Fore.GREEN
 CYAN=colorama.Fore.CYAN
-YELLOW=colorama.Fore.YELLOW
+YELLOW=colorama.Fore.LIGHTYELLOW_EX
+MAGENTA=colorama.Fore.MAGENTA
 dateline_pattern=r'\D*\d+(\D+)(\d+)'
 title_pattern=r'<h1 class="title mathjax"><span class="descriptor">Title\:</span>(\D*)<'
 authors_pattern=r'Authors:(\D*)'
-linkstr_pattern=r'^https?://arxiv.org/abs/(\d+.\d+)$'
+linkstr_pattern=r'^https?://arxiv.org/abs/\D*/?(\d+.\d+)$'
 h=httplib2.Http('.cache')
-base=os.getcwd()
+base='/home/anna/work/awiki/pages'
+os.chdir(base)
 for link in sys.argv[1:]:
-    if link in ['--force','--new','--test']:
+    if link in ['--force','--new','--test','-v']:
         continue
     data={}
     print(f'requesting {link}...',file=sys.__stdout__)
@@ -92,19 +94,8 @@ for link in sys.argv[1:]:
         elif '--new' in sys.argv:
             continue
         else:
-            def fun():
-                get=input(f'directory {name} already exists. auto-rewrite?(y/n)')
-                
-                if get == 'n':return 'continue'
-                elif get == 'y':
-                    os.chdir(name)
-                    return
-                else:
-                    print('invalid option')
-                    fun()
-            a=fun()
-            if a=='continue':
-                continue
+            print(f'{RED}dir {name} already exists.Skipping.{RESET}')
+            continue
     linkmatch=re.search(linkstr_pattern,link)
     linkid=linkmatch.groups()[0]
     print(linkid)
@@ -114,11 +105,45 @@ for link in sys.argv[1:]:
     print(os.getcwd())
     with open('page.md','w')as f:
         f.write(pagestring)
+    with open('bib.bib','w')as f:
+        f.write('@article{'+name+',\n}')
+    if 'Anna Jenčová' in data['authors'] or 'Anna Jencova' in data['authors']:
+        mypath='myown'
+    else:
+        mypath='notmyown'
+    cmypath=f'{GREEN}myown{RESET}'if mypath == 'myown' else f'{YELLOW}notmyown{RESET}'
+    print(f'page {name} should go to {cmypath}')
+    writein=True
     if '--test'in sys.argv:
         if input(f'Remove {name}?(y/n)')=='y':
             os.chdir(base)
             shutil.rmtree(name)
-            print(f'{GREEN}Done{RESET}')
+            writein=False
+    os.chdir(base)
+    if writein:
+        print(f'{MAGENTA}Writing in {cmypath}/{CYAN}page.md{RESET}')
+        print('__________________________________________________')
+        os.chdir(mypath)
+        if mypath=='myown':
+            with open('page.md','a')as f:
+                mylinkstr=f'1. [{name}]({name})\n'
+
+                f.write(mylinkstr)
+            if '-v' in sys.argv:
+                with open('page.md')as f:
+                    print(f.read())
+        else:
+            mylinkstr=f'[{name}]({name}),\n'
+
+            with open('page.md','r')as f:
+                lines=list(f.readlines())
+            alphabetindex=lines.index(f'### {name[0].upper()}\n')+1
+            lines.insert(alphabetindex,mylinkstr)
+            with open('page.md','w')as f:
+                f.writelines(lines)
+            if '-v' in sys.argv:
+                print(*lines)
+        print(f'{GREEN}Done{RESET}')
 
     
    

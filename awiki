@@ -116,7 +116,13 @@ def edit_page(pagename):
         form['markdown'].process_data(mdf.markdown)
     t=env.get_template('edit_page.html')
     return t.render(meta=mdf.meta,content=mdf.html,form=form)
-
+@app.route('/addpage/',methods=['POST'])
+def add_page():
+    if request.method=='POST':
+        form=request.form
+        print(form["link"])
+        os.system(f'pages/loadpages.py {form["link"]}')
+    return redirect('/')
 @app.route('/')
 def index():
     return redirect('/view/index')
