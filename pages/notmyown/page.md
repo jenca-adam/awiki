@@ -14,6 +14,7 @@ title: Not my own papers
 [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
+[carbone2015irreducible](carbone2015irreducible),
 [carbone2015homogeneous](carbone2015homogeneous), [carbone2016irreducible](carbone2016irreducible),
 [carbone2016open](carbone2016open), [carbone2020absorption](carbone2020absorption), [coecke2016amathematical](coecke2016amathematical), [chiribella2009theoretical](chiribella2009theoretical), [chiribella2011informational](chiribella2011informational), [chiribella2016optimal](chiribella2016optimal), 
 [chiribella2016quantum](chiribella2016quantum),
@@ -23,8 +24,11 @@ title: Not my own papers
 ### D
 [dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),[dallarno2019device](dallarno2019device), [dallarno2019data](dallarno2019data),
 [dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension), [BOOK_diestel1975geometry](BOOK_diestel1975geometry)
+### E
+
 
 ### F
+[fritz2020representable](fritz2020representable),
 [fagnola2003transience](fagnola2003transience), [fang2020nogo](fang2020nogo),
 [farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator), [frank2013monotonicity](frank2013monotonicity), [frigerio1982long](frigerio1982long), [fritz2017resource](fritz2017resource), [fritz2017spectrahedral](fritz2017spectrahedral) 
 
@@ -45,7 +49,12 @@ title: Not my own papers
  [hiai2018quantum](hiai2018quantum), [hiai2019quantum](hiai2019quantum), 
 [hiai2020quantum](hiai2020quantum)
 
+### I
+
 ### J
+[jenča2019pseudo](jenča2019pseudo),
+[jenča2017effect](jenča2017effect),
+[jenča2017twomonads](jenča2017twomonads),
 
 [junge2003noncommutative](junge2003noncommutative)
 
@@ -63,11 +72,16 @@ title: Not my own papers
 
 [matsumoto2010aquantum](matsumoto2010aquantum), [matsumoto2015anew](matsumoto2015anew), [mullerlennert2013onquantum](mullerlennert2013onquantum), [matsumoto2010reverse](matsumoto2010reverse) 
 
+### N
+
+### O
 
 ### P
 
 [passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [BOOK_paulsen2002completely](BOOK_paulsen2002completely), [paulsen2011operator](paulsen2011operator), [pisier2003noncommutative](pisier2003noncommutative),
  [plavala2016allmeasurements](plavala2016allmeasurements)
+
+### Q
 
 ### R
 
@@ -93,6 +107,7 @@ title: Not my own papers
 
 ### X
 [xu2007operator](xu2007operator)
+### Y
 
 ### Z
 
