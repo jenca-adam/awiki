@@ -2,10 +2,9 @@ title: To referee
 ---
 
 
-* Due [13.11.2020](REF_haapasalo2020a)    
 * Due [30.11.2020](REF_plosker2020)
 
-Due [24.8.2020](REF_khrennikov2020) cancelled??
+<del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
 
 
 
@@ -30,6 +29,8 @@ Due [24.8.2020](REF_khrennikov2020) cancelled??
 
 1. <del>Due [27.8.2020](REF_chakraborty2020)</del> Done.
 
+1. <del> Due [13.11.2020](REF_haapasalo2020a)</del> Done.
+ 
 ### Reviews finished 2019
 
 
