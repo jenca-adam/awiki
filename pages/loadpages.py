@@ -21,6 +21,33 @@ linkstr_pattern=r'^https?://arxiv.org/abs/\D*/?(\d+.\d+)$'
 h=httplib2.Http('.cache')
 base='/home/anna/work/awiki/pages'
 os.chdir(base)
+diacritic_dict={
+    'á':'a',
+    "ä":"a",
+    "é":"e",
+    "ě":"e",
+    "í":"i",
+    "ó":"o",
+    "ô":"o",
+    "ú":"u",
+    "ü":"u",
+    "ľ":"l",
+    "ĺ":"l",
+    "ŕ":"r",
+    "ř":"r",
+    "ñ":"n",
+    "ň":"n",
+    "ů":"u",
+    "ö":"o",
+    "ë":"e",
+    "û":"u",
+    "č":"c",
+    "ť":"t",
+    "ď":"d",
+    "ž":"z",
+    "ý":"y",
+    "ï":"i",
+}
 for link in sys.argv[1:]:
     if link in ['--force','--new','--test','-v']:
         continue
@@ -77,10 +104,11 @@ for link in sys.argv[1:]:
     print('__________________________________________________')
     print(f'{GREEN}Writing page.md{RESET}')
     authorname=data['authors'][0].split(' ')[1].lower()
+    authorname=''.join([diacritic_dict[char] if char in diacritic_dict else char for char in authorname ])
     yearname=data['date'][1]
     thingname=data['title'].split(' ')[0].lower().replace(',','')
     word=1
-    while len(thingname)<5:
+    while len(thingname)<7:
         thingname+=data['title'].split(' ')[word].lower().replace(',','')
         word+=1
     name=''.join([authorname,yearname,thingname])

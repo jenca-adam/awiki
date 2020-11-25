@@ -11,7 +11,7 @@ from wtforms import Form,validators,TextAreaField,StringField
 import yaml
 import markdown
 from jinja2 import Template,FileSystemLoader,Environment
-
+import remove as rm
 app = Flask(__name__)
 
 class MarkdownFile(object):
@@ -116,13 +116,45 @@ def edit_page(pagename):
         form['markdown'].process_data(mdf.markdown)
     t=env.get_template('edit_page.html')
     return t.render(meta=mdf.meta,content=mdf.html,form=form)
-@app.route('/addpage/',methods=['POST'])
+
+@app.route('/addpage/',methods=['GET'])
 def add_page():
+    global addpageform
+    env=Environment(loader=FileSystemLoader('templates'))
+
+    pwdtem=env.get_template('pwd_add.html')
+    return pwdtem.render(error=False)
+        
+@app.route('/pwd/',methods=['POST'])
+def auth():
+    global addpageform
+    env=Environment(loader=FileSystemLoader('templates'))
+    pwd_add_t=env.get_template('pwd_add.html')
     if request.method=='POST':
-        form=request.form
-        print(form["link"])
-        os.system(f'pages/loadpages.py {form["link"]}')
-    return redirect('/')
+        
+        pwdform=request.form
+        link=pwdform['link']
+        if pwdform['pwd']=='alanko':
+            os.system(f'pages/loadpages.py {link}')
+            return redirect('/')
+        else:
+            return pwd_add_t.render(error=True)
+    else:
+        return redirect('/')    
+@app.route('/remove/<string:pagename>',methods=['POST','GET'])
+def remove(pagename):
+    env=Environment(loader=FileSystemLoader('/home/anna/work/awiki/templates'))
+    pwd_rm_t=env.get_template('pwd_remove.html')    
+    if request.method=='POST':
+        pwdform=request.form
+        if pwdform['pwd']=='alanko':
+            rm.rm(pagename)
+            return redirect('/')
+        
+        else:
+            return pwd_rm_t.render(error=True,pagename=pagename)
+    return pwd_rm_t.render(error=False,pagename=pagename)
+
 @app.route('/')
 def index():
     return redirect('/view/index')

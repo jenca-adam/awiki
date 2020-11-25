@@ -14,6 +14,7 @@ title: Not my own papers
 [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
+
 [carbone2015irreducible](carbone2015irreducible),
 [carbone2015homogeneous](carbone2015homogeneous), [carbone2016irreducible](carbone2016irreducible),
 [carbone2016open](carbone2016open), [carbone2020absorption](carbone2020absorption), [coecke2016amathematical](coecke2016amathematical), [chiribella2009theoretical](chiribella2009theoretical), [chiribella2011informational](chiribella2011informational), [chiribella2016optimal](chiribella2016optimal), 
@@ -52,9 +53,18 @@ title: Not my own papers
 ### I
 
 ### J
-[jenča2019pseudo](jenča2019pseudo),
-[jenča2017effect](jenča2017effect),
-[jenča2017twomonads](jenča2017twomonads),
+[jenca2017anoteon](jenca2017anoteon),
+[jenca2020derived](jenca2020derived),
+[jencova2019observables](jencova2019observables),
+[jenca2017twomonads](jenca2017twomonads),
+[jenca2019pseudo](jenca2019pseudo),
+[jenca2017effect](jenca2017effect),
+
+
+
+
+
+
 
 [junge2003noncommutative](junge2003noncommutative)
 
@@ -69,6 +79,7 @@ title: Not my own papers
 
 
 ### M
+
 
 [matsumoto2010aquantum](matsumoto2010aquantum), [matsumoto2015anew](matsumoto2015anew), [mullerlennert2013onquantum](mullerlennert2013onquantum), [matsumoto2010reverse](matsumoto2010reverse) 
 
