@@ -6,7 +6,11 @@
   </div>
   <div class="content block" id="content">
   <a size=2 href="/addpage/">Add a page</a>
+  {%if current not in prohibited%}
   <a size=2 href="/remove/{{current}}">Remove this page</a>
+  {%else%}
+  <p>You cannot remove this page.</p>
+  {%endif%}
   <div id="buttons">
 
   <a href="/edit/{{current}}">Edit</a>

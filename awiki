@@ -12,6 +12,7 @@ import yaml
 import markdown
 from jinja2 import Template,FileSystemLoader,Environment
 import remove as rm
+import search as search_mod
 app = Flask(__name__)
 
 class MarkdownFile(object):
@@ -51,7 +52,6 @@ class MarkdownFile(object):
 
 @app.route('/view/<string:pagename>')
 def view_page(pagename):
-
     mdf=MarkdownFile(pagename)
     try:
         mdf.load()
@@ -59,7 +59,11 @@ def view_page(pagename):
         return redirect('/edit/'+pagename) 
     env=Environment(loader=FileSystemLoader('templates'))
     t=env.get_template('page.html')
-    return t.render(meta=mdf.meta,content=mdf.html,current=mdf.basename)
+    return t.render(meta=mdf.meta,
+        content=mdf.html,
+        current=mdf.basename,
+        prohibited=['index','myown','notmyown','referee','students','DT_garant'],
+        )
 
 @app.route('/makebib/<string:pagename>.bib')
 def get_bib(pagename):
@@ -143,6 +147,8 @@ def auth():
         return redirect('/')    
 @app.route('/remove/<string:pagename>',methods=['POST','GET'])
 def remove(pagename):
+    if pagename in ['myown','notmyown','index']:
+        return redirect('/')
     env=Environment(loader=FileSystemLoader('/home/anna/work/awiki/templates'))
     pwd_rm_t=env.get_template('pwd_remove.html')    
     if request.method=='POST':
@@ -154,7 +160,15 @@ def remove(pagename):
         else:
             return pwd_rm_t.render(error=True,pagename=pagename)
     return pwd_rm_t.render(error=False,pagename=pagename)
-
+@app.route('/search/',methods=['GET','POST'])
+def search():
+    env=Environment(loader=FileSystemLoader('/home/anna/work/awiki/templates'))
+    search_t=env.get_template('search.html')
+    if request.method=='POST':
+        form=request.form
+        results=search_mod.search(form['query'],form['fields'])
+        return search_t.render(results=results)
+    return search_t.render(results=[[]])
 @app.route('/')
 def index():
     return redirect('/view/index')

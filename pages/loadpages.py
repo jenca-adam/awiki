@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import httplib2
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup as bs
 import sys
 import re
 import colorama
@@ -18,7 +18,7 @@ dateline_pattern=r'\D*\d+(\D+)(\d+)'
 title_pattern=r'<h1 class="title mathjax"><span class="descriptor">Title\:</span>(\D*)<'
 authors_pattern=r'Authors:(\D*)'
 linkstr_pattern=r'^https?://arxiv.org/abs/\D*/?(\d+.\d+)$'
-h=httplib2.Http('.cache')
+h=httplib2.Http('/home/anna/work/awiki/pages/.cache')
 base='/home/anna/work/awiki/pages'
 os.chdir(base)
 diacritic_dict={
@@ -47,7 +47,22 @@ diacritic_dict={
     "ž":"z",
     "ý":"y",
     "ï":"i",
+    "ł":"l",
 }
+def steal_bib(arxivid,name):
+    print(f'{YELLOW}BibStealer{RESET}:{GREEN}requesting {RESET}https://api.semanticscholar.org/arXiv:{CYAN}{arxivid}{RESET}')
+    resp,cont=h.request(f'https://api.semanticscholar.org/arXiv:{arxivid}')
+    print(f'{YELLOW}BibStealer{RESET}:{MAGENTA}parsing {RESET}https://api.semanticscholar.org/arXiv:{CYAN}{arxivid}{RESET}')
+
+    semantic_soup=bs(cont,'html.parser')
+
+    bib_cite=semantic_soup.find('pre').text
+    if not bib_cite:
+        print(f'{YELLOW}BibStealer{RESET}:{RED}No citations found{RESET}')
+        bib_cite='@article{'+name+','+'\n'+'}'
+    else:
+        print(f'{YELLOW}BibStealer{RESET}:{GREEN}Citiations found{RESET}')
+    return(bib_cite)
 for link in sys.argv[1:]:
     if link in ['--force','--new','--test','-v']:
         continue
@@ -55,7 +70,7 @@ for link in sys.argv[1:]:
     print(f'requesting {link}...',file=sys.__stdout__)
     response,content=h.request(link)
     print(f'parsing {link}...',file=sys.__stdout__)
-    soup=BeautifulSoup(content,'html.parser')
+    soup=bs(content,'html.parser')
     print('loading date...',file=sys.__stdout__)
     dateline=str(soup.find_all('div',class_='dateline')[0].text)
     match=re.search(dateline_pattern,dateline)
@@ -72,8 +87,9 @@ for link in sys.argv[1:]:
     print('loading authors...',file=sys.__stdout__)
     authors=str(soup.find_all('div',class_='authors')[0].text)
     match=re.search(authors_pattern,authors)
-    authors=match.groups()[0].split(',')
+    authors=match.groups()[0].split(', ')
     data['authors']=authors
+    print(data['authors'])
     print('loading journal refs...',file=sys.__stdout__)
     jrefs=soup.find('td',class_='tablecell jref')
     if not jrefs:
@@ -103,7 +119,7 @@ for link in sys.argv[1:]:
     print(f'{BOLD}End of informative output{RESET}')
     print('__________________________________________________')
     print(f'{GREEN}Writing page.md{RESET}')
-    authorname=data['authors'][0].split(' ')[1].lower()
+    authorname=data['authors'][0].split(' ')[-1].lower()
     authorname=''.join([diacritic_dict[char] if char in diacritic_dict else char for char in authorname ])
     yearname=data['date'][1]
     thingname=data['title'].split(' ')[0].lower().replace(',','')
@@ -127,6 +143,9 @@ for link in sys.argv[1:]:
     linkmatch=re.search(linkstr_pattern,link)
     linkid=linkmatch.groups()[0]
     print(linkid)
+    print('{YELLOW}Stealing BibTex...{RESET}')
+    bibtex=steal_bib(linkid,name)
+
     linkstr=f'[arxiv:{linkid}]({link})'
     pagestring=f'title: {name}\n---\n\n\n## Reference\n\n\t{(", ").join(data["authors"])}; {data["title"]};{data["jrefs"]}; {" ".join(data["date"])}\n\n\n{linkstr}'
     print(f'{name}/page.md:\n\n{CYAN}{pagestring}{RESET}')
@@ -134,7 +153,7 @@ for link in sys.argv[1:]:
     with open('page.md','w')as f:
         f.write(pagestring)
     with open('bib.bib','w')as f:
-        f.write('@article{'+name+',\n}')
+        f.write(bibtex)
     if 'Anna Jenčová' in data['authors'] or 'Anna Jencova' in data['authors']:
         mypath='myown'
     else:

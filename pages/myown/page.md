@@ -21,3 +21,5 @@ title: My own papers
 1. [jencova2006arelation](jencova2006arelation)
 1. [jencova2017onmonoids](jencova2017onmonoids)
 1. [jencova2018ontheproperties](jencova2018ontheproperties)
+1. [puchala2015exploring](puchala2015exploring)
+1. [foulis2015aprojection](foulis2015aprojection)
