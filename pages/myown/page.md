@@ -23,3 +23,6 @@ title: My own papers
 1. [jencova2018ontheproperties](jencova2018ontheproperties)
 1. [puchala2015exploring](puchala2015exploring)
 1. [foulis2015aprojection](foulis2015aprojection)
+1. [jencova2009aunified](jencova2009aunified)
+1. [jencova2009aunified](jencova2009aunified)
+1. [jencova2008markovtriplets](jencova2008markovtriplets)

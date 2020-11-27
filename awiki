@@ -11,8 +11,7 @@ from wtforms import Form,validators,TextAreaField,StringField
 import yaml
 import markdown
 from jinja2 import Template,FileSystemLoader,Environment
-import remove as rm
-import search as search_mod
+import pagetools
 app = Flask(__name__)
 
 class MarkdownFile(object):
@@ -124,8 +123,9 @@ def edit_page(pagename):
 @app.route('/addpage/',methods=['GET'])
 def add_page():
     global addpageform
+    
     env=Environment(loader=FileSystemLoader('templates'))
-
+    os.chdir('/home/anna/work/awiki/')
     pwdtem=env.get_template('pwd_add.html')
     return pwdtem.render(error=False)
         
@@ -139,7 +139,7 @@ def auth():
         pwdform=request.form
         link=pwdform['link']
         if pwdform['pwd']=='alanko':
-            os.system(f'pages/loadpages.py {link}')
+            pagetools.add(link)
             return redirect('/')
         else:
             return pwd_add_t.render(error=True)
@@ -154,7 +154,7 @@ def remove(pagename):
     if request.method=='POST':
         pwdform=request.form
         if pwdform['pwd']=='alanko':
-            rm.rm(pagename)
+            pagetools.rm(pagename)
             return redirect('/')
         
         else:
@@ -166,7 +166,7 @@ def search():
     search_t=env.get_template('search.html')
     if request.method=='POST':
         form=request.form
-        results=search_mod.search(form['query'],form['fields'])
+        results=pagetools.search_arxiv(form['query'],form['fields'])
         return search_t.render(results=results)
     return search_t.render(results=[[]])
 @app.route('/')

@@ -1,7 +1,7 @@
 import shutil
 import os
 def rm(name):
-
+    base=os.getcwd()
     os.chdir('/home/anna/work/awiki/pages/myown')
     with open('page.md')as f:
         lines=list(f.readlines())
@@ -24,6 +24,5 @@ def rm(name):
         cont=cont.replace(f'[{name}]({name}),' ,'')
         with open('page.md','w')as f:
             f.write(cont)
-    os.chdir('..')
-    os.chdir('..')
+    os.chdir(base)
             
