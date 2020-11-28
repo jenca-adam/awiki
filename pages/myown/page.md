@@ -26,3 +26,4 @@ title: My own papers
 1. [jencova2009aunified](jencova2009aunified)
 1. [jencova2009aunified](jencova2009aunified)
 1. [jencova2008markovtriplets](jencova2008markovtriplets)
+1. [bluhm2020incompatibility](bluhm2020incompatibility)

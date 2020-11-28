@@ -150,9 +150,9 @@ for link in sys.argv[1:]:
     pagestring=f'title: {name}\n---\n\n\n## Reference\n\n\t{(", ").join(data["authors"])}; {data["title"]};{data["jrefs"]}; {" ".join(data["date"])}\n\n\n{linkstr}'
     print(f'{name}/page.md:\n\n{CYAN}{pagestring}{RESET}')
     print(os.getcwd())
-    with open('page.md','w')as f:
+    with open('{name}/page.md','w')as f:
         f.write(pagestring)
-    with open('bib.bib','w')as f:
+    with open('{name}/bib.bib','w')as f:
         f.write(bibtex)
     if 'Anna Jenčová' in data['authors'] or 'Anna Jencova' in data['authors']:
         mypath='myown'

@@ -120,36 +120,20 @@ def edit_page(pagename):
     t=env.get_template('edit_page.html')
     return t.render(meta=mdf.meta,content=mdf.html,form=form)
 
-@app.route('/addpage/',methods=['GET'])
-def add_page():
-    global addpageform
-    
-    env=Environment(loader=FileSystemLoader('templates'))
-    os.chdir('/home/anna/work/awiki/')
-    pwdtem=env.get_template('pwd_add.html')
-    return pwdtem.render(error=False)
         
-@app.route('/pwd/',methods=['POST'])
-def auth():
+@app.route('/addpage/<string:id>')
+def auth(id):
     global addpageform
-    env=Environment(loader=FileSystemLoader('templates'))
-    pwd_add_t=env.get_template('pwd_add.html')
-    if request.method=='POST':
-        
-        pwdform=request.form
-        link=pwdform['link']
-        if pwdform['pwd']=='alanko':
-            pagetools.add(link)
-            return redirect('/')
-        else:
-            return pwd_add_t.render(error=True)
-    else:
-        return redirect('/')    
+    env=Environment(loader=FileSystemLoader('templates')) 
+    beh=pagetools.add(f'https://arxiv.org/abs/{id}')
+    if not beh:
+        return redirect('/FileExistsError.html')
+    return redirect('/')
 @app.route('/remove/<string:pagename>',methods=['POST','GET'])
 def remove(pagename):
     if pagename in ['myown','notmyown','index']:
         return redirect('/')
-    env=Environment(loader=FileSystemLoader('/home/anna/work/awiki/templates'))
+    env=Environment(loader=FileSystemLoader('templates'))
     pwd_rm_t=env.get_template('pwd_remove.html')    
     if request.method=='POST':
         pwdform=request.form
@@ -167,8 +151,13 @@ def search():
     if request.method=='POST':
         form=request.form
         results=pagetools.search_arxiv(form['query'],form['fields'])
+        print(results[0][2])
         return search_t.render(results=results)
     return search_t.render(results=[[]])
+@app.route('/arxiv/<string:id>')
+def arxivview(id):
+    page=pagetools.arxiv.ArXivPage(id)
+    return(page.html())
 @app.route('/')
 def index():
     return redirect('/view/index')

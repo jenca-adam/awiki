@@ -6,6 +6,7 @@ import os
 class ArXivPage:
     def __init__(self,arxivid):
         os.chdir('/home/anna/work/awiki/pages')
+        self.arxivid=arxivid
         self.dateline_pattern=r'\D*\d+(\D+)(\d+)'
         self.authors_pattern=r'Authors:(\D*)'
         self.link=f'https://arxiv.org/abs/{arxivid}'
@@ -36,3 +37,29 @@ class ArXivPage:
             self.jrefs=jrefs.text
         print('loading abstract...')
         self.abstract=soup.find_all('blockquote',class_="abstract mathjax")[0].text
+    def html(self):
+        return f'''<html>
+                   <head>
+                       <title>ArXivPage:{self.link}</title>
+                        <link href="https://fonts.googleapis.com/css?family=Lato%7COpen+Sans&amp;subset=latin-ext" rel="stylesheet"> 
+
+                        <link rel="stylesheet" href="/static/css/pocketgrid.min.css">
+                        <link rel="stylesheet" href="/static/css/style.css">
+                        <link rel="shortcut icon" href="/static/favicon/favicon.ico">
+
+                    </head>
+                    <body>
+                       <div id="container">
+                            <a id="arxiv-link" href="{self.link}">View in ArXiv</a>
+                                
+                            <div id="buttons">
+                                <a id="addpage-link" href="/addpage/{self.arxivid}">Add this page</a>
+                            </div>
+                            <div id="dateline">{self.dateline}</div>
+                            <h2>{self.title}</h2>
+                            <div id="authors">{self.strauthors}</div>
+                            <div id="abstract">{self.abstract}</div>
+                        </div>
+                    </body>
+                    </html>'''
+

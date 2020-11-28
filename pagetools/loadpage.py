@@ -20,7 +20,7 @@ dateline_pattern=r'\D*\d+(\D+)(\d+)'
 title_pattern=r'<h1 class="title mathjax"><span class="descriptor">Title\:</span>(\D*)<'
 authors_pattern=r'Authors:(\D*)'
 linkstr_pattern=r'^https?://arxiv.org/abs/\D*/?(\d+.\d+)$'
-h=httplib2.Http('/home/anna/work/awiki/pages/.cache')
+h=httplib2.Http('pages/.cache')
 base=os.getcwd()
 diacritic_dict={
     'á':'a',
@@ -52,7 +52,7 @@ diacritic_dict={
 }
 
 def loadpage(link):
-    os.chdir('/home/anna/work/awiki/pages')
+    os.chdir(f'{base}/pages')
     linkmatch=re.search(linkstr_pattern,link)
     id=linkmatch.groups()[0]
     page=arxiv.ArXivPage(id)
@@ -78,13 +78,15 @@ def loadpage(link):
         os.chdir(name)
     except FileExistsError:
         print(f'{RED}dir {name} already exists.Skipping.{RESET}')
+        os.chdir(base)
+        return False
     linkmatch=re.search(linkstr_pattern,link)
     linkid=linkmatch.groups()[0]
     print(linkid)
     print('{YELLOW}Stealing BibTex...{RESET}')
     bibtex=steal_bib(linkid,name)
 
-    linkstr=f'[arxiv:{linkid}]({link})'
+    linkstr=f'[arxiv:{linkid}](https://arxiv.org/abs/{linkid})'
     pagestring=f'title: {name}\n---\n\n\n## Reference\n\n\t{(", ").join(page.authors)};{page.title};{page.jrefs};{page.month}\b{page.year};\n\n## Abstract \n{page.abstract}\n\n{linkstr}'
     print(f'{name}/page.md:\n\n{CYAN}{pagestring}{RESET}')
     print(os.getcwd())
@@ -93,18 +95,18 @@ def loadpage(link):
     with open('bib.bib','w')as f:
         f.write(bibtex)
     if 'Anna Jenčová' in page.authors  or 'Anna Jencova' in page.authors:
-        mypath='/home/anna/work/awiki/pages/myown'
+        mypath='myown'
     else:
-        mypath='/home/anna/work/awiki/pages/notmyown'
-    cmypath=f'{GREEN}myown{RESET}'if mypath == '/home/anna/work/awiki/pages/myown' else f'{YELLOW}notmyown{RESET}'
+        mypath='notmyown'
+    cmypath=f'{GREEN}myown{RESET}'if mypath == 'myown' else f'{YELLOW}notmyown{RESET}'
     print(f'page {name} should go to {cmypath}')
     writein=True
-    os.chdir(base)
+    os.chdir('..')
     if writein:
         print(f'{MAGENTA}Writing in {cmypath}/{CYAN}page.md{RESET}')
         print('__________________________________________________')
         os.chdir(mypath)
-        if mypath=='/home/anna/work/awiki/pages/myown':
+        if mypath=='myown':
             with open('page.md','a')as f:
                 mylinkstr=f'1. [{name}]({name})\n'
 
@@ -125,5 +127,5 @@ def loadpage(link):
                 print(*lines)
         print(f'{GREEN}Done{RESET}')
         os.chdir(base)
-    
+        return True
    

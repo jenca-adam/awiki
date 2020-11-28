@@ -51,10 +51,13 @@ title: Not my own papers
 ### I
 
 ### J
+[jenca2020derived](jenca2020derived),
+
+
 
 [jencova2019observables](jencova2019observables),
 [jenca2017anoteon](jenca2017anoteon),
-[jenca2020derived](jenca2020derived),
+
 
 [jenca2017twomonads](jenca2017twomonads),
 [jenca2019pseudo](jenca2019pseudo),
