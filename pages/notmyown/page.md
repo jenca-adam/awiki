@@ -32,6 +32,8 @@ title: Not my own papers
 [farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator), [frank2013monotonicity](frank2013monotonicity), [frigerio1982long](frigerio1982long), [fritz2017resource](fritz2017resource), [fritz2017spectrahedral](fritz2017spectrahedral) 
 
 ### G
+[gour2019howtoquantify](gour2019howtoquantify),
+[geng2020whatare](geng2020whatare),
 
 [ganesan2019quantum](ganesan2019quantum),[gartner2012acoherent](gartner2012acoherent),
 [gheondea2018symmetries](gheondea2018symmetries),
@@ -51,6 +53,8 @@ title: Not my own papers
 ### I
 
 ### J
+[jenca2015blocksof](jenca2015blocksof),
+[jenca2014effectalgebras](jenca2014effectalgebras),
 [jenca2020derived](jenca2020derived),
 
 
@@ -106,6 +110,7 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), 
 
 ### S
+
 
 [skrzypczyk2019robustness](skrzypczyk2019robustness),
 

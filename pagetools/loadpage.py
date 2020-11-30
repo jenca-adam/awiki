@@ -76,10 +76,10 @@ def loadpage(link):
     try:
         os.mkdir(name)
         os.chdir(name)
-    except FileExistsError:
+    except FileExistsError as err:
         print(f'{RED}dir {name} already exists.Skipping.{RESET}')
         os.chdir(base)
-        return False
+        return {'status':'error','response':{'message':str(err),'type':'FileExistsError'}}
     linkmatch=re.search(linkstr_pattern,link)
     linkid=linkmatch.groups()[0]
     print(linkid)
@@ -127,5 +127,5 @@ def loadpage(link):
                 print(*lines)
         print(f'{GREEN}Done{RESET}')
         os.chdir(base)
-        return True
+        return {'status':'OK','response':{'message':'OK'}}
    
