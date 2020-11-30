@@ -5,7 +5,7 @@ import re
 import os
 class ArXivPage:
     def __init__(self,arxivid):
-        os.chdir('/home/anna/work/awiki/pages')
+        os.chdir('pages')
         self.arxivid=arxivid
         self.dateline_pattern=r'\D*\d+(\D+)(\d+)'
         self.authors_pattern=r'Authors:(\D*)'

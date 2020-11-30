@@ -5,8 +5,8 @@ def steal_bib(arxivid,name):
     resp,cont=h.request(f'https://api.semanticscholar.org/arXiv:{arxivid}')
 
     semantic_soup=bs(cont,'html.parser')
-
-    bib_cite=semantic_soup.find('pre').text
-    if not bib_cite:
+    try:
+        bib_cite=semantic_soup.find('pre').text
+    except AttributeError:
         bib_cite='@article{'+name+','+'\n'+'}'
     return(bib_cite)
