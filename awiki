@@ -146,7 +146,7 @@ def remove(pagename):
     return pwd_rm_t.render(error=False,pagename=pagename)
 @app.route('/search/',methods=['GET','POST'])
 def search():
-    env=Environment(loader=FileSystemLoader('/home/anna/work/awiki/templates'))
+    env=Environment(loader=FileSystemLoader('templates'))
     search_t=env.get_template('search.html')
     if request.method=='POST':
         form=request.form
