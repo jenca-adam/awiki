@@ -20,7 +20,7 @@ dateline_pattern=r'\D*\d+(\D+)(\d+)'
 title_pattern=r'<h1 class="title mathjax"><span class="descriptor">Title\:</span>(\D*)<'
 authors_pattern=r'Authors:(\D*)'
 linkstr_pattern=r'^https?://arxiv.org/abs/\D*/?(\d+.\d+)$'
-h=httplib2.Http('pages/.cache')
+h=httplib2.Http()
 base=os.getcwd()
 diacritic_dict={
     'á':'a',
@@ -74,8 +74,8 @@ def loadpage(link):
     name=''.join([authorname,str(page.year),thingname])
     print(f'{YELLOW}Directory name:{name}{RESET}')
     try:
-        os.mkdir(name)
-        os.chdir(name)
+        os.mkdir(os.path.expanduser('~')+'/work/awiki/pages/'+name)
+        os.chdir(os.path.expanduser('~')+'/work/awiki/pages/'+name)
     except FileExistsError as err:
         print(f'{RED}dir {name} already exists.Skipping.{RESET}')
         os.chdir(base)
@@ -105,7 +105,7 @@ def loadpage(link):
     if writein:
         print(f'{MAGENTA}Writing in {cmypath}/{CYAN}page.md{RESET}')
         print('__________________________________________________')
-        os.chdir(mypath)
+        os.chdir(os.path.expanduser('~')+'/work/awiki/pages/'+mypath)
         if mypath=='myown':
             with open('page.md','a')as f:
                 mylinkstr=f'1. [{name}]({name})\n'

@@ -5,7 +5,7 @@ import re
 import os
 class ArXivPage:
     def __init__(self,arxivid):
-        os.chdir('pages')
+        os.chdir(os.path.expanduser('~')+'/work/awiki/pages')
         self.arxivid=arxivid
         self.dateline_pattern=r'\D*\d+(\D+)(\d+)'
         self.authors_pattern=r'Authors:(\D*)'
@@ -37,6 +37,7 @@ class ArXivPage:
             self.jrefs=jrefs.text
         print('loading abstract...')
         self.abstract=soup.find_all('blockquote',class_="abstract mathjax")[0].text
+        os.chdir('..')
     def html(self):
         return f'''<html>
                    <head>

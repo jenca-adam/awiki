@@ -2,7 +2,7 @@ import shutil
 import os
 def rm(name):
     base=os.getcwd()
-    os.chdir('myown')
+    os.chdir(os.path.expanduser('~')+'/work/awiki/pages/myown')
     with open('page.md')as f:
         lines=list(f.readlines())
     if f'1. [{name}]({name})\n' in lines:
