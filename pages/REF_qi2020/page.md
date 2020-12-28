@@ -1,7 +1,5 @@
-
 title: Qi, sandwiched ,2020
 ---
-
 **Paper:** Xiaofei Qi: Sandwiched R\'{e}nyi relative entropy on density operators
 
 **Journal:** Int. J. QI
@@ -14,5 +12,4 @@ title: Qi, sandwiched ,2020
 
 [report](REF_qi2020/report.pdf), [report comments](REF_qi2020/report_comments.pdf)
 
-**Decision:**
-
+**Decision:** minor revision
