@@ -12,7 +12,7 @@ title: Plosker, Ramsey, 2020, Bistochastic
 
 [file](REF_plosker2020/file.pdf)
 
-[report](/report.pdf)
+[report](REF_plosker2020/report.pdf)
 
-**Decision:**
+**Decision:** major revision
 
