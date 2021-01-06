@@ -1,15 +1,30 @@
-title: Bluhm, Jencova, Nechita, Incompatibility in GPT 2020 
+title: bluhm2020incompatibility
 ---
+
 
 ## Reference
 
-Andreas Bluhm, Anna Jenčová, Ion Nechita, Incompatibility in general probabilistic theories, generalized spectrahedra, and tensor norms
+	Andreas Bluhm, Anna Jenčová, Ion Nechita;Incompatibility in general probabilistic theories, generalized spectrahedra, and tensor norms;; Nov 2020;
 
+## Abstract 
 
+Abstract:  In this work, we investigate measurement incompatibility in general
+probabilistic theories (GPTs). We show several equivalent characterizations of
+compatible measurements. The first is in terms of the positivity of associated
+maps. The second relates compatibility to the inclusion of certain generalized
+spectrahedra. For this, we extend the theory of free spectrahedra to ordered
+vector spaces. The third characterization connects the compatibility of
+dichotomic measurements to the ratio of tensor crossnorms of Banach spaces. We
+use these characterizations to study the amount of incompatibility present in
+different GPTs, i.e. their compatibility regions. For centrally symmetric GPTs,
+we show that the compatibility degree is given as the ratio of the injective
+and the projective norm of the tensor product of associated Banach spaces. This
+allows us to completely characterize the compatibility regions of several GPTs,
+and to obtain optimal universal bounds on the compatibility degree in terms of
+the 1-summing constants of the associated Banach spaces. Moreover, we find new
+bounds on the maximal incompatibility present in more than three qubit
+measurements.
+
+    
 
 [arxiv:2011.06497](https://arxiv.org/abs/2011.06497)
-
-
-### Status
-
-in arxiv
