@@ -19,7 +19,7 @@ MAGENTA=colorama.Fore.MAGENTA
 dateline_pattern=r'\D*\d+(\D+)(\d+)'
 title_pattern=r'<h1 class="title mathjax"><span class="descriptor">Title\:</span>(\D*)<'
 authors_pattern=r'Authors:(\D*)'
-linkstr_pattern=r'^https?://arxiv.org/abs/\D*/?(\d+.\d+)$'
+linkstr_pattern=r'/?(.*?)$'
 h=httplib2.Http()
 base=os.getcwd()
 diacritic_dict={
@@ -51,10 +51,10 @@ diacritic_dict={
     "ł":"l",
 }
 
-def loadpage(link):
+def loadpage(id):
+    link=id
     os.chdir(f'{base}/pages')
-    linkmatch=re.search(linkstr_pattern,link)
-    id=linkmatch.groups()[0]
+    print(id)
     page=arxiv.ArXivPage(id)
     print(f'{BOLD}Start of informative output{RESET}')
     print(page.title)

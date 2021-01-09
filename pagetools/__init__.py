@@ -1,6 +1,7 @@
 from . import loadpage,remove,search,steal
 def add(id):
-    return loadpage.loadpage(f'https://arxiv.org/abs/{id}')
+    print(id)
+    return loadpage.loadpage(id)
 def rm(name):
     remove.rm(name)
 def search_arxiv(query,fields='all'):

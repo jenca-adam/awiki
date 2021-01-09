@@ -10,5 +10,7 @@ Jencova, Anna, and Sylvia Pulmannova. "Tensor product of dimension effect algebr
 
 **Status:** accepted in Order
 
+[published](jencova2020published)
+
 
 

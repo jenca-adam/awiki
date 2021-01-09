@@ -7,6 +7,9 @@ class ArXivPage:
     def __init__(self,arxivid):
         os.chdir(os.path.expanduser('~')+'/work/awiki/pages')
         self.arxivid=arxivid
+        self.old=False
+        if not re.search(r'\d+.\d+',self.arxivid):
+            self.old=True
         self.dateline_pattern=r'\D*\d+(\D+)(\d+)'
         self.authors_pattern=r'Authors:(\D*)'
         self.link=f'https://arxiv.org/abs/{arxivid}'
@@ -39,6 +42,8 @@ class ArXivPage:
         self.abstract=soup.find_all('blockquote',class_="abstract mathjax")[0].text
         os.chdir('..')
     def html(self):
+        img='<div class="warning"><img src="/static/img/warning.png/" width=100, height=100/><b>WARNING!</b> This is\
+        from old version of ArXiv. This page after adding may not work rightly.</div>'if self.old else ''
         return f'''<html>
                    <head>
                        <title>ArXivPage:{self.link}</title>
@@ -51,6 +56,7 @@ class ArXivPage:
                     </head>
                     <body>
                        <div id="container">
+                            {img}
                             <a id="arxiv-link" href="{self.link}">View in ArXiv</a>
                                 
                             <div id="buttons">

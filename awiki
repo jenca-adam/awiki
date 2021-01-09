@@ -121,11 +121,11 @@ def edit_page(pagename):
     return t.render(meta=mdf.meta,content=mdf.html,form=form)
 
         
-@app.route('/addpage/<string:id>')
+@app.route('/addpage/<path:id>')
 def auth(id):
     global addpageform
     env=Environment(loader=FileSystemLoader('templates')) 
-    beh=pagetools.add(f'https://arxiv.org/abs/{id}')
+    beh=pagetools.add(id)
     if beh['status']=='error':
         return env.get_template('file_exists.html').render(msg=beh['response']['message'],type=beh['response']['type'])
     return redirect('/')
@@ -154,7 +154,7 @@ def search():
         print(results[0][2])
         return search_t.render(results=results)
     return search_t.render(results=[[]])
-@app.route('/arxiv/<string:id>')
+@app.route('/arxiv/<path:id>')
 def arxivview(id):
     page=pagetools.arxiv.ArXivPage(id)
     return(page.html())
