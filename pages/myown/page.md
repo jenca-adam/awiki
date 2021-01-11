@@ -8,7 +8,6 @@ title: My own papers
 1. [jencova2020ageneral](jencova2020ageneral)
 1. [jencova2020renyi](jencova2020renyi)
 1. [jencova2020tensor](jencova2020tensor)
-1. [bluhm2020incompatibility](bluhm2020incompatibility)
 1. [jencova2018renyi](jencova2018renyi)
 1. [jencova2018incompatibility](jencova2018incompatibility)
 1. [jencova2016isit](jencova2016isit)
@@ -31,3 +30,4 @@ title: My own papers
 1. [jencova2012extremal](jencova2012extremal)
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
 1. [jencova2003affineconnections](jencova2003affineconnections)
+1. [bluhm2020incompatibility](bluhm2020incompatibility)
