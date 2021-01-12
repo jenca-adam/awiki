@@ -4,7 +4,7 @@ title: bluhm2020incompatibility
 
 ## Reference
 
-	Andreas Bluhm, Anna Jenčová, Ion Nechita;Incompatibility in general probabilistic theories, generalized spectrahedra, and tensor norms;; Nov 2020;
+Andreas Bluhm, Anna Jenčová, Ion Nechita;Incompatibility in general probabilistic theories, generalized spectrahedra, and tensor norms;; Nov 2020;
 
 ## Abstract 
 

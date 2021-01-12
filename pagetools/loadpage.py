@@ -87,7 +87,7 @@ def loadpage(id):
     bibtex=steal_bib(linkid,name)
 
     linkstr=f'[arxiv:{linkid}](https://arxiv.org/abs/{linkid})'
-    pagestring=f'title: {name}\n---\n\n\n## Reference\n\n\t{(", ").join(page.authors)};{page.title};{page.jrefs};{page.month}\b{page.year};\n\n## Abstract \n{page.abstract}\n\n{linkstr}'
+    pagestring=f'title: {name}\n---\n\n\n## Reference\n\n{(", ").join(page.authors)};{page.title};{page.jrefs};{page.month}\b{page.year};\n\n## Abstract \n{page.abstract}\n\n{linkstr}'
     print(f'{name}/page.md:\n\n{CYAN}{pagestring}{RESET}')
     print(os.getcwd())
     with open('page.md','w')as f:
