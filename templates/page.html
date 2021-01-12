@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="block-group" id="container">
-  <div class="header block" id="header">
+    <div class="header block" id="header">
     <h1>{{meta.title}}</h1>
-  </div>
+    <form action="/my_search/" method="POST" id="form">
+  <p>
+    <input type="text"name="q" placeholder="Search"/>
+  <div onclick="postForm()" id="search-btn"/><img src="/static/img/srch.png" width="50" height="50" /></input></p>
+
+  </div></form>
   <div class="content block" id="content">
+
   <a size=2 href="/addpage/">Add a page</a>
   {%if current not in prohibited%}
   <a size=2 href="/remove/{{current}}">Remove this page</a>

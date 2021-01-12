@@ -11,7 +11,7 @@ from wtforms import Form,validators,TextAreaField,StringField
 import yaml
 import markdown
 from jinja2 import Template,FileSystemLoader,Environment
-import pagetools
+import pagetools,pagetools.search_works
 app = Flask(__name__)
 
 class MarkdownFile(object):
@@ -158,6 +158,15 @@ def search():
 def arxivview(id):
     page=pagetools.arxiv.ArXivPage(id)
     return(page.html())
+@app.route('/my_search/',methods=['GET','POST'])
+def ms():
+    env=Environment(loader=FileSystemLoader('templates'))
+    search_t=env.get_template('results.html')
+
+    if request.method=='POST':
+        f=request.form
+        q=f['q']
+        return search_t.render(results=pagetools.search_works.search(q),q=q)
 @app.route('/')
 def index():
     return redirect('/view/index')

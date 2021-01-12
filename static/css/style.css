@@ -109,7 +109,12 @@ div #error_traceback_details{
 .formerrors li {
 	color: red;
 }
-
+#search-btn {
+	color:blue;
+	background-color:#abcdef;
+	border:2px solid blue;
+	padding:1.5em;
+}
 table {
   border-collapse: collapse;
 }

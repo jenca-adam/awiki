@@ -31,3 +31,4 @@ title: My own papers
 1. [jencova2012extremal](jencova2012extremal)
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
 1. [jencova2003affineconnections](jencova2003affineconnections)
+1. [jencova2003flatconnections](jencova2003flatconnections)
