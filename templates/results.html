@@ -1,0 +1,18 @@
+<html>
+<head>
+{%if results%}
+<title>Results for {{q}}</title>
+{%else%}
+<title>No results</title>
+{%endif%}
+</head>
+<body>
+{%if results%}
+<ol>
+{%for result in results%}
+<li><p><b>{{result[0]}}</b></p><p><b><a href="{{result[1]}}">View</b></a></p></li>
+{%endfor%}
+</ol>
+{%else%}
+<p>Sorry, no results found for {{q}}</p>
+{%endif%}
