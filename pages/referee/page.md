@@ -1,7 +1,8 @@
 title: To referee
 ---
 
-* Due [30.12.2020](REF_gao2020)
+* Due <del> 31.12.2020</del> [15.1.2021](REF_haapasalo2020a) (revision)
+* Due <del>30.12.2020</del> [25.1.2021](REF_gao2020)
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
 
