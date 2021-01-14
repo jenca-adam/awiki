@@ -14,6 +14,6 @@ title: Haapasalo, Pellonpaa, Optimal covariant measurements,  2020
 
 **Decision:** major revision (my decision)
 
-[revision](REF_haapasalo2020a.revised.pdf)
+[revision](REF_haapasalo2020a/revised.pdf)
 
 [reply](REF_haapasalo2020a/reponse.pdf)
