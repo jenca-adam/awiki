@@ -1,7 +1,5 @@
-
 title: Haapasalo, Pellonpaa, Optimal covariant measurements,  2020
 ---
-
 **Paper:**  E. Haapasalo, J. P. Pellonpaa, Optimal covariant quantum measurements
 
 **Journal:** J. Phys. A
@@ -16,5 +14,6 @@ title: Haapasalo, Pellonpaa, Optimal covariant measurements,  2020
 
 **Decision:** major revision (my decision)
 
-[reply](REF_haapasalo2020a/reponse.pdf)
+[revision](REF_haapasalo2020a/revised.pdf)
 
+[reply](REF_haapasalo2020a/reponse.pdf)
