@@ -12,4 +12,4 @@ title: Qi, sandwiched ,2020
 
 [report](REF_qi2020/report.pdf), [report comments](REF_qi2020/report_comments.pdf)
 
-**Decision:** minor revision
+**Decision:** minor revision (journal decision)

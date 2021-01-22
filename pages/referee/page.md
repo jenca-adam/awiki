@@ -1,8 +1,6 @@
 title: To referee
 ---
 
-* Due <del> 31.12.2020</del> [15.1.2021](REF_haapasalo2020a) (revision)
-* Due <del>30.12.2020</del> [25.1.2021](REF_gao2020)
 * Due [february 2021](REF_chehade2021)
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
@@ -35,6 +33,10 @@ title: To referee
 1. <del> Due [30.11.2020](REF_plosker2020)</del> Done.
 
 1. <del> Due [16.12.2020](REF_qi2020)</del> Done.
+
+1. <del>Due  31.12.2020 [15.1.2021](REF_haapasalo2020a) (revision)</del> Done.
+
+1. <del> Due 30.12.2020[25.1.2021](REF_gao2020)</del> Done.
 
 ### Reviews finished 2019
 

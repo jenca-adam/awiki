@@ -14,5 +14,5 @@ title: Gao, Wilde, Recaoverability, 2020
 
 [report](REF_gao2020/report.pdf)
 
-**Decision:**
+**Decision:** minor revision
 
