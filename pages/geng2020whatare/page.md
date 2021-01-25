@@ -4,7 +4,7 @@ title: geng2020whatare
 
 ## Reference
 
-	Isabelle Jianing Geng, Kimberly Golubeva, Gilad Gour;What are the minimal conditions required to define a SIC POVM?;; Jul 2020;
+Isabelle Jianing Geng, Kimberly Golubeva, Gilad Gour;What are the minimal conditions required to define a SIC POVM?;; Jul 2020;
 
 ## Abstract 
 

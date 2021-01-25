@@ -1,5 +1,11 @@
 title: My work
 ---
+
+## New
+
+* [Incompatibility](PROJECT_incompatibility)
+
+
 ## My projects
 
 * [Quantum relative entropies, channels and sufficiency](PROJECT_qre)
