@@ -1,6 +1,6 @@
 title: The NC-category
 ---
-**People:** Martin Plávala, Gejza Jenča
+**People:** Martin Plávala, Gejza Jenča    
 **Directory:** /work/noncausal
 
 
@@ -12,7 +12,6 @@ title: The NC-category
 
 * finish my notes (\*-autonomous)       
 * examples: quantum channels
-
 
 
 
