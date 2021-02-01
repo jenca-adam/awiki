@@ -1,6 +1,5 @@
 title: My work
 ---
-
 ## New
 
 * [Incompatibility](PROJECT_incompatibility)
@@ -24,7 +23,8 @@ title: My work
 
 ## Interesting
 
-[fritz2020representable](fritz2020representable)
+[fritz2020representable](fritz2020representable)    
+[costa2021preprocessing](costa2021preprocessing)
 
 
 ## On hold for now
@@ -97,5 +97,4 @@ title: My work
 ## Finished
 
 * [Spectral effect algebras](spectral)
-
 
