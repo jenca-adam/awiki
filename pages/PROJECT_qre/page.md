@@ -52,6 +52,10 @@ Papers (in fintite dims):
 * relative entropy difference
 
     - [arxiv:/1410.1443](https://arxiv.org/abs/1410.1443)
+    
+In von Neumann algebras:
+
+   - [faulkner2020approximate](faulkner2020approximate)
 
 ## Operational interpretations
 
@@ -123,4 +127,3 @@ Junge and Xu [inequalities](junge2003noncommutative) extensions of conditional e
 ## Published papers
 
 [jencova2018renyi](jencova2018renyi) 
-
