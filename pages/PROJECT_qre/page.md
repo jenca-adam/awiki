@@ -55,7 +55,9 @@ Papers (in fintite dims):
     
 In von Neumann algebras:
 
-   - [faulkner2020approximate](faulkner2020approximate)
+* recoverability
+
+   - [faulkner2020approximate](faulkner2020approximate)   seems interesting to read
 
 ## Operational interpretations
 
