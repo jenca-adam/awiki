@@ -23,8 +23,8 @@ title: My work
 
 ## Interesting
 
-[fritz2020representable](fritz2020representable)    
-[costa2021preprocessing](costa2021preprocessing)
+[fritz2020representable](fritz2020representable)    (Markov categories, comparison of classical experments, BSS theorem in category theory.    
+[capela2021preprocessing](capela2021preprocessing)   Comparison??
 
 
 ## On hold for now
@@ -97,4 +97,3 @@ title: My work
 ## Finished
 
 * [Spectral effect algebras](spectral)
-
