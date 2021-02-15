@@ -10,7 +10,7 @@ title: To referee
 
 ### Reviews finished 2021
 
-1. <del>Due [19.2.2021](REF_haapasalo2020a)(revised)</del> Done.
+1. <del>Due [19.2.2021](REF_haapasalo2020a)(2. revision)</del> Done.
 
 1. <del>Due  31.12.2020 [15.1.2021](REF_haapasalo2020a) (revision)</del> Done.
 
