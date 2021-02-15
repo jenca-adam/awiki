@@ -40,7 +40,7 @@ title: Not my own papers
 
 ### G
 [gour2019howtoquantify](gour2019howtoquantify),
-[geng2020whatare](geng2020whatare),
+[geng2020whatare](geng2020whatare), [gudder2004compressible](gudder2004compressible)
 
 [ganesan2019quantum](ganesan2019quantum),[gartner2012acoherent](gartner2012acoherent),
 [gheondea2018symmetries](gheondea2018symmetries),
