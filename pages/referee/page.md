@@ -1,6 +1,5 @@
 title: To referee
 ---
-
 * Due [february 2021](REF_chehade2021)
 * Due [22.2.2021](REF_huber2021) project proposal
 * Due [3.3.2021](REF_hollands2021)
@@ -9,7 +8,9 @@ title: To referee
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
 
+### Reviews finished 2021
 
+1. <del>Due [19.2.2021](REF_haapasalo2020a)(revised)</del> Done.
 
 ### Reviews finished 2020
 
