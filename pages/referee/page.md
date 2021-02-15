@@ -12,6 +12,11 @@ title: To referee
 
 1. <del>Due [19.2.2021](REF_haapasalo2020a)(revised)</del> Done.
 
+1. <del>Due  31.12.2020 [15.1.2021](REF_haapasalo2020a) (revision)</del> Done.
+
+1. <del> Due 30.12.2020[25.1.2021](REF_gao2020)</del> Done.
+
+
 ### Reviews finished 2020
 
 
@@ -39,9 +44,6 @@ title: To referee
 
 1. <del> Due [16.12.2020](REF_qi2020)</del> Done.
 
-1. <del>Due  31.12.2020 [15.1.2021](REF_haapasalo2020a) (revision)</del> Done.
-
-1. <del> Due 30.12.2020[25.1.2021](REF_gao2020)</del> Done.
 
 ### Reviews finished 2019
 
