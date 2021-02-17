@@ -16,3 +16,5 @@ title: Plosker, Ramsey, 2020, Bistochastic
 
 **Decision:** major revision
 
+[revision and reply](REF_plosker2020/revised.pdf)
+
