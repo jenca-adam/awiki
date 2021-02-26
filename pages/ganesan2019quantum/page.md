@@ -3,7 +3,7 @@ title: ganesan2019quantum
 
 ## Reference
 
-Priyanga Ganesan, Li Gao, Satish K. Pandey, Sarah Plosker, Quantum Majorization on Semifinite von Neumann Algebras, arXiv:1909.10038
+Ganesan, Priyanga, et al. "Quantum majorization on semi-finite von Neumann algebras." Journal of Functional Analysis 279.7 (2020): 108650.
 
 
 

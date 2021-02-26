@@ -3,7 +3,8 @@ title: liu2019operational
 
 ## Reference
 
-Yunchao Liu, Xiao Yuan, Operational Resource Theory of Quantum Channels, arXiv:1904.02680
+
+Liu, Yunchao, and Xiao Yuan. "Operational resource theory of quantum channels." Physical Review Research 2.1 (2020): 012035
 
 
 [arxiv:1904.02680](https://arxiv.org/abs/1904.02680)
