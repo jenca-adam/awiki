@@ -1,18 +1,15 @@
-
-title: name(s), (title), year
+title: names, (title), year
 ---
 
-**Paper:** 
+**Paper:**   
+ 
+**Journal:** 
 
-**Journal:**
+**Due:** 
 
-**Due:**
+[file](REF_/file.pdf)
 
-[link]()
 
-[file](/file.pdf)
+**Decision:** 
 
-[report](/report.pdf)
-
-**Decision:**
 
