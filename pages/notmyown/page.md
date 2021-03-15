@@ -83,12 +83,13 @@ title: Not my own papers
 [junge2003noncommutative](junge2003noncommutative)
 
 ### K
-[kuramochi2020directed](kuramochi2018directed-completeness),
 
-
+[kuramochi2017minimal](kuramochi2017minimal),
+[kuramochi2020directed](kuramochi2020directed), [kummerer1979mean](kummerer1979mean),
 [kimura2010distinguishability](kimura2010distinguishability), [kosaki1984applications](kosaki1984applications),[kosaki1984applicationsuc](kosaki1984applicationsuc), [kubicki2019resource](kubicki2019resource), 
 
 ### L
+[leppajarvi2021postprocessing](leppajarvi2021postprocessing),
 
 
 [lami2018ultimate](lami2018ultimate),[lami2018nonclassical](lami2018nonclassical),
