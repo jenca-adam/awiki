@@ -1,7 +1,5 @@
-
-title: Hatano and Ueda, Push-Woronowicz, 2021
+title: Hatano and Ueda, Pusz-Woronowicz, 2021
 ---
-
 **Paper:** Kanae Hatano and Yoshimichi Ueda, Pusz--Woronowicz's functional calculus revisited
 
 **Journal:** Acta Scientiarum Mathematicarum (Szeged).
@@ -15,4 +13,3 @@ title: Hatano and Ueda, Push-Woronowicz, 2021
 [report](REF_hatano2021/report.pdf)
 
 **Decision:**
-
