@@ -1,10 +1,10 @@
 title: Preorder and equivalence of quantum channels
 ---
-*  *Description:* We describe the (post-processing) preorder and equivalence of quantum channels. We use the relation to 
+*  **Description:** We describe the (post-processing) preorder and equivalence of quantum channels. We use the relation to 
  quantum experiments (sufficiency, randomization preorder and equivalence) and the ideas from comparison.  
-*  *People:* M. Sedlák   
-*  *Related to:* [comparison](PROJECT_comparison)   
-*  *Directory:*  work/channels 
+*  **People:** M. Sedlák   
+*  **Related to:** [comparison](PROJECT_comparison)   
+*  **Directory:**  work/channels 
 
 ---
 
@@ -17,11 +17,10 @@ title: Preorder and equivalence of quantum channels
 
 * conditional expectations [kummerer1979mean](kummerer1979mean)
 
-* sufficiency papers
+* sufficiency papers [petz1986sufficient](petz1986sufficient), [petz1988sufficiency](petz1988sufficiency),
+  [jencova2006sufficiency](jencova2006sufficiency)
 
  
-
-
 
 ---
 
@@ -40,6 +39,8 @@ my notes on post-processing minimal channels: [notes](PROJECT_channel_equivalenc
 
 ### Ideas
 
+
+---
 
 
 ## Finished
