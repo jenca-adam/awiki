@@ -2,9 +2,10 @@
 title:
 ---
 
-*  *Description:*    
-*  *People:*    
-*  *Directory:*  
+*  **Description:**   
+*  **People:**   
+*  **Related to:**     
+*  **Directory:** /work/ 
 
 ---
 
@@ -12,6 +13,9 @@ title:
 ## Basic references
 
 
+
+
+---
 
 ## Research
 
@@ -27,7 +31,7 @@ title:
 
 ### Ideas
 
-
+---
 
 ## Finished
 

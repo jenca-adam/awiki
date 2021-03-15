@@ -105,7 +105,8 @@ title: Not my own papers
 
 
 
-[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [BOOK_paulsen2002completely](BOOK_paulsen2002completely), [paulsen2011operator](paulsen2011operator), [pisier2003noncommutative](pisier2003noncommutative),
+[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [BOOK_paulsen2002completely](BOOK_paulsen2002completely), [paulsen2011operator](paulsen2011operator), [petz1986sufficient](petz1986sufficient), 
+[petz1988sufficiency](petz1988sufficiency),  [pisier2003noncommutative](pisier2003noncommutative),
  [plavala2016allmeasurements](plavala2016allmeasurements), [pulmannova2006effect](pulmannova2006effect)
 
 ### Q
