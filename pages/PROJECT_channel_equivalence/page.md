@@ -3,7 +3,7 @@ title: Preorder and equivalence of quantum channels
 *  **Description:** We describe the (post-processing) preorder and equivalence of quantum channels. We use the relation to 
  quantum experiments (sufficiency, randomization preorder and equivalence) and the ideas from comparison.  
 *  **People:** M. Sedlák   
-*  **Related to:** [comparison](PROJECT_comparison)   
+*  **Related to:** [comparison](PROJECT_comparison) , [sufficiency](PROJECT_qre)
 *  **Directory:**  work/channels 
 
 ---
@@ -20,7 +20,7 @@ title: Preorder and equivalence of quantum channels
 * sufficiency papers [petz1986sufficient](petz1986sufficient), [petz1988sufficiency](petz1988sufficiency),
   [jencova2006sufficiency](jencova2006sufficiency)
 
- 
+* comparison papers 
 
 ---
 
