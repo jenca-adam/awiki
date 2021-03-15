@@ -83,6 +83,7 @@ title: Not my own papers
 [junge2003noncommutative](junge2003noncommutative)
 
 ### K
+[kuramochi2020directed](kuramochi2018directed-completeness),
 
 
 [kimura2010distinguishability](kimura2010distinguishability), [kosaki1984applications](kosaki1984applications),[kosaki1984applicationsuc](kosaki1984applicationsuc), [kubicki2019resource](kubicki2019resource), 
