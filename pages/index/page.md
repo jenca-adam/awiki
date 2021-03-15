@@ -9,6 +9,8 @@ title: My work
 
 * [Quantum relative entropies, channels and sufficiency](PROJECT_qre)
 
+* [Quantum channels equivalence](PROJECT_channel_equivalence)
+
 * [GPT](PROJECT_gpt)
 
 * [Comparison](PROJECT_comparison)
