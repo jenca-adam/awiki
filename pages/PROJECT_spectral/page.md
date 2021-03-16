@@ -1,7 +1,5 @@
-
 title: Spectrality in order unit spaces and effect algebras
 ---
-
 *  **Description:** For spectrality in order unit spaces, we compare ther approach of Alfsen-Shultz to that of Foulis.
    In effect algebras, we study spectrality in the sense of Gudder and the approach of Pulmannová.  
 *  **People:** Sylvia Pulmannová, Martin Plávala  
@@ -13,7 +11,8 @@ title: Spectrality in order unit spaces and effect algebras
 
 ## Basic references
 
-* Foulis spectrality: [foulis2003compressible](foulis2003compressible), [foulis2005compressible](foulis2005compressible), [foulis2008spectral](foulis2008spectral), [foulis2006monotone](foulis2006monotone), 
+* Foulis spectrality: [foulis2003compressible](foulis2003compressible), [foulis2005compressible](foulis2005compressible), 
+[foulis2008spectral](foulis2008spectral), [foulis2006monotone](foulis2006monotone), 
 [foulis2005compression](foulis2005compression), [foulis2004compressions](foulis2004compressions)
     
 * Alfsen-Schultz spectrality: [BOOK_alfsen2003geometry](BOOK_alfsen2003geometry),
@@ -75,4 +74,3 @@ title: Spectrality in order unit spaces and effect algebras
 ---
 
 ## Ideas for further research
-
