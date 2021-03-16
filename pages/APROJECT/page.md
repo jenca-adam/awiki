@@ -5,7 +5,7 @@ title:
 *  **Description:**   
 *  **People:**   
 *  **Related to:**     
-*  **Directory:** /work/ 
+*  **Folder:** /work/ 
 
 ---
 
@@ -39,4 +39,8 @@ title:
 
 
 ### Talks/posters
+
+---
+
+## Ideas for further research
 

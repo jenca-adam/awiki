@@ -1,77 +1,18 @@
-title: Project Quantum relative entropy
----
-**About**: Quantum relative entropy, Rényi relative entropy: standard and sandwiched, properties, DPI,
- sufficiency of quantum channels, operational interpretations
 
-**People**: F. Hiai, M. Mosonyi
-
+title: Quantum Rényi relative entropies
 ---
 
-## Sandwiched Rényi relative entropy in von Neumann algebras
+*  **Description:** Quantum relative entropies in von Neumann algebras: extensions of Rényi relative entropies
+   (sandwiched) from density matrices and their properties. Basic tools are noncommutative $L_p$ spaces and
+interpolation.     
+*  **People:** -      
+*  **Related to:** [sufficiency]   
+*  **Folder:** /work/lpspaces 
 
-**directory: /work**/lpspaces
-
-
-### For $\alpha\in \[1/2,1)$: 
-
-
-[jencova2020renyi](jencova2020renyi) (submitted) 
-
-
-feedback: [report1](PROJECT_qre/report1.pdf)
-
-
-###  For $\alpha>1$:  
-
-
-
-
-[jencova2018renyi](jencova2018renyi) (published)
-
-*Beware of [mistakes](jencova2018renyi/mistakes.pdf) in the published version!*
-
-
-### Discussions and notes
-
-* [notes with Datta and Wilde from BIID15](PROJECT_qre/djw_biid_notes.pdf)
-* [maps](PROJECT_qre/dual_maps.pdf) - maps on $L_q(\mathcal M)$, related to $\Phi: L_1(\mathcal M)\to L_1(\mathcal N)$ and a
-  (faithful) $\varphi\in \mathcal M_*^+$. 
-* [notes](PROJECT_qre/notes.pdf) - some DPI lower bounds
-
-
-
-## Recoverability in von Neumann algebras
-
-
-Papers (in fintite dims):
-
-* recoverability 
-  
-    - [arXiv:1505.04661](https://arxiv.org/abs/1505.04661) (M. Wilde)
-   
-    - [arXiv:1509.07127](https://arxiv.org/abs/1509.07127) (D. Sutter, Junge, Wilde,...)
-
-* relative entropy difference
-
-    - [arxiv:/1410.1443](https://arxiv.org/abs/1410.1443)
-    
-In von Neumann algebras:
-
-* recoverability     
-
-    - [faulkner2020approximate](faulkner2020approximate)   seems interesting to read
-
-## Operational interpretations
-
-
-Papers: 
-
-* (finite dim) Mosonyi and Ogawa, 
-* (infinite dim) Jaksic and Pillet??, last part of [berta2018renyi](berta2018renyi)
-* Relative entropy: proper formula [hiai1991theproper](hiai1991theproper)
 ---
 
-## Study 
+
+## Basic references
 
 * postulates for classical Rényi relative entropy:
     
@@ -114,20 +55,83 @@ Junge and Xu [inequalities](junge2003noncommutative) extensions of conditional e
 
 * further [bibliography](BIBs)
 
+
+
+
 ---
 
-## Posters
-
-* [biid Barcelona, 2016](/static/pdf/lpposter.pdf)
+## Research
 
 
-## Talks
 
+### Notes
+
+* [notes with Datta and Wilde from BIID15](PROJECT_qre/djw_biid_notes.pdf)
+* [maps](PROJECT_qre/dual_maps.pdf) - maps on $L_q(\mathcal M)$, related to $\Phi: L_1(\mathcal M)\to L_1(\mathcal N)$ and a
+  (faithful) $\varphi\in \mathcal M_*^+$. 
+* [notes](PROJECT_qre/notes.pdf) - some DPI lower bounds
+
+
+### Todo
+
+Finish [jencova2020renyi](jencova2020renyi)!
+
+
+### Ideas
+
+---
+
+## Finished
+
+### Papers
+
+* [jencova2018renyi](jencova2018renyi) (published in AHP): sandwiched Rényi relative entropy in von Neumann algebras with $\alpha>1$    
+* [jencova2020renyi](jencova2020renyi) (submitted to AHP): a continuation of the above, with $1/2\le \alpha <1$
+    * feedback: [report1](PROJECT_qre/report1.pdf)
+
+
+### Talks/posters
+
+
+* [biid Barcelona, 2016](/static/pdf/lpposter.pdf) (poster)
 * [bedlewo2018](/static/pdf/bedlewo2018.pdf)
 * [cambridge2018](/static/pdf/cambridge2018.pdf)
 * [lodz2018](/static/pdf/lodz2018.pdf)
 * [bilkent2019](/static/pdf/bilkent2019.pdf)
 
-## Published papers
 
-[jencova2018renyi](jencova2018renyi) 
+---
+
+## Ideas for further research
+
+
+### Recoverability in von Neumann algebras
+
+
+Papers (in fintite dims):
+
+* recoverability 
+  
+    - [arXiv:1505.04661](https://arxiv.org/abs/1505.04661) (M. Wilde)
+   
+    - [arXiv:1509.07127](https://arxiv.org/abs/1509.07127) (D. Sutter, Junge, Wilde,...)
+
+* relative entropy difference
+
+    - [arxiv:/1410.1443](https://arxiv.org/abs/1410.1443)
+    
+In von Neumann algebras:
+
+* recoverability     
+
+    - [faulkner2020approximate](faulkner2020approximate)   seems interesting to read
+
+### Operational interpretations
+
+
+Papers: 
+
+* (finite dim) Mosonyi and Ogawa, 
+* (infinite dim) Jaksic and Pillet??, last part of [berta2018renyi](berta2018renyi)
+* Relative entropy: proper formula [hiai1991theproper](hiai1991theproper)
+
