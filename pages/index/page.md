@@ -1,7 +1,6 @@
 title: My work
 ---
 
-
 ## My projects
 
 * [Quantum relative entropies, channels and sufficiency](PROJECT_qre)
@@ -65,7 +64,7 @@ title: My work
 ---
 
 
-* [Sandwiched Rényi divergences and sufficiency](sandwiched)
+
 * [Decoherence-free subalgebras](decoherence)
 
 ---
