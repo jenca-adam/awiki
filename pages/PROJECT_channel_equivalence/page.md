@@ -39,6 +39,7 @@ my notes on post-processing minimal channels: [notes](PROJECT_channel_equivalenc
 
 ### Ideas
 
+* is there any relation to [index](https://core.ac.uk/download/pdf/194449893.pdf)?  (See also [arxiv:1909.01906](https://arxiv.org/abs/1909.01906) Gao, Junge, Laracquente: rel. entropy for von Neumann
 
 ---
 
