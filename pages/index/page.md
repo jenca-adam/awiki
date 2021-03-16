@@ -14,7 +14,7 @@ title: My work
 * [Channels, subalgebras, decoherence](PROJECT_decoherence) (finished for now)
 
 
-### GPT
+### General probabilistic theories (GPT)
 
 * [GPT](PROJECT_gpt)
 
