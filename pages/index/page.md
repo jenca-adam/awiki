@@ -11,7 +11,7 @@ title: My work
  
 * [Comparison](PROJECT_comparison) (finishing)
 
-* [Channels, subalgebras, decoherence](PROJECT_decoherence) (finished for now)
+* [Channels, subalgebras, decoherence](PROJECT_decoherence) (finished for now, further ideas)
 
 
 ### General probabilistic theories (GPT)
