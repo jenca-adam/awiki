@@ -1,8 +1,5 @@
 title: My work
 ---
-## New
-
-* [Incompatibility](PROJECT_incompatibility)
 
 
 ## My projects
