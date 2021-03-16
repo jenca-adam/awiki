@@ -1,22 +1,37 @@
 title: My work
 ---
-
 ## My projects
 
-* [Quantum relative entropies, channels and sufficiency](PROJECT_qre)
 
-* [Quantum channels equivalence](PROJECT_channel_equivalence)
+### Quantum comparison: experiments, channels, networks
+
+* [Quantum relative entropies, channels and sufficiency](PROJECT_qre) (finishing)
+
+* [Quantum channels equivalence](PROJECT_channel_equivalence) (new)
+ 
+* [Comparison](PROJECT_comparison) (finishing)
+
+* [Channels, subalgebras, decoherence](PROJECT_decoherence) (finished for now)
+
+
+### GPT
 
 * [GPT](PROJECT_gpt)
 
-* [Comparison](PROJECT_comparison)
+### Some categorial stuff
 
-* [Channels, subalgebras, decoherence](PROJECT_decoherence)
+* [NC category](PROJECT_nc) (slow progress)
 
-* [Effect algebras](PROJECT_ea)
+* [The state-effect monad](state-effect) (killed)
 
-* [NC category](PROJECT_nc)
 
+### Effect algebras
+
+* [Effect algebras](PROJECT_ea) (ongoing)
+
+* [Tensor products of dimension effect algebras](tpdea) (finished)
+
+* [Spectral effect algebras](spectral)
 ---
 
 ## Interesting
@@ -31,7 +46,6 @@ title: My work
 
 * [Fisher information for Gaussian experiments](fisher)
 
-* [The state-effect monad](state-effect)
 
 * [On $C^\*$-extremality](cextremal)
 
@@ -71,7 +85,7 @@ title: My work
 
 ## Finishing
 
-* [Tensor products of dimension effect algebras](tpdea)
+
 * [Comparison of quantum channels](comparison)
 
 ---
@@ -93,5 +107,3 @@ title: My work
 ---
 
 ## Finished
-
-* [Spectral effect algebras](spectral)
