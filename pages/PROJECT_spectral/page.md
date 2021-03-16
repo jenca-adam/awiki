@@ -12,7 +12,7 @@ title: Spectrality in order unit spaces and effect algebras
 ## Basic references
 
 * Foulis spectrality: [foulis2003compressible](foulis2003compressible), [foulis2005compressible](foulis2005compressible), 
-[foulis2008spectral](foulis2008spectral),
+[foulis2008spectral](foulis2008spectral),    
 [foulis2006monotone](foulis2006monotone), 
 [foulis2005compression](foulis2005compression), [foulis2004compressions](foulis2004compressions)
     
