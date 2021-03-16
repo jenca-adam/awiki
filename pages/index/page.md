@@ -31,7 +31,7 @@ title: My work
 
 * [Tensor products of dimension effect algebras](tpdea) (finished)
 
-* [Spectral effect algebras](spectral) (finished)
+* [Spectrality in effect algebras](spectral)  (ongoing)
 
 ---
 
