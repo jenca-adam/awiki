@@ -18,6 +18,8 @@ title: Project Quantum relative entropy
 [jencova2020renyi](jencova2020renyi) (submitted) 
 
 
+feedback: [report1](PROJECT_qre/report1.pdf)
+
 
 ###  For $\alpha>1$:  
 
