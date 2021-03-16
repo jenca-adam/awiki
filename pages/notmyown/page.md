@@ -131,6 +131,7 @@ title: Not my own papers
 [vetterlein2019orthogonality](vetterlein2019orthogonality)
 
 ### W
+[westerbaan2020acharacterization](westerbaan2020acharacterization),
 [westerbaan2020thethree](westerbaan2020thethree),
 [wetering2019aneffect](wetering2019aneffect), [wetering2018sequential](wetering2018sequential), [wetering2018three](wetering2018three), [wilde2018optimized](wilde2018optimized),
 [wolf2010theinverse](wolf2010theinverse)
