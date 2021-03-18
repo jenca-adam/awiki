@@ -1,7 +1,7 @@
 title: Spectrality in order unit spaces and effect algebras
 ---
 *  **Description:** For spectrality in order unit spaces, we compare ther approach of Alfsen-Shultz to that of Foulis.
-   In effect algebras, we study spectrality in the sense of Gudder and the approach of Pulmannová.  
+   In effect algebras, we study spectrality in the sense of Gudder and the approach of Pulmannová.  The relation to sequential and divisible ea may be also studied.    
 *  **People:** Sylvia Pulmannová, Martin Plávala  
 *  **Related to:**     
 *  **Folder:** /work/spectral, context 
