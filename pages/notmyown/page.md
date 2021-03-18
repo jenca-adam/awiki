@@ -4,7 +4,7 @@ title: Not my own papers
 
 ### A
 [albert2019asymptotics](albert2019asymptotics),
-[alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [BOOK_alfsen1971compact](BOOK_alfsen1971compact), [BOOK_alfsen1976noncommutative](BOOK_alfsen1976noncommutative), [BOOK_alfsen2003geometry](BOOK_alfsen2003geometry), [araki1982positive](araki1982positive),
+[alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [BOOK_alfsen1971compact](BOOK_alfsen1971compact), [BOOK_alfsen1976noncommutative](BOOK_alfsen1976noncommutative), [BOOK_alfsen2003geometry](BOOK_alfsen2003geometry), [alfsen1979onnoncommutative](alfsen1979onnoncommutative), [araki1982positive](araki1982positive),
 [arveson2007theasymptotic](arveson2007theasymptotic), [arveson2008lifting](arveson2008lifting), [aubrun2017alice](aubrun2017alice), [aubrun2018universal](aubrun2018universal), 
 
 ### B
@@ -33,7 +33,8 @@ title: Not my own papers
 [farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator),
 [foulis2003compressible](foulis2003compressible), [foulis2003compressible](foulis2003compressible),
 [foulis2008spectral](foulis2008spectral), [foulis2006monotone](foulis2006monotone),
-[foulis2005compression](foulis2005compression), [foulis2004compressions](foulis2004compressions), 
+[foulis2005compression](foulis2005compression), [foulis2004compressions](foulis2004compressions),
+[foulis2010type](foulis2010type), 
 [frank2013monotonicity](frank2013monotonicity), [frigerio1982long](frigerio1982long), 
 [fritz2017resource](fritz2017resource), [fritz2017spectrahedral](fritz2017spectrahedral), [fritz2020representable](fritz2020representable),
 
@@ -131,6 +132,7 @@ title: Not my own papers
 [vetterlein2019orthogonality](vetterlein2019orthogonality)
 
 ### W
+
 [westerbaan2020acharacterization](westerbaan2020acharacterization),
 [westerbaan2020thethree](westerbaan2020thethree),
 [wetering2019aneffect](wetering2019aneffect), [wetering2018sequential](wetering2018sequential), [wetering2018three](wetering2018three), [wilde2018optimized](wilde2018optimized),

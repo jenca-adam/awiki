@@ -11,7 +11,7 @@ title: My work
  
 * [Comparison](PROJECT_comparison) (finishing)
 
-* [Channels, subalgebras, decoherence](PROJECT_decoherence) (finished for now, further ideas)
+* [Channels, subalgebras, decoherence](PROJECT_decoherence) (finished for now, further ideas?)
 
 
 ### General probabilistic theories (GPT)
@@ -27,11 +27,11 @@ title: My work
 
 ### Effect algebras
 
-* [Effect algebras](PROJECT_ea) (ongoing)
-
-* [Tensor products of dimension effect algebras](tpdea) (finished)
 
 * [Spectrality in effect algebras](PROJECT_spectral)  (ongoing)
+
+* [Tensor products of dimension effect algebras](PROJECT_tensor) (finished for now)
+
 
 ---
 
