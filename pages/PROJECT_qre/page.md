@@ -1,7 +1,5 @@
-
-title: Quantum Rényi relative entropies
+title: "Quantum R\xE9nyi relative entropies"
 ---
-
 *  **Description:** Quantum relative entropies in von Neumann algebras: extensions of Rényi relative entropies
    (sandwiched) from density matrices and their properties. Basic tools are noncommutative $L_p$ spaces and
 interpolation.     
@@ -28,7 +26,7 @@ interpolation.
 
     infinite dimensional:
 
-    - [hiai2020](hiai2020quantum) - $f$-divergences on von Neumann algebras (survey)
+    - [hiai2021quantum](BOOK_hiai2021quantum) - $f$-divergences on von Neumann algebras (survey)
     - [hiai2018quantum](hiai2018quantum) - standard $f$-divergences, standard Rényi relative entropies
     - [berta2018renyi](berta2018renyi) - sandwiched Rényi relative entropies, von Neumann algebras
     - [gu2019interpolation](gu2019interpolation) -  sandwiched Rényi relative entropies by Haagerup (quasi)
@@ -134,4 +132,3 @@ Papers:
 * (finite dim) Mosonyi and Ogawa, 
 * (infinite dim) Jaksic and Pillet??, last part of [berta2018renyi](berta2018renyi)
 * Relative entropy: proper formula [hiai1991theproper](hiai1991theproper)
-
