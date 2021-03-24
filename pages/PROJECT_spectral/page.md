@@ -74,7 +74,7 @@ title: Spectrality in order unit spaces and effect algebras
 
 ### Papers
 
-* [jencova2020thestructure](jencova2020thestructure) (published, with MP)
+* [jencova2019ontheproperties](jencova2019ontheproperties) (published, with MP)
 
 * [arxiv:2102.01628](https://arxiv.org/abs/2102.01628) (submitted to JMAA, with SP)
 
