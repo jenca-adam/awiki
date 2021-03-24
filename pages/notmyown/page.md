@@ -56,7 +56,7 @@ title: Not my own papers
 [harremoes2017quantum](harremoes2017quantum),
 [hiai1991theproper](hiai1991theproper),
  [hiai2018quantum](hiai2018quantum), [hiai2019quantum](hiai2019quantum), 
-[hiai2020quantum](hiai2020quantum)
+[hiai2021quantum](BOOK_hiai2021quantum)
 
 ### I
 
