@@ -4,7 +4,8 @@ title: Hiai's manuscript, 2020
 
 ## Reference 
 
- F. Hiai, Quantum f-Divergences in von Neumann Algebras,  book proposal for Springer
+ F. Hiai, Quantum f-Divergences in von Neumann Algebras: Reversibility of Quantum Operations,  Mathematical Physics
+Studies, Springer Singapore, 2021
 
 
 [link]()

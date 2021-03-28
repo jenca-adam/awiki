@@ -74,7 +74,8 @@ title: My work
 
 * [referee](referee)
 * [students](students)
-* [garant DS](DT_garant)
+* [garant DS](DT_garant)    
+* [conferences](conferences)
 
 ---
 
