@@ -14,5 +14,5 @@ title: Regula, Takagi, Gu, 2021
 
 [report](REF_regula2021/report.pdf)
 
-**Decision:**
+**Decision:** accept
 

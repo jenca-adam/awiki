@@ -15,4 +15,4 @@ paper by Pusz and Woronowicz: [link](https://drive.google.com/file/d/11opNEC8JSv
 
 [report](REF_hatano2021/report.pdf)
 
-**Decision:**
+**Decision:** revise

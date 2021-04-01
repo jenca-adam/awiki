@@ -184,18 +184,51 @@ computed by SDP.
          [arxiv:2011.01055](https://arxiv.org/abs/2011.01055)
 
 
-* Device-independent, self-testing
+* **Device-independent, self-testing**
 
-    1. Armin Tavakoli. Semi-device-independent framework based on restricted distrust in prepare-and-measure experiments
-       (15)
+    1.   Armin Tavakoli. Semi-device-independent framework based on restricted distrust in prepare-and-measure experiment (15)
 
-    1. Harshank Shrotriya, Kishor Bharti and Leong Chuan Kwek. Robust Self Testing of All Pure Bipartite Maximally
-       Entangled States via Quantum Steering (84)
+         Prepare-and-measure experiments are considered when the measurements are fully uncharacterized and the prepared
+states are trusted within a given fidelity with respect to given target states. Numerical methods are proposed to compute 
+the lower and upper bounds for maximal quantum correlations obtainable for fixed target states and fidelity bound. The results are applied to some tasks:
 
-* Foundations, Bell inequalities (?)
+         - state discrimination
+         - efficiency of detectors
+         - non-classicality in the measurements
+         - random number generator
 
-    1. Patricia Contreras Tejada, Giannicola Scarpa, Aleksander M. Kubicki, Adam Brandenburger and Pierfrancesco La
-       Mura. Agreement between observers: a physical principle? (52)
+         This framework has some advantages over other semi-device independent approaches: there is no bound on the
+dimension, the fidelity can be assessed by measurement (in contrast to a restriction on dimension) and the condition has
+to be fullfilled only on average over the rounds. So this is a reasonable setting to study. This idea seems similar to smooth entropies, especially the smooth min-entropy in the case of state discrimination. It would be interesting to know whether these settings are related. Another question is whether classical measurements (post-processing of a single projective measurement) could be replaced  by compatibility of measurements (post-processings of a single POVM) in the third point listed above. 
+
+         This is a reasonable proposal for a semi-device independent framework, which has some advantages over existing
+ones. The results are interesting, but limited to performances of some particular protocols, which may not be of overal
+interest for TQC audience.
+  
+
+
+    1.   Harshank Shrotriya, Kishor Bharti and Leong Chuan Kwek. Robust Self Testing of All Pure Bipartite Maximally Entangled States via Quantum Steering (84)
+
+         A semi-device independent scenario for self-testing of all pure entangled states is proposed, based on quantum steering. An ideal steering assemblage is found that self-tests any pure entangled qudit state.  For maximally entangled states robustness bounds are found.
+
+         The method in the first part resembles the one used in the device-independent setting [17], with tilted steering inequalities instead of tilted CHSH. The second part adopts the methods of [28] where robust asemblage-based self-testing of qubit maximally entangled states is considered. The steering based approach has the advantage over device independent self-testing that exact robustness bounds can be found.
+
+         This is a solid piece of work, largerly extending previous results. However, it seems that no really new techniques or methods are introduced here.
+
+         [arxiv:2007.04020](https://arxiv.org/pdf/2007.04020.pdf)
+         
+
+* **Foundations, Bell inequalities (?)**
+
+    1.   Patricia Contreras Tejada, Giannicola Scarpa, Aleksander M. Kubicki, Adam Brandenburger and Pierfrancesco La Mura. Agreement between observers: a physical principle? (52)
+
+         A new property of no-signalling boxes is introduced, called common certainty of disagreement. This notion is
+based on a result from classical probability theory, the classical agreement theorem, which states that two Bayesian agents cannot agree to disagree. The boxes with this property are characterized and it is proved that for local or quantum boxes, common certainty of disagreement is not possible.  A related notion called singular disagreement is introduced and is again proved possible in no-signaling setting, but impossible for local or quantum boxes.
+
+         
+         The authors propose some interesting properties of no-signaling boxes, which may serve as  simple tests for quantum correlations. However, the usefulness of such  tests is unclear. There are some almost-quantum correlations that can be ruled out, but others that cannot. There is no further investigation (yet) into performance of such tests and their relations to other properties of no-signalling boxes. So this may be worth of further research, but there are not enough for a talk.  
+
+  
 
     1. Ravishankar Ramanathan, Michal Banacki, Ricard Rodriguez and Pawel Horodecki. Single trusted qubit is necessary and  sufficient for quantum realisation of extremal no-signaling correlations  (165)
 
@@ -216,6 +249,8 @@ computed by SDP.
 * Cojaviem
 
     1. Seiichiro Tani. Quantum Algorithm for Finding the Optimal Variable Ordering for Binary Decision Diagrams (44)
+
+         (subreviewer: Daniel Nagaj)
 
     1. Soumya Das, Goutam Paul and Anindya Banerji. Hyper-hybrid entanglement and the fidelity of quantum teleportation
        limit each other (156)
