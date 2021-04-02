@@ -39,8 +39,10 @@ implementable devices, is then directly related to the standard robustness measu
 one can use the tools of convex resource theories. As a result, the exact cost is computed in some cases and lower and
 upper bounds are provided for more general noise models.
 
-         The fact that the standard robustness is related to optimal linear decomposition seems known. 
-I like the idea of its application in the setting of error mitigation, but I am not sure if the results are strong enough or significant given the high treshold of TQC. Besides, it is somewhat similar to submission (155) (including the present author).
+         
+         This is a nice application of robustness measure in the setting of error mitigation, however, the results are close to submission (155) and could be included in it (the authors of (155) include the present author). Therefore my suggestion is to reject.
+
+         **score: -2**
 
          [arxiv:2006.12509](https://arxiv.org/abs/2006.12509)
 
@@ -62,11 +64,11 @@ considers the problem of simulating such a map by physically implementable, i.e.
 
          - robustness measures R, R' are defined and it is proved that they are related to the diamond norm and have  an operational characterization.
          - The authors propose an interesting method for the simulation: the map in question is written as Phi(.)= Lambda( .\otimes X), where Lambda is a cptp map and X is a Hermitian operator with unit trace. The simulation uses a quasiprobability representation of X, while the channel Lambda remains fixed. This has some advantage over the standard approach, where a number of different operations has to be realized.
-         - The simulation cost, evauated as the trace norm of X, is proved to be exactly given by the robustness measure R. It is also proved that the robustness R' characterizes the advantage of Phi over all physical maps in certain quantum games.
+         - The simulation cost, evaluated as the trace norm of X, is proved to be exactly given by the robustness measure R. It is also proved that the robustness R' characterizes the advantage of Phi over all physical maps in certain quantum games.
          - Applications include simulation of positive maps, evaluating the non-Markovianity of an evolution and cost of error mitigation. The author prove some advantages of their methods over existing ones in some cases and show that the
 measures can be efficiently computed by SDP.
 
-         This is a neat contribution, with some interesting results. However, there seem to be other sumbissions concerned with similar problems and ideas. Given this fact and the high treshold in TQC, I tend to only weak accept.
+         This is a neat contribution, with some interesting results. However, there seem to be other submissions concerned with similar problems and ideas. Given this fact and the high threshold in TQC, I tend to only weak accept.
 
          [REF_regula2021](REF_regula2021)
 
@@ -87,7 +89,7 @@ that expression means something different).
 
          This is an important step in the problem of quantum channel discrimination, but it is not clear whether this is the first time indefinite causal order strategies were considered. The established strict hierarchy is interesting,
 especially that it shows that the separable strategies are more than just a convex combination of (differently ordered)
-sequetial ones. This shows that the structure of the general strategies is quite complicated and intriguing, however,
+sequential ones. This shows that the structure of the general strategies is quite complicated and intriguing, however,
 not much further insight is obtained.
 
          [arxiv:2011.08300](https://arxiv.org/abs/2011.08300)
@@ -100,12 +102,12 @@ systems are extended to this setting:
          - no entanglement is needed in discrimination of unitaries
          - perfect discrimination is possible in a finite number of rounds at some energy level
 
-         Using these results, a new kind of EC speed limit is obtained, quantifying the speed at which two time evolutions (under some reasobable constraints) drift apart in time. Furthermore, a version of the Solovay-Kitaev theorem for Gaussian
+         Using these results, a new kind of EC speed limit is obtained, quantifying the speed at which two time evolutions (under some reasonable constraints) drift apart in time. Furthermore, a version of the Solovay-Kitaev theorem for Gaussian
 unitaries is obtained, showing that any such unitary can be approximated by a reasonably short sequence of Gaussian
 unitaries from some base set.
 
-         Studying these problems in the proposed seting is well motivated and highly relevant. The extensions from the
-finite dmensional setting are rather nontrivial and technically involved, although the results and the basic ideas are similar. This would be a nice talk for TQC.
+         Studying these problems in the proposed setting is well motivated and highly relevant. The extensions from the
+finite dimensional setting are rather nontrivial and technically involved, although the results and the basic ideas are similar. This would be a nice talk for TQC.
 
          [arxiv:2006.06659](https://arxiv.org/abs/2006.06659)
 
@@ -114,9 +116,9 @@ finite dmensional setting are rather nontrivial and technically involved, althou
 
          Various adaptive and parallel strategies for quantum channel discrimination are compared in the asymptotic regime: parallel strategies with or without quantum memory, adaptive strategies with only classical feed-forward with or without entangled inputs or general sequential strategies. There seem to be two main results:
 
-         - it is shown that the non adaptive  vs. adaptive separation in the well known example of Harrow et al. is present also in the symmetric asymptotic setting, thus completing the previously obtained non-asymptotic and asymetric results
+         - it is shown that the non adaptive  vs. adaptive separation in the well known example of Harrow et al. is present also in the symmetric asymptotic setting, thus completing the previously obtained non-asymptotic and asymmetric results
          - in the case of classical-quantum channels, it is proved that the adaptive strategies bring no advantage in
-both symmetric and asymetric settings. This is done by relating to the problem of classical channel discrimination.
+both symmetric and asymmetric settings. This is done by relating to the problem of classical channel discrimination.
 
          The previous result is applied to show that adaptive strategies with only classical feed-forward and product inputs do not offer any advantage in the asymptotic settings. As an application, the discrimination power of quantum channels is investigated.
 
@@ -128,7 +130,7 @@ both symmetric and asymetric settings. This is done by relating to the problem o
     1.   Vishal Katariya and Mark Wilde. RLD Fisher Information Bound for Multiparameter Estimation of Quantum Channels (72)
 
          A Cramer-Rao bound for multiparameter estimation of quantum channels is given, in terms of the RLD Fisher
-informaton. The bound applies to all quantum channels and all sequential strategies. Moreover, it is single-letter and can be efficiently computed by SDP. The result is proved using a chain rule for the RLD Fisher information, which can be applied to prove an amortization collapse. This means that the sequential strategies have no advantage over paralel ones for the RLD Fisher information of n channel uses. The obtained CR bound has the important consequence that if the Fisher information is finite, then the Heisenberg scaling of the mean square error is unattainable. 
+information. The bound applies to all quantum channels and all sequential strategies. Moreover, it is single-letter and can be efficiently computed by SDP. The result is proved using a chain rule for the RLD Fisher information, which can be applied to prove an amortization collapse. This means that the sequential strategies have no advantage over parallel ones for the RLD Fisher information of n channel uses. The obtained CR bound has the important consequence that if the Fisher information is finite, then the Heisenberg scaling of the mean square error is unattainable. 
 
          The results of this contribution are of fundamental importance, giving an effectively computable CR bound and
 providing conditions under which advantages over the fundamental limit with classical resources are attainable for
@@ -199,10 +201,10 @@ the lower and upper bounds for maximal quantum correlations obtainable for fixed
 
          This framework has some advantages over other semi-device independent approaches: there is no bound on the
 dimension, the fidelity can be assessed by measurement (in contrast to a restriction on dimension) and the condition has
-to be fullfilled only on average over the rounds. So this is a reasonable setting to study. This idea seems similar to smooth entropies, especially the smooth min-entropy in the case of state discrimination. It would be interesting to know whether these settings are related. Another question is whether classical measurements (post-processing of a single projective measurement) could be replaced  by compatibility of measurements (post-processings of a single POVM) in the third point listed above. 
+to be fulfilled only on average over the rounds. So this is a reasonable setting to study. This idea seems similar to smooth entropies, especially the smooth min-entropy in the case of state discrimination. It would be interesting to know whether these settings are related. Another question is whether classical measurements (post-processing of a single projective measurement) could be replaced  by compatibility of measurements (post-processings of a single POVM) in the third point listed above. 
 
          This is a reasonable proposal for a semi-device independent framework, which has some advantages over existing
-ones. The results are interesting, but limited to performances of some particular protocols, which may not be of overal
+ones. The results are interesting, but limited to performances of some particular protocols, which may not be of overall
 interest for TQC audience.
   
 
@@ -211,9 +213,12 @@ interest for TQC audience.
 
          A semi-device independent scenario for self-testing of all pure entangled states is proposed, based on quantum steering. An ideal steering assemblage is found that self-tests any pure entangled qudit state.  For maximally entangled states robustness bounds are found.
 
-         The method in the first part resembles the one used in the device-independent setting [17], with tilted steering inequalities instead of tilted CHSH. The second part adopts the methods of [28] where robust asemblage-based self-testing of qubit maximally entangled states is considered. The steering based approach has the advantage over device independent self-testing that exact robustness bounds can be found.
+         The method in the first part resembles the one used in the device-independent setting [17], with tilted steering inequalities instead of tilted CHSH. The second part adopts the methods of [28] where robust assemblage-based self-testing of qubit maximally entangled states is considered. The steering based approach has the advantage over device independent self-testing that exact robustness bounds can be found.
 
-         This is a solid piece of work, largerly extending previous results. However, it seems that no really new techniques or methods are introduced here.
+         This is a solid piece of work, largely extending previous results. However, it seems that no really new techniques or methods are introduced here.
+
+
+         (subreviewer: M. Hoban?)
 
          [arxiv:2007.04020](https://arxiv.org/pdf/2007.04020.pdf)
          
@@ -233,7 +238,26 @@ based on a result from classical probability theory, the classical agreement the
     1. Ravishankar Ramanathan, Michal Banacki, Ricard Rodriguez and Pawel Horodecki. Single trusted qubit is necessary and  sufficient for quantum realisation of extremal no-signaling correlations  (165)
 
 
-* Continuous variables
+         There are two main results in this paper,  extending a no-go theorem stating that extremal nonlocal boxes in a Bell scenario cannot be obtained by quantum correlations:
+
+         - it is proved that this remains true also in the sequential Bell nonlocality framework, where each party
+           performs measurements in a sequential manner. This leads to a more complicated time-ordered no-signaling
+structure. 
+
+         - in a three party scenario with one trusted party steered by the two other parties, it is shown that  nonlocal extremal assemblages can be obtained from any pure genuine three party entangled state. It was previously known that any bipartite steering assemblage of quantum states can be obtained by quantum steering but there are three party assemblages that cannot be.
+
+         This paper extends and completes previous results, important in device-independent and semi-device independent
+quantum cryptography. The structure of the sequential bipartite no-signaling polytope and the
+three party no-signaling assemblages is also elucidated, which is interesting also for quantum foundations. Could be a
+nice talk.
+
+         [arxiv:2004.14782](https://arxiv.org/abs/2004.14782) 
+
+
+
+  
+
+* **Continuous variables**
 
     1. Giovanni Ferrari, Ludovico Lami, Thomas Theurer and Martin Plenio. Asymptotic state transformations of continuous
        variable resources (92)
@@ -255,10 +279,19 @@ based on a result from classical probability theory, the classical agreement the
     1. Soumya Das, Goutam Paul and Anindya Banerji. Hyper-hybrid entanglement and the fidelity of quantum teleportation
        limit each other (156)
 
+         (subreviewer: Marek Kus ??)
+
+
     1. Kai Meinerz, Chae-Yeun Park and Simon Trebst. Scalable Neural Decoder for Topological Surface Codes (164)
 
+
+          (subreviewer: Jens Eisert ???)
+         
     1. Angelo Lucia, David Pérez-García and Antonio Pérez-Hernández. Thermalization in Kitaev’s quantum double models
        via Tensor Network techniques (220)
+
+
+         (subreviewer: B. Brown (?!!))
 
 
 
