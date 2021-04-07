@@ -259,15 +259,53 @@ nice talk.
 
 * **Continuous variables**
 
-    1. Giovanni Ferrari, Ludovico Lami, Thomas Theurer and Martin Plenio. Asymptotic state transformations of continuous
-       variable resources (92)
-
-    1. Ludovico Lami. Quantum data hiding with continuous variable systems (238)
+    1.   Giovanni Ferrari, Ludovico Lami, Thomas Theurer and Martin Plenio. Asymptotic state transformations of continuous variable resources (92)
 
 
-* Relative entropy
+         In this work, upper bounds on transformation rates in resource theories are obtained in the continuous variable
+setting. This is done by using resource monotones that satisfy certain properties. In contrast to finite dimensional
+systems where asymptotic continuity of the measures is employed, this property is typically not available and has to be
+replaced with other suitable properties. The results are applied to resource theories of nonclassicality, quantum
+entanglement and quantum thermodynamics, obtaining rigorous bounds on the transformation rates for the first time. In
+the case of nonclassicality, new resource measures are introduced, their properties are proved and useful bounds are
+provided. 
 
-    1. Nicholas Laracuente. Quasi-factorization and Multiplicative Comparison of Subalgebra-Relative Entropy (209)
+
+         The results are strong and fundamental for resource theories in infinite dimensional systems. Three important
+applications are demonstrated but the results are widely applicable in the framework of CV systems. I strongly support
+acceptance for a talk.
+  
+
+         [arxiv:2010.00044](https://arxiv.org/abs/2010.00044)
+
+
+    1.   Ludovico Lami. Quantum data hiding with continuous variable systems (238)
+
+         
+         In this paper, data hiding is investigated in the continuous variable setting. The results can be divided into
+two parts:
+
+         - maximum efficiency of data hiding agains LOCC measurements is bounded for states satisfying an energy
+           constraint. It is shown that in this case, the energy constraint plays a similar role as the dimension in
+finite dimensional schemes. The result is obtained by finding an upper bound on the error induced by a continuous variable teleportation protocol.
+
+         - data hiding against GOCC is studied. An explicit scheme is obtained that achieves data hiding with arbitrary
+           efficiency. This scheme is achieved for a single mode system. Two other examples are studied, showing that in
+some cases the GOCC measurements are reasonably accurate and no data hiding is present.
+
+
+         I find these results very interesting and timely, given the recent interest and progress in continuous variable
+systems. However, it may have a limited impact given the audience of TQC. Taking into account the high number and
+quality of other contribution, I tend to weak accept. Hmmm.
+
+
+         [arxiv:2102.01100](https://arxiv.org/abs/2102.01100)
+     
+
+
+* **Relative entropy**
+
+    1.   Nicholas Laracuente. Quasi-factorization and Multiplicative Comparison of Subalgebra-Relative Entropy (209)
 
 
 * Cojaviem
