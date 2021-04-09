@@ -5,7 +5,7 @@ title: Not my own papers
 ### A
 [albert2019asymptotics](albert2019asymptotics),
 [alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [BOOK_alfsen1971compact](BOOK_alfsen1971compact), [BOOK_alfsen1976noncommutative](BOOK_alfsen1976noncommutative), [BOOK_alfsen2003geometry](BOOK_alfsen2003geometry), [alfsen1979onnoncommutative](alfsen1979onnoncommutative), [araki1982positive](araki1982positive),
-[arveson2007theasymptotic](arveson2007theasymptotic), [arveson2008lifting](arveson2008lifting), [aubrun2017alice](aubrun2017alice), [aubrun2018universal](aubrun2018universal), 
+[arveson1969subalgebras](arveson1969subalgebras),  [arveson2007theasymptotic](arveson2007theasymptotic), [arveson2008lifting](arveson2008lifting), [aubrun2017alice](aubrun2017alice), [aubrun2018universal](aubrun2018universal), 
 
 ### B
 [baez2011acharacterization](baez2011acharacterization), [bardet2017estimating](bardet2017estimating), 
@@ -49,7 +49,8 @@ title: Not my own papers
 [gour2018quantum](gour2018quantum), [gour2019comparison](gour2019comparison),
 [gour2019theentanglement](gour2019theentanglement),
 [gour2020dynamical](gour2020dynamical), [gu2019interpolation](gu2019interpolation), 
-[guerini2017operational](guerini2017operational),   [gudder2018convex](gudder2018convex), 
+[guerini2017operational](guerini2017operational),   [gudder2018convex](gudder2018convex),
+[gudder2006compression](gudder2006compression) 
 
 ### H
 

@@ -18,7 +18,8 @@ title: Spectrality in order unit spaces and effect algebras
   [BOOK_alfsen1971compact](BOOK_alfsen1971compact), [BOOK_alfsen1976noncommutative](BOOK_alfsen1976noncommutative)
       
 
-* Spectral effect algebras: [pulmannova2006effect](pulmannova2006effect),  [gudder2018convex](gudder2018convex)  
+* Spectral effect algebras: [pulmannova2006effect](pulmannova2006effect),  [gudder2018convex](gudder2018convex),
+  [gudder2006compression](gudder2006compression)  
 
 * Sequential effect algebras:  [wetering2018sequential](wetering2018sequential), [wetering2018three](wetering2018three),
   [westerbaan2020thethree](westerbaan2020thethree)
