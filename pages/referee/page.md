@@ -1,6 +1,6 @@
 title: To referee
 ---
-* Due [12.4.2021](REF_plosker2020) (revision)
+
 * Due [1.6.2021](REF_beneduci2021)
 
 
@@ -25,7 +25,7 @@ title: To referee
 
 1. <del>Due [27.3.2021](REF_hatano2021)</del> Done.
 
-
+1.<del> Due [12.4.2021](REF_plosker2020) (revision)</del> Done.
 
 ### Reviews finished 2020
 
