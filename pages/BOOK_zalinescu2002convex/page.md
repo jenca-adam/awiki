@@ -5,6 +5,4 @@ title: Zalinescu Convex analysis
 
 C. Zalinescu, Convex analysis in general vector spaces. World scientific, 2002.
 
-[link](https://drive.google.com/file/d/0B0mEhqjgzvQ4dld4RTVKVk51dEU/view?usp=sharing)
-
-
+[link](https://drive.google.com/file/d/18U3i6XJWoXPfcux7yizsSrIbJAvoJEvA/view?usp=sharing)

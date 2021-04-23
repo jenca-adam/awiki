@@ -130,5 +130,7 @@ In von Neumann algebras:
 Papers: 
 
 * (finite dim) Mosonyi and Ogawa, 
-* (infinite dim) Jaksic and Pillet??, last part of [berta2018renyi](berta2018renyi)
-* Relative entropy: proper formula [hiai1991theproper](hiai1991theproper)
+* (infinite dim) JOPS [jaksic2012quantum](jaksic2012quantum), last part of [berta2018renyi](berta2018renyi)
+* Relative entropy: proper formula [hiai1991theproper](hiai1991theproper)    
+* Needed: [large deviations](https://www.stat.cmu.edu/~cshalizi/754/2006/notes/) (e.g.)
+

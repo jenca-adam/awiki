@@ -1,121 +1,81 @@
-title: Project General probabilistic theories
----
-**About:** General probabilistic theories, incompatibility: characterization, degree, witnesses  
 
-**People:**
-
-* Martin Plávala
-* Teiko Heinosaari, Alessandro Toigo, Claudio Carmelli
-* Andreas Bluhm, Ion Nechita
-
+title: General Probabilistic Theories (GPT)
 ---
 
-## A. Incompatibility
+*  **Description:** Incompatibility and related features in GPTs, obtained from the theory of ordered vector spaces and
+   their tensor products. Incompatibility witnesses. Related features such as steering, Bell inequalities, CHSH. The GPT of channels.
+*  **People:** Ion Nechita, Andreas Bluhm, Martin Plávala  
+*  **Related to:**  [comparison](PROJECT_comparison), [NC category](PROJECT_nc)   
+*  **Folder:** /work/compatibility, /work/chsh 
+
+---
 
 
-### 1. Witnesses, spectrahedra, cross norms
+## Basic references
 
-**people:** Ion, Andreas
 
-**directory:/work**/compatibility/witnesses
+* General:  [aubrun2017alice](aubrun2017alice),... (!)
+        
+* Relation to tensor products: [lami2018ultimate](lami2018ultimate), [aubrun2018universal](aubrun2018universal)
 
-* my notes on [spectrahedra](PROJECT_gpt/aj_spectrahedra.pdf)
-* notes by Andreas and Ion on spectrahedra and [gpt, v1](PROJECT_gpt/bluhm.pdf), [updated, v2](PROJECT_gpt/bluhm2.pdf)
+* Incompatibility: [bluhm2018joint](bluhm2018joint) spectrahedra, [plavala2016allmeasurements](plavala2016allmeasurements) entanglement implies incompatibility
+
+* Operator spaces/systems: [paulsen2002completely](BOOK_paulsen2002completely),
+[paulsen2011operator](paulsen2011operator), [farenick2012operator](farenick2012operator), [paulsen1996themaximal](paulsen1996themaximal)
+
+* Spectrahedra/matrix convex sets: [passer2018minimal](passer2018minimal), [fritz2017spectrahedral](fritz2017spectrahedral)
+
+* p-summing norm: [gordon1969onpabsolutely](gordon1969onpabsolutely)
+
+---
+
+## Research
+
+
+### Notes
+
+* my notes on [spectrahedra](PROJECT_gpt/aj_spectrahedra.pdf)    
+* notes by Andreas and Ion on spectrahedra and [gpt, v1](PROJECT_gpt/bluhm.pdf)   
 * my notes on witnesses and [symmetric state spaces](PROJECT_gpt/notes_symmetric.pdf)
 
-**paper**
+With Teiko et al (witnesses by testing problems)
 
-[bluhm2020incompatibility](bluhm2020incompatibility)
-
-
-**conference abstracts**
-
-* [QIP](PROJECT_gpt/qip_abstract.pdf)    
-* [AQIS](PROJECT_gpt/aqis_abstract.pdf)
+* notes on [witnesses](PROJECT_gpt/toigo.pdf) (Teiko)    
+* my notes on [witnesses](PROJECT_gpt/aj_witnesses.pdf)     
 
 
-**further questions:**
+### Todo
+
+* incompatibility of qubit effects and 1-summing norm: see the paper [gordon1969onpabsolutely](gordon1969onpabsolutely)
+* relations of incompatibility, matrix convex sets, operator systems
+
+### Ideas
+
+---
+
+## Finished
+
+### Papers
+
+* [jencova2018incompatible](jencova2018incompatible) (published PRA)  
+* [jencova2019onthestructure](jencova2019onthestructure) (published PRA) bipartite channels maximally violating CHSH
+* [bluhm2020incompatibility](bluhm2020incompatibility) (submitted to CMP)
+
+
+### Talks/posters
+
+* My [Genoa 2018](/static/pdf/genoa2018.pdf) talk
+* My [Lyon 2019](/static/pdf/lyon2019.pdf) talk
+* [QIP 2020](PROJECT_gpt/qip_abstract.pdf) poster
+* [AQIS 2020](PROJECT_gpt/aqis_abstract.pdf) talk (Andreas)
+
+
+---
+
+## Ideas for further research
 
 * incompatibility on $W$ - the min tensor product of two quantum state spaces (two qubits)
 * relations of incompatibility, free spectrahedra, operator systems and norms - one should write some notes on this
 * a characterization similar to tensor norms for measurements with more outcomes
-* incompatibility of qubit effects and 1-summing norm: see the paper [gordon1969onpabsolutely](gordon1969onpabsolutely)
 
 
-
-
-
-
-
-
-### 2. Witnesses by testing problems
-
-**people:**  Teiko, Alessandro, Claudio
-
-* their notes on [witnesses](PROJECT_gpt/toigo.pdf) 
-* their published papers:     
-* my notes on [witnesses](PROJECT_gpt/aj_witnesses.pdf)
-
-
-
-### 3. Characterization as ETB maps, witnesses:
-
-**directory:/work**/compatibility/nonclassical 
-
-[jencova2018incompatible](jencova2018incompatible) (published)
-
----
-
-## B. CHSH
-
-**people:**  Martin
-
-**directory /work** /chsh  
-
-* Implementations of the PR-box by quantum channels [arxiv paper](jencova2019onthestructure)
-
----
-
-## To read
-
-[aubrun2018universal](aubrun2018universal) 
-
-[aubrun2017alice](aubrun2017alice)
-
-[bluhm2018joint](bluhm2018joint)
-
-[lami2018ultimate](lami2018ultimate)
-
-**Incompatibility**
-
-[plavala2016allmeasurements](plavala2016allmeasurements)
-
-
-**Operator spaces/systems**
-
-[paulsen2002completely](BOOK_paulsen2002completely)
-
-[paulsen2011operator](paulsen2011operator)
-
-[farenick2012operator](farenick2012operator)
-
-[paulsen1996themaximal](paulsen1996themaximal)
-
-**Spectrahedra/matrix convex sets**
-
-[passer2018minimal](passer2018minimal)
-
-[fritz2017spectrahedral](fritz2017spectrahedral)
-
----
-
-## Talks
-
-* My [Genoa 2018](/static/pdf/genoa2018.pdf) talk
-* My [Lyon 2019](/static/pdf/lyon2019.pdf) talk
-
----
-
-## Published papers
-
-[jencova2018incompatible](jencova2018incompatible) (published)

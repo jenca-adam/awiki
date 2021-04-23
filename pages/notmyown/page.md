@@ -62,6 +62,8 @@ title: Not my own papers
 ### I
 
 ### J
+
+[jaksic2012quantum](jaksic2012quantum)
 [jenca2015blocksof](jenca2015blocksof),
 [jenca2014effectalgebras](jenca2014effectalgebras),
 [jenca2020derived](jenca2020derived),

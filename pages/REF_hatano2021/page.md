@@ -16,3 +16,11 @@ paper by Pusz and Woronowicz: [link](https://drive.google.com/file/d/11opNEC8JSv
 [report](REF_hatano2021/report.pdf)
 
 **Decision:** revise
+
+---
+
+**Revision:** [revised](REF_hatano2021/revised.pdf)
+
+**Due:** 16.4. 2021
+
+
