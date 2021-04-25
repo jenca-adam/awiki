@@ -32,6 +32,9 @@ in dynamical resource theories but also in entanglement theory of states.
 
          **score:2**    
 
+         **Comment:** I agree that #86 deals with general dynamical resource theories and includes some aspects of dynamical entanglement as a special case. I personally like that paper very much. However, there are important differences to #4. The general approach in #86 only studies _maximal_ sets of free superchannels, that is, all superchannels that preserve free channels are considered free. The setting of #4 allows to study more refined sets of free superchannels, including the subtleties of using parallel or sequential schemes. For example the adaptive schemes consisting of LOCC channels  seem more reasonable than the maximal free set. So while #86 gives a unified theory for one-shot dynamical resource manipulation, #4 is more concentrated on entanglement, studies also the asymptotic setting and also touches upon the richness of the theory as compared to the static case.
+
+
 
 
     2.   Ryuji Takagi. Optimal resource cost for error mitigation (57)
