@@ -50,6 +50,11 @@ Junge and Xu [inequalities](junge2003noncommutative) extensions of conditional e
     - Zalinescu [convex analysis](BOOK_zalinescu2002convex)
     - Diestel [geometry of Banach spaces](BOOK_diestel1975geometry)
 
+* conditional expectations, index
+
+    - [kosaki1986extension](kosaki1986extension) index
+    - [hiai1988minimizing](hiai1988minimizing) index
+    - [haagerup1979operator](haagerup1979operator) operator valued weights
 
 * further [bibliography](BIBs)
 
@@ -133,4 +138,3 @@ Papers:
 * (infinite dim) JOPS [jaksic2012quantum](jaksic2012quantum), last part of [berta2018renyi](berta2018renyi)
 * Relative entropy: proper formula [hiai1991theproper](hiai1991theproper)    
 * Needed: [large deviations](https://www.stat.cmu.edu/~cshalizi/754/2006/notes/) (e.g.)
-
