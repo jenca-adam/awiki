@@ -2,8 +2,9 @@ title: To referee
 ---
 
 * Due [16.4.2021](REF_hatano2021)(revision)    
-* Due [12.5.2021](REF_hollands2021)(revision)
-* Due [1.6.2021](REF_beneduci2021)
+* Due [1.6.2021](REF_beneduci2021)    
+* Due [21.6.2021](REF_duarte2021)
+
 
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
@@ -29,7 +30,7 @@ title: To referee
 
 1. <del> Due [12.4.2021](REF_plosker2020) (revision)</del> Done.
 
-
+1.  <del>Due [12.5.2021](REF_hollands2021)(revision)</del> Done.
 
 ### Reviews finished 2020
 
