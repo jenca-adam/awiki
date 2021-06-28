@@ -33,7 +33,7 @@ title: To referee
 
 1. <del> Due [1.6.2021](REF_beneduci2021)</del> Done. 
 
-1.<del> Due [21.6.2021](REF_duarte2021)   <\del> Done.
+1.<del> Due [21.6.2021](REF_duarte2021)   </del> Done.
 
 
 ### Reviews finished 2020
