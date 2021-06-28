@@ -10,6 +10,6 @@ title: Duarte, compatibility and divisibility of quantum channels, 2021
 [file](REF_duarte2021/file.pdf)
 
 
-**Decision:** 
+**Decision:** reject 
 
 
