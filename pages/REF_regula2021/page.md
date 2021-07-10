@@ -16,3 +16,9 @@ title: Regula, Takagi, Gu, 2021
 
 **Decision:** accept
 
+[revision](REF_regula2021/revision.pdf)
+
+[response](REF_regula2021/response.pdf)
+
+**Revised Due:** 6.8.2021
+
