@@ -10,6 +10,8 @@ title: Nakahira, Discrimination of quantum processes, 2021
 [file](REF_nakahira2021/file.pdf)    
 [supplemental material](REF_nakahira2021/supplemental.pdf)
 
-**Decision:** 
+[report](REF_nakahira2021/report.pdf)
+
+**Decision:** revise and resubmit to PRA (my decision)
 
 
