@@ -1,7 +1,6 @@
 title: To referee
 ---
 * Due [16.4.2021](REF_hatano2021)(revision)       
-* Due [1.7.2021](REF_nakahira2021)    
 * Due [15.7.2021](REF_kim2021)    
 * Due [6.8.2021](REF_regula2021)(revision)
 
@@ -36,6 +35,7 @@ title: To referee
 
 1. <del> Due [21.6.2021](REF_duarte2021)   </del> Done.
 
+1.<del>Due [1.7.2021](REF_nakahira2021)   </del> Done. 
 
 ### Reviews finished 2020
 
