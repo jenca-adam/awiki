@@ -35,7 +35,9 @@ title: To referee
 
 1. <del> Due [21.6.2021](REF_duarte2021)   </del> Done.
 
-1.<del>Due [1.7.2021](REF_nakahira2021)   </del> Done. 
+1. <del>Due [1.7.2021](REF_nakahira2021)   </del> Done.
+
+1. <del>Due [20.7.2021](REF_gao2020) (revision) </del> Done. 
 
 ### Reviews finished 2020
 
