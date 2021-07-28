@@ -31,7 +31,7 @@ title: Not my own papers
 [faulkner2020approximate](faulkner2020approximate),
 [fagnola2003transience](fagnola2003transience), [fang2020nogo](fang2020nogo),
 [farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator),
-[foulis2003compressible](foulis2003compressible), [foulis2003compressible](foulis2003compressible),
+[foulis2003compressible](foulis2003compressible), [foulis2004spectral](foulis2004spectral),
 [foulis2008spectral](foulis2008spectral), [foulis2006monotone](foulis2006monotone),
 [foulis2005compression](foulis2005compression), [foulis2004compressions](foulis2004compressions),
 [foulis2010type](foulis2010type), 
