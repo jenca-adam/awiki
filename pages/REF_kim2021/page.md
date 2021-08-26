@@ -10,6 +10,8 @@ title: Kim et al., Right Renyi mean
 [file](REF_kim2021/file.pdf)
 
 
-**Decision:** 
+**Decision:** major revision
+
+[report](REF_kim2021/report.pdf) 
 
 
