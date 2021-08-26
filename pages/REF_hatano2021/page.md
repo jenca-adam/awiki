@@ -23,4 +23,8 @@ paper by Pusz and Woronowicz: [link](https://drive.google.com/file/d/11opNEC8JSv
 
 **Due:** 16.4. 2021
 
+**Revised report:** [report](REF_hatano2021/revised_report.pdf)
+
+**Decision:** Accept after language check
+
 
