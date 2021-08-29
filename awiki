@@ -6,7 +6,7 @@ import mimetypes
 from bs4 import BeautifulSoup
 from stat import S_ISREG, ST_CTIME, ST_MODE
 
-from flask import Flask,request,url_for,redirect,Response,abort
+from flask import Flask,request,url_for,redirect,Response,abort,render_template
 from wtforms import Form,validators,TextAreaField,StringField
 import yaml
 import markdown
@@ -120,14 +120,16 @@ def edit_page(pagename):
     t=env.get_template('edit_page.html')
     return t.render(meta=mdf.meta,content=mdf.html,form=form)
 
-        
+@app.route('/add/')
+def add():
+    return render_template('add.html')
 @app.route('/addpage/<path:id>')
 def auth(id):
     global addpageform
     env=Environment(loader=FileSystemLoader('templates')) 
     beh=pagetools.add(id)
     if beh['status']=='error':
-        return env.get_template('file_exists.html').render(msg=beh['response']['message'],type=beh['response']['type'])
+        return render_template('file_exists.html',msg=beh['response']['message'],type=beh['response']['type'])
     return redirect('/')
 @app.route('/remove/<string:pagename>',methods=['POST','GET'])
 def remove(pagename):

@@ -6,7 +6,7 @@ import re
 import colorama
 import os
 import shutil
-from . import arxiv
+from . import arxiv,special
 from .steal import steal_bib
 BLUE=colorama.Fore.BLUE
 RESET=colorama.Style.RESET_ALL
@@ -55,7 +55,12 @@ def loadpage(id):
     link=id
     os.chdir(f'{base}/pages')
     print(id)
-    page=arxiv.ArXivPage(id)
+    try:
+
+        page=arxiv.ArXivPage(id)
+    except IndexError:
+        special.home()
+        return {'status':'error','response':{'message':'No such page','type':id}}
     print(f'{BOLD}Start of informative output{RESET}')
     print(page.title)
     print(page.month,page.year)
@@ -78,7 +83,7 @@ def loadpage(id):
         os.chdir(os.path.expanduser('~')+'/work/awiki/pages/'+name)
     except FileExistsError as err:
         print(f'{RED}dir {name} already exists.Skipping.{RESET}')
-        os.chdir(base)
+        special.home()
         return {'status':'error','response':{'message':str(err),'type':'FileExistsError'}}
     linkmatch=re.search(linkstr_pattern,link)
     linkid=linkmatch.groups()[0]

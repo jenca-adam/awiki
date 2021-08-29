@@ -4,10 +4,12 @@ def search(q):
     results=[]
     os.chdir(os.path.expanduser('~')+'/work/awiki/pages/')
     for work in os.listdir():
+        if work in ['myown','notmyown','index']:continue
         try:
             os.chdir(work)
         except NotADirectoryError:
             continue
+        
         try:
             with open('page.md')as f:
                 m=f.read() 
