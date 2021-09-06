@@ -7,9 +7,16 @@ title: Duarte, compatibility and divisibility of quantum channels, 2021
 
 **Due:** 21.6.2021
 
-[file](REF_duarte2021/file.pdf)
+[file](REF_duarte2021/file.pdf)    
+[report](REF_duarte2021/report.pdf)
 
 
-**Decision:** reject 
+**Decision:** reject
+
+[revision](REF_duarte2021/revised.pdf)    
+[response](REF_duarte2021/response.pdf)
+
+
+ 
 
 
