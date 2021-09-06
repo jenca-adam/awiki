@@ -9,5 +9,6 @@ pre Python 3
 * LXML
 * Httplib2
 * Colorama
+* Selenium s `geckodriver`
 Wiki bezi na http://localhost:5000/
 

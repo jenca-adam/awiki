@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+import os
+import platform 
+from httplib2 import Http
+from pathlib import Path
+class _SetterUp:
+    '''geckodriver'''
+    SYSTEM=platform.system()
+    if SYSTEM=='Windows':
+        GECKODRIVER_URL="https://github.com/jenca-adam/jenca-adam.github.io/raw/master/projects/weather/extras/bin/win/geckodriver.exe"
+    elif SYSTEM == 'Linux':
+        GECKODRIVER_URL="https://github.com/jenca-adam/jenca-adam.github.io/raw/master/projects/weather/extras/bin/linux/geckodriver"
+    else:
+        GECKODRIVER_URL="https://github.com/jenca-adam/jenca-adam.github.io/raw/master/projects/weather/extras/bin/mac/geckodriver"
+    
+    HOME=str(Path.home())
+    INSTALL_DIR=os.path.join(HOME,'.local/bin')
+    if '.local' not in os.listdir(HOME):
+        p=os.getcwd()
+        os.chdir(HOME)
+        os.makedirs('.local/bin')
+        os.chdir(p)
+    elif 'bin' not in os.listdir(os.path.join(HOME,'.local')):
+        p=os.getcwd()
+        os.chdir(HOME)
+        os.makedirs('.local/bin')
+        os.chdir(p)
+    if INSTALL_DIR not in os.environ["PATH"].split(os.pathsep):
+        os.environ["PATH"]+=os.pathsep+INSTALL_DIR
+    GECKODRIVER_INSTALL=os.path.join(INSTALL_DIR,GECKODRIVER_URL.split('/')[-1])
+    def install_gecko(self):
+        h=Http()
+        r,content=h.request(self.GECKODRIVER_URL)
+        with open(self.GECKODRIVER_INSTALL,'wb')as f:
+            f.write(content)
+        os.chmod(self.GECKODRIVER_INSTALL,0o777)
+setup=_SetterUp()
+if __name__=='__main__':
+    setup.install_gecko()
+

@@ -17,7 +17,6 @@ title: My own papers
 1. [jencova2014base](jencova2014base)
 1. [carbone2020onperiod](carbone2020onperiod)
 1. [jencova2017conditions](jencova2017conditions)
-1. [jencova201]()
 1. [jencova2006arelation](jencova2006arelation)
 1. [jencova2017onmonoids](jencova2017onmonoids)
 1. [puchala2015exploring](puchala2015exploring)
@@ -32,3 +31,5 @@ title: My own papers
 1. [jencova2003affineconnections](jencova2003affineconnections)
 1. [jencova2003flatconnections](jencova2003flatconnections)
 1. [jencova2006sufficiency](jencova2006sufficiency)
+1. [jencova2021geometric](jencova2021geometric)
+1. [jencova2003geodesic](jencova2003geodesic)
