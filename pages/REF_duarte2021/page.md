@@ -1,6 +1,5 @@
 title: Duarte, compatibility and divisibility of quantum channels, 2021
 ---
-
 **Paper:** C. Duarte, L. Catani, R.C. Drummond, Relating compatibility and divisibility of quantum channels
  
 **Journal:** Jornal of Physics A
@@ -13,10 +12,12 @@ title: Duarte, compatibility and divisibility of quantum channels, 2021
 
 **Decision:** reject
 
+### Revision
+
+**Due:** 17.9.2021
 [revision](REF_duarte2021/revised.pdf)    
 [response](REF_duarte2021/response.pdf)
 
 
  
-
 
