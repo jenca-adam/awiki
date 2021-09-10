@@ -14,10 +14,10 @@ title: Duarte, compatibility and divisibility of quantum channels, 2021
 
 ### Revision
 
-**Due:** 17.9.2021
+**Due:** 17.9.2021    
+
 [revision](REF_duarte2021/revised.pdf)    
 [response](REF_duarte2021/response.pdf)
 
 
  
-
