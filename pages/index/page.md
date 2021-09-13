@@ -35,6 +35,11 @@ title: My work
 
 ---
 
+## Miscellanea
+
+* [Quantum information geometry](MISC_qit) preparation for a talk
+
+
 ## Interesting
 
 [fritz2020representable](fritz2020representable)    (Markov categories, comparison of classical experments, BSS theorem in category theory.    
