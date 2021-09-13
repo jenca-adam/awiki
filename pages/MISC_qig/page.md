@@ -1,4 +1,3 @@
-
 title: Quantum information geometry
 ---
 
@@ -6,6 +5,9 @@ title: Quantum information geometry
 
 
 ## Basic references
+
+Labuschagne and Majewski:  [labuschagne2009mapsonnoncommutative](labuschagne2009mapsonnoncommutative)    
+                                                     
 
 
 
