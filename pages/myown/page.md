@@ -33,3 +33,5 @@ title: My own papers
 1. [jencova2006sufficiency](jencova2006sufficiency)
 1. [jencova2021geometric](jencova2021geometric)
 1. [jencova2003geodesic](jencova2003geodesic)
+1. [jencova2005aconstruction](jencova2005aconstruction)
+1. [jencova2010onquantum](jencova2010onquantum)

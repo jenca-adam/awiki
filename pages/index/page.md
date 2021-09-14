@@ -37,7 +37,7 @@ title: My work
 
 ## Miscellanea
 
-* [Quantum information geometry](MISC_qit) preparation for a talk
+* [Quantum information geometry](MISC_qig) preparation for a talk
 
 
 ## Interesting

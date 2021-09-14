@@ -92,11 +92,14 @@ title: Not my own papers
 [kuramochi2017minimal](kuramochi2017minimal), [kuramochi2020directed](kuramochi2020directed), [kummerer1979mean](kummerer1979mean), [kimura2010distinguishability](kimura2010distinguishability), [kosaki1984applications](kosaki1984applications), [kosaki1984applicationsuc](kosaki1984applicationsuc),  [kubicki2019resource](kubicki2019resource), 
 
 ### L
+[labuschagne2012acrossed](labuschagne2012acrossed),
+[labuschagne2009mapsonnoncommutative](labuschagne2009mapsonnoncommutative),
 
 [leppajarvi2021postprocessing](leppajarvi2021postprocessing), [lami2018ultimate](lami2018ultimate),[lami2018nonclassical](lami2018nonclassical), [liu2019operational](liu2019operational), [lecam1964sufficiency](lecam1964sufficiency), [leditzky2017data](leditzky2017data), [liu2019resource](liu2019resource)
 
 
 ### M
+[majewski2015whyareorlicz](majewski2015whyareorlicz),
 [mosonyi2018divergence](mosonyi2018divergence),
 
 
@@ -122,6 +125,7 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), 
 
 ### S
+[streater2004quantum](streater2004quantum),
 
 
 [skrzypczyk2019robustness](skrzypczyk2019robustness),
