@@ -12,6 +12,15 @@ title: Nakahira, Discrimination of quantum processes, 2021
 
 **Decision:** revise and resubmit to PRA (my decision)
 
+### Revision
+
 [revision](REF_nakahira2021/revised.pdf)    
 revised [supplemental material](REF_nakahira2021/supplemental_revised.pdf)   
-[response](REF_nakahira2021/response.pdf)
+[response](REF_nakahira2021/response.pdf)    
+
+**Due:** 20.9.2021
+
+[report](report_revised.pdf)
+
+
+**Decision:** accept

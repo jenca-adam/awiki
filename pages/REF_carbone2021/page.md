@@ -10,7 +10,9 @@ Large Deviations for Homogeneous Open Quantum Walks
 
 [file](REF_carbone2021/file.pdf)
 
+[report](REF_carbone2021/report.pdf)
 
-**Decision:** 
+
+**Decision:** Minor revision (my decision)
 
 

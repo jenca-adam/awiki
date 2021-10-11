@@ -3,12 +3,11 @@ title: Carbone&Girotti, Absorption operators, 2020
 
 ## Reference
 
-R. Carbone, F. Girotti, Absorption operators in invariant domains for semigroups of quantum channels, peprint
-
+R. Carbone, F. Girotti, Absorption in invariant domains for semigroups of quantum channels,  Annales Henri Poincaré, 22, pages 2497–2530 (2021)
 
 [file](carbone2020absorption/file.pdf)
 
-[arxiv:??]()
+[link](https://rdcu.be/cySz6)
 
 ---
 
