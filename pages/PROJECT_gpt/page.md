@@ -14,7 +14,7 @@ title: General Probabilistic Theories (GPT)
 ## Basic references
 
 
-* General:  [aubrun2017alice](aubrun2017alice), [alfsen1971compact](alfsen1971compact)
+* General:  [aubrun2017alice](aubrun2017alice), [alfsen1971compact](BOOK_alfsen1971compact)
         
 * Relation to tensor products: [lami2018ultimate](lami2018ultimate), [aubrun2018universal](aubrun2018universal)
 
@@ -53,7 +53,7 @@ With Teiko et al (witnesses by testing problems)
 ### Steering
 
 * there are some new notes on steering in GPTs: steering degree and some integrals over measures on the state space    
-* see the paper [bluhm2021]()
+* see the paper [bluhm2021maximal](bluhm2021maximal)
 
 ---
 
