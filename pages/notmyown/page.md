@@ -29,6 +29,8 @@ title: Not my own papers
 
 
 ### F
+
+[fagnola1999algebraic](fagnola1999algebraic),  
 [faulkner2020approximate](faulkner2020approximate),
 [fagnola2003transience](fagnola2003transience), [fang2020nogo](fang2020nogo),
 [farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator),
