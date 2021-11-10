@@ -18,7 +18,9 @@ title: Preorder and equivalence of quantum channels
 * conditional expectations [kummerer1979mean](kummerer1979mean)
 
 * sufficiency papers [petz1986sufficient](petz1986sufficient), [petz1988sufficiency](petz1988sufficiency),
-  [jencova2006sufficiency](jencova2006sufficiency)
+  [jencova2006sufficiency](jencova2006sufficiency)    
+
+* structure of normal cp maps [fagnola1999algebraic](fagnola1999algebraic)
 
 * comparison papers 
 
