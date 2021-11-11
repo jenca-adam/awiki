@@ -12,7 +12,8 @@ title: L. Lami, CV data hiding, QIP 2022 submission
 [full paper](REF_lami2021/paper.pdf)    
 [arxiv: 2102.01100](https://arxiv.org/abs/2102.01100)
 
-**Remark:** Is this the same as the [TQC21](REF_lami2021/tqc_abstract.pdf)?
+**Remark:** Is this the same as the [TQC21](REF_lami2021/tqc_abstract.pdf)? Seems similar, but points to a different
+paper: [arXiv:2003.08895](https://arxiv.org/abs/2003.08895)
 
 **Decision:** 
 
