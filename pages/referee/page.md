@@ -1,7 +1,7 @@
 title: To referee
 ---
 
-* Due [17.11.2021](REF_lami2021) (QIP talk subreviewer)    
+   
 * Due [29.11.2021](REF_girotti2021) (PhD thesis)    
 * Due [13.12.2021](REF_faulkner2021)    
 * Due [dec. 2021](REF_beneduci2021) (revision)
@@ -55,7 +55,9 @@ title: To referee
 
 1. <del> Due [20.9.2021](REF_nakahira2021) (revision) </del> Done.
 
-1. <del> Due [8.10.2021](REF_carbone2021) </del> Done.
+1. <del> Due [8.10.2021](REF_carbone2021) </del> Done.    
+
+1. <del>* Due [17.11.2021](REF_lami2021) (QIP talk subreviewer) </del> Done.
 
 ### Reviews finished 2020
 
