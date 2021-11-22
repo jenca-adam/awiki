@@ -14,7 +14,7 @@ title: General Probabilistic Theories (GPT)
 ## Basic references
 
 
-* General:  [aubrun2017alice](aubrun2017alice),... (!)
+* General:  [aubrun2017alice](aubrun2017alice), [alfsen1971compact](BOOK_alfsen1971compact)
         
 * Relation to tensor products: [lami2018ultimate](lami2018ultimate), [aubrun2018universal](aubrun2018universal)
 
@@ -49,7 +49,11 @@ With Teiko et al (witnesses by testing problems)
 * incompatibility of qubit effects and 1-summing norm: see the paper [gordon1969onpabsolutely](gordon1969onpabsolutely)
 * relations of incompatibility, matrix convex sets, operator systems
 
-### Ideas
+
+### Steering
+
+* there are some new notes on steering in GPTs: steering degree and some integrals over measures on the state space    
+* see the paper [bluhm2021maximal](bluhm2021maximal)
 
 ---
 
@@ -64,10 +68,14 @@ With Teiko et al (witnesses by testing problems)
 
 ### Talks/posters
 
+* [QPL 2017](/static/pdf/qpl2017.pdf) poster    
+* [Quantum Networks 2017](/static/pdf/qn2017.pdf) poster
 * My [Genoa 2018](/static/pdf/genoa2018.pdf) talk
 * My [Lyon 2019](/static/pdf/lyon2019.pdf) talk
 * [QIP 2020](PROJECT_gpt/qip_abstract.pdf) poster
-* [AQIS 2020](PROJECT_gpt/aqis_abstract.pdf) talk (Andreas)
+* [AQIS 2020](PROJECT_gpt/aqis_abstract.pdf) talk (Andreas)    
+* [Smolenice2020](/static/pdf/smolenice2020.pdf) talk    
+* [QPL2021](/static/pdf/qpl2020.pdf) talk
 
 
 ---

@@ -10,7 +10,7 @@ title: Not my own papers
 ### B
 [baez2011acharacterization](baez2011acharacterization), [bardet2017estimating](bardet2017estimating), 
 [barnum2015entropy](barnum2015entropy), [berta2017onvariational](berta2017onvariational),  [berta2018renyi](berta2018renyi), [bardet2017estimating](bardet2017estimating), [bisio2019theoretical](bisio2019theoretical), [blackwell1951comparison](blackwell1951comparison), 
-[bluhm2018joint](bluhm2018joint), [buscemi2005clean](buscemi2005clean), 
+[bluhm2018joint](bluhm2018joint), [bluhm2021maximal](bluhm2021maximal), [buscemi2005clean](buscemi2005clean), 
 [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
@@ -29,6 +29,8 @@ title: Not my own papers
 
 
 ### F
+
+[fagnola1999algebraic](fagnola1999algebraic),  
 [faulkner2020approximate](faulkner2020approximate),
 [fagnola2003transience](fagnola2003transience), [fang2020nogo](fang2020nogo),
 [farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator),

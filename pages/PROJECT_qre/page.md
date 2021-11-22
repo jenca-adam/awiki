@@ -31,6 +31,7 @@ interpolation.
     - [berta2018renyi](berta2018renyi) - sandwiched Rényi relative entropies, von Neumann algebras
     - [gu2019interpolation](gu2019interpolation) -  sandwiched Rényi relative entropies by Haagerup (quasi)
       $L_p$-spaces with $p>0$.
+ 
 
 * further on Rényi relative entropy:
 
@@ -100,7 +101,9 @@ Finish [jencova2020renyi](jencova2020renyi)!
 * [bedlewo2018](/static/pdf/bedlewo2018.pdf)
 * [cambridge2018](/static/pdf/cambridge2018.pdf)
 * [lodz2018](/static/pdf/lodz2018.pdf)
-* [bilkent2019](/static/pdf/bilkent2019.pdf)
+* [bilkent2019](/static/pdf/bilkent2019.pdf)    
+* [opalg2021](/static/pdf/opalg2021.pdf)
+
 
 
 ---
@@ -137,4 +140,8 @@ Papers:
 * (finite dim) Mosonyi and Ogawa, 
 * (infinite dim) JOPS [jaksic2012quantum](jaksic2012quantum), last part of [berta2018renyi](berta2018renyi)
 * Relative entropy: proper formula [hiai1991theproper](hiai1991theproper)    
-* Needed: [large deviations](https://www.stat.cmu.edu/~cshalizi/754/2006/notes/) (e.g.)
+* Needed: [large deviations](https://www.stat.cmu.edu/~cshalizi/754/2006/notes/) (e.g.)    
+* [mosonyi2021thestrong](mosonyi2021thestrong) infinite dim. Hilbert spaces    
+* [hiai2021quantum](hiai2021quantum) injective von Neumann algebras    
+* maybe can be used to extend to other? [haagerup2010areduction](hagerup2010areduction)
+  [link](https://www.ams.org/journals/tran/2010-362-04/S0002-9947-09-04935-6/S0002-9947-09-04935-6.pdf)
