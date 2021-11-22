@@ -17,7 +17,7 @@ title: Not my own papers
 [carbone2021onageneralized](carbone2021onageneralized),
 [capela2021preprocessing](capela2021preprocessing),
 [carbone2015homogeneous](carbone2015homogeneous), [carbone2016irreducible](carbone2016irreducible),
-[carbone2016open](carbone2016open), [carbone2020absorption](carbone2020absorption), [coecke2016amathematical](coecke2016amathematical), [chiribella2009theoretical](chiribella2009theoretical), [chiribella2011informational](chiribella2011informational), [chiribella2016optimal](chiribella2016optimal), 
+[carbone2016open](carbone2016open), [carbone2021absorption](carbone2021absorption), [coecke2016amathematical](coecke2016amathematical), [chiribella2009theoretical](chiribella2009theoretical), [chiribella2011informational](chiribella2011informational), [chiribella2016optimal](chiribella2016optimal), 
 [chiribella2016quantum](chiribella2016quantum),
 [cirillo2015decompositions](cirillo2015decompositions), [chitambar2019quantum](chitambar2019quantum)
 
