@@ -171,5 +171,5 @@ def ms():
 def index():
     return redirect('/view/index')
 
-app.run(debug=True)
+app.run(debug=True,port=8000)
 
