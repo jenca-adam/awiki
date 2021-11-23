@@ -13,7 +13,7 @@ def steal_bib(arxivid,name):
     time.sleep(1.5)
     citesvg=ffxf('.gs_or_cit')
     citesvg.click()
-    time.sleep(0.5)
+    time.sleep(1)
     bibtexlink=ffxf('a.gs_citi:nth-child(1)')
     bibtexlink.click()
     ffx.switch_to.window(ffx.window_handles[-1])

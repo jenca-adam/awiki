@@ -56,6 +56,7 @@ title: Not my own papers
 [gudder2006compression](gudder2006compression) 
 
 ### H
+[hiai2021quantum](hiai2021quantum),
 
 
 [harremoes2017quantum](harremoes2017quantum),
