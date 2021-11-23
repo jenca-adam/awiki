@@ -20,7 +20,7 @@ dateline_pattern=r'\D*\d+(\D+)(\d+)'
 title_pattern=r'<h1 class="title mathjax"><span class="descriptor">Title\:</span>(\D*)<'
 authors_pattern=r'Authors:(\D*)'
 linkstr_pattern=r'/?(.*?)$'
-h=httplib2.Http()
+h=special.CachedH()
 base=os.getcwd()
 diacritic_dict={
     'á':'a',

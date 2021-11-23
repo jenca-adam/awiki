@@ -1,16 +1,17 @@
-<!doctype html>
-<html>
-<head>
+{%extends "stripbase.html"%}
+{%block meta%}
 <title>Add a page - Awiki</title>
 <script src="/static/js/jquery.js/"></script>
-</head>
-<body>
+{%endblock%}
+{%block head%}
 <h1>Add a page</h1>
+{%endblock%}
+{%block content%}
 <p><span>Page Id:&nbsp;</span><form action="/addpage/" method="GET" id="pform"><input label="Page Id:" type="text"
 id="pageid"></input><input type="submit"></input></form></p>
 <p><a href="/search/">Search for a page on </a><a style="color:darkgreen;font-weight:bolder;text-decoration:none;" href="https://arxiv.org">arXiv</a></p>
 <script>
 $("#pform").submit(function(e){e.preventDefault();location.replace("/addpage/"+$("#pageid").val())})
 </script>
-</body>
+{%endblock%}
 </html>

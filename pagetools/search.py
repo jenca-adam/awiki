@@ -1,7 +1,8 @@
 from httplib2 import Http
 from bs4 import BeautifulSoup as bs
 import re
-h=Http()
+from .special import CachedH
+h=CachedH()
 pattern=r'/abs/(.*?)$'
 def search(query,fields='all'):
     resp,content=h.request(f'https://arxiv.org/search?query={query}&searchtype={fields}')

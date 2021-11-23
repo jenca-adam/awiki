@@ -5,7 +5,7 @@ def add(id):
         return loadpage.loadpage(id)
     except Exception as e:
         special.home()
-        return {'status':'error','response':{'message':str(e),'type':e.__name__}}
+        return {'status':'error','response':{'message':str(e),'type':e.__class__.__name__}}
 def rm(name):
     remove.rm(name)
 def search_arxiv(query,fields='all'):

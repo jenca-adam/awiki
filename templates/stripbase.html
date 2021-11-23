@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Lato%7COpen+Sans&amp;subset=latin-ext" rel="stylesheet"> 
+<link rel="stylesheet" href="/static/css/pocketgrid.min.css">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="shortcut icon" href="/static/favicon/favicon.ico">
+<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+<script type="text/javascript" async
+   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/javascript">
+function postForm(){
+  form=document.getElementById("form")
+  form.submit()
+}
+</script>
+
+<script src="/static/codemirror/codemirror.js"></script>
+<link rel="stylesheet" href="/static/codemirror/codemirror.css">
+<script src="/static/codemirror/mode/markdown/markdown.js"></script>
+<script src="/static/codemirror/dialog.js"></script>
+<link rel="stylesheet" href="/static/codemirror/dialog.css">
+<script src="/static/codemirror/searchcursor.js"></script>
+<script src="/static/codemirror/vim.js"></script>
+{% block meta %}
+{% endblock %}
+</head>
+<body>
+<div id="container">
+<div class="header block" id="header">
+{% block head %}
+{% endblock %}
+</div>
+<div id="content">
+{% block content %}
+{% endblock %}
+</div>
+</div>
+</body>
+</html>

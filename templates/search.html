@@ -1,10 +1,13 @@
-<html>
-<head>
-<title>Search</title>
-</head>
-<body>
+{%extends "stripbase.html"%}
+{%block meta%}
+<title>Search ArXiv</title>
+{%endblock%}
+{%block head%}
+<h1>Search ArXiv</h1>
+{%endblock%}
+{%block content%}
 <form action="/search/" method="POST">
-<p><label for="query">Search query:<input name="query"></p>
+<p><label for="query">Search query:<input name="query" value="{{query}}"></p>
 <label for="fields">Fields:</label>
 <select name="fields">
               <option value="all" selected="selected">All fields</option>
@@ -33,5 +36,4 @@
 </li>
 {%endfor%}
 </ol>
-</body>
-</html>
+{%endblock%}

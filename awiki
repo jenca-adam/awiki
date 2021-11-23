@@ -150,10 +150,16 @@ def search():
     search_t=env.get_template('search.html')
     if request.method=='POST':
         form=request.form
-        results=pagetools.search_arxiv(form['query'],form['fields'])
-        print(results[0][2])
-        return search_t.render(results=results)
-    return search_t.render(results=[[]])
+    else:
+        form=request.args
+    try:
+        print(form['query'])
+        results=pagetools.search_arxiv(form['query'],form.get('fields','all'))
+        #print(results[0][2])
+        return search_t.render(results=results,query=form['query'])
+    except KeyError:
+        pass
+    return search_t.render(results=[[]],query='')
 @app.route('/arxiv/<path:id>')
 def arxivview(id):
     page=pagetools.arxiv.ArXivPage(id)

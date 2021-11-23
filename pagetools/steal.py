@@ -9,8 +9,7 @@ def steal_bib(arxivid,name):
     ffx.get(f'https://arxiv.org/abs/{arxivid}')
     ffxf=ffx.find_element_by_css_selector
     schc=ffxf('.cite-google-scholar')
-    schc.click()
-    ffx.switch_to.window(ffx.window_handles[-1])
+    ffx.get(schc.get_attribute('href'))
     time.sleep(1.5)
     citesvg=ffxf('.gs_or_cit')
     citesvg.click()
