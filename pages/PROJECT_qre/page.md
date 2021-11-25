@@ -78,7 +78,6 @@ Junge and Xu [inequalities](junge2003noncommutative) extensions of conditional e
 
 ### Todo
 
-Finish [jencova2020renyi](jencova2020renyi)!
 
 
 ### Ideas
