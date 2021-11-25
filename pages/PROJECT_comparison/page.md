@@ -1,4 +1,3 @@
-
 title: Comparison of quantum channels
 ---
 
@@ -54,7 +53,7 @@ tools: convex duality, Choi matrices, diagrams.
 
 ### Notes
 
-paper in preparation: [jencova2020ageneral](jencova2020ageneral) an extension of the Banff talk
+
 
 ### Todo
 
@@ -96,7 +95,8 @@ Reading:
 
 * my [ISIT](jencova2016isit) paper    
 * [jencova2015comparison](jencova2015comparison) extension of the ISIT paper (unpublished) 
-* [jencova2014randomization](jencova2014randomization) the first paper  (unpublished)  
+* [jencova2014randomization](jencova2014randomization) the first paper  (unpublished)     
+* [jencova2021ageneral](jencova2021ageneral) an extension of the Banff talk, published in IEEE TIT
 
 
 ### Talks/posters
@@ -124,4 +124,3 @@ Reading:
 
     * [farenick2013approximately](farenick2013approximately) approximate cleanness (*comparison by pre-processings?*)
     * [kubicki2019resource](kubicki2019resource) no-programming theorem and Banach space theory (type 2 constants)
-
