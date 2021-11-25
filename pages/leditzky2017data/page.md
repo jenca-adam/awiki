@@ -1,4 +1,4 @@
-title: Leditzky et al., 2017, equality in DPI for sandwiched Rényi entropy 
+title: "Leditzky et al., 2017, equality in DPI for sandwiched R\xE9nyi entropy"
 ---
 
 ## Reference
@@ -23,5 +23,5 @@ $$
 $$ 
 where $\gamma=\frac{1-\alpha}{2\alpha}$, $\Lambda$ is a quantum channel
 
-* For $\alpha>1$ proved more generally (von Neumann algebras, positive tp maps, approximate version) in 
-[jencova2020renyi (part2)](jencova2018renyi), but not yet for $\alpha<1$. 
+* related  to a more general treatment (von Neumann algebras, positive tp maps, approximate version) in 
+[jencova2021renyi (part2)](jencova2021renyi)?
