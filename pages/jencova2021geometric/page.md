@@ -4,7 +4,7 @@ title: jencova2021geometric
 
 ## Reference
 
-Anna Jenčová, Sylvia Pulmannová;Geometric and algebraic aspects of spectrality in order unit spaces: a comparison;; Feb 2021;
+Anna Jenčová, Sylvia Pulmannová, Geometric and algebraic aspects of spectrality in order unit spaces: a comparison, Journal of Mathematical Analysis and Applications (2021), 125360.
 
 ## Abstract 
 
@@ -21,3 +21,5 @@ spectral while not necessarily Alfsen-Shultz spectral.
     
 
 [arxiv:2102.01628](https://arxiv.org/abs/2102.01628)
+
+[published version](jencova2021geometric/published.pdf)
