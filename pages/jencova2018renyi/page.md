@@ -21,4 +21,4 @@ title: jencova2018renyi
 
 * [Mistakes!!](jencova2018renyi/mistakes.pdf)
 
-* Part 2: [jencova2020renyi](jencova2020renyi) - for $\alpha\in \[1/2,1)$
+* Part 2: [jencova2021renyi](jencova2021renyi) 
