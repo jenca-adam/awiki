@@ -1,4 +1,3 @@
-
 title: Tensor products in effect algebras
 ---
 
@@ -45,7 +44,7 @@ The unit $\eta_E$ is an isomorphism iff $E$ is an interval effect algebra.
 
 ### Papers
 
-* [jencova2020tensor](jencova2020tensor) (published)
+* [jencova2021tensor](jencova2021tensor) (published)
  
 
 ### Talks/posters
