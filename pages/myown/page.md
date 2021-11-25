@@ -5,7 +5,7 @@ title: My own papers
 
 1. [jencova2018incompatible](jencova2018incompatible)
 1. [jencova2020thestructure](jencova2020thestructure)
-1. [jencova2020ageneral](jencova2020ageneral)
+1. [jencova2021ageneral](jencova2021ageneral)
 1. [jencova2020renyi](jencova2020renyi)
 1. [jencova2020tensor](jencova2020tensor)
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
