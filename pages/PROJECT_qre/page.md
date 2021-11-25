@@ -90,7 +90,7 @@ Finish [jencova2020renyi](jencova2020renyi)!
 ### Papers
 
 * [jencova2018renyi](jencova2018renyi) (published in AHP): sandwiched Rényi relative entropy in von Neumann algebras with $\alpha>1$    
-* [jencova2020renyi](jencova2020renyi) (submitted to AHP): a continuation of the above, with $1/2\le \alpha <1$
+* [jencova2021renyi](jencova2021renyi) (submitted to AHP): a continuation of the above, with $1/2\le \alpha <1$
     * feedback: [report1](PROJECT_qre/report1.pdf)
 
 
