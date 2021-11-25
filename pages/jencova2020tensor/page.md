@@ -8,7 +8,6 @@ Jenčová, Anna, and Sylvia Pulmannová. "Tensor product of dimension effect alg
 [arxiv:1902.11031](https://arxiv.org/abs/1902.11031)
 
 
-[published version](jencova2020tensor/published)
-
+[published version](jencova2020tensor/published.pdf)
 
 
