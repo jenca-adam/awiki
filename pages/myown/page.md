@@ -43,11 +43,12 @@ title: My own papers
 
 
 
-1. [jencova2016isit](jencova2016isit)
+1. [jencova2016conditions](jencova2016conditions)    
+1. [jencova2016isit](jencova2016isit)    
+1. [jencova2016ontheconvex](jencova2016ontheconvex)
 
 ### 2015
 
-1. [jencova2015comparison](jencova2015comparison)    
 1. [puchala2015exploring](puchala2015exploring)    
 1. [foulis2015aprojection](foulis2015aprojection)
 
@@ -111,5 +112,3 @@ title: My own papers
 ## Preprints
 
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
-1. [foulis2016aloomis-sikorski](foulis2016aloomis-sikorski)
-1. [jencova2016preservation](jencova2016preservation)

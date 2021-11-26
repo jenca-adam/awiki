@@ -5,8 +5,9 @@ title: jencova2016isit
 
 A. Jenčová, Comparison of quantum channels and quantum statistical experiments, 2016 IEEE International Symposium on Information Theory (ISIT), 2249 - 2253, IEEE Conference Publications, 2016
 
-[file](jencova2016isit/file.pdf)
+[published version](jencova2016isit/published.pdf)
 
+A longer version [arXiv:1512.07016](https://arxiv.org/abs/1512.07016)
 
 ## Content
 
