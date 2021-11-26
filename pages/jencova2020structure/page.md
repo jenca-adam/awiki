@@ -9,7 +9,7 @@ A. Jenčová, M. Plávala, The structure of quantum and classical implementation
 
 **Status**: submitted to PRA, 2 rounds, published
 
-**referee reports**: round [1 report](jencova2020thestructure/report_1.pdf), 
- round [2 report](jencova2020thestructure/report_2.pdf)
+**referee reports**: round [1 report](jencova2020structure/report_1.pdf), 
+ round [2 report](jencova2020structure/report_2.pdf)
 
-[published version](jencova2020thestructure/published.pdf)
+[published version](jencova2020structure/published.pdf)

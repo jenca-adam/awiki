@@ -8,4 +8,7 @@ A. Jenčová, Incompatible measurements in a class of general probabilistic theo
 
 [arXiv:1705.08008](https://arxiv.org/abs/1705.08008)
 
+An older version in arxiv, slightly different: [jencova2017nonclassical](https://arxiv.org/abs/1705.08008v1)
 
+
+[published version](jencova2018incompatible/published.pdf)

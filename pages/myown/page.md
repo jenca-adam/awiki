@@ -9,16 +9,17 @@ title: My own papers
 1. [jencova2021renyi](jencova2021renyi)    
 1. [jencova2021ageneral](jencova2021ageneral)    
 1. [jencova2021tensor](jencova2021tensor)    
-1. [jencova2021]()
+1. [jencova2021observables](jencova2021observables)
 
 ### 2020
 
 
-1. [jencova2020thestructure](jencova2020thestructure)    
+1. [jencova2020structure](jencova2020structure)    
 1. [carbone2020onperiod](carbone2020onperiod)
 
 ### 2019
 
+1. [jencova2019ontheproperties](jencova2019ontheproperties)
 
 ### 2018
 
@@ -26,13 +27,17 @@ title: My own papers
 
 1. [jencova2018incompatible](jencova2018incompatible)    
 1. [jencova2018renyi](jencova2018renyi)    
-1. [jencova2018incompatibility](jencova2018incompatibility)
 
 ### 2017
 
 
 1. [jencova2017conditions](jencova2017conditions)    
 1. [jencova2017onmonoids](jencova2017onmonoids)    
+1. [jencova2017preservation](jencova2017preservation)    
+1. [foulis2017aloomis-sikorski](foulis2017aloomis-sikorski)    
+1. [foulis2017vectorlattices](foulis2017vectorlattices)    
+1. [foulis2017every](foulis2017every)
+1. [foulis2017states](foulis2017states)
 
 ### 2016
 
@@ -106,5 +111,5 @@ title: My own papers
 ## Preprints
 
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
-1. [foulis2017aloomis-sikorski](foulis2017aloomis-sikorski)
-1. [foulis2016everysynaptic](foulis2016everysynaptic)
+1. [foulis2016aloomis-sikorski](foulis2016aloomis-sikorski)
+1. [jencova2016preservation](jencova2016preservation)

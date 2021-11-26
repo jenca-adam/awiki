@@ -9,5 +9,5 @@ Anna Jenčová, Martin Plávala, Conditions on the existence of maximally incomp
 
 [arxiv:1703.0944](https://arxiv.org/abs/1703.09447)
 
-
+[published version](jencova2017conditions/published.pdf)
 

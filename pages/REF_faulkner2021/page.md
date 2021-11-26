@@ -1,4 +1,4 @@
-title: Faulkner, Hollands: Recoverability, 2021
+title: Faulkner, Hollands, Recoverability, 2021
 ---
 
 **Paper:**  Approximate recoverability and relative entropy II:  2-positive channels of general von Neumann algebras 

@@ -4,7 +4,7 @@ title: foulis2017aloomis-sikorski
 
 ## Reference
 
-David J. Foulis, Anna Jencova, Sylvia Pulmannova;A Loomis-Sikorski theorem and functional calculus for a generalized Hermitian algebra;; Oct 2017;
+David J. Foulis, Anna Jencova, Sylvia Pulmannova, A Loomis-Sikorski theorem and functional calculus for a generalized Hermitian algebra 80 (2017), 255-275
 
 ## Abstract 
   A generalized Hermitian (GH-) algebra is a generalization of the partially
@@ -22,3 +22,5 @@ continuous functional calculus for $A$.
     
 
 [arxiv:1610.06208](https://arxiv.org/abs/1610.06208)
+
+[link](https://www.sciencedirect.com/science/article/pii/S0034487717300794?casa_token=ZyvIp7_1jKgAAAAA:FwsePhyJkDcC7OuEBdXmu2-lQvUsVzrk-zM2l6Y_uf66sXehq_I5dsyMYLRT7kHOkzK4D7kSPLY)

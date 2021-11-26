@@ -6,7 +6,7 @@ title: jencova2018renyi
 
 [arXiv:1609.08462](https://arxiv.org/abs/1609.08462) 
 
-[published version](jencova2018renyi/file.pdf)
+[published version](jencova2018renyi/published.pdf)
 
 
 ## Contents
