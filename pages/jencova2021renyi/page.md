@@ -1,4 +1,4 @@
-title: "Renyi relative entropies, part II"
+title: Renyi relative entropies, part II
 ---
 ## Reference
 
@@ -13,6 +13,7 @@ A. Jenčová, Rényi relative entropies and noncommutative $L_p$-spaces II, Ann.
 
 **Status:** pulblished in AHP
 
+[published version](jencova2021renyi/published.pdf)
 
 ## Contents
 
