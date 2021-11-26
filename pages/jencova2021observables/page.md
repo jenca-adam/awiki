@@ -11,8 +11,5 @@ title: jencova2021observables
 
 ## Published version
 
-[link to FSS](https://authors.elsevier.com/a/1cMBZbXEt5qjj)
-
 [article](jencova2021observables/published.pdf)
-
 
