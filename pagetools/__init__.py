@@ -1,6 +1,8 @@
-from . import loadpage,remove,search,steal,special
+from . import loadpage,remove,search,special
+from .bibtex import *
 import os
 import shutil
+import traceback
 def add(id):
     special.home()
     old=set(os.listdir('pages'))
@@ -9,6 +11,7 @@ def add(id):
     try:
         return loadpage.loadpage(id)
     except Exception as e:
+        tback=traceback.format_exc()
         special.home()
         print('Cleaning up...')
         clup=os.listdir('pages')
@@ -23,10 +26,10 @@ def add(id):
                 clup.remove(i)
         if not clup:
             print('nothing to clean up...')
-        return {'status':'error','response':{'message':str(e),'type':e.__class__.__name__},'cleanup':x}
+        return {'status':'error','response':{'message':str(e),'type':e.__class__.__name__},'cleanup':x,'tb':tback}
 def rm(name):
     remove.rm(name)
 def search_arxiv(query,fields='all'):
     return search.search(query,fields)
-def steal_bib(arxivid,name):
-    return steal.steal_bib(arxivid,name)
+def steal_bib(arxivid):
+    return steal.steal_bib(arxivid)

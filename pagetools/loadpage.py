@@ -7,7 +7,7 @@ import colorama
 import os
 import shutil
 from . import arxiv,special
-from .steal import steal_bib
+from .bibtex import steal_bib,parse
 BLUE=colorama.Fore.BLUE
 RESET=colorama.Style.RESET_ALL
 BOLD = '\033[1m'
@@ -76,8 +76,21 @@ def loadpage(id):
     while len(thingname)<7:
         thingname+=page.title.split(' ')[word].lower().replace(',','')
         word+=1
+    linkmatch=re.search(linkstr_pattern,link)
+    linkid=linkmatch.groups()[0]
+    print(linkid)
+    print(f'{YELLOW}Stealing BibTex...{RESET}')
+    bibtex=steal_bib(linkid)
+    print(f'BibTex is:\n{bibtex}')
+    print(f'{BLUE}Parsing BibTex...{RESET}')
+    bt_data=parse(bibtex)
+    print(f'{MAGENTA}Page from year {bt_data.year}{RESET}')
+    page.year=bt_data.year
+    page.jrefs=bt_data.journal
     name=''.join([authorname,str(page.year),thingname])
     print(f'{YELLOW}Directory name:{name}{RESET}')
+
+ 
     try:
         os.mkdir(os.path.expanduser('~')+'/work/awiki/pages/'+name)
         os.chdir(os.path.expanduser('~')+'/work/awiki/pages/'+name)
@@ -86,14 +99,9 @@ def loadpage(id):
         special.home()
         #return {'status':'error','response':{'message':str(err),'type':'FileExistsError'}}
         raise
-    linkmatch=re.search(linkstr_pattern,link)
-    linkid=linkmatch.groups()[0]
-    print(linkid)
-    print('{YELLOW}Stealing BibTex...{RESET}')
-    bibtex=steal_bib(linkid,name)
-
     linkstr=f'[arxiv:{linkid}](https://arxiv.org/abs/{linkid})'
-    pagestring=f'title: {name}\n---\n\n\n## Reference\n\n{(", ").join(page.authors)};{page.title};{page.jrefs};{page.month}\b{page.year};\n\n## Abstract \n{page.abstract}\n\n{linkstr}'
+
+    pagestring=f'title: {name}\n---\n\n\n## Reference\n\n{(", ").join(page.authors)},{page.title},{page.jrefs},{page.month}\b{page.year},\n\n## Abstract \n{page.abstract}\n\n{linkstr}'
     print(f'{name}/page.md:\n\n{CYAN}{pagestring}{RESET}')
     print(os.getcwd())
     with open('page.md','w')as f:

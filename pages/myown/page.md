@@ -106,3 +106,5 @@ title: My own papers
 ## Preprints
 
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
+1. [foulis2017aloomis-sikorski](foulis2017aloomis-sikorski)
+1. [foulis2016everysynaptic](foulis2016everysynaptic)

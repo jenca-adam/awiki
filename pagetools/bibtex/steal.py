@@ -1,7 +1,9 @@
 from selenium.webdriver import Firefox, FirefoxOptions
 import time
 import os
-def steal_bib(arxivid,name):
+from bs4 import BeautifulSoup as bs
+import requests
+def old_steal_bib(arxivid):
     opt=FirefoxOptions()
     #opt.headless=True #new version incompatible with current Firefox:(
     opt.add_argument('--headless')
@@ -10,8 +12,8 @@ def steal_bib(arxivid,name):
     print('loading arxiv site...')
     ffx.get(f'https://arxiv.org/abs/{arxivid}')
     ffxf=ffx.find_element_by_css_selector
-    schc=ffxf('.cite-google-scholar')
-    print('redirecting to google scholar')
+    schc=ffxf('.cite-ads')
+    print('redirecting to harvard adsabs')
     ffx.get(schc.get_attribute('href'))
     print('loading citations..')
     time.sleep(1.5)
@@ -28,3 +30,11 @@ def steal_bib(arxivid,name):
 
     os.remove('geckodriver.log')
     return(bib_cite)
+def steal_bib(arxivid):#the new one(semantic scholar)
+    print(arxivid)
+    url=f'https://api.semanticscholar.org/arXiv:{arxivid}'
+    dwdd=requests.get(url).text
+    soup=bs(dwdd,'html.parser')
+    tarelem=soup.find('pre',class_='bibtex-citation')
+    return tarelem.text
+

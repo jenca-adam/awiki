@@ -9,6 +9,7 @@ pre Python 3
 * LXML
 * Httplib2
 * Colorama
-* Selenium s `geckodriver`
-Wiki bezi na http://localhost:5000/
+* Requests
+* pybtex
+Wiki bezi na http://localhost:8000/
 

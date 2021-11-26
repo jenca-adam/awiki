@@ -104,6 +104,7 @@ title: Not my own papers
 
 
 ### M
+[mosonyi2014strongconverse](mosonyi2014strongconverse),
 [mosonyi2021thestrong](mosonyi2021thestrong),
 [majewski2015whyareorlicz](majewski2015whyareorlicz),
 [mosonyi2018divergence](mosonyi2018divergence),
