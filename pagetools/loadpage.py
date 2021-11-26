@@ -84,7 +84,8 @@ def loadpage(id):
     except FileExistsError as err:
         print(f'{RED}dir {name} already exists.Skipping.{RESET}')
         special.home()
-        return {'status':'error','response':{'message':str(err),'type':'FileExistsError'}}
+        #return {'status':'error','response':{'message':str(err),'type':'FileExistsError'}}
+        raise
     linkmatch=re.search(linkstr_pattern,link)
     linkid=linkmatch.groups()[0]
     print(linkid)

@@ -9,7 +9,23 @@ div #error_traceback_details{
 * {
 	font-family:"Open Sans","Droid Sans","Trebuchet MS","Ariel",Helvetica,sans-serif;
 }
-
+#cleanup{
+	color:#98d;
+	border:3px dotted #aac;
+	background-color:#ffeefa;
+}
+#cleanup-success{
+	color:#afa;
+}
+#cleanup-success:before{
+	content:'CLEANUP:'
+}
+#cleanup-fail{
+	color:#faa;
+}
+#cleanup-fail:before{
+	content:'CLEANUP:'
+}
 #header {
 	border-bottom:3px dotted #aaa;
 }

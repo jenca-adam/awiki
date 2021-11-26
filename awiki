@@ -126,8 +126,9 @@ def auth(id):
     global addpageform
     env=Environment(loader=FileSystemLoader('templates')) 
     beh=pagetools.add(id)
+    print(beh)
     if beh['status']=='error':
-        return env.get_template('file_exists.html').render(msg=beh['response']['message'],type=beh['response']['type'])
+        return env.get_template('file_exists.html').render(msg=beh['response']['message'],type=beh['response']['type'],cleanup=beh['cleanup'])
     return redirect('/')
 @app.route('/remove/<string:pagename>',methods=['POST','GET'])
 def remove(pagename):

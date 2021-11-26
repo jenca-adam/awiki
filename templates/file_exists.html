@@ -15,6 +15,16 @@ Error during running pagetools.loadpage:<br>
 {{type}}:{{msg}}
 </div>
 </div>
+<div id="cleanup">
+{%if cleanup%}
+<div id="cleanup-success">
+Cleaned up this(these) page(s):<span id="cleanup-pages">{{','.join(cleanup)}}</span>
+</div>
+{%else%}
+<div id="cleanup-fail">Cleanup Failed</div>
+{%endif%}
+</div>
+</div>
 </div>
 </div>
 </body>
