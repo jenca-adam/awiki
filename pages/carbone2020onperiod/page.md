@@ -8,6 +8,5 @@ Annales Henri Poincaré  21, pages 155–188 (2020)
 
 
 [arxiv:1905.00857](https://arxiv.org/abs/1905.00857)
-
-[online first](carbone2020onperiod/published_fo.pdf)    
+ 
 [published](carbone2020onperiod/published.pdf)
