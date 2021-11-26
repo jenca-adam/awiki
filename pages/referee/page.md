@@ -57,7 +57,7 @@ title: To referee
 
 1. <del> Due [8.10.2021](REF_carbone2021) </del> Done.    
 
-1. <del>* Due [17.11.2021](REF_lami2021) (QIP talk subreviewer) </del> Done.
+1. <del>Due [17.11.2021](REF_lami2021) (QIP talk subreviewer) </del> Done.
 
 ### Reviews finished 2020
 
