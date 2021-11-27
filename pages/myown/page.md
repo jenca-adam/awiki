@@ -50,13 +50,12 @@ title: My own papers
 ### 2015
 
 1. [puchala2015exploring](puchala2015exploring)    
-1. [foulis2015aprojection](foulis2015aprojection)
-
+1. [foulis2015aprojection](foulis2015aprojection)    
+1. [jencova2015effect](jencova2015effect)    
 
 ### 2014
 
 
-1. [jencova2014randomization](jencova2014randomization)    
 1. [jencova2014base](jencova2014base)    
 
 
@@ -111,4 +110,6 @@ title: My own papers
 
 ## Preprints
 
-1. [bluhm2020incompatibility](bluhm2020incompatibility)
+
+1. [jencova2014randomization](jencova2014randomization)    
+1. [bluhm2020incompatibility](bluhm2020incompatibility)    
