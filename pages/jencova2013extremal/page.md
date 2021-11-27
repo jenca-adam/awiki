@@ -1,15 +1,14 @@
-title: jencova2012extremal
+title: jencova2013extremal
 ---
 
 
 ## Reference
 
-	Anna Jencova;Extremal generalized quantum measurements;; Jul 2012;
+Anna Jencova,Extremal generalized quantum measurements,Linear Algebra and its Applications, Jul 2013,
 
 ## Abstract 
-
-Abstract:  A measurement on a section K of the set of states of a finite dimensional
-C*-algebra is defined as an affine map from K to a probability simplex. Special
+  A measurement on a section K of the set of states of a finite dimensional
+C\*-algebra is defined as an affine map from K to a probability simplex. Special
 cases of such sections are used in description of quantum networks, in
 particular quantum channels. Measurements on a section correspond to
 equivalence classes of so-called generalized POVMs, which are called quantum
@@ -23,3 +22,5 @@ the corresponding measurement is not extremal.
     
 
 [arxiv:1207.5420](https://arxiv.org/abs/1207.5420)
+
+[link](https://www.sciencedirect.com/science/article/pii/S0024379513006253)
