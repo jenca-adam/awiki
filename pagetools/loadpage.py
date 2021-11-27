@@ -8,6 +8,8 @@ import os
 import shutil
 from . import arxiv,special
 from .bibtex import steal_bib,parse
+from .common.exceptions import PageExistsError
+from .utils.capitalized import capitalized
 BLUE=colorama.Fore.BLUE
 RESET=colorama.Style.RESET_ALL
 BOLD = '\033[1m'
@@ -98,7 +100,9 @@ def loadpage(id):
         print(f'{RED}dir {name} already exists.Skipping.{RESET}')
         special.home()
         #return {'status':'error','response':{'message':str(err),'type':'FileExistsError'}}
-        raise
+        raise PageExistsError(
+        f'''page {name!r} already exists! Awiki will automatically try to clean up empty pages. If
+        you see "CLEANUP: ****" in green color, refreshing page should work, but not always.''') 
     linkstr=f'[arxiv:{linkid}](https://arxiv.org/abs/{linkid})'
 
     pagestring=f'title: {name}\n---\n\n\n## Reference\n\n{(", ").join(page.authors)},{page.title},{page.jrefs},{page.month}\b{page.year},\n\n## Abstract \n{page.abstract}\n\n{linkstr}'
@@ -108,7 +112,7 @@ def loadpage(id):
         f.write(pagestring)
     with open('bib.bib','w')as f:
         f.write(bibtex)
-    if 'Anna Jenčová' in page.authors  or 'Anna Jencova' in page.authors:
+    if 'Anna Jenčová' in capitalized(page.authors)  or 'Anna Jencova' in capitalized(page.authors):
         mypath='myown'
     else:
         mypath='notmyown'

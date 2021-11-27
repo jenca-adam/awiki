@@ -112,3 +112,4 @@ title: My own papers
 ## Preprints
 
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
+1. [jencova2013effectalgebras](jencova2013effectalgebras)
