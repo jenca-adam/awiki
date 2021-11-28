@@ -22,4 +22,4 @@ conditions for equality in the strong subadditivity of relative entropy.
 
     
 
-[arxiv:0903.2895](https://arxiv.org/abs/https://arxiv.org/abs/0903.2895)
+[arxiv:0903.2895](https://arxiv.org/abs/0903.2895)
