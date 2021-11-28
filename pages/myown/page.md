@@ -50,21 +50,24 @@ title: My own papers
 ### 2015
 
 1. [puchala2015exploring](puchala2015exploring)    
-1. [foulis2015aprojection](foulis2015aprojection)
+1. [foulis2015aprojection](foulis2015aprojection)    
+1. [jencova2015effect](jencova2015effect)    
+1. [foulis2015twoprojections](foulis2015twoprojections)    
 
 
 ### 2014
 
 
-1. [jencova2014randomization](jencova2014randomization)    
 1. [jencova2014base](jencova2014base)    
 
 
 ### 2013
 
+1. [jencova2013extremal](jencova2013extremal)
+
+
 ### 2012
 
-1. [jencova2012extremal](jencova2012extremal)
 
 ### 2011
 
@@ -111,5 +114,6 @@ title: My own papers
 
 ## Preprints
 
-1. [bluhm2020incompatibility](bluhm2020incompatibility)
-1. [jencova2013effectalgebras](jencova2013effectalgebras)
+
+1. [jencova2014randomization](jencova2014randomization)    
+1. [bluhm2020incompatibility](bluhm2020incompatibility)    

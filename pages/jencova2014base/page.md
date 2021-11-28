@@ -8,6 +8,9 @@ A. Jenčová,  Base norms and discrimination of generalized quantum channels, J.
 
 [arXiv:1308.4030](https://arxiv.org/abs/1308.4030)
 
+[link](https://aip.scitation.org/doi/abs/10.1063/1.4863715)
+
+[published version](jencova2014base/published.pdf)
 
 ## Content
 
