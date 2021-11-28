@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import httplib2
 from bs4 import BeautifulSoup as bs
 import sys
@@ -10,6 +11,8 @@ from . import arxiv,special
 from .bibtex import steal_bib,parse
 from .common.exceptions import PageExistsError
 from .utils.capitalized import capitalized
+from .utils.name import makename,maketitle
+
 BLUE=colorama.Fore.BLUE
 RESET=colorama.Style.RESET_ALL
 BOLD = '\033[1m'
@@ -24,34 +27,6 @@ authors_pattern=r'Authors:(\D*)'
 linkstr_pattern=r'/?(.*?)$'
 h=special.CachedH()
 base=os.getcwd()
-diacritic_dict={
-    'á':'a',
-    "ä":"a",
-    "é":"e",
-    "ě":"e",
-    "í":"i",
-    "ó":"o",
-    "ô":"o",
-    "ú":"u",
-    "ü":"u",
-    "ľ":"l",
-    "ĺ":"l",
-    "ŕ":"r",
-    "ř":"r",
-    "ñ":"n",
-    "ň":"n",
-    "ů":"u",
-    "ö":"o",
-    "ë":"e",
-    "û":"u",
-    "č":"c",
-    "ť":"t",
-    "ď":"d",
-    "ž":"z",
-    "ý":"y",
-    "ï":"i",
-    "ł":"l",
-}
 
 def loadpage(id):
     link=id
@@ -72,12 +47,8 @@ def loadpage(id):
     print('__________________________________________________')
     print(f'{GREEN}Writing page.md{RESET}')
     authorname=page.authors[0].split(' ')[-1].lower()
-    authorname=''.join([diacritic_dict[char] if char in diacritic_dict else char for char in authorname ])
-    thingname=page.title.split(' ')[0].lower().replace(',','')
-    word=1
-    while len(thingname)<7:
-        thingname+=page.title.split(' ')[word].lower().replace(',','')
-        word+=1
+    thingname=maketitle(page.title)
+    
     linkmatch=re.search(linkstr_pattern,link)
     linkid=linkmatch.groups()[0]
     print(linkid)
@@ -89,7 +60,7 @@ def loadpage(id):
     print(f'{MAGENTA}Page from year {bt_data.year}{RESET}')
     page.year=bt_data.year
     page.jrefs=bt_data.journal
-    name=''.join([authorname,str(page.year),thingname])
+    name=makename(authorname,page.year,thingname)
     print(f'{YELLOW}Directory name:{name}{RESET}')
 
  
@@ -112,8 +83,8 @@ def loadpage(id):
         f.write(pagestring)
     with open('bib.bib','w')as f:
         f.write(bibtex)
-    if 'Anna Jenčová' in capitalized(page.authors)  or 'Anna Jencova' in capitalized(page.authors):
-        mypath='myown'
+    if capitalized(page.authors).count('Jencova')+capitalized(page.authors).count('Jenčová')+capitalized(page.authors).count('JENCOVA')+capitalized(page.authors).count('JENČOVÁ'):
+        mypath='myown' 
     else:
         mypath='notmyown'
     cmypath=f'{GREEN}myown{RESET}'if mypath == 'myown' else f'{YELLOW}notmyown{RESET}'

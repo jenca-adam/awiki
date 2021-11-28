@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup as bs
 from pagetools.utils.ffx import fxget
 from pagetools.utils.haskey import haskey
 from pagetools.utils.args import encode_url_args
+from pagetools.parsers.apa2bib import apa2bib
 class Citations:
     def __init__(self,schid):
         self.citeurl=f'https://scholar.google.com/scholar?q=info:{schid}:scholar.google.com/&output=cite'
@@ -9,12 +10,11 @@ class Citations:
         print(content)
         soup=bs(content,'html.parser')
         self.cites_clean=tuple(soup.find_all(class_='gs_citr'))
-        self.mla,self.apa,self.iso690=self.cites_clean
-        self.cites_advanced=[]
-        for i in soup.find_all('a',class_='gs_citi'):
-            c=i['href']
-            self.cites_advanced.append(fxget(c))
-        self.bibtex,self.endnote,self.refman,_=tuple(self.cites_advanced)
+        self.mla,self.apa,self.iso690=[i.text for i in self.cites_clean]
+        print()
+        print()
+        print(self.apa)
+        self.bibtex=apa2bib(self.apa)
 class Item:
     def __init__(self,title,link,authorline,abstract,schid):
         self.title=title

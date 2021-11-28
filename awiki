@@ -174,6 +174,15 @@ def ms():
         f=request.form
         q=f['q']
         return search_t.render(results=pagetools.search_works.search(q),q=q)
+@app.route('/cite/<string:page>')
+def cite(page):
+    bibpath=os.path.join('pages',page,'bib.bib')
+    try:
+        with open(bibpath,'r')as f:
+            bibcite=f.read()
+    except FileNotFoundError:
+        abort(404)
+    return Response(bibcite,mimetype='text/plain')    
 @app.route('/')
 def index():
     return redirect('/view/index')
