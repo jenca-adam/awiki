@@ -1,10 +1,10 @@
-title: jencova2005aconstruction
+title: jencova2006aconstruction
 ---
 
 
 ## Reference
 
-Anna Jencova;A construction of a nonparametric quantum information manifold;; Nov 2005;
+Jenčová, Anna. "A construction of a nonparametric quantum information manifold." Journal of Functional Analysis 239.1 (2006): 1-20.
 
 ## Abstract 
 
@@ -16,3 +16,6 @@ mixture connections as dual pair of affine connections.
     
 
 [arxiv:math-ph/0511065](https://arxiv.org/abs/math-ph/0511065)
+
+[link](https://www.sciencedirect.com/science/article/pii/S0022123606000644)
+

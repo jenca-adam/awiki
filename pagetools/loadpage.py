@@ -111,7 +111,7 @@ def loadpage(id):
                     lines.insert(lines.index(f'### {page.year-1}')-1,mylinkstr)
 
             with open('page.md','w')as f:
-                f.write('\n'.join(lines))
+                f.write('\n'.join(filter(lambda x:x!='',[l.strip()  for l in lines])))
 
             if '-v' in sys.argv:
                 with open('page.md')as f:

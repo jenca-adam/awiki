@@ -1,12 +1,13 @@
-title: jencova2007howsharpare
+title: jencova2007howsharp
 ---
 
 
 ## Reference
 
-A. Jencova, S. Pulmannova,How sharp are PV measures?,arXiv preprint math-ph/0701031, Jan 2007,
+Jenčová, A., and S. Pulmannová. "How sharp are PV measures?" Reports on Mathematical Physics 2.59 (2007): 257-266.
 
 ## Abstract 
+
   Properties of sharp observables (normalized PV measures) in relation to
 smearing by a Markov kernel are studied. It is shown that for a sharp
 observable $P$ defined on a standard Borel space, and an arbitrary observable
@@ -17,3 +18,5 @@ $M$.
     
 
 [arxiv:math-ph/0701031](https://arxiv.org/abs/math-ph/0701031)
+
+[published version](jencova2007howsharp/published.pdf)
