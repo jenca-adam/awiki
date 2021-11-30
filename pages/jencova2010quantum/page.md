@@ -4,7 +4,7 @@ title: jencova2008quantum
 
 ## Reference
 
-	Anna Jencova;Quantum hypothesis testing and sufficient subalgebras;Lett. Math. Phys 93 (2010), 15; Oct 2008;
+Anna Jencova;Quantum hypothesis testing and sufficient subalgebras, Lett. Math. Phys 93 (2010), 15-27.
 
 ## Abstract 
 
@@ -19,3 +19,7 @@ required for $\{\rho_0^{\otimes n},\rho_1^{\otimes}\}$, for all $n$.
     
 
 [arxiv:0810.4045](https://arxiv.org/abs/0810.4045)
+
+[link to published version](https://link.springer.com/content/pdf/10.1007/s11005-010-0398-0.pdf)
+
+

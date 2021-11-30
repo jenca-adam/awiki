@@ -1,10 +1,11 @@
-title: jencova2008markovtriplets
+title: jencova2010markov
 ---
 
 
 ## Reference
 
-	Anna Jencova, Denes Petz, Jozsef Pitrik;Markov triplets on CCR-algebras;; Dec 2008;
+Jenčová, A., Petz, D., & Pitrik, J. (2010). Markov triplets on CCR-algebras. Acta Sci. Math.(Szeged), 76, 111-134.
+
 
 ## Abstract 
 
@@ -19,3 +20,7 @@ triplets is also described.
     
 
 [arxiv:0812.3724](https://arxiv.org/abs/0812.3724)
+
+[link to published version](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.744&rep=rep1&type=pdf)
+
+

@@ -103,8 +103,11 @@ title: My own papers
 1. [jencova2010onquantum](jencova2010onquantum)    
     infinite dimensional quantum information geometry     
 1. [jencova2010aunified](jencova2010aunified)    
-    with M. B.Ruskai, relative entopies, convexity and equality
-
+    with M. B.Ruskai, relative entopies, convexity and equality    
+1. [jencova2010markov](jencova2010markov)    
+    with D. Petz and J. Pitrik, Markov triplets on CCR algebras    
+1. [jencova2010quantum](jencova2010quantum)    
+      sufficiency and hypothesis testing
  
 ### 2009
 
@@ -113,10 +116,7 @@ title: My own papers
 ### 2008
 
 
-1. [jencova2008markovtriplets](jencova2008markovtriplets)    
-    with D. Petz and J. Pitrik, Markov triplets on CCR algebras   
-1. [jencova2008quantum](jencova2008quantum)    
-    sufficiency and hypothesis testing
+  
 
 ### 2007
 
