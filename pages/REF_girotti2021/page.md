@@ -1,7 +1,7 @@
 title: F. Girotti, PhD. thesis
 ---
 
-**Title:** Absorption in invariant domains for quantum Markov evolutions
+**Title:** Absorption in invariant domains for quantum Markov evolutions, PhD. thesis
 
 **University:** Pavia
 
@@ -12,6 +12,8 @@ title: F. Girotti, PhD. thesis
 
 
 
-**Decision:** 
+**Decision:** minor revision
+
+[report](REF_girotti2021/report.pdf 
 
 
