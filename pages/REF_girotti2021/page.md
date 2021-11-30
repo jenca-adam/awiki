@@ -14,6 +14,5 @@ title: F. Girotti, PhD. thesis
 
 **Decision:** minor revision
 
-[report](REF_girotti2021/report.pdf 
-
+[report](REF_girotti2021/report.pdf )
 
