@@ -3,6 +3,7 @@ from pagetools.utils.ffx import fxget
 from pagetools.utils.haskey import haskey
 from pagetools.utils.args import encode_url_args
 from pagetools.parsers.apa2bib import apa2bib
+import time
 class Citations:
     def __init__(self,schid):
         self.citeurl=f'https://scholar.google.com/scholar?q=info:{schid}:scholar.google.com/&output=cite'
@@ -22,7 +23,9 @@ class Item:
         self.authors=[aut.strip() for aut in authorline.split(',')]
         self.abstract=abstract
         self.id=schid
-        self.citations=Citations(schid)
+    def get_citations(self):
+        time.sleep(1)
+        return Citations(self.id)
 class Results:
     def __init__(self,items):
         self.items=[]
@@ -43,4 +46,4 @@ def scholar_search(**kwargs):
     if not kwargs:
         raise ValueError('empty search parameters')
     url=f'https://scholar.google.com/scholar_lookup{encode_url_args(kwargs)}'
-    return scholar_parse(fxget(url))
+    return scholar_parse(fxget(url)),url

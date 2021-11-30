@@ -46,7 +46,8 @@ def steal_old_bib(arxivid):
     title=ArXivPage(arxivid).title
     return export_bib(title)
 def steal_bib(arxivid):
-    results=scholar_search(arxiv_id=arxivid)
-    return results[0].citations.bibtex
+    results,uri=scholar_search(arxiv_id=arxivid)
+    result=results[0]
+    return result.get_citations().bibtex,result.link,uri
     
 

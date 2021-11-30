@@ -68,6 +68,14 @@ title: Not my own papers
 ### I
 
 ### J
+[jencova2007howsharpare](jencova2007howsharpare),
+[jencova2003affine](jencova2003affine),
+[jencova2013effect](jencova2013effect),
+[jencovahowsharpare](jencovahowsharpare),
+
+
+
+
 
 
 [jencova2019observables](jencova2019observables),

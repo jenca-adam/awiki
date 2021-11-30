@@ -1,6 +1,6 @@
 from pagetools.utils.name import maketitle,makename
 def bibmake(dc,tp='article'):
-    title=makename(maketitle(dc['authors']),dc['year'],dc['name'])
+    title=makename(dc['authors'],dc['year'],maketitle(dc['name']))
     bib_export=f'@{tp}{{{title},\n'
     del dc['name']
     for key in dc:

@@ -1,11 +1,13 @@
 {%extends "stripbase.html"%}
 {%block meta%}
 <title>Search ArXiv</title>
+<script src="/static/js/jquery.js"></script>
 {%endblock%}
 {%block head%}
 <h1>Search ArXiv</h1>
 {%endblock%}
 {%block content%}
+<hr>
 <form action="/search/" method="POST">
 <p><label for="query">Search query:<input name="query" value="{{query}}"></p>
 <label for="fields">Fields:</label>
@@ -28,6 +30,7 @@
 </select>
 <input type="submit"/>
 </form>
+<hr>
 <ol>
 {%for result in results%}
 <li>
@@ -36,4 +39,5 @@
 </li>
 {%endfor%}
 </ol>
+<script src="/static/js/results.js">
 {%endblock%}

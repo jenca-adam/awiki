@@ -10,9 +10,10 @@ import shutil
 from . import arxiv,special
 from .bibtex import steal_bib,parse
 from .common.exceptions import PageExistsError
-from .utils.capitalized import capitalized
-from .utils.name import makename,maketitle
+from .utils.capitalized import capitalized,normalize_lower
 
+from .utils.name import makename,maketitle
+from urllib.parse import urlsplit
 BLUE=colorama.Fore.BLUE
 RESET=colorama.Style.RESET_ALL
 BOLD = '\033[1m'
@@ -53,7 +54,8 @@ def loadpage(id):
     linkid=linkmatch.groups()[0]
     print(linkid)
     print(f'{YELLOW}Stealing BibTex...{RESET}')
-    bibtex=steal_bib(linkid)
+    bibtex,l,schlink=steal_bib(linkid)
+    lpage=urlsplit(l).netloc
     print(f'BibTex is:\n{bibtex}')
     print(f'{BLUE}Parsing BibTex...{RESET}')
     bt_data=parse(bibtex)
@@ -74,7 +76,7 @@ def loadpage(id):
         raise PageExistsError(
         f'''page {name!r} already exists! Awiki will automatically try to clean up empty pages. If
         you see "CLEANUP: ****" in green color, refreshing page should work, but not always.''') 
-    linkstr=f'[arxiv:{linkid}](https://arxiv.org/abs/{linkid})'
+    linkstr=f'[arxiv:{linkid}](https://arxiv.org/abs/{linkid})\n[View at {lpage}]({l})\n[View at Google Scholar]({schlink}) '
 
     pagestring=f'title: {name}\n---\n\n\n## Reference\n\n{(", ").join(page.authors)},{page.title},{page.jrefs},{page.month}\b{page.year},\n\n## Abstract \n{page.abstract}\n\n{linkstr}'
     print(f'{name}/page.md:\n\n{CYAN}{pagestring}{RESET}')
@@ -83,7 +85,7 @@ def loadpage(id):
         f.write(pagestring)
     with open('bib.bib','w')as f:
         f.write(bibtex)
-    if capitalized(page.authors).count('Jencova')+capitalized(page.authors).count('Jenčová')+capitalized(page.authors).count('JENCOVA')+capitalized(page.authors).count('JENČOVÁ'):
+    if 'jencova' in ''.join(normalize_lower(page.authors)):
         mypath='myown' 
     else:
         mypath='notmyown'
@@ -96,10 +98,21 @@ def loadpage(id):
         print('__________________________________________________')
         os.chdir(os.path.expanduser('~')+'/work/awiki/pages/'+mypath)
         if mypath=='myown':
-            with open('page.md','a')as f:
-                mylinkstr=f'1. [{name}]({name})\n'
+            mylinkstr=f'1. [{name}]({name})\n'
+            with open('page.md','r')as f:
+                lines=list(f.readlines())
+            if f'### {page.year}' not in lines:
+                lines.append(f'### {page.year}')
+                lines.append(mylinkstr)
+            else:
+                if f'### {page.year-1}' not in lines:
+                    lines.append(mylinkstr)
+                else:
+                    lines.insert(lines.index(f'### {page.year-1}')-1,mylinkstr)
 
-                f.write(mylinkstr)
+            with open('page.md','w')as f:
+                f.write('\n'.join(lines))
+
             if '-v' in sys.argv:
                 with open('page.md')as f:
                     print(f.read())
