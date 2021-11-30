@@ -18,4 +18,4 @@ triplets is also described.
 
     
 
-[arxiv:0812.3724](https://arxiv.org/abs/https://arxiv.org/abs/0812.3724)
+[arxiv:0812.3724](https://arxiv.org/abs/0812.3724)
