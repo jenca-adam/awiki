@@ -96,16 +96,20 @@ with S.Pulmannová, dimension effect algebras and AF C\*-algebras, article not o
 ### 2007
 1. [jencova2007howsharp](jencova2007howsharp) with S. Pulmannová, which PVMs  are smearings?
 1. [guta2007local](guta2007local) with M. Guta, quantum local asymptotic normality, canonical states of quantum
-   statistical experiments
+statistical experiments
 ### 2006
+1. [jencova2006sufficiency](jencova2006sufficiency) with D.Petz, sufficiency with examples
 1. [jencova2006arelation](jencova2006arelation) completely bounded norms and Schatten norms
-1. [jencova2006sufficiency](jencova2006sufficiency) with D. Petz, sufficiency of quantum channels, equality in DPI,
-   factorization
+1. [jencova2006sufficiencyfirst](jencova2006sufficiencyfirts) with D. Petz, sufficiency of quantum channels, equality in DPI,
+factorization
 1. [jencova2006aconstruction](jencova2006aconstruction) a construction of quantum exponential Orlicz space and a
-   infinite dimensional quantum information matifold 
-
+infinite dimensional quantum information matifold
 ### 2005
+1. [jencova2005quantum](jencova2005quantum)  quantum information geometry, affine connections and Araki-Masuda $L_p$-spaces, not on arxiv!
 ### 2004
+
+1. [jencova2004geodesic](jencova2004geodesic) quantum information geometry: geodesic distances, upper and lower bounds
+
 ### 2003
 1. [jencova2003affineconnections](jencova2003affineconnections)
 1. [jencova2003geodesic](jencova2003geodesic)
@@ -125,4 +129,6 @@ with A. Bluhm and I. Nechita, incompatibility in GPTs, tensor norms, spectrahedr
 ### 2010
 ### 2008
 ### 2007
+### 2006
+### 2004
 
