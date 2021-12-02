@@ -107,17 +107,23 @@ infinite dimensional quantum information matifold
 ### 2005
 1. [jencova2005quantum](jencova2005quantum)  quantum information geometry, affine connections and Araki-Masuda $L_p$-spaces, not on arxiv!
 ### 2004
-
 1. [jencova2004geodesic](jencova2004geodesic) quantum information geometry: geodesic distances, upper and lower bounds
-
+1. [jencova2004generalized](jencova2004generalized) quantum Fisher infrmation and affine connections from generalized
+relative entropies, paper not on arxiv!
 ### 2003
-1. [jencova2003affineconnections](jencova2003affineconnections)
-1. [jencova2003geodesic](jencova2003geodesic)
-1. [jencova2003flatconnections](jencova2003flatconnections)
-### Before
+1. [jencova2003flatconnections](jencova2003flatconnections) quantum information geometry: unique dually flat structures from generalized divergences
+### 2002
+1.  [jencova2002quantum](jencova2002quantum) quantum information geometry and standard purification, paper not on arxiv!
+### 2001
+1.  [jencova2001dualistic](jencova2001dualistic) quantum information geometry:  affine $\alpha$-connections, uniqueness of
+    torsion-free duals,  divergences, conference proceedings,  not on arxiv!
+1. [jencova2001geometry](jencova2001geometry) my (almost) first paper on quantum information geometry, not on arxiv!
+### 1999
+1. [petz1999onquantum](petz1999onquantum) quantum Fisher information, conference proceedings, not on arxiv!
 ## Preprints
+1. [jencova2003affine](jencova2003affine) affine connections on von Neumann algebras, Araki-Masuda $L_p$-spaces (never published)
 1. [jencova2014randomization](jencova2014randomization)
-randomization theorems for quantum channels, never published
+randomization theorems for quantum channels  (never published)
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
 with A. Bluhm and I. Nechita, incompatibility in GPTs, tensor norms, spectrahedra
 ### {page.year}1. [jencova2003flat](jencova2003flat)
@@ -131,4 +137,5 @@ with A. Bluhm and I. Nechita, incompatibility in GPTs, tensor norms, spectrahedr
 ### 2007
 ### 2006
 ### 2004
+### 2003
 

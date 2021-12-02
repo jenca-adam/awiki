@@ -18,3 +18,5 @@ quasi-entropies, defined by Petz.
     
 
 [arxiv:math-ph/0311004](https://arxiv.org/abs/math-ph/0311004)
+[View at arxiv.org](https://arxiv.org/abs/math-ph/0311004)
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=math-ph/0311004) 

@@ -4,7 +4,7 @@ title: jencova2003flatconnections
 
 ## Reference
 
-	Anna Jencova;Flat connections and Wigner-Yanase-Dyson metrics;Rep.Math.Phys. 52, 2003, 331-351; Jul 2003;
+Anna Jencova, Flat connections and Wigner-Yanase-Dyson metrics, Rep.Math.Phys. 52, 2003, 331-351, Jul 2003;
 
 ## Abstract 
 
@@ -19,3 +19,8 @@ Wigner-Yanase-Dyson skew information.
     
 
 [arxiv:math-ph/0307057](https://arxiv.org/abs/math-ph/0307057)
+
+[link](https://www.sciencedirect.com/science/article/abs/pii/S0034487703800332)
+
+[published version](jencova2003flatconnections/published.pdf)
+
