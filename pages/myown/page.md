@@ -116,26 +116,17 @@ relative entropies, paper not on arxiv!
 1.  [jencova2002quantum](jencova2002quantum) quantum information geometry and standard purification, paper not on arxiv!
 ### 2001
 1.  [jencova2001dualistic](jencova2001dualistic) quantum information geometry:  affine $\alpha$-connections, uniqueness of
-    torsion-free duals,  divergences, conference proceedings,  not on arxiv!
+torsion-free duals,  divergences, conference proceedings,  not on arxiv!
 1. [jencova2001geometry](jencova2001geometry) my (almost) first paper on quantum information geometry, not on arxiv!
 ### 1999
 1. [petz1999onquantum](petz1999onquantum) quantum Fisher information, conference proceedings, not on arxiv!
 ## Preprints
-1. [jencova2003affine](jencova2003affine) affine connections on von Neumann algebras, Araki-Masuda $L_p$-spaces (never published)
-1. [jencova2014randomization](jencova2014randomization)
-randomization theorems for quantum channels  (never published)
+1. [jencova2021spectral](jencova2021spectral) with S. Pulmannová, spectrality in effect algebras (submitted to quantum)
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
-with A. Bluhm and I. Nechita, incompatibility in GPTs, tensor norms, spectrahedra
-### {page.year}1. [jencova2003flat](jencova2003flat)
-### 2008
-1. [jencova2008markov](jencova2008markov)
-### 2012
-### 2012
-### 2012
-### 2010
-### 2008
-### 2007
-### 2006
-### 2004
-### 2003
+with A. Bluhm and I. Nechita, incompatibility in GPTs, tensor norms, spectrahedra (submitted to CMP)
+1. [jencova2015aextreme](jencova2015aextreme) C^\*-extreme (or $\mathcal A$-extreme) points of UCP maps into matrix
+algebras, not on arxiv!  (unpublished draft)
+1. [jencova2015comparison](jencova2015comparison) a longer version of [jencova2016isit](jencova2016isit)
+1. [jencova2014randomization](jencova2014randomization) randomization theorems for quantum channels  (never published)
+1. [jencova2003affine](jencova2003affine) affine connections on von Neumann algebras, Araki-Masuda $L_p$-spaces (never published)
 

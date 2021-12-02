@@ -7,7 +7,7 @@ A. Jenčová, Comparison of quantum channels and quantum statistical experiments
 
 [published version](jencova2016isit/published.pdf)
 
-A longer version [arXiv:1512.07016](https://arxiv.org/abs/1512.07016)
+A longer version [jencova2015comparison](jencova2015comparison)
 
 ## Content
 
