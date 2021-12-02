@@ -61,7 +61,7 @@ with D. Foulis and S. Pulmannová
 base norms on $B(\mathcal H)^{sa}$, with relation to discrimination of quantum combs.
 ### 2013
 1. [jencova2013extremal](jencova2013extremal)
-measurements on channels and combs
+extremality of measurements on channels and combs (equivalence classes of testers)
 ### 2012
 1. [jencova2012extremality](jencova2012extremality) extremality conditions for generalized channels (combs, testers,
 etc)
