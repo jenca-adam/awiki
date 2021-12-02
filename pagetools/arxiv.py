@@ -5,6 +5,7 @@ import re
 import os
 from .special import CachedH
 from .pathos import make_authors
+
 class ArXivPage:
     def __init__(self,arxivid):
         os.chdir(os.path.expanduser('~')+'/work/awiki/pages')

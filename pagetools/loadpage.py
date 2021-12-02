@@ -11,7 +11,7 @@ from . import arxiv,special
 from .bibtex import steal_bib,parse
 from .common.exceptions import PageExistsError
 from .utils.capitalized import capitalized,normalize_lower
-
+from .utils.file import *
 from .utils.name import makename,maketitle
 from urllib.parse import urlsplit
 BLUE=colorama.Fore.BLUE
@@ -60,7 +60,7 @@ def loadpage(id):
     print(f'{BLUE}Parsing BibTex...{RESET}')
     bt_data=parse(bibtex)
     print(f'{MAGENTA}Page from year {bt_data.year}{RESET}')
-    page.year=bt_data.year
+    page.year=int(bt_data.year)
     page.jrefs=bt_data.journal
     name=makename(authorname,page.year,thingname)
     print(f'{YELLOW}Directory name:{name}{RESET}')
@@ -98,9 +98,8 @@ def loadpage(id):
         print('__________________________________________________')
         os.chdir(os.path.expanduser('~')+'/work/awiki/pages/'+mypath)
         if mypath=='myown':
-            mylinkstr=f'1. [{name}]({name})\n'
-            with open('page.md','r')as f:
-                lines=list(f.readlines())
+            mylinkstr=f'1. [{name}]({name})'
+            lines=readlines('page.md')
             if f'### {page.year}' not in lines:
                 lines.append(f'### {page.year}')
                 lines.append(mylinkstr)
@@ -110,9 +109,7 @@ def loadpage(id):
                 else:
                     lines.insert(lines.index(f'### {page.year-1}')-1,mylinkstr)
 
-            with open('page.md','w')as f:
-                f.write('\n'.join(filter(lambda x:x!='',[l.strip()  for l in lines])))
-
+            writelines('page.md',lines) 
             if '-v' in sys.argv:
                 with open('page.md')as f:
                     print(f.read())

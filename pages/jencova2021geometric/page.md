@@ -4,7 +4,7 @@ title: jencova2021geometric
 
 ## Reference
 
-Anna Jenčová, Sylvia Pulmannová, Geometric and algebraic aspects of spectrality in order unit spaces: a comparison, Journal of Mathematical Analysis and Applications (2021), 125360.
+Anna Jenčová, Sylvia Pulmannová, Geometric and algebraic aspects of spectrality in order unit spaces: a comparison, Journal of Mathematical Analysis and Applications 504 (2021), 125360.
 
 ## Abstract 
 

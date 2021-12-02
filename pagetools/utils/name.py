@@ -13,8 +13,9 @@ def maketitle(artname,maxchar=12):
     words=artname.split(' ')
     t=''
     for word in words:
+        t+=word
+
         if len(word)+len(t)>maxchar:
             break
-        t+=word
     return t
         
