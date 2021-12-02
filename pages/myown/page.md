@@ -56,6 +56,7 @@ with D. Foulis and S. Pulmannová
 with S. Pulmannová, state operator on effect algebras
 1. [foulis2015twoprojections](foulis2015twoprojections)
 with D. Foulis and S. Pulmannová
+
 ### 2014
 1. [jencova2014base](jencova2014base)
 base norms on $B(\mathcal H)^{sa}$, with relation to discrimination of quantum combs.

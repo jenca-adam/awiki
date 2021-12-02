@@ -1,18 +1,26 @@
 import shutil
 import os
+from . import special
 def rm(name):
     base=os.getcwd()
-    os.chdir(os.path.expanduser('~')+'/work/awiki/pages/myown')
+    special.home()
+    os.chdir('pages/myown')
     with open('page.md')as f:
         lines=list(f.readlines())
-    if f'1. [{name}]({name})\n' in lines:
-        lines.remove(f'1. [{name}]({name})\n')
-        myown=True
-    else:
-        myown=False
+        for line in lines:
+            if f'[{name}]({name})' in line:
+                lines.remove(line)
+                myown=True
+                break
+        else:
+            myown=False
     print(myown)
     os.chdir('..')
-    shutil.rmtree(name)
+    print(os.getcwd())
+    try:
+
+        shutil.rmtree(name)
+    except:pass
     if myown:
         os.chdir('myown')
         with open('page.md','w')as f:
