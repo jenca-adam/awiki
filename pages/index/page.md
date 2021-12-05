@@ -3,6 +3,12 @@ title: My work
 ## My projects
 
 
+### New
+
+* [Sequential effect algebras and spectrality](NEW_seas)  (with Sylvia)
+
+
+
 ### Quantum comparison: experiments, channels, networks
 
 * [Quantum relative entropies, channels and sufficiency](PROJECT_qre) (finishing)

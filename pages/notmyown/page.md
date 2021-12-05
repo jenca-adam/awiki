@@ -159,6 +159,7 @@ title: Not my own papers
 [vetterlein2019orthogonality](vetterlein2019orthogonality)
 
 ### W
+[wetering2020commutativity](wetering2020commutativity),
 
 [westerbaan2020acharacterization](westerbaan2020acharacterization),
 [westerbaan2020thethree](westerbaan2020thethree),
