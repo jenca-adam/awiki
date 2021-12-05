@@ -11,7 +11,7 @@ title: Sequential effect algebras and spectrality (with Sylvia)
 
 We should start by reading this:
 
-* [wetering2020commutative](wetering2020commutative) unit interval in a JB-algebra is a SEA
+* [wetering2020commutativity](wetering2020commutativity) unit interval in a JB-algebra is a SEA
 
 * [hanche1984jordan](BOOK_hanche1984jordan) some basic theory of Jordan and JB algebras
 

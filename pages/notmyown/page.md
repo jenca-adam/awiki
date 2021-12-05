@@ -57,6 +57,8 @@ title: Not my own papers
 [gudder2006compression](gudder2006compression) 
 
 ### H
+
+[BOOK_hanche1984jordan](BOOK_hanche1984jordan),
 [hiai2021quantum](hiai2021quantum),
 
 
