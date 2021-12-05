@@ -3,13 +3,13 @@ from .bibtex import *
 import os
 import shutil
 import traceback
-def add(id):
+def add(id,**kwargs):
     special.home()
-    old=set(os.listdir('pages'))
+    #old=set(os.listdir('pages'))
     print(id)
     clup=[]
     try:
-        return loadpage.loadpage(id)
+        return loadpage.loadpage(id,**kwargs)
     except Exception as e:
         tback=traceback.format_exc()
         special.home()
