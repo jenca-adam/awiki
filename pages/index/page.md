@@ -1,13 +1,19 @@
 title: My work
 ---
-## My projects
 
 
-### New
+
+
+
+## New
 
 * [Sequential effect algebras and spectrality](NEW_seas)  (with Sylvia)
 
+* [Further on Renyi relative entropy in von Neumann algebras](NEW_qre)
 
+---
+
+## My projects
 
 ### Quantum comparison: experiments, channels, networks
 
