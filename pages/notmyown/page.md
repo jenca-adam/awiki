@@ -30,6 +30,7 @@ title: Not my own papers
 
 
 ### F
+[faulkner2020approximate2](faulkner2020approximate2),
 
 [fagnola1999algebraic](fagnola1999algebraic),  
 [faulkner2020approximate](faulkner2020approximate),
@@ -70,28 +71,13 @@ title: Not my own papers
 ### I
 
 ### J
-[jencova2007howsharpare](jencova2007howsharpare),
-[jencova2003affine](jencova2003affine),
-[jencova2013effect](jencova2013effect),
-[jencovahowsharpare](jencovahowsharpare),
-
-
-
-
-
-
-[jencova2019observables](jencova2019observables),
 
 [jaksic2012quantum](jaksic2012quantum)
 [jenca2015blocksof](jenca2015blocksof),
 [jenca2014effectalgebras](jenca2014effectalgebras),
 [jenca2020derived](jenca2020derived),
 
-
-
-[jencova2019observables](jencova2019observables),
 [jenca2017anoteon](jenca2017anoteon),
-
 
 [jenca2017twomonads](jenca2017twomonads),
 [jenca2019pseudo](jenca2019pseudo),
@@ -134,7 +120,7 @@ title: Not my own papers
 
 
 
-[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [BOOK_paulsen2002completely](BOOK_paulsen2002completely), [paulsen2011operator](paulsen2011operator), [petz1986sufficient](petz1986sufficient), 
+[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [BOOK_paulsen2002completely](BOOK_paulsen2002completely), [paulsen2011operator](paulsen2011operator), [petz1985quasi](petz1985quasi), [petz1986quasi](petz1986quasi), [petz1986sufficient](petz1986sufficient), 
 [petz1988sufficiency](petz1988sufficiency),  [pisier2003noncommutative](pisier2003noncommutative),
  [plavala2016allmeasurements](plavala2016allmeasurements), [pulmannova2006effect](pulmannova2006effect)
 
