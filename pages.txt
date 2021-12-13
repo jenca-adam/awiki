@@ -129,6 +129,7 @@ foulis2010type
 foulis2015aprojection
 foulis2015twoprojections
 foulis2017aloomis
+foulis2017aloomissikorski
 foulis2017every
 foulis2017states
 foulis2017vectorlattices
@@ -287,6 +288,7 @@ wetering2018sequential
 wetering2018three
 wetering2019aneffect
 wetering2020commutativity
+wilde2015recoverability
 wilde2018optimized
 wolf2010theinverse
 xu2007operator

@@ -30,7 +30,7 @@ title: Rényi relative entropy in von Neumann algebras
 
 ### Approximate sufficiency (recoverability)
 
-
+* [wilde2015recoverability](wilde2015recoverability) recoverability, finite dimensional (SRE)
 * [faulkner2020approximate2](faulkner2020approximate2) approximate sufficiency for 2-positive (von Neumann)
 * [faulkner2020approximate](faulkner2020approximate) approximate sufficiency for subalgebras (von Neumann)   
 
