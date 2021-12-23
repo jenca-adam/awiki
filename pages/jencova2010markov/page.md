@@ -23,4 +23,6 @@ triplets is also described.
 
 [link to published version](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.220.744&rep=rep1&type=pdf)
 
+[published](jencova2010markov/published.pdf)
+
 

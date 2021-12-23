@@ -10,6 +10,20 @@ title: Rényi relative entropy in von Neumann algebras
 ---
 
 
+## Tasks
+
+1. Write the proof of recoverability in von Neumann algebras following
+   [faulkner2020approximate2](faulkner2020approximate2)     
+   * Study something about Poisson integral representations (interpolation), applied to $z\mapsto [D\varphi: S\omega]\_{iz}\Omega$ and related functions, differentiability etc.    
+   * the rotated and universal Petz maps?    
+   * what about recoverability via the measured relative entropy?
+1. Operational interpretation:     
+    * study the finite dimensional case and the extension to injective von Neumann algebras    
+    * prove for finite von Neumann algebras
+    * try to use the  [haagerup2010areduction](haagerup2010areduction) for the general case 
+
+
+
 
 
 
