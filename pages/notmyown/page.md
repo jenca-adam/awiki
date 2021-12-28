@@ -133,6 +133,7 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), 
 
 ### S
+[sutter2016strengthened](sutter2016strengthened),
 [streater2004quantum](streater2004quantum),
 
 

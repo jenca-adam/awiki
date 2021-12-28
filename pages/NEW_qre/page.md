@@ -28,8 +28,7 @@ title: Rényi relative entropy in von Neumann algebras
 
 
 
-## References
-
+## References  
 
 ### Regularized Rényi divergence (operational interpretation)
 
@@ -44,11 +43,14 @@ title: Rényi relative entropy in von Neumann algebras
 
 ### Approximate sufficiency (recoverability)
 
-* [wilde2015recoverability](wilde2015recoverability) recoverability, finite dimensional (SRE)
+* [wilde2015recoverability](wilde2015recoverability) recoverability via RED and interpolation (finite dimensional)
+* [sutter2016strengthened](sutter2016strengthened) recoverability via pinching map (finite dim)    
+* [junge2018universal](junge2018universal) recoverability via RED and interpolation, universal recovery map (finite dim)    
 * [faulkner2020approximate2](faulkner2020approximate2) approximate sufficiency for 2-positive (von Neumann)
 * [faulkner2020approximate](faulkner2020approximate) approximate sufficiency for subalgebras (von Neumann)   
 
 
+(RED- relative entropy difference)
 
 ### Petz
 

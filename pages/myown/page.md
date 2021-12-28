@@ -41,6 +41,7 @@ with D. Foulis and S. Pulmannová
 1. [foulis2017states](foulis2017states)
 with D. Foulis and S. Pulmannová
 
+1. [foulis2017aloomissikorski](foulis2017aloomissikorski)
 ### 2016
 1. [jencova2016conditions](jencova2016conditions)
 with M. Plávala, discrimination of quantum channels
