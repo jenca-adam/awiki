@@ -4,7 +4,7 @@ title: Preorder and equivalence of quantum channels
  quantum experiments (sufficiency, randomization preorder and equivalence) and the ideas from comparison.  
 *  **People:** M. Sedlák   
 *  **Related to:** [comparison](PROJECT_comparison) , [sufficiency](PROJECT_qre)
-*  **Directory:**  work/channels 
+*  **Repository:** channels 
 
 ---
 
