@@ -6,9 +6,20 @@ title: General Probabilistic Theories (GPT)
    their tensor products. Incompatibility witnesses. Related features such as steering, Bell inequalities, CHSH. The GPT of channels.
 *  **People:** Ion Nechita, Andreas Bluhm, Martin Plávala  
 *  **Related to:**  [comparison](PROJECT_comparison), [NC category](PROJECT_nc)   
-*  **Folder:** /work/compatibility, /work/chsh 
+*  **Repository:** compatibility, chsh 
 
 ---
+
+## Tasks
+
+1. Write the manuscript for special issue of Journal of Physics A:    
+    * check the notes(!)    
+    * relation of steering and incompatibility, new proof of incompatibility of effects $\iff$ entanglement 
+      [plavala2016allmeasurements](plavala2016allmeasurements)    
+    * steering - conditional states, write some remarks    
+    * references, introduction    
+    * relation to matrix convex sets, operator spaces, systems...    
+    * examples (hmmm)
 
 
 ## Basic references
@@ -18,7 +29,7 @@ title: General Probabilistic Theories (GPT)
         
 * Relation to tensor products: [lami2018ultimate](lami2018ultimate), [aubrun2018universal](aubrun2018universal)
 
-* Incompatibility: [bluhm2018joint](bluhm2018joint) spectrahedra, [plavala2016allmeasurements](plavala2016allmeasurements) entanglement implies incompatibility
+* Incompatibility: [bluhm2018joint](bluhm2018joint) spectrahedra, [plavala2016allmeasurements](plavala2016allmeasurements) incompatibility $\iff$ entanglement
 
 * Operator spaces/systems: [paulsen2002completely](BOOK_paulsen2002completely),
 [paulsen2011operator](paulsen2011operator), [farenick2012operator](farenick2012operator), [paulsen1996themaximal](paulsen1996themaximal)

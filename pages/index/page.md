@@ -3,6 +3,14 @@ title: My work
 
 
 
+## Tasks
+
+1. [GPT](PROJECT_gpt) Finish     
+1. [QRE](NEW_qre) Rényi relative entropies    
+1. Information geometry (classical) - prepare a seminar talk    
+1. [Information geometry](MISC_qig) write something? Extend?
+
+
 
 
 ## New
