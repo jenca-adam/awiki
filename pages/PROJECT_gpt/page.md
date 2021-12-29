@@ -14,22 +14,25 @@ title: General Probabilistic Theories (GPT)
 
 1. Write the manuscript for special issue of Journal of Physics A:    
     * check the notes(!)    
-    * relation of steering and incompatibility, new proof of incompatibility of effects $\iff$ entanglement 
-      [plavala2016allmeasurements](plavala2016allmeasurements)    
-    * steering - conditional states, write some remarks    
+    * relation of steering and incompatibility     
+    * steering - distance to barycenter, conditional states, write some remarks, unsteerable states?    
     * references, introduction    
     * relation to matrix convex sets, operator spaces, systems...    
-    * examples (hmmm)
+    * examples (hmmm, $W$?)
 
 
 ## Basic references
 
 
-* General:  [aubrun2017alice](aubrun2017alice), [alfsen1971compact](BOOK_alfsen1971compact)
-        
-* Relation to tensor products: [lami2018ultimate](lami2018ultimate), [aubrun2018universal](aubrun2018universal)
+* General: [lami2018nonclassical](lami2018nonclassical), [plavala2021general](plavala2021general)    
 
-* Incompatibility: [bluhm2018joint](bluhm2018joint) spectrahedra, [plavala2016allmeasurements](plavala2016allmeasurements) incompatibility $\iff$ entanglement
+* Steering: [uola2020quantum](uola2020quantum) a review of quantum steering, [plavala2021incompatibility](plavala2021incompatibility) restricted OT, contextuality and steering
+
+* Convexity: [aubrun2017alice](aubrun2017alice), [alfsen1971compact](BOOK_alfsen1971compact)
+        
+* Relation to tensor products of Banach spaces: [lami2018ultimate](lami2018ultimate), [aubrun2018universal](aubrun2018universal)
+
+* Incompatibility: [bluhm2018joint](bluhm2018joint) spectrahedra, [bluhm2021maximal](bluhm2021maximal), [plavala2016allmeasurements](plavala2016allmeasurements) incompatibility $\iff$ entanglement
 
 * Operator spaces/systems: [paulsen2002completely](BOOK_paulsen2002completely),
 [paulsen2011operator](paulsen2011operator), [farenick2012operator](farenick2012operator), [paulsen1996themaximal](paulsen1996themaximal)

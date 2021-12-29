@@ -119,6 +119,8 @@ title: Not my own papers
 ### O
 
 ### P
+[plavala2021incompatibility](plavala2021incompatibility),
+[plavala2021general](plavala2021general),
 
 
 
@@ -143,6 +145,7 @@ title: Not my own papers
 [takagi2019general](takagi2019general), [terp1981lpspaces](terp1981lpspaces), [tomamichel2016quantum](tomamichel2016quantum), 
 
 ### U
+[uola2020quantum](uola2020quantum),
 
 [umanita2006classification](umanita2006classification)
 
