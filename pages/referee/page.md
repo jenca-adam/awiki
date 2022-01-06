@@ -4,7 +4,6 @@ title: To referee
    
   
    
-* Due [4.01.2022](REF_cree2021)
    
 
 
@@ -15,6 +14,7 @@ title: To referee
 
 
 
+1. <del> Due [4.01.2022](REF_cree2021)</del> Done.
 
 
 
