@@ -2,7 +2,6 @@ title: To referee
 ---
 
    
-* [20.1.2022](REF_faulkner2021) (revision)  
    
    
 
@@ -14,7 +13,9 @@ title: To referee
 
 
 
-1. <del> Due [4.01.2022](REF_cree2021)</del> Done.
+1. <del> Due [4.01.2022](REF_cree2021)</del> Done.    
+1. <del> [20.1.2022](REF_faulkner2021) (revision)  </del> Done.
+
 
 
 
