@@ -1,7 +1,27 @@
 title: My work
 ---
-## My projects
 
+
+
+## Tasks
+
+1. [GPT](PROJECT_gpt) Finish     
+1. [QRE](NEW_qre) Rényi relative entropies    
+1. Information geometry (classical) - prepare a seminar talk    
+1. [Information geometry](MISC_qig) write something? Extend?
+
+
+
+
+## New
+
+* [Sequential effect algebras and spectrality](NEW_seas)  (with Sylvia)
+
+* [Further on Renyi relative entropy in von Neumann algebras](NEW_qre)
+
+---
+
+## My projects
 
 ### Quantum comparison: experiments, channels, networks
 
@@ -71,7 +91,6 @@ title: My work
 
 * [notmyown](notmyown)
 * [myown](myown)
-* [preprints](mypreprints)
 
 ---
 

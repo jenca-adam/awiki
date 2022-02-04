@@ -32,7 +32,7 @@ with M. Plávala, maximally incompatible effects in GPTs
 with G. Jenča, sets and relations
 1. [jencova2017preservation](jencova2017preservation)
 sandwiched Rényi relative entropy and sufficiency (finite dim)
-1. [foulis2017aloomis-sikorski](foulis2017aloomis-sikorski)
+1. [foulis2017aloomis](foulis2017aloomis)
 with D. Foulis and S. Pulmannová
 1. [foulis2017vectorlattices](foulis2017vectorlattices)
 with D. Foulis and S. Pulmannová
@@ -40,6 +40,10 @@ with D. Foulis and S. Pulmannová
 with D. Foulis and S. Pulmannová
 1. [foulis2017states](foulis2017states)
 with D. Foulis and S. Pulmannová
+
+1. [foulis2017aloomissikorski](foulis2017aloomissikorski)
+1. [foulis2017aloomissikorski](foulis2017aloomissikorski)
+1. [foulis2017aloomissikorski](foulis2017aloomissikorski)
 ### 2016
 1. [jencova2016conditions](jencova2016conditions)
 with M. Plávala, discrimination of quantum channels

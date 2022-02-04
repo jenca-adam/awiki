@@ -1,0 +1,16 @@
+README
+README~
+awiki
+awiki~
+bib.bib
+download_all
+download_all~
+geckosetup
+geckosetup~
+getbibs
+page.md
+pages
+pages.txt
+pagetools
+static
+templates

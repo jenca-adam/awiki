@@ -30,6 +30,7 @@ title: Not my own papers
 
 
 ### F
+[faulkner2020approximate2](faulkner2020approximate2),
 
 [fagnola1999algebraic](fagnola1999algebraic),  
 [faulkner2020approximate](faulkner2020approximate),
@@ -57,7 +58,9 @@ title: Not my own papers
 [gudder2006compression](gudder2006compression) 
 
 ### H
-[hawking2017superrotation](hawking2017superrotation),
+[haagerup2010areduction](haagerup2010areduction),
+
+[BOOK_hanche1984jordan](BOOK_hanche1984jordan),
 [hiai2021quantum](hiai2021quantum),
 
 
@@ -69,28 +72,14 @@ title: Not my own papers
 ### I
 
 ### J
-[jencova2007howsharpare](jencova2007howsharpare),
-[jencova2003affine](jencova2003affine),
-[jencova2013effect](jencova2013effect),
-[jencovahowsharpare](jencovahowsharpare),
-
-
-
-
-
-
-[jencova2019observables](jencova2019observables),
+[junge2018universal](junge2018universal),
 
 [jaksic2012quantum](jaksic2012quantum)
 [jenca2015blocksof](jenca2015blocksof),
 [jenca2014effectalgebras](jenca2014effectalgebras),
 [jenca2020derived](jenca2020derived),
 
-
-
-[jencova2019observables](jencova2019observables),
 [jenca2017anoteon](jenca2017anoteon),
-
 
 [jenca2017twomonads](jenca2017twomonads),
 [jenca2019pseudo](jenca2019pseudo),
@@ -130,10 +119,12 @@ title: Not my own papers
 ### O
 
 ### P
+[plavala2021incompatibility](plavala2021incompatibility),
+[plavala2021general](plavala2021general),
 
 
 
-[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [BOOK_paulsen2002completely](BOOK_paulsen2002completely), [paulsen2011operator](paulsen2011operator), [petz1986sufficient](petz1986sufficient), 
+[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [BOOK_paulsen2002completely](BOOK_paulsen2002completely), [paulsen2011operator](paulsen2011operator), [petz1985quasi](petz1985quasi), [petz1986quasi](petz1986quasi), [petz1986sufficient](petz1986sufficient), 
 [petz1988sufficiency](petz1988sufficiency),  [pisier2003noncommutative](pisier2003noncommutative),
  [plavala2016allmeasurements](plavala2016allmeasurements), [pulmannova2006effect](pulmannova2006effect)
 
@@ -144,6 +135,7 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), 
 
 ### S
+[sutter2016strengthened](sutter2016strengthened),
 [streater2004quantum](streater2004quantum),
 
 
@@ -153,7 +145,7 @@ title: Not my own papers
 [takagi2019general](takagi2019general), [terp1981lpspaces](terp1981lpspaces), [tomamichel2016quantum](tomamichel2016quantum), 
 
 ### U
-[university1996isthereanything](university1996isthereanything),
+[uola2020quantum](uola2020quantum),
 
 [umanita2006classification](umanita2006classification)
 
@@ -161,6 +153,8 @@ title: Not my own papers
 [vetterlein2019orthogonality](vetterlein2019orthogonality)
 
 ### W
+[wilde2015recoverability](wilde2015recoverability),
+[wetering2020commutativity](wetering2020commutativity),
 
 [westerbaan2020acharacterization](westerbaan2020acharacterization),
 [westerbaan2020thethree](westerbaan2020thethree),

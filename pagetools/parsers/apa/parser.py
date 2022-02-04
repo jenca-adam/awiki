@@ -1,4 +1,5 @@
 import parse
+from pagetools.utils.year import year
 from . import authorsplit as aspl
 class APAParser:
     def __init__(self,string):
@@ -11,3 +12,5 @@ class APAParser:
         self.parsed=self.parsed.named
         self.parsed['authors']=aspl.split(self.parsed['authors'])
         self.authors=aspl.split(self.authors)
+        self.year=year(self.year)
+        self.parsed['year']=self.year
