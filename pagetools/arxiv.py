@@ -3,12 +3,14 @@ import httplib2
 import sys
 import re
 import os
-from .special import CachedH
+import urllib.parse
+from .special import CachedH,home
 from .pathos import make_authors
 
 class ArXivPage:
     def __init__(self,arxivid):
-        os.chdir(os.path.expanduser('~')+'/work/awiki/pages')
+        home()
+        os.chdir('pages')
         self.arxivid=arxivid
         self.old=False
         if not re.search(r'\d+.\d+',self.arxivid):
@@ -27,6 +29,8 @@ class ArXivPage:
         dategroups=match.groups()
         self.month=dategroups[0]
         self.year=dategroups[1]
+        self.scholarurl=soup.select('#abs-outer > div.extra-services > div:nth-child(3) > ul > li:nth-child(3) > a')[0]['href']
+        self.scholarquery={k:v[0] for k, v in urllib.parse.parse_qs(urllib.parse.urlparse(self.scholarurl).query).items()}
         print(self.month,self.year)
         print('loading title...',file=sys.__stdout__)
         self.title=str(soup.find_all('h1',class_='title mathjax')[0].text).replace('Title:','')
@@ -114,4 +118,5 @@ class ArXivPage:
                         </div>
                     </body>
                     </html>'''
+
 

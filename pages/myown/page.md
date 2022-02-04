@@ -95,9 +95,9 @@ with S. Pulmannová and E. Vinceková, commutative POVMs characterized as smeari
 1. [jencova2008anote](jencova2008anote)
 with S.Pulmannová, dimension effect algebras and AF C\*-algebras, article not on arxiv!
 ### 2007
-1. [jencova2007howsharp](jencova2007howsharp) with S. Pulmannová, which PVMs  are smearings?
 1. [guta2007local](guta2007local) with M. Guta, quantum local asymptotic normality, canonical states of quantum
 statistical experiments
+1. [jencova2007howsharp](jencova2007howsharp)
 ### 2006
 1. [jencova2006sufficiency](jencova2006sufficiency) with D.Petz, sufficiency with examples
 1. [jencova2006arelation](jencova2006arelation) completely bounded norms and Schatten norms

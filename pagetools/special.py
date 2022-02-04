@@ -1,5 +1,6 @@
 import os
 import httplib2
+httplib2.debuglevel=1
 aw='awiki.adam' if 'awiki.adam' in os.getcwd() else 'awiki'
 def listrm(l,item):
     try:

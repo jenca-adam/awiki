@@ -55,7 +55,7 @@ def loadpage(id,download=True,rewrite=False,name=None):
     linkid=linkmatch.groups()[0]
     print(linkid)
     print(f'{YELLOW}Stealing BibTex...{RESET}')
-    bibtex,l,schlink=steal_bib(linkid)
+    bibtex,l,schlink=steal_bib(linkid,**page.scholarquery)
     lpage=urlsplit(l).netloc
     print(f'BibTex is:\n{bibtex}')
     print(f'{BLUE}Parsing BibTex...{RESET}')

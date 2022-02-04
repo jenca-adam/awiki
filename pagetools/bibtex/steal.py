@@ -45,8 +45,10 @@ def steal_even_older_bib(arxivid):#the less old one(semantic scholar)
 def steal_old_bib(arxivid):    
     title=ArXivPage(arxivid).title
     return export_bib(title)
-def steal_bib(arxivid):
-    results,uri=scholar_search(arxiv_id=arxivid)
+def steal_bib(arxivid,**kwargs):
+    if 'arxiv_id' in kwargs:
+        del kwargs['arxiv_id']
+    results,uri=scholar_search(arxiv_id=arxivid,**kwargs)
     result=results[0]
     return result.get_citations().bibtex,result.link,uri
     

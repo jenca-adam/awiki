@@ -57,6 +57,7 @@ title: Not my own papers
 [gudder2006compression](gudder2006compression) 
 
 ### H
+[hawking2017superrotation](hawking2017superrotation),
 [hiai2021quantum](hiai2021quantum),
 
 
@@ -152,6 +153,7 @@ title: Not my own papers
 [takagi2019general](takagi2019general), [terp1981lpspaces](terp1981lpspaces), [tomamichel2016quantum](tomamichel2016quantum), 
 
 ### U
+[university1996isthereanything](university1996isthereanything),
 
 [umanita2006classification](umanita2006classification)
 

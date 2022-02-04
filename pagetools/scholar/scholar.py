@@ -3,9 +3,13 @@ from pagetools.utils.ffx import fxget
 from pagetools.utils.haskey import haskey
 from pagetools.utils.args import encode_url_args
 from pagetools.parsers.apa2bib import apa2bib
+from pagetools.parsers.jref.jref2bib import jref2bib
+from pagetools.utils.warn import warn
 import time
+import warnings
+import colorama
 class Citations:
-    def __init__(self,schid):
+    def __init__(self,schid,jref):
         self.citeurl=f'https://scholar.google.com/scholar?q=info:{schid}:scholar.google.com/&output=cite'
         content=fxget(self.citeurl)
         print(content)
@@ -15,17 +19,24 @@ class Citations:
         print()
         print()
         print(self.apa)
-        self.bibtex=apa2bib(self.apa)
+        try:
+            self.bibtex=apa2bib(self.apa)
+        except:
+            warn(
+                ' APA read failed, parsing JRef'
+                )
+            self.bibtex=jref2bib(jref)
 class Item:
     def __init__(self,title,link,authorline,abstract,schid):
         self.title=title
         self.link=link
         self.authors=[aut.strip() for aut in authorline.split(',')]
+        self.jref=authorline
         self.abstract=abstract
         self.id=schid
     def get_citations(self):
         time.sleep(1)
-        return Citations(self.id)
+        return Citations(self.id,self.jref)
 class Results:
     def __init__(self,items):
         self.items=[]
