@@ -50,10 +50,22 @@ used in [heinosaari et al](https://arxiv.org/abs/1510.04711) for incompatibility
 
 * further examples on qubits: Bell diagonal states, other
 
-* steering maps and separability (relation to [bluhm2018joint](bluhm2018joint)-spectrahedra)
-[Moroder et al](https://arxiv.org/abs/1412.2623)
+* steering maps and separability (relation to [bluhm2020compatibility](bluhm2020compatibility)-spectrahedra)
+[Moroder et al](https://arxiv.org/abs/1412.2623) - also dimension bounded steering
 
+* superactivation of steering: $n$-copies $\rho_{AB}^{\otimes n}$ become steerable for some $n$ if the *reduction criterion* is satisfied: $I_A\otimes \rho_B-\rho_{AB}\not\geq 0$ [quintino et al](https://arxiv.org/abs/1610.01037v1), [hsieh et al](https://arxiv.org/abs/1609.07581v3)
 
+* Steering and incompatibility      
+    * A set of measurements is incompatible if and only if it can be used to demonstrate steering [quintino et al](https://arxiv.org/abs/1406.6976v3), [uola et al](https://arxiv.org/pdf/1604.08724v1.pdf) - joint measurability for qubit observables!! -read this!!     
+    * relation to operatonal contextuality: [tavakoli and uola](https://arxiv.org/abs/1905.03614v2)
+    * assemblages -> sets of measurements [uola et al](https://arxiv.org/abs/1507.08633v3)     
+    * necessary and sufficient condition for compatibility of pairs of qubit effects: Eq. (84)     
+    * extension to infinite dimensions: [kiukas et al](https://arxiv.org/abs/1704.05734v2) state-channel duality     
+    * coexistence, nondisturbance, broadcastability, measurement simulability, incompatibility on many copies
+
+* multiparty steering     
+
+* temporal steering?
 
 
 

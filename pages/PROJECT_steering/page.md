@@ -11,8 +11,11 @@ title:Steering in GPTs and quantum
 
 ## Ideas 
 
+* read [uola2020quantum](uola2020quantum) a review on quantum steering (comments)    
+
+    * steerability conditions [nguyen2018quantum](nguyen2018quantum)
 
 
 ## References
 
-[uola2020quantum](uola2020quantum) a review on quantum steering (comments)
+

@@ -8,6 +8,7 @@ title: Not my own papers
 [arveson1969subalgebras](arveson1969subalgebras),  [arveson2007theasymptotic](arveson2007theasymptotic), [arveson2008lifting](arveson2008lifting), [aubrun2017alice](aubrun2017alice), [aubrun2018universal](aubrun2018universal), 
 
 ### B
+[bluhm2020compatibility](bluhm2020compatibility),
 [blecher2021vonneumann](blecher2021vonneumann),
 [baez2011acharacterization](baez2011acharacterization), [bardet2017estimating](bardet2017estimating), 
 [barnum2015entropy](barnum2015entropy), [berta2017onvariational](berta2017onvariational),  [berta2018renyi](berta2018renyi), [bardet2017estimating](bardet2017estimating), [bisio2019theoretical](bisio2019theoretical), [blackwell1951comparison](blackwell1951comparison), 
@@ -115,6 +116,7 @@ title: Not my own papers
 [matsumoto2010aquantum](matsumoto2010aquantum), [matsumoto2015anew](matsumoto2015anew), [mullerlennert2013onquantum](mullerlennert2013onquantum), [matsumoto2010reverse](matsumoto2010reverse) 
 
 ### N
+[nguyen2018quantum](nguyen2018quantum),
 
 ### O
 
