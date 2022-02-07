@@ -15,4 +15,8 @@ Large Deviations for Homogeneous Open Quantum Walks
 
 **Decision:** Minor revision (my decision)
 
+**Revised due:** 6.3.2022
+
+[revision](REF_carbone/revision.pdf)
+
 

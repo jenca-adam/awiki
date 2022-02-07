@@ -4,7 +4,7 @@ title: uola2020quantum
 
 ## Reference
 
-Roope Uola, Ana C. S. Costa, H. Chau Nguyen, Otfried Gühne,Quantum Steering,Reviews of Modern Physics, 92(1), 015001, Mar 2020,
+Roope Uola, Ana C. S. Costa, H. Chau Nguyen, Otfried Gühne,Quantum Steering, Reviews of Modern Physics, 92(1), 015001, 2020,
 
 ## Abstract 
   Quantum correlations between two parties are essential for the argument of
@@ -26,4 +26,36 @@ processing and further related topics are reviewed.
 
 [arxiv:1903.06663](https://arxiv.org/abs/1903.06663)
 [View at journals.aps.org](https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.92.015001)
-[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1903.06663) 
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1903.06663)
+
+
+## Notes
+
+* Steering inequalities $\equiv$ steering witnesses    
+
+* steerability SDP (dichotomic) - the norm - the dual problem - steering witness - dual norm    
+
+* conditions from entropic uncertainty relations [Costa et al](https://arxiv.org/abs/1710.04541)  
+ 
+* finite steering assemblages: fixed (deterministic) response functions (*holds in GPT also*)
+
+* steering  criteria using order monotonic functions [Zhu et al](https://arxiv.org/abs/1510.04711), 
+used in [heinosaari et al](https://arxiv.org/abs/1510.04711) for incompatibility
+
+* convex weight - exclusion tasks [uola et al](https://arxiv.org/abs/1909.10484), steering robustness - subchannel discrimination tasks [Piani and Watrous](https://arxiv.org/abs/1406.0530). Both  by SDPs. 
+
+* canonical coice of the indexing hidden variable: pure states [nguyen2018quantum], [nguyen2919thegeometry], also *principal radius*, *critical radius* (qubits, projective measurements), relation to robustness, 
+
+* Werner states, isotropic states
+
+* further examples on qubits: Bell diagonal states, other
+
+* steering maps and separability (relation to [bluhm2018joint](bluhm2018joint)-spectrahedra)
+[Moroder et al](https://arxiv.org/abs/1412.2623)
+
+
+
+
+
+
+

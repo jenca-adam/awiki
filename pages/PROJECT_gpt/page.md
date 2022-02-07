@@ -12,17 +12,15 @@ title: General Probabilistic Theories (GPT)
 
 ## Tasks
 
-1. Write the manuscript for special issue of Journal of Physics A:    
-    * check the notes(!)    
-    * relation of steering and incompatibility     
-    * steering - distance to barycenter, conditional states, write some remarks, unsteerable states?    
-    * references, introduction    
-    * relation to matrix convex sets, operator spaces, systems...    
-    * examples (hmmm, $W$?)
+
+
+
 
 
 ## Basic references
 
+
+* [steering](PROJECT_steering)
 
 * General: [lami2018nonclassical](lami2018nonclassical), [plavala2021general](plavala2021general)    
 

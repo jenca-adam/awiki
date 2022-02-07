@@ -20,4 +20,7 @@ title: Beneduci, Gentile, POVMs, 2021
 
 [revised report](REF_beneduci2021/revised_report.pdf)
 
-**Decision:** Accept 
+**Decision:** Accept
+
+[2revision](REF_beneduci2021/revision2.pdf)
+
