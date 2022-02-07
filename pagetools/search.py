@@ -5,7 +5,10 @@ from .special import CachedH
 from .xml import element as xml
 h=CachedH()
 pattern=r'/abs/(.*?)$'
+def semicolon(query):
+    return query.replace(';',' AND ')
 def search(query,fields='all'):
+    query=semicolon(query)
     resp,raw=h.request(f'http://export.arxiv.org/api/query?search_query={fields}:'+urllib.parse.quote(query)+'&start=0&max_results=500')
     parsed=xml.parse(raw)
     entries=parsed['entry']
