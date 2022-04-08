@@ -41,9 +41,6 @@ with D. Foulis and S. Pulmannová
 1. [foulis2017states](foulis2017states)
 with D. Foulis and S. Pulmannová
 
-1. [foulis2017aloomissikorski](foulis2017aloomissikorski)
-1. [foulis2017aloomissikorski](foulis2017aloomissikorski)
-1. [foulis2017aloomissikorski](foulis2017aloomissikorski)
 ### 2016
 1. [jencova2016conditions](jencova2016conditions)
 with M. Plávala, discrimination of quantum channels
@@ -126,9 +123,9 @@ torsion-free duals,  divergences, conference proceedings,  not on arxiv!
 ### 1999
 1. [petz1999onquantum](petz1999onquantum) quantum Fisher information, conference proceedings, not on arxiv!
 ## Preprints
-1. [jencova2021spectral](jencova2021spectral) with S. Pulmannová, spectrality in effect algebras (submitted to quantum)
+1. [jencova2021spectral](jencova2021spectral) with S. Pulmannová, spectrality in effect algebras (submitted to Quantum - revise and resubmit)
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
-with A. Bluhm and I. Nechita, incompatibility in GPTs, tensor norms, spectrahedra (submitted to CMP)
+with A. Bluhm and I. Nechita, incompatibility in GPTs, tensor norms, spectrahedra (submitted to CMP - accepted)
 1. [jencova2015aextreme](jencova2015aextreme) C^\*-extreme (or $\mathcal A$-extreme) points of UCP maps into matrix
 algebras, not on arxiv!  (unpublished draft)
 1. [jencova2015comparison](jencova2015comparison) a longer version of [jencova2016isit](jencova2016isit)
