@@ -25,7 +25,7 @@ Zalinescu: [zalinescu2002convex](BOOK_zalinescu2002convex)
 
 ## Talk
 
-[my talk](orlicz2021.pdf) 28.9.2021 
+[my talk](MISC_qig/orlicz2021.pdf) 28.9.2021 
 
 
 ## Notes and feedback
@@ -36,7 +36,6 @@ Zalinescu: [zalinescu2002convex](BOOK_zalinescu2002convex)
 * log-Sobolev? Hm.
 
  
-
 
 
 
