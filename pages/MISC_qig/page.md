@@ -1,10 +1,27 @@
 title: Quantum information geometry
 ---
 
-(talk preparation: Boguslaw Zegarlinski)
+
+## Classical information geometry
+
+(talk preparation - Pázman statistical seminar)
+### Sources
+
+* A paper by [Frank Nielsen](https://arxiv.org/abs/1808.08271)    
+* A book by [Ay et al](https://link.springer.com/book/10.1007/978-3-319-56478-4)   
+* Something by [Jost etc?](https://arxiv.org/abs/1907.00732)
++ usual references
 
 
-## Basic references
+
+
+
+
+
+## Quantum Orlicz spaces and informatiuon geometry
+
+(talk preparation: for Boguslaw Zegarlinski)
+### Basic references
 
 
 My papers:    

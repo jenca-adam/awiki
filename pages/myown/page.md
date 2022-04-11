@@ -105,7 +105,7 @@ statistical experiments
 1. [jencova2006sufficiencyfirst](jencova2006sufficiencyfirts) with D. Petz, sufficiency of quantum channels, equality in DPI,
 factorization
 1. [jencova2006aconstruction](jencova2006aconstruction) a construction of quantum exponential Orlicz space and a
-infinite dimensional quantum information matifold
+infinite dimensional quantum information manifold
 ### 2005
 1. [jencova2005quantum](jencova2005quantum)  quantum information geometry, affine connections and Araki-Masuda $L_p$-spaces, not on arxiv!
 ### 2004
@@ -123,12 +123,12 @@ torsion-free duals,  divergences, conference proceedings,  not on arxiv!
 ### 1999
 1. [petz1999onquantum](petz1999onquantum) quantum Fisher information, conference proceedings, not on arxiv!
 ## Preprints
-1. [jencova2021spectral](jencova2021spectral) with S. Pulmannová, spectrality in effect algebras (submitted to Quantum - revise and resubmit)
+1. [jencova2021spectral](jencova2021spectral) with S. Pulmannová, spectrality in effect algebras (submitted to Quantum - <span style='color:red'> revise and resubmit</span>)
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
-with A. Bluhm and I. Nechita, incompatibility in GPTs, tensor norms, spectrahedra (submitted to CMP - accepted)
+with A. Bluhm and I. Nechita, incompatibility in GPTs, tensor norms, spectrahedra (submitted to CMP - <span style='color:red'>accepted</span>)
 1. [jencova2015aextreme](jencova2015aextreme) C^\*-extreme (or $\mathcal A$-extreme) points of UCP maps into matrix
-algebras, not on arxiv!  (unpublished draft)
+algebras, not on arxiv!  (<span style='color:red'>unpublished draft</span>)
 1. [jencova2015comparison](jencova2015comparison) a longer version of [jencova2016isit](jencova2016isit)
-1. [jencova2014randomization](jencova2014randomization) randomization theorems for quantum channels  (never published)
-1. [jencova2003affine](jencova2003affine) affine connections on von Neumann algebras, Araki-Masuda $L_p$-spaces (never published)
+1. [jencova2014randomization](jencova2014randomization) randomization theorems for quantum channels  (<span style='color:red'>never published</span>)
+1. [jencova2003affine](jencova2003affine) affine connections on von Neumann algebras, Araki-Masuda $L_p$-spaces (<span style='color:red'>never published</span>)
 
