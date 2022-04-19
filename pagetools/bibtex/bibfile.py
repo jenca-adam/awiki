@@ -2,8 +2,6 @@ class BibEntry:
     def __init__(self,entry):
         print(entry)
         self.__dict__.update(entry)
-    def __repr__(self):
-        return f'BibEntry({self.ID})'
 class BibFile:
     def __init__(self,entries,name='<unknown>'):
         self.entries=[BibEntry(entry) for entry in entries]

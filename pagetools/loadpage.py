@@ -8,7 +8,7 @@ import colorama
 import os
 import shutil
 from . import arxiv,special
-from .bibtex import steal_bib,parse
+from .bibtex import steal_bib,parse,get_name
 from .common.exceptions import PageExistsError
 from .utils.capitalized import capitalized,normalize_lower
 from .utils.file import *
@@ -56,6 +56,7 @@ def loadpage(id,download=True,rewrite=False,name=None):
     print(linkid)
     print(f'{YELLOW}Stealing BibTex...{RESET}')
     bibtex,l,schlink=steal_bib(linkid,**page.scholarquery)
+    bibtex,_=bibtex
     lpage=urlsplit(l).netloc
     print(f'BibTex is:\n{bibtex}')
     print(f'{BLUE}Parsing BibTex...{RESET}')
@@ -63,6 +64,7 @@ def loadpage(id,download=True,rewrite=False,name=None):
     print(f'{MAGENTA}Page from year {bt_data.year}{RESET}')
     page.year=int(bt_data.year)
     page.jrefs=bt_data.journal
+    name=get_name(bibtex)
     if name is None:
         name=makename(authorname,page.year,thingname)
 

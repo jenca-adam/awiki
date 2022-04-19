@@ -1,9 +1,10 @@
 from bs4 import BeautifulSoup as bs
 import httplib2
 import sys
+
 import re
 import os
-import urllib.parse
+from urllib import parse
 from .special import CachedH,home
 from .pathos import make_authors
 
@@ -13,7 +14,7 @@ class ArXivPage:
         os.chdir('pages')
         self.arxivid=arxivid
         self.old=False
-        if not re.search(r'\d+.\d+',self.arxivid):
+        if not re.search(r'\d+\.\d+',self.arxivid):
             self.old=True
         self.dateline_pattern=r'\D*\d+(\D+)(\d+)'
         self.authors_pattern=r'Authors:(\D*)'
@@ -29,8 +30,6 @@ class ArXivPage:
         dategroups=match.groups()
         self.month=dategroups[0]
         self.year=dategroups[1]
-        self.scholarurl=soup.select('#abs-outer > div.extra-services > div:nth-child(3) > ul > li:nth-child(3) > a')[0]['href']
-        self.scholarquery={k:v[0] for k, v in urllib.parse.parse_qs(urllib.parse.urlparse(self.scholarurl).query).items()}
         print(self.month,self.year)
         print('loading title...',file=sys.__stdout__)
         self.title=str(soup.find_all('h1',class_='title mathjax')[0].text).replace('Title:','')
@@ -49,6 +48,11 @@ class ArXivPage:
             self.jrefs=jrefs.text
         print('loading abstract...')
         self.abstract=soup.find_all('blockquote',class_="abstract mathjax")[0].text[10:]
+        print('loading google scholar link')
+        self.google_sch_link=soup.find('a',class_="abs-button abs-button-small cite-google-scholar").get('href','')
+        schqr=parse.urlparse(self.google_sch_link).query
+        self.scholarquery=dict(parse.parse_qsl(schqr))
+        
         os.chdir('..')
     def html(self):
         img='<div class="warning"><img src="/static/img/warning.png/" width=100, height=100/><b>WARNING!</b> This is\
@@ -109,7 +113,8 @@ class ArXivPage:
                             </div>
                             <hr>
 
-                            <div id="abstract">
+                        
+    <div id="abstract">
                             <h2>Abstract</h2>
                             <div id="abstract-inner" style="font-size:14pt;">
                             {self.abstract}
