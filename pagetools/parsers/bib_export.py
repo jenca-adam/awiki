@@ -16,5 +16,5 @@ def bibmake(dc,name=None,tp='article'):
     for key in dc:
         bib_export+=f'\t{key}={{{dc[key]}}},\n'
     bib_export+='}'
-    return bib_export
+    return bib_export,name
     

@@ -1,8 +1,8 @@
 import re,os
-
+from .special import pagepath,home
 def search(q):
     results=[]
-    os.chdir(os.path.expanduser('~')+'/work/awiki/pages/')
+    os.chdir(pagepath(''))
     for work in os.listdir():
         if work in ['myown','notmyown','index']:continue
         try:
@@ -27,7 +27,7 @@ def search(q):
         except IOError:
             pass
         os.chdir('..')
-    os.chdir(os.path.expanduser('~')+'/work/awiki/')
+    home()
 
     return results
                     
