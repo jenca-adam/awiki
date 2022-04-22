@@ -9,10 +9,13 @@ def bibmake(dc,name=None,tp='article'):
             warn(
                 'Missing name, will be set to \'\''
             )
-
-    title=makename(dc['authors'],dc['year'],maketitle(name))
+    try:
+        title=makename(dc['authors'],dc['year'],maketitle(name))
+    except:
+        title=name
     bib_export=f'@{tp}{{{title},\n'
-    del dc['name']
+    if 'name' in dc:
+        del dc['name']
     for key in dc:
         bib_export+=f'\t{key}={{{dc[key]}}},\n'
     bib_export+='}'

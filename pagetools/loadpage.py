@@ -13,6 +13,7 @@ from .common.exceptions import PageExistsError
 from .utils.capitalized import capitalized,normalize_lower
 from .utils.file import *
 from .special import *
+from .parsers.jref.jref2bib import *
 from .utils.name import makename,maketitle
 from urllib.parse import urlsplit
 BLUE=colorama.Fore.BLUE
@@ -55,21 +56,33 @@ def loadpage(id,download=True,rewrite=False,name=None):
     linkid=linkmatch.groups()[0]
     print(linkid)
     print(f'{YELLOW}Stealing BibTex...{RESET}')
-    bibtex,l,schlink=steal_bib(linkid,**page.scholarquery)
-    bibtex,_=bibtex
-    lpage=urlsplit(l).netloc
-    print(f'BibTex is:\n{bibtex}')
-    print(f'{BLUE}Parsing BibTex...{RESET}')
-    bt_data=parse(bibtex)
-    print(f'{MAGENTA}Page from year {bt_data.year}{RESET}')
-    page.year=int(bt_data.year)
-    page.jrefs=bt_data.journal
+    try:
+        bibtex,l,schlink=steal_bib(linkid,**page.scholarquery)
+        bibtex,_=bibtex
+        lpage=urlsplit(l).netloc
+        print(f'BibTex is:\n{bibtex}')
+        print(f'{BLUE}Parsing BibTex...{RESET}')
+        bt_data=parse(bibtex)
+        print(f'{MAGENTA}Page from year {bt_data.year}{RESET}')
+        page.year=int(bt_data.year)
+        page.jrefs=bt_data.journal
+        additional='\n[View at {lpage}]({l})\n[View at Google Scholar]({schlink})'
+    except:
+        print("Load bib failed")
+        bibtex,name=jref2bib(page.jrefs,makename(authorname,page.year,thingname))
+
+
+        additional=''
+
     name=get_name(bibtex)
     if name is None:
         name=makename(authorname,page.year,thingname)
 
-    print(f'{YELLOW}Directory name:{name}{RESET}')
+    
+        
 
+    print(f'{YELLOW}Directory name:{name}{RESET}')
+    page.year=int(page.year)
     if download:
         try:
             os.mkdir(special.pagepath(name))
@@ -82,7 +95,7 @@ def loadpage(id,download=True,rewrite=False,name=None):
                 raise PageExistsError(
                 f'''page {name!r} already exists! Awiki will automatically try to clean up empty pages. If
                 you see "CLEANUP: ****" in green color, refreshing page should work, but not always.''') 
-        linkstr=f'[arxiv:{linkid}](https://arxiv.org/abs/{linkid})\n[View at {lpage}]({l})\n[View at Google Scholar]({schlink}) '
+        linkstr=f'[arxiv:{linkid}](https://arxiv.org/abs/{linkid}){additional}'
 
         pagestring=f'title: {name}\n---\n\n\n## Reference\n\n{(", ").join(page.authors)},{page.title},{page.jrefs},{page.month}\b{page.year},\n\n## Abstract \n{page.abstract}\n\n{linkstr}'
         print(f'{name}/page.md:\n\n{CYAN}{pagestring}{RESET}')
@@ -107,6 +120,7 @@ def loadpage(id,download=True,rewrite=False,name=None):
             if mypath=='myown':
                 mylinkstr=f'1. [{name}]({name})'
                 lines=readlines('page.md')
+                
                 if f'### {page.year}' not in lines:
                     lines.append(f'### {page.year}')
                     lines.append(mylinkstr)

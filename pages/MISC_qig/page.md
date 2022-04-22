@@ -18,7 +18,7 @@ title: Quantum information geometry
 
 
 
-## Quantum Orlicz spaces and informatiuon geometry
+## Quantum Orlicz spaces and information geometry
 
 (talk preparation: for Boguslaw Zegarlinski)
 ### Basic references

@@ -128,7 +128,7 @@ def auth(id):
     env=Environment(loader=FileSystemLoader('templates')) 
     beh=pagetools.add(id,**request.args)
     print(beh)
-    if beh['status']=='error':
+    if beh and beh['status']=='error':
         return env.get_template('file_exists.html').render(msg=beh['response']['message'],type=beh['response']['type'],cleanup=beh['cleanup'],traceback=beh['tb'])
     return redirect('/')
 @app.route('/remove/<string:pagename>',methods=['POST','GET'])

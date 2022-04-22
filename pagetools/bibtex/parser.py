@@ -1,5 +1,6 @@
 from pybtex.database.input import bibtex
 from .bibfile import *
+from ..utils.strfilt import lowercase
 def getdb(bib):
     parser=bibtex.Parser()
     pf=parser.parse_string(bib)
@@ -8,4 +9,4 @@ def parse(bib):
     db=getdb(bib)
     return BibEntry(list(db.lower().entries.values())[0].fields)
 def get_name(bib):
-    return bib.splitlines()[0].split('{')[-1].strip()
+    return lowercase(bib.splitlines()[0].split('{')[-1].strip())
