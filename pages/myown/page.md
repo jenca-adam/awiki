@@ -91,6 +91,7 @@ Markov triplets on CAR algebras, using sufficiency and factorization
 ### 2009
 1. [jencova2009characterizations](jencova2009characterizations)
 with S. Pulmannová, on two characterizations of commutative POVMs via smearings
+1. [foulis2009generalized](foulis2009generalized)
 ### 2008
 1. [jencova2008sharpand](jencova2008sharpand)
 with S. Pulmannová and E. Vinceková, commutative POVMs characterized as smearings of PVMs

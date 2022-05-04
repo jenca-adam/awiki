@@ -10,6 +10,10 @@ title: Ramos and Wilmott, 2022, unital q. channels
 [file](REF_ramos2022/file.pdf)
 
 
-**Decision:** 
+**Decision:** revise and resubmit
+
+[report](REF_ramos2022/report.pdf)
+
+
 
 
