@@ -15,5 +15,10 @@ title: Ramos and Wilmott, 2022, unital q. channels
 [report](REF_ramos2022/report.pdf)
 
 
+**Revised due:** 5.7.2022
+
+[revision](REF_ramos2022/revision.pdf)
+
+
 
 
