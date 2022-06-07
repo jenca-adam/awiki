@@ -75,6 +75,7 @@ title: Not my own papers
 ### I
 
 ### J
+[jones2007entanglement](jones2007entanglement),
 [junge2018universal](junge2018universal),
 
 [jaksic2012quantum](jaksic2012quantum)
@@ -158,6 +159,7 @@ title: Not my own papers
 [vetterlein2019orthogonality](vetterlein2019orthogonality)
 
 ### W
+[wiseman2007steering](wiseman2007steering),
 [wilde2015recoverability](wilde2015recoverability),
 [wetering2020commutativity](wetering2020commutativity),
 
