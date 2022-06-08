@@ -22,13 +22,15 @@ title: General Probabilistic Theories (GPT)
 
 * [steering](PROJECT_steering)
 
-* General: [lami2018nonclassical](lami2018nonclassical), [plavala2021general](plavala2021general)    
+* General: [lami2018nonclassical](lami2018nonclassical), [plavala2021general](plavala2021general), (    
+
+* Relation to quantum foundations: [hardy2001quantum](hardy2001quantum), [chiribella2011informational](chiribella2011informational), [masanes2011aderivation](masanes2011aderivation) 
 
 * Steering: [uola2020quantum](uola2020quantum) a review of quantum steering, [plavala2021incompatibility](plavala2021incompatibility) restricted OT, contextuality and steering
 
 * Convexity: [aubrun2017alice](aubrun2017alice), [alfsen1971compact](BOOK_alfsen1971compact)
         
-* Relation to tensor products of Banach spaces: [lami2018ultimate](lami2018ultimate), [aubrun2018universal](aubrun2018universal)
+* Relation to tensor products of Banach spaces: [lami2018ultimate](lami2018ultimate), [aubrun2020universal](aubrun2020universal)
 
 * Incompatibility: [bluhm2018joint](bluhm2018joint) spectrahedra, [bluhm2021maximal](bluhm2021maximal), [plavala2016allmeasurements](plavala2016allmeasurements) incompatibility $\iff$ entanglement
 

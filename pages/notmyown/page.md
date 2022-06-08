@@ -5,7 +5,8 @@ title: Not my own papers
 ### A
 [albert2019asymptotics](albert2019asymptotics),
 [alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [BOOK_alfsen1971compact](BOOK_alfsen1971compact), [BOOK_alfsen1976noncommutative](BOOK_alfsen1976noncommutative), [BOOK_alfsen2003geometry](BOOK_alfsen2003geometry), [alfsen1979onnoncommutative](alfsen1979onnoncommutative), [araki1982positive](araki1982positive),
-[arveson1969subalgebras](arveson1969subalgebras),  [arveson2007theasymptotic](arveson2007theasymptotic), [arveson2008lifting](arveson2008lifting), [aubrun2017alice](aubrun2017alice), [aubrun2018universal](aubrun2018universal), 
+[arveson1969subalgebras](arveson1969subalgebras),  [arveson2007theasymptotic](arveson2007theasymptotic), [arveson2008lifting](arveson2008lifting), [aubrun2017alice](aubrun2017alice),  [aubrun2020universal](aubrun2020universal),
+
 
 ### B
 [bluhm2020compatibility](bluhm2020compatibility),
@@ -61,6 +62,7 @@ title: Not my own papers
 [gudder2006compression](gudder2006compression) 
 
 ### H
+[hardy2001quantum](hardy2001quantum),
 [haagerup2010areduction](haagerup2010areduction),
 
 [BOOK_hanche1984jordan](BOOK_hanche1984jordan),
@@ -109,6 +111,7 @@ title: Not my own papers
 
 
 ### M
+[masanes2011aderivation](masanes2011aderivation),
 [mosonyi2014strongconverse](mosonyi2014strongconverse),
 [mosonyi2021thestrong](mosonyi2021thestrong),
 [majewski2015whyareorlicz](majewski2015whyareorlicz),
