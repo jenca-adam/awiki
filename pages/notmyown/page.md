@@ -9,6 +9,7 @@ title: Not my own papers
 
 
 ### B
+[barrett2007information](barrett2007information),
 [bluhm2020compatibility](bluhm2020compatibility),
 [blecher2021vonneumann](blecher2021vonneumann),
 [baez2011acharacterization](baez2011acharacterization), [bardet2017estimating](bardet2017estimating), 

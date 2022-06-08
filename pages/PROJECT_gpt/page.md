@@ -22,7 +22,7 @@ title: General Probabilistic Theories (GPT)
 
 * [steering](PROJECT_steering)
 
-* General: [lami2018nonclassical](lami2018nonclassical), [plavala2021general](plavala2021general), (    
+* General: [lami2018nonclassical](lami2018nonclassical), [plavala2021general](plavala2021general), [barrett2007information](barrett2007information)    
 
 * Relation to quantum foundations: [hardy2001quantum](hardy2001quantum), [chiribella2011informational](chiribella2011informational), [masanes2011aderivation](masanes2011aderivation) 
 
