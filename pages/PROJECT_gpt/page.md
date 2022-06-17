@@ -28,6 +28,8 @@ title: General Probabilistic Theories (GPT)
 
 * Steering: [uola2020quantum](uola2020quantum) a review of quantum steering, [plavala2021incompatibility](plavala2021incompatibility) restricted OT, contextuality and steering
 
+* Resource theories: [zjawin2021quantifying](zjawin2021quantifying) steering (''common-cause''), [gallego2015resource](gallego2015resource) steering (1way LOCC)
+
 * Convexity: [aubrun2017alice](aubrun2017alice), [alfsen1971compact](BOOK_alfsen1971compact)
         
 * Relation to tensor products of Banach spaces: [lami2018ultimate](lami2018ultimate), [aubrun2020universal](aubrun2020universal)

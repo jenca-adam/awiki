@@ -50,6 +50,7 @@ title: Not my own papers
 
 
 ### G
+[gallego2015resource](gallego2015resource),
 [gour2019howtoquantify](gour2019howtoquantify),
 [geng2020whatare](geng2020whatare), [gudder2004compressible](gudder2004compressible)
 
@@ -178,6 +179,7 @@ title: Not my own papers
 
 
 ### Z
+[zjawin2021quantifying](zjawin2021quantifying),
 
 
 [BOOK_zalinescu2002convex](BOOK_zalinescu2002convex)
