@@ -21,4 +21,11 @@ title: My PhD topics and students
 * [Martin Plávala](plavala) 2015-2019
 
 
+## Stáž
+
+* Juraj Belohorec:  august-september 2022
+
+     Incompatibility of qubit effects and tensor norms
+
+
 
