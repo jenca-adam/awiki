@@ -5,7 +5,7 @@ title: Kuramochi, postprocessing order, 2022
  
 **Journal:** Journal of Physics A
 
-**Due:** 8.8.2022
+**Due:** 12.8.2022
 
 [file](REF_kuramochi2022/file.pdf)
 
