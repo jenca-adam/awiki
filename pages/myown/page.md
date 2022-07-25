@@ -1,7 +1,7 @@
 title: My own papers
 ---
 ## Published papers
-1. [jencova2022assemblages](jencova2022assemblages)
+
 ### 2021
 1. [jencova2021geometric](jencova2021geometric)
 with S. Pulmannová, spectral order unit spaces
@@ -125,7 +125,7 @@ torsion-free duals,  divergences, conference proceedings,  not on arxiv!
 ### 1999
 1. [petz1999onquantum](petz1999onquantum) quantum Fisher information, conference proceedings, not on arxiv!
 ## Preprints
-1. [jencova2022assemblages,](jencova2022assemblages,)
+1. [jencova2022assemblages](jencova2022assemblages) (submitted to special issue of Journal of Physics A - revision)
 1. [jencova2021spectral](jencova2021spectral) with S. Pulmannová, spectrality in effect algebras (submitted to Quantum - <span style='color:red'> revise and resubmit</span>)
 1. [bluhm2020incompatibility](bluhm2020incompatibility)
 with A. Bluhm and I. Nechita, incompatibility in GPTs, tensor norms, spectrahedra (submitted to CMP - <span style='color:red'>accepted</span>)
