@@ -10,21 +10,32 @@ title: General Probabilistic Theories (GPT)
 
 ---
 
-## Tasks
-
-
-
-
 
 
 ## Basic references
 
+### General on GPTs
 
-* [steering](PROJECT_steering)
 
-* General: [lami2018nonclassical](lami2018nonclassical), [plavala2021general](plavala2021general), [barrett2007information](barrett2007information)    
+* General, surveys: [lami2018nonclassical](lami2018nonclassical), [plavala2021general](plavala2021general), [barrett2007information](barrett2007information)    
 
 * Relation to quantum foundations: [hardy2001quantum](hardy2001quantum), [chiribella2011informational](chiribella2011informational), [masanes2011aderivation](masanes2011aderivation) 
+
+
+### Compatibility
+
+* general:  invitation, guhne
+
+* compatibility of qubit effects: [busch1986unsharp](busch1986unsharp), [busch2008approximate](busch2008approximate), [stano2008coexistence](stano2008coexistence) 
+
+* degrees: [busch2013comparing](busch2013comparing)  
+
+
+
+
+
+
+
 
 * Steering: [uola2020quantum](uola2020quantum) a review of quantum steering, [plavala2021incompatibility](plavala2021incompatibility) restricted OT, contextuality and steering
 
@@ -43,6 +54,7 @@ title: General Probabilistic Theories (GPT)
 
 * p-summing norm: [gordon1969onpabsolutely](gordon1969onpabsolutely)
 
+* [steering](PROJECT_steering)
 ---
 
 ## Research

@@ -9,6 +9,9 @@ title: Not my own papers
 
 
 ### B
+[busch2013comparing](busch2013comparing),
+[busch1986unsharp](busch1986unsharp),
+[busch2008approximate](busch2008approximate),
 [barrett2007information](barrett2007information),
 [bluhm2020compatibility](bluhm2020compatibility),
 [blecher2021vonneumann](blecher2021vonneumann),
@@ -64,6 +67,7 @@ title: Not my own papers
 [gudder2006compression](gudder2006compression) 
 
 ### H
+[heinosaari2014maximally](heinosaari2014maximally),
 [hardy2001quantum](hardy2001quantum),
 [haagerup2010areduction](haagerup2010areduction),
 
@@ -146,6 +150,7 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), 
 
 ### S
+[stano2008coexistence](stano2008coexistence),
 [sutter2016strengthened](sutter2016strengthened),
 [streater2004quantum](streater2004quantum),
 
