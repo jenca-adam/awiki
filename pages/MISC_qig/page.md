@@ -40,9 +40,27 @@ Streater: [streater2004quantum](streater2004quantum)
 
 Zalinescu: [zalinescu2002convex](BOOK_zalinescu2002convex)
 
+
+Related to [qre](PROJECT_qre)
+
+### Misc references
+
+
+Harmonic functions on a strip:
+
+[widder](https://www.ams.org/journals/proc/1961-012-01/S0002-9939-1961-0132838-8/) (Poisson kernel)
+
+An expression for the BKM logarithmic derivative:
+
+Thesis by [A. Capel](https://www.icmat.es/Thesis/2019/Tesis_Angela_Capel.pdf) (Lemma 5.2.3)
+
+
 ## Talk
 
 [my talk](MISC_qig/orlicz2021.pdf) 28.9.2021 
+
+
+
 
 
 ## Notes and feedback

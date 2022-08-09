@@ -28,11 +28,7 @@ title: General Probabilistic Theories (GPT)
 
 * compatibility of qubit effects: [busch1986unsharp](busch1986unsharp), [busch2008approximate](busch2008approximate), [stano2008coexistence](stano2008coexistence) 
 
-* degrees: [busch2013comparing](busch2013comparing)  
-
-
-
-
+* degrees: [busch2013comparing](busch2013comparing), [heinosaari2014maximally](heinosaari2014maximally) 
 
 
 
