@@ -14,6 +14,8 @@ title: General Probabilistic Theories (GPT)
 
 ## Basic references
 
+Tensor product of Banach spaces: [ryan2002introduction](BOOK_ryan2002introduction)
+
 ### General on GPTs
 
 
