@@ -4,6 +4,8 @@ title: To referee
  
 * Due [12.8.2022](REF_kuramochi2022)
 
+* Due [17.10.2022](REF_maciejewski2022)
+
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
 
 

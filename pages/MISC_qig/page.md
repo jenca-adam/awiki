@@ -10,6 +10,8 @@ title: Quantum information geometry
 * A paper by [Frank Nielsen](https://arxiv.org/abs/1808.08271)    
 * A book by [Ay et al](https://link.springer.com/book/10.1007/978-3-319-56478-4)   
 * Something by [Jost etc?](https://arxiv.org/abs/1907.00732)
+* Caglia et al. [project](https://www.researchgate.net/project/Quantum-Information-Geometry)
+
 + usual references
 
 
@@ -48,11 +50,11 @@ Related to [qre](PROJECT_qre)
 
 Harmonic functions on a strip:
 
-[widder](https://www.ams.org/journals/proc/1961-012-01/S0002-9939-1961-0132838-8/) (Poisson kernel)
+* [widder](https://www.ams.org/journals/proc/1961-012-01/S0002-9939-1961-0132838-8/) (Poisson kernel)
 
 An expression for the BKM logarithmic derivative:
 
-Thesis by [A. Capel](https://www.icmat.es/Thesis/2019/Tesis_Angela_Capel.pdf) (Lemma 5.2.3)
+* Thesis by [A. Capel](https://www.icmat.es/Thesis/2019/Tesis_Angela_Capel.pdf) (Lemma 5.2.3)
 
 
 ## Talk
