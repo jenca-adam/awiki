@@ -10,6 +10,8 @@ title: Kuramochi, postprocessing order, 2022
 [file](REF_kuramochi2022/file.pdf)
 
 
-**Decision:** 
+**Decision:** accept (my)
+
+[report](REF_kuramochi2022/report.pdf)
 
 

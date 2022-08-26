@@ -2,7 +2,6 @@ title: To referee
 ---
 
  
-* Due [12.8.2022](REF_kuramochi2022)
 
 * Due [17.10.2022](REF_maciejewski2022)
 
@@ -19,7 +18,7 @@ title: To referee
 1. <del> Due [21.4.2022](REF_ramos2022) </del> Done.
 1. <del> Due [27.4.2022](REF_xiao2022) </del> Done.
 1. <del> Due [5.7.2022](REF_ramos2022) (revision)</del> Done.
-
+1. <del>Due [12.8.2022](REF_kuramochi2022)</del>  Done.
 
 
 
