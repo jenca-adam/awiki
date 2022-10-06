@@ -28,7 +28,7 @@ title: Quantum information geometry
 
 My papers:    
  
-* [jencova2005aconstruction](jencova2005aconstruction)    
+* [jencova2006aconstruction](jencova2006aconstruction)    
 * [jencova2010onquantum](jencova2010onquantum)
 
 Labuschagne and Majewski:  

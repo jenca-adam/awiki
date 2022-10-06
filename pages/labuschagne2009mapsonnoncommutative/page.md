@@ -4,7 +4,7 @@ title: labuschagne2009mapsonnoncommutative
 
 ## Reference
 
-Louis E. Labuschagne, Wladyslaw A. Majewski;Maps on noncommutative Orlicz spaces;; Feb 2009;
+Louis E. Labuschagne, Wladyslaw A. Majewski, Maps on noncommutative Orlicz spaces, 2009;
 
 ## Abstract 
 

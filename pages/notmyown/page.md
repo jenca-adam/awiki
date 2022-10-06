@@ -6,6 +6,7 @@ title: Not my own papers
 [albert2019asymptotics](albert2019asymptotics),
 [alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [BOOK_alfsen1971compact](BOOK_alfsen1971compact), [BOOK_alfsen1976noncommutative](BOOK_alfsen1976noncommutative), [BOOK_alfsen2003geometry](BOOK_alfsen2003geometry), [alfsen1979onnoncommutative](alfsen1979onnoncommutative), [araki1982positive](araki1982positive),
 [arveson1969subalgebras](arveson1969subalgebras),  [arveson2007theasymptotic](arveson2007theasymptotic), [arveson2008lifting](arveson2008lifting), [aubrun2017alice](aubrun2017alice),  [aubrun2020universal](aubrun2020universal),
+[BOOK_ay2017information](BOOK_ay2017information), 
 
 
 ### B
@@ -21,6 +22,8 @@ title: Not my own papers
 [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
+
+[chentsov1991markov](chentsov1991markov),
 [capela2021preprocessing](capela2021preprocessing),
 [carbone2021onageneralized](carbone2021onageneralized),
 [carbone2015homogeneous](carbone2015homogeneous), [carbone2016irreducible](carbone2016irreducible),
@@ -31,7 +34,8 @@ title: Not my own papers
 
 ### D
 [dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),[dallarno2019device](dallarno2019device), [dallarno2019data](dallarno2019data),
-[dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension), [BOOK_diestel1975geometry](BOOK_diestel1975geometry)
+[dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension), [BOOK_diestel1975geometry](BOOK_diestel1975geometry),
+[dodds1989noncommutative](dodds1989noncommutative)
 ### E
 
 
@@ -64,7 +68,8 @@ title: Not my own papers
 [gour2019theentanglement](gour2019theentanglement),
 [gour2020dynamical](gour2020dynamical), [gu2019interpolation](gu2019interpolation), 
 [guerini2017operational](guerini2017operational),   [gudder2018convex](gudder2018convex),
-[gudder2006compression](gudder2006compression) 
+[gudder2006compression](gudder2006compression),
+[goldstein2020notes](goldstein2020notes)
 
 ### H
 [heinosaari2014maximally](heinosaari2014maximally),
@@ -107,6 +112,8 @@ title: Not my own papers
 
 ### K
 
+[krasnoselskij1961convex](krasnoselskij1961convex),
+[kunze1990noncommutative](kunze1990noncommutative), 
 [kuramochi2017minimal](kuramochi2017minimal), [kuramochi2020directed](kuramochi2020directed), [kummerer1979mean](kummerer1979mean), [kimura2010distinguishability](kimura2010distinguishability), [kosaki1984applications](kosaki1984applications), [kosaki1984applicationsuc](kosaki1984applicationsuc),  [kubicki2019resource](kubicki2019resource), 
 
 ### L
@@ -128,11 +135,12 @@ title: Not my own papers
 [matsumoto2010aquantum](matsumoto2010aquantum), [matsumoto2015anew](matsumoto2015anew), [mullerlennert2013onquantum](mullerlennert2013onquantum), [matsumoto2010reverse](matsumoto2010reverse) 
 
 ### N
-[nguyen2018quantum](nguyen2018quantum),
+[nguyen2018quantum](nguyen2018quantum), [nagaoka1995differential](nagaoka1995differential), 
 
 ### O
 
 ### P
+[pistone2013nonparametric](pistone2013nonparametric), [pistone1999theexponential](pistone1999theexponential), [pistone2007exponential](pistone2007exponential),
 
 [plavala2021incompatibility](plavala2021incompatibility),
 [plavala2021general](plavala2021general),
@@ -140,7 +148,7 @@ title: Not my own papers
 
 
 [passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [BOOK_paulsen2002completely](BOOK_paulsen2002completely), [paulsen2011operator](paulsen2011operator), [petz1985quasi](petz1985quasi), [petz1986quasi](petz1986quasi), [petz1986sufficient](petz1986sufficient), 
-[petz1988sufficiency](petz1988sufficiency),  [pisier2003noncommutative](pisier2003noncommutative),
+[petz1988sufficiency](petz1988sufficiency),  [pisier2003noncommutative](pisier2003noncommutative), [pistone1995aninfinite](pistone1995aninfinite), 
  [plavala2016allmeasurements](plavala2016allmeasurements), [pulmannova2006effect](pulmannova2006effect)
 
 ### Q

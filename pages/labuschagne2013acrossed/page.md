@@ -1,10 +1,10 @@
-title: labuschagne2012acrossed
+title: labuschagne2013acrossed
 ---
 
 
 ## Reference
 
-Louis Labuschagne;A crossed product approach to Orlicz spaces;; May 2012;
+Labuschagne, Louis E. "A crossed product approach to Orlicz spaces." Proceedings of the London Mathematical Society 107.5 (2013): 965-1003.
 
 ## Abstract 
 

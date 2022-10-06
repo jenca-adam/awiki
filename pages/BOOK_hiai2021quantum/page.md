@@ -10,7 +10,7 @@ Studies, Springer Singapore, 2021
 
 [link]()
 
-[file](hiai2020quantum/file.pdf)
+[file](BOOK_hiai2021quantum/file.pdf)
 
 
 
@@ -39,7 +39,7 @@ the equality
 $$
 [D(\varphi_1\circ E): D(\varphi_2\circ E)]_t=[D\varphi_1: D\varphi_2]_t,\qquad \forall t\in \mathbb R\tag{6.36}
 $$
-holds also if $\varphi_1$ is not faithful. Answer is [yes](hiai2020quantum/cocycles.pdf).
+holds also if $\varphi_1$ is not faithful. Answer is [yes](BOOK_hiai2021quantum/cocycles.pdf).
 
 
 
