@@ -91,7 +91,8 @@ title: My work
 
 * [notmyown](notmyown)
 * [myown](myown)    
-* [steering](CIT_steering)
+* [steering](CIT_steering)     
+* [information geometry](CIT_infgeo)
 
 ---
 

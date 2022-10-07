@@ -4,7 +4,7 @@ title: streater2004quantum
 
 ## Reference
 
-R.F. Streater;Quantum Orlicz spaces in information geometry;; Jul 2004;
+Streater, Raymond Frederick. "Quantum Orlicz spaces in information geometry." Open systems & information dynamics 11.4 (2004): 359-375.
 
 ## Abstract 
 
@@ -21,4 +21,7 @@ inequality.
 
     
 
+
 [arxiv:math-ph/0407046](https://arxiv.org/abs/math-ph/0407046)
+
+[link](https://link.springer.com/article/10.1007/s11080-004-6626-2)

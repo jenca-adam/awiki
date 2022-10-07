@@ -3,6 +3,8 @@ title: Not my own papers
 ## A list
 
 ### A
+
+[araki1976relative](araki1976relative), [araki1977relative](araki1977relative)
 [albert2019asymptotics](albert2019asymptotics),
 [alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [BOOK_alfsen1971compact](BOOK_alfsen1971compact), [BOOK_alfsen1976noncommutative](BOOK_alfsen1976noncommutative), [BOOK_alfsen2003geometry](BOOK_alfsen2003geometry), [alfsen1979onnoncommutative](alfsen1979onnoncommutative), [araki1982positive](araki1982positive),
 [arveson1969subalgebras](arveson1969subalgebras),  [arveson2007theasymptotic](arveson2007theasymptotic), [arveson2008lifting](arveson2008lifting), [aubrun2017alice](aubrun2017alice),  [aubrun2020universal](aubrun2020universal),
@@ -69,7 +71,7 @@ title: Not my own papers
 [gour2020dynamical](gour2020dynamical), [gu2019interpolation](gu2019interpolation), 
 [guerini2017operational](guerini2017operational),   [gudder2018convex](gudder2018convex),
 [gudder2006compression](gudder2006compression),
-[goldstein2020notes](goldstein2020notes)
+[goldstein2020notes](goldstein2020notes), [grasselli2000thequantum](grasselli2000thequantum)
 
 ### H
 [heinosaari2014maximally](heinosaari2014maximally),
@@ -138,6 +140,9 @@ title: Not my own papers
 [nguyen2018quantum](nguyen2018quantum), [nagaoka1995differential](nagaoka1995differential), 
 
 ### O
+
+[ohya1993quantum](ohya1993quantum)
+
 
 ### P
 [pistone2013nonparametric](pistone2013nonparametric), [pistone1999theexponential](pistone1999theexponential), [pistone2007exponential](pistone2007exponential),
