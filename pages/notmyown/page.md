@@ -65,6 +65,7 @@ title: Not my own papers
 
 
 ### G
+[grasselli2010dual](grasselli2010dual),
 [gallego2015resource](gallego2015resource),
 [gour2019howtoquantify](gour2019howtoquantify),
 [geng2020whatare](geng2020whatare), [gudder2004compressible](gudder2004compressible)
@@ -165,7 +166,7 @@ title: Not my own papers
 
 ### R
 
-[regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), 
+[regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), [BOOK_rao1991theory](BOOK_rao1991theory), 
 
 ### S
 

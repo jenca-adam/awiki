@@ -92,7 +92,8 @@ title: My work
 * [notmyown](notmyown)
 * [myown](myown)    
 * [steering](CIT_steering)     
-* [information geometry](CIT_infgeo)
+* [information geometry](CIT_infgeo)    
+* [relative entropy](CIT_entropy)
 
 ---
 
@@ -100,7 +101,7 @@ title: My work
 
 * [referee](referee)
 * [students](students)
-* [garant DS](DT_garant)    
+* [garant DS](DT_garant)   
 * [conferences](conferences)
 
 ---

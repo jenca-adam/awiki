@@ -34,11 +34,13 @@ title: References for relative entropy and entropy and Lp spaces
 
 * [jencova2018renyi](jencova2018renyi)
 
-* [jencova2020renyi](jencova2020renyi)
+* [jencova2021renyi](jencova2021renyi)
 
 * [berta2018renyi](berta2018renyi)
 
 * [haagerup1979lpspaces](haagerup1979lpspaces)
+
+* [kosaki1984applications](kosaki1984applications)
 
 * [terp1981lpspaces](terp1981lpspaces)
 
@@ -77,3 +79,5 @@ title: References for relative entropy and entropy and Lp spaces
 * [bergh1976interpolation](BOOK_bergh1976interpolation)
 
 * [ekeland1999convex](BOOK_ekeland1999convex)
+
+* [zalinescu2002convex](BOOK_zalinescu2002convex)

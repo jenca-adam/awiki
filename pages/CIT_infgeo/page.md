@@ -11,6 +11,8 @@ title: Information geometry references
 
 * [pistone2007exponential](pistone2007exponential)
 
+* [grasselli2010dual](grasselli2010dual)
+
 
 ### Quantum
 
@@ -52,8 +54,10 @@ Infinite dimensional
 
 ### Books
 
-* [BOOK_ay2017information](BOOK_ay2017information)
+* [ay2017information](BOOK_ay2017information)
 
-* [BOOK_krasnoselskij1961convex](BOOK_krasnoselskij1961convex)
+* [krasnoselskij1961convex](BOOK_krasnoselskij1961convex) (Orlicz spaces)
 
-* [BOOK_amari2000methods](BOOK_amari2000methods)
+* [rao1991theory](BOOK_rao1991theory) (Orlicz spaces)
+
+* [amari2000methods](BOOK_amari2000methods)
