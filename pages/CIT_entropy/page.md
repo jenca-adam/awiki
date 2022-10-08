@@ -24,7 +24,7 @@ title: References for relative entropy and entropy and Lp spaces
 
 * [donald1990relative](donald1990relative) (perturbations by one side bounded operators)
 
-
+* [donald1991continuity](donald1991continuity)
 
 
 

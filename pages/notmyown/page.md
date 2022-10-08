@@ -41,7 +41,7 @@ title: Not my own papers
 [dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),[dallarno2019device](dallarno2019device), [dallarno2019data](dallarno2019data),
 [dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension), [BOOK_diestel1975geometry](BOOK_diestel1975geometry),
 [dodds1989noncommutative](dodds1989noncommutative),
-[donald1990relative](donald1990relative),
+[donald1990relative](donald1990relative), [donald1991continuity](donald1991continuity),
 
 ### E
 
