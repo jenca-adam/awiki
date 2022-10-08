@@ -4,6 +4,7 @@ title: Not my own papers
 
 ### A
 
+[araki1973relative](araki1973relative),
 [araki1976relative](araki1976relative), [araki1977relative](araki1977relative)
 [albert2019asymptotics](albert2019asymptotics),
 [alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [BOOK_alfsen1971compact](BOOK_alfsen1971compact), [BOOK_alfsen1976noncommutative](BOOK_alfsen1976noncommutative), [BOOK_alfsen2003geometry](BOOK_alfsen2003geometry), [alfsen1979onnoncommutative](alfsen1979onnoncommutative), [araki1982positive](araki1982positive),
@@ -12,6 +13,8 @@ title: Not my own papers
 
 
 ### B
+
+[bergh1976interpolation](BOOK_bergh1976interpolation)
 [busch2013comparing](busch2013comparing),
 [busch1986unsharp](busch1986unsharp),
 [busch2008approximate](busch2008approximate),
@@ -37,9 +40,12 @@ title: Not my own papers
 ### D
 [dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),[dallarno2019device](dallarno2019device), [dallarno2019data](dallarno2019data),
 [dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension), [BOOK_diestel1975geometry](BOOK_diestel1975geometry),
-[dodds1989noncommutative](dodds1989noncommutative)
+[dodds1989noncommutative](dodds1989noncommutative),
+[donald1990relative](donald1990relative),
+
 ### E
 
+[ekeland1999convex](BOOK_ekeland1999convex),
 
 ### F
 [foulis2015unitizations](foulis2015unitizations),
@@ -79,8 +85,7 @@ title: Not my own papers
 [haagerup2010areduction](haagerup2010areduction),
 
 [BOOK_hanche1984jordan](BOOK_hanche1984jordan),
-[hiai2021quantum](hiai2021quantum),
-
+[hiai2021lectures](BOOK_hiai2021lectures),
 
 [harremoes2017quantum](harremoes2017quantum),
 [hiai1991theproper](hiai1991theproper),
@@ -116,7 +121,7 @@ title: Not my own papers
 
 [krasnoselskij1961convex](krasnoselskij1961convex),
 [kunze1990noncommutative](kunze1990noncommutative), 
-[kuramochi2017minimal](kuramochi2017minimal), [kuramochi2020directed](kuramochi2020directed), [kummerer1979mean](kummerer1979mean), [kimura2010distinguishability](kimura2010distinguishability), [kosaki1984applications](kosaki1984applications), [kosaki1984applicationsuc](kosaki1984applicationsuc),  [kubicki2019resource](kubicki2019resource), 
+[kuramochi2017minimal](kuramochi2017minimal), [kuramochi2020directed](kuramochi2020directed), [kummerer1979mean](kummerer1979mean), [kimura2010distinguishability](kimura2010distinguishability), [kosaki1984applications](kosaki1984applications), [kosaki1984applicationsuc](kosaki1984applicationsuc), [kosaki1986relative](kosaki1986relative), [kubicki2019resource](kubicki2019resource), 
 
 ### L
 [labuschagne2012acrossed](labuschagne2012acrossed),
@@ -152,7 +157,7 @@ title: Not my own papers
 
 
 
-[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [BOOK_paulsen2002completely](BOOK_paulsen2002completely), [paulsen2011operator](paulsen2011operator), [petz1985quasi](petz1985quasi), [petz1986quasi](petz1986quasi), [petz1986sufficient](petz1986sufficient), 
+[passer2018minimal](passer2018minimal), [paulsen1996themaximal](paulsen1996themaximal), [BOOK_paulsen2002completely](BOOK_paulsen2002completely), [paulsen2011operator](paulsen2011operator), [petz1985quasi](petz1985quasi), [petz1986quasi](petz1986quasi), [petz1986sufficient](petz1986sufficient), [petz1988variational](petz1988variational),
 [petz1988sufficiency](petz1988sufficiency),  [pisier2003noncommutative](pisier2003noncommutative), [pistone1995aninfinite](pistone1995aninfinite), 
  [plavala2016allmeasurements](plavala2016allmeasurements), [pulmannova2006effect](pulmannova2006effect)
 
@@ -163,6 +168,8 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), 
 
 ### S
+
+
 [stano2008coexistence](stano2008coexistence),
 [sutter2016strengthened](sutter2016strengthened),
 [streater2004quantum](streater2004quantum),
@@ -171,7 +178,10 @@ title: Not my own papers
 [skrzypczyk2019robustness](skrzypczyk2019robustness),
 
 ### T
+
 [takagi2019general](takagi2019general), [terp1981lpspaces](terp1981lpspaces), [tomamichel2016quantum](tomamichel2016quantum), 
+[BOOK_takesaki123theory](BOOK_takesaki123theory),
+[trunov1979anoncommutative](trunov1979anoncommutative),
 
 ### U
 [uola2020quantum](uola2020quantum),
@@ -198,6 +208,6 @@ title: Not my own papers
 
 ### Z
 [zjawin2021quantifying](zjawin2021quantifying),
-
+[zolotarev1982lpspaces](zolotarev1982lpspaces),
 
 [BOOK_zalinescu2002convex](BOOK_zalinescu2002convex)
