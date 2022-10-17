@@ -88,7 +88,7 @@ With Teiko et al (witnesses by testing problems)
 
 * [jencova2018incompatible](jencova2018incompatible) (published PRA)  
 * [jencova2019onthestructure](jencova2019onthestructure) (published PRA) bipartite channels maximally violating CHSH
-* [bluhm2020incompatibility](bluhm2020incompatibility) (submitted to CMP)
+* [bluhm2022incompatibility](bluhm2022incompatibility) (published CMP)
 
 
 ### Talks/posters
