@@ -1,4 +1,3 @@
-
 title: General Probabilistic Theories (GPT)
 ---
 
@@ -79,7 +78,7 @@ With Teiko et al (witnesses by testing problems)
 ### Steering
 
 * there are some new notes on steering in GPTs: steering degree and some integrals over measures on the state space    
-* see the paper [bluhm2021maximal](bluhm2021maximal)
+* see the paper [bluhm2022maximal](bluhm2021maximal)
 
 ---
 
@@ -111,5 +110,4 @@ With Teiko et al (witnesses by testing problems)
 * incompatibility on $W$ - the min tensor product of two quantum state spaces (two qubits)
 * relations of incompatibility, free spectrahedra, operator systems and norms - one should write some notes on this
 * a characterization similar to tensor norms for measurements with more outcomes
-
 
