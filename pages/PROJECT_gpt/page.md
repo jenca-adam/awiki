@@ -42,7 +42,7 @@ Tensor product of Banach spaces: [ryan2002introduction](BOOK_ryan2002introductio
         
 * Relation to tensor products of Banach spaces: [lami2018ultimate](lami2018ultimate), [aubrun2020universal](aubrun2020universal)
 
-* Incompatibility: [bluhm2018joint](bluhm2018joint) spectrahedra, [bluhm2021maximal](bluhm2021maximal), [plavala2016allmeasurements](plavala2016allmeasurements) incompatibility $\iff$ entanglement
+* Incompatibility: [bluhm2018joint](bluhm2018joint) spectrahedra, [bluhm2022maximal](bluhm2022maximal), [plavala2016allmeasurements](plavala2016allmeasurements) incompatibility $\iff$ entanglement
 
 * Operator spaces/systems: [paulsen2002completely](BOOK_paulsen2002completely),
 [paulsen2011operator](paulsen2011operator), [farenick2012operator](farenick2012operator), [paulsen1996themaximal](paulsen1996themaximal)
@@ -78,7 +78,7 @@ With Teiko et al (witnesses by testing problems)
 ### Steering
 
 * there are some new notes on steering in GPTs: steering degree and some integrals over measures on the state space    
-* see the paper [bluhm2022maximal](bluhm2021maximal)
+* see the paper [bluhm2022maximal](bluhm2022maximal)
 
 ---
 
@@ -110,4 +110,3 @@ With Teiko et al (witnesses by testing problems)
 * incompatibility on $W$ - the min tensor product of two quantum state spaces (two qubits)
 * relations of incompatibility, free spectrahedra, operator systems and norms - one should write some notes on this
 * a characterization similar to tensor norms for measurements with more outcomes
-
