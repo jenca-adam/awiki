@@ -20,5 +20,4 @@ introduce diagrammatic notation and we often express equations via diagrams.
     
 
 [arxiv:2103.07469](https://arxiv.org/abs/2103.07469)
-[View at arxiv.org](https://arxiv.org/abs/2103.07469)
 [View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=2103.07469) 

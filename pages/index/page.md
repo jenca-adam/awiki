@@ -93,7 +93,8 @@ title: My work
 * [myown](myown)    
 * [steering](CIT_steering)     
 * [information geometry](CIT_infgeo)    
-* [relative entropy](CIT_entropy)
+* [relative entropy](CIT_entropy)    
+* [compatibility](CIT_compatibility)
 
 ---
 

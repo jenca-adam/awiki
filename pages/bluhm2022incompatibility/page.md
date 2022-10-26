@@ -1,10 +1,10 @@
-title: bluhm2020incompatibility
+title: bluhm2022incompatibility
 ---
 
 
 ## Reference
 
-Andreas Bluhm, Anna Jenčová, Ion Nechita: Incompatibility in general probabilistic theories, generalized spectrahedra, and tensor norms, 2020
+Bluhm, Andreas, Anna Jenčová, and Ion Nechita. "Incompatibility in general probabilistic theories, generalized spectrahedra, and tensor norms." Communications in Mathematical Physics 393.3 (2022): 1125-1198.
 
 ## Abstract 
 
@@ -29,6 +29,6 @@ measurements.
 
 [arxiv:2011.06497](https://arxiv.org/abs/2011.06497)
 
-## Status
+[link](https://rdcu.be/cXKwx)
 
-submitted to CMP, accepted
+

@@ -27,6 +27,9 @@ title: Not my own papers
 [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
+[carmeli2019quantum](carmeli2019quantum),
+
+[cavalcanti2022postquantum](cavalcanti2022postquantum),
 
 [chentsov1991markov](chentsov1991markov),
 [capela2021preprocessing](capela2021preprocessing),
@@ -81,6 +84,7 @@ title: Not my own papers
 [goldstein2020notes](goldstein2020notes), [grasselli2000thequantum](grasselli2000thequantum)
 
 ### H
+[heinosaari2017incompatibility](heinosaari2017incompatibility),
 [heinosaari2014maximally](heinosaari2014maximally),
 [hardy2001quantum](hardy2001quantum),
 [haagerup2010areduction](haagerup2010areduction),
@@ -119,6 +123,7 @@ title: Not my own papers
 [junge2003noncommutative](junge2003noncommutative)
 
 ### K
+[ku2022complete](ku2022complete),
 
 [krasnoselskij1961convex](krasnoselskij1961convex),
 [kunze1990noncommutative](kunze1990noncommutative), 
@@ -169,6 +174,7 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), [BOOK_rao1991theory](BOOK_rao1991theory), 
 
 ### S
+[stevens2014steering](stevens2014steering),
 
 
 [stano2008coexistence](stano2008coexistence),
