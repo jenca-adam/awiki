@@ -14,4 +14,10 @@ complementary channels
 * [carmeli2019witnessing](carmeli2019witnessing) incompatibility witnesses by guessing games, for channels
 
 
+### Some misc papers
+
+* [chiribella2009realization](chiribella2009realization) the pavian dilation of a quantum instrument
+
+* [buscemi2014gametheoretic](buscemi2014gametheoretic) a guessing game for antidegradable channels
+
 

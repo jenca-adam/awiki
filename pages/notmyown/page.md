@@ -13,6 +13,7 @@ title: Not my own papers
 
 
 ### B
+[buscemi2014gametheoretic](buscemi2014gametheoretic),
 
 [bergh1976interpolation](BOOK_bergh1976interpolation)
 [busch2013comparing](busch2013comparing),
@@ -27,6 +28,7 @@ title: Not my own papers
 [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
+[chiribella2009realization](chiribella2009realization),
 [carmeli2019witnessing](carmeli2019witnessing),
 [carmeli2019quantum](carmeli2019quantum),
 
