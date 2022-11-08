@@ -54,6 +54,7 @@ with M. Plávala, discrimination of quantum channels
 comparison of quantum channels (Le Cam theorem)
 1. [jencova2016ontheconvex](jencova2016ontheconvex)
 convex structure of PPOVMs related to $C^\*$-convexity
+1. [foulis2016aloomissikorski](foulis2016aloomissikorski)
 ### 2015
 1. [puchala2015exploring](puchala2015exploring)
 with Z. Puchala, M. Sedlák, M. Ziman, boundariness

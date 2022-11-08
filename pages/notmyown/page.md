@@ -71,6 +71,7 @@ title: Not my own papers
 
 
 ### G
+[girard2021jordanproducts](girard2021jordanproducts),
 [grasselli2010dual](grasselli2010dual),
 [gallego2015resource](gallego2015resource),
 [gour2019howtoquantify](gour2019howtoquantify),
@@ -159,9 +160,10 @@ title: Not my own papers
 
 
 ### P
+[plavala2022contextuality](plavala2022contextuality),
 [pistone2013nonparametric](pistone2013nonparametric), [pistone1999theexponential](pistone1999theexponential), [pistone2007exponential](pistone2007exponential),
 
-[plavala2021incompatibility](plavala2021incompatibility),
+[plavala2022incompatibility](plavala2022incompatibility),
 [plavala2021general](plavala2021general),
 
 

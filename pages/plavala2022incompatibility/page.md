@@ -1,10 +1,12 @@
-title: plavala2021incompatibility
+title: plavala2022incompatibility
 ---
 
 
 ## Reference
 
-Martin Plávala,Incompatibility in restricted operational theories: connecting contextuality and steering,arXiv preprint arXiv:2112.10596, Dec 2021,
+Martin Plávala,Incompatibility in restricted operational theories: connecting contextuality and steering, 
+Journal of Physics A: Mathematical and Theoretical 55.17 (2022): 174001.
+
 
 ## Abstract 
   We investigate the connection between steering and contextuality in general
@@ -18,5 +20,6 @@ incompatibility in restricted theories, which we also investigate.
     
 
 [arxiv:2112.10596](https://arxiv.org/abs/2112.10596)
-[View at arxiv.org](https://arxiv.org/abs/2112.10596)
-[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=2112.10596) 
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=2112.10596)  
+[doi](https://doi.org/10.1088/1751-8121/ac5afe)
+[Link](https://iopscience.iop.org/article/10.1088/1751-8121/ac5afe/meta)
