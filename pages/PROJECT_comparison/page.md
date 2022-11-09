@@ -35,7 +35,7 @@ tools: convex duality, Choi matrices, diagrams.
     * other [chitambar2019quantum](chitambar2019quantum)
 
 * resource theories of quantum channels:    
-    * [liu2019resource](liu2019resource), [liu2019operational](liu2019operational), 
+    * [liu2019resource](liu2019resource), [liu2020operational](liu2020operational), 
     * [gour2019theentanglement](gour2019theentanglement), [gour2020dynamical](gour2020dynamical)
 
 

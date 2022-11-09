@@ -44,6 +44,7 @@ title: Not my own papers
 
 
 ### D
+[designolle2019incompatibility](designolle2019incompatibility),
 [dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),[dallarno2019device](dallarno2019device), [dallarno2019data](dallarno2019data),
 [dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension), [BOOK_diestel1975geometry](BOOK_diestel1975geometry),
 [dodds1989noncommutative](dodds1989noncommutative),
@@ -88,6 +89,7 @@ title: Not my own papers
 [goldstein2020notes](goldstein2020notes), [grasselli2000thequantum](grasselli2000thequantum)
 
 ### H
+[heinosaari2022dispensing](heinosaari2022dispensing),
 [heinosaari2017incompatibility](heinosaari2017incompatibility),
 [heinosaari2014maximally](heinosaari2014maximally),
 [hardy2001quantum](hardy2001quantum),
@@ -127,6 +129,7 @@ title: Not my own papers
 [junge2003noncommutative](junge2003noncommutative)
 
 ### K
+[kuramochi2018quantum](kuramochi2018quantum),
 [ku2022complete](ku2022complete),
 
 [krasnoselskij1961convex](krasnoselskij1961convex),
@@ -137,7 +140,7 @@ title: Not my own papers
 [labuschagne2012acrossed](labuschagne2012acrossed),
 [labuschagne2009mapsonnoncommutative](labuschagne2009mapsonnoncommutative),
 
-[leppajarvi2021postprocessing](leppajarvi2021postprocessing), [lami2018ultimate](lami2018ultimate),[lami2018nonclassical](lami2018nonclassical), [liu2019operational](liu2019operational), [lecam1964sufficiency](lecam1964sufficiency), [leditzky2017data](leditzky2017data), [liu2019resource](liu2019resource)
+[leppajarvi2021postprocessing](leppajarvi2021postprocessing), [lami2018ultimate](lami2018ultimate),[lami2018nonclassical](lami2018nonclassical), [liu2020operational](liu2020operational), [lecam1964sufficiency](lecam1964sufficiency), [leditzky2017data](leditzky2017data), [liu2019resource](liu2019resource)
 
 
 ### M
@@ -190,6 +193,7 @@ title: Not my own papers
 [skrzypczyk2019robustness](skrzypczyk2019robustness),
 
 ### T
+[takakura2022convexity](takakura2022convexity),
 
 [takagi2019general](takagi2019general), [terp1981lpspaces](terp1981lpspaces), [tomamichel2016quantum](tomamichel2016quantum), 
 [BOOK_takesaki123theory](BOOK_takesaki123theory),
