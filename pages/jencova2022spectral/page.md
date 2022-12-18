@@ -1,10 +1,10 @@
-title: jencova2021spectral
+title: jencova2022spectral
 ---
 
 
 ## Reference
 
-Anna Jenčová, Sylvia Pulmannová, Spectral resolutions in effect algebras, 2021
+Anna Jenčová, Sylvia Pulmannová, Spectral resolutions in effect algebras, Quantum 6, 849 (2022)
 
 ## Abstract 
   Compressions on an effect algebra $E$, analogous to compressions on operator
@@ -29,8 +29,12 @@ resolutions in the corresponding order unit space.
 
     
 
-[arxiv:2111.02166](https://arxiv.org/abs/2111.02166)
+[arxiv:2111.02166](https://arxiv.org/abs/2111.02166)    
+[doi](https://doi.org/10.22331/q-2022-11-03-849)
 
-## Status
 
-submitted to Quantum, one [referee report](jencova2021spectral/report.pdf) - revise and resubmit (substantial changes)
+### Status
+
+[referee report](jencova2022spectral/report.pdf)
+
+

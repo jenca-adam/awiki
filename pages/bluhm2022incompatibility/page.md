@@ -29,6 +29,6 @@ measurements.
 
 [arxiv:2011.06497](https://arxiv.org/abs/2011.06497)
 
-[link](https://rdcu.be/cXKwx)
+[doi](https://doi.org/10.1007/s00220-022-04379-w)
 
 

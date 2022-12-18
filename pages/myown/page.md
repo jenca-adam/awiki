@@ -4,6 +4,8 @@ title: My own papers
 
 ### 2022
 
+1. [jencova2022assemblages](jencova2022assemblages)  steering of dichotomic assemblages, Choquet order 
+1. [jencova2022spectral](jencova2022spectral) with S. Pulmannová, spectrality in effect algebras      
 1. [bluhm2022incompatibility](bluhm2022incompatibility)
 with A. Bluhm and I. Nechita, incompatibility in GPTs, tensor norms, spectrahedra 
 
@@ -18,7 +20,9 @@ comparison of quantum channels, or more general GPTs, BS-category
 with S. Pulmannová, tensor products of dimension effect algebras
 1. [jencova2021observables](jencova2021observables)
 with S. Pulmannová, synaptic algebras
+
 ### 2020
+
 1. [jencova2020structure](jencova2020structure)
 with M. Plávala, quantum and classical channels as PR-box
 1. [carbone2020onperiod](carbone2020onperiod)
@@ -122,17 +126,24 @@ infinite dimensional quantum information manifold
 relative entropies, paper not on arxiv!
 ### 2003
 1. [jencova2003flatconnections](jencova2003flatconnections) quantum information geometry: unique dually flat structures from generalized divergences
+
 ### 2002
+
 1.  [jencova2002quantum](jencova2002quantum) quantum information geometry and standard purification, paper not on arxiv!
+
 ### 2001
+
 1.  [jencova2001dualistic](jencova2001dualistic) quantum information geometry:  affine $\alpha$-connections, uniqueness of
 torsion-free duals,  divergences, conference proceedings,  not on arxiv!
 1. [jencova2001geometry](jencova2001geometry) my (almost) first paper on quantum information geometry, not on arxiv!
+
 ### 1999
+
 1. [petz1999onquantum](petz1999onquantum) quantum Fisher information, conference proceedings, not on arxiv!
+
 ## Preprints
-1. [jencova2022assemblages](jencova2022assemblages) (submitted to  Journal of Physics A - accepted)
-1. [jencova2021spectral](jencova2021spectral) with S. Pulmannová, spectrality in effect algebras (submitted to Quantum - accepted)
+
+1. [jencova2022theexponential](jencova2022theexponential) special issue of IG, not on arxiv! (yet)
 
 1. [jencova2015aextreme](jencova2015aextreme) C^\*-extreme (or $\mathcal A$-extreme) points of UCP maps into matrix
 algebras, not on arxiv!  (<span style='color:red'>unpublished draft</span>)
