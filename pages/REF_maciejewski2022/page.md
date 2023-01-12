@@ -15,4 +15,10 @@ Proofs, properties, and examples
 
 [report](REF_maciejewski2022/report.pdf)
 
+**Revision:**
+
+[response](REF_maciejewski2022/response.pdf)
+
+[revision](REF_maciejewski2022/revised.pdf)
+
 
