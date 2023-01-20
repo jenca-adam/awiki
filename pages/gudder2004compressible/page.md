@@ -6,6 +6,6 @@ title: Gudder COmpressible effect algebras, 2004
 S. Gudder,"Compressible effect algebras." Reports on Mathematical Physics 54.1 (2004): 93-114.
 
 
-[file](/file.pdf)
+[file](gudder2004compressible/file.pdf)
 
-
+[doi](https://doi.org/10.1016/S0034-4877(04)80008-9)

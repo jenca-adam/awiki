@@ -2,6 +2,12 @@ title: My own papers
 ---
 ## Published papers
 
+
+### 2023
+
+1. [jencova2023spectral](jencova2023spectral) Spectral order unit spaces that are JB-algebras, functional calculus, characterization of Rickart JB-algebras
+
+
 ### 2022
 
 1. [jencova2022assemblages](jencova2022assemblages)  steering of dichotomic assemblages, Choquet order 
@@ -143,7 +149,7 @@ torsion-free duals,  divergences, conference proceedings,  not on arxiv!
 
 ## Preprints
 
-1. [jencova2022theexponential](jencova2022theexponential) special issue of IG, not on arxiv! (yet)
+1. [jencova2023theexponential](jencova2023theexponential) special issue of IG, (<span style='color:red'>accepted</span>)
 
 1. [jencova2015aextreme](jencova2015aextreme) C^\*-extreme (or $\mathcal A$-extreme) points of UCP maps into matrix
 algebras, not on arxiv!  (<span style='color:red'>unpublished draft</span>)
@@ -152,4 +158,5 @@ algebras, not on arxiv!  (<span style='color:red'>unpublished draft</span>)
 1. [jencova2014randomization](jencova2014randomization) randomization theorems for quantum channels  (<span style='color:red'>never published</span>)
 
 1. [jencova2003affine](jencova2003affine) affine connections on von Neumann algebras, Araki-Masuda $L_p$-spaces (<span style='color:red'>never published</span>)
+
 

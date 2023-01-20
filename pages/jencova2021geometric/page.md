@@ -23,3 +23,5 @@ spectral while not necessarily Alfsen-Shultz spectral.
 [arxiv:2102.01628](https://arxiv.org/abs/2102.01628)
 
 [published version](jencova2021geometric/published.pdf)
+
+[doi](https://doi.org/10.1016/j.jmaa.2021.125360)

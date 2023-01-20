@@ -8,3 +8,5 @@ D. J. Foulis, "Spectral resolution in a Rickart comgroup." Reports on Mathematic
 
 [file](foulis2004spectral/file.pdf)
 
+[doi](https://doi.org/10.1016/S0034-4877(04)80016-8)
+

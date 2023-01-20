@@ -2,9 +2,12 @@ title: TQC 2021
 ---
 
 
-* [link]()    
+* **Conference name:**  16th Conference on the Theory of Quantum Computation, Communication and Cryptography, TQC 2021
+* **Date and place:**   July 5-8, 2021, virtual conference
+* **Role:** programme committee member
 
-* Duty: program committee    
+---
+
 * deadline: 20.4.2021
 
 

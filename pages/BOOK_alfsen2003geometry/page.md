@@ -6,6 +6,8 @@ E. M. Alfsen and F. W. Shultz, Geometry of State Spaces of Operator Algebras, Bi
 
 
 [link](https://drive.google.com/file/d/1wMJphXk1PnzmZJjzU2c9RieXMGnhdilx/view?usp=sharing)
+
+[doi](https://doi.org/10.1007/978-1-4612-0019-2)
  
 
 

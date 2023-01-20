@@ -8,4 +8,6 @@ S. Pulmannová,  Effect algebras with compressions. Reports on Mathematical Phys
 
 [file](pulmannova2006effect/file.pdf)
 
+[doi](https://doi.org/10.1016/S0034-4877(06)80054-6)
+
 

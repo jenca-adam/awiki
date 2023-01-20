@@ -7,6 +7,8 @@ J. van de Wetering, Three characterisations of the sequential product, J. Math. 
 
 [arxiv:1803.08453](https://arxiv.org/abs/1803.08453)
 
+[doi]( 	https://doi.org/10.1063/1.5031089)
+
 ## Content
 
 

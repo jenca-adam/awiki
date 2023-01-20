@@ -8,6 +8,8 @@ Gudder, Stan. "Compression bases in effect algebras." DEMONSTRATIO MATHEMATICA-P
 
 [link](https://www.degruyter.com/document/doi/10.1515/dema-2006-0106/html)
 
+[doi](https://doi.org/10.1515/dema-2006-0106)
+
 
 
 

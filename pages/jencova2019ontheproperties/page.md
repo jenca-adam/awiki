@@ -9,3 +9,5 @@ Anna Jenčová,  Martin Plávala; On the properties of spectral effect algebras;
 [arxiv:1811.12407](https://arxiv.org/abs/1811.12407)
 
 [link](https://quantum-journal.org/papers/q-2019-06-03-148/)
+
+[doi](https://doi.org/10.22331/q-2019-06-03-148)
