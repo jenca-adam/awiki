@@ -120,7 +120,7 @@ statistical experiments
 ### 2006
 1. [jencova2006sufficiency](jencova2006sufficiency) with D.Petz, sufficiency with examples
 1. [jencova2006arelation](jencova2006arelation) completely bounded norms and Schatten norms
-1. [jencova2006sufficiencyfirst](jencova2006sufficiencyfirts) with D. Petz, sufficiency of quantum channels, equality in DPI,
+1. [jencova2006sufficiencyfirst](jencova2006sufficiencyfirst) with D. Petz, sufficiency of quantum channels, equality in DPI,
 factorization
 1. [jencova2006aconstruction](jencova2006aconstruction) a construction of quantum exponential Orlicz space and a
 infinite dimensional quantum information manifold
