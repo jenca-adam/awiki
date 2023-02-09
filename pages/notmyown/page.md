@@ -5,7 +5,7 @@ title: Not my own papers
 ### A
 
 [araki1973relative](araki1973relative),
-[araki1976relative](araki1976relative), [araki1977relative](araki1977relative)
+[araki1976relative](araki1976relative), [araki1977relative](araki1977relative), [arias2002fixed](arias2002fixed), 
 [albert2019asymptotics](albert2019asymptotics),
 [alberti1980aproblem](alberti1980aproblem), [alberti1985onthesimultaneous](alberti1985onthesimultaneous), [BOOK_alfsen1971compact](BOOK_alfsen1971compact), [BOOK_alfsen1976noncommutative](BOOK_alfsen1976noncommutative), [BOOK_alfsen2003geometry](BOOK_alfsen2003geometry), [alfsen1979onnoncommutative](alfsen1979onnoncommutative), [araki1982positive](araki1982positive),
 [arveson1969subalgebras](arveson1969subalgebras), [arveson1972subalgebras](arveson1972subalgebras), [arveson2007theasymptotic](arveson2007theasymptotic), [arveson2008lifting](arveson2008lifting), [aubrun2017alice](aubrun2017alice),  [aubrun2020universal](aubrun2020universal),
