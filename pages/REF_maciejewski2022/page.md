@@ -21,4 +21,6 @@ Proofs, properties, and examples
 
 [revision](REF_maciejewski2022/revised.pdf)
 
+**Decision:** accept
+
 
