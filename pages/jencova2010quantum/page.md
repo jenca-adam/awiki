@@ -22,4 +22,8 @@ required for $\{\rho_0^{\otimes n},\rho_1^{\otimes}\}$, for all $n$.
 
 [link to published version](https://link.springer.com/content/pdf/10.1007/s11005-010-0398-0.pdf)
 
+[Google scholar](https://scholar.google.com/scholar_lookup?arxiv_id=0810.4045):
+
+[doi](https://doi.org/10.1007/s11005-010-0398-0)
+
 

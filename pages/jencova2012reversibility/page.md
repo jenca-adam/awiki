@@ -19,8 +19,8 @@ and $\chi^2$-divergences.
 
     
 
-[arxiv:1107.0453](https://arxiv.org/abs/1107.0453)
-[View at www.worldscientific.com](https://www.worldscientific.com/doi/abs/10.1142/S0129055X1250016X)
-[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1107.0453) 
-
-[published version](jencova2012reversibility/published.pdf)
+[arxiv:1107.0453](https://arxiv.org/abs/1107.0453)    
+[View at www.worldscientific.com](https://www.worldscientific.com/doi/abs/10.1142/S0129055X1250016X)    
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1107.0453)     
+[doi](https://doi.org/10.1142/S0129055X1250016X)    
+[published version](jencova2012reversibility/published.pdf)    

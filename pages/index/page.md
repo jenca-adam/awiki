@@ -7,6 +7,8 @@ title: My work
 
 
 
+
+
 ## Bibliographies
 
 * [notmyown](notmyown)
@@ -14,7 +16,8 @@ title: My work
 * [steering](CIT_steering)     
 * [information geometry](CIT_infgeo)    
 * [relative entropy](CIT_entropy)    
-* [compatibility](CIT_compatibility)
+* [compatibility](CIT_compatibility)     
+* [recoverability (sufficiency)](CIT_suff)
 
 ---
 

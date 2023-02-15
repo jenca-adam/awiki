@@ -23,4 +23,6 @@ quantum error correction.
 
 [arxiv:1509.07127](https://arxiv.org/abs/1509.07127)
 [View at link.springer.com](https://link.springer.com/article/10.1007/s00023-018-0716-0)
-[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1509.07127) 
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1509.07127)
+
+[doi]( 	https://doi.org/10.1007/s00023-018-0716-0)

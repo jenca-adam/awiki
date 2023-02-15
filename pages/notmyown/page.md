@@ -28,6 +28,7 @@ title: Not my own papers
 [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
+[crann2016private](crann2016private),
 [chiribella2013quantum](chiribella2013quantum),
 [chiribella2009realization](chiribella2009realization),
 [carmeli2019witnessing](carmeli2019witnessing),
@@ -56,6 +57,7 @@ title: Not my own papers
 [ekeland1999convex](BOOK_ekeland1999convex),
 
 ### F
+[frenkel2022integral](frenkel2022integral),
 [foulis2015unitizations](foulis2015unitizations),
 [foulis2012dimension](foulis2012dimension),
 [faulkner2020approximate2](faulkner2020approximate2),
@@ -73,6 +75,7 @@ title: Not my own papers
 
 
 ### G
+[gao2023sufficient](gao2023sufficient),
 [girard2021jordanproducts](girard2021jordanproducts),
 [grasselli2010dual](grasselli2010dual),
 [gallego2015resource](gallego2015resource),
@@ -130,6 +133,10 @@ title: Not my own papers
 [junge2003noncommutative](junge2003noncommutative)
 
 ### K
+[kribs2018quantum](kribs2018quantum),
+[kuramochi2018accessible](kuramochi2018accessible),
+
+[kaniowski2014cloning](kaniowski2014cloning),  
 [kuramochi2018quantum](kuramochi2018quantum),
 [ku2022complete](ku2022complete),
 
