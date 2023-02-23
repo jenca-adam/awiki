@@ -10,6 +10,6 @@ title: P. Frenkel, Integral formula, 2023
 [file](REF_frenkel2023/file.pdf)
 
 
-**Decision:** 
+**Decision:** Revise nad resubmit (accept) 
 
 

@@ -17,7 +17,8 @@ title: Citations for sufficiency
 ## My papers
 
 * [jencova2010quantum](jencova2010quantum)     
-* [jencova2012reversibility](jencova2012reversibility) 
+* [jencova2012reversibility](jencova2012reversibility)    
+* [jencova2012comparisonof](jencova2012comparisonof)
 
 
 ## Relation to broadcasting?
