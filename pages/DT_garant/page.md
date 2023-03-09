@@ -1,5 +1,25 @@
 title: Zoznam doktorandov
 ---
+
+**Meno a priezvisko:** Mgr. Jana Valigurská  
+**Začiatok štúdia:** 2021
+**Školiteľ:** Zajac (Nemoga)
+**Téma:**   
+
+**Dizertačná skúška:**
+
+
+---
+
+**Meno a priezvisko:** Mgr. Viktor Olejár     
+**Začiatok štúdia:** 2021
+**Školiteľ:** Jirásková (Hospodár)      
+**Téma:** Popisná a výpočtová zložitosť formálnych jazykov     
+
+**Dizertačná skúška:** 
+
+---
+
 **Meno a priezvisko:** Ing. Ferdinand Čapka  
 **Začiatok štúdia:** 2019  
 **Školiteľ:** Holá  

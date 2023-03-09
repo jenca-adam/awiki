@@ -30,4 +30,5 @@ title: Citations for sufficiency
 
 * [kuramochi2018accessible](kuramochi2018accessible)  Accessible information (classical part), related to broadcasting     
 * [crann2016private](crann2016private) private subalgebras, correctability, complementary channels, approximate    
-* [kribs2019quantum](kribs2019quantum)  as above, similar
+* [kribs2019quantum](kribs2019quantum)  as above, similar     
+* [carmeli2018state](carmeli2018state), [carmeli2019quantum](carmeli2019quantum) incompatibility witnesses, post-measurement

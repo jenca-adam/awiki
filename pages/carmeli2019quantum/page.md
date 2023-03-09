@@ -23,5 +23,5 @@ two noisy mutually unbiased bases.
     
 
 [arxiv:1812.02985v2](https://arxiv.org/abs/1812.02985v2)
-[View at publisher](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.130402)
+[doi](https://doi.org/10.1103/PhysRevLett.122.130402)     
 [View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1812.02985)

@@ -28,6 +28,8 @@ title: Not my own papers
 [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
+[carmeli2022quantum](carmeli2022quantum),
+[carmeli2018state](carmeli2018state),
 [crann2016private](crann2016private),
 [chiribella2013quantum](chiribella2013quantum),
 [chiribella2009realization](chiribella2009realization),
