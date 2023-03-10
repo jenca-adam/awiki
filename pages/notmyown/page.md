@@ -28,6 +28,8 @@ title: Not my own papers
 [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
+[carlen2018recovery](carlen2018recovery),
+[carlen2020recovery](carlen2020recovery),
 [carmeli2022quantum](carmeli2022quantum),
 [carmeli2018state](carmeli2018state),
 [crann2016private](crann2016private),
@@ -59,6 +61,7 @@ title: Not my own papers
 [ekeland1999convex](BOOK_ekeland1999convex),
 
 ### F
+[fawzi2015quantum](fawzi2015quantum),
 [frenkel2022integral](frenkel2022integral),
 [foulis2015unitizations](foulis2015unitizations),
 [foulis2012dimension](foulis2012dimension),
@@ -77,6 +80,7 @@ title: Not my own papers
 
 
 ### G
+[gao2021recoverability](gao2021recoverability),
 [gao2023sufficient](gao2023sufficient),
 [girard2021jordanproducts](girard2021jordanproducts),
 [grasselli2010dual](grasselli2010dual),
@@ -95,6 +99,8 @@ title: Not my own papers
 [goldstein2020notes](goldstein2020notes), [grasselli2000thequantum](grasselli2000thequantum)
 
 ### H
+[hiai2017different](hiai2017different),
+[hiai2011quantum](hiai2011quantum),
 [heinosaari2022dispensing](heinosaari2022dispensing),
 [heinosaari2017incompatibility](heinosaari2017incompatibility),
 [heinosaari2014maximally](heinosaari2014maximally),
@@ -154,6 +160,7 @@ title: Not my own papers
 
 
 ### M
+[mosonyi2004structure](mosonyi2004structure),
 [masanes2011aderivation](masanes2011aderivation),
 [mosonyi2014strongconverse](mosonyi2014strongconverse),
 [mosonyi2021thestrong](mosonyi2021thestrong),
@@ -192,6 +199,7 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), [BOOK_rao1991theory](BOOK_rao1991theory), 
 
 ### S
+[sutter2017multivariate](sutter2017multivariate),
 [stevens2014steering](stevens2014steering),
 
 

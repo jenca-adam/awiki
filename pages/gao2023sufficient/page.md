@@ -4,7 +4,7 @@ title: gao2023sufficient
 
 ## Reference
 
-Li Gao, Haojian Li, Iman Marvian, Cambyse Rouzé,Sufficient statistic and recoverability via Quantum Fisher Information metrics,arXiv preprint arXiv:2302.02341, 2023,
+Li Gao, Haojian Li, Iman Marvian, Cambyse Rouzé, Sufficient statistic and recoverability via Quantum Fisher Information metrics, arXiv preprint arXiv:2302.02341, 2023
 
 ## Abstract 
   We prove that for a large class of quantum Fisher information, a quantum
@@ -28,6 +28,6 @@ the resource theory of asymmetry.
 
     
 
-[arxiv:2302.02341v1](https://arxiv.org/abs/2302.02341v1)
-[View at {lpage}]({l})
-[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=2302.02341)
+[arxiv:2302.02341v1](https://arxiv.org/abs/2302.02341v1)    
+[doi]()    
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=2302.02341)    

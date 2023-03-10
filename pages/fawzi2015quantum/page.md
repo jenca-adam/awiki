@@ -18,4 +18,4 @@ how well the Markov chain property is approximated.
 
 [arxiv:1410.0664v3](https://arxiv.org/abs/1410.0664v3)    
 [doi](https://doi.org/10.1007/s00220-015-2466-x)    
-[View at Google Scholar]()
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1410.0664)

@@ -21,5 +21,5 @@ inequalities.
     
 
 [arxiv:1604.03023v3](https://arxiv.org/abs/1604.03023v3)
-[doi]()
-[View at Google Scholar]()
+[doi](https://doi.org/10.1007/s00220-016-2778-5)
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1604.03023)

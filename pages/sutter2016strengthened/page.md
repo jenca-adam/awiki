@@ -4,7 +4,7 @@ title: sutter2016strengthened
 
 ## Reference
 
-David Sutter, Marco Tomamichel, Aram W. Harrow,Strengthened Monotonicity of Relative Entropy via Pinched Petz Recovery Map,IEEE Transactions on Information Theory, 62(5), 2907-2913, Jul 2016,
+David Sutter, Marco Tomamichel, Aram W. Harrow, Strengthened Monotonicity of Relative Entropy via Pinched Petz Recovery Map, IEEE Transactions on Information Theory, 62(5), 2907-2913, Jul 2016,
 
 ## Abstract 
   The quantum relative entropy between two states satisfies a monotonicity
@@ -23,6 +23,8 @@ operator logarithm.
 
     
 
-[arxiv:1507.00303](https://arxiv.org/abs/1507.00303)
-[View at ieeexplore.ieee.org](https://ieeexplore.ieee.org/abstract/document/7439826/)
-[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1507.00303) 
+[arxiv:1507.00303](https://arxiv.org/abs/1507.00303)    
+[View at ieeexplore.ieee.org](https://ieeexplore.ieee.org/abstract/document/7439826/)    
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1507.00303)     
+[doi](https://doi.org/10.1109/TIT.2016.2545680)
+

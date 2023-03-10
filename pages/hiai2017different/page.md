@@ -34,5 +34,5 @@ operation.
     
 
 [arxiv:1604.03089v4](https://arxiv.org/abs/1604.03089v4)    
-[doi]()
-[View at Google Scholar]()
+[doi](https://doi.org/10.1142/S0129055X17500234)    
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1604.03089)
