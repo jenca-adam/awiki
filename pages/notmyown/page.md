@@ -156,7 +156,7 @@ title: Not my own papers
 [labuschagne2012acrossed](labuschagne2012acrossed),
 [labuschagne2009mapsonnoncommutative](labuschagne2009mapsonnoncommutative),
 
-[leppajarvi2021postprocessing](leppajarvi2021postprocessing), [lami2018ultimate](lami2018ultimate),[lami2018nonclassical](lami2018nonclassical), [liu2020operational](liu2020operational), [lecam1964sufficiency](lecam1964sufficiency), [leditzky2017data](leditzky2017data), [liu2019resource](liu2019resource)
+[leppajarvi2021postprocessing](leppajarvi2021postprocessing), [lami2018ultimate](lami2018ultimate),[lami2018nonclassical](lami2018nonclassical), [liu2020operational](liu2020operational), [lecam1964sufficiency](lecam1964sufficiency), [leditzky2017data](leditzky2017data), [liu2019resource](liu2019resource), [luczak2014quantum](luczak2014quantum), [luczak2015onageneral](luczak2015onageneral)
 
 
 ### M

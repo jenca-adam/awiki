@@ -15,7 +15,9 @@ title: Citations for sufficiency
 * [petz1986sufficient](petz1986sufficient), [petz1988sufficiency](petz1988sufficiency)  basic papers by Petz    
 * [hiai2011quantum](hiai2011quantum) HMPB, [hiai2017different](hiai2017different) Hiai and Mossonyi  
 * [hiai2021quantum](BOOK_hiah2021quantum) Hiai's book    
-* [mosonyi2004structure](mosonyi2004structure) Mosonyi and Petz
+* [mosonyi2004structure](mosonyi2004structure) Mosonyi and Petz     
+* [luczak2014quantum](luczak2014quantum), [luczak2015onageneral](luczak2015onageneral)   Luczak     
+* [leditzky2017data](leditzky2017data) a condition for sandwiched
 
 
 

@@ -6,7 +6,8 @@ title: "Leditzky et al., 2017, equality in DPI for sandwiched R\xE9nyi entropy"
 F. Leditzky, C. Rouzé, N. Datta, Data processing for the sandwiched Rényi divergence: a condition for equality, Letters in Mathematical Physics 107 (1), pp. 61-80, 2017
 
 
-[arxiv:1604.02119](https://arxiv.org/abs/1604.02119)
+[arxiv:1604.02119](https://arxiv.org/abs/1604.02119)     
+[doi](https://doi.org/10.1007/s11005-016-0896-9)     
 
 
 
