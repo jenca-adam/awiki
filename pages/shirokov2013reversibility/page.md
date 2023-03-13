@@ -1,24 +1,28 @@
-title: shirokov2013reversibility
+title: shirokov2013reversibilityjmp
 ---
 
 
 ## Reference
 
-M.E. Shirokov, Reversibility conditions for quantum channels and their applications, Sbornik: Mathematics, 204(8), 1215, Mar 2013,
+M.E. Shirokov, Reversibility of a quantum channel: general conditions and their applications to Bosonic linear channels, Journal of Mathematical Physics, 54(11), 112201, Dec 2013,
 
 ## Abstract 
-  A necessary condition for reversibility (sufficiency) of a quantum channel
-with respect to complete families of states with bounded rank is obtained. A
-full description (up to isometrical equivalence) of all quantum channels
-reversible with respect to orthogonal and nonorthogonal complete families of
-pure states is given. Some applications in quantum information theory are
-considered.
-The main results can be formulated in terms of the operator algebras theory
-(as conditions for reversibility of channels between algebras of all bounded
-operators).
+  The method of complementary channel for analysis of reversibility
+(sufficiency) of a quantum channel with respect to families of input states
+(pure states for the most part) are considered and applied to Bosonic linear
+(quasi-free) channels, in particular, to Bosonic Gaussian channels.
+The obtained reversibility conditions for Bosonic linear channels have clear
+physical interpretation and their sufficiency is also shown by explicit
+construction of reversing channels. The method of complementary channel gives
+possibility to prove necessity of these conditions and to describe all reversed
+families of pure states in the Schrodinger representation.
+Some applications in quantum information theory are considered.
+Conditions for existence of discrete classical-quantum subchannels and of
+completely depolarizing subchannels of a Bosonic linear channel are obtained in
+the Appendix.
 
     
 
-[arxiv:1203.0262v3](https://arxiv.org/abs/1203.0262v3)     
-[doi]()     
+[arxiv:1212.2354v6](https://arxiv.org/abs/1212.2354v6)
+[doi]()
 [View at Google Scholar]()
