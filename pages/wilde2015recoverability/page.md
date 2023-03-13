@@ -4,7 +4,7 @@ title: wilde2015recoverability
 
 ## Reference
 
-Mark M. Wilde,Recoverability in quantum information theory,Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences, 471(2182), 20150338, May 2015,
+Mark M. Wilde, Recoverability in quantum information theory, Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences, 471(2182), 20150338, May 2015,
 
 ## Abstract 
   The fact that the quantum relative entropy is non-increasing with respect to
@@ -25,6 +25,7 @@ physically meaningful improvements to many known entropy inequalities.
 
     
 
-[arxiv:1505.04661](https://arxiv.org/abs/1505.04661)
-[View at royalsocietypublishing.org](https://royalsocietypublishing.org/doi/abs/10.1098/rspa.2015.0338)
+[arxiv:1505.04661](https://arxiv.org/abs/1505.04661)     
+[doi]()    
+[View at royalsocietypublishing.org](https://royalsocietypublishing.org/doi/abs/10.1098/rspa.2015.0338)     
 [View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1505.04661) 
