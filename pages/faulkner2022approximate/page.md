@@ -1,10 +1,10 @@
-title: faulkner2020approximate
+title: faulkner2022approximate
 ---
 
 
 ## Reference
 
-Thomas Faulkner, Stefan Hollands, Brian Swingle, Yixu Wang;Approximate recovery and relative entropy I. general von Neumann subalgebras;; Jun 2020;
+Faulkner, Thomas, et al. "Approximate recovery and relative entropy i: General von Neumann subalgebras." Communications in Mathematical Physics 389.1 (2022): 349-397.
 
 ## Abstract 
 
@@ -20,4 +20,5 @@ applications to the quantum null energy condition.
 
     
 
-[arxiv:2006.08002](https://arxiv.org/abs/2006.08002)
+[arxiv:2006.08002](https://arxiv.org/abs/2006.08002)     
+[doi](https://doi.org/10.1007/s00220-021-04143-6)

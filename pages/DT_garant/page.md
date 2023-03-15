@@ -1,6 +1,15 @@
 title: Zoznam doktorandov
 ---
 
+
+## Dizertacna skuska 
+
+
+[pravidla](https://zona.fmph.uniba.sk/fileadmin/fmfi/studium/PhD/Zasady_dizertacna_skuska_2021.pdf)
+
+
+
+
 **Meno a priezvisko:** Mgr. Jana Valigurská  
 **Začiatok štúdia:** 2021
 **Školiteľ:** Zajac (Nemoga)

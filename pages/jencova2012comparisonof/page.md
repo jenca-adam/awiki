@@ -23,8 +23,8 @@ preserving.
 
     
 
-[arxiv:1110.4792](https://arxiv.org/abs/1110.4792)
-[View at www.sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0034487712600433)
-[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1110.4792) 
-
+[arxiv:1110.4792](https://arxiv.org/abs/1110.4792)     
+[View at www.sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0034487712600433)     
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1110.4792)     
+[doi](https://doi.org/10.1016/S0034-4877%2812%2960043-3)    
 [published version](jencova2012comparisonof/published.pdf)

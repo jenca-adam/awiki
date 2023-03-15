@@ -20,5 +20,5 @@ uncertainty relations.
     
 
 [arxiv:1811.10425v2](https://arxiv.org/abs/1811.10425v2)    
-[doi]()    
+[doi]( https://doi.org/10.26421/QIC19.1-2-5)         
 [View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1811.10425)    

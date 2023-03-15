@@ -20,9 +20,8 @@ dimensional.
 
     
 
-[arxiv:math-ph/0412093](https://arxiv.org/abs/math-ph/0412093)
-
-
+[arxiv:math-ph/0412093](https://arxiv.org/abs/math-ph/0412093)     
+[doi](https://doi.org/10.1007/s00220-005-1510-7)    
 [link](https://link.springer.com/article/10.1007/s00220-005-1510-7)
 
 

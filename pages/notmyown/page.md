@@ -61,14 +61,14 @@ title: Not my own papers
 [ekeland1999convex](BOOK_ekeland1999convex),
 
 ### F
+[faulkner2022approximate](faulkner2022approximate),
 [fawzi2015quantum](fawzi2015quantum),
 [frenkel2022integral](frenkel2022integral),
 [foulis2015unitizations](foulis2015unitizations),
 [foulis2012dimension](foulis2012dimension),
-[faulkner2020approximate2](faulkner2020approximate2),
+[faulkner2022approximate2](faulkner2022approximate2),
 
 [fagnola1999algebraic](fagnola1999algebraic),  
-[faulkner2020approximate](faulkner2020approximate),
 [fagnola2003transience](fagnola2003transience), [fang2020nogo](fang2020nogo),
 [farenick2013approximately](farenick2013approximately), [farenick2012operator](farenick2012operator),
 [foulis2003compressible](foulis2003compressible), [foulis2004spectral](foulis2004spectral),
@@ -101,7 +101,6 @@ title: Not my own papers
 ### H
 [hiai2017different](hiai2017different),
 [hiai2011quantum](hiai2011quantum),
-[heinosaari2022dispensing](heinosaari2022dispensing),
 [heinosaari2017incompatibility](heinosaari2017incompatibility),
 [heinosaari2014maximally](heinosaari2014maximally),
 [hardy2001quantum](hardy2001quantum),
@@ -160,6 +159,7 @@ title: Not my own papers
 
 
 ### M
+[mullerhermes2017monotonicity](mullerhermes2017monotonicity),
 [mosonyi2004structure](mosonyi2004structure),
 [masanes2011aderivation](masanes2011aderivation),
 [mosonyi2014strongconverse](mosonyi2014strongconverse),
@@ -199,6 +199,11 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), [BOOK_rao1991theory](BOOK_rao1991theory), 
 
 ### S
+
+[shirokov2015onsuperactivation](shirokov2015onsuperactivation),
+[shirokov2011monotonicity](shirokov2011monotonicity),
+[shirokov2013reversibilityjmp](shirokov2013reversibilityjmp),
+[shirokov2013reversibility](shirokov2013reversibility),
 [sutter2017multivariate](sutter2017multivariate),
 [stevens2014steering](stevens2014steering),
 

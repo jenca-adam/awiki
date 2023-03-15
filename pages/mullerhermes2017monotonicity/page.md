@@ -23,5 +23,5 @@ time evolutions as Markovian.
     
 
 [arxiv:1512.06117v3](https://arxiv.org/abs/1512.06117v3)     
-[doi]()    
-[View at Google Scholar]()
+[doi](https://doi.org/10.1007/s00023-017-0550-9)    
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1512.06117)

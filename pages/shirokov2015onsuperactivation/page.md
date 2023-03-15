@@ -23,5 +23,5 @@ for infinite-dimensional channels as well.
     
 
 [arxiv:1309.2610v6](https://arxiv.org/abs/1309.2610v6)     
-[doi]()     
+[doi](https://doi.org/10.1007/s00220-015-2345-5)     
 [View at Google Scholar]()

@@ -18,9 +18,11 @@ of quantum Fisher information is a new result.
 
     
 
-[arxiv:quant-ph/0604091](https://arxiv.org/abs/quant-ph/0604091)
-[View at www.worldscientific.com](https://www.worldscientific.com/doi/abs/10.1142/S0219025706002408)
-[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=quant-ph/0604091)
+[arxiv:quant-ph/0604091](https://arxiv.org/abs/quant-ph/0604091)    
+[View at www.worldscientific.com](https://www.worldscientific.com/doi/abs/10.1142/S0219025706002408)    
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=quant-ph/0604091)    
 
 
+
+[doi](https://doi.org/10.1142/S0219025706002408)    
 [published version](jencova2006sufficiency/published.pdf) 

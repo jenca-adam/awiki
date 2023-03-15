@@ -7,6 +7,7 @@ title: My own papers
 
 1. [jencova2023spectral](jencova2023spectral) Spectral order unit spaces that are JB-algebras, functional calculus, characterization of Rickart JB-algebras
 
+1. [heinosaari2023dispensing](heinosaari2023dispensing)  broadcasting, with Teiko Heinosaari and Martin Plávala
 
 ### 2022
 

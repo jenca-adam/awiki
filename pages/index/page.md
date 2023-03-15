@@ -17,7 +17,8 @@ title: My work
 * [information geometry](CIT_infgeo)    
 * [relative entropy](CIT_entropy)    
 * [compatibility](CIT_compatibility)     
-* [recoverability (sufficiency)](CIT_suff)
+* [recoverability (sufficiency)](CIT_suff)     
+* [comparison of statistical experiments](CIT_comparison)   
 
 ---
 
