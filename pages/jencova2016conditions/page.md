@@ -22,6 +22,6 @@ channels, unitary channels and simple projective measurements.
 
 [arxiv:1603.01437](https://arxiv.org/abs/1603.01437)
 
-[link](https://aip.scitation.org/doi/abs/10.1063/1.4972286)
+[published version](jencova2016conditions/published.pdf)    
 
-[published version](jencova2016conditions/published.pdf)
+[doi](https://doi.org/10.1063/1.4972286)

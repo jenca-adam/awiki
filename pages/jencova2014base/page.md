@@ -12,6 +12,8 @@ A. Jenčová,  Base norms and discrimination of generalized quantum channels, J.
 
 [published version](jencova2014base/published.pdf)
 
+[doi](https://doi.org/10.1063/1.4863715)  
+
 ## Content
 
 * norms obtained from sections of a base of the cone of positive operators (finite dim)

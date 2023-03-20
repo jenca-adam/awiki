@@ -15,4 +15,6 @@ the sense of probability on MV-algebras are shown.
    
 [arxiv:1307.4201](https://arxiv.org/abs/1307.4201)
 
-[link](https://www.sciencedirect.com/science/article/abs/pii/S0165011414002668)
+[link](https://www.sciencedirect.com/science/article/abs/pii/S0165011414002668)     
+
+[doi](https://doi.org/10.1016/j.fss.2014.06.002)
