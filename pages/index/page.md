@@ -7,8 +7,6 @@ title: My work
 
 
 
-
-
 ## Bibliographies
 
 * [notmyown](notmyown)
@@ -24,10 +22,11 @@ title: My work
 
 ## Duties 
 
-* [referee](referee)
-* [students](students)
-* [garant DS](DT_garant)   
-* [conferences](conferences)
+* [referee](referee)     
+* [students](students)     
+* [garant DS](DS_garant)   
+* [conferences](conferences)     
+* [vedecká rada](vr)
 
 ---
 

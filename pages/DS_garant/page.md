@@ -1,53 +1,26 @@
-title: Zoznam doktorandov
+title: Doktorandské štúdium
 ---
 
 
-## Dizertacna skuska 
+## Zoznam doktorandov
 
 
-[pravidla](https://zona.fmph.uniba.sk/fileadmin/fmfi/studium/PhD/Zasady_dizertacna_skuska_2021.pdf)
+* Mgr. F. I. [Agu](DS_agu)  (2022 - )     
+* Mgr. J. [Valigurská](DS_valigurska)    (2021 - )    
+* Mgr. V. [Olejár](DS_olejar)   (2021 - )    
+* Ing. P. [Sýs](DS_sys)    (2019 - )    
+* Ing. F. [Čapka](DS_capka)  (2019 - )    
+
+
+## Predpisy
+
+
+[dizertačná skúška](https://zona.fmph.uniba.sk/fileadmin/fmfi/studium/PhD/Zasady_dizertacna_skuska_2021.pdf)
 
 
 
+## Ukončení doktorandi
 
-**Meno a priezvisko:** Mgr. Jana Valigurská  
-**Začiatok štúdia:** 2021
-**Školiteľ:** Zajac (Nemoga)
-**Téma:**   
-
-**Dizertačná skúška:**
-
-
----
-
-**Meno a priezvisko:** Mgr. Viktor Olejár     
-**Začiatok štúdia:** 2021
-**Školiteľ:** Jirásková (Hospodár)      
-**Téma:** Popisná a výpočtová zložitosť formálnych jazykov     
-
-**Dizertačná skúška:** 
-
----
-
-**Meno a priezvisko:** Ing. Ferdinand Čapka  
-**Začiatok štúdia:** 2019  
-**Školiteľ:** Holá  
-**Téma:**   
-
-**Dizertačná skúška:**
-
----
-
-**Meno a priezvisko:** Ing. Peter Sýs  
-**Začiatok štúdia:** 2019  
-**Školiteľ:**  Nemoga  
-**Téma:**  
-
-**Dizertačná skúška:**
-
----    
-
---- 
 
 ### Finished 2022
 
