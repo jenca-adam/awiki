@@ -152,6 +152,7 @@ title: Not my own papers
 [kuramochi2017minimal](kuramochi2017minimal), [kuramochi2020directed](kuramochi2020directed), [kummerer1979mean](kummerer1979mean), [kimura2010distinguishability](kimura2010distinguishability), [kosaki1984applications](kosaki1984applications), [kosaki1984applicationsuc](kosaki1984applicationsuc), [kosaki1986relative](kosaki1986relative), [kubicki2019resource](kubicki2019resource), 
 
 ### L
+[lindblad1999ageneral](lindblad1999ageneral),
 [labuschagne2012acrossed](labuschagne2012acrossed),
 [labuschagne2009mapsonnoncommutative](labuschagne2009mapsonnoncommutative),
 

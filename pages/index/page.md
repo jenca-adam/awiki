@@ -6,6 +6,11 @@ title: My work
 [Broadcasting note](MISC_broadcasting)
 
 
+* [wright1977jordan](https://scholar.google.com/scholar?q=Jordan%20C-algebras) (link to file)  $JB\*$-algebras (complexification of $JB$)   
+* [siddiqui2010aproof](https://nyjm.albany.edu/j/2010/16-5p.pdf) (link to file) clever proof of Russo-Dye theorem for $JB\*$-algebras     
+* [wright1977arusso](https://doi.org/10.1016/S0304-0208(08)70537-1) (doi) Russo-Dye for $JB\*$-algebras, Wright, Youngson
+
+
 
 ## Bibliographies
 

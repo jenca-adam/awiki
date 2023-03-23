@@ -61,11 +61,12 @@ title: Citations for sufficiency
 ## Relation to broadcasting?
 
 * [heinosaari2023dispensing](heinosaari2023dispensing)     
-* [kaniowski2014cloning](kaniowski2014cloning)    broadcasting and sufficiency (?) (Luczak)
+* [kaniowski2014cloning](kaniowski2014cloning)    broadcasting and sufficiency (?) (Luczak)     
+* [lindblad1999ageneral](lindblad1999ageneral)  no-cloning Theorem by Lindblad    
+* [kuramochi2018accessible](kuramochi2018accessible)  Accessible information (classical part), related to broadcasting    (Theorem 1) 
 
 ## May be related 
 
-* [kuramochi2018accessible](kuramochi2018accessible)  Accessible information (classical part), related to broadcasting     
 * [crann2016private](crann2016private) private subalgebras, correctability, complementary channels, approximate    
 * [kribs2019quantum](kribs2019quantum)  as above, similar     
 * [carmeli2018state](carmeli2018state), [carmeli2019quantum](carmeli2019quantum) incompatibility witnesses, post-measurement     
