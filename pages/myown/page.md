@@ -5,8 +5,7 @@ title: My own papers
 
 ### 2023
 
-1. [jencova2023spectral](jencova2023spectral) Spectral order unit spaces that are JB-algebras, functional calculus, characterization of Rickart JB-algebras
-
+1. [jencova2023spectral](jencova2023spectral) Spectral order unit spaces that are JB-algebras, functional calculus, characterization of Rickart JB-algebras (<span style='color:red'>stupid mistake!</span>)
 1. [heinosaari2023dispensing](heinosaari2023dispensing)  broadcasting, with Teiko Heinosaari and Martin Plávala
 
 ### 2022
@@ -153,6 +152,7 @@ torsion-free duals,  divergences, conference proceedings,  not on arxiv!
 
 1. [jencova2023theexponential](jencova2023theexponential) special issue of IG, (<span style='color:red'>accepted</span>)
 
+1. [jencova2023recoverability](jencova2023recoverability)     
 1. [jencova2015aextreme](jencova2015aextreme) C^\*-extreme (or $\mathcal A$-extreme) points of UCP maps into matrix
 algebras, not on arxiv!  (<span style='color:red'>unpublished draft</span>)
 

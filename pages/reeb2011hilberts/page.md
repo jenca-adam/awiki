@@ -24,5 +24,5 @@ Chernoff bound, the fidelity and various norms are proven.
     
 
 [arxiv:1102.5170v2](https://arxiv.org/abs/1102.5170v2)      
-[doi]()     
-[View at Google Scholar]()
+[doi](https://doi.org/10.1063/1.3615729)     
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1102.5170)

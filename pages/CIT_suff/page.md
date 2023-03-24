@@ -70,4 +70,6 @@ title: Citations for sufficiency
 * [crann2016private](crann2016private) private subalgebras, correctability, complementary channels, approximate    
 * [kribs2019quantum](kribs2019quantum)  as above, similar     
 * [carmeli2018state](carmeli2018state), [carmeli2019quantum](carmeli2019quantum) incompatibility witnesses, post-measurement     
-* [shirokov2015onsuperactivation](shirokov2015onsuperactivation) complementary channels
+* [shirokov2015onsuperactivation](shirokov2015onsuperactivation) complementary channels     
+* [reeb2011hilberts](reeb2011hilberts) Hilbert's projective metric
+
