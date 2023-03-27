@@ -4,7 +4,7 @@ title: batkai2012decomposition
 
 ## Reference
 
-András Bátkai, Ulrich Groh, Dávid Kunszenti-Kovács, Marco Schreiber,Decomposition of operator semigroups on W*-algebras,In Semigroup Forum (Vol. 84, pp. 8-24). Springer-Verlag, Jun 2012,
+András Bátkai, Ulrich Groh, Dávid Kunszenti-Kovács, Marco Schreiber, Decomposition of operator semigroups on W*-algebras, In Semigroup Forum (Vol. 84, pp. 8-24). Springer-Verlag, Jun 2012,
 
 ## Abstract 
   We consider semigroups of operators on a W$^\*$-algebra and prove, under
@@ -17,5 +17,5 @@ positive operators on W$^*$-algebras.
     
 
 [arxiv:1106.0287v2](https://arxiv.org/abs/1106.0287v2)    
-[doi]()    
-[View at Google Scholar]()
+[doi](https://doi.org/10.1007/s00233-011-9362-2)    
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1106.0287)
