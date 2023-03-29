@@ -57,7 +57,7 @@ with D. Foulis and S. Pulmannová
 1. [foulis2017states](foulis2017states)
 with D. Foulis and S. Pulmannová
 
-1. [foulis2017aloomissikorski](foulis2017aloomissikorski)
+
 ### 2016
 1. [jencova2016conditions](jencova2016conditions)
 with M. Plávala, discrimination of quantum channels
@@ -65,7 +65,7 @@ with M. Plávala, discrimination of quantum channels
 comparison of quantum channels (Le Cam theorem)
 1. [jencova2016ontheconvex](jencova2016ontheconvex)
 convex structure of PPOVMs related to $C^\*$-convexity
-1. [foulis2016aloomissikorski](foulis2016aloomissikorski)
+
 ### 2015
 1. [puchala2015exploring](puchala2015exploring)
 with Z. Puchala, M. Sedlák, M. Ziman, boundariness
@@ -160,5 +160,4 @@ algebras, not on arxiv!  (<span style='color:red'>unpublished draft</span>)
 1. [jencova2014randomization](jencova2014randomization) randomization theorems for quantum channels  (<span style='color:red'>never published</span>)
 
 1. [jencova2003affine](jencova2003affine) affine connections on von Neumann algebras, Araki-Masuda $L_p$-spaces (<span style='color:red'>never published</span>)
-
 
