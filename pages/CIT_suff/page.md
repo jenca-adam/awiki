@@ -1,4 +1,3 @@
-
 title: Citations for sufficiency
 ---
 
@@ -46,7 +45,7 @@ title: Citations for sufficiency
 * [jencova2012reversibility](jencova2012reversibility)    
 * [jencova2012comparisonof](jencova2012comparisonof)     
 * [jencova2017preservation](jencova2017preservation), [jencova2018renyi](jencova2018renyi), [jencova2021renyi](jencova2021renyi)
-
+* [jencova2023recoverability](jencova2023recoverability)  my new paper on recoverability and hypothesis testing
 
 ## Related
 
@@ -55,7 +54,10 @@ title: Citations for sufficiency
 * [paulsen2002completely](BOOK_paulsen2002completely)
   
 
+## Ergodic theorems
 
+* [kummerer1979mean](kummerer1979mean) mean ergodic semigroups     
+* [batkai2012decomposition](batkai2012decomposition) JDG-decompositions of semigroups
 
 
 ## Relation to broadcasting?
@@ -72,4 +74,3 @@ title: Citations for sufficiency
 * [carmeli2018state](carmeli2018state), [carmeli2019quantum](carmeli2019quantum) incompatibility witnesses, post-measurement     
 * [shirokov2015onsuperactivation](shirokov2015onsuperactivation) complementary channels     
 * [reeb2011hilberts](reeb2011hilberts) Hilbert's projective metric
-

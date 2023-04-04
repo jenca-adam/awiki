@@ -13,6 +13,7 @@ title: Not my own papers
 
 
 ### B
+[batkai2012decomposition](batkai2012decomposition),
 [buscemi2014gametheoretic](buscemi2014gametheoretic),
 
 [bergh1976interpolation](BOOK_bergh1976interpolation)
