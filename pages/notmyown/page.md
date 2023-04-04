@@ -233,6 +233,7 @@ title: Not my own papers
 [vetterlein2019orthogonality](vetterlein2019orthogonality)
 
 ### W
+[BOOK_wilde2017quantum](BOOK_wilde2017quantum), 
 [wiseman2007steering](wiseman2007steering),
 [wilde2015recoverability](wilde2015recoverability),
 [wetering2020commutativity](wetering2020commutativity),
