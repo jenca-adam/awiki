@@ -231,6 +231,7 @@ title: Not my own papers
 [umanita2006classification](umanita2006classification)
 
 ### V
+[van2020commutativity](van2020commutativity),
 [vetterlein2019orthogonality](vetterlein2019orthogonality)
 
 ### W
@@ -245,6 +246,8 @@ title: Not my own papers
 [westerbaan2020thethree](westerbaan2020thethree),
 [wetering2019aneffect](wetering2019aneffect), [wetering2018sequential](wetering2018sequential), [wetering2018three](wetering2018three), [wilde2018optimized](wilde2018optimized),
 [wolf2010theinverse](wolf2010theinverse)
+[wright1977jordan](wright1977jordan), [wright1977arusso](wright1977arusso)  
+
 
 ### X
 [xu2007operator](xu2007operator)
