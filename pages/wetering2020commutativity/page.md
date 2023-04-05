@@ -6,7 +6,8 @@ title: wetering2020commutativity
 
 John van de Wetering, Commutativity in Jordan Operator Algebras, Journal of Pure and Applied Algebra, 224(11), 106407, Dec 2020,
 
-## Abstract 
+## Abstract
+
   While Jordan algebras are commutative, their non-associativity makes it so
 that the Jordan product operators do not necessarily commute. When the product
 operators of two elements commute, the elements are said to operator commute.
@@ -24,9 +25,8 @@ sequential effect algebra as defined by Gudder and Greechie.
 
     
 
-[arxiv:1912.01903](https://arxiv.org/abs/1912.01903)
-[View at www.sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0022404920301067)
-[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1912.01903) 
+[arxiv:1912.01903](https://arxiv.org/abs/1912.01903)      
+[View at www.sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0022404920301067)    
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1912.01903)     
 
 [doi](https://dot.org/10.1016/jpaa.2020.106-407)
-
