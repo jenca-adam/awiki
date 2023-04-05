@@ -14,8 +14,14 @@ title: My work
 
 ## Bibliographies
 
+### General
+
 * [notmyown](notmyown)
 * [myown](myown)    
+* [books](CIT_books)
+
+### Specific
+
 * [steering](CIT_steering)     
 * [information geometry](CIT_infgeo)    
 * [relative entropy](CIT_entropy)    
