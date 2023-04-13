@@ -17,6 +17,8 @@ title: References for relative entropy and entropy and Lp spaces
 
 * [ohya1993quantum](BOOK_ohya1993quantum)
 
+* [umegaki1962conditional](umegaki1962conditional)  Umegaki relative entropy, finite dim.
+
 
 ### State perturbation
 

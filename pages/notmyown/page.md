@@ -228,7 +228,7 @@ title: Not my own papers
 ### U
 [uola2020quantum](uola2020quantum),
 
-[umanita2006classification](umanita2006classification)
+[umanita2006classification](umanita2006classification), [umegaki1962contidional](umegaki1962contidional)
 
 ### V
 [van2020commutativity](van2020commutativity),
