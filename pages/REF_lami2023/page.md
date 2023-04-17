@@ -1,7 +1,7 @@
 title: Lami, Goldwater, Adesso
 ---
 
-**Paper:**   A Post-Quantum Associative Memory
+**Paper:**   L. Lami, D. Goldwater, G. Adeso: A Post-Quantum Associative Memory
  
 **Journal:** Journal of Physics A
 
@@ -11,5 +11,4 @@ title: Lami, Goldwater, Adesso
 
 
 **Decision:** 
-
 
