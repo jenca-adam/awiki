@@ -4,7 +4,7 @@ title: jencova2022assemblages
 
 ## Reference
 
-Anna Jenčová,i Assemblages and steering in general probabilistic theories, 
+Anna Jenčová, Assemblages and steering in general probabilistic theories, 
 Journal of Physics A: Mathematical and Theoretical, 55, 434001
 
 ## Abstract 
@@ -26,4 +26,3 @@ arbitrary outcomes.
 [doi](https://doi.org/10.1088/1751-8121/ac97ce)
 
 special issue: [Foundational Structures in Quantum Theory](https://iopscience.iop.org/journal/1751-8121/page/foundational-structures-in-quantum-theory)
-
