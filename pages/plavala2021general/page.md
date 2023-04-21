@@ -4,7 +4,7 @@ title: plavala2021general
 
 ## Reference
 
-Martin Plávala,General probabilistic theories: An introduction,arXiv preprint arXiv:2103.07469, Mar 2021,
+Martin Plávala, General probabilistic theories: An introduction,arXiv preprint arXiv:2103.07469, Mar 2021,
 
 ## Abstract 
   We introduce the framework of general probabilistic theories (GPTs for
@@ -19,5 +19,4 @@ introduce diagrammatic notation and we often express equations via diagrams.
 
     
 
-[arxiv:2103.07469](https://arxiv.org/abs/2103.07469)
-[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=2103.07469) 
+[arxiv:2103.07469](https://arxiv.org/abs/2103.07469)    
