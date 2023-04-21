@@ -4,7 +4,7 @@ title: jencova2023recoverability
 
 ## Reference
 
-Anna Jenčová, Recoverability of quantum channels via hypothesis testing, Mar 2023,
+Anna Jenčová, Recoverability of quantum channels via hypothesis testing, arxiv:2303.11707, Mar 2023,
 
 ## Abstract 
   A quantum channel is sufficient with respect to a set of input states if it
