@@ -24,4 +24,4 @@ a small advantage over having no entanglement at all.
     
 
 [arxiv:1207.4939v1](https://arxiv.org/abs/1207.4939v1)      
-[doi]()
+[doi](https://doi.org/10.1145/2799560)

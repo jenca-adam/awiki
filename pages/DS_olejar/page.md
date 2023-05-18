@@ -14,8 +14,8 @@ title: Mgr. Viktor Olejár
 ## Dizertačná skúška
 
 * [žiadosť](DS_olejar/DS_dsziadost.pdf)   
-* **oponent:** doc. RNDr. Dana Pardubská, CSc., FMFI UK    
-* **komisia:** [návrh](DS_olejar/navrh_ds.pdf)   
+* **oponent:** doc. RNDr. Dana Pardubská, CSc., FMFI UK, [posudok](DS_olejar/posudok.pdf)
+* **komisia:** [návrh](DS_olejar/navrh_ds.pdf)  [aktualizované](DS_olejar/ds.pdf) 
 * **dátum:**    
 * **výsledok:**    
 

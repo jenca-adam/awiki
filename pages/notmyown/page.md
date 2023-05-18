@@ -100,6 +100,7 @@ title: Not my own papers
 [goldstein2020notes](goldstein2020notes), [grasselli2000thequantum](grasselli2000thequantum)
 
 ### H
+[heinosaari2016aninvitation](heinosaari2016aninvitation),
 [hiai2017different](hiai2017different),
 [hiai2011quantum](hiai2011quantum),
 [heinosaari2017incompatibility](heinosaari2017incompatibility),
@@ -197,11 +198,13 @@ title: Not my own papers
 ### Q
 
 ### R
+[regev2015quantum](regev2015quantum),
 [reeb2011hilberts](reeb2011hilberts),
 
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), [BOOK_rao1991theory](BOOK_rao1991theory), 
 
 ### S
+[saito2015ondefining](saito2015ondefining),
 
 [shirokov2015onsuperactivation](shirokov2015onsuperactivation),
 [shirokov2011monotonicity](shirokov2011monotonicity),
@@ -244,7 +247,9 @@ title: Not my own papers
 
 [westerbaan2020acharacterization](westerbaan2020acharacterization),
 [westerbaan2020thethree](westerbaan2020thethree),
-[wetering2019aneffect](wetering2019aneffect), [wetering2018sequential](wetering2018sequential), [wetering2018three](wetering2018three), [wilde2018optimized](wilde2018optimized),
+[wetering2019aneffect](wetering2019aneffect), [wetering2018sequential](wetering2018sequential), [wetering2018three](wetering2018three),
+[widom1955embedding](widom1955embedding),
+[wilde2018optimized](wilde2018optimized),
 [wolf2010theinverse](wolf2010theinverse)
 [wright1977jordan](wright1977jordan), [wright1977arusso](wright1977arusso)  
 
