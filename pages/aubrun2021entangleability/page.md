@@ -4,7 +4,7 @@ title: aubrun2021entangleability
 
 ## Reference
 
-Guillaume Aubrun, Ludovico Lami, Carlos Palazuelos, Martin Plavala,Entangleability of cones,Geometric and Functional Analysis, 31(2), 181-205, Nov 2021,
+Guillaume Aubrun, Ludovico Lami, Carlos Palazuelos, Martin Plavala, Entangleability of cones, Geometric and Functional Analysis, 31(2), 181-205, Nov 2021,
 
 ## Abstract 
   We solve a long-standing conjecture by Barker, proving that the minimal and
@@ -23,4 +23,4 @@ systems modelled by general probabilistic theories can be entangled.
     
 
 [arxiv:1911.09663v3](https://arxiv.org/abs/1911.09663v3)      
-[doi]()
+[doi](https://doi.org/10.1007/s00039-021-00565-5)

@@ -21,6 +21,8 @@ title: My work
 
 ### Specific
 
+
+* [GPT](CIT_gpt)    
 * [steering](CIT_steering)     
 * [information geometry](CIT_infgeo)    
 * [relative entropy](CIT_entropy)    
