@@ -4,7 +4,8 @@ title: Vedecká rada MÚ SAV
 
 ## Zápisnice
 
-* [1. 3. 2023](vr/zapisnica_010323.pdf) Spoločné zasadnutie VR a SR  
+* [1. 3. 2023](vr/zapisnica_010323.pdf) Spoločné zasadnutie VR a SR     
+* [23. 5. 2023](vr/zapisnica_230523.pdf) Stretnutie zamestnancov, voľba riaditeľa    
 
 
 
