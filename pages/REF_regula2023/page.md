@@ -10,5 +10,9 @@ title: Regula 2023
 [file](REF_regula2023/file.pdf)
 
 
-**Decision:** 
+**Decision:** accept
+
+[report](REF_regula2023/report.pdf)
+
+
 
