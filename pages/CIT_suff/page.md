@@ -60,6 +60,13 @@ title: Citations for sufficiency
 * [batkai2012decomposition](batkai2012decomposition) JDG-decompositions of semigroups
 
 
+## Extensions to infinite
+
+
+* [mullerhermes2017monotonicity](mullerhermes2017monotonicity)    
+
+
+
 ## Relation to broadcasting?
 
 * [heinosaari2023dispensing](heinosaari2023dispensing)     
