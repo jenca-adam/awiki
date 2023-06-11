@@ -26,5 +26,5 @@ information-preserving structures.
     
 
 [arxiv:1006.1358v1](https://arxiv.org/abs/1006.1358v1)    
-[doi]()
-[View at Google Scholar]()
+[doi](https://doi.org/10.1103/PhysRevA.82.062306)     
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1006.1358)

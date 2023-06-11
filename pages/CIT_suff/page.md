@@ -17,7 +17,8 @@ title: Citations for sufficiency
 * [mosonyi2004structure](mosonyi2004structure) Mosonyi and Petz     
 * [luczak2014quantum](luczak2014quantum), [luczak2015onageneral](luczak2015onageneral)   Luczak     
 * [leditzky2017data](leditzky2017data) a condition for sandwiched     
-* [shirokov2013reversibility](shirokov2013reversibility), [shirokov2013reversibilityjmp](shirokov2013reversibilityjmp) Shirokov's papers, applications 
+* [shirokov2013reversibility](shirokov2013reversibility), [shirokov2013reversibilityjmp](shirokov2013reversibilityjmp) Shirokov's papers, applications     
+* [blumekohout2010informationpreserving](blumekohout2010informationpreserving) channels preserving the $L_1$-distance 
 
 ## Classical
 

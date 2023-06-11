@@ -14,6 +14,7 @@ title: Not my own papers
 
 
 ### B
+[blumekohout2010informationpreserving](blumekohout2010informationpreserving),
 [batkai2012decomposition](batkai2012decomposition),
 [buscemi2014gametheoretic](buscemi2014gametheoretic),
 

@@ -2,7 +2,8 @@ title: To referee
 ---
 
  
-* Due [21.6.2023](REF_frenkel2023) (revision)
+* Due [21.6.2023](REF_frenkel2023) (revision)     
+* Due [1.7.2023](REF_mosonyi2023) (grant proposal)
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
 
