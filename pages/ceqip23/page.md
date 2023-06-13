@@ -63,7 +63,8 @@ title: CEQIP 2023 workshop
 
     It is observed that nonlinear entanglement witnesses can be  obtained by tensor products of linear witnesses with other witnesses or positive operators applied *across* copies of the state. Examples are shown that this can produce a nonlinear witness even if the individual  witnesses on a single copy do not detect entanglement. A method of producing such witnesses from matrix inequalities is provided, with an experimantal realization through randomized measurements.
 
-    The abstract is not very well written, it is not clear to what extent the presented observations are new.
+    The abstract is not very well written. It is not clear where  the presented observations came from and how new they are.
+The results look interesting and are certainly relevant, but I think there are stronger submissions. Could be a talk if there is a free slot.
 
 
     Evaluation: 1-2 (poster?talk?) 
@@ -100,10 +101,9 @@ title: CEQIP 2023 workshop
 
 
     Description: It is shown that in the general prepare and measure scenario for a qubit, all correlations can be simulated by 
-    shared randomness and two classical bits of communication. The protocol seems to be some modification of the protocol in [5].
-    Further, an explicit quantum protocol is presented to show that communication of a classical trit is not enough. Similar results are obtained for the Bell scenario.
+    shared randomness and two classical bits of communication. The protocol seems to be some modification of the protocol by Toner and Bacon in [5], who prove the same thing when restricted to projective measurements. Further, an explicit quantum protocol is presented to show that communication of a classical trit is not enough. Similar results are obtained for the Bell scenario.
 
-    This could be a nice poster, or a talk if there is a free slot.
+    This is a rather interesting submission, but there are stronger ones. I think a poster should be enough.
 
 
 
@@ -148,9 +148,10 @@ title: CEQIP 2023 workshop
     - marginal reducibility 
 
     Description: For LOCC transformation of bipartite states, the notions of marginal reducibility and correlated catalysis is introduced. What is different to the usual notions is that here some correlations are allowed to be established through the process 
-    and the catalyst and the target state are obtained (resp. approximated) as marginals. For distillable states, it is proved  these two concepts are equivalent and that catalysis cannot increase distillable entanglement. 
+    and the catalyst and the target state are obtained (resp. approximated) as marginals. With this extension, it is proved that 
+    reducibility and catalysis are equivalent for distillable states and that catalysis cannot increase distillable entanglement. 
 
-    It is not very clear from the formulations of the main results in the  abstract that here the notions with correlations are meant. Nevertheless, the result might be important and interesting enough to be presented as a talk.
+    It is not very clear from the formulations of the main results in the  abstract that here the notions with correlations are meant. Nevertheless, the result is important and interesting enough to be presented as a talk. 
 
 
     Evaluation: 2 (1) talk?poster?
