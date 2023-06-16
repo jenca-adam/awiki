@@ -10,7 +10,12 @@ title: Beras, Quantum Bayes rule, 2023
 
 [file](REF_bera2023/file.pdf)
 
+[report](REF_bera2023/report.pdf)
 
-**Decision:** 
+**Decision:**  reject
+
+**Revision Due:** 20.6.2023
+
+Totally uninteresting, but lets do it. More reports in the  email.
 
 

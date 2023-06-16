@@ -15,6 +15,10 @@ title: Lami, Goldwater, Adesso
 
 [report](REF_lami2023/report.pdf)
 
+**Revision due:** 28.6.2023
+
+[revision](REF_lami2023/revision.pdf)
+
 
 
 
