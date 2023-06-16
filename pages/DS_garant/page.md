@@ -1,4 +1,4 @@
-title: Doktorandské štúdium
+title: "Doktorandsk\xE9 \u0161t\xFAdium"
 ---
 
 
@@ -27,9 +27,9 @@ title: Doktorandské štúdium
 **Meno a priezvisko:** Mgr. Jean Rosemond Dora   
 **Začiatok štúdia:** 2017?  
 **Školiteľ:** Nemoga  
-**Téma:** Ontology for Cross-Site-Scripting (XSS) attack in Cybersecurity
-**Dizertačná skúška:**
-**Dátum a miesto obhajoby:** 25.8.2022, MÚ SAV Bratislava
+**Téma:** Ontology for Cross-Site-Scripting (XSS) attack in Cybersecurity    
+**Dizertačná skúška:**    
+**Dátum a miesto obhajoby:** 25.8.2022, MÚ SAV Bratislava    
 ---
 
 ### Finished 2020
