@@ -16,8 +16,8 @@ title: Mgr. Viktor Olejár
 * [žiadosť](DS_olejar/DS_dsziadost.pdf)   
 * **oponent:** doc. RNDr. Dana Pardubská, CSc., FMFI UK, [posudok](DS_olejar/posudok.pdf)
 * **komisia:** [návrh](DS_olejar/navrh_ds.pdf)  [aktualizované](DS_olejar/ds.pdf) 
-* **dátum:**    
-* **výsledok:**    
+* **dátum:**  22.5.2023, 10:00  
+* **výsledok:**   prospel 
 
 
 

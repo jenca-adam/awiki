@@ -38,7 +38,8 @@ title: My work
 * [students](students)     
 * [garant DS](DS_garant)   
 * [conferences](conferences)     
-* [vedecká rada](vr)
+* [vedecká rada](vr)    
+* [committees](cmmtt)
 
 ---
 
