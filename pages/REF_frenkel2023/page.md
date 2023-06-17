@@ -15,4 +15,4 @@ title: P. Frenkel, Integral formula, 2023
 
 **Revised due:** 21.6.2023
 
-[revision](REF_frenkel2023/revision.pdf
+[revision](REF_frenkel2023/revision.pdf)
