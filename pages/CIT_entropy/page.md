@@ -3,8 +3,6 @@ title: References for relative entropy and entropy and Lp spaces
 
 
 
-
-
 ### Relative entropy
 
 * [araki1976relative](araki1976relative) (Part 1)
