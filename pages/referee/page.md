@@ -2,7 +2,6 @@ title: To referee
 ---
 
 * Due [20.6.2023](REF_bera2023) (revision)
-* Due [21.6.2023](REF_frenkel2023) (revision)
 * Due [28.6.2023](REF_lami2023) (revision)
 * Due [1.7.2023](REF_mosonyi2023) (grant proposal)
 
@@ -20,7 +19,8 @@ title: To referee
 1. <del>Due [9.4.2023](REF_androulakis2023) </del> Done.     
 1. <del>Due [10.4.2023](REF_lami2023) </del> Done.     
 1. <del> Due [5.6.2023](REF_regula2023)</del> Done.     
-1. <del>Due [17.6.2023](REF_androulakis2023) (revision) </del> Done.  
+1. <del>Due [17.6.2023](REF_androulakis2023) (revision) </del> Done.    
+1. <del>Due [21.6.2023](REF_frenkel2023) (revision)</del> Done.    
 
 
 
