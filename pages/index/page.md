@@ -29,7 +29,10 @@ title: My work
 * [compatibility](CIT_compatibility)     
 * [recoverability (sufficiency)](CIT_suff)     
 * [comparison of statistical experiments](CIT_comparison)   
-* [spectrality](CIT_spectral)   
+* [spectrality](CIT_spectral)  
+* [divergences via integral representations](CIT_integral)    
+
+
 ---
 
 ## Duties 

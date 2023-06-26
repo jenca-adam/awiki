@@ -18,6 +18,11 @@ $(1-sx)\_-$ (- the negative parts) and constants. (Or something like this).
 
 
 
+## Obtained Quantum $f$-divergences
+
+
+* [hirche2023quantum](hirche2023quantum)  
+
 ---
 
 * [gao2023sufficient](gao2023sufficient) (approximate) recoverability via quantum Fisher information     

@@ -102,6 +102,7 @@ title: Not my own papers
 [goldstein2020notes](goldstein2020notes), [grasselli2000thequantum](grasselli2000thequantum)
 
 ### H
+[hirche2023quantum](hirche2023quantum),
 [heinosaari2016aninvitation](heinosaari2016aninvitation),
 [hiai2017different](hiai2017different),
 [hiai2011quantum](hiai2011quantum),
