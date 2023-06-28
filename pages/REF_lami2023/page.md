@@ -19,6 +19,10 @@ title: Lami, Goldwater, Adesso
 
 [revision](REF_lami2023/revision.pdf)
 
+[new report](REF_lami2023/revised_report.pdf)
+
+**Decision:** Accept
+
 
 
 
