@@ -24,6 +24,6 @@ infimum on pairs of binary classical states.
 
     
 
-[arxiv:2208.12194v2](https://arxiv.org/abs/2208.12194v2)
+[arxiv:2208.12194](https://arxiv.org/abs/2208.12194)
 [doi]()
 [View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=2208.12194)
