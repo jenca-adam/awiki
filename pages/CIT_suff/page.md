@@ -39,6 +39,13 @@ title: Citations for sufficiency
 * [faulkner2022approximate](faulkner2022approximate), [faulkner2022approximate2](faulkner2022approximate2)  von neumann algebras, relative entropy    
 * also [gao2021recoverability](gao2021recoverability)
 
+
+## Divergences
+
+* [hiai2018quantum](hiai2018quantum) standard $f$-divergences in vo Neumann algebras
+
+
+
 ## My papers
 
 * [jencova2006sufficiency](jencova2006sufficiency) (with examples), [jencova2006sufficiencyfirst](jencova2006sufficiencyfirst) my papers with Petz
@@ -65,7 +72,7 @@ title: Citations for sufficiency
 
 
 * [mullerhermes2017monotonicity](mullerhermes2017monotonicity)    
-
+* [grumm](CIT_suff/grumm.pdf) Grumm's theorem
 
 
 ## Relation to broadcasting?

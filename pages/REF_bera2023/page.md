@@ -16,6 +16,9 @@ title: Beras, Quantum Bayes rule, 2023
 
 **Revision Due:** 20.6.2023
 
+[revised file](REF_bera2023/revised_file.pdf)
+
+[referral letter](REF_bera2023/referral.html)
 Totally uninteresting, but lets do it. More reports in the  email.
 
 
