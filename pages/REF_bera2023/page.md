@@ -19,6 +19,11 @@ title: Beras, Quantum Bayes rule, 2023
 [revised file](REF_bera2023/revised_file.pdf)
 
 [referral letter](REF_bera2023/referral.html)
+
+[report](REF_bera2023/revised_report.pdf)
+
+**Decision:** Reject
+
 Totally uninteresting, but lets do it. More reports in the  email.
 
 
