@@ -1,7 +1,7 @@
 title: To referee
 ---
 
-* Due [20.6.2023](REF_bera2023) (revision)
+
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
 
@@ -20,7 +20,8 @@ title: To referee
 1. <del>Due [17.6.2023](REF_androulakis2023) (revision) </del> Done.    
 1. <del>Due [21.6.2023](REF_frenkel2023) (revision)</del> Done.    
 1. <del>Due [1.7.2023](REF_mosonyi2023) (grant proposal)</del> Done.    
-1. <del>Due [28.6.2023](REF_lami2023) (revision)</del> Done.    
+1. <del>Due [28.6.2023](REF_lami2023) (revision)</del> Done.       
+1. <del>Due [20.6.2023](REF_bera2023) (revision)<del/> Done.
 
 ### Reviews finished 2022
 
