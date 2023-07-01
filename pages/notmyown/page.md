@@ -66,7 +66,7 @@ title: Not my own papers
 ### F
 [faulkner2022approximate](faulkner2022approximate),
 [fawzi2015quantum](fawzi2015quantum),
-[frenkel2022integral](frenkel2022integral),
+[frenkel2023integral](frenkel2023integral),
 [foulis2015unitizations](foulis2015unitizations),
 [foulis2012dimension](foulis2012dimension),
 [faulkner2022approximate2](faulkner2022approximate2),
@@ -158,8 +158,9 @@ title: Not my own papers
 
 ### L
 
+[lieb1973proof](lieb1973proof), 
 [liese2006divergences](liese2006divergences), [liese2008fdivergences](liese2008fdivergences), 
-[lindblad1999ageneral](lindblad1999ageneral),
+[lindblad1975completely](lindblad1975completely), [lindblad1999ageneral](lindblad1999ageneral),
 [labuschagne2012acrossed](labuschagne2012acrossed),
 [labuschagne2009mapsonnoncommutative](labuschagne2009mapsonnoncommutative),
 
@@ -235,8 +236,8 @@ title: Not my own papers
 
 ### U
 [uola2020quantum](uola2020quantum),
-
-[umanita2006classification](umanita2006classification), [umegaki1962contidional](umegaki1962contidional)
+[uhlmann1977relative](uhlmann1977relative), 
+[umanita2006classification](umanita2006classification), [umegaki1962conditional](umegaki1962conditional)
 
 ### V
 [van2020commutativity](van2020commutativity),

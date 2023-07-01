@@ -7,6 +7,12 @@ title: Citations for sufficiency
 * [frenkel2023integral](frenkel2023integral) an integral formula for relative entropy    
 * [gao2023sufficient](gao2023sufficient) (approximate) recoverability via quantum Fisher information     
 
+## DPI
+
+* [lindblad1975completely](lindblad1975completely)    finite dim DPI
+* [uhlmann1977relative](uhlmann1977relative)   
+
+
 
 
 ## Sufficiency
