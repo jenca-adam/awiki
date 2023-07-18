@@ -2,7 +2,7 @@ title: Mgr. Friday Ikechukwu Agu
 ---
 
 * **začiatok štúdia:** 2022    
-* **školiteľ:** ?       
+* **školiteľ:**  J. Mačutek  
 * **téma:** ?        
 * **koniec štúdia:**    
 * **poznámky:**
@@ -32,7 +32,6 @@ title: Mgr. Friday Ikechukwu Agu
 
 
 ## Publikácie
-
 
 
 
