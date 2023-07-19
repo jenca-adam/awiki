@@ -17,7 +17,7 @@ title: Not my own papers
 [blumekohout2010informationpreserving](blumekohout2010informationpreserving),
 [batkai2012decomposition](batkai2012decomposition),
 [buscemi2014gametheoretic](buscemi2014gametheoretic),
-
+[bushell1973hilbert](bushell1973hilbert), 
 [bergh1976interpolation](BOOK_bergh1976interpolation)
 [busch2013comparing](busch2013comparing),
 [busch1986unsharp](busch1986unsharp),
@@ -31,6 +31,7 @@ title: Not my own papers
 [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
+[christandl2017relative](christandl2017relative),
 [carlen2018recovery](carlen2018recovery),
 [carlen2020recovery](carlen2020recovery),
 [carmeli2022quantum](carmeli2022quantum),
@@ -64,6 +65,7 @@ title: Not my own papers
 [ekeland1999convex](BOOK_ekeland1999convex),
 
 ### F
+[fuchs1999cryptographic](fuchs1999cryptographic),
 [faulkner2022approximate](faulkner2022approximate),
 [fawzi2015quantum](fawzi2015quantum),
 [frenkel2023integral](frenkel2023integral),
@@ -99,7 +101,8 @@ title: Not my own papers
 [gour2020dynamical](gour2020dynamical), [gu2019interpolation](gu2019interpolation), 
 [guerini2017operational](guerini2017operational),   [gudder2018convex](gudder2018convex),
 [gudder2006compression](gudder2006compression),
-[goldstein2020notes](goldstein2020notes), [grasselli2000thequantum](grasselli2000thequantum)
+[goldstein2020notes](goldstein2020notes), [grasselli2000thequantum](grasselli2000thequantum),
+[grumm1973two](grumm1973two)
 
 ### H
 [hirche2023quantum](hirche2023quantum),
@@ -204,6 +207,9 @@ title: Not my own papers
 ### Q
 
 ### R
+[ruskai2002inequalities](ruskai2002inequalities),
+[regula2021probabilistic](regula2021probabilistic),
+[regula2022postselected](regula2022postselected),
 [regev2015quantum](regev2015quantum),
 [reeb2011hilberts](reeb2011hilberts),
 
@@ -228,6 +234,7 @@ title: Not my own papers
 [skrzypczyk2019robustness](skrzypczyk2019robustness),
 
 ### T
+[ticozzi2010quantum](ticozzi2010quantum),
 [takakura2022convexity](takakura2022convexity),
 
 [takagi2019general](takagi2019general), [terp1981lpspaces](terp1981lpspaces), [tomamichel2016quantum](tomamichel2016quantum), 

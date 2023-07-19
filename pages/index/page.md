@@ -13,6 +13,10 @@ title: My work
 
 ## Bibliographies
 
+
+* [current work](CIT_work)
+
+
 ### General
 
 * [notmyown](notmyown)
@@ -30,7 +34,6 @@ title: My work
 * [recoverability (sufficiency)](CIT_suff)     
 * [comparison of statistical experiments](CIT_comparison)   
 * [spectrality](CIT_spectral)  
-* [divergences via integral representations](CIT_integral)    
 
 
 ---

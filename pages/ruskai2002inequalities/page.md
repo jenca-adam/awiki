@@ -23,4 +23,5 @@ elegant proof of the relevant concavity theorem of Lieb.
 
 [arxiv:quant-ph/0205064v2](https://arxiv.org/abs/quant-ph/0205064v2)
 
-[doi]()
+[doi](https://doi.org/10.1063/1.1497701)
+

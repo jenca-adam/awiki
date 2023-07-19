@@ -7,11 +7,13 @@ title: Citations for sufficiency
 * [frenkel2023integral](frenkel2023integral) an integral formula for relative entropy    
 * [gao2023sufficient](gao2023sufficient) (approximate) recoverability via quantum Fisher information     
 
-## DPI
+## relative entropy properties
 
-* [lindblad1975completely](lindblad1975completely)    finite dim DPI
-* [uhlmann1977relative](uhlmann1977relative)   
-
+* [lindblad1975completely](lindblad1975completely)    (finite dim) DPI
+* [uhlmann1977relative](uhlmann1977relative)   DPI by interpolation    
+* [lieb1973proof](lieb1973proof) SSA   
+* [holevo1973bounds](holevo1973bounds) Holevo bound    
+* [ruskai2002inequalities](ruskai2002inequalities) MBR    
 
 
 
@@ -24,7 +26,9 @@ title: Citations for sufficiency
 * [luczak2014quantum](luczak2014quantum), [luczak2015onageneral](luczak2015onageneral)   Luczak     
 * [leditzky2017data](leditzky2017data) a condition for sandwiched     
 * [shirokov2013reversibility](shirokov2013reversibility), [shirokov2013reversibilityjmp](shirokov2013reversibilityjmp) Shirokov's papers, applications     
-* [blumekohout2010informationpreserving](blumekohout2010informationpreserving) channels preserving the $L_1$-distance 
+* [blumekohout2010informationpreserving](blumekohout2010informationpreserving) channels preserving the $L_1$-distance    
+* [ticozzi2010quantum](ticozzi2010quantum) similar to above    
+* [leditzky2017data](leditzky2017data) equality condtitions for sandwiched Rényi entropy
 
 ## Classical
 
@@ -54,19 +58,26 @@ title: Citations for sufficiency
 
 ## My papers
 
-* [jencova2006sufficiency](jencova2006sufficiency) (with examples), [jencova2006sufficiencyfirst](jencova2006sufficiencyfirst) my papers with Petz
+* [jencova2006sufficiency](jencova2006sufficiency) (with examples), [jencova2006sufficiencyfirst](jencova2006sufficiencyfirst) my papers with Petz    
+* [jencova2010aunified](jencova2010aunified) my paper wth MBR
 * [jencova2010quantum](jencova2010quantum)     
 * [jencova2012reversibility](jencova2012reversibility)    
 * [jencova2012comparisonof](jencova2012comparisonof)     
 * [jencova2017preservation](jencova2017preservation), [jencova2018renyi](jencova2018renyi), [jencova2021renyi](jencova2021renyi)
 * [jencova2023recoverability](jencova2023recoverability)  my new paper on recoverability and hypothesis testing
 
-## Related
+## Related stuff
 
-* [mullerhermes2017monotonicity](mullerhermes2017monotonicity) Monotonicity of the relative entropy with respect to positive maps    
 * [takesaki2003theory](BOOK_takesaki123theory)     
-* [paulsen2002completely](BOOK_paulsen2002completely)
-  
+* [paulsen2002completely](BOOK_paulsen2002completely)    
+* [fuchs1999cryptographic](fuchs1999cryptographic)    
+* [reeb2011hilberts](reeb2011hilberts) Hilbert's projective metric    
+* [regula2022postselected](regula2022postselected)   Hilbert's metric in postselected hypothesis testing    
+* [regula2022probabilistic](regula2022probabilistic) Hilbert's metric, probabilistic transfotrmations of quantum resources   
+* [bushell1973hilberts](bushell1973hilberts) Hilbert's projective metric    
+
+
+
 
 ## Ergodic theorems
 
@@ -78,7 +89,7 @@ title: Citations for sufficiency
 
 
 * [mullerhermes2017monotonicity](mullerhermes2017monotonicity)    
-* [grumm](CIT_suff/grumm.pdf) Grumm's theorem
+* [grumm1973two](grumm1973two) Grumm's theorem
 
 
 ## Relation to broadcasting?
@@ -94,4 +105,4 @@ title: Citations for sufficiency
 * [kribs2019quantum](kribs2019quantum)  as above, similar     
 * [carmeli2018state](carmeli2018state), [carmeli2019quantum](carmeli2019quantum) incompatibility witnesses, post-measurement     
 * [shirokov2015onsuperactivation](shirokov2015onsuperactivation) complementary channels     
-* [reeb2011hilberts](reeb2011hilberts) Hilbert's projective metric
+

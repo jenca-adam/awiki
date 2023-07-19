@@ -5,6 +5,10 @@ title: All books
 
 * [alfsen2003geometry](BOOK_alfsen2003geometry)
 
+### B
+
+* [bergh1976interpolation](BOOK_bergh1976interpolation)
+
 
 ### H
 

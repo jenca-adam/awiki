@@ -1,30 +1,48 @@
-title: Citations for integral formula and divergence
+title: What I am currently working on
 ---
 
 
-## Frenkel's formula
+## Integral formulas and divergences
+
+### Frenkel's formula
 
 * [frenkel2023integral](frenkel2023integral) an integral formula for relative entropy 
 
 
-
-## Classical form
+### Classical form
 
 * [liese2006divergences](liese2006divergences)    integral representation of convex functions, divergences
 * [liese2008fdivergences](liese2008fdivergences)   applications to sufficiency??
 
 
-## Obtained Quantum $f$-divergences
+### Obtained Quantum $f$-divergences
 
 
 * [hirche2023quantum](hirche2023quantum)  
 
 
-## My paper
+### My paper
 
 * [jencova2023recoverability](jencova2023recoverability)
 
 ---
+
+## Chain rules for relative entropies
+
+* [christandl2017relative](christandl2017relative) a chain rule with positive maps via interpolation     
+* [bergh1976interpolation](BOOK_bergh1976interpolation) book on interpolation theory    
+
+* [jencova2018renyi](jencova2018renyi), [jencova2021renyi](jencova2021renyi) my papers on sandwiched RE
+
+
+---
+
+## von Neumann algebra extensions
+
+
+---
+
+---<F3>
 
 * [gao2023sufficient](gao2023sufficient) (approximate) recoverability via quantum Fisher information     
 
