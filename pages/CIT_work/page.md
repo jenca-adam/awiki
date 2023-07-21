@@ -29,8 +29,10 @@ title: What I am currently working on
 
 ## Chain rules for relative entropies
 
-* [christandl2017relative](christandl2017relative) a chain rule with positive maps via interpolation     
+* [christandl2017relative](christandl2017relative) a chain rule for sandwiched $\alpha>1$, with positive maps,  via interpolation     
 * [bergh1976interpolation](BOOK_bergh1976interpolation) book on interpolation theory    
+* [berta2022chainrules](berta2022chainrules) a chain rule for sandwiched $\alpha>1$, using Matsumoto's max divergence   
+
 
 * [jencova2018renyi](jencova2018renyi), [jencova2021renyi](jencova2021renyi) my papers on sandwiched RE
 
