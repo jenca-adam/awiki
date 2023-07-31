@@ -66,6 +66,7 @@ title: Not my own papers
 [ekeland1999convex](BOOK_ekeland1999convex),
 
 ### F
+[fawzi2022asymptotic](fawzi2022asymptotic),
 [fuchs1999cryptographic](fuchs1999cryptographic),
 [faulkner2022approximate](faulkner2022approximate),
 [fawzi2015quantum](fawzi2015quantum),

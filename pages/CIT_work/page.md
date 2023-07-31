@@ -29,20 +29,36 @@ title: What I am currently working on
 
 ## Chain rules for relative entropies
 
-* [christandl2017relative](christandl2017relative) a chain rule for sandwiched $\alpha>1$, with positive maps,  via interpolation     
-* [bergh1976interpolation](BOOK_bergh1976interpolation) book on interpolation theory    
+
+### Chain rules
+
+* [christandl2017relative](christandl2017relative) a chain rule for sandwiched $\alpha>1$, with positive maps,  via interpolation    
 * [berta2022chainrules](berta2022chainrules) a chain rule for sandwiched $\alpha>1$, using Matsumoto's max divergence   
 
 
-* [jencova2018renyi](jencova2018renyi), [jencova2021renyi](jencova2021renyi) my papers on sandwiched RE
+### Others
+
+* [bergh1976interpolation](BOOK_bergh1976interpolation) book on interpolation theory    
+* [jencova2018renyi](jencova2018renyi), [jencova2021renyi](jencova2021renyi) my papers on sandwiched RE    
 
 
 ---
 
 ## von Neumann algebra extensions
 
+* [fawzi2022asymptotic](fawzi2022asymptotic)  asymptotic equipartition property, paper with basic techniques for extension!
+
+
+
 
 ---
+
+## Considerations
+
+[Quantum cloning regions](file:///Users/anna/Downloads/s11005-023-01694-8.pdf) 
+
+
+
 
 ---<F3>
 
