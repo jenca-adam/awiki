@@ -18,4 +18,4 @@ preservation of $L_1$-distance.
 
     
 
-[arxiv:2303.11707v1](https://arxiv.org/abs/2303.11707v1)
+[arxiv:2303.11707v1](https://arxiv.org/abs/2303.11707)
