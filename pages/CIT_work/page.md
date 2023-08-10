@@ -61,7 +61,7 @@ AEP
 
 ### strong converses
 
-* [mosnyi2015quantum](mosnyi2015quantum) strong converse for state discrimination, finite dim    
+* [mosonyi2015quantum](mosonyi2015quantum) strong converse for state discrimination, finite dim    
 * [mosonyi2017strong](mosonyi2017strong) strong converse for channel coding, finite dim   
 
 
