@@ -55,6 +55,7 @@ title: Not my own papers
 
 
 ### D
+[datta2016secondorder](datta2016secondorder),
 [designolle2019incompatibility](designolle2019incompatibility),
 [dahl1999matrix](dahl1999matrix), [dallarno2017device](dallarno2017device),[dallarno2019device](dallarno2019device), [dallarno2019data](dallarno2019data),
 [dallarno2019data1](dallarno2019data1), [dallarno2019extension](dallarno2019extension), [BOOK_diestel1975geometry](BOOK_diestel1975geometry),
@@ -66,6 +67,7 @@ title: Not my own papers
 [ekeland1999convex](BOOK_ekeland1999convex),
 
 ### F
+[fawzi2021defining](fawzi2021defining),
 [fawzi2022asymptotic](fawzi2022asymptotic),
 [fuchs1999cryptographic](fuchs1999cryptographic),
 [faulkner2022approximate](faulkner2022approximate),
@@ -162,6 +164,7 @@ title: Not my own papers
 [kuramochi2017minimal](kuramochi2017minimal), [kuramochi2020directed](kuramochi2020directed), [kummerer1979mean](kummerer1979mean), [kimura2010distinguishability](kimura2010distinguishability), [kosaki1984applications](kosaki1984applications), [kosaki1984applicationsuc](kosaki1984applicationsuc), [kosaki1986relative](kosaki1986relative), [kubicki2019resource](kubicki2019resource), 
 
 ### L
+[li2014second](li2014second),
 
 [lieb1973proof](lieb1973proof), 
 [liese2006divergences](liese2006divergences), [liese2008fdivergences](liese2008fdivergences), 
@@ -173,6 +176,7 @@ title: Not my own papers
 
 
 ### M
+[mosonyi2015quantum](mosonyi2015quantum),
 [mullerhermes2017monotonicity](mullerhermes2017monotonicity),
 [mosonyi2004structure](mosonyi2004structure),
 [masanes2011aderivation](masanes2011aderivation),
@@ -194,6 +198,7 @@ title: Not my own papers
 
 
 ### P
+[pautrat2020kelislemma](pautrat2020kelislemma),
 [plavala2022contextuality](plavala2022contextuality),
 [pistone2013nonparametric](pistone2013nonparametric), [pistone1999theexponential](pistone1999theexponential), [pistone2007exponential](pistone2007exponential),
 
@@ -236,6 +241,8 @@ title: Not my own papers
 [skrzypczyk2019robustness](skrzypczyk2019robustness),
 
 ### T
+[tomamichel2013ahierarchy](tomamichel2013ahierarchy),
+[tomamichel2009afully](tomamichel2009afully),
 [ticozzi2010quantum](ticozzi2010quantum),
 [takakura2022convexity](takakura2022convexity),
 

@@ -1,10 +1,10 @@
-title: mosonyi2014strongconverse
+title: mosonyi and ogawa, strong converse, 2017
 ---
 
 
 ## Reference
 
-Milan Mosonyi, Tomohiro Ogawa;Strong converse exponent for classical-quantum channel coding;Communications in Mathematical Physics; Sep 2014;
+Milan Mosonyi, Tomohiro Ogawa; Strong converse exponent for classical-quantum channel coding; Communications in Mathematical Physics 355 (2017): 373-426
 
 ## Abstract 
   We determine the exact strong converse exponent of classical-quantum channel
@@ -22,4 +22,5 @@ strong converse problems.
 
     
 
-[arxiv:1409.3562](https://arxiv.org/abs/1409.3562)
+[arxiv:1409.3562](https://arxiv.org/abs/1409.3562)    
+[doi](https://doi.org/10.1007/s00220-017-2928-4)    

@@ -33,6 +33,7 @@ title: What I am currently working on
 ### Chain rules
 
 * [christandl2017relative](christandl2017relative) a chain rule for sandwiched $\alpha>1$, with positive maps,  via interpolation    
+* [fawzi2021defining](fawzi2021defining) a chain rule for sandwiched $\alpha>1$ using convex optimization    
 * [berta2022chainrules](berta2022chainrules) a chain rule for sandwiched $\alpha>1$, using Matsumoto's max divergence   
 
 
@@ -46,8 +47,29 @@ title: What I am currently working on
 
 ## von Neumann algebra extensions
 
-* [fawzi2022asymptotic](fawzi2022asymptotic)  asymptotic equipartition property, paper with basic techniques for extension!
+AEP
 
+### finite dimensional AEP
+
+* [tomamichel2009afully](tomamichel2009afully), [tomamichel2016quantum](tomamichel2016quantum)  QAEP for $D\_max$   
+* Second order Stein's lemma:  [li2014second](li2014second) iid,  [datta2016secondorder](datta2016secondorder)   beyond iid
+
+### general AEP
+
+* [pautrat2020kelislemma](pautrat2020kelislemma) hypothesis testing QAEP      
+* [fawzi2022asymptotic](fawzi2022asymptotic)  $D_\max$ QAEP (paper with basic techniques for extension!)   
+
+### strong converses
+
+* [mosnyi2015quantum](mosnyi2015quantum) strong converse for state discrimination, finite dim    
+* [mosonyi2017strong](mosonyi2017strong) strong converse for channel coding, finite dim   
+
+
+
+### Methods
+
+* [tomamichel2013ahierarchy](tomamichel2013ahierarchy) spectrum truncation method    
+* [haagerup2010areduction](haagerup2010areduction) Haagerup reduction method   
 
 
 

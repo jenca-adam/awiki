@@ -21,4 +21,6 @@ noncommutative martingale/ergodic inequalities to those in the tracial case.
 
 [arxiv:0806.3635](https://arxiv.org/abs/0806.3635)
 [View at www.ams.org](https://www.ams.org/tran/2010-362-04/S0002-9947-09-04935-6/)
-[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=0806.3635) 
+[View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=0806.3635)    
+
+[doi](https://doi.org/10.1090/S0002-9947-09-04935-6)
