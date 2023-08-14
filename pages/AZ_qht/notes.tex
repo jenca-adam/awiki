@@ -1,0 +1,302 @@
+\documentclass[12pt]{article}
+
+
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage{doi}
+\usepackage[margin=0.8in]{geometry}
+%\textheight23cm \topmargin-20mm  
+%\textwidth175mm  
+%\oddsidemargin=0mm
+%\evensidemargin=0mm
+%
+
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{coro}{Corollary}
+
+
+\theoremstyle{definition}
+\newtheorem{defi}{Definition}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\def\Ha{\mathcal H}
+\def\Me{\mathcal M}
+\def\Ne{\mathcal N}
+\def\Te{\mathcal T}
+\def\Ka{\mathcal K}
+\def \Tr{\mathrm{Tr}\,}
+\def\Se {\mathcal S}
+\def\supp{\mathrm{supp}}
+\def\<{\langle\,}
+\def\>{\,\rangle}
+
+\title{Some notes}
+\author{Anna Jen\v cov\'a\footnote{Mathematical Institute, Slovak Academy of Sciences, \v
+Stef\'anikova 49, 814 73 Bratislava, Slovakia, jenca@mat.savba.sk}}
+\date{}
+\begin{document}
+
+\maketitle
+
+\section{QHT}
+
+
+Let $\Me$ be a von Neumann algebra and let $\rho,\sigma$ be a pair of normal states. 
+We consider the problem of testing the
+hypothesis $H_0=\rho$ againts alternative $H_1=\sigma$. Any test is represented by an
+operator $M\in \Me$, $0\le M\le I$, such that the value $\omega(M)$ is interpreted as the
+probability of accepting the hypothesis $H_0$ in the state $\omega$.
+
+The two error probabilities related to a test $M$ are given as
+\[
+\alpha(M)=\rho(1-M),\qquad \beta(M)=\sigma(M).
+\]
+In the Bayes approach, we choose a prior probability $\pi\in (0,1)$ and minimize the
+average error probability over all tests, obtaining the optimal value
+\begin{align*}
+b_\pi(\rho\|\sigma)&:=\inf_{M} \pi\alpha(M)+(1-\pi)\beta(M)\\
+&=\inf_M\pi\rho(1-M)+(1-\pi)\sigma(M)\\
+&= \pi -\sup_M (\pi\rho-(1-\pi)\sigma)(M)=\pi(1-(\rho-s\sigma)_+(1))\\
+&= \frac12(1-\pi\|\rho-s\sigma\|_1),\qquad
+s=\frac{1-\pi}{\pi}.
+\end{align*}
+The optimal test for $\pi\in (0,1)$ is the quantum Neyman-Pearson test $M_\pi$, which is of the form
+\[
+M_\pi=\{\rho>s\sigma\}+ X,\qquad 0\le X\le \{\rho=s\sigma\},\qquad s=\frac{1-\pi}{\pi},
+\]
+here for $\varphi,\psi\in \Me^+_*$ we define $\{\varphi>\psi\}$ as the projection ionto
+the support of $(\varphi-\psi)_+$, similarly $\{\varphi<\psi\}$ is the projectio onto the
+support of $(\psi-\varphi)_+=(\varphi-\psi)_-$. We then have
+$\{\varphi\le\psi\}=1-\{\varphi>\psi\}$, $\{\varphi\ge \psi\}=1-\{\varphi<\psi\}$ and 
+$\{\varphi=\psi\}=1-\{\varphi<\psi\}-\{\varphi>\psi\}$.
+
+
+It is clear from
+these expressions that the function $\pi\mapsto b_\pi(\rho\|\sigma)$ is continuous.  
+Furthermore, let us look at the error probabilities for the QNP test $\{\rho>s\sigma\}$. 
+Put $\alpha(s):=\rho(\{\rho\le s\sigma\})$ and $\beta(s):=\sigma(\{\rho>s\sigma\})$. Then 
+By the QNP lemma, we have for any $s,s'\in (0,\infty)$ that 
+\begin{equation}\label{eq:qnp}
+\alpha(s)+s\beta(s)\le \alpha(s')+s\beta(s')
+\end{equation}
+hence 
+\[
+s(\beta(s)-\beta(s'))\le \alpha(s')-\alpha(s)\le s'(\beta(s)-\beta(s')),
+\]
+the second inequality is obtained by exchanging $s$ and $s'$ in \eqref{eq:qnp}. It follows
+that if $s'>s$, then $\beta(s)\ge \beta(s')$ and therefore also $\alpha(s)\le \alpha(s')$. 
+
+
+
+In the asymmetric QHT approach, we fix the maximum acceptable value $\epsilon$ of the error
+$\alpha(M)\le \epsilon$ and minimize the error $\beta(M)$:
+\[
+d_H^\epsilon(\rho\|\sigma):=\inf\{\sigma(M),\ 0\le M\le I,\ \rho(1-M)\le
+\epsilon\}.
+\]
+The following result is proved similarly as in the classical case (cf. \cite{liese...}).
+
+\begin{lemma}\label{lemma:btodh} We have
+\[
+b_\pi(\rho\|\sigma)=\inf_{0<\epsilon<1}[
+\pi\epsilon+(1-\pi)d_H^\epsilon(\rho\|\sigma)],\qquad \pi\in (0,1)
+\]
+
+
+\end{lemma}
+
+\begin{proof}
+Let $\pi,\epsilon \in (0,1)$ and let $M$ be any test such that $\rho(1-M)\le
+\epsilon$, then we have
+\[
+b_\pi(\rho\|\sigma)\le \pi\rho(1-M)+(1-\pi)\sigma(M)\le
+\pi\epsilon+(1-\pi)\sigma(M).
+\]
+Taking infimum over all such tests, we obtain
+\begin{equation}\label{eq:bled}
+b_\pi(\rho\|\sigma)\le \pi\epsilon +(1-\pi)d_H^\epsilon(\rho\|\sigma),\qquad \forall
+\epsilon,\pi\in (0,1).
+\end{equation}
+For a fixed $\pi\in (0,1)$ and a Neyman-Pearson test $M_\pi$, let
+$\epsilon_\pi=\rho(1-M_\pi)$, then
+\[
+b_\pi(\rho\|\sigma)=\pi\epsilon_\pi+(1-\pi)\sigma(M_\pi)\ge
+\pi\epsilon_\pi+(1-\pi)d_H^{\epsilon_\pi}(\rho\|\sigma),
+\]
+this proves equality. 
+
+\end{proof}
+
+\subsection{In finite dimensions...}
+
+
+\begin{lemma}\label{lemma:NPepsilon} Let $s(\rho)\le s(\sigma)$. Then for any $\epsilon\in
+(0,1)$ there is some $\pi_\epsilon\in (0,1)$ and a Neyman-Pearson test
+$M_\epsilon=M_{\pi_\epsilon}$ such that $\rho(1- M_\epsilon)=\epsilon$.
+
+\end{lemma}
+
+\begin{proof} Let 
+\[
+s_\epsilon:=\sup\{s\ge0, \Tr[\rho P_{s,-}]< \epsilon\}.
+\]
+Under the assumption, there is some
+$\lambda>0$ such that $\rho\le \lambda \sigma$, and  then $P_{s,-}=I$ for all $s\ge
+\lambda$. It follows that we must have $c_\epsilon<\lambda$, in particular, $c_\epsilon$
+is finite. Further, by  \cite[Lemma ]{jencova2012reversibility}, we have for $s\in [0,\infty)$:
+\[
+\lim_{t\to s^-} P_{t,-}=P_{s,-},\qquad \lim_{t\to s+}P_{t,-}=P_{s,-}+P_{s,0}
+\]
+and $P_{s,0}\ne 0$ for a finite number of values of $s$. If follows that
+\[
+\Tr[\rho
+P_{c_\epsilon,-}]=\lim_{t\to c_{\epsilon-}}\Tr[\rho P_{t,-}]\le \epsilon \le \lim_{t\to c_\epsilon+}\Tr[\rho
+P_{t,-}]=\Tr[\rho(P_{c_\epsilon,-}+P_{c_\epsilon,0})]
+\]
+and 
+\[
+M_\epsilon=P_{c_\epsilon,-}+\frac{\epsilon- \Tr[\rho P_{c_\epsilon,-}]}{\Tr[\rho
+P_{c_\epsilon,0}]}P_{c_\epsilon,0}
+\]
+is a Neyman-Pearson test for $\pi_\epsilon:=(c_\epsilon+1)^{-1}$ such that $\Tr[\rho
+M_\epsilon]=\epsilon$.
+
+
+
+\end{proof}
+
+
+\begin{lemma}\label{lemma:btodh_fd} 
+If $s(\rho)\le s(\sigma)$ then also
+\[
+d_H^\epsilon(\rho\|\sigma)=\sup_{0<\pi<1}\frac{1}{1-\pi}
+[b_\pi(\rho\|\sigma)-\pi\epsilon],\qquad \epsilon\in (0,1).
+\]
+
+
+\end{lemma}
+
+\begin{proof}
+We see that \eqref{eq:bled}
+implies 
+\[
+d_H^\epsilon(\rho\|\sigma)\ge \frac{1}{1-\pi}[b_\pi(\rho\|\sigma)-\pi\epsilon]
+\]
+for all $\epsilon$ and $\pi$. If $s(\rho)\le s(\sigma)$, then the second equality follows
+by Lemma \ref{lemma:btodh}.
+
+
+\end{proof}
+
+
+\section{Measured R\'enyi relative entropy}
+
+Let $\Me$ be a von Neumann algebra. A measurement on $\Me$ (with values in a finite set
+$\Omega$) is defined as a positive linear map $M:L_\infty(\Omega)\to \Me$ such that
+$M(1)=1$. Equivalently, a measurement is given by a set of positive operators
+$\{a_\omega\}_{\omega\in \Omega}$ such that $\sum_\omega a_\omega=1$. More generally, a
+measurement can be defined as a unital positive map from a commutative von Neumann algebra
+to $\Me$. 
+
+Let $\rho,\sigma$ be normal states on $\Me$. The measured R\'enyi relative entropy is defined as
+\begin{align*}
+D_\alpha^M(\rho\|\sigma)=\sup\{D_\alpha(\rho\circ M\|\sigma\circ M),\ M \text{ is a
+measurement}\}.
+\end{align*}
+By \cite[Thm. 5.2]{hiai2021quantum}, we may restrict to finite valued measurements. 
+
+It is easily seen that $D_\alpha^M$ is monotone under positive unital normal maps. Indeed, let
+$\Phi:\Ne\to \Me$ be such a map and let $M:L_\infty(\Omega)\to \Ne$ be a measurement on
+$\Ne$, then $\Phi\circ M$ is a measurement on $\Me$ and we have
+\begin{align*}
+D^M_\alpha(\rho\circ\Phi\|\sigma\circ\Phi)&=\sup\{D_\alpha(\rho\circ \Phi\circ
+M\|\sigma\circ\Phi\circ M),\ M \text{ is a measurement on } \Ne\}\\
+&\le
+\sup\{D_\alpha(\rho\circ M\|\sigma\circ M),\ M \text{ is a measurement on
+}\Me\}\\
+&=D^M_\alpha(\rho\|\sigma).
+\end{align*}
+
+Further, by monotonicity of the sandwiched R\'enyi relative entropy $\tilde D_\alpha$ for
+$\alpha\in [1/2,1)\cup(1,\infty]$, and by
+additivity with respect to tensor products, we have
+\[
+\frac 1n D_\alpha^M(\rho^{\otimes n}\|\sigma^{\otimes n})\le \frac 1n \tilde
+D_\alpha(\rho^{\otimes n}\|\sigma^{\otimes n})= \tilde D_\alpha(\rho\|\sigma).
+\]
+We are interested in the  equality 
+\begin{equation}\label{eq:regmeasured}
+\lim_n\frac1nD^M_\alpha(\rho^{\otimes n}\|\sigma^{\otimes n})=\tilde D_\alpha(\rho\|\sigma),\qquad \alpha>1.
+\end{equation}
+This equality was proved in \cite{mosonyi..} in the finite dimensional case,  in 
+\cite{Hiai...} in the approximately finite (injective) case and in \cite{fawzi} it was
+extended to semifinite von Neumann algebras. We will use the Haagerup reduction to show
+that this equality holds for all von Neumann algebras.
+
+\subsection{Haagerup reduction}
+
+We just give an outline: 
+\begin{itemize}
+\item There exists a von Neumann algebra $\hat \Me$ (a crossed product) such that we may
+identify $\Me$ as a subalgebra in $\hat \Me$ and there is a canonical normal conditional
+expectation $E_\Me$ of $\hat \Me$ onto $\Me$,
+\item There is an increasing family of subalgebras $\Me_n\subseteq \hat \Me$ such that
+\begin{itemize}
+\item Each $\Me_n$ is finite (equipped with a faithful normal tracial state $\tau_n$),
+\item $\bigcup_{n\ge 1} \Me_n$ is weak*-dense in $\hat\Me$
+\item For each $n$, there exists a faithful normal conditional expectation $E_n$ of $\hat
+\Me$ onto $\Me_n$ and for all $x\in \hat\Me$, $E_n(x)\to x$ in the $\sigma$-strong
+topology.
+
+\end{itemize}
+\item Any normal state $\rho$ on $\Me$ extends to a normal state on $\hat \Me$ as
+$\hat\rho:=\rho\circ E_\Me$. Put $\rho_n:=\hat\rho|_{\Me_n}$, then $\rho_n$ is a normal
+state on $\Me_n$. Using the conditional expectation $E_n$, $\rho_n$ extends to a state
+$\hat \rho_n=\rho_n\circ E_n=\hat\rho\circ E_n$. We have $\|\hat\rho_n-\hat\rho\|_1\to 0$.
+
+
+\end{itemize}
+
+We will use this result to prove \eqref{eq:regmeasured} for any von Neumann algebra $\Me$. 
+First, note that since $\rho=\hat\rho|_\Me$ and $\hat\rho=\rho\circ E_\Me$, we have by DPI
+that 
+\[
+\tilde D_\alpha(\rho\|\sigma)=\tilde D_\alpha(\hat\rho\|\hat\sigma),\qquad
+D^M_\alpha(\rho^{\otimes n}\|\sigma^{\otimes n})=D^M_\alpha(\hat\rho^{\otimes
+n}\|\hat\sigma^{\otimes n}).
+\]
+Hence it is enough to work with $\hat\rho$ and $\hat\sigma$. Notice that by th DPI for
+$D^M_\alpha$, we have for any $m$ and $\alpha>1$ 
+\[
+\lim_n \frac 1n D^M_\alpha(\hat \rho^{\otimes n}\|\sigma^{\otimes n})\ge
+\lim_n\frac1nD_\alpha^M(\hat\rho_m^{\otimes n}\|\hat\sigma_m^{\otimes n})=\tilde
+D_\alpha(\hat\rho_m\|\hat\sigma_m),
+\]
+since $\Me_m$ is finite. We therefore have 
+\[
+\lim_n \frac 1n D^M_\alpha(\hat \rho^{\otimes n}\|\hat \sigma^{\otimes n})\ge \lim_m \tilde
+D_\alpha (\hat\rho_m\|\hat\sigma_m)=\tilde
+D_\alpha (\hat\rho\|\hat\sigma).
+\]
+The last equality holds by DPI and lower semicontinuity of $\tilde D_\alpha$. Since the
+opposite inequality always holds, this proves \eqref{eq:regmeasured}.
+
+\subsection{Strong converse exponents} 
+
+
+
+
+
+
+
+
+
+\end{document}
+

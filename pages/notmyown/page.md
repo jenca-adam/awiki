@@ -119,6 +119,7 @@ title: Not my own papers
 [haagerup2010areduction](haagerup2010areduction),
 
 [BOOK_hanche1984jordan](BOOK_hanche1984jordan),
+[BOOK_hayashi2017quantum](BOOK_hayashi2017quantum),  
 [hiai2021lectures](BOOK_hiai2021lectures),
 
 [harremoes2017quantum](harremoes2017quantum),
@@ -193,6 +194,7 @@ title: Not my own papers
 [nguyen2018quantum](nguyen2018quantum), [nagaoka1995differential](nagaoka1995differential), 
 
 ### O
+[ogawa2000strong](ogawa2000strong),
 
 [ohya1993quantum](ohya1993quantum)
 

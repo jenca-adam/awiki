@@ -3,6 +3,15 @@ title: My work
 
 ## Projects
 
+
+### New
+
+* [Quantum hypothesis testing](AZ_qht) in von Neumann algebras
+
+
+
+### Misc
+
 [Broadcasting note](MISC_broadcasting)
 
 
@@ -11,10 +20,15 @@ title: My work
 
 
 
+
+
+
+
 ## Bibliographies
 
 
-* [current work](CIT_work)
+* [current work](CIT_work)   
+
 
 
 ### General
