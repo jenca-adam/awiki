@@ -28,16 +28,18 @@
 
 \def\Ha{\mathcal H}
 \def\Me{\mathcal M}
+\def\Ee{\mathcal E}
 \def\Ne{\mathcal N}
 \def\Te{\mathcal T}
 \def\Ka{\mathcal K}
 \def \Tr{\mathrm{Tr}\,}
 \def\Se {\mathcal S}
 \def\supp{\mathrm{supp}}
+\def\spec{\mathrm{spec}}
 \def\<{\langle\,}
 \def\>{\,\rangle}
 
-\title{Some notes}
+\title{Notes on asymptotics of quantum hypothesis testing}
 \author{Anna Jen\v cov\'a\footnote{Mathematical Institute, Slovak Academy of Sciences, \v
 Stef\'anikova 49, 814 73 Bratislava, Slovakia, jenca@mat.savba.sk}}
 \date{}
@@ -45,8 +47,235 @@ Stef\'anikova 49, 814 73 Bratislava, Slovakia, jenca@mat.savba.sk}}
 
 \maketitle
 
+
+\section{Preliminaries}
+
+Let $\Ha$ be a finite dimensional Hilbert space.
+
+\subsection{Pinching}
+
+Let $A\in B(\Ha)$ be self-djoint, with spectral decomposition  $A=\sum_i \lambda_i P_i$.
+We will need the pinching map $B(\Ha)\to B(\Ha)$, defined as 
+\[
+\Ee_A(X)=\sum_i P_iXP_i.
+\]
+Then $A$ is a cp unital map. Moreover, $\Ee_A(X)$ commutes with $X$ and we have the
+pinching inequality \cite{hayashi...optimal}
+\begin{equation}\label{eq:pinching}
+\Ee_A(X)\le |\spec(A)|X,\qquad X\ge 0.
+\end{equation}
+
+
+\subsection{Relative entropies}
+
+Let $\rho$ and $\sigma$ be density operators. 
+The (Umegaki) relative entropy is defined as 
+\[
+D(\rho\|\sigma):=\begin{dcases} \Tr[\rho(\log \rho-\log\sigma)], &
+\supp(\rho)\le\supp(\sigma)\\
+\infty, & \mathrm{otherwise}.
+\end{dcases}
+\]
+The standard R\'enyi relative entropy for $\alpha\in [0,1]\setminus\{1\}$ is defined as
+\[
+D_\alpha(\rho\|\sigma):=\begin{dcases}
+\frac1{\alpha-1}\log\Tr[\rho^\alpha\sigma^{1-\alpha}],& \supp(\rho)\le \supp(\sigma)
+\text{ or } \alpha\in (0,1)\\
+\infty,& \text{otherwise}.
+\end{dcases}
+\]
+The sandwiched R\'enyi relative entropy for $\alpha\in [1/2,\infty]\setminus\{1\}$ is
+defined as
+\[
+\hat D_\alpha(\rho\|\sigma):=\begin{dcases}
+\frac1{\alpha-1}\log\Tr[\sigma^{\frac{1-\alpha}{2\alpha}}\rho\sigma^{\frac{1-\alpha}{2\alpha}}],& \supp(\rho)\le \supp(\sigma)
+\text{ or } \alpha\in [1/2,1)\\
+\infty,& \text{otherwise}.
+\end{dcases}
+\]
+
+\subsection{The function $\phi$}
+
+\textbf{We assume $\supp(\rho)\le \supp(\sigma)$, so that $D(\rho\|\sigma)<\infty$.}
+
+Let us define 
+\[
+\phi(s)=\log \Tr[\rho^{1-s}\sigma^s],\qquad s\in \mathbb R.
+\]
+Then $\phi$ is a convex and smooth function, with derivative
+\[
+\phi'(s)=(\Tr[\rho^{1-s}\sigma^s])^{-1}\Tr[\rho^{1-s}\sigma^s(\log\sigma-\log\rho),
+\]
+\cite[Exercise 3.5]{hayashi2017quantum}
+In particular,  $\phi'(0)=-D(\rho\|\sigma)$ and $\phi'(1)=D(\sigma\|\rho)$.
+
+\begin{lemma}\label{lemma:phipsi}
+Put
+\[
+\psi(\lambda)=\inf_{s\in[0,1]} \lambda s+\phi(s),\qquad \lambda\in \mathbb R.
+\]
+Then 
+\[
+\psi(\lambda)=\begin{dcases} 0 & \lambda\ge -\phi'(0)=D(\rho\|\sigma)\\
+<0 & \lambda <D(\rho\|\sigma)\\
+\lambda & \lambda \le -\phi'(1)=-D(\sigma\|\rho).
+\end{dcases}
+\]
+
+\end{lemma}
+
+\begin{proof} By convexity, the derivative $\phi'(s)$ is nondecreasing.  It follows that
+if $\lambda\ge -\phi'(0)$, then 
+\[
+\frac{d}{ds} (\lambda s+\phi(s))=\lambda+\phi'(s)\ge -\phi'(0)+\phi'(s)\ge 0,
+\]
+so that the function $s\mapsto \lambda s+\phi(s)$ is nondecreasing, so that the infimum is
+attained at $s=0$. Similarly, if $\lambda\le -\phi'(1)$, then the infimum is attained at
+$s=1$ and hence $\psi(\lambda)=\lambda$. Let now $\lambda<-\phi'(0)$, then we see that
+the function $s\mapsto \lambda s+\phi(s)$ is strictly decreasing at $s=0$, so that we must
+have $\psi(\lambda)<0$.
+
+\end{proof}
+
+We define
+\[
+\psi^*(\lambda)=\inf_{t\in [-1,0]} t\lambda+\phi(t).
+\]
+Again, if $\lambda> D(\rho\|\sigma)=-\phi'(0)$, then $t\mapsto t\lambda +\phi(t)$ is
+strictly increasing at $t=0$, which implies that $\phi^*(\lambda)<0$. 
+
+\subsection{Inequalities}
+
+We have two basic inequalities. For $A,B\ge 0$, let  $\{A\ge B\}$ be the sum of
+eigenprojections of $A-B$ corresponding to nonnegative eigenvalues, similarly $\{A\le
+B\}$, $\{A>B\}$ etc. Then 
+\begin{lemma}[Quantum Neyman-Pearson]\label{lemma:qnp} We have 
+\[
+\min_{0\le T\le I} \Tr[A(I-T)]+\Tr[BT]=\Tr[A\{A\le B\}]+\Tr[B\{A>B\}].
+\]
+
+\end{lemma}
+
+\begin{lemma}[Audenaert et al]\label{lemma:audenaert} We have for any $s\in [0,1]$, 
+\[
+\Tr[A\{A\le B\}]+\Tr[B\{A>B\}]\le \Tr[A^{1-s}B^s].
+\]
+
+\end{lemma}
+
+These statements hold in the von Neumann algebra case as well.
+
 \section{QHT}
 
+
+Let $\rho,\sigma$ be a pair of density matrices. We test the hypothesis $H_0=\rho$ against
+the alternative $H_1=\sigma$. A test is given by an operator $0\le T\le I$, corresponding
+to accepring $H_0$. The two error probabilities are
+\[
+\alpha(T)=\Tr[(I-T)\rho],\qquad \beta(T)=\Tr[T\sigma].
+\]
+We will consider the asymptotic behaviour of the error probabilities 
+\[
+\alpha_n(T_n)=\Tr[(I-T_n)\rho_n],\qquad \beta_n(T_n)=\Tr[T_n\sigma_n]
+\]
+in testing $H_0=\rho_n:=\rho^{\otimes n}$ against $H_1=\sigma_n:=\sigma^{\otimes n}$. 
+
+\subsection{Quantum Stein's lemma}
+
+
+\textbf{We assume $\supp(\rho)\le \supp(\sigma)$, so that $D(\rho\|\sigma)<\infty$.}
+
+\bigskip
+
+Let $\lambda\in \mathbb R$ and let $S_n:=\{\rho^{\otimes n}>e^{n\lambda}\sigma^{\otimes
+n}\}$. Then using Lemma \ref{lemma:audenaert} (Audenaert) with $A=\rho^{\otimes n}$ and
+$B=e^{\lambda n}\sigma^{\otimes n}$, we get  for any $s\in [0,1]$
+\begin{align}
+\alpha_n(S_n)+e^{n\lambda}\beta_n(S_n)\le \Tr e^{n\lambda s}[(\rho^{\otimes n})^{1-s}(\sigma^{\otimes
+n})^s]=e^{n\lambda s}(\Tr[\rho^{1-s}\sigma^s])^n=e^{n(\lambda s+\phi(s))}.
+\end{align}
+Hence by taking the infimum over $s\in [0,1]$,
+\begin{align}
+\alpha_n(S_n)&\le e^{n\psi(\lambda)},\qquad\beta_n(S_n)\le e^{n(-\lambda
++\psi(\lambda))}\label{eq:direct}
+\end{align}
+On the other hand, put $p_n=\Tr[\rho^{\otimes n}S_n]$ and $q_n=\Tr[\sigma^{\otimes
+n}S_n]$. Then $p_n \ge e^{n\lambda}q_n$ and therefore $p_n^t\le e^{n\lambda t}q_n^t$ for 
+for any $t\in [-1,0]$. We get
+\begin{align*}
+1-\alpha_n(S_n)&=p_n\le e^{n\lambda t}p_n^{1-t}q_n^{t}\le e^{n\lambda
+t}(p_n^{1-t}q_n^{t}+(1-p_n)^{1-t}(1-q_n)^{t})\le e^{n\lambda t}\Tr[(\rho^{\otimes
+n})^{1-t}(\sigma^{\otimes n})^t]\\
+&=e^{n(\lambda t+\phi(t))}
+\end{align*}
+for all $t\in [-1,0]$. It follows that for any test $T_n$, we have
+\begin{align*}
+1-\alpha_n(T_n)&=\Tr[\rho^{\otimes n} T_n]=\Tr[(\rho^{\otimes n}-e^{\lambda
+n}\sigma^{\otimes n})T_n]+e^{\lambda n}\beta_n(T_n)\le \Tr[(\rho^{\otimes n}-e^{\lambda
+n}\sigma^{\otimes n})S_n]+e^{\lambda n}\beta_n(T_n)\\
+&\le 1-\alpha_n(S_n)+e^{\lambda n}\beta_n(T_n)\le e^{n(\lambda t+\phi(t))}+e^{\lambda n}\beta_n(T_n)
+\end{align*}
+and hence
+\begin{equation}\label{eq:converse}
+\beta_n(T_n)\ge e^{-n\lambda}(1-\alpha_n(T_n)-e^{n\psi^*(\lambda)})
+\end{equation}
+
+
+\begin{lemma}[Quantum Stein's lemma]\label{lemma:stein}\cite{hiai1991theproper,ogawa2000strong} For all $\epsilon\in (0,1)$, we have
+\[
+\lim_{n\to\infty} -\frac1n \log \beta_n(\epsilon)= D(\rho\|\sigma).
+\]
+\end{lemma}
+\begin{proof} Let $\lambda<D(\rho\|\sigma)$, then by Lemma \ref{lemma:phipsi},
+$\psi(\lambda)<0$, so that in this case \eqref{eq:direct}, $\alpha_n(S_n)\to 0$ and 
+\[
+-\frac1n\log \beta_n(S_n)\ge \lambda -\psi(\lambda)>\lambda.
+\]
+For $\epsilon\in (0,1)$ we have $\alpha_n(S_n)\le \epsilon$ for large enough $n$, so that 
+$\beta_n(\epsilon)\le \beta_n(S_n)$. It follows that
+\[
+\liminf_n -\frac1n\log\beta_n(\epsilon)\ge -\frac1n\log \beta_n(S_n)\ge \lambda.
+\]
+Conversely, by \eqref{eq:converse} we have for any sequence of
+tests such that $\alpha_n(T_n)\le \epsilon$ that
+\[
+\beta_n(T_n)\ge e^{-n\lambda}(1-\epsilon-e^{n\psi^*(\lambda)}).
+\]
+Since $\psi^*(\lambda)<0$ for  $\lambda>D(\rho\|\sigma)$, this implies that, for such
+$\lambda$,
+\[
+\limsup_n -\frac1n\beta_n(\epsilon)\le \lambda.
+\]
+Chooseng any $\delta>0$, we obtain
+\[
+D(\rho\|\sigma)-\delta\le \liminf_n-\frac1n\beta_n(\epsilon)\le
+\limsup_n-\frac1n\beta_n(\epsilon)\le D(\rho\|\sigma)+\delta.
+\]
+Since $\delta$ was arbitrary, this implies the statement.
+
+\end{proof}
+
+
+The following quantum Stein's
+lemma describes the situation when the error of the first kind is constrained by some
+$\epsilon>0$. In this case, the optimal value of the second kind error
+ \[
+\beta_n(\epsilon):=\min_{0\le T_n\le I}\{\beta_n(T_n)\ | \ \alpha_n(T_n)\le
+\epsilon\},\qquad \epsilon>0
+\]
+converges to zero exponetially fast, that is, $\beta_n(\epsilon)\sim e^{-nr}$. The lemma
+shows that for any $\epsilon>0$, the error exponent $r$ is given by the relative entropy
+
+
+
+
+
+
+
+
+
+
+\end{document}
 
 Let $\Me$ be a von Neumann algebra and let $\rho,\sigma$ be a pair of normal states. 
 We consider the problem of testing the
