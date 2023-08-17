@@ -3,6 +3,8 @@ title: Not my own papers
 ## A list
 
 ### A
+[audenaert2008asymptotic](audenaert2008asymptotic),
+[audenaert2007discriminating](audenaert2007discriminating),
 [aubrun2021entangleability](aubrun2021entangleability),
 
 [araki1973relative](araki1973relative),
@@ -109,6 +111,7 @@ title: Not my own papers
 [grumm1973two](grumm1973two)
 
 ### H
+[hayashi2007error](hayashi2007error),
 [hirche2023quantum](hirche2023quantum),
 [heinosaari2016aninvitation](heinosaari2016aninvitation),
 [hiai2017different](hiai2017different),
@@ -191,6 +194,8 @@ title: Not my own papers
 [matsumoto2010aquantum](matsumoto2010aquantum), [matsumoto2015anew](matsumoto2015anew), [mullerlennert2013onquantum](mullerlennert2013onquantum), [matsumoto2010reverse](matsumoto2010reverse) 
 
 ### N
+[nussbaum2009thechernoff](nussbaum2009thechernoff),
+[nagaoka2006theconverse](nagaoka2006theconverse),
 [nguyen2018quantum](nguyen2018quantum), [nagaoka1995differential](nagaoka1995differential), 
 
 ### O

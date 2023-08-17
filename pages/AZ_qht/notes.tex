@@ -94,7 +94,7 @@ defined as
 \end{dcases}
 \]
 
-\subsection{The function $\phi$}
+\subsection{The functions $\phi$ and $\psi$}
 
 \textbf{We assume $\supp(\rho)\le \supp(\sigma)$, so that $D(\rho\|\sigma)<\infty$.}
 
@@ -102,38 +102,81 @@ Let us define
 \[
 \phi(s)=\log \Tr[\rho^{1-s}\sigma^s],\qquad s\in \mathbb R.
 \]
-Then $\phi$ is a convex and smooth function, with derivative
+Then $\phi$ is a strictly convex and smooth function, with derivative
 \[
-\phi'(s)=(\Tr[\rho^{1-s}\sigma^s])^{-1}\Tr[\rho^{1-s}\sigma^s(\log\sigma-\log\rho),
+\phi'(s)=(\Tr[\rho^{1-s}\sigma^s])^{-1}\Tr[\rho^{1-s}\sigma^s(\log\sigma-\log\rho)],
 \]
 \cite[Exercise 3.5]{hayashi2017quantum}
-In particular,  $\phi'(0)=-D(\rho\|\sigma)$ and $\phi'(1)=D(\sigma\|\rho)$.
+In particular,  $\phi'(0)=-D(\rho\|\sigma)$ and $\phi'(1)=D(\sigma\|\rho)$  Let us define
+\[
+\psi(\lambda)=\min_{s\in \mathbb R} \lambda s+\phi(s).
+\]
 
-\begin{lemma}\label{lemma:phipsi}
-Put
-\[
-\psi(\lambda)=\inf_{s\in[0,1]} \lambda s+\phi(s),\qquad \lambda\in \mathbb R.
-\]
-Then 
-\[
-\psi(\lambda)=\begin{dcases} 0 & \lambda\ge -\phi'(0)=D(\rho\|\sigma)\\
-<0 & \lambda <D(\rho\|\sigma)\\
-\lambda & \lambda \le -\phi'(1)=-D(\sigma\|\rho).
-\end{dcases}
-\]
+\begin{lemma}\label{lemma:phipsi} Let $-D(\sigma\|\rho)=-\phi'(1)\le \lambda\le
+-\phi'(0)=D(\rho\|\sigma)$. Then 
+\begin{enumerate} 
+
+\item $\psi(\lambda)=\inf_{s\in[0,1]} \lambda s+\phi(s)$
+\item $\psi$ is monotone increasing
+\item $\psi(-D(\sigma\|\rho))=-D(\sigma\|\rho)$,
+$\psi(D(\rho\|\sigma))=0$.
+
+\end{enumerate}
+
 
 \end{lemma}
 
-\begin{proof} By convexity, the derivative $\phi'(s)$ is nondecreasing.  It follows that
-if $\lambda\ge -\phi'(0)$, then 
+\begin{proof} 
+By strict convexity,  the derivative $\phi'(s)$ is increasing, so that there is some
+$s_0\in [0,1]$ such that $\lambda=-\phi'(s_0)$ and the function $s\mapsto \lambda
+s+\phi(s)$ is decreasing for $s\le s_0$ and increasing for $s_0\le s$. It follows that the
+infimum is attained at $s_0\in [0,1]$. This also implies (3). 
+
+Assume that $\lambda\in (-\phi'(1),\phi'(0))$, then $\lambda=-\phi'(s_0)$ for some
+$s_0\in (0,1)$  and we have  
 \[
-\frac{d}{ds} (\lambda s+\phi(s))=\lambda+\phi'(s)\ge -\phi'(0)+\phi'(s)\ge 0,
+\psi(\lambda)=\lambda s_0+\phi(s_0)=\phi(s_0)-\phi'(s_0)s_0<\phi(0)=0=\psi(-\phi(0)),
 \]
-so that the function $s\mapsto \lambda s+\phi(s)$ is nondecreasing, so that the infimum is
-attained at $s=0$. Similarly, if $\lambda\le -\phi'(1)$, then the infimum is attained at
-$s=1$ and hence $\psi(\lambda)=\lambda$. Let now $\lambda<-\phi'(0)$, then we see that
-the function $s\mapsto \lambda s+\phi(s)$ is strictly decreasing at $s=0$, so that we must
-have $\psi(\lambda)<0$.
+the inequality follows by strict convexity of $\phi$. If $-\phi'(1)\le \lambda_1<\lambda$,
+then clearly
+\[
+\psi(\lambda_1)\le \lambda_1s_0+\phi(s_0)<\lambda s_0+\phi(s_0)=\psi(\lambda).
+\]
+This proves (2).
+\end{proof}
+
+\begin{lemma}\label{lemma:psib}
+Let  $\lambda\in [-D(\sigma\|\rho),D(\rho\|\sigma)]$ and $0\le r\le D(\rho\|\sigma)$. Then 
+\[
+\lambda-\psi(\lambda)=r \iff \psi(\lambda)=b(r):=\inf_{s\in[0,1]}
+\frac{s}{1-s}r+\frac1{1-s}\phi(s).
+\]
+\end{lemma}
+
+\begin{proof}
+Let $s_\lambda\in [0,1]$ be such that $\lambda=-\phi'(s_\lambda)$, then the assuptions
+imply that
+\[
+\psi(\lambda)=-\phi'(s_\lambda)s_\lambda+\phi(s_\lambda)=-\phi'(s_\lambda)-r.
+\]
+Solving for $\phi'(s_\lambda)$, we get
+$-\phi'(s_\lambda)=\frac1{1-s_\lambda}(r+\phi(s_\lambda))$, so that
+\[
+\psi(\lambda)=\frac{s_\lambda}{1-s_\lambda}r+\frac1{1-s_\lambda}\phi(s_\lambda).
+\]
+Let 
+\[
+g(s)=\frac{s}{1-s}r+\frac1{1-s}\phi(s).
+\]
+Then $g'(s)=\frac1{(1-s)^2}(r+\phi(s)+\phi'(s)(1-s))$. Now note that
+$h(s):=\phi(s)+\phi'(s)(1-s)$ satisfies $h'(s)=\phi''(s)(1-s)$ so that $h$ is increasing
+on $(0,1)$ (strict) convexity of $\phi$, so that $-D(\rho\|\sigma)=h(0)\le h(s)\le
+h(1)=0$. It follows that the derivative $g'(s)$ changes sign at a unique point $s_r\in [0,1]$, 
+such that $r+\phi(s_r)+\phi'(s_r)(1-s_r)=0$. Comparing this to the above computation, we
+see that $s_r=s_\lambda$ and 
+\[
+\psi(\lambda)=\min_{s\in[0,1]} g(s)=b(r).
+\]
 
 \end{proof}
 
@@ -143,6 +186,10 @@ We define
 \]
 Again, if $\lambda> D(\rho\|\sigma)=-\phi'(0)$, then $t\mapsto t\lambda +\phi(t)$ is
 strictly increasing at $t=0$, which implies that $\phi^*(\lambda)<0$. 
+
+
+
+
 
 \subsection{Inequalities}
 
@@ -165,6 +212,60 @@ B\}$, $\{A>B\}$ etc. Then
 
 These statements hold in the von Neumann algebra case as well.
 
+
+
+
+\subsection{Nussbaum-Szkola probability distributions}
+
+Let $\rho=\sum_i \lambda_i|x_i\>\<x_i|$ and $\sigma=\sum_j\mu_j|y_j\>\<y_j|$ be the
+spectral decompositions. The pair $(P,Q)$ of Nussbaum-Szkola probability distributions
+related to $(\rho,\sigma)$ is defined on $[n]\times [n]$, here $n=\dim(\Ha)$ and
+$[n]=\{1,\dots,n\}$. We put
+\[
+P_{ij}=\lambda_i|\<x_i|y_j\>|^2,\qquad Q_{ij}=\mu_j|\<x_i|y_j\>|^2.
+\]
+We then have $D(\rho\|\sigma)=D(P\|Q)$ and $D_\alpha(\rho\|\sigma)=D_\alpha(P\|Q)$ for all
+$\alpha$. 
+
+For $(\rho^{\otimes n},\sigma^{\otimes n})$ we get the iid distributions $(P^n,Q^n)$. We also have the following result:
+
+\begin{lemma}[Nussbaum-Szkola]\label{lemma:NS}
+For any test $T$ and $c>0$  we have
+\[
+\alpha(T)+c\beta(T)\ge \frac12 (P(\{P\le
+cQ\})+cQ(\{P>cQ\}))=\frac12\sum_{ij}\min\{P_{ij},cQ_{ij}\}
+\]
+\end{lemma}
+
+\begin{proof}
+Let $T$ be a projection, then
+\[
+\Tr[\rho T]=\sum_i\lambda_i\<x_i|TT|x_i\>=\sum_{ij}\lambda_i\<x_i|T|y_j\>\<y_j|T|y_j\>=\sum_{ij}\lambda_i
+|\<x_i|T|y_j\>|^2
+\]
+and similarly for $\sigma$. 
+It follows that 
+\[
+\alpha(T)+c\beta(T)=\sum_{ij}\lambda_i|\<x_i|I-T|y_j\>|^2+c\sum_{ij}\mu_j|\<x_i|T|y_j\>|^2.
+\]
+Now we use the inequality
+\[
+a|u-v|^2+b|v|^2\ge \frac12|u|^2\min\{a,b\}
+\]
+to lower bound
+\[
+\alpha(T)+c\beta(T)\ge \frac12
+\sum_{ij}|\<x_i|y_j\>|^2\min\{\lambda_i,c\mu_j\}=\frac12\sum_{i,j}\min\{P_{ij},cQ_{ij}\}
+\]
+By Lemma \ref{lemma:qnp}, this inequality holds for all tests. The  equality 
+$\min\{P_{ij},cQ_{ij}\}=P(\{P\le cQ\})+cQ(\{P>cQ\})$
+can be easily seen.
+
+\end{proof}
+
+
+
+
 \section{QHT}
 
 
@@ -185,12 +286,22 @@ in testing $H_0=\rho_n:=\rho^{\otimes n}$ against $H_1=\sigma_n:=\sigma^{\otimes
 
 \textbf{We assume $\supp(\rho)\le \supp(\sigma)$, so that $D(\rho\|\sigma)<\infty$.}
 
-\bigskip
+\begin{itemize}
+
+\item Quantum Stein's lemma states that if the I. kind error probabilities are constrained as
+$\alpha_n(T_n)\le \epsilon$, then the II. kind error probabilities go to zero
+exponentially, with optimal decay rate equal to the relative entropy $D(\rho\|\sigma)$. 
+\item The strong converse says that if the decay rate of $\beta_n(T_n)$ is greater than
+$D(\rho\|\sigma)$, then $\alpha_n(T_n)\to 0$ exponentially.
+\end{itemize}
+
+
+We will need the following inequalities \eqref{eq:direct} and \eqref{eq:converse}.
 
 Let $\lambda\in \mathbb R$ and let $S_n:=\{\rho^{\otimes n}>e^{n\lambda}\sigma^{\otimes
 n}\}$. Then using Lemma \ref{lemma:audenaert} (Audenaert) with $A=\rho^{\otimes n}$ and
 $B=e^{\lambda n}\sigma^{\otimes n}$, we get  for any $s\in [0,1]$
-\begin{align}
+\begin{align}\label{eq:direct1}
 \alpha_n(S_n)+e^{n\lambda}\beta_n(S_n)\le \Tr e^{n\lambda s}[(\rho^{\otimes n})^{1-s}(\sigma^{\otimes
 n})^s]=e^{n\lambda s}(\Tr[\rho^{1-s}\sigma^s])^n=e^{n(\lambda s+\phi(s))}.
 \end{align}
@@ -221,10 +332,18 @@ and hence
 \end{equation}
 
 
+Let 
+\[
+\beta_n(\epsilon):=\min_{0\le T_n\le I}\{\beta_n(T_n)\ | \ \alpha_n(T_n)\le
+\epsilon\},\qquad \epsilon>0.
+\]
+
 \begin{lemma}[Quantum Stein's lemma]\label{lemma:stein}\cite{hiai1991theproper,ogawa2000strong} For all $\epsilon\in (0,1)$, we have
 \[
 \lim_{n\to\infty} -\frac1n \log \beta_n(\epsilon)= D(\rho\|\sigma).
 \]
+In particular, there exists a sequence $T_n$ of tests such that $\alpha_n(T_n)\to 0$ and
+$\lim_n \frac1n\log\beta_n(T_n)= -D(\rho\|\sigma)$.
 \end{lemma}
 \begin{proof} Let $\lambda<D(\rho\|\sigma)$, then by Lemma \ref{lemma:phipsi},
 $\psi(\lambda)<0$, so that in this case \eqref{eq:direct}, $\alpha_n(S_n)\to 0$ and 
@@ -234,7 +353,7 @@ $\psi(\lambda)<0$, so that in this case \eqref{eq:direct}, $\alpha_n(S_n)\to 0$ 
 For $\epsilon\in (0,1)$ we have $\alpha_n(S_n)\le \epsilon$ for large enough $n$, so that 
 $\beta_n(\epsilon)\le \beta_n(S_n)$. It follows that
 \[
-\liminf_n -\frac1n\log\beta_n(\epsilon)\ge -\frac1n\log \beta_n(S_n)\ge \lambda.
+\liminf_n -\frac1n\log\beta_n(\epsilon)\ge \liminf_n -\frac1n\log \beta_n(S_n)\ge \lambda.
 \]
 Conversely, by \eqref{eq:converse} we have for any sequence of
 tests such that $\alpha_n(T_n)\le \epsilon$ that
@@ -246,25 +365,161 @@ $\lambda$,
 \[
 \limsup_n -\frac1n\beta_n(\epsilon)\le \lambda.
 \]
-Chooseng any $\delta>0$, we obtain
+Choosing any $\delta>0$, we obtain
 \[
 D(\rho\|\sigma)-\delta\le \liminf_n-\frac1n\beta_n(\epsilon)\le
 \limsup_n-\frac1n\beta_n(\epsilon)\le D(\rho\|\sigma)+\delta.
 \]
-Since $\delta$ was arbitrary, this implies the statement.
+Since $\delta$ was arbitrary, this implies the first statement. For the second statement,
+ we can choose sequences $\delta_n,\epsilon_n>0$, $\delta_n,\epsilon_n\to 0$, then we can
+ find a sequence of tests $T_n$ such that $\alpha_n(T_n)\le \epsilon_n$ and
+ $|\frac1n\log\beta_n(T_n)+D(\rho\|\sigma)|<\delta_n$. 
+
+\end{proof}
+
+\begin{lemma}[Strong converse] \cite{ogawa2000strong} \label{lemma:converse}
+Let $T_n$ be a sequence of tests and let $r>D(\rho\|\sigma)$. If
+\[
+\limsup_n \frac1n\log\beta_n(T_n)\le -r
+\]
+then  $\alpha_n(T_n)\to 1$ exponentially fast.
+
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:converse}, we have for any $\lambda\in \mathbb R$, $\delta>0$ and large enough $n$,
+\[
+1-\alpha_n(T_n)\le e^{n\psi^*(\lambda)}+e^{n\lambda}\beta_n(T_n)\le
+e^{n\psi^*(\lambda)}+e^{n(\lambda-r+\delta)}.
+\]
+We then may choose $\delta$ and $\lambda$ such that $D(\rho\|\sigma)<\lambda<r-\delta$, in
+which case both of the above exponents are negative.
 
 \end{proof}
 
 
-The following quantum Stein's
-lemma describes the situation when the error of the first kind is constrained by some
-$\epsilon>0$. In this case, the optimal value of the second kind error
- \[
-\beta_n(\epsilon):=\min_{0\le T_n\le I}\{\beta_n(T_n)\ | \ \alpha_n(T_n)\le
-\epsilon\},\qquad \epsilon>0
+\subsection{Hoeffding bound}
+
+The Hoeffding bound studies the exponential decay of $\alpha_n$ under an exponential
+constraint on $\beta_n$. Specifically, we look at the value of
+\[
+B_e(r):=\sup \{-\limsup_n \frac1n\log\alpha_n(T_n)\ |\ \limsup_n\frac1n\log \beta_n(T_n)\le -r\},\qquad r>0
 \]
-converges to zero exponetially fast, that is, $\beta_n(\epsilon)\sim e^{-nr}$. The lemma
-shows that for any $\epsilon>0$, the error exponent $r$ is given by the relative entropy
+
+The following result was proved in \cite{hayashi2007error} (direct part) and
+\cite{nagaoka2006theconverse}. 
+
+\begin{lemma}[Quantum Hoeffding bound]  For $0<r\le D(\rho\|\sigma)$, we have
+\[
+B_e(r)=\sup_{0\le s\le 1}\frac{-sr-\phi(s)}{1-s}=-b(r).
+\]
+
+
+\end{lemma}
+
+\begin{proof} By \eqref{eq:direct1}, we see that for any $\lambda$,
+\[
+\alpha_n(S_n)\le e^{n(s\lambda+\phi(s))},\qquad \beta_n(S_n)\le
+e^{n(-(1-s)\lambda+\phi(s))}
+\]
+Let us choose $\lambda$ such that $-(1-s)\lambda+\phi(s)=-r$, that is,
+$\lambda=\frac{r+\phi(s)}{1-s}$, then we obtain
+\[
+\alpha_n(S_n)\le e^{-n\frac{-sr-\phi(s)}{1-s}},\qquad \beta_n(S_n)\le e^{-nr}.
+\].
+This implies that $B_e(r)\ge \sup_{0\le s\le 1}\frac{-sr-\phi(s)}{1-s}=-b(r)$. To show the lower
+bound, we will use the pair of Nussbaum-Szkola probability distributions $(P,Q)$ related to the pair
+$(\rho,\sigma)$ and Lemma \ref{lemma:NS}.  
+
+What we need to prove is that, for a sequence of tests $T_n$,
+\[
+\limsup_n \frac1n\log\beta_n(T_n)\le -r \implies \limsup_n\frac1n\log\alpha_n(T_n)\ge
+b(r).
+\]
+By Lemma \ref{lemma:NS}, we have for any $b\in \mathbb R$,
+\begin{equation}\label{eq:TNS}
+\alpha_n(T_n)+e^{nb}\beta_n(T_n)\ge \frac12[P^n(\{P^n\le
+e^{nb}Q^n\})+e^{-nb}Q^n(\{P^n>e^{nb}Q^n\})]
+\end{equation}
+Now note that $\{P^n\le e^{nb}Q^n\}=\{\frac1n \log\frac{Q^n}{P^n}\ge -b\}$ and
+\[
+\log\frac{Q^n(\omega^n)}{P^n(\omega^n)}=\sum_k \log\frac{ Q(\omega_k)}{P(\omega_k)},\qquad
+\omega^n=(\omega_1,\dots,\omega_n)\in \Omega^n,
+\]
+where $\Omega=[n]\times[n]$. Put $X(\omega)=\log\frac{Q(\omega)}{P(\omega)}$, then
+$E_P[X]=-D(P\|Q)=-D(\rho\|\sigma)$ and the
+cumulant generating function of $X$ at $P$ is
+\[
+\log E_P[e^{sX}]=\log E_P[Q^sP^{-s}]=\phi_{P\|Q}(s)=\phi_{\rho\|\sigma}(s)=\phi(s).
+\]
+Now the Cram\'er theorem of tha large deviation theory implies that
+\[
+\lim_n\frac1n\log(P(\frac1n \sum_iX_i\ge -b))=\psi(b)
+\]
+for all $-b>E_P(X)=-D(\rho\|\sigma)$. Similarly,  $\{P^n> e^{nb}Q^n\}=\{\frac1n\sum_i
+X_i(\omega_i)< -b\}$, and  we have $E_Q[X]=D(Q\|P)=D(\sigma\|\rho)$ and
+\[
+\log E_Q[e^{sX}]=\log\Tr[\sigma^{1+s}\rho^{-s}]=\phi(1+s).
+\]
+Now note that 
+\[
+\inf_s bs+\phi(1+s)=\inf_s b(1+s)+\phi(1+s)-b=\psi(b)-b
+\]
+so that 
+\[
+\lim_n \frac1n \log(e^{nb}Q(\frac1n \sum_iX_i<-b))=\psi(b)
+\]
+for $-b<E_Q[X]=D(\sigma\|\rho)$.  It follows that for any $b\in
+(-D(\sigma\|\rho),D(\rho\|\sigma))$, we have 
+\[
+\lim_n \frac1n\log [P^n(\{P^n\le
+e^{nb}Q^n\})+e^{-nb}Q^n(\{P^n>e^{nb}Q^n\})]=\psi(b),
+\]
+this follows from
+\[
+\log2 +\min\{\log x,\log y\}=\log(2\min\{x,y\})\le \log(x+y)\le\log 2+\max\{\log x,\log y\}
+\]
+and  the fact that the two limits above are the same. From \eqref{eq:TNS} and the assumption on
+$\beta_n(T_n)$, we now get 
+\[
+\psi(b)\le \liminf_n \frac1n \log(\alpha_n(T_n)+e^{nb}\beta_n(T_n))\le \max\{\limsup_n
+\frac1n \log \alpha_n(T_n), b-r\}.
+\]
+Let us now assume that $0< r\le D(\rho\|\sigma)$ and let $\lambda\in
+(-D(\sigma\|\rho),D(\rho\|\sigma)]$ be such that $r=\lambda-\psi(\lambda)$. Choose a small
+$\epsilon>0$ such that  $b=\lambda-\epsilon>-D(\sigma\|\rho)$ (we clearly must have
+$\lambda>- D(\sigma\|\rho)$, since
+otherwise $r=0$). Then we get
+\[
+\psi(\lambda-\epsilon)\le \max\{\limsup_n
+\frac1n \log \alpha_n(T_n), \psi(\lambda)-\epsilon\}.
+\]
+Since clearly
+\[
+(\lambda-\epsilon)s+\phi(s)>\lambda s+\phi(s)-\epsilon,\qquad s\in (0,1)
+\]
+and by the assumptions both infima are attained in $(0,1)$, we see that
+$\phi(\lambda-\epsilon)>\phi(\lambda)-\epsilon$, so that we must have
+\[
+\phi(\lambda-\epsilon)\le \limsup_n
+\frac1n \log \alpha_n(T_n)
+\]
+Taking the limit $\epsilon\to 0$ and noting that $\phi(\lambda)=b(r)$ finishes the proof.
+
+
+\end{proof}
+
+
+\subsection{Strong converse exponents}
+
+By the strong converse of Stein's lemma (Lemma \ref{lemma:converse}), we know that if
+$\limsup_n\frac1n\log \beta_n(T_n)\le -r$ for $r>D(\rho\|\sigma)$, then the success
+probabilities $1-\alpha_n(T_n)\to 0$ exponentially. We are now interested in the optimal
+(smallest possible) decay rate, called the strong converse exponent. We put
+\[
+B^*(r):=\inf\{-\liminf_n\frac1n\log(1-\alpha_n(T_n))\ |\ \limsup_n
+\frac1n\log\beta_n(T_n)\le -r\}
+\]
 
 
 
