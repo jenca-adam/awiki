@@ -61,6 +61,8 @@ title: My work
 * [vedecká rada](vr)    
 * [committees](cmmtt)
 
+* [CV](cv)
+
 ---
 
 ## Interesting?
