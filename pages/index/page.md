@@ -54,6 +54,7 @@ title: My work
 
 ## Talks
 
+1. Informal quantum symposium,  [IQUAS](http://old.qute.sk/iquas2020.html), 2020, Smolenice, Slovakia, [talk](index/smolenice2020.pdf)
 
 
 ---
