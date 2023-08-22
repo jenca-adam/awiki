@@ -52,6 +52,12 @@ title: My work
 
 ---
 
+## Talks
+
+
+
+---
+
 ## Duties 
 
 * [referee](referee)     
@@ -61,7 +67,13 @@ title: My work
 * [vedecká rada](vr)    
 * [committees](cmmtt)
 
-* [CV](cv)
+
+--- 
+
+## Smeti
+
+* [CV](cv)    
+
 
 ---
 
