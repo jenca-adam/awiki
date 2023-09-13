@@ -4,7 +4,7 @@ title: Ing. Ferdinand Čapka
 * **začiatok štúdia:** 2019   
 * **školiteľ:** doc. RNDr. Ľubica Holá, DrSc.   
 * **téma:** ?    
-* **poznámky:**
+* **poznámky:** prerušené
 
 
 

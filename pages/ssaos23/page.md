@@ -7,6 +7,8 @@ title: SSAOS 2023
 *  **Dates:**  2.-8.9. 2023 
 *  **Role:** contact person, coorganizer (with Gejza Jenča)
 
+[home page](https://www.math.sk/ssaos2023/)
+
 ---
 
 

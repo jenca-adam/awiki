@@ -66,7 +66,8 @@ title: My work
 * [garant DS](DS_garant)   
 * [conferences](conferences)     
 * [vedecká rada](vr)    
-* [committees](cmmtt)
+* [committees](cmmtt)    
+* [positions](positions)
 
 
 --- 
@@ -77,6 +78,7 @@ title: My work
 
 * [CV](cv)    
 
+* [Proposals](proposals)
 
 ---
 

@@ -1,4 +1,4 @@
-title: "Doktorandsk\xE9 \u0161t\xFAdium"
+title: "Doktorandske studium"
 ---
 
 
@@ -12,10 +12,19 @@ title: "Doktorandsk\xE9 \u0161t\xFAdium"
 * Ing. F. [Čapka](DS_capka)  (2019 - )    
 
 
+## Lajstrá
+
+[Návrh dizertačnej skúšky](DS_garant/navrh.docx)
+
+
+
+
+
 ## Predpisy
 
+* [prijímacie konanie](DS_garant/prijimacie.pdf)
 
-[dizertačná skúška](https://zona.fmph.uniba.sk/fileadmin/fmfi/studium/PhD/Zasady_dizertacna_skuska_2021.pdf)
+* [dizertačná skúška](https://zona.fmph.uniba.sk/fileadmin/fmfi/studium/PhD/Zasady_dizertacna_skuska_2021.pdf)
 
 
 

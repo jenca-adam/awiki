@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{amsfonts}
+\usepackage{calrsfs}
+\geometry{total={210mm,290mm},
+ left=23mm,right=23mm,%
+ bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+
+
+
+\begin{document}
+\begin{center}
+{\large   R. Beneduci, Fuzzy observables: from weak Markov kernels to Markov kernels}
+
+\end{center}
+\medskip
+
+\centerline{Referee report}
+
+\bigskip
+
+It is already well understood that a fuzzy obsrevable (which is a  commutative POVM) is
+always obtained by a fuzzyfication of a sharp observable (a PVM) by a weak Markov kernel. Moreover, if the
+observable is defined on a second countable completely metrizable space, then the weak Markov kernel can be
+replaced by an equivalent  Markov kernel.  It was also proved by the present author that
+under some additional conditions, we may assume that the Markov kernel is a Feller Markov
+kernel, which means that it preserves continuity of functions.
+
+As far as I understand, the present work provides a generalization of these results to arbitrary fuzzy observables
+defined on a second countable metrizable space. This is achieved by studying weak Markov
+kernels defined on a subset of the unit interval and the borel sets of a  second countable
+metrizable topological space. These results are quite technical and their significance is
+not easily seen. In my opinion, this is largerly due to  the
+presentation, which should be improved before acceptance.
+
+\medskip
+
+\noindent
+
+Some specific comments that might help to increase the value of the paper:
+\medskip
+
+
+\begin{enumerate}
+\item  The Introduction could be somewhat improved, so that also a non-expert  reader
+would understand the problem (e.g. the difference between Markov kernels and weak Markov
+kernels)  and the obtained new results.
+\item I particular, weak Markov kernels first appear on p. 3 without any explanation, it
+would be better to at least add something like ...see Def. 2 below...
+
+\item The main results are based on Sec. 2, but it is not clear what is the role of the
+metrizability condition? It does not appear anywhere in the assumptions in Sec. 2, in
+particular, there is no such assumption in Thm. 3. 
+
+\item It would be good, appart from the technical proofs, to provide a paragraph in Sec. 2,
+explaining the methods and perhaps comparing them to those used previously. Otherwise, the
+reader is quickly lost in technical details, without seeing the whole picture.
+
+\item In Sec. 3, the word ''smearing'' appears. It had been  used in the literature
+before, but in this paper the term ''fuzzyfication'' is used in the previous sections, so
+it would be better to stick to that.
+
+\item On p. 9, line 7, it is written that ...avoiding to require that $F$ is regular...
+But the assumption of regularity is present in Thm. 5.
+
+\item p. 9, line 7: It is not clear what $O_2$ is.
+
+\item  Definition 5: As far as I can see, $\mathcal E(\mathcal  H)$ was not defined
+before. Also PVM appears for the first time (better use the term sharp observable).
+
+\item Thm. 5: It is not clear what $\mathcal F(\mathcal H)$ is.
+
+
+
+
+
+\end{enumerate}
+\end{document}

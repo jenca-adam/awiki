@@ -1,4 +1,4 @@
-title: Conference duties
+title: Conference organization
 ---
 
 

@@ -4,7 +4,7 @@ title: Ing. Peter Sýs
 * **začiatok štúdia:** 2019    
 * **školiteľ:** doc. RNDr. Karol Nemoga, CSc.   
 * **téma:** ?    
-* **poznámky:**
+* **poznámky:** prerušené
 
 
 
