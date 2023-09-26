@@ -14,7 +14,7 @@ title: Mgr. Friday Ikechukwu Agu
 
 ## Dizertačná skúška
 
-* [žiadosť](DS_agu/ziadost.pdf)   
+* [prihláška](DS_agu/prihlaska.pdf)   
 
 * **oponent:**  doc. RNDr. Eva Fišerová, PhD   
 * **komisia:**    

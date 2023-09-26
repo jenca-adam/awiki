@@ -20,5 +20,11 @@ Návrh člena výberovej komisie na miesto riaditeľa MÚ SAV (marec 2023)
 * [Návrh zamestancov](vr/navrh_zam.pdf)
 
 
+Schválenie školiteľa MÚ SAV (Jadlovská)
+
+[vyjadrenie vr](vr/jadlovska_skol.pdf)
+
+
+
 
 
