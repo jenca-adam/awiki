@@ -7,9 +7,8 @@ title: Lipka-Barstosik, 2023, dichotomies
 
 **Due:** 30. 9.2023
 
-[file](REF_/file.pdf)
+[file](REF_lipka2023/file.pdf)
 
 
 **Decision:** 
-
 
