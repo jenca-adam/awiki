@@ -10,6 +10,8 @@ title: Li et al, On spectra of some cp maps
 [file](REF_li2023/file.pdf)
 
 
-**Decision:** 
+**Decision:** reject
+
+[report](REF_li2023/report/pdf)
 
 

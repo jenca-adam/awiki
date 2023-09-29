@@ -11,7 +11,7 @@ title: RI - Milán Mosonyi
 
 ---
 
-[project](RI_mosonyi/project_mm.docx)
+[project](RI_mosonyi/mosonyi_final.pdf)
 
 
 ### Notes

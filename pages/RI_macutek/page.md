@@ -15,5 +15,4 @@ title: RI - Ján Mačutek
 
 ### Notes
 
-Not yet applied
 

@@ -71,29 +71,9 @@ title: My work
 
 --- 
 
-## R2-R4
 
-1. [Bert Lindenhovius](RI_lindenhovius)  
+[R2-R4 proposals](RI_list)
 
-1. [Jozef Pócs](RI_pocs)
-
-1. [Andrea Zemánková](RI_zemankova)
-
-1. [Michal Hospodár](RI_hospodar)
-
-1. [Martin Kochol](RI_kochol)
-
-1. [Malgorzata Jastrzebska](RI_jastrzebska)
-
-1. [Raquel](RI_raquel)  ??
-
-1. [Muhammad Jamil](RI_jamil)
-
-1. [Ján Mačutek](RI_macutek) ??
-
-1. [Milán Mosonyi](RI_mosonyi) ??
-
----
 
 ## Personal 
 
