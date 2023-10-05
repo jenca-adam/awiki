@@ -22,7 +22,7 @@ externí pracovníci:
 * (4. 10. 2023) Návrh na IIa Michal Hospodár    
 
     - dokumenty [hodnotenie](vr/hospodar_hodnotenie.doc), [návrh](vr/hospodar_navrh.docx), [výstupy](vr/hospodar_vystupy.docx)  
-    - výsledok: 
+    - výsledok: schválené 5.10.2023 
 
 
 
