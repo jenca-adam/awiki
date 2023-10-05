@@ -10,5 +10,5 @@ title: Lipka-Barstosik, 2023, dichotomies
 [file](REF_lipka2023/file.pdf)
 
 
-**Decision:** 
+**Decision:** revise 
 

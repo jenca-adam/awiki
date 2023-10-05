@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{amsfonts}
+\geometry{total={210mm,290mm},
+ left=23mm,right=23mm,%
+ bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+
+
+
+\begin{document}
+\begin{center}
+{\large  P. Lipka-Bartosik, C. T. Chubb, J. M. Renes, et al.: Quantum dichotomies and coherent thermodynamics beyond first-order asymptotics}
+
+\end{center}
+\medskip
+
+\centerline{Referee report}
+
+\bigskip
+
+
+
+This paper concerns the problem of exact or approximate transformation of quantum dichotomies in the asymptotic
+regime. In the case when the target dichotomy is commutative, explicit expressions for second-order
+transformation rates are given under different assumptions on the behaviour of the
+ transformation errors, in the general case only the optimality part is proved. The
+ results are based on the characterization of approximate transformations of
+ classical dichotomies in terms of hypothesis testing errors, together with the properties
+ of the pinching map and monotonicity of various relative entropy quantities. These  results are applied to obtain second-order rates for thermodynamic
+ transformations and for LOCC transformations between pure bipartite entangled states.
+
+\medskip
+
+\noindent
+\textbf{Overall evaluation}
+
+\medskip
+ The results of the paper are timely and important, since the problem of conversions
+ between sets of states under various regimes is fundamental in many resource theories.
+ The present paper gives answers for dichotomies (that is, pairs of states) in the
+ second-order asymptotic limit and provides significant extensions of the existing
+ results. 
+
+ However, the paper in the present form is not very well written. While the basic  ideas are
+ clearly explained  and the main results are well described, the actual proofs are quite difficult to read. 
+ This is partly due to the fact that the arguments are sometimes given in a confusing and
+ descriptive way, and partly due to a relatively high number of mistakes. These are mostly
+ just typos, but since most of the proofs consist of complicated manipulations, this makes
+ reading exceedingly difficult. 
+
+ Some of these issues are listed  in the specific comments below. I suggest that the authors
+  carefuly read the manuscript, identifying also other places where some confusion may occur.
+  Some further suggestions are added at the end, that the authors might find useful.
+
+\medskip
+
+\noindent
+\textbf{Some specific comments}
+
+\begin{enumerate}
+\item p. 15, eq. (70a):  $\epsilon$ should be $\epsilon -2\delta$ (?)
+\item p. 15, eq. (73): the assumption $\lambda>0$ is needed
+\item p. 15, paragraph above eq. (74): $\gamma_\lambda(\rho\|\sigma)$: $\lambda$ or $x$?
+\item p.16-17, Lemma 17: In the results in [106,107] and [108,109] used in the proof, the
+role of type-I  and type-II errors are exchanged, this should reflect in the exchange
+$\rho\leftrightarrow \sigma$ in the expressions of the lemma (the bounds for $\lambda$
+seem to be given correctly).
+\item p. 17, Eq. (86): $D(\sigma,\rho)$ should be $D(\sigma\|\rho)$
+\item p.17: the arguments of the proof between the last paragraph of the left column,
+finishing the proof for $\lambda\in \mathcal R_R$ are quite unclear and confusing, in
+particluar see the three points below.
+\item  Are the functions in eq. (87) invertible? It is better to explain, prove or give a
+reference for this.
+
+\item p. 17, line under eq. (89): the swapping of $\rho$ and $\sigma$ should also affect
+the bound in $\mathcal R_L$
+\item p.17, looking at eq. (91), I would say that the inequalities are opposite...
+
+\item p. 19, Lemma 19: As far as I can see, the limit values $\check{D}_{\pm\infty}$ were not
+specified. (In case I missed it: it is better to point to the place in the
+text where it is done)
+
+\item p.19, proof of Lemma 19: this is a bit confusing. $Q_t$ were defined to be projections,
+but the test given in eq. (106) is not a projection in general (unless $\Pi$ is rank one).
+
+\item p. 33, paragraph below eq. (A8): $A\le \Phi$ or $A\ge \Phi$?
+\item p.34, line below eq. (A16): $y\in (0,\epsilon)$ or $y\in (\epsilon,1)$?
+\item p. 35, line below eq. (A21): what is ''our expression for $\epsilon$''?
+\end{enumerate}
+\medskip
+
+\noindent
+\textbf{Some additional remarks and suggestions}
+
+
+\begin{enumerate}
+\item p.3, last line above Sec. II.B: There are some conditions that characterize  transformations between general
+quantum dichotomies (and more generally families of states), given in terms of expressions
+related to state discrimination, in the spirit of classical  Blackwell and Le Cam
+theorems,  e.g. [74], Prop. 5 (exact case) and  
+(A. Jenčová, Comparison of quantum channels and quantum statistical experiments, 2016 IEEE
+International Symposium on Information Theory (ISIT), 2249 - 2253, IEEE Conference
+Publications, 2016), Thm. 4 (approximate case). Usefulness is not clear, however.
+
+
+\item In the proof of Lemma 25, to show that the limit in eq. (B16) exists, one can use
+the following argument: by Lemma 23, there is some $C_0>$ such that the sequence
+$y_n:=nC_0+D_\alpha(\mathcal P_{\sigma^{\otimes n}}(\rho^{\otimes n})\|\sigma^{\otimes
+n})$ is nonnegative and eq. (B19) shows that it is subadditive: $y_{n+m}\le y_n+y_m$. By
+the Fekete Lemma, this implies that $\lim_n n^{-1}y_n=\inf_n n^{-1}y_n$ exists.
+
+
+
+
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+\end{document}
+
