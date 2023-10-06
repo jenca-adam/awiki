@@ -7,6 +7,8 @@ title: Mgr. Friday Ikechukwu Agu
 * **koniec štúdia:**    
 * **poznámky:**
 
+     - motivačné štipendium 2023
+
 
 
 ---
@@ -17,7 +19,7 @@ title: Mgr. Friday Ikechukwu Agu
 * [prihláška](DS_agu/prihlaska.pdf)   
 
 * **oponent:**  doc. RNDr. Eva Fišerová, PhD   
-* **komisia:**    
+* **komisia:** [návrh](DS_agu/navrh_komisia.pdf)
 * **dátum:**    
 * **výsledok:**    
 
@@ -32,6 +34,5 @@ title: Mgr. Friday Ikechukwu Agu
 
 
 ## Publikácie
-
 
 
