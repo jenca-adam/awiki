@@ -3,7 +3,7 @@ title: "Mgr. Viktor Olej\xE1r"
 
 *  **začiatok štúdia:** 2021    
 *  **školiteľ:** RNDr. Galina Jirásková, CSc.   
-*  **téma:** **Téma:** Popisná a výpočtová zložitosť formálnych jazykov         
+*  **Téma:** Popisná a výpočtová zložitosť formálnych jazykov         
 *  **poznámky:**     
 
      - motivačné štipendium 2023
@@ -45,6 +45,5 @@ title: "Mgr. Viktor Olej\xE1r"
 4. Birkan, U., Salehi, Ö., Olejar, V., Nurlu, C., Yakaryılmaz, A.: 
 Implementing Quantum Finite Automata Algorithms on Noisy Devices
 (2021) Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), 12747 LNCS, pp. 3-16. [DOI](https://doi.org/10.1007/978-3-030-77980-1_1) (Scopus)  (1 cit.)
-
 
 
