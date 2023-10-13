@@ -156,6 +156,7 @@ title: Not my own papers
 [junge2003noncommutative](junge2003noncommutative)
 
 ### K
+[koashi2002operations](koashi2002operations),
 [kribs2018quantum](kribs2018quantum),
 [kuramochi2018accessible](kuramochi2018accessible),
 
