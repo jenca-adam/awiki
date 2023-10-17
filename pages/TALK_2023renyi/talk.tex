@@ -1,0 +1,1370 @@
+\documentclass[mathserif]{beamer}
+
+%\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsthm, mathtools}
+%\usepackage{bbold}
+\usepackage[skins]{tcolorbox}
+%\newcommand{\ou}{\mathbb 1}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\supp}{\operatorname{supp}}
+%\newcommand{\wit}{\operatorname{wit}}
+\newcommand{\Tr}{\operatorname{Tr}\,}
+\newcommand{\Se}{\mathcal S}
+\newcommand{\Ee}{\mathcal E}
+\newcommand{\Fe}{\mathcal F}
+\newcommand{\Me}{\mathcal M}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\Ha}{\mathcal H}
+\newcommand{\Te}{\mathcal T}
+\newcommand{\Ka}{\mathcal K}
+\def\llangle{\langle\kern-0.4ex\langle}
+\def\rrangle{\rangle\kern-0.4ex\rangle}
+\def\doublek{\rrangle\kern-0.3ex\llangle}
+\setbeamertemplate{itemize items}[circle]
+\newcommand{\myfootnote}[1]{
+    \renewcommand{\thefootnote}{}
+    \footnotetext{\hspace{-16.5pt}\scriptsize#1}
+    \renewcommand{\thefootnote}{\arabic{footnote}}
+}
+%\newtcolorbox{mybox}[1][]{before skip=3mm, after skip=3mm, enhanced,colbacktitle=blue!10!white, coltitle=blue!50!black,colback=white,colframe=white!98!black,drop fuzzy shadow southeast={black!50!white}, #1}
+%\newcommand{\vun}{\rotatebox[origin=c]{90}{$\subseteq$}}
+
+
+%\newtcolorbox{mybox}[1][]{before skip=3mm, after skip=3mm, enhanced,colbacktitle=blue!10!white, coltitle=blue!50!black,colback=white,colframe=white!98!black,drop fuzzy shadow southeast={black!50!white}, #1}
+%\newcommand{\vun}{\rotatebox[origin=c]{90}{$\subseteq$}}
+
+
+%\titlegraphic{\includegraphics[width=1.5cm]{logomu.pdf}\hspace*{4.75cm}~%
+%   \includegraphics[width=1.5cm]{logosav}}
+
+\title{Some characterizations of reversibility of quantum channels}
+%\subtitle{\small\color{black}(arXiv:2303.11707)}
+\author{Anna Jen\v cov\'a}
+\institute{Mathematical Institute, Slovak Academy of Sciences, Bratislava,
+Slovakia\\[5mm]
+\includegraphics[width=1.5cm]{logomu.pdf}\hspace*{4.75cm}~%
+   \includegraphics[width=1.5cm]{logosav}
+}
+
+
+%\titlegraphic{\includegraphics[width=1.5cm]{logomu.pdf}\hspace*{4.75cm}~%
+%   \includegraphics[width=1.5cm]{logosav}
+%}
+\date{R\'enyi Institute, Budapest, 2023}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\begin{frame}{Reversible (sufficient) quantum channels}
+
+Let $\Se$ be a set of quantum states, $\Phi$ a quantum channel.
+\bigskip
+
+We say that $\Phi$ is
+\structure{reversible (sufficient)} with respect to $\Se$ if there exists some channel
+$\Psi$  (recovery channel) such
+that
+\[
+\Psi\circ \Phi(\rho)=\rho,\qquad \rho\in \Se.
+\]
+
+
+Reference: Denes Petz's papers
+\end{frame}
+
+
+\begin{frame}{The setting and assumptions}
+
+
+$B(\mathcal H)$ - operators on a finite dimensional Hilbert space $\Ha$
+
+\medskip
+
+\begin{itemize}
+\item A \structure{set of states}
+\[
+\Se\subset \{\rho\in B(\Ha),\ \rho\ge 0,\ \Tr \rho=1\}
+\]
+\item A \structure{channel}  $\Phi: B(\Ha)\to B(\Ka)$, completely positive  and
+trace preserving
+\end{itemize}
+
+\bigskip
+Assumptions:
+\medskip
+
+There is  a faithful (full rank) state $\sigma\in \Se$, its image $\Phi(\sigma)\in B(\Ka)$
+is also  faithful.
+
+
+\end{frame}
+
+
+
+
+
+%\begin{frame}{Characterizations of reversible quantum channels}
+
+\begin{frame}{Preservation of the relative entropy}
+
+The \structure{relative entropy}:  for states $\rho,\sigma$
+\[
+D(\rho\|\sigma)=\begin{dcases} \Tr[\rho(\log(\rho)-\log(\sigma))], &  \supp(\rho)\le \supp(\sigma)\\
+ \\
+\ \infty, & \text{otherwise}.
+\end{dcases}
+\]
+
+\begin{itemize}
+\item  Data processing inequality: for a channel $\Phi$
+\[
+D(\Phi(\rho)\|\Phi(\sigma))\le D(\rho\|\sigma),
+\]
+
+\item If $D(\rho\|\sigma)<\infty$, then reversibility is equivalent to
+\[
+D(\Phi(\rho)\|\Phi(\sigma))=D(\rho\|\sigma), \qquad \forall \rho\in \Se.
+\]
+
+\end{itemize}
+
+Petz
+
+\end{frame}
+
+
+
+\begin{frame}{Universal recovery map}
+
+The \structure{Petz dual} of $\Phi$ with respect to $\sigma$
+
+\[
+\Phi_\sigma(\cdot)=
+\sigma^{1/2}\Phi^*(\Phi(\sigma)^{-1/2}\cdot \Phi(\sigma)^{-1/2})\sigma^{1/2}
+\]
+
+
+\begin{itemize}
+
+\item $\Phi_\sigma$ is a channel $B(\Ka)\to B(\Ha)$ such that 
+\[
+\Phi_\sigma\circ\Phi(\sigma)=\sigma
+\]
+
+
+\item $\Phi$  is reversible with respect to $\Se$ if and only if
+
+\[
+\Phi_\sigma\circ \Phi(\rho)=\rho, \qquad \forall\rho\in \Se
+\]
+
+
+\end{itemize}
+
+Petz
+
+
+\end{frame}
+
+
+\begin{frame}{Semigroup of channels preserving $\Se$}
+
+How to describe all channels reversible with respect to $\Se$?
+
+\medskip
+
+Let us consider the set of channels 
+\[
+\Ce_\Se:=\{\Theta: B(\Ha)\to B(\Ha),\ \Theta(\rho)=\rho,\ \forall \rho\in \Se\}
+\]
+
+\begin{itemize}
+\item convex and compact semigroup (closed under composition)
+\item has a faithful fixed state: $\sigma\in \Se$.
+\end{itemize}
+
+\medskip
+
+By the \structure{mean ergodic theorem}, there is some  $\Ee_\Se\in \Ce_\Se$ such that
+\[
+\Ee_\Se\circ \Theta=\Theta\circ \Ee_\Se=\Ee_\Se,\qquad \forall \Theta\in \Ce_\Se.
+\]%(Kummerer and Nagel,...) 
+
+We see that such $\Ee_\Se$ is unique and
+\[
+ \Ee_\Se^2=\Ee_\Se,\qquad \Ee_\Se(\rho)=\rho,\quad \forall \rho\in \Se.
+\]
+
+
+\end{frame}
+
+
+\begin{frame}{The minimal sufficient subalgebra}
+
+
+
+The adjoint  $\Ee^*_\Se$ is a faithful  \structure{conditional expectation}
+\[
+\implies
+\]
+its  range is a \structure{subalgebra} $\Me_\Se:= \Ee^*_\Se(B(\Ha))$. \bigskip
+
+$\Me_\Se$ is the \structure{minimal sufficient subalgebra} with respect to $\Se$:
+\medskip
+\begin{itemize}
+\item $\rho\mapsto \rho|_{\Me_\Se}$ is a sufficient channel
+\item $\Me_\Se$ is contained in any subalgebra with this property.
+
+\end{itemize}
+
+
+
+\end{frame}
+
+\begin{frame}{The range of a conditional expectation}
+
+Let $\Ee: B(\Ha)\to B(\Ha)$ be such that $\Ee^*$ is a conditional expectation.
+
+\bigskip
+
+There is a decomposition $\Ha\equiv\oplus_n \Ha_n^L\otimes \Ha_n^R$ such that 
+\begin{align*}
+\Ee^*(B(\Ha))\equiv \bigoplus_n B(\Ha_n^L)\otimes I_{\Ha_n^R}\\
+\Ee(B(\Ha))\equiv \bigoplus_n B(\Ha_n^L)\otimes \omega_n
+\end{align*}
+for some  \structure{fixed} states  $\omega_n\in B(\Ha_n^R)$.
+\end{frame}
+
+
+\begin{frame}{The Koashi-Imoto decomposition}
+
+Applying this to $\Ee_\Se$, we obtain
+\begin{align*}
+\Me_\Se&\equiv \bigoplus_n B(\Ha_n^{\Se,L})\otimes I_{\Ha_n^{\Se,R}}\\
+\rho&\equiv \bigoplus_n \lambda_n(\rho) \rho_n\otimes \sigma_n,\qquad \rho\in \Se, 
+\end{align*}
+
+%where
+\begin{itemize}
+\item $\lambda_n(\rho) $ is a probability dsitribution (classical part of $\Se$)
+\item  $\rho_n\in B(\Ha_n^{\Se,L})$ are states
+(depending on $\rho$) 
+\item $\sigma_n\in B(\Ha_n^{\Se,R})$ are fixed states.
+\end{itemize}
+
+Koashi-Imoto, Hayden, etc., Luczak, Kuramochi
+\end{frame}
+
+
+
+\begin{frame}{Generators of $\Me_\Se$}
+
+
+The minimal sufficient subalgebra is  generated by:
+\medskip
+
+\begin{itemize}
+\item Connes cocycles:
+\[
+\rho^{it}\sigma^{-it}, \qquad \rho\in \Se, \ t\in \mathbb R.
+\]
+\item Radon Nikodym derivatives: 
+\[
+\sigma^{it}(\sigma^{-1/2}\rho\sigma^{-1/2})\sigma^{-it},\qquad  \rho\in \Se, \ t\in \mathbb R.
+\]
+\end{itemize}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Reversible channels with respect to $\Se$}
+
+Assume that $\Phi$ is reversible.
+\medskip
+
+\begin{itemize}
+\item Let $\Psi$ be a recovery channel, then $\Psi\circ\Phi\in \Ce_\Se$, so that 
+\[
+\Ee_\Se\circ
+(\Psi\circ\Phi)=(\Psi\circ\Phi)\circ\Ee_\Se=\Ee_\Se.
+\]
+\item Note that $\Ee_\Se\circ\Psi$ is also a recovery channel, so we may assume 
+\[
+\Ee_\Se\circ \Psi=\Psi,\qquad \Psi\circ \Phi=\Ee_\Se.
+\]
+\item We then have  $\Phi\circ\Psi=\Ee_{\Se_0}$, where
+\[
+\Se_0:=\{\Phi(\rho),\ \rho\in \Se\}.
+\]
+
+
+
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Reversible channels with respect to $\Se$}
+
+
+A channel $\Phi: B(\Ha)\to B(\Ka)$ is reversible with respect to $\Se$ iff 
+\[
+\Phi^*|_{\Me_{\Se_0}}: \Me_{\Se_0} \xrightarrow{iso}\Me_\Se.
+\]
+
+
+Equivalently, there is 
+\medskip
+
+\begin{itemize}
+\item a decomposition $\Ka\equiv \oplus_n \Ka_n^L\otimes \Ka_n^R$
+
+
+\item  unitaries $U_n: \Ha_n^{\Se,L}\to \Ka_n^L$
+
+\item channels  $\Phi_n:B(\Ha^{\Se,R}_n)\to B(\Ka_n^R)$ 
+
+\end{itemize}
+\medskip
+
+such that 
+\[
+\Phi|_{B(\Ha_n^{\Se,L}\otimes \Ha_n^{\Se,R})}\equiv U_n^* \cdot U_n\otimes \Phi_n.
+\]
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{Reversible channels with respect to $\Se$}
+
+
+ Further conditions for reversibility: preserving the generators
+\medskip
+
+\begin{itemize}
+
+\item Connes cocycles
+\[
+\Phi^*(\Phi(\rho)^{it}\Phi(\sigma)^{-it})=\rho^{it}\sigma^{-it},\qquad \rho\in \Se,\ t\in
+\mathbb R;
+\]
+\item Radon-Nikodym derivatives:
+\[
+\Phi^*(\Phi(\sigma)^{-1/2}\Phi(\rho)\Phi(\sigma)^{-1/2})=\sigma^{1/2}\rho\sigma^{1/2},\qquad
+\rho\in \Se;
+\]
+\item Petz dual 
+\[
+\Phi_\sigma\circ \Phi(\rho)=\rho,\qquad \rho\in \Se.
+\]
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Conditions on $\Se$}
+
+
+Given a channel $\Phi$, what are the conditions for states in $\Se$? 
+
+\bigskip
+
+We fix a faithful state $\sigma\in \Se$. Then we must have
+\[
+\Se\subset \mathrm{Fix}(\Phi_\sigma\circ\Phi):=\{\rho,\ \Phi_\sigma\circ\Phi(\rho)=\rho\}.
+\]
+Put
+\[
+\Fe:=\lim_n \frac1n\sum_{k=1}^n(\Phi_\sigma\circ\Phi)^k,
+\]
+then $\Fe^*$ is a conditional expectation and
+\[
+\Fe(B(\Ha))=\mathrm{Fix}(\Phi_\sigma\circ\Phi).
+\]
+
+
+
+\end{frame}
+
+
+\begin{frame}{Conditions on $\Se$}
+
+There is 
+\medskip
+\begin{itemize}
+\item a decomposition $\Ha\equiv \oplus_n
+\Ha_n^{\Phi,\sigma,L}\otimes\Ha_n^{\Phi,\sigma,R}$
+\item and states $\omega_n\in B(\Ha_n^{\Phi,\sigma,R})$ 
+
+\end{itemize}
+\medskip
+
+such that $\Phi$ is reversible with respect to $\Se$ if and only if all $\rho\in \Se$ have
+the form
+\[
+\rho\equiv \bigoplus_n \mu_n(\rho)\rho_n\otimes \omega_n
+\]
+for some probability distribution $\mu(\rho)$ and states $\rho_n\in B(\Ha^{\Phi,\sigma,L})$.
+
+
+
+\end{frame}
+
+\begin{frame}{Preservation of standard R\'enyi relative entropies}
+
+The standard (Petz-type) R\'enyi relative entropies, $\alpha>0$:
+\[
+D_\alpha(\rho\|\sigma)=\begin{dcases} \frac{1}{\alpha-1}\log \Tr\rho^\alpha\sigma^{1-\alpha}&
+\alpha\ne 1\\
+\Tr\rho(\log \rho-\log\sigma), & \alpha=1.
+\end{dcases}
+\]
+
+\begin{itemize}
+\item satisfy data processing inequality for $\alpha\in (0,2]$.
+
+\end{itemize}
+
+\bigskip 
+$\Phi$ is sufficient with respect to $\Se$  if and only if
+\[
+D_\alpha(\Phi(\rho)\|\Phi(\sigma))=D_\alpha(\rho\|\sigma),\qquad \forall \rho\in \Se
+\]
+for some $\alpha\in (0,2)$. 
+
+
+Petz, PetzJA, HMPB, HM,H
+\end{frame}
+
+
+
+\begin{frame}{Preservation of sandwiched R\'enyi relative entropies}
+
+
+The sandwiched (minimal) R\'enyi relative entropies, $\alpha>0$:
+\[
+\tilde D_\alpha(\rho\|\sigma)=\begin{dcases} \frac{1}{\alpha-1}\log \Tr\left(\sigma^{\frac{1-\alpha}{2\alpha}}\rho\sigma^{\frac{1-\alpha}{2\alpha}}\right)^\alpha    &
+\alpha\ne 1\\[0.2em]
+\Tr\rho(\log \rho-\log\sigma), & \alpha=1.
+\end{dcases}
+\]
+
+
+\begin{itemize}
+\item satisfy data processing inequality for $\alpha\in [1/2,\infty]$
+
+\end{itemize}
+\bigskip
+
+$\Phi$ is sufficient with respect to $\Se$  if and only if
+\[
+\tilde D_\alpha(\Phi(\rho)\|\Phi(\sigma))=\tilde D_\alpha(\rho\|\sigma),\qquad \forall \rho\in \Se
+\]
+for some $\alpha\in (1/2,\infty)$.
+JA, JA
+%\begin{align*}
+%\tilde D_\alpha(\rho\|\sigma)&:=\frac1{\alpha-1}\log\frac{\tilde
+%Q_\alpha(\rho\|\sigma)}{\Tr\rho},\\[0.5em]
+%\tilde
+%Q_\alpha(\rho\|\sigma)&:=\begin{dcases}
+%\Tr\left(\sigma^{\frac{1-\alpha}{2\alpha}}\rho\sigma^{\frac{1-\alpha}{2\alpha}}\right)^\alpha
+%& \text{if } \alpha\in (0,1)\text{ or } \supp(\rho)\le \supp(\sigma)\\
+%\infty & \text{otherwise}.
+%\end{dcases}
+%\end{align*}
+%
+
+
+\end{frame}
+
+\begin{frame}{Sandwiched R\'enyi relative entropy}
+
+We look at 
+\[
+\tilde
+Q_\alpha(\rho\|\sigma):=\Tr\left(\sigma^{\frac{1-\alpha}{2\alpha}}\rho\sigma^{\frac{1-\alpha}{2\alpha}}\right)^\alpha,
+\]
+
+so that 
+
+\[
+\tilde D_\alpha(\rho\|\sigma)=\frac1{\alpha-1}\log \tilde Q_\alpha(\rho\|\sigma)
+\]
+
+\bigskip
+\begin{itemize}
+\item For $\alpha>1$: interpolation $L_p$-norms
+\item For $\alpha\in (1/2,1)$: a variational formula, relation to  case $\alpha>1$
+\item The case $\alpha=1$ (relative entropy): solved by Petz
+
+\end{itemize}
+
+
+
+
+
+\end{frame}
+
+\begin{frame}{An interpolation $L_p$-norm with respect to a state}
+
+Let us define a norm in $B(\Ha)$, for $\alpha\ge 1$:
+\[
+\|X\|_{\alpha,\sigma}=\left( \Tr
+|\sigma^{\frac{1-\alpha}{2\alpha}}X\sigma^{\frac{1-\alpha}{2\alpha}}|^\alpha\right)^{\frac1{\alpha}}
+\]
+
+We have for any state $\rho$:
+\[
+\tilde Q_\alpha(\rho\|\sigma)=\|\rho\|_{\alpha,\sigma}^\alpha
+\]
+The norm can be obtained by complex interpolation between
+\[
+\|X\|_{1,\sigma}=\Tr|X|=\|X\|_1,\qquad  \|X\|_{\infty,\sigma}=\|\sigma^{-\frac12}X\sigma^{-\frac12}\|
+\]
+
+
+\end{frame}
+
+
+
+\begin{frame}{Hadamard three lines theorem}
+
+For any function on $S=\{z\in \mathbb C,\ \mathrm{Re}(z)\in [0,1]\}$,
+\[
+f:S\to B(\Ha),\quad \text{continuous, analytic in } \mathrm{int}(S)
+\]
+\begin{itemize}
+\item we have for any $\alpha>1$,
+\[
+\|f(1/\alpha)\|_{\alpha,\sigma}\le \max_{t\in \mathbb R}
+\|f(it)\|_{\infty,\sigma}\max_{t\in \mathbb R}\|f(1+it)\|_1
+\]
+\item If equality holds for some $\alpha>1$, then it holds for all
+
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Hadamard three lines theorem}
+
+ For any $\rho\ge 0$  and $\alpha$, we define a function 
+\[
+f_{\rho,\alpha}(z)=
+\|\rho\|_{\alpha,\sigma}^{1-z\alpha}\sigma^{\frac{1-z}2}\left(\sigma^{\frac{1-\alpha}{2\alpha}}\rho\sigma^{\frac{1-\alpha}{2\alpha}}\right)^{z\alpha}\sigma^{\frac{1-z}2},\qquad
+z\in S
+\]
+
+\begin{itemize}
+\item $f_{\rho,\alpha}(1/\alpha)=\rho$,
+\item The equality in Hadamard three lines theorem is attained:
+\[
+\|f_{\rho,\alpha}(1/\alpha)\|_{\alpha,\sigma}= \max_{t\in \mathbb R}
+\|f_{\alpha,\sigma}(it)\|_{\infty,\sigma}\max_{t\in \mathbb
+R}\|f_{\alpha,\sigma}(1+it)\|_1
+\]
+
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Positive trace preserving maps are contractions}
+
+Let $\Phi:B(\Ha)\to B(\Ka)$ be a \structure{positive} trace preserving linear map:
+\bigskip
+
+\begin{itemize}
+\item For $\alpha=1$,
+\[
+\|\Phi(X)\|_1\le \|X\|_1,\qquad X\in B(\Ha)
+\]
+\item For $\alpha=\infty$,
+\[
+\|\Phi(X)\|_{\infty,\Phi(\sigma)}=\|\Phi_\sigma^*(\sigma^{-1/2}X\sigma^{-1/2})\|_{\infty}\le
+\|X\|_{\infty,\sigma}
+\]
+\item For $\alpha>1$, by Riesz-Thorin (complex interpolation)
+\[
+\|\Phi(X)\|_{\alpha,\Phi(\sigma)}\le \|X\|_{\alpha,\sigma},\qquad X\in B(\Ha).
+\]
+\end{itemize}
+
+Beigi
+
+\end{frame}
+
+
+
+\begin{frame}{The case $\alpha=2$}
+
+Let $\alpha=2$.
+\medskip
+
+\begin{itemize}
+\item $\|\cdot\|_{s,\sigma}$ is a Hilbert space norm, with the inner product
+\[
+\<X,Y\>_\sigma= \Tr X^*\sigma^{1/2}Y\sigma^{1/2}
+\]
+\item For a positive trace preserving map $\Phi:B(\Ha)\to B(\Ka)$,
+\[
+\<X,\Phi(Y)\>_{\Phi(\sigma)}=\<\Phi_\sigma(X),Y\>_\sigma,\qquad X\in B(\Ka),\ Y\in  B(\Ha)
+\]
+\item Since $\Phi$ is a contraction, 
+\[
+\|\Phi(Y)\|_{2,\Phi(\sigma)}=\|Y\|_{2,\sigma} \iff \Phi_\sigma\circ \Phi(Y)=Y.
+\]
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Preservation and reversibility}
+
+Let $\Phi$ be a channel and assume that for some $\alpha>1$,
+\[
+\|\Phi(\rho)\|_{\alpha,\Phi(\sigma)}=\|\rho\|_{\alpha,\sigma}\biggl(\iff \tilde
+D_\alpha(\Phi(\rho)\|\Phi(\sigma))=\tilde D_\alpha(\rho\|\sigma)\biggr)
+\]
+
+\begin{itemize}
+\item For $\alpha=2$, we get 
+\[
+\Phi_\sigma\circ\Phi(\rho)=\rho, \implies \Phi\text{ is
+reversible.}
+\]
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}{Preservation and reversibility}
+
+
+\end{frame}
+
+\end{document}
+
+
+\begin{frame}{Minimal sufficient subalgebra}
+
+
+ $\|\cdot\|_{2,\sigma}$ is a Hilbert\end{itemize}
+\bigskip
+
+Can be obtained by complex interpolation
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+\begin{frame}{Recoverability}
+
+
+\begin{mybox} \structure{Recoverability} = possibility to {reverse} the action of a {quantum
+channel} on a set of {states}
+\end{mybox}
+
+\bigskip
+
+\begin{itemize}
+\vskip 3mm
+\item exactly (sufficiency, reversibility) or approximately
+
+\vskip 3mm
+
+\item characterized by preservation (or decrease) of  some important quantities of quantum
+information theory.
+
+\end{itemize}
+
+\bigskip
+
+
+\begin{mybox}
+\structure{This talk}: quantities related to hypothesis testing
+\end{mybox}
+
+
+
+
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{Quantum relative entropy}
+
+%(Umegaki, 1962)
+$\Ha$ a Hilbert space, $\Te(\Ha)$ trace class, $\Se(\Ha)$ density operators
+
+%\bigskip
+\begin{mybox} \structure{Relative entropy}:  For  $\rho,\sigma\in \Se(\Ha)$ 
+\[
+D(\rho\|\sigma)=\begin{dcases} \Tr[\rho(\log(\rho)-\log(\sigma))], &  \supp(\rho)\le \supp(\sigma)\\
+ \\
+\ \infty, & \text{otherwise}.
+\end{dcases}
+\]
+\end{mybox}
+\vskip 3mm 
+
+\begin{mybox}\structure{Data processing inequality (DPI)}
+\[
+D(\Phi(\rho)\|\Phi(\sigma))\le D(\rho\|\sigma)
+\]
+for any \structure{quantum channel} $\Phi:\Te(\Ha)\to \Te(\Ka)$ (CPTP map)
+\end{mybox}
+
+
+\end{frame}
+
+
+
+\begin{frame}{Equality in DPI}
+
+
+
+\begin{mybox} \structure{Theorem} (Petz, 1986, 1988)  
+\vskip 3mm
+Let $\rho,\sigma\in \Se(\Ha)$,
+$D(\rho\|\sigma)<\infty$. Then 
+\[
+D(\Phi(\rho)\|\Phi(\sigma))=D(\rho\|\sigma)
+\]
+if and only if there is a \structure{recovery channel} $\Psi$: 
+\[
+\Psi\circ \Phi(\rho)=\rho,\qquad \Psi\circ\Phi(\sigma)=\sigma.
+\]
+\end{mybox}
+
+\bigskip
+
+%\begin{itemize}
+%\item 
+
+In this case, $\Phi$ is \structure{sufficient} for $\{\rho,\sigma\}$
+(related to classical \structure{sufficient statistics}).
+
+
+\end{frame}
+
+
+
+\begin{frame}{Universal  recovery channel }
+
+
+\begin{itemize}
+\item  \structure{Petz recovery map}: $\Phi_\sigma: \Te(\supp(\Phi(\sigma)))\to \Te(\Ha)$, 
+ \[
+\Phi_\sigma(\cdot)=
+\sigma^{1/2}\Phi^*(\Phi(\sigma)^{-1/2}\cdot \Phi(\sigma)^{-1/2})\sigma^{1/2}
+\]
+\item $\Phi_\sigma$ is a channel, $\Phi_\sigma\circ \Phi(\sigma)=\sigma$.
+
+\end{itemize}
+
+\medskip 
+
+\begin{mybox}\structure{Theorem} (Petz, 1986, 1988) 
+\vskip 3mm
+
+Let $\rho\in \Se(\Ha)$,
+$D(\rho\|\sigma)<\infty$. We have 
+\[
+D(\Phi(\rho)\|\Phi(\sigma))=D(\rho\|\sigma) \iff \Phi_\sigma\circ\Phi(\rho)=\rho.
+\]
+\end{mybox}
+
+
+
+
+
+
+\end{frame}
+
+
+\begin{frame}{Structure of sufficient channels}
+
+Assume that  $\sigma$ is faithful ($\supp(\sigma)=I$).
+\myfootnote{Luczak, 2014}
+\bigskip
+\begin{itemize}
+\item The set 
+\[
+\mathcal C=\{\Psi:\Te(\Ha)\to \Te(\Ha)\  \text{channel},\
+\Psi(\rho)=\rho,\Psi(\sigma)=\sigma\}
+\]
+is a convex, closed semigroup.
+\item By \structure{mean ergodic theorem}: there is some $E\in \mathcal C$, such that 
+\[
+E\circ \Phi=\Phi\circ E=E,\qquad \forall \Phi\in \mathcal C.
+\]
+
+\item  The adjoint $E^*$ is a \structure{conditional expectation} on $B(\Ha)$:
+the range of $E^*$ is a subalgebra and we have
+\[
+E^*(E^*(X)YE^*(Z))=E^*(X)E^*(Y)E^*(Z),\quad X,Y,Z\in B(\Ha).
+\]
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Structure of sufficient channels}
+
+
+$\mathcal M_{\rho,\sigma}:=E^*(B(\Ha))$ is the \structure{minimal sufficient subalgebra}
+ \medskip
+
+ There are (up to a unitary):
+
+\bigskip
+
+\begin{itemize}
+
+\item a decomposition  $\Ha=\bigoplus_n \Ha_n^L\otimes \Ha_n^R$ such that 
+\[
+\mathcal M_{\rho,\sigma}=\bigoplus_n B(\Ha_n^L)\otimes I_{\Ha_n^R}, 
+\]
+\item states $\sigma_n^R\in \Se(\Ha_n^R)$, $\sigma_n^L,\rho_n^L\in \Se(\Ha_n^L)$ and
+(discrete)\vskip 2mm
+probability distributions $p=\{p_n\}$, $q=\{q_n\}$ such that
+\[
+\rho=\bigoplus_n p_n (\rho_n^L\otimes \sigma_n^R),\qquad
+\sigma=\bigoplus_n q_n (\sigma_n^L\otimes \sigma_n^R)
+\]
+\item the pair $\{p,q\}$ the \structure{classical part} of $\{\rho,\sigma\}$.
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Structure of sufficient channels}
+
+
+
+\begin{mybox} \structure{Theorem}
+\vskip 2mm
+ $\Phi$ is sufficient with respect to $\{\rho,\sigma\}$ if and only if 
+
+\medskip
+\begin{itemize}
+\item $\mathcal M_{\rho,\sigma}\simeq \mathcal M_{\Phi(\rho), \Phi(\sigma)}$ 
+\item the restriction
+$\Phi^*|_{\mathcal M_{\Phi(\rho),\Phi(\sigma)}}$ is an \structure{isomorphism} onto $\mathcal
+M_{\rho,\sigma}$. 
+
+\end{itemize}
+
+\medskip
+In that case, for  any recovery channel  $\Psi$,  
+\[
+\Psi^*|_{\mathcal M_{\rho,\sigma}}=(\Phi^*|_{\mathcal M_{\Phi(\rho),\Phi(\sigma)}})^{-1}.
+\]
+
+
+\end{mybox}
+
+\bigskip
+
+This is a strong condition on the structure of the channel.
+\end{frame}
+
+
+\begin{frame}{Recoverability (approximate version)}
+
+
+\begin{mybox}\structure{Theorem} {\small (Fawzi, Renner 2015; Wilde 2015; Junge et
+al. 2018)}
+\vskip 3mm
+There exists a channel $\Phi^u_\sigma: \Te(\Ka)\to \Te(\Ha)$ such that 
+
+$\Phi^u_\sigma\circ
+\Phi(\sigma)=\sigma$ and for any $\rho\in \Se(\Ha)$, 
+\begin{align*}
+D(\rho\|\sigma)&\ge D(\Phi(\rho)\|\Phi(\sigma))-2\log F(\rho,\Phi^u_\sigma\circ
+\Phi(\rho))\\ &\ge D(\Phi(\rho)\|\Phi(\sigma))+ \frac14
+\|\rho-\Phi^u_\sigma\circ\Phi(\rho)\|_1^2.
+\end{align*}
+
+The \structure{universal recovery channel} $\Phi^u_\sigma$ can be chosen as 
+\[
+\Phi_{\sigma}^u(\cdot)=\int_{-\infty}^\infty
+\sigma^{-it}\Phi_{\sigma}(\Phi(\sigma)^{it}\cdot\Phi(\sigma)^{-it})\sigma^{it}\frac{\pi}{\cosh(2\pi t)+1}dt.
+\]
+
+\end{mybox}
+
+
+
+\end{frame}
+
+
+\begin{frame}{Other characterization of sufficiency (recoverability)}
+
+Equality in DPI and recoverability were studied for other quantities:
+\myfootnote{AJ, Petz 2006; Hiai et al. 2010; AJ 2012; Luczak 2014; Hiai, Mosonyi 2016;
+AJ 2018;
+Carlen, Vershynina 2020; Gao, Wilde 2020; Hiai 2021, Gao et al 2023,...}
+\bigskip
+
+\begin{itemize}
+\item standard $f$-divergences
+ %{\color{orange}(true for some $f$, not all) }
+\vskip 2mm
+\item {max (min) $f$-divergences} 
+
+\vskip 2mm
+\item {optimized $f$-divergences}
+
+\vskip 2mm
+\item standard (Petz) R\'enyi divergences
+
+\vskip 2mm
+\item {sandwiched R\'enyi divergences}
+
+\vskip 2mm
+\item {quantum Fisher information} 
+\end{itemize}
+
+
+\medskip
+\begin{mybox}
+We are interested in quantities related to \structure{quantum hypothesis testing (state
+discrimination)}.
+\end{mybox}
+
+
+\end{frame}
+
+
+
+\begin{frame}{Quantum hypothesis testing}
+
+Suppose $\rho,\sigma\in \Se(\Ha)$ are given, one of them is the true state:
+
+
+\bigskip
+
+\begin{itemize}
+\item we test the hypothesis $H_0=\sigma$ against $H_1=\rho$
+\item a \structure{test}: an effect $0\le T\le I$, 
+\[
+\Tr[T\omega] - \text{probability of rejecting $H_0$
+in the state $\omega$}
+\]
+\item error probabilities: 
+\[
+\alpha(T)=\Tr[\sigma T],\qquad \beta(T)= \Tr[\rho(I-T)]
+\]
+\item  Bayes error probabilities for $\lambda\in [0,1]$: 
+\[
+P_e(\lambda,\sigma,\rho,T):=\lambda\alpha(T)+(1-\lambda)\beta(T)
+\]
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}{Quantum Neyman-Pearson lemma}
+
+
+ Put $P_{s,\pm}:=\supp((\rho-s\sigma)_\pm)$, $P_{s,0}:=I-P_{s,+}-P_{s,-}$.
+
+
+\bigskip
+ A test $T$ is \structure{Bayes optimal} for $\lambda\in (0,1)$ if and only if
+\[
+T=P_{s,+}+X,\quad 0\le X\le P_{s,0},\qquad s=\frac{\lambda}{1-\lambda}
+\]
+and then
+\begin{align*}
+P_e(\lambda,\sigma,\rho)&:=\min_{0\le T\le I} P_e(\lambda,\sigma,\rho,T)\\
+&=(1-\lambda)(1-\Tr[(\rho-s\sigma)_+])\\
+&=(1-\lambda)(s-\Tr[(\rho-s\sigma)_-])\\
+&=\frac12(1-(1-\lambda)\|\rho-s\sigma\|_1).
+\end{align*}
+
+
+
+\end{frame}
+
+
+\begin{frame}{Data processing inequalities}
+
+ We clearly have  for any quantum channel $\Phi$ and $\lambda\in [0,1]$:
+\[
+P_e(\lambda,\Phi(\sigma),\Phi(\rho))\ge P_e(\lambda,\sigma,\rho),
+\]
+\medskip
+
+or equivalently, for any $s\in \mathbb R$:
+\begin{align*}
+\|\Phi(\rho)-s\Phi(\sigma)\|_1&\le \|\rho-s\sigma\|_1;\\[0.3em]
+\Tr[(\Phi(\rho)-s\Phi(\sigma))_+]&\le \Tr[(\rho-s\sigma)_+];\\[0.3em]
+\Tr[(\Phi(\rho)-s\Phi(\sigma))_-]&\le \Tr[(\rho-s\sigma)_-].
+\end{align*}
+
+
+
+
+\end{frame}
+
+
+\begin{frame}{Equality in DPI}
+
+The following are equivalent:
+
+\bigskip
+
+\begin{itemize}
+\item $P_e(\lambda,\Phi(\sigma),\Phi(\rho))= P_e(\lambda,\sigma,\rho)$, $\lambda\in [0,1]$;
+\item $\|\Phi(\rho)-s\Phi(\sigma)\|_1=\|\rho-s\sigma\|_1$, $s\in \mathbb R$;
+\item $\Tr[(\Phi(\rho)-s\Phi(\sigma))_+]= \Tr[(\rho-s\sigma)_+]$, $s\in \mathbb R$;
+\item $\Tr[(\Phi(\rho)-s\Phi(\sigma))_-]= \Tr[(\rho-s\sigma)_-]$, $s\in \mathbb R$;
+\item $\Phi^*(Q_{s,+})=P_{s,+}$, $s\in \mathbb R$;
+\item $\Phi^*(Q_{s,-})=P_{s,-}$, $s\in \mathbb R$.
+
+
+\medskip
+
+\hskip 2cm ( $Q_{s,\pm}=\supp((\Phi(\rho)-s\Phi(\sigma))_\pm)$)
+
+\bigskip
+\item \structure{ sufficiency/recoverability?}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Previous results on equality in DPI}
+
+\myfootnote{Blume-Kohout et al., 2010; Ticozzi \& Viola, 2010; AJ, 2010, 2012; Luczak, 2015}
+
+
+More assumptions are needed:
+
+\bigskip 
+
+\begin{itemize}
+\item equality in DPI for all pairs in a larger set of states,
+\vskip 3mm
+\item or for $\Phi^{\otimes n}$, $\rho^{\otimes n}$ and $\sigma^{\otimes n}$, for all
+$n\in \mathbb N$,
+\vskip 3mm
+\item $\Phi$ has commutative range.
+\end{itemize}
+
+\bigskip
+
+For the asymptotic case (quantities related to error exponents):
+\medskip
+\begin{itemize}
+\item equality in DPI for Chernoff  or Hoeffding distances implies sufficiency of the
+channel
+\end{itemize}
+\bigskip
+
+Recoverability (approximate case): no results
+
+
+\end{frame}
+
+
+
+\begin{frame}{An integral formula for relative entropy}
+
+\begin{mybox} \structure{Theorem} (Frenkel, arxiv:2208.12194)
+\vskip 3mm
+For any $\rho,\sigma\in \Se(\Ha)$:
+\medskip
+
+\[
+D(\rho\|\sigma)=\int_{-\infty}^\infty \frac{dt}{|t|(1-t)^2}\Tr[((1-t)\rho+t\sigma)_-]
+\]
+
+\end{mybox}
+
+\bigskip
+
+\begin{itemize}
+\item proved for $\dim(\Ha)<\infty$
+\vskip 3mm
+\item extends to infinite dimensions.
+
+
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{An integral formula for relative entropy}
+\bigskip
+
+A slight reformulation: 
+
+\bigskip 
+\begin{mybox}
+For $\mu,\lambda\ge 0$ such that  $\mu\sigma\le \rho\le \lambda\sigma$:
+\medskip
+\[
+D(\rho\|\sigma)=\int_\mu^\lambda \frac{ds}{s}\Tr[(\rho-s\sigma)_-]+ \log(\lambda)+1-\lambda
+\]
+\end{mybox}
+
+\medskip
+
+\begin{itemize}
+
+\item we may always put $\mu=0$,
+\item if $\dim(\Ha)<\infty$: if such $\lambda$ does not exist, then
+$D(\rho\|\sigma)=\infty$,
+\item in general:
+\[
+D(\rho\|\sigma)=\lim_{\lambda\searrow 0}D(\rho\|\lambda\rho+(1-\lambda)\sigma)
+\]
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Sufficient channels via hypothesis testing}
+
+\begin{mybox}\structure{Theorem}
+\vskip 3mm
+Let $\rho, \sigma\in \Se(\Ha)$ be any states, $\sigma_0=\frac12(\rho+\sigma)$, $\Phi$ a channel.  
+
+\medskip
+
+The following are equivalent:
+
+\bigskip
+
+\begin{itemize}
+
+\item $P_e(\lambda,\Phi(\sigma),\Phi(\rho))= P_e(\lambda,\sigma,\rho)$, $\lambda\in [0,1]$;
+\vskip 3mm
+\item $\|\Phi(\rho)-s\Phi(\sigma)\|_1=\|\rho-s\sigma\|_1$, $s\in \mathbb R$;
+\vskip 3mm
+\item $D(\rho\|\sigma_0)=D(\Phi(\rho),\Phi(\sigma_0))$;
+
+\vskip 3mm
+
+\item $\Phi^u_{\sigma_0}\circ \Phi(\rho)=\rho$;
+\vskip 3mm
+
+\item $\Phi$ is sufficient with respect to $\{\rho,\sigma\}$.
+\end{itemize}
+
+\end{mybox}
+
+
+\end{frame}
+
+
+\begin{frame}{Recoverability via hypothesis testing}
+
+
+We will need a further assumption on $\rho,\sigma$:
+
+\[
+D_H(\rho\|\sigma):=\inf\{\frac \lambda\mu,\ \lambda,\mu>0, \mu\sigma\le \rho\le
+\lambda\sigma\}<\infty
+\]
+
+\medskip
+
+\begin{itemize}
+
+\item $D_H$ is the \structure{Hilbert projective metric},
+\vskip 3mm
+
+\item $D_H(\rho\|\sigma)=D_{\max}(\rho\|\sigma)+D_{\max}(\sigma\|\rho)$, 
+\vskip 3mm
+
+\item if $\dim(\Ha)<\infty$, the assumption is equivalent to 
+\[
+\supp(\rho)=\supp(\sigma),
+\]
+\item if $\dim(\Ha)=\infty$: a much stronger assumption.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Recoverability via hypothesis testing}
+\begin{mybox}\structure{Theorem}
+\vskip 3mm
+Let $\rho,\sigma\in \Se(\Ha)$, $\Phi$ a  channel. If there is some $\epsilon \ge 0$ such that
+\[
+\|\Phi(\rho)-s\Phi(\sigma)\|_1\ge \|\rho-s\sigma\|_1-\epsilon,\qquad \forall s\ge 0,
+\]
+then 
+\[
+\|\Phi^u_\sigma\circ \Phi(\rho)-\rho\|_1\le
+\sqrt{2\epsilon}D_H(\rho,\sigma)^{1/2}.
+\]
+\end{mybox}
+
+
+\
+
+
+\end{frame}
+
+\begin{frame}{Compatible channels}
+The channels
+\[
+\Phi_1: \Te(\Ha)\to \Te(\Ka_1), \qquad \Phi_2: \Te(\Ha)\to \Te(\Ka_2)
+\]
+are \structure{compatible} if there is a joint channel 
+\[
+\Lambda: \Te(\Ha)\to
+\Te(\Ka_1\otimes \Ka_2)
+\]
+such that
+\vskip 3mm
+\[
+\Phi_1=\mathrm{Tr}_{\Ka_2}\circ \Lambda,\qquad \Phi_2=\mathrm{Tr}_{\Ka_1}\circ \Lambda.
+\]
+
+
+\end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}{Sufficiency and compatibility of channels}
+
+\myfootnote{cf. Kaniowski et al, 2015; Kuramochi, 2018}
+
+\begin{mybox}\structure{Theorem} 
+\vskip 3mm
+Let $\rho,\sigma\in \Se(\Ha)$ with $\{p,q\}$ - the classical part of $\{\rho,\sigma\}$.
+\vskip 3mm
+\begin{itemize}
+\item If $\Phi_1$ and $\Phi_2$ are compatible channels and $\Phi_1$  is sufficient for
+$\{\rho,\sigma\}$, then there are some states $\tau_n$
+such that
+\[
+\Phi_2(\rho)=\sum_n p_n\tau_n,\qquad \Phi_2(\sigma)=\sum_n q_n\tau_n.
+\]
+\item If the above condition holds for any channel compatible with $\Phi_1$, then $\Phi_1$ is
+sufficient for $\{\rho,\sigma\}$.
+
+\end{itemize}
+
+
+\end{mybox}
+
+
+
+\end{frame}
+
+
+\begin{frame}{Broadcasting}
+
+ \structure{A broadcasting channel}: for $\rho\in \Se(\Ha)$ 
+
+\medskip
+
+\begin{center}
+\begin{minipage}[c]{0.4\textwidth}
+%\centering
+\includegraphics[scale=0.8]{broadcasting2.t1.pdf}
+\end{minipage}
+\begin{minipage}[c]{0.4\textwidth}
+\centering
+\includegraphics[scale=0.8]{broadcasting1.t1.pdf}
+\end{minipage}
+\end{center}
+
+\medskip
+
+\begin{itemize}
+\item \structure{no-broadcasting}: 
+\[
+\mathrm{Tr}_2\circ \Lambda(\rho)=\mathrm{Tr}_1\circ \Lambda(\rho)=\rho \text{ for all }\rho 
+ \text{ is \structure{impossible}}
+ \]
+\item  restricted to  $\rho\in \Se\subset \Se(\Ha)$: 
+\[
+\text{broadcasting is 
+possible }\iff \Se  \text{ is
+\structure{commutative}.}
+\]
+
+\end{itemize}
+
+
+
+\end{frame}
+
+\begin{frame}{Broadcasting and distinguishability}
+
+Put  $\Se=\{\rho,\sigma\}$ and  require that for all $\lambda\in [0,1]$,
+\begin{align*}
+P_e(\lambda,\mathrm{Tr}_1\circ\Lambda(\rho),\mathrm{Tr}_1\circ\Lambda(\sigma))&=P_e(\lambda,\mathrm{Tr}_2\circ\Lambda(\rho),\mathrm{Tr}_2\circ\Lambda(\sigma))\\[2mm]
+&=P_e(\lambda,\rho,\sigma).
+\end{align*}
+
+
+\medskip
+
+\begin{itemize}
+\item possible only if $\rho$ and $\sigma$ commute
+\vskip 3mm
+
+\item If $P_e(\lambda,\mathrm{Tr}_2\circ\Lambda(\rho),\mathrm{Tr}_2\circ\Lambda(\sigma))
+=P_e(\lambda,\rho,\sigma)$ for all $\lambda$, then 
+\[
+P_e(\lambda,\mathrm{Tr}_1\circ\Lambda(\rho),\mathrm{Tr}_1\circ\Lambda(\sigma))\ge
+P_e(\lambda, p,q),\quad \forall \lambda\in [0,1],
+\]
+$\{p,q\}$ is the classical part of $\{\rho,\sigma\}$.
+
+\end{itemize}
+
+
+
+
+\end{frame}
+
+
+
+
+i$\Phi$ is \structure{sufficient} with respect to $\{\rho,\sigma\}$.
+
+
+\bigskip 
+
+
+\end{frame}
+
+
+
