@@ -40,5 +40,18 @@ From Budapest visit, 15.10-20.10. 2023:
 ### Papers to study
 
 
-* [mosonyi2023thestrong](mosonyi2023thestrong) Milan's paper on the strong converse exponent in infinite dimensions, etc.    
-* [hayashi2016correlation](hayashi2016correlation) operational interpretation of conditional Rényi entropy
+1. **Rényi relative entropies in infinite dimensions** 
+
+    * [mosonyi2023thestrong](mosonyi2023thestrong) Milan's paper on the strong converse exponent in infinite dimensions, etc.    
+    * [hayashi2016correlation](hayashi2016correlation) operational interpretation of conditional Rényi entropy
+
+1. **Additivity of maximal Rényi divergence**   
+
+    * [matsumoto2015anew](matsumoto2015anew) the max version is known to be additive for $\alpha\le 2$, but what can be obtained for larger $\alpha$?
+
+
+1. **Multivariate Rényi relative entropies, statistical isomorphisms and sufficiency**
+
+    * [mosonyi2022geometric](mosonyi2022geometric) some definitions of multivariate Renyi divergences, by variational formulas.
+
+
