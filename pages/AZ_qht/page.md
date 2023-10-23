@@ -1,4 +1,4 @@
-title: Work on quantum hypothesis testing 
+title: Work on quantum hypothesis testing
 ---
 
 ## Basics
@@ -30,3 +30,15 @@ Reference: [BOOK_hayashi2017quantum](BOOK_hayashi2017quantum)
 
 
  [Notes](AZ_qht/notes.pdf)
+
+
+## Work with Milan Mosonyi
+
+
+From Budapest visit, 15.10-20.10. 2023:
+
+### Papers to study
+
+
+* [mosonyi2023thestrong](mosonyi2023thestrong) Milan's paper on the strong converse exponent in infinite dimensions, etc.    
+* [hayashi2016correlation](hayashi2016correlation) operational interpretation of conditional Rényi entropy
