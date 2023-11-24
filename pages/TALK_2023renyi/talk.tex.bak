@@ -196,9 +196,9 @@ The \structure{Petz dual} of $\Phi$ with respect to $\sigma$
 
 \begin{frame}{Semigroup of channels preserving $\Se$}
 
-%How to describe all channels reversible with respect to $\Se$?
+How to describe all channels reversible with respect to $\Se$?
 
-%\medskip
+\medskip
 
 Let us consider the set of channels 
 \[
@@ -216,8 +216,6 @@ By the \structure{mean ergodic theorem}, there is some  $\Ee_\Se\in \Ce_\Se$ suc
 \[
 \Ee_\Se\circ \Theta=\Theta\circ \Ee_\Se=\Ee_\Se,\qquad \forall \Theta\in \Ce_\Se.
 \]%(Kummerer and Nagel,...) 
-{\footnotesize \textcolor{orange}{B. K\"ummerer, R. Nagel, Acta Sci. Math., 1979}}
-\medskip
 
 We see that such $\Ee_\Se$ is unique and
 \[
@@ -236,14 +234,12 @@ The adjoint  $\Ee^*_\Se$ is a faithful  \structure{conditional expectation}
 \[
 \implies
 \]
-its  range is a \structure{subalgebra} $\Me_\Se:= \Ee^*_\Se(B(\Ha))$. 
-
-\bigskip
+its  range is a \structure{subalgebra} $\Me_\Se:= \Ee^*_\Se(B(\Ha))$. \bigskip
 
 $\Me_\Se$ is the \structure{minimal sufficient subalgebra} with respect to $\Se$:
 \medskip
 \begin{itemize}
-\item $\rho\mapsto \rho|_{\Me_\Se}$ is a  channel reversible with respect to $\Se$
+\item $\rho\mapsto \rho|_{\Me_\Se}$ is a sufficient channel
 \item $\Me_\Se$ is contained in any subalgebra with this property.
 
 \end{itemize}
@@ -264,11 +260,6 @@ There is a decomposition $\Ha\equiv\oplus_n \Ha_n^L\otimes \Ha_n^R$ such that
 \Ee(B(\Ha))\equiv \bigoplus_n B(\Ha_n^L)\otimes \omega_n
 \end{align*}
 for some  \structure{fixed} states  $\omega_n\in B(\Ha_n^R)$.
-\vfill
-
-{\footnotesize \textcolor{orange}{P. Hayden, R. J\'osza, D. Petz, A. Winter,  	Commun.
-Math. Phys., 2004}} 
-
 \end{frame}
 
 
@@ -277,12 +268,12 @@ Math. Phys., 2004}}
 Applying this to $\Ee_\Se$, we obtain
 \begin{align*}
 \Me_\Se&\equiv \bigoplus_n B(\Ha_n^{\Se,L})\otimes I_{\Ha_n^{\Se,R}}\\
-\rho&\equiv \bigoplus_n \mu_n(\rho) \rho_n\otimes \sigma_n,\qquad \forall \rho\in \Se, 
+\rho&\equiv \bigoplus_n \mu_n(\rho) \rho_n\otimes \sigma_n,\qquad \rho\in \Se, 
 \end{align*}
 
 %where
 \begin{itemize}
-\item $\{\mu_n(\rho)\} $ is a probability distribution (classical part of $\Se$)
+\item $\mu_n(\rho) $ is a probability dsitribution (classical part of $\Se$)
 \item  $\rho_n\in B(\Ha_n^{\Se,L})$ are states
 (depending on $\rho$) 
 \item $\sigma_n\in B(\Ha_n^{\Se,R})$ are fixed states.
@@ -395,17 +386,17 @@ such that
 
 \item Connes cocycles
 \[
-\Phi^*(\Phi(\rho)^{it}\Phi(\sigma)^{-it})=\rho^{it}\sigma^{-it},\qquad \forall\rho\in \Se,\ t\in
+\Phi^*(\Phi(\rho)^{it}\Phi(\sigma)^{-it})=\rho^{it}\sigma^{-it},\qquad \rho\in \Se,\ t\in
 \mathbb R;
 \]
 \item Radon-Nikodym derivatives:
 \[
 \Phi^*(\Phi(\sigma)^{-1/2}\Phi(\rho)\Phi(\sigma)^{-1/2})=\sigma^{1/2}\rho\sigma^{1/2},\qquad
-\forall \rho\in \Se;
+\rho\in \Se;
 \]
 \item Petz dual 
 \[
-\Phi_\sigma\circ \Phi(\rho)=\rho,\qquad \forall \rho\in \Se.
+\Phi_\sigma\circ \Phi(\rho)=\rho,\qquad \rho\in \Se.
 \]
 
 \end{itemize}
@@ -582,8 +573,6 @@ The norm can be obtained by complex interpolation between
 \[
 \|X\|_{1,\sigma}=\Tr|X|=\|X\|_1,\qquad  \|X\|_{\infty,\sigma}=\|\sigma^{-\frac12}X\sigma^{-\frac12}\|
 \]
-\vfill
-{\footnotesize \textcolor{orange}{S. Beigi, J. Math. Phys., 2013}}
 
 
 \end{frame}
@@ -596,9 +585,8 @@ For any function on $S=\{z\in \mathbb C,\ \mathrm{Re}(z)\in [0,1]\}$,
 \[
 f:S\to B(\Ha),\quad \text{continuous, analytic in } \mathrm{int}(S)
 \]
-we have:
 \begin{itemize}
-\item  for any $\alpha>1$,
+\item we have for any $\alpha>1$,
 \[
 \|f(1/\alpha)\|_{\alpha,\sigma}\le \max_{t\in \mathbb R}
 \|f(it)\|_{\infty,\sigma}\max_{t\in \mathbb R}\|f(1+it)\|_1
@@ -666,7 +654,7 @@ Let $\alpha=2$.
 \medskip
 
 \begin{itemize}
-\item $\|\cdot\|_{2,\sigma}$ is a Hilbert space norm, with the inner product
+\item $\|\cdot\|_{s,\sigma}$ is a Hilbert space norm, with the inner product
 \[
 \<X,Y\>_\sigma= \Tr X^*\sigma^{1/2}Y\sigma^{1/2}
 \]
@@ -715,7 +703,7 @@ Then
 \|\rho\|_{\bar\alpha,\sigma}&=\|f(1/\bar\alpha)\|_{\bar\alpha,\sigma}=\|\Phi(f(1/\bar\alpha))\|_{\bar\alpha,\Phi(\sigma)}\\
 &\le 
 \max_{t\in \mathbb R}
-\|\Phi(f(it))\|_{\infty,\Phi(\sigma)}\max_{t\in \mathbb R}\|\Phi(f(1+it))\|_1\\
+\|\Phi(f(it))\|_{\infty,\sigma}\max_{t\in \mathbb R}\|\Phi(f(1+it))\|_1\\
 &\le \max_{t\in \mathbb R}
 \|f(it)\|_{\infty,\sigma}\max_{t\in \mathbb R}\|f(1+it)\|_1=\|\rho\|_{\bar\alpha,\sigma}
 \end{align*}
@@ -748,11 +736,6 @@ for
 We know that $\Phi_\sigma\circ\Phi(\rho)=\rho$ iff $\rho$ is of the form
 \[
 \rho\equiv \bigoplus_n \rho_n\otimes \omega_n\qquad \text{(with fixed faithful states $\omega_n$)}
-\]
-with respect to the decomposition
-\[
-\Ha\equiv \oplus_n
-\Ha_n^{\Phi,\sigma,L}\otimes\Ha_n^{\Phi,\sigma,R}.
 \]
 Since  $\Phi_\sigma\circ\Phi(\sigma)=\sigma$ and $\Phi_\sigma\circ\Phi(\tau)=\tau$, this
 must be true.
@@ -1022,9 +1005,8 @@ D(\rho\|\sigma)=\int_0^\lambda \frac{ds}{s}\Tr[(\rho-s\sigma)_-]+ \log(\lambda)+
 \begin{frame}{Reversibility via hypothesis testing}
 
 Let $\rho, \sigma\in B(\Ha)$ be any states, $\Phi: B(\Ha)\to B(\Ka)$ a channel.
-\bigskip
-
-Assume that
+\medskip
+Asssume that
 \[
 P_e(\lambda,\Phi(\sigma),\Phi(\rho))= P_e(\lambda,\sigma,\rho), \lambda\in [0,1]
 \]

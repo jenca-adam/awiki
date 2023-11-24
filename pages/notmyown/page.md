@@ -111,6 +111,8 @@ title: Not my own papers
 [grumm1973two](grumm1973two)
 
 ### H
+[hayden2004structure](hayden2004structure),
+[hayashi2016correlation](hayashi2016correlation),
 [hayashi2007error](hayashi2007error),
 [hirche2023quantum](hirche2023quantum),
 [heinosaari2016aninvitation](heinosaari2016aninvitation),
@@ -156,6 +158,8 @@ title: Not my own papers
 [junge2003noncommutative](junge2003noncommutative)
 
 ### K
+[kato2023onzrnyi](kato2023onzrnyi),
+[kato2023aremark](kato2023aremark),
 [koashi2002operations](koashi2002operations),
 [kribs2018quantum](kribs2018quantum),
 [kuramochi2018accessible](kuramochi2018accessible),
@@ -181,12 +185,13 @@ title: Not my own papers
 
 
 ### M
+[mosonyi2022geometric](mosonyi2022geometric),
 [mosonyi2015quantum](mosonyi2015quantum),
 [mullerhermes2017monotonicity](mullerhermes2017monotonicity),
 [mosonyi2004structure](mosonyi2004structure),
 [masanes2011aderivation](masanes2011aderivation),
 [mosonyi2014strongconverse](mosonyi2014strongconverse),
-[mosonyi2021thestrong](mosonyi2021thestrong),
+[mosonyi2023thestrong](mosonyi2023thestrong),
 [majewski2015whyareorlicz](majewski2015whyareorlicz),
 [mosonyi2018divergence](mosonyi2018divergence),
 

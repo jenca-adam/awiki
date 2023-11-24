@@ -1,10 +1,11 @@
-title: mosonyi2021thestrong
+title: mosonyi2023thestrong
 ---
 
 
 ## Reference
 
-Milán Mosonyi;The strong converse exponent of discriminating infinite-dimensional quantum states;; Jul 2021;
+Mosonyi, Milán. "The strong converse exponent of discriminating infinite-dimensional quantum states." Communications in Mathematical Physics 400.1 (2023): 83-132.
+
 
 ## Abstract 
 
@@ -37,4 +38,5 @@ setting.
 
     
 
-[arxiv:2107.08036](https://arxiv.org/abs/2107.08036)
+[arxiv:2107.08036](https://arxiv.org/abs/2107.08036)    
+[doi](https://doi.org/10.1007/s00220-022-04598-1)   

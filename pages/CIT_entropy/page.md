@@ -50,6 +50,18 @@ title: References for relative entropy and entropy and Lp spaces
 
 * [trunov1979anoncommutative](trunov1979anoncommutative)
 
+### $\alpha-z$ - Renyi relative entropies
+
+In von Neumann algebras:
+
+* [kato2023onrenyi](kato2023onrenyi) $\alpha-z$ Renyi divergences in von Neumann algebra setting    
+* [kato2023aremark](kato2023aremark) tensor product of Haagerup $L_p$-spaces    
+* [gu2019interpolation](gu2019interpolation) interpolation of Haagerup $L_p$-spaces for $p<1$.    
+
+
+
+
+
 ### Quantum $f$-divergences
 
 

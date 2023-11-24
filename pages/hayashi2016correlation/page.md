@@ -11,4 +11,5 @@ A variety of new measures of quantum Renyi mutual information and quantum Renyi 
     
 
 [arxiv:1408.6894v5](https://arxiv.org/abs/1408.6894v5)    
-[doi]()
+[doi](https://doi.org/10.1063/1.4964755)
+
