@@ -1,9 +1,10 @@
 title: To referee
 ---
 
-* Due [3.11.2023](REF_karn2023)    
-* Due [17.11.2023](REF_luczak2023)     
 * Due [23.11.2023](REF_keli2023)
+* Due [4.12.2023](REF_karn2023)    
+
+
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
 
@@ -28,6 +29,8 @@ title: To referee
 1. <del> Due [12.9.2023](REF_beneduci2023)</del> Done.
 1. <del> Due [12.9.2023](REF_li2023)</del> Done.    
 1. <del>Due [30.9.2023](REF_lipka2023)</del> Done.    
+1. <del> Due [17.11.2023](REF_luczak2023)</del> Done.    
+
 
 ### Reviews finished 2022
 
