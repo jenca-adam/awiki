@@ -30,7 +30,7 @@ title: To referee
 1. <del> Due [12.9.2023](REF_li2023)</del> Done.    
 1. <del>Due [30.9.2023](REF_lipka2023)</del> Done.    
 1. <del> Due [17.11.2023](REF_luczak2023)</del> Done.     
-1.<del> Due [23.11.2023](REF_keli2023)</del> Done.    
+1. <del> Due [23.11.2023](REF_keli2023)</del> Done.    
 
 
 ### Reviews finished 2022
