@@ -1,7 +1,7 @@
-title: Ke Li, Yao, 2023 
+title: Ke Li, Yao, 2023
 ---
 
-**Paper:** Reliability Function of Quantum Information Decoupling via the Sandwiched R´enyi Divergence
+**Paper:** Ke Li, Yongsheng Yao: Reliability Function of Quantum Information Decoupling via the Sandwiched R´enyi Divergence
  
 **Journal:** CMP
 
@@ -11,5 +11,4 @@ title: Ke Li, Yao, 2023
 
 
 **Decision:** 
-
 
