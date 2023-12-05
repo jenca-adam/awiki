@@ -1,7 +1,7 @@
 title: karn, 2023, AIOT
 ---
 
-**Paper:**   On the geometry of an order unit space
+**Paper:** A. K. Karn,  On the geometry of an order unit space
  
 **Journal:** Advances in Operator Theory
 
