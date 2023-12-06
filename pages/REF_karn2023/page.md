@@ -10,6 +10,8 @@ title: karn, 2023, AIOT
 [file](REF_karn2023/file.pdf)
 
 
-**Decision:** 
+**Decision:** major rewrite
+
+[report](REF_karn2023/report.pdf)
 
 
