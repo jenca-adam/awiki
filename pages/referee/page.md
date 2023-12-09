@@ -2,7 +2,7 @@ title: To referee
 ---
 
 
-
+* Due [23.12.2023](REF_arai2023)
 
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??

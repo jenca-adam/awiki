@@ -2,14 +2,22 @@
 title: Rényi relative entropy in von Neumann algebras
 ---
 
-*  **Description:**   
-*  **People:**   
-*  **Related to:**  sufficiency, qre   
-*  **Repository:** ?
 
----
+## 1. $\alpha-z$ - Renyi relative entropies
 
-## $\alpha-z$ - Renyi relative entropies
+**With: Fumio Hiai, Shinya Kato, Yoshimichi Ueda(?)**
+
+
+### References
+
+Finite dimensional
+
+* [zhang2020fromwyd](zhang2020fromwyd)    
+
+The $B(\mathcal H)$ case
+
+* [mosonyi2023thestrong](mosonyi2023thestrong)
+
 
 In von Neumann algebras:
 
@@ -17,36 +25,48 @@ In von Neumann algebras:
 * [kato2023aremark](kato2023aremark) tensor product of Haagerup $L_p$-spaces    
 * [gu2019interpolation](gu2019interpolation) interpolation of Haagerup $L_p$-spaces for $p<1$.    
 
+Notes
+
+* [My note on DPI](NEW_qre/notes.pdf)    
+* [Kato's note on variational expression](NEW_qre/note_kato.pdf)    
+* [Fumio's note with questions](NEW_qre/note_hiai.pdf)    
+* [Fumio's note with martingale convergence](NEW_qre/note_hiai2.pdf)    
+
+
+Tools
+
+
+* [kosaki1984applications](kosaki1984applications) noncommutative $L_p$-spaces    
+* [haagerup2010areduction](haagerup2010areduction) Haagerup reduction theorem    
 
 
 
 
-## Tasks
+Myown 
 
-1. Write the proof of recoverability in von Neumann algebras following
-   [faulkner2020approximate2](faulkner2020approximate2)     
-   * Study something about Poisson integral representations (interpolation), applied to $z\mapsto [D\varphi: S\omega]\_{iz}\Omega$ and related functions, differentiability etc.    
-   * the rotated and universal Petz maps?    
-   * what about recoverability via the measured relative entropy?
-1. Operational interpretation:     
-    * study the finite dimensional case and the extension to injective von Neumann algebras    
-    * prove for finite von Neumann algebras
-    * try to use the  [haagerup2010areduction](haagerup2010areduction) for the general case 
+* [jencova2021renyi](jencova2021renyi) sandwiched Rényi rel. entropies, $1/2\le \alpha<1$  
+* [jencova2018renyi](jencova2018renyi) sandwiched Rényi rel. entropies, $\alpha>1$           
+* [jencova2017preservation](jencova2017preservation) sandwiched RRE and sufficiency, $\alpha>1$  (matrix algebras)    
+* [jencova2006sufficiencyfirst](jencova2006sufficiencyfirst) with D. Petz, sufficiency     
+* [jencova2006sufficiency](jencova2006sufficiency) with D. Petz, sufficiency, review with examples2
+     
 
 
+---
+
+
+---
+
+## Further topics
 
 
 
-
-
-## References  
-
-### Regularized Rényi divergence (operational interpretation)
+### Operational interpretation of  Rényi divergence (infinite dimensions)
 
 
 
 * [mosonyi2014strongconverse](mosonyi2014strongconverse) operational interpretation (strong converse) for $\alpha>1$, finite dimension     
-* [mosonyi2021thestrong](mosonyi2021thestrong) strong converse, infinite dimensional (type I)    
+* [mosonyi2023thestrong](mosonyi2023thestrong) strong converse, infinite dimensional (type I)    
 * [hiai2021quantum](hiai2021quantum) strong converse, injective von Neumann algebras
 
 
@@ -73,42 +93,4 @@ In von Neumann algebras:
 
 
 
-### Myown
-
-* [jencova2021renyi](jencova2021renyi) sandwiched Rényi rel. entropies, $1/2\le \alpha<1$  
-* [jencova2018renyi](jencova2018renyi) sandwiched Rényi rel. entropies, $\alpha>1$           
-* [jencova2017preservation](jencova2017preservation) sandwiched RRE and sufficiency, $\alpha>1$  (matrix algebras)    
-* [jencova2006sufficiencyfirst](jencova2006sufficiencyfirst) with D. Petz, sufficiency     
-* [jencova2006sufficiency](jencova2006sufficiency) with D. Petz, sufficiency, review with examples2
-     
-
-
----
-
-## Research
-
-
-
-### Notes
-
-
-
-### Todo
-
-
-
-### Ideas
-
----
-
-## Finished
-
-### Papers
-
-
-### Talks/posters
-
----
-
-## Ideas for further research
 

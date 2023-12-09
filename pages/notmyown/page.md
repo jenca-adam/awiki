@@ -69,6 +69,7 @@ title: Not my own papers
 [ekeland1999convex](BOOK_ekeland1999convex),
 
 ### F
+[fack1986generalized](fack1986generalized),  
 [fawzi2021defining](fawzi2021defining),
 [fawzi2022asymptotic](fawzi2022asymptotic),
 [fuchs1999cryptographic](fuchs1999cryptographic),
@@ -295,6 +296,7 @@ title: Not my own papers
 
 
 ### Z
+[zhang2020fromwyd](zhang2020fromwyd),
 [zjawin2021quantifying](zjawin2021quantifying),
 [zolotarev1982lpspaces](zolotarev1982lpspaces),
 
