@@ -5,14 +5,16 @@ title: Rényi relative entropy in von Neumann algebras
 
 ## 1. $\alpha-z$ - Renyi relative entropies
 
-**With: Fumio Hiai, Shinya Kato, Yoshimichi Ueda(?)**
+**With: Fumio Hiai, Shinya Kato, Yoshimichi Ueda**
 
 
 ### References
 
 Finite dimensional
 
-* [zhang2020fromwyd](zhang2020fromwyd)    
+* [audenaert205alpha](audenaert205alpha) introduction of $\alpha-z$-Renyi relative entropies    
+* [lin2015investigating](lin2015investigating) limit to 1, derivative at 1    
+* [zhang2020fromwyd](zhang2020fromwyd) proof of DPI in bounds       
 
 The $B(\mathcal H)$ case
 
@@ -24,14 +26,16 @@ In von Neumann algebras:
 * [kato2023onrenyi](kato2023onrenyi) $\alpha-z$ Renyi divergences in von Neumann algebra setting    
 * [kato2023aremark](kato2023aremark) tensor product of Haagerup $L_p$-spaces    
 * [gu2019interpolation](gu2019interpolation) interpolation of Haagerup $L_p$-spaces for $p<1$.    
+* [berta2018renyi](berta2018renyi) sandwiched Renyi divergence via Araki-Masuda $L_p$-spaces
 
 Notes
 
 * [My note on DPI](NEW_qre/notes.pdf)    
+* [My note on limit to 1](NEW_qre/notes2.pdf)    
 * [Kato's note on variational expression](NEW_qre/note_kato.pdf)    
 * [Fumio's note with questions](NEW_qre/note_hiai.pdf)    
 * [Fumio's note with martingale convergence](NEW_qre/note_hiai2.pdf)    
-
+* [Fumio's note with monotonicity in $z$](NEW_qre/note_hiai3.pdf)
 
 Tools
 
@@ -54,8 +58,6 @@ Myown
 
 ---
 
-
----
 
 ## Further topics
 

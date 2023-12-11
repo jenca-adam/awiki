@@ -3,6 +3,7 @@ title: Not my own papers
 ## A list
 
 ### A
+[audenaert2015alpha](audenaert2015alpha),
 [audenaert2008asymptotic](audenaert2008asymptotic),
 [audenaert2007discriminating](audenaert2007discriminating),
 [aubrun2021entangleability](aubrun2021entangleability),
@@ -149,17 +150,10 @@ title: Not my own papers
 [jenca2017twomonads](jenca2017twomonads),
 [jenca2019pseudo](jenca2019pseudo),
 [jenca2017effect](jenca2017effect),
-
-
-
-
-
-
-
 [junge2003noncommutative](junge2003noncommutative)
 
 ### K
-[kato2023onzrnyi](kato2023onzrnyi),
+[kato2023onrenyi](kato2023onrenyi),
 [kato2023aremark](kato2023aremark),
 [koashi2002operations](koashi2002operations),
 [kribs2018quantum](kribs2018quantum),
@@ -174,8 +168,8 @@ title: Not my own papers
 [kuramochi2017minimal](kuramochi2017minimal), [kuramochi2020directed](kuramochi2020directed), [kummerer1979mean](kummerer1979mean), [kimura2010distinguishability](kimura2010distinguishability), [kosaki1984applications](kosaki1984applications), [kosaki1984applicationsuc](kosaki1984applicationsuc), [kosaki1986relative](kosaki1986relative), [kubicki2019resource](kubicki2019resource), 
 
 ### L
-[li2014second](li2014second),
-
+[lin2015investigating](lin2015investigating),
+[li2014second](li2014second),    
 [lieb1973proof](lieb1973proof), 
 [liese2006divergences](liese2006divergences), [liese2008fdivergences](liese2008fdivergences), 
 [lindblad1975completely](lindblad1975completely), [lindblad1999ageneral](lindblad1999ageneral),
