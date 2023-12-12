@@ -12,7 +12,7 @@ title: Rényi relative entropy in von Neumann algebras
 
 Finite dimensional
 
-* [audenaert205alpha](audenaert205alpha) introduction of $\alpha-z$-Renyi relative entropies    
+* [audenaert2015alpha](audenaert2015alpha) introduction of $\alpha-z$-Renyi relative entropies    
 * [lin2015investigating](lin2015investigating) limit to 1, derivative at 1    
 * [zhang2020fromwyd](zhang2020fromwyd) proof of DPI in bounds       
 
@@ -41,7 +41,10 @@ Tools
 
 
 * [kosaki1984applications](kosaki1984applications) noncommutative $L_p$-spaces    
-* [haagerup2010areduction](haagerup2010areduction) Haagerup reduction theorem    
+* [haagerup2010areduction](haagerup2010areduction) Haagerup reduction theorem   
+* [junge2003noncommutative](junge2003noncommutative) conditional expectations extended to Haagerup $L_p$-spaces
+
+
 
 
 
