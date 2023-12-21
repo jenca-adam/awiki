@@ -31,7 +31,8 @@ In von Neumann algebras:
 Notes
 
 * [My note on DPI](NEW_qre/notes.pdf)    
-* [My note on limit to 1](NEW_qre/notes2.pdf)    
+* [My notes on $\alpha-z$](NEW_qre/notes2.pdf)    
+* [My note on the limit $\alpha\searrow 1$](NEW_qre/notes3.pdf)    
 * [Kato's note on variational expression](NEW_qre/note_kato.pdf)    
 * [Fumio's note with questions](NEW_qre/note_hiai.pdf)    
 * [Fumio's note with martingale convergence](NEW_qre/note_hiai2.pdf)    
@@ -40,9 +41,15 @@ Notes
 Tools
 
 
-* [kosaki1984applications](kosaki1984applications) noncommutative $L_p$-spaces    
+* [kosaki1984applications](kosaki1984applications) noncommutative $L_p$-spaces   
+* [fack1986generalized](fack1986generalized) measurable operators   
 * [haagerup2010areduction](haagerup2010areduction) Haagerup reduction theorem   
-* [junge2003noncommutative](junge2003noncommutative) conditional expectations extended to Haagerup $L_p$-spaces
+* [junge2003noncommutative](junge2003noncommutative) conditional expectations extended to Haagerup $L_p$-spaces   
+
+
+General von Neumann algebra theory
+
+* [BOOK_takesaki123theory](BOOK_takesaki123theory)
 
 
 

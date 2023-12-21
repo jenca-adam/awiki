@@ -6,6 +6,8 @@ title: bluhm2022incompatibility
 
 Bluhm, Andreas, Anna Jenčová, and Ion Nechita. "Incompatibility in general probabilistic theories, generalized spectrahedra, and tensor norms." Communications in Mathematical Physics 393.3 (2022): 1125-1198.
 
+(2021: 2.361 – IF, Q1 – JCR; Q1 – SJR),
+
 ## Abstract 
 
 Abstract:  In this work, we investigate measurement incompatibility in general
@@ -26,6 +28,8 @@ bounds on the maximal incompatibility present in more than three qubit
 measurements.
 
     
+
+[published version](bluhm2022incompatibility/published.pdf)
 
 [arxiv:2011.06497](https://arxiv.org/abs/2011.06497)
 

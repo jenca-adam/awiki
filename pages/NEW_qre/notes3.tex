@@ -14,6 +14,7 @@
 \usepackage{amsmath, amssymb, amsthm, mathtools}
 
 \newtheorem{lemma}{Lemma}
+\newtheorem{prop}{Proposition}
 \newtheorem{theorem}{Theorem}
 \newtheorem{coro}{Corollary}
 
@@ -35,7 +36,7 @@
 \def\<{\langle\.}
 \def\>{\.\rangle}
 
-\title{Haagerup reduction, monotonicity in  $z$, limit $\alpha\ne 1$}
+\title{Note on the limit $\alpha\searrow 1$}
 \author{Anna Jen\v cov\'a}
 
 \begin{document}
@@ -43,7 +44,98 @@
 \maketitle
 
 
-\section{Haagerup reduction and $L_p$-spaces}
+\section{Conditional expectations and $L_p$-spaces}
+
+
+Let $\Ne$ be a von Neumann algebra and let $\Me\subseteq \Ne$ be a von Neumann subalgebra
+such that there is a conditional expectation $\Ee$ onto $\Me$ preserving a faithful normal
+state $\phi$.  Then the  modular group $\sigma^\phi$ of $\phi$
+ preserves $\Me$  by
+the Takesaki theorem and we have $\sigma^{\phi|_\Me}=\sigma^\phi|_\Me$.  It follows that the crossed
+product $\Me\rtimes_{\sigma^{\phi|_\Me}} \mathbb R$ can be identified with a subalgebra in 
+$\Ne\rtimes_{\sigma^\phi} \mathbb R$. By \cite[Thm. 4.1]{haagerup2010areduction}, the map 
+\[
+\hat \Ee:=(\Ee\otimes id_{B(L_2(G))})|_{\Ne\rtimes_{\sigma^\phi}\mathbb R}
+\]
+is a faithful normal conditional expectation of $\Ne\rtimes_{\sigma^\phi}\mathbb R$ onto
+$\Me\rtimes_{\sigma^{\phi|_\Me}} \mathbb R$, moreover, we have 
+\[
+\hat\sigma\circ \hat\Ee=\hat\Ee\circ\hat\sigma
+\]
+and clearly also
+\[
+\hat\Ee(\pi(x)\lambda(s))=\pi(\Ee(x))\lambda(s),\qquad x\i \Me,\ s\in \mathbb R.
+\]
+For the dual weight $\hat\phi$, we obtain 
+\[
+\hat\Ee\circ\sigma^{\hat\phi}=\sigma^{\hat\phi}\circ\hat\Ee
+\]
+and $\hat\phi=\hat\phi\circ\hat\Ee$. Clearly, the dual weight for $\Me$ is the restriction
+of $\hat\phi$. Let $\tau$ be the canonical trace and let us denote the canonical trace for
+$\Me$ by $\tau_\Me$, then we have by \cite[Cor. 4.22]{takesaki2003theory2}
+\[
+[D\hat\phi\circ\hat\Ee:\tau_\Me\circ\hat\Ee]_t= [D\hat\phi|_{\Me\rtimes_{\sigma^{\phi|_\Me}}\mathbb
+R}:D\tau_\Me]_t=\lambda(t)=[D\hat\phi\circ\hat
+\Ee: D\tau]_t,
+\]
+it follows that $\tau=\tau_\Me\circ\hat\Ee=\tau\circ\hat\Ee$. Consequently, we
+can see that the space of $\tau_\Me$-measurable elements $L_0(\Me)$ can be identified with
+a *-subalgebra in $L_0(\Ne)$ and therefore also $L_p(\Me)\subseteq L_p(\Ne)$, $0<p\le \infty$. In particular, for
+$p=1$ we obtain the  identification $\Me_*\subseteq \Ne_*$, given as 
+\[
+\omega\equiv \omega\circ \Ee, \qquad \omega\in \Me_*. 
+\]
+By \cite[Prop. 2.3]{junge2003noncommutative}, for $1\le p\le \infty$, $\Ee$ can be
+extended to a contractive projection $\Ee_p$  of  $L_p(\Ne)$ onto $L_p(\Me)$. We have
+\[
+\Ee_1(h_\omega)=h_{\omega\circ\Ee},\qquad h_\omega\in L_1(\Ne)
+\]
+and $\Ee_q$ is the adjoint of $\Ee_p$ for $1/p+1/q=1$. The index $p$ is often dropped, so
+we just write $\Ee$ instead of $\Ee_p$. For $1\le p,q,r\le \infty$ such that $1/p+1/q+1/r\le 1$, we have  
+\begin{equation}\label{eq:condexp}
+\Ee(hxk)=h\Ee(x)k,\qquad h\in
+L_p(\Me), \ k\in L_q(\Me), \ x\in L_r(\Ne).
+\end{equation}
+
+\begin{lemma}\label{lemma:condexp} In the above situation, let $\psi,\varphi\in \Me_*^+$ and let
+$\tilde\psi=\psi\circ\Ee$, $\tilde \varphi=\varphi\circ\Ee$. Then for  $1/2<\alpha/2\le z$ we
+have
+\[
+D_{\alpha,z}(\psi\|\varphi)=D_{\alpha,z}(\tilde\psi\|\tilde\varphi).
+\]
+
+\end{lemma}
+
+
+\begin{proof} Using the above identifications, we see that $h_\psi=h_{\tilde\psi}$,
+$h_\varphi=h_{\tilde\varphi}$. Assume that $D_{\alpha,z}(\psi\|\varphi) <\infty$, then
+there is some $y\in L_{2z}(\Me)s(\varphi)$ such that 
+\begin{equation}\label{eq:fin}
+h_\psi^{\frac{\alpha}{2z}}=yh_\varphi^{\frac{\alpha-1}2z}.
+\end{equation}
+Since $L_{2z}(\Me)\subseteq L_{2z}(\Ne)$ and $s(\varphi)=s(\tilde\varphi)$, we see that $y\in L_{2z}(\Ne)s(\tilde\varphi)$, so that
+\[
+Q_{\alpha,z}(\tilde\psi\|\tilde \varphi)=\|y\|_{2z}^{2z}=Q_{\alpha,z}(\psi\|\varphi).
+\]
+This implies that $D_{\alpha,z}(\tilde\psi\|\tilde \varphi)\le D_{\alpha,z}(\psi\|\varphi)$ in
+general. Assume next that $1/2<\alpha/2\le z$ and let
+$D_{\alpha,z}(\tilde\psi\|\tilde \varphi)<\infty$, so that \eqref{eq:fin} is satisfied with
+some $y\in L_{2z}(\Ne)s(\tilde \varphi)$. Using the assumption on $\alpha,z$ and 
+\eqref{eq:condexp}, we have
+\[
+h^{\frac{\alpha}{2z}}_{\psi}=\Ee(h_{\psi}^{\frac{\alpha}{2z}})=\Ee(y)h_\varphi^{\frac{\alpha-1}{2z}}.
+\]
+By uniqueness of $y$ and the fact
+that $s(\tilde\varphi)=s(\varphi)\in \Me$, we obtain $y=\Ee(y)\in L_{2z}(\Me)s(\varphi)$.
+This finishes the proof.
+
+
+\end{proof}
+
+
+
+\section{The limit $\alpha\searrow 1$}
+
 
 
 Haagerup reduction theorem \cite[Thm. 2.1]{haagerup2010areduction} says that there is a
@@ -58,297 +150,155 @@ $\Me$ such that $\phi\circ\Ee=\phi$,
 that $\phi\circ\Ee_n=\phi$.
 \end{enumerate}
 
-This can be applied to Haagerup $L_p$-spaces $L_p(\Me)$ as follows, \cite[Thm.
-3.1]{haagerup2010areduction}, we will closely follow \cite[Sec. 2]{junge2003noncommutative} Let $\sigma=\sigma^\phi$, then $\sigma_t$ preserves $\Me$ by
-the Takesaki theorem. We then have $\sigma^{\phi|_\Me}=\sigma|_\Me$ and the crossed
-product $\Ne_\Me:=\Me\rtimes_{\sigma^{\phi|_\Me}} \mathbb R$ can be identified with a subalgebra in 
-$\Ne_\Ra:=\Ra\rtimes_\sigma \mathbb R$. The dual action $\hat \sigma_\Me$ on $\Ne_\Me$ is
-the restriction of the dual action $\hat\sigma$ on $\Ne_\Re$. It follows that the dual
-weight $\hat\phi_\Me$ is the restriction of $\hat\phi$ and that the canonical trace
-$\tau_\Me$ is the restriction of the canonical trace $\tau$. It follows that the space
-of $\tau_\Me$-measurable elements $L_0(\Me)$ can be identified with a subspace in
-$L_0(\Ra)$ and similarly $L_p(\Me)\subseteq L_p(\Ra)$, $0<p\le \infty$. 
+ 
 
-By \cite[Prop. 2.3]{junge2003noncommutative}, for $1\le p\le \infty$, $\Ee$ can be
-extended to a contractive projection of  $L_p(\Ra)$ onto $L_p(\Me)$. In particular, for
-$p=1$ and $h_\omega\in L_1(\Ra)$ we obtain
+For any $\psi\in \Me_*^+$, let us denote $\hat\psi:=\psi\circ\Ee$ and $\psi_n:=\hat
+\psi\circ\Ee_n$. Then $\psi_n\to \hat \psi$ in norm. 
+By DPI and  martingale convergence (or DPI + LS), we have
+\begin{equation}\label{eq:limit}
+D_{\alpha,z}(\psi\|\varphi)=D_{\alpha,z}(\hat\psi\|\hat\varphi)=\lim_nD_{\alpha,z}(\psi_n\|\varphi_n),\qquad \text{if }
+\max\{\frac{\alpha}2,\alpha-1\}\le z\le \alpha.
+\end{equation}
+Using Lemma \ref{lemma:condexp} and  LS, we get 
+\begin{equation}\label{eq:ls}
+D_{\alpha,z}(\psi\|\varphi)=D_{\alpha,z}(\hat\psi\|\hat\varphi)\le \liminf_nD_{\alpha,z}(\psi_n\|\varphi_n),\qquad \text{if }
+\frac{\alpha}2\le z.
+\end{equation}
+
+
+\begin{prop}\label{prop:monotz}
+Let $\max\{\alpha/2,\alpha-1\}\le z\le \alpha$. Then for any $z'\ge z$,
 \[
-\Ee_1(h_\omega)=h_{\omega\circ\Ee}.
+D_{\alpha,z'}(\psi\|\varphi)\le D_{\alpha,z}(\psi\|\varphi).
 \]
-Moreover, for $1\le p,q,r,s\le \infty$ such that $1/p+1/q+1/r=1/s $, we have  
-\[
-\Ee_s(hxk)=h\Ee_r(x)k,\qquad h\in
-L_p(\Me), \ k\in L_q(\Me), \ x\in L_r(\Ra).
-\]
+\end{prop}
 
-
-Now let $\psi\in \Me_*^+$, then in the above identification $L_1(\Me)\subseteq
-L_1(\Ra)$, we get $h_\psi\equiv h_{\psi\circ\Ee}=h_{\hat\psi}$. Assume that 
-$\frac12<\frac{\alpha}2\le z$ and $\psi,\varphi\i \Me_*^+$, we will also assume for simplicity
-that $\varphi$ is faithful. Suppose that $Q_{\alpha,z}(\psi\|\varphi)<\infty$, then there
-is some $y\in L_{2z}(\Me)$ such that
-\[
-h_\psi^{\frac{\alpha}{2z}}=yh_\varphi^{\frac{\alpha-1}2z}.
-\]
-Since $h_\psi=h_{\hat\psi}$, $h_\varphi=h_{\hat\varphi}$ and $y\in L_{2z}(\Me)\subseteq
-L_{2z}(\Ra)$, we obtain that
-\[
-Q_{\alpha,z}(\hat\psi\|\hat\varphi)=\|y\|_{2z}^{2z}=Q_{\alpha,z}(\psi\|\varphi).
-\]
-Conversely, assume that $Q_{\alpha,z}(\hat\psi\|\hat\varphi)<\infty$, so there is some
-$\hat y\in L_{2z}(\Ra)$ such that 
-\[
-h_{\hat\psi}^{\frac{\alpha}{2z}}=yh_{\hat \varphi}^{\frac{\alpha-1}{2z}}.
-\]
-Then we have
-\[
-h_{\psi}^{\frac{\alpha}{2z}}=h_{\hat\psi}^{\frac{\alpha}{2z}}=\Ee_{\frac{2z}{\alpha}}(h_{\hat\psi}^{\frac{\alpha}{2z}})=
-\Ee_{2z}(\hat y)h_{\hat\varphi}^{\frac{\alpha-1}{2z}}=\Ee_{2z}(\hat y)h_\varphi^{\frac{\alpha-1}{2z}}
-\]
-Since $\varphi$ (and therefore $\hat\varphi$) is faithful, it follows that $\hat
-y=\Ee_{2z}(\hat y)\in L_{2z}(\Me)$, hence
-\[
-
-\]
-\subsection{DPI}
-
-This is proved for 
-\[
-\alpha\in (0,1),\ \max\{\alpha,1-\alpha\}
-\le z \qquad\text{and}\qquad \alpha>1, \
-\max\{\alpha/2,\alpha-1\}\le z\le \alpha
-\]
-See \cite[Thm. 1(viii)]{kato2023onrenyi}, \cite{AJnote}. It is no possible to go beyond these bounds,
-\cite{zhang2020fromwyd}.
-
-\subsection{Lower semicontinuity (LS)}
-
-Holds for $\alpha\in (0,1)$ and for $\alpha>1$, $z\ge \alpha/2$, \cite{kato2023onrenyi}.
-
-
-\subsection{Variational expressions}
-
-For $\alpha\in (0,1)$, $z\ge\max\{\alpha,1-\alpha\}$, we have \cite[Theorem 1(vi)]{kato2023onrenyi}
-\[
-Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me_{++}}\left\{\alpha\Tr
-\left((a^{1/2}h_\psi^{\alpha/z}a^{1/2})^{z/\alpha}\right)+
-(1-\alpha)\Tr\left(a^{-1/2}h_\varphi^{(1-\alpha)/z}a^{-1/2}\right)\right\}. 
-\]
-For $\alpha>1$, $z\ge \alpha/2$, we have \cite[Theorem 2(vi)]{kato2023onrenyi} and
-\cite{SKnote}
-\[
-Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me_+}\left\{\alpha\Tr
-\left((a^{1/2}h_\psi^{\alpha/z}a^{1/2})^{z/\alpha}\right)-
-(\alpha-1)\Tr\left(a^{1/2}h_\varphi^{(\alpha-1)/z}a^{1/2}\right)\right\}.
-\]
-The lower bound comes from the lower bound in LS. Proved for all $z>0$ in type I case
-\cite{mosonyi2023thestrong}.
-
-\subsection{Martingale convergence}
-
-Holds in the bounds for DPI, \cite{FHnote2}. A remark to this proof: I think that the
-proof of \cite[Eq. (0.4)]{FHnote2} can be simplified. The key ingredient
-here is the martingale convergence of the generalized conditional expectations, which
-gives \cite[Eqs. (0.5)]{FHnote2}
-\[
-\psi_i\circ \mathcal E_{\Me_i,\varphi}\to \psi \qquad \text{in norm}.
-\]
-(We denote $\varphi_i:=\varphi|_{\Me_i}$ and $\psi_i=\psi|_{\Me_i}$.) In the bounds for
-DPI, we also have LS, so that  
-\[
-D_{\alpha,z}(\psi_i\|\varphi_i)\ge D_{\alpha,z}(\psi_i\circ \mathcal
-E_{\Me_i,\varphi}\|\varphi_i\circ \mathcal E_{\Me_i,\varphi})
-\]
-and (using also \cite[Eq.(0.5)]{FHnote2})
-\[
-\sup_i D_{\alpha,z}(\psi_i\|\varphi_i)\ge \liminf D_{\alpha,z}(\psi_i\circ \mathcal
-E_{\Me_i,\varphi}\|\varphi_i\circ \mathcal E_{\Me_i,\varphi})\ge
-D_{\alpha,z}(\psi\|\varphi)
-\]
-
-\subsection{Monotonicity in $z$}
-
-For $\alpha>1$, monotonicity is as
-\[
-0<z\le z' \implies D_{\alpha,z}(\psi\|\varphi)\ge D_{\alpha,z'}(\psi\|\varphi).
-\]
-This was proved in \cite[Sec. 3]{FHnotes} in type $II_1$ algebras, under the condition of lower
-semicontinuity of the map $\varphi\mapsto D_{\alpha,z'}(\psi\|\varphi)$, in particular, it
-holds for $\alpha/2\le z'$. Indeed, by the proof in \cite[Sec. 3]{FHnotes}, we have for
-$z\le z'$ and all $\varepsilon>0$
-\[
-Q_{\alpha,z}(\psi\|\varphi)\ge Q_{\alpha,z}(\psi\|\varphi+\varepsilon\tau)\ge
-Q_{\alpha,z'}(\psi\|\varphi+\varepsilon\tau),
-\]
-so that the inequality follows by LS for $z'$.
-
-
-Extension to the general case can be done using Haagerup reduction. For this, we so far
-need to  assume that  
-\[
-\alpha-1,\alpha/2\le z\le z'\le \alpha.
-\]
-Let $\hat \Me$, $\hat\Me_n$, $\hat\psi$, $\hat\varphi$ be as in the Haagerup reduction and
-put $\psi_n=\hat\psi|_{\Me_n}$, $\varphi_n=\hat\varphi|_{\Me_n}$. Using \cite[Sec.
-3]{FHnotes}, we have for $z\le z'$ and all $n$
-\[
-D_{\alpha,z'}(\psi_n\|\varphi_n)\le D_{\alpha,z}(\psi_n\|\varphi_n).
-\]
-Using DPI and LS, we obtain 
-\[
-D_{\alpha,z'}(\psi\|\varphi)=D_{\alpha,z'}(\hat\psi\|\hat\varphi)\le \liminf_n
-D_{\alpha,z'}(\psi_n\|\varphi_n)\le \liminf_n D_{\alpha,z}(\psi_n\|\varphi_n)\le
-D_{\alpha,z}(\hat\psi\|\hat\varphi)=D_{\alpha,z}(\psi\|\varphi).
-\]
-It would be very useful if we could extend the use of Haagerup reduction beyond these
-bounds, see for example Section \ref{subsection:se} below.
-
-
-\section{Some further results and remarks}
-
-
-\subsection{Convergence of $D_{\alpha,z}$ as $\alpha\nearrow 1$}
-
-Using monotonicity in $z$, we can prove this for $z\le 1$.
-
-\begin{lemma}\label{lemma:ineq2} Assume that $0\le 1-z<\alpha<1$. Then for any normal
-state $\psi$,
-\[
-D_{\beta,1}(\psi\|\varphi)\le D_{\alpha,z}(\psi\|\varphi)\le D_{\alpha,1}(\psi\|\varphi),
-\]
-where $\beta=\frac{\alpha-1+z}z$.
-
-
-\end{lemma}
-
-\begin{proof} The statement is trivial for $z=1$, so we may assume $0<1-z$. 
-The second inequality follows by monotonicity of $z\mapsto
-D_{\alpha,z}(\psi\|\varphi)$ for $\alpha\in (0,1)$. For the first inequality, note first  that by
-the assumption,  $\beta\in (0,1)$ and by H\"older 
-\[
-Q_{\alpha,z}(\psi\|\varphi)^{\frac1{2z}}=\|h_\psi^{\frac{\alpha}{2z}}h_\varphi^{\frac{1-\alpha}{2z}}\|_{2z}=
-\|h_{\psi}^{\frac{1-z}{2z}}h_{\psi}^{\frac{\beta}2}h_\varphi^{\frac{1-\beta}2}\|_{2z}\le
-\|h_\psi^{\frac{\beta}2}h_{\varphi}^{\frac{1-\beta}2}\|_2=Q_{\beta,1}(\psi\|\varphi)^{\frac12}.
-\]
-This proves the statement.
+\begin{proof}
+By \cite[Lemma 1.3]{FHnote3}, we have $D_{\alpha,z'}(\psi_n\|\varphi_n)\le
+D_{\alpha,z}(\psi_n\|\varphi_n)$ for all $n$. The statement  is proved  by using \eqref{eq:limit} for $z$ and
+\eqref{eq:ls} for $z'$.
 
 \end{proof}
 
-Using the lemma for $1-\alpha$ small enough and properties of $D_{\alpha,1}$, we get for any $z\le 1$:
+
+\begin{coro}\label{coro:bound1}
+Let $1<\alpha\le 2$. Then for any $z\ge 1$, we have
 \[
-\lim_{\alpha\nearrow 1} D_{\alpha,z}(\psi\|\varphi)=D(\psi\|\varphi).
+ D_{\alpha,z}(\psi\|\varphi)\le D_{\alpha,1}(\psi\|\varphi).
 \]
 
 
+\end{coro}
 
-\subsection{Convergence of $D_{\alpha,z}$ as $\alpha\searrow 1$}\label{subsection:se}
+\begin{proof} This follows
+by putting $z=1$ and $z'=z$ is  Proposition \ref{prop:monotz}.
 
+\end{proof}
 
-The strategy of the previous section is limited by the bounds for which we currently have
-monotonicity in $z$ for $\alpha>1$. Namely, the inequality $D_{\alpha,z}(\psi\|\varphi)\le
-D_{\alpha,1}(\psi\|\varphi)$ is currently only proved for 
-\[
-1\le z\le \alpha\le 2,
-\]
-which is violated as $\alpha\searrow 1$ (unless $z=1$ or $z=\alpha$). We have the
-following lower bound.
+The next statement is an extension of \cite[Lemma 2]{AJnote2}.
 
-\begin{lemma}\label{lemma:ineq} Let $1<\alpha\le z$. Then for any normal state $\psi$, we have 
+\begin{lemma}\label{lemma:bounds} Let $\alpha>1$ and $z\ge 1$. 
+Then
 \[
 D_{\beta,1}(\psi\|\varphi)\le D_{\alpha,z}(\psi\|\varphi),
 \]
-where $\beta=\frac{\alpha-1+z}z$.
+where $\beta:=\frac{\alpha+z-1}{z}>1$.
+
 
 \end{lemma}
 
+\begin{proof} Using the scaling property of $D_{\alpha,z}$, we may assume that
+$\psi(1)=1$.
+We will also suppose that $D_{\alpha,z}(\psi\|\varphi)<\infty$, otherwise there is nothing to prove.  In this case, 
+\[h_\psi^{\frac{\alpha}{2z}}=yh_\varphi^{\frac{\alpha-1}{2z}}
+\]
+for some $y\in L_{2z}(\Me)s(\varphi)$. We then get
+\[
+h_\psi^{\frac{\beta}2}=h_\psi^{\frac{z-1}{2z}}h_\psi^{\frac{\alpha}{2z}}=h_\psi^{\frac{z-1}{2z}}yh_\varphi^{\frac{\alpha-1}{2z}}=\eta h_{\varphi}^{\frac{\beta-1}2}
+\]
+with $\eta=h_\psi^{\frac{z-1}{2z}}y\in L_2(\Me)$. By \cite[Thm. 3.6]{hiai2021quantum},
+it follows that
+\[
+Q_{\beta,1}(\psi\|\varphi)=\|\Delta_{\psi,\varphi}^{\frac{\beta}2}(h_\varphi^{1/2})\|_2^2=\|\eta\|_2^2\le
+\|y\|_{2z}^2=Q_{\alpha,z}(\psi\|\varphi)^{1/z},
+\]
+this implies the statement.
 
-\begin{proof}  
- Assume that
-$D_{\alpha,z}(\psi\|\varphi)<\infty$, otherwise there is nothing to prove. Then there is
-some $y\in L_{2z}(\Me)$ such that
-\[
-h_\psi^{\frac{\alpha}{2z}}=yh_\varphi^{\frac{\alpha-1}{2z}}, \qquad
-Q_{\alpha,z}(\psi\|\varphi)=\|y\|_{2z}^{2z}.
-\]
-Since $\alpha\le z$, we have $\frac12-\frac{\alpha}{2z}\ge 0$ and
-\[
-h_\psi^{1/2}=h_\psi^{\frac12-\frac{\alpha}{2z}}yh_\varphi^{\frac{\alpha-1}{2z}}.
-\]
-It follows that $h_{\psi}^{1/2}\in \mathcal
-D(\Delta_{\psi,\varphi}^{\frac{\alpha-1}{2z}})$ and
-\[
-\Delta^{\frac{\alpha-1+z}{2z}}_{\psi,\varphi}h_\varphi^{1/2}=\Delta^{\frac{\alpha-1}{2z}}_{\psi,\varphi}\Delta^{1/2}_{\psi,\varphi}h_\varphi^{1/2}=\Delta^{\frac{\alpha-1}{2z}}_{\psi,\varphi}h_\psi^{1/2}=h_\psi^{\frac{z-1}{2z}}y.
-\]
-It follows that 
-\[
-\|\Delta^{\frac{\alpha-1+z}{2z}}_{\psi,\varphi}h_\varphi^{1/2}\|_2\le
-\psi(1)^{\frac{z-1}{2z}}\|y\|_{2z}.
-\]
-We therefore have for $\psi(1)=1$, 
-\[
-D_{\alpha,z}(\psi\|\varphi)=\frac{1}{\alpha-1}\log \|y\|_{2z}^{2z}\ge
-\frac{z}{\alpha-1}\log\|\Delta^{\frac{\alpha-1+z}{2z}}_{\psi,\varphi}h_\varphi^{1/2}\|_2^{2}=D_{\frac{\alpha-1+z}z,1}(\psi\|\varphi).
-\]
 \end{proof}
 
 
-%\begin{theorem} Let  $\psi,\varphi\in \Me_*^+$, $\psi(1)=1$, be such that
-%$D_{\alpha_0,z}(\psi\|\varphi)<\infty$ for some $1<\alpha_0\le z$. Then 
-%\[
-%\lim_{\alpha\searrow 1} D_{\alpha,z}(\psi\|\varphi)=D(\psi\|\varphi).
-%\]
-%
-%\end{theorem}
-%
-%\begin{proof}  By the proof of Lemma \ref{lemma:ineq}, we see that 
-%$D_{\frac{\alpha_0-1+z}z,1}(\psi\|\varphi)\le D_{\alpha_0,z}(\psi\|\varphi)<\infty$. Since
-%$\frac{\alpha_0-1+z}z>1$, we obtain $\lim_{\alpha\searrow 1}
-%D_{\alpha,1}(\psi\|\varphi)=D(\psi\|\varphi)$, by the properties of the Petz type
-%R\'enyi 
-%divergence $D_{\alpha,1}$. Since for $\alpha$ small enough we have both inequalities of
-%Lemma \ref{lemma:ineq}, the result follows.
-%
-%
-%
-%
-%\end{proof}
-%
-%Note that if we can  prove that the function $\alpha\mapsto D_{\alpha,z}(\psi\|\varphi)$ is
-%nondecreasing, it would be enough to assume that $D_{\alpha_0,z}(\psi\|\varphi)<\infty$
-%for some $\alpha_0>1$. 
-%
-%
 
-\subsection{Complex interpolation}
+\begin{coro}\label{coro:limit}
+Assume that  $D_{\alpha_0,z_0}(\psi\|\varphi)<\infty$ for some $1<\alpha_0$ and either
+$z_0\ge 1$ or $\alpha_0/2\le z_0\le 1$. 
+Then for any $z>1/2$ we have 
+\[
+\lim_{\alpha\searrow 1} D_{\alpha,z}(\psi\|\varphi)=D_1(\psi\|\varphi)<\infty.
+\]
 
-This is to remark that for $\alpha>1$ and $z\ge \alpha/2$, $Q_{\alpha,z}(\psi\|\phi)$ can be
-written using the Kosaki interpolation  norms. Assume that both $\psi$ and $\varphi$ are
-faithful and $Q_{\alpha,z}(\psi\|\phi)<\infty$.  We then have
-\[
-h_\psi=h_\psi^{1-\frac{\alpha}{2z}}yh_\varphi^{\frac{\alpha-1}{2z}}=h_{\psi}^{\eta/q}yh_\varphi^{(1-\eta)/q}
-\]
-for some $y\in L_{2z}(\Me)$, $q=\frac{2z}{2z-1}$ (the dual parameter to $2z$) and
-$\eta=\frac{2z-\alpha}{2z-1}\in [0,1)$. Hence
- $h_\psi$ belongs to the space
-$L_{2z}^\eta(\Me,\psi,\varphi)$, where
-\[
-L_p^\eta(\Me,\psi,\varphi):=
-C_{1/p}(h_\psi^{\frac{\eta}2}\Me h_\varphi^{\frac{1-\eta}2},\Me_*)=C_\eta(L_p(\Me,\varphi)_L,L_p(\Me,\psi)_R),
-\]
-\cite[Thm. 11.1]{kosaki1984applications}. Let $\|\cdot\|_{2z,\psi,\varphi,\eta}$ denote the norm in
-this space, then  it is easily seen that 
-\[
-Q_{\alpha,z}(\psi\|\phi)=\|y\|_{2z}^{2z}=\|h_\psi\|^{2z}_{2z,\psi,\varphi,\eta}.
-\]
-We may be able to use the fact that $L_p^\eta(\Me,\psi,\varphi)$ form an interpolating
-family with respect to  both $p$ and $\eta$ to prove some results, e.g. monotonicity in
-$z$ or in $\alpha$. It may be possible to extend this for other values of $\alpha$ and
-$z$ using \cite{gu2019interpolation}.
+\end{coro}
+
+\begin{proof}
+We  first note  that under the above assumptions,
+$D_{\beta,1}(\psi\|\varphi)<\infty$ for some $\beta>1$. Indeed, this follows from Lemma
+\ref{lemma:bounds} in the first case, or by \cite[Prop. 2.3]{FHnote3} in the second case
+(note that we necessarily have $\alpha_0-1\le \alpha_0/2\le z_0\le 1<\alpha_0$).
+
+For $z\ge 1$, the statement now follows by using Lemma \ref{lemma:bounds} and Corollary
+\ref{coro:bound1} for  $\alpha$ close
+enough to 1. If $1/2<z\le 1$, we may use \cite[Prop. 2.3]{FHnote3} or Proposition
+\ref{prop:monotz} for $\alpha$ close
+enough to 1.
+
+
+\end{proof}
 
 
 
 %\bibliography{NEW_qre}
 %\bibliographystyle{abbrvnat}
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+
+\bibitem[Haagerup et~al.(2010)Haagerup, Junge, and Xu]{haagerup2010areduction}
+U.~Haagerup, M.~Junge, and Q.~Xu.
+\newblock {A reduction method for noncommutative $L_p$-spaces and
+  applications}.
+\newblock \emph{Transactions of the American Mathematical Society},
+  362\penalty0 (4):\penalty0 2125--2165, 2010.
+\newblock \doi{10.1090/S0002-9947-09-04935-6}.
+\bibitem{hiai2021quantum}  F. Hiai, Quantum f-Divergences in von Neumann Algebras: Reversibility of Quantum Operations,  Mathematical Physics Studies, Springer Singapore, 2021
+
+\bibitem{FHnote3} F. Hiai, Monotonicity of $z\mapsto D_{\alpha,z}(\psi\|\varphi)$, 
+(12/3/2023, 12/8/2023), notes.
+
+\bibitem{AJnote2} A. Jen\v cov\'a, Notes for $\alpha-z$-R\'enyi divergence, December 7,
+2023, notes.
+\bibitem[Junge and Xu(2003)]{junge2003noncommutative}
+M.~Junge and Q.~Xu.
+\newblock Noncommutative {B}urkholder/{R}osenthal inequalities.
+\newblock \emph{The Annals of Probability}, 31\penalty0 (2):\penalty0 948--995,
+  2003.
+
+\bibitem[Takesaki(2003)]{takesaki2003theory2}
+M.~Takesaki.
+\newblock \emph{Theory of Operator Algebras. {II}}, volume 125 of
+  \emph{Encyclopaedia of Mathematical Sciences}.
+\newblock Springer-Verlag, Berlin, 2003.
+\newblock ISBN 3-540-42914-X.
+\newblock \doi{10.1007/978-3-662-10451-4}.
+
+
+\end{thebibliography}
+
+
+
+\end{document}
 
 \begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
@@ -405,54 +355,4 @@ H.~Zhang.
 \end{document}
 
 
-
-
-\end{document}
-
-
-\end{document}
-
-We will use the results in \cite{gu2023interpolation} on interpolation of Haagerup
-$L_p$-spaces. There, the space $L_p(\Me,\psi)$ for $0<p\le \infty$ is defined as
-follows. For $x\in \Me$, define the norm
-\[
-\|x\|_{p,\psi}=\|h_\psi^{1/2p}xh_\psi^{1/2p}\|_p,
-\]
-the space $L_p(\Me,\psi)$ is the completion of $\Me$ under this norm. For $p\ge 1$, the
-space can be identified with the Kosaki $L_p$-space. It is shown \cite[Thm.
-4.1]{gu2023interpolation} that for any $0<p_0<p_1\le \infty$, the space
-$L_{p_\theta}(\Me,\psi)$ is obtained by complex interpolation:
-\[
-L_{p_\theta}(\Me,\psi)=[L_{p_0}(\Me,\psi),L_{p_1}(\Me,\psi)]_\theta,\qquad
-1/p_\theta=(1-\theta)/p_0+\theta/p_1.
-\]
-
-We need  to prove the inequality
-\[
-\|b\|_{p,\psi\circ\gamma}\le \|\gamma(b)\|_{p,\psi}
-\]
-for any $b\in \Ne^+$. By the complex interpolation result, it should be enough to prove the
-inequality for the two extremal cases: $p=1/2$ and $p=1$. 
-
-Let  $p=1/2$ and let $b\in \Ne$, $b=v|b|$ be the polar decomposition. Assume wlog that $\|b\|\le 1$.
-Then by usin H\"older inequality,
-\begin{align*}
-\|b\|_{1/2,\psi\circ\gamma}&=\|h_{\psi\circ\gamma}v|b|h_{\psi\circ\gamma}\|_{1/2}\le \||b|^{1/2}h_{\psi\circ\gamma}\|_1=\Tr
-u |b|^{1/2}h_{\psi\circ\gamma}=\Tr \gamma(u|b|^{1/2})h_\psi\\
-&\le \|\gamma(u|b|^{1/2})h_\psi\|_1=\Tr h_\psi\gamma(u|b|^{1/2})^*\gamma(u|b|^{1/2})h_\psi\le
-\Tr (h_\psi\gamma(|b|)h_\psi)^{1/2}=\|\gamma(|b|)\|_{1/2,\psi}.
-\end{align*}
-
-For $p=1$, we have
-\begin{align*}
-\|b\|_{1,\psi\circ\gamma}=\Tr h_{\psi\circ\gamma}^{1/2}bh_{\psi\circ\gamma}^{1/2}=\Tr
-bh_{\psi\circ\gamma}=\Tr \gamma(b)h_\psi=\|\gamma(b)\|_{1,\psi}.
-\end{align*}
-
-The inequality for all $p\in [1/2,1]$ now should follow by complex interpolation: ale to
-fakt neviem jak! Je to opacne!
-
-
-
-\end{document}
 

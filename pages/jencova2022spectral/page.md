@@ -27,11 +27,14 @@ spectral resolutions are the same. In particular, for convex Archimedean effect
 algebras, spectral resolutions in $E$ are in agreement with spectral
 resolutions in the corresponding order unit space.
 
-    
+
+(2021: 6.439 – IF, Q1 – JCR; Q1 – SJR),
+
 
 [arxiv:2111.02166](https://arxiv.org/abs/2111.02166)    
 [doi](https://doi.org/10.22331/q-2022-11-03-849)
 
+[published](jencova2022spectral/published.pdf)
 
 ### Status
 

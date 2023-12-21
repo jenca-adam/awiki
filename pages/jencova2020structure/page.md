@@ -4,6 +4,8 @@ title: A. Jencova, M. Plavala, PR-box
 
 A. Jenčová, M. Plávala, The structure of quantum and classical implementations of Popescu-Rohrlich box, Phys. Rev. A 102 (2020), 042208  
 
+(2019: 2.777 – IF, Q2 – JCR; Q1 – SJR)
+
 [arXiv:1907.08933](https://arxiv.org/abs/1907.08933)
 
 

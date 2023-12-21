@@ -5,6 +5,9 @@ title: jencova2021ageneral
 
 Anna Jenčová, A general theory of comparison of quantum channels (and beyond), IEEE Transactions on Information Theory 67.6 (2021), 3945-3964
 
+(2020: 2.501 – IF, Q2 – JCR; Q1 – SJR)
+
+
 [arxiv:2002.04240](https://arxiv.org/abs/2002.04240)
 
 [published version](jencova2021ageneral/published.pdf) 

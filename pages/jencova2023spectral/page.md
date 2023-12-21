@@ -17,7 +17,7 @@ JB-algebras for which every maximal associative subalgebra is monotone
 $\sigma$-complete, extending an analogous result of Saitô and Wright for
 C\*-algebras.
 
-    
+ (2022:  1.3 – IF, Q2 – JCR; Q1 – SJR),    
 
 [arxiv:2208.08740v1](https://arxiv.org/abs/2208.08740v1)
 

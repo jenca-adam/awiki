@@ -8,6 +8,7 @@ title: My own papers
 1. [jencova2023spectral](jencova2023spectral) Spectral order unit spaces that are JB-algebras, functional calculus, characterization of Rickart JB-algebras (<span style='color:red'>stupid mistake!</span>)
 1. [heinosaari2023dispensing](heinosaari2023dispensing)  broadcasting, with Teiko Heinosaari and Martin Plávala
 
+1. [jencova2023spectrality](jencova2023spectrality)
 ### 2022
 
 1. [jencova2022assemblages](jencova2022assemblages)  steering of dichotomic assemblages, Choquet order 

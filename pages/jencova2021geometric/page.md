@@ -18,7 +18,9 @@ two types of examples: the JB-algebras which are Foulis spectral if and only if
 they are Rickart, and the centrally symmetric state spaces, which may be Foulis
 spectral while not necessarily Alfsen-Shultz spectral.
 
-    
+
+(2020: 1.583 – IF, Q1 – JCR; Q1 – SJR)
+
 
 [arxiv:2102.01628](https://arxiv.org/abs/2102.01628)
 

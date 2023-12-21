@@ -14,4 +14,10 @@ title: karn, 2023, AIOT
 
 [report](REF_karn2023/report.pdf)
 
+**Revised due:** 15.1.2024
+
+[revision](REF_karn2023/revision.pdf)
+
+
+
 
