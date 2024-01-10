@@ -2,7 +2,6 @@ title: To referee
 ---
 
 
-* Due [23.12.2023](REF_arai2023)    
 * Due [15.1.2024](REF_karn2023) (revision)    
 
 
@@ -31,7 +30,8 @@ title: To referee
 1. <del>Due [30.9.2023](REF_lipka2023)</del> Done.    
 1. <del> Due [17.11.2023](REF_luczak2023)</del> Done.        
 1. <del> Due [23.11.2023](REF_keli2023)</del> Done.    
-1. <del> Due [4.12.2023](REF_karn2023)</del> Done.    
+1. <del> Due [4.12.2023](REF_karn2023)</del> Done.   
+1. <del> Due [23.12.2023](REF_arai2023)</del> Done.    
 
 ### Reviews finished 2022
 

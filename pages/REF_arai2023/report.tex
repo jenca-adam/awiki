@@ -11,7 +11,8 @@
 
 \begin{document}
 \begin{center}
-{\large  }
+{\large H. Arai, M. Hayashi:  Derivation of Standard Quantum Theory via State Discrimination
+}
 
 \end{center}
 \medskip
@@ -20,26 +21,44 @@
 
 \bigskip
 
-Description
+This paper claims to give a characterization of quantum theory among GPTs (with certain
+dimension condition) by an operational condition, namely in terms of error probabilities
+in state discrimination problems. This is done in the following way: under the dimension
+condition, the state space of the theory in question can be mapped into the set of quantum states by
+an affine isomorphism, it is shown that the image is a strict subset (and hence the GPT is
+different from the quantum theory) if and only if the error probabilities in some state
+discrimination problem are smaller than the quantum ones. I have the following comments:
+
+\begin{enumerate}
+\item Inequality Eq. (7) stated in Theorem 5 is easily seen to be
+wrong unless $p=1/2$, in fact, the equality denoted as (d) in the proof of this theorem
+does not hold. To find a counterexample, consider the state discrimination problem for two
+quantum states $\rho_0$, $\rho_1$, with $p\ne 1/2$. Let $P_\pm$ denote the projection onto
+the support of $(p\rho_0-(1-p)\rho_1)_\pm$ and put $M_0=sP_++rP_-$, with $0\le r<s\le 1$.
+Then $\{M_0,I-M_0\}$ is a valid quantum measurement and it is easy to compute that
+\[
+\mathrm{Err}(\rho_0;\rho_1;p;M)=\frac12-\frac12(s-r)\|p\rho_0-(1-p)\rho_1\|_1-\frac12(2p-1)(s+r-1).
+\]
+We clearly may choose $s+r>1$ if $p>1/2$ and $s+r<1$ if $p<1/2$, to violate the inequality
+Eq.(7).
+ Nevertheless, Theorem 7 in fact holds (note that only the case $p=1/2$ in Theorem 5
+is used in the proof). 
+
+\item The inequality Eq.(2) holds in any GPT, with the trace norm replaced by the
+ base norm  corresponding to the state space. The main result of the paper just gives the fact that the  base norm increases if it is computed with respect to a smaller base, this
+ is well known and easy to see.
+
+\item An operational characterization of quantum theory would be an intrinsic property of
+states and measurements of a GPT that singles out the quantum theory. This is not given in
+the present paper. The main result is just an easy and well-known step away from stating
+that a  state space is not quantum if and only if it is not affinely isomorphic to a set
+of quantum states, which is trivial.
 
 
-\medskip
 
-\noindent
-\textbf{Overall evaluation}
-
-\medskip
- 
-
-\medskip
-
-\noindent
-\textbf{Some specific comments}
-
-
-\
-
-
+\item There are a lot of misspellings, incomplete or grammatically incorrect sentences,
+etc. I do not point them out, since it would not improve the paper in any significant way.
+\end{enumerate}
 
 
 

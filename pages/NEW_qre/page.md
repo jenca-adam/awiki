@@ -7,6 +7,32 @@ title: Rényi relative entropy in von Neumann algebras
 
 **With: Fumio Hiai, Shinya Kato, Yoshimichi Ueda**
 
+### Notes
+
+* [My note on DPI](NEW_qre/notes.pdf) November 23, 2023    
+* [Kato's note on variational expression](NEW_qre/note_kato.pdf) November 26, 2023    
+* [Fumio's note with questions](NEW_qre/note_hiai.pdf) November 29, 2023    
+* [Fumio's note with martingale convergence](NEW_qre/note_hiai2.pdf) December 2, 2023    
+* [My notes on $\alpha-z$](NEW_qre/notes2.pdf) December 7, 2023      
+* [Fumio's note with monotonicity in $z$](NEW_qre/note_hiai3.pdf) December 3-8, 2023    
+* [My note on the limit $\alpha\searrow 1$](NEW_qre/notes3.pdf) December 19, 2023    
+* [Fumio's note on the limits $\alpha\to 1$](NEW_qre/note_hiai5.pdf) December 23, 2023    
+* [Fumio's note on $\lim_{\alpha\searrow 1}$, ${1/2 < z<1}$](NEW_qre/note_hiai4.pdf) December 27, 2023    
+* [My note on sufficiency and DPI, $\alpha>1$](NEW_qre/notes4.pdf) December 30, 2023    
+* [Fumio's note on monotonicity in $\alpha$](NEW_qre/note_hiai6.pdf) December 31, 2023   
+* [Fumio's note on monotonicity in $\alpha$, finite dimensional case](NEW_qre/note_hiai7.pdf) January 6, 2024    
+
+### Questions
+
+1. *Variational expressions*: solved for $\alpha<1$ and $1<\alpha\le 2z$ [kato2023onrenyi](kato2023onrenyi) and  [Kato Nov. 26](NEW_qre/note_kato.pdf)    
+1. *DPI*: solved in [kato2023onrenyi](kato2023onrenyi) and [Anna Nov. 23](NEW_qre/notes.pdf)    
+1. *Martingale convergence*: solved in [Fumio Dec. 2](NEW_qre/note_hiai2.pdf) and a remark in [Anna Dec. 7](NEW_qre/notes2.pdf)    
+1. *Monotonicity in $z$*: solved for $\alpha<1$ in [kato2023onrenyi](kato2023onrenyi). For $\alpha>1$, solved for finite von Neumann algebras in [Fumio Dec. 3-8](NEW_qre/note_hiai3.pdf). In the general case, the use of Haagerup reduction still needs the restriction $\max\{\alpha/2,\alpha-1\}\le z\le\alpha$, then monotonicity holds for $z\le z'$, this is discussed in [Fumio Dec. 3-8](NEW_qre/note_hiai3.pdf), [Anna Dec. 19](NEW_qre/notes3.pdf)  (<span style='color:green'>
+Try to improve this using the variational formulas? </span> - <span style='color:red'> does not work outside the DPI bounds!</span>)   
+1. *The limit $\alpha\nearrow 1$*:  solved for all $z> 0$, [Fumio Dec. 3-8](NEW_qre/note_hiai3.pdf), [Anna Dec. 7](NEW_qre/notes2.pdf)   
+1. *The limit $\alpha\searrow 1$*: solved for $z\ge 1$ in , [Fumio Dec. 3-8](NEW_qre/note_hiai3.pdf), [Fumio Dec. 23](NEW_qre/note_hiai5.pdf), [Anna Dec. 19](NEW_qre/notes3.pdf). The case $1/2< z<1$ solved in [Fumio Dec. 27](NEW_qre/note_hiai4.pdf) under the restrictions $\lambda^{-1}\varphi\le \psi\le \lambda\varphi$ for some $\lambda>0$, using state perturbation theory (in fact, analyticity of the Connes cocycle). Can we extend this to $\psi\le\lambda\varphi$? <span style='color:green'> Can we prove this for $z=\alpha/2$ (the left Kosaki $L_p$-spaces)? The result would follow.</span>   
+1. *Monotonicity in $\alpha$*: proved for $1<\alpha\le2z$ in [Fumio Dec. 31](NEW_qre/note_hiai6.pdf) + a further note on the reiteration theorem  theory using the paper [cwikel1978complex](cwikel1978complex) (also Pisier book on Hardy spaces?). <span style='color:green'> Can this be proved for $\alpha<1$ using interpolation (as in sandwiched)?</span> In finite dimensional case, proved in [Fumio Jan. 6](NEW_qre/note_hiai7.pdf).         
+
 
 ### References
 
@@ -28,19 +54,11 @@ In von Neumann algebras:
 * [gu2019interpolation](gu2019interpolation) interpolation of Haagerup $L_p$-spaces for $p<1$.    
 * [berta2018renyi](berta2018renyi) sandwiched Renyi divergence via Araki-Masuda $L_p$-spaces
 
-Notes
-
-* [My note on DPI](NEW_qre/notes.pdf)    
-* [My notes on $\alpha-z$](NEW_qre/notes2.pdf)    
-* [My note on the limit $\alpha\searrow 1$](NEW_qre/notes3.pdf)    
-* [Kato's note on variational expression](NEW_qre/note_kato.pdf)    
-* [Fumio's note with questions](NEW_qre/note_hiai.pdf)    
-* [Fumio's note with martingale convergence](NEW_qre/note_hiai2.pdf)    
-* [Fumio's note with monotonicity in $z$](NEW_qre/note_hiai3.pdf)
-
 Tools
 
-
+* [BOOK_bergh1976interpolation](BOOK_bergh1976interpolation)   interpolation theory    
+* [calderon1964intermediate](calderon1964intermediate) complex interpolation method    
+* [cwikel1978complex](cwikel1978complex)  reiteration theorem     
 * [kosaki1984applications](kosaki1984applications) noncommutative $L_p$-spaces   
 * [fack1986generalized](fack1986generalized) measurable operators   
 * [haagerup2010areduction](haagerup2010areduction) Haagerup reduction theorem   
