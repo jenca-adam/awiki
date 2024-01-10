@@ -37,15 +37,14 @@
 \def\<{\langle\.}
 \def\>{\.\rangle}
 
-\title{Note on monotonicity of  $\alpha\mapsto D_{\alpha,z}$ for $\alpha\in (0,1)$}
+\title{Notes on monotonicity of  $\alpha\mapsto D_{\alpha,z}$}
 \author{Anna Jen\v cov\'a}
 
 \begin{document}
 
 \maketitle
 
-We will show that we can use complex interpolation and Kosaki $L_p$-spaces  also in the case $\alpha\in (0,1)$ if
-$z>1/2$. Put $p=2z$ and $q=\frac{2z-1}{2z}$ the dual parameter. 
+Assume that $z>1/2$ and let $p=2z$ and $q=\frac{2z-1}{2z}$ the dual parameter. 
 Let $e:=s(\varphi)$ and $f:=s(\psi)$, and let $\sigma,\tau\in \Me_*^+$ be such that
 $s(\sigma)=1-e$, $s(\tau)=1-f$. Put $\psi_0:=\psi+\tau$, $\varphi_0=\varphi+\sigma$, then
 $\psi_0,\varphi_0$ are faithful positive normal functionals on $\Me$ and we have
@@ -54,6 +53,51 @@ $h_{\psi}^\theta=fh_{\psi_0}^\theta=h_{\psi_0}^\theta f$ for any $\theta>0$.
 We will use the notations $L^p_L:=L^p(\Me;\varphi_0)_L$, $L^p_R:=L^p(\Me;\psi_0)_R$ and 
 $L^p_\eta:=C_\eta(L^p_L,L^p_R)$.
 
+
+\section{Remarks for the case $\alpha>1$}
+
+\begin{enumerate}
+\item Let $1<\alpha\le 2z$ and assume that $Q_{\alpha,z}(\psi\|\varphi)<\infty$, so that there
+exists a (unique) $y\in L^p(\Me)e$ such that
+$h_\psi^{\alpha/p}=yh_\varphi^{(\alpha-1)/p}$. Note that we may as well assume that $y\in
+fL^p(\Me)e$, so that
+\[
+h_\psi=h_{\psi_0}^{\eta/q}yh_{\varphi_0}^{(1-\eta)/q}\in L^p_\eta,
+\]
+where $\eta=(2z-\alpha)/(2z-1)$ and
+$Q_{\alpha,z}(\psi\|\varphi)=\|y\|_{2z}^{2z}=\|h_\psi\|_{p,\varphi_0,\psi_0,\eta}^p$. In
+this way, we may use interpolation theory directly, without first assuming that $\varphi$
+and $\psi$ are faithful. 
+
+\item Note that we always have $h_\psi=h_{\psi_0}^{1/q}h_\psi^{1/p}\in L^p_R$ and
+$\|h_\psi\|_{L^p_R}^p=\|h_\psi^{1/p}\|_p^p=\psi(1)$. 
+Assume that $1<\alpha_1\le 2z$ is such that $Q_{\alpha_1,z}(\psi\|\varphi)<\infty$ and let
+$\alpha<\alpha_1$. Then $\alpha=(1-\theta)\alpha_1+\theta$ for some 
+$\theta\in (0,1)$. Using the reiteration theorem as in \cite{FHnote6}, we obtain
+\[
+Q_{\alpha,z}(\psi\|\varphi)\le Q_{\alpha_1,z}(\psi\|\varphi)^{1-\theta}\psi(1)^{\theta}.
+\]
+Taking the logarithm and noting that $\theta=(\alpha_1-\alpha)/(\alpha_1-1)$, we obtain
+directly that 
+\[
+D_{\alpha,z}(\psi\|\varphi)\le D_{\alpha_1,z}(\psi\|\varphi).
+\]
+
+\item Note that elements of the form $xh_{\varphi_0}^{1/q}$ with $x\in L_p(\Me)$ an
+analytic element with respect to $h_{\psi_0}^{it}\cdot h_{\varphi_0}^{-it}$ are contained
+in $L^p_L\cap L^p_R$. Since the analytic elements are dense in $L_p(\Me)$ \cite[Lemma
+10.4]{kosaki1984applications}, it follows that $L^p_L\cap L^p_R$ is dense in both $L^p_L$
+and $L^p_R$. I am not sure if this implies that $L^p_L\cap L^p_R$ is dense in
+$L^p_{\eta_1}\cap L^p_{\eta_2}$, though, as required by the usual form of the reiteration
+theorem. In any case, the result by Cwikel can be used.
+
+\end{enumerate}
+
+
+\section{The case $\alpha\in (0,1)$}
+
+We will show that we can use complex interpolation and Kosaki $L_p$-spaces  also in the case $\alpha\in (0,1)$ if
+$z>1/2$. 
 The proof is easier in the case $z\ge 1$, which we prove first.
 
 \begin{prop}\label{prop:incr}
@@ -80,7 +124,8 @@ h_{\psi_0}^{\frac{\eta}q}(h_\psi^{\frac{\alpha}{2z}}h_\varphi^{\frac{1-\alpha}{2
 L^p_\eta
 \]
 and $Q_{\alpha,z}(\psi\|\varphi)=\|\xi\|^p_{p,\psi_0,\varphi_0,\eta}$. The proof can be
-finished by reiteration theorem,  similarly as in \cite[Prop. 0.1]{FHnote6}. 
+finished by reiteration theorem,  similarly as in \cite[Prop. 0.1]{FHnote6} and the remark
+2. in Section 1 above.
 
 
 
@@ -207,7 +252,8 @@ we get from Lemma \ref{lemma:fw} that
 Q_{1-\eta,z}(\psi\|\varphi)\le
 Q_{1-\eta_1,z}(\psi\|\varphi)^{1-\theta}Q_{1-\eta_2,z}(\psi,\varphi)^\theta.
 \]
-The proof is finished as in  \cite{FHnote6}.
+This implies 1. Further, since $f(it)\in L^p_L$ and $\|f(it)\|_{L^p_L}^p=\psi(1)$, we
+obtain 2. similarly as in remark 2. of Section 1.
 
 
 \end{proof}
