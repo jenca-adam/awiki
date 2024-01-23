@@ -22,7 +22,8 @@ title: Rényi relative entropy in von Neumann algebras
 * [Fumio's note on monotonicity in $\alpha$](NEW_qre/note_hiai6.pdf) December 31, 2023   
 * [Fumio's note on monotonicity in $\alpha$, finite dimensional case](NEW_qre/note_hiai7.pdf) January 6, 2024    
 * [My note on monotonicity in $\alpha$](NEW_qre/notes5.pdf) January 10, 2024    
-* [Fumio's note on monotonicity in $\alpha\in (0,1)$](NEW_qre/note_hiai8.pdf) January 12, 2024
+* [Fumio's note on monotonicity in $\alpha\in (0,1)$](NEW_qre/note_hiai8.pdf) January 12, 2024    
+* [My notes on monotonicity in $z$ for $1<\alpha\le 2z$](NEW_qre/notes6.pdf)  January 18, (corrected Jan. 23)
 
 ### Questions
 
@@ -34,7 +35,7 @@ title: Rényi relative entropy in von Neumann algebras
     - solved for $\alpha<1$ in [kato2023onrenyi](kato2023onrenyi).     
     - For $\alpha>1$, solved for finite von Neumann algebras in [Fumio Dec. 3-8](NEW_qre/note_hiai3.pdf). In the general case, the use of Haagerup reduction still needs the restriction $\max\{\alpha/2,\alpha-1\}\le z\le\alpha$, then monotonicity holds for $z\le z'$, this is discussed in [Fumio Dec. 3-8](NEW_qre/note_hiai3.pdf), [Anna Dec. 19](NEW_qre/notes3.pdf)    
     - <span style='color:green'> Try to improve this using the variational formulas? </span> - <span style='color:red'> does not work outside the DPI bounds!</span>    
-    - <span style='color:green'> Try using complex interpolation as in monotonicity in $\alpha$. Hm? </span>
+    - <span style='color:green'> Try using complex interpolation as in monotonicity in $\alpha$. Hm? </span> Done in [Anna Jan. 18](NEW_qre/notes6.pdf)    
 
 1. *The limit $\alpha\nearrow 1$*:  solved for all $z> 0$, [Fumio Dec. 3-8](NEW_qre/note_hiai3.pdf), [Anna Dec. 7](NEW_qre/notes2.pdf)   
 1. *The limit $\alpha\searrow 1$*: 
@@ -83,6 +84,7 @@ Tools
 * [calderon1964intermediate](calderon1964intermediate) complex interpolation method    
 * [cwikel1978complex](cwikel1978complex)  reiteration theorem     
 * [kosaki1984applications](kosaki1984applications) noncommutative $L_p$-spaces   
+* [terp1981lpspaces](terp1981lpspaces) Haagerup $L_p$-spaces    
 * [fack1986generalized](fack1986generalized) measurable operators   
 * [haagerup2010areduction](haagerup2010areduction) Haagerup reduction theorem   
 * [junge2003noncommutative](junge2003noncommutative) conditional expectations extended to Haagerup $L_p$-spaces   
