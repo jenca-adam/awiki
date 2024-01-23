@@ -88,7 +88,7 @@ Tools
 * [fack1986generalized](fack1986generalized) measurable operators   
 * [haagerup2010areduction](haagerup2010areduction) Haagerup reduction theorem   
 * [junge2003noncommutative](junge2003noncommutative) conditional expectations extended to Haagerup $L_p$-spaces   
-
+* [BOOK_ohya1993quantum](BOOK_ohya1993quantum) quantum entropy and its use
 
 General von Neumann algebra theory
 
@@ -132,8 +132,8 @@ Myown
 * [wilde2015recoverability](wilde2015recoverability) recoverability via RED and interpolation (finite dimensional)
 * [sutter2016strengthened](sutter2016strengthened) recoverability via pinching map (finite dim)    
 * [junge2018universal](junge2018universal) recoverability via RED and interpolation, universal recovery map (finite dim)    
-* [faulkner2020approximate2](faulkner2020approximate2) approximate sufficiency for 2-positive (von Neumann)
-* [faulkner2020approximate](faulkner2020approximate) approximate sufficiency for subalgebras (von Neumann)   
+* [faulkner2022approximate2](faulkner2022approximate2) approximate sufficiency for 2-positive (von Neumann)
+* [faulkner2022approximate](faulkner2022approximate) approximate sufficiency for subalgebras (von Neumann)   
 
 
 (RED- relative entropy difference)
