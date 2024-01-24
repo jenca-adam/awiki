@@ -3,6 +3,7 @@ title: Not my own papers
 ## A list
 
 ### A
+[apadula2022nosignalling](apadula2022nosignalling),
 [audenaert2015alpha](audenaert2015alpha),
 [audenaert2008asymptotic](audenaert2008asymptotic),
 [audenaert2007discriminating](audenaert2007discriminating),
@@ -156,6 +157,7 @@ title: Not my own papers
 [junge2003noncommutative](junge2003noncommutative)
 
 ### K
+[kissinger2019acategorical](kissinger2019acategorical),
 [kato2023onrenyi](kato2023onrenyi),
 [kato2023aremark](kato2023aremark),
 [koashi2002operations](koashi2002operations),

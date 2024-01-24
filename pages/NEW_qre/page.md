@@ -23,7 +23,9 @@ title: Rényi relative entropy in von Neumann algebras
 * [Fumio's note on monotonicity in $\alpha$, finite dimensional case](NEW_qre/note_hiai7.pdf) January 6, 2024    
 * [My note on monotonicity in $\alpha$](NEW_qre/notes5.pdf) January 10, 2024    
 * [Fumio's note on monotonicity in $\alpha\in (0,1)$](NEW_qre/note_hiai8.pdf) January 12, 2024    
-* [My notes on monotonicity in $z$ for $1<\alpha\le 2z$](NEW_qre/notes6.pdf)  January 18, (corrected Jan. 23)
+* [My notes on monotonicity in $z$ for $1<\alpha\le 2z$](NEW_qre/notes6.pdf)  January 18 (<span style=color:red> mistake! </span>)    
+* [My notes on monotonicity in $z$, $\alpha$ and the limit $\alpha\searrow 1$](NEW_qre/notes7.pdf) January 23
+
 
 ### Questions
 

@@ -8,7 +8,9 @@ title: My work
 
 * [Quantum hypothesis testing](AZ_qht) in von Neumann algebras
 
-* [Renyi divergence](NEW_qre) in von Neumann algebras
+* [Renyi divergence](NEW_qre) in von Neumann algebras     
+
+* [Higher order maps](NEW_hom) 
 
 
 
