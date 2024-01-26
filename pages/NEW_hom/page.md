@@ -12,8 +12,10 @@ title: Higher order maps
 ## Basic references
 
 * [kissinger2019acategorical](kissinger2019acategorical)      Kissinger & Uijlen, precausal category $\mathcal C$, \*-autonomous category  $Caus[\mathcal C]$   
-* [apadula2022nosignaling](apadula2022nosignaling)  Bisio, Perinotti framework     
-* [bisio2019theoretical](bisio2019theoretical) Bisio, Perinotti framework
+* [apadula2022nosignalling](apadula2022nosignalling)  Bisio, Perinotti framework     
+* [bisio2019theoretical](bisio2019theoretical) Bisio, Perinotti framework   
+* [santocanale2022frobenius](santocanale2022frobenius) frobenius structures in \*-autonomous categories
+
 
 
 

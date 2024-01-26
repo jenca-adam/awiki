@@ -173,6 +173,7 @@ title: Not my own papers
 [kuramochi2017minimal](kuramochi2017minimal), [kuramochi2020directed](kuramochi2020directed), [kummerer1979mean](kummerer1979mean), [kimura2010distinguishability](kimura2010distinguishability), [kosaki1984applications](kosaki1984applications), [kosaki1984applicationsuc](kosaki1984applicationsuc), [kosaki1986relative](kosaki1986relative), [kubicki2019resource](kubicki2019resource), 
 
 ### L
+[santocanale2022frobenius](santocanale2022frobenius),   
 [lin2015investigating](lin2015investigating),
 [li2014second](li2014second),    
 [lieb1973proof](lieb1973proof), 
