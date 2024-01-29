@@ -1,6 +1,22 @@
 title: "Doktorandske studium"
 ---
 
+## Zoznam školiteľov
+
+[Ing. Michal Hospodár, PhD](DS_hospodar)     
+[Mgr. Natalia Dilna, PhD](DS_dilna)     
+[doc. PaedDr. Martin Papčo, PhD](DS_papco)     
+[Mgr. Ján Karabáš, PhD.](DS_karabas)    
+[RNDr. Jozef Pócs, PhD.](DS_pocs)    
+[doc. Mgr. Ondrej Šuch, PhD.](DS_such)    
+[prof. RNDr. Michal Fečkan, DrSc.](DS_feckan)    
+[Martin Kochol](DS_kochol)    
+[Mgr. Andrea Zemánková, PhD.](DS_zemankova)     
+[prof. RNDr. Gejza Wimmer, DrSc.](DS_wimmer)     
+[prof. RNDr. Anatolij Dvurečenskij, DrSc](DS_dvurecenskij)    
+[Mgr. Anna Jenčová, DrSc.](students)    
+[Ing. Irena Jadlovská, PhD.](DS_jadlovska)     
+
 
 ## Zoznam doktorandov
 

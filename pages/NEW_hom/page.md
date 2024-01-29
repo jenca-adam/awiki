@@ -8,6 +8,27 @@ title: Higher order maps
 
 ---
 
+## Some plans
+
+* understand basic definitions: SMC closed, compact, \*-autonomous, precise relations between them
+
+* read [kissinger2019acategorical](kissinger2019acategorical)     
+      - precausal and Kleisli categories     
+      - study and understand the examples    
+      - ...
+      - indefinite causal order, quantum switch, witnesses
+
+* read [santocanale2022frobenius](santocanale2022frobenius), check the "nuclear" objects in interesting \*-autonomous categories
+     
+* BaSe - category and HOM-s for GPT (OT):     
+     - SMC, \*-autonomous     
+     - relation to
+     - HOMs of GPTs embed into BaSe?     
+     - so what?
+
+
+
+
 
 ## Basic references
 

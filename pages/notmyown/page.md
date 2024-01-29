@@ -237,6 +237,7 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), [BOOK_rao1991theory](BOOK_rao1991theory), 
 
 ### S
+[seal2013tensors](seal2012tensors),
 [saito2015ondefining](saito2015ondefining),
 
 [shirokov2015onsuperactivation](shirokov2015onsuperactivation),

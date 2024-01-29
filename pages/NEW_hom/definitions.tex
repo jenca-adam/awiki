@@ -16,6 +16,7 @@
 \newtheorem{lemma}{Lemma}
 \newtheorem{theorem}{Theorem}
 \newtheorem{coro}{Corollary}
+\newtheorem{prop}{Proposition}
 
 
 \theoremstyle{definition}
@@ -40,6 +41,7 @@
 
 \maketitle
 
+\section{Symmetric monoidal categories (SMC)}
 
  \textbf{Monoidal category:} A category $C$ equipped with
 \begin{itemize}
@@ -51,107 +53,154 @@
 
 
 \item right unitor: natural iso $A\otimes I \xrightarrow{\rho_A} A$
-\end{itemize}
 
-satisfying triangle and pentagon equations.
+\item \textbf{symmetric} if there is a symmetry: natural iso $A\otimes
+B\xrightarrow{\sigma_{A,B}} B\otimes A$ such that $\sigma_{B,A}=\sigma_{A,B}^{-1}$, 
+
+\end{itemize}
+satisfying triangle, pentagon (+ symmetry) diagrams.
+
+\medskip
+
+We will always assume that $C$ is a SMC.
+
+
+\subsection{Closed SMC}
+
+A SMC $C$ is \textbf{closed} if:
+
+\medskip %\vskip 3mm
+for every $b\in C$, the endofunctor $-\otimes b$ has a
+right adjoint $[b,-]$ (internal hom). 
+
+\medskip
+\noindent
+What does this mean?
+
+\begin{enumerate}
+\item[(1)] For all $a,c\in C$, $C(a\otimes b,c)\simeq C(a,[b,c])$, naturally in $a,c$.
+\item[(2)] unit $\eta^b_a: a\to [b,a\otimes b]$, counit: $\epsilon^b_a: [b,a]\otimes
+b\to a$, natural transformations, triangle identities
+\end{enumerate}
+`
+Relation of the two: 
 \begin{itemize}
-\item \textbf{Symmetric:} a symmetry: natural iso $A\otimes
-B\xrightarrow{\sigma_{A,B}} B\otimes A$ such that $\sigma_{B,A}=\sigma_{A,B}^{-1}$.
+\item Let $i$ be the iso of (1): 
+\begin{align*}
+\eta^b_a\in C(a,[b,a\otimes b])&\simeq C(a\otimes b,a\otimes b),\qquad
+\eta^b_a=i(id_{a\otimes b})\\
+\epsilon^b_a\in C([b,a]\otimes b,a)&\simeq C([b,a],[b,a]),\qquad \epsilon^b_a=i^{-1}(id_{[b,a]}).
+\end{align*}
+\item Conversely, from $\eta^b$, $\epsilon^b$ of (2), we define $i$ as 
+\[
+g\in C(a\otimes b,c),\qquad i(g)=[b,g]\circ \eta^b_a
+\]
+with inverse
+\[
+h\in C(a,[b,c]),\quad i^{-1}(h)=\epsilon^b_c\circ (h\otimes b)
+\]
 
 \end{itemize}
 
+Informally, we may interpret $\eta^b_a$ as 'labeling of $b$ by $a$' and $\epsilon^b_a$ as 'evaluation of $[b,a]$'.
+
+\subsection{Compact SMC}
+
+A SMC is \textbf{compact} if each object $a\in C$ has a dual $a^*\in C$ such that there
+are maps $\cup_a: I\to a^*\otimes a$ and $\cap_a: a\otimes a^*\to I$ satisfying the snake
+identities
+\[
+(\cap_a\otimes id_a)\circ (id_a\otimes \cup_a)=id_a,\qquad (id_{a^*}\otimes
+\cap_a)\circ (\cup_a\otimes id_{a^*})=id_{a^*}.
+\]
+
+The following are easily seen by the snake identities (pictures):
+\begin{itemize}
+\item[(1)] $a^*$ is determined up to iso;
+\item[(2)] $a^{**}\simeq a$, indeed, we may define $\cup_{a^*}: I\to a\otimes a^*$ and
+$\cap_{a^*}: a^*\otimes a$ as
+\[
+\cup_{a^*}=\sigma_{a^*,a}\circ \cup_a,\qquad \cap_{a^*}=\cap_a\circ \sigma_{a^*,a},
+\]
+so that $a$ is dual to $a^*$, and use (1);
+\item[(3)] if we fix $a^*$ and $\cup_a$ ($\cap_a$), then  $\cap_a$ ($\cup_a$) is uniquely
+determined;
+\item[(4)] any assignment $a\mapsto a^*$ defines a functor $C\to C^{op}$ (if $f:a\to b$,
+we can use $\cup_a$ and $\cap_b$ to ''bend the wires'' to obtain a map $b^*\to a^*$, this
+is obviously functorial);
+\item[(5)] $(a\otimes b)^*\simeq a^*\otimes b^*$, we can clearly put (using symmetry)
+\[
+\cup_{a\otimes b}=\cup_a\otimes \cup_b,\qquad \cap_{a\otimes b}=\cap_a\otimes \cap_b
+\]
+\item[(5)] $C$ is closed, with $[b,c]=b^*\otimes c$: the iso $i: C(a\otimes b,c)\simeq
+C(a,b^*\otimes c)$ can be obtain (roughly) as
+\[
+i(g)=g\circ \cup_b,\qquad i^{-1}(h)=\cap_b\circ h,
+\]
+the maps are inverses by the snake identities, naturality is obvious, since $i$ does
+nothing on $a$ or $c$. The unit and counit of the adjunction are given as
+\[
+\eta^b_a=a\otimes \cup_b : a\to b^*\otimes a\otimes b,\qquad \epsilon^b_a=\cap_b\otimes a:
+b^*\otimes a\otimes b\to a.
+\]
+\item[(6)] Can we state a theorem like:  $C$ is compact if and only if for each $b\in C$
+there is some $b^*\in C$ such that $b^*\otimes -$ is the right adjoint of $-\otimes b$ and
+...? What should be the additional conditions?
+
+\end{itemize}
+
+
+\section{Kleisli categories and monoidal monads} 
+
+A \textbf{monad} on $C$ is a triple $(P,\eta,\mu)$, where:
+\begin{itemize}
+\item $P: C\to C$ is an endofunctor;
+
+\item $\eta: Id_C\to P$, $\mu: P^2\to P$ are natural transformations satisfying some
+triangles and squares.
+\end{itemize}
+
+The \textbf{Kleisli category} $C_P$ has the same objects as $C$, with morphisms:
+\[
+C_p(a,b)=C(a,P(b)),
+\]
+and for $f\in C_p(a,b)$, $g\in C_p(b,c)$, the composition is defined as
+\[
+g\circ f:=\mu_c\circ P(g)\circ f.
+\]
+
+ A monad is \textbf{monoidal} \cite{seal2013tensors} if there are maps
+ \[
+\kappa_{a,b}:Pa\otimes Pb\to P(a\otimes b),\qquad a,b\in C,
+ \]
+ natural in $a,b$ and such that 
+ \begin{itemize}
+\item $(P,\eta, \kappa)$ is a \textbf{monoidal functor}, that is, some diagrams involving
+$P$, $\alpha$, $\lambda$, $\rho$, $\kappa$ and $\eta$ commute;
+\item additional diagrams containing $\mu$ commutes;
+\item\textbf{symmetric}: additionally a diagram with $\sigma$ commutes. 
+
+ \end{itemize}
+
+\begin{prop}\cite[Prop. 1.2.2]{seal2013tensors}  There is a bijective correspondence
+between:
+\begin{enumerate}
+\item[(i)] families of morphisms $\{\kappa_{a,b}\}$ such that $(P,\eta,\mu,\kappa)$ is a
+(symmetric)
+monoidal monad;
+\item[(ii)] (symmetric) monoidal structures on $C_P$ such that the left adjoint functor $F_P:C\to C_P$
+is strict monoidal.
+
+\end{enumerate}
+
+\end{prop}
+
+
+
+
+
 \end{document}
 
-Let $\psi$ be a faithful normal state on a von Neumann algebra $\Me$. We will prove the following inequality:
-\begin{equation}\label{eq:goal}
-\|h_{\psi\circ\gamma}^{\frac{1}{2p}}bh_{\psi\circ\gamma}^{\frac{1}{2p}}\|_p\le
-\|h_{\psi}^{\frac{1}{2p}}\gamma(b)h_{\psi}^{\frac{1}{2p}}\|_p
-\end{equation}
-for all $p\in [1/2,1]$, all $b\in \Ne^+$ and any unital positive  map $\gamma: \Ne\to
-\Me$ (Eq. (19) in \cite{kato2023onrenyi}). This then implies DPI for the $\alpha-z$-R\'enyi divergence for
-$\alpha/2,\alpha-1\le z\le \alpha$.
-
-Let $\gamma_\psi^*$ be the Petz dual of $\gamma$ with respect to $\psi$, then 
-its predual satisfies
-\[
-(\gamma^*_\psi)_*(h_{\psi\circ\gamma}^{1/2}bh_{\psi\circ\gamma}^{1/2})=h_\psi^{1/2}\gamma(b)h_\psi^{1/2}
-\]
-(this is eq. (21) in \cite{kato2023onrenyi}). Put
-$h_\omega:=h_{\psi\circ\gamma}^{1/2}bh_{\psi\circ\gamma}^{1/2}\in L_1(\Ne)^+$. We then have, using Thm.
-4.1 in \cite{jencova2021renyi}
-\begin{align*}
-\|h_{\psi}^{\frac{1}{2p}}\gamma(b)h_{\psi}^{\frac{1}{2p}}\|^p_p&=
-\|h_\psi^{\frac{1-p}{2p}}(\gamma_\psi^*)_*(h_\omega)h_\psi^{\frac{1-p}{2p}}\|^p=\tilde
-Q_p((\gamma_\psi^*)_*(h_\omega)\|(\gamma_\psi^*)_*(h_{\psi\circ\gamma}))\\
-&\ge \tilde Q_p(h_\omega\|h_{\psi\circ\gamma})=\|
-h_{\psi\circ\gamma}^{\frac{1-p}{2p}}h_\omega
-h_{\psi\circ\gamma}^{\frac{1-p}{2p}}\|^p=\|h_{\psi\circ\gamma}^{\frac{1}{2p}}bh_{\psi\circ\gamma}^{\frac{1}{2p}}\|^p_p.
-\end{align*}
-
-\begin{thebibliography}{99}
-
-\bibitem{jencova2021renyi} A. Jen\v cov\'a, Rényi relative entropies and noncommutative
-$L_p$-spaces II, Ann. Henri Poincaré 22, 3235–3254 (2021)
-\bibitem{kato2023onrenyi} Shinya Kato, On $\alpha-z$-R\'enyi divergence in the von Neumann
-algebra setting, arXiv:2311.01748.
-
-\end{thebibliography}
-
-
-
-\end{document}
-
-
-\|h_{\psi\circ\gamma}^{\frac{1}{2p}}bh_{\psi\circ\gamma}^{\frac{1}{2p}}\|^p_p=
-\Tr(h_{\psi\circ\gamma}^{\frac{1-p}{2p}}
-\end{align*}
-
-
-
-
-\end{document}
-
-We will use the results in \cite{gu2023interpolation} on interpolation of Haagerup
-$L_p$-spaces. There, the space $L_p(\Me,\psi)$ for $0<p\le \infty$ is defined as
-follows. For $x\in \Me$, define the norm
-\[
-\|x\|_{p,\psi}=\|h_\psi^{1/2p}xh_\psi^{1/2p}\|_p,
-\]
-the space $L_p(\Me,\psi)$ is the completion of $\Me$ under this norm. For $p\ge 1$, the
-space can be identified with the Kosaki $L_p$-space. It is shown \cite[Thm.
-4.1]{gu2023interpolation} that for any $0<p_0<p_1\le \infty$, the space
-$L_{p_\theta}(\Me,\psi)$ is obtained by complex interpolation:
-\[
-L_{p_\theta}(\Me,\psi)=[L_{p_0}(\Me,\psi),L_{p_1}(\Me,\psi)]_\theta,\qquad
-1/p_\theta=(1-\theta)/p_0+\theta/p_1.
-\]
-
-We need  to prove the inequality
-\[
-\|b\|_{p,\psi\circ\gamma}\le \|\gamma(b)\|_{p,\psi}
-\]
-for any $b\in \Ne^+$. By the complex interpolation result, it should be enough to prove the
-inequality for the two extremal cases: $p=1/2$ and $p=1$. 
-
-Let  $p=1/2$ and let $b\in \Ne$, $b=v|b|$ be the polar decomposition. Assume wlog that $\|b\|\le 1$.
-Then by usin H\"older inequality,
-\begin{align*}
-\|b\|_{1/2,\psi\circ\gamma}&=\|h_{\psi\circ\gamma}v|b|h_{\psi\circ\gamma}\|_{1/2}\le \||b|^{1/2}h_{\psi\circ\gamma}\|_1=\Tr
-u |b|^{1/2}h_{\psi\circ\gamma}=\Tr \gamma(u|b|^{1/2})h_\psi\\
-&\le \|\gamma(u|b|^{1/2})h_\psi\|_1=\Tr h_\psi\gamma(u|b|^{1/2})^*\gamma(u|b|^{1/2})h_\psi\le
-\Tr (h_\psi\gamma(|b|)h_\psi)^{1/2}=\|\gamma(|b|)\|_{1/2,\psi}.
-\end{align*}
-
-For $p=1$, we have
-\begin{align*}
-\|b\|_{1,\psi\circ\gamma}=\Tr h_{\psi\circ\gamma}^{1/2}bh_{\psi\circ\gamma}^{1/2}=\Tr
-bh_{\psi\circ\gamma}=\Tr \gamma(b)h_\psi=\|\gamma(b)\|_{1,\psi}.
-\end{align*}
-
-The inequality for all $p\in [1/2,1]$ now should follow by complex interpolation: ale to
-fakt neviem jak! Je to opacne!
-
-
-
+$\cup_a$, $\cap_a$
 \end{document}
 
