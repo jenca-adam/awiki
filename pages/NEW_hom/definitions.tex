@@ -47,15 +47,15 @@
 \begin{itemize}
 \item A functor $\otimes: C\times C\to C$;
 \item unit object $I\in C$;
-\item associator: natural iso $(A\otimes B)\otimes C \xrightarrow{\alpha_{A,B,C}} A\otimes
-(B\otimes C)$;
-\item left unitor: natural iso $I\otimes A \xrightarrow{\lambda_A} A$;
+\item associator: natural iso $(a\otimes b)\otimes c \xrightarrow{\alpha_{a,b,c}} a\otimes
+(b\otimes c)$;
+\item left unitor: natural iso $I\otimes a \xrightarrow{\lambda_a} a$;
 
 
-\item right unitor: natural iso $A\otimes I \xrightarrow{\rho_A} A$
+\item right unitor: natural iso $a\otimes I \xrightarrow{\rho_a} a$
 
-\item \textbf{symmetric} if there is a symmetry: natural iso $A\otimes
-B\xrightarrow{\sigma_{A,B}} B\otimes A$ such that $\sigma_{B,A}=\sigma_{A,B}^{-1}$, 
+\item \textbf{symmetric} if there is a symmetry: natural iso $a\otimes
+b\xrightarrow{\sigma_{a,b}} b\otimes a$ such that $\sigma_{b,a}=\sigma_{a,b}^{-1}$, 
 
 \end{itemize}
 satisfying triangle, pentagon (+ symmetry) diagrams.
@@ -160,14 +160,32 @@ A \textbf{monad} on $C$ is a triple $(P,\eta,\mu)$, where:
 triangles and squares.
 \end{itemize}
 
+\subsection{Kleisli categories}
+
 The \textbf{Kleisli category} $C_P$ has the same objects as $C$, with morphisms:
 \[
 C_p(a,b)=C(a,P(b)),
 \]
-and for $f\in C_p(a,b)$, $g\in C_p(b,c)$, the composition is defined as
+the identity $id_a=\eta_a$ and for $f\in C_p(a,b)$, $g\in C_p(b,c)$, the composition is defined as
 \[
 g\circ f:=\mu_c\circ P(g)\circ f.
 \]
+We have the following adjunction:
+\begin{itemize}
+\item the \textbf{left adjoint functor} $F_P: C\to C_P$ is defined as $a\mapsto a$ and for $f:a\to b$, we
+put $F_P(f)\in C_P(a,b)=C(a,P(b))$ as $\eta_b\circ f$;
+
+\item the \textbf{right adjoint functor} $G_P:C_P\to C$ is
+given as $a\mapsto P(a)$ and for $f\in C_P(a,b)=C(a,P(b))$ we put $G_P(f)\in C(P(a),P(b))$
+as $G_P(f)=\mu_b\circ P(f)$. 
+
+
+\end{itemize}
+This is indeed an adjunction, where the unit is given by $\eta$ and the counit is
+determined as $\epsilon_a=id_{P(a)}\in C_P(P(a),a)$.
+
+
+\subsection{Monoidal monads}
 
  A monad is \textbf{monoidal} \cite{seal2013tensors} if there are maps
  \[
@@ -181,6 +199,7 @@ $P$, $\alpha$, $\lambda$, $\rho$, $\kappa$ and $\eta$ commute;
 \item\textbf{symmetric}: additionally a diagram with $\sigma$ commutes. 
 
  \end{itemize}
+A monoidal functor is \textbf{strict} if $\kappa$ is iso.
 
 \begin{prop}\cite[Prop. 1.2.2]{seal2013tensors}  There is a bijective correspondence
 between:
@@ -195,6 +214,19 @@ is strict monoidal.
 
 \end{prop}
 
+If $(P,\eta,\mu,\kappa)$ is a symmetric monoidal monad, we define the monoidal structure
+on  $C_P$ as follows. The functor
+\[
+\otimes_P: C_P\times C_P\to C_P
+\]
+is given as as $a\otimes_P b=a\otimes b$ on objects, and for $f\in C_P(a,c)=C(a,P(c))$ and $g\in
+C_P(b,d)=C(b,p(d))$, we define $f\otimes_P g\in C_P(a\otimes_P b, C\otimes_P d)=C(a\otimes
+b, P(c\otimes d))$ as
+\[
+f\otimes_P g:= \kappa_{b,d}\circ (f\otimes g).
+\]
+The associator and unitors  and symmetry in $C_P$ can be defined from those in $C$ by composition with
+$\eta$. 
 
 
 
