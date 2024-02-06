@@ -1,5 +1,8 @@
-title: "Doktorandske studium"
+title: Doktorandske studium
 ---
+
+Dokumenty na [gdisc](https://drive.google.com/drive/folders/1ySfbCzjdcpMk7_4W8MOaR8w9aNUV0DKS?usp=sharing)
+
 
 ## Zoznam školiteľov
 
@@ -30,7 +33,7 @@ title: "Doktorandske studium"
 
 ## Lajstrá
 
-Oznámenie VR o schválení nového školiteľa - [vzor](DS_garant/vzor_skolitel.pdf
+Oznámenie VR o schválení nového školiteľa - [vzor](DS_garant/vzor_skolitel.pdf)
 
 Zápisnica z prijímacieho konania - [vzor](DS_garant/vzor.pdf)
 
