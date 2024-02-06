@@ -10,7 +10,7 @@ title: "Doktorandske studium"
 [RNDr. Jozef Pócs, PhD.](DS_pocs)    
 [doc. Mgr. Ondrej Šuch, PhD.](DS_such)    
 [prof. RNDr. Michal Fečkan, DrSc.](DS_feckan)    
-[Martin Kochol](DS_kochol)    
+[RNDr. Martin Kochol, PhD., DSc.](DS_kochol)    
 [Mgr. Andrea Zemánková, PhD.](DS_zemankova)     
 [prof. RNDr. Gejza Wimmer, DrSc.](DS_wimmer)     
 [prof. RNDr. Anatolij Dvurečenskij, DrSc](DS_dvurecenskij)    
@@ -29,6 +29,10 @@ title: "Doktorandske studium"
 
 
 ## Lajstrá
+
+Oznámenie VR o schválení nového školiteľa - [vzor](DS_garant/vzor_skolitel.pdf
+
+Zápisnica z prijímacieho konania - [vzor](DS_garant/vzor.pdf)
 
 [Návrh dizertačnej skúšky](DS_garant/navrh.docx)
 

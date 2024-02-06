@@ -4,8 +4,8 @@ title: Natália Dilna, školiteľ
 * Mgr. Natália Dilna, PhD.        
 * IIa od 18.11.2019    
 * [CV](DS_dilna/cv.doc)     
-
-* Schválená VR MÚSAV:  
+* [potvrdenie IIa](DS_dilna/potvrdenie_IIa.pdf)    
+* Schválená VR MÚSAV: 29. 1. 2024     
 
 
 ---

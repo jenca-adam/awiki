@@ -102,7 +102,22 @@ h\in C(a,[b,c]),\quad i^{-1}(h)=\epsilon^b_c\circ (h\otimes b)
 
 \end{itemize}
 
-Informally, we may interpret $\eta^b_a$ as 'labeling of $b$ by $a$' and $\epsilon^b_a$ as 'evaluation of $[b,a]$'.
+\medskip
+\noindent
+Equivalently: a SMC $C$ is closed if and only if for all $b,c\in C$, there is an object
+$[b,c]$ and an \textbf{evaluation map} $eval_{b,c}: [b,c]\otimes b\to c$ that has the
+following \textbf{universal property}: for all $a\in C$ and $f:a\otimes b\to c$ there is a
+unique $h:a\to [b,c]$ such that
+\[
+f=eval_{b,c}\circ(h\otimes b).
+\]
+The evaluation map is the counit $eval_{b,c}=\epsilon^b_c$ above.
+
+\medskip
+\noindent
+Internal hom is a functor $[-,-]: C^{op}\times C\to C$ and the isomorphism in
+(1) is natural in all 3 variables $a,b,c$. This follows by  Yoneda (nLab).
+
 
 \subsection{Compact SMC}
 
@@ -117,6 +132,10 @@ identities
 The following are easily seen by the snake identities (pictures):
 \begin{itemize}
 \item[(1)] $a^*$ is determined up to iso;
+\item[(1)] $I^*\simeq I$, by the isomorphisms 
+\[
+\rho_{I^*}\circ \cup_I: I\to I^*,\qquad \cap_I\circ \lambda^{-1}_{I^*}: I^*\to I;
+\]
 \item[(2)] $a^{**}\simeq a$, indeed, we may define $\cup_{a^*}: I\to a\otimes a^*$ and
 $\cap_{a^*}: a^*\otimes a$ as
 \[
@@ -220,7 +239,7 @@ on  $C_P$ as follows. The functor
 \otimes_P: C_P\times C_P\to C_P
 \]
 is given as as $a\otimes_P b=a\otimes b$ on objects, and for $f\in C_P(a,c)=C(a,P(c))$ and $g\in
-C_P(b,d)=C(b,p(d))$, we define $f\otimes_P g\in C_P(a\otimes_P b, C\otimes_P d)=C(a\otimes
+C_P(b,d)=C(b,p(d))$, we define $f\otimes_P g\in C_P(a\otimes_P b, c\otimes_P d)=C(a\otimes
 b, P(c\otimes d))$ as
 \[
 f\otimes_P g:= \kappa_{b,d}\circ (f\otimes g).
@@ -229,10 +248,176 @@ The associator and unitors  and symmetry in $C_P$ can be defined from those in $
 $\eta$. 
 
 
+\section{Compact Kleisli categories}
+
+Assume that $C$ is a symmetric monoidal closed category. Assume that $(P,\eta,\mu,\kappa)$ is a
+monoidal monad, such that the category $C_p$ with corresponding monoidal structure is
+compact. We will study some consequences of this. 
+
+\medskip
+
+\subsection{First consequences}
+It follows that each object $a\in C_P$ has a dual object $a^*$, such that there is an
+isomorphism
+\[
+i:C_P(a\otimes_P b^*,c)\simeq C_P(a,b\otimes_P c),
+\]
+which is natural (in $C_P$) in $a$ and $c$. This means that for any arrows
+$a\xrightarrow{f} a'$ and $a'\otimes b^*\xrightarrow{h'} c$ in $C_P$, we have
+\[
+i(h'\circ_P (f\otimes_P id_{b^*}^P))=i(h')\circ_P f,
+\]
+and similarly, gor $c\xrightarrow{g} c'$ and $a\otimes b^*\xrightarrow{h} c$ in $C_P$, we get
+\[
+i(g\circ_P h)=(id_b^P\otimes_P g)\circ_P i(h).
+\]
+By definition of the Kleisli category, $i$ is an isomorphism (that is, a bijection of
+sets)
+\[
+i: C(a\otimes b^*,P(c))\simeq C(a,P(b\otimes c)).
+\]
+We would like to show that $i$ is natural in $a$ and $c$ also in the category $C$.
+
+So let $f\in C(a,a')$ and let $\tilde f:= \eta_{a'}\circ f\in C(a, P(a'))=C_P(a,a')$. 
+Let $h'\in C(a'\otimes b^*, P(c))$, then 
+\begin{align*}
+h'\circ_P (\tilde f\otimes_P b^*)&=\mu_c\circ P(h')\circ (\tilde f\otimes_P \eta_{b^*})=\mu_c\circ P(h')\circ \kappa_{a',b^*}\circ
+(\eta_{a'}\otimes \eta_{b^*})\circ (f\otimes b^*)\\
+&= \mu_c\circ P(h')\circ \eta_{a'\otimes b^*}\circ (f\otimes b^*)=\mu_c\circ
+\eta_{P(c)}\circ h'\circ (f\otimes b^*)\\
+&= h'\circ(f\otimes b^*),
+\end{align*}
+where we used that $\kappa_{a',b^*}\circ
+(\eta_{a'}\otimes \eta_{b^*})=\eta_{a'\otimes b^*}$, naturality of $\eta$ and the
+triangle identity. 
+Similarly, we get for any $\bar h'\in C(a, P(b\otimes c))$,
+\[
+\bar h'\circ_Pf=\mu_{b\otimes c}\circ P(\bar h')\circ \eta_{a'}\circ f=\bar h'\circ f,
+\]
+in particular, putting these together, this implies 
+\[
+i(h'\circ(f\otimes b^*))= i(h'\circ_P(\tilde f\otimes_P id_{b^*}))=i(h')\circ_P\tilde
+f=i(h')\circ f.
+\]
+Naturality in $c$ is proved similarly.
+
+\medskip
+It follows that there is an isomorphism 
+\[
+C(a,P(b\otimes c))\simeq C(a\otimes b^*, P(c))\simeq C(a,[b^*,P(c)]),
+\]
+natural in $a$ and $c$. By Yoneda, we get the isomorphism
+\[
+P(b\otimes c)\simeq [b^*,P(c)],
+\]
+natural in $c$. Putting $c=I$, we obtain
+\[
+P(b)\simeq P(b\otimes I)\simeq [b^*,P(I)].
+\]
+
+\subsection{A construction of a monoidal monad}
+
+Fix an object  $p\in C$ and assume that 
+\begin{itemize}
+\item there is a bijective map $a\mapsto a^*$ on objects;
+\item for each $a\in C$, there is a morphism $\theta_a\in C(a,[a^*,p])$;
+\item for each morphism $f\in C(a,[b^*,p])$ there is some $\hat f\in C([a^*,p],[b^*,p])$
+\end{itemize}
+such that 
+\begin{enumerate}
+\item[(i)] $\hat \theta_a=id_{[a^*,p]}$;
+\item[(ii)] for $f\in C(a,[b^*,p])$, 
+$\hat f\circ \theta_a=f$;
+\item[(iii)] for $f\in C(a,[b^*,p])$ and $g\in C(b,[c^*,p])$,
+\begin{equation}\label{eq:hatf}
+(\hat g\circ f)^{\wedge}=\hat g\circ \hat f.
+\end{equation}
+
+\end{enumerate}
 
 
-\end{document}
+From this data, we may define a monad $(P_p,\theta,\nu)$. Here the functor $P_p$ acts as $a\mapsto [a^*,p]$ on objects and 
+for $f\in C(a,b)$, we define $P_p(f)\in C([a^*,p],[b^*,p])$ by
+\[
+P_p(f):=(\theta_b\circ f)^{\wedge}.
+\]
+Moreover, $\nu$ is defined as $\nu_a=\hat{id}_{[a^*,p]}$. The fact that this is a monad 
+ follows easily from the properties (i)-(iii). 
 
-$\cup_a$, $\cap_a$
-\end{document}
+To make it monoidal, we add  family of maps 
+\[
+\kappa_{a,b}:[a^*,p]\otimes [b^*,p]\to [(a\otimes b)^*,p],
+\]
+such that
+\begin{enumerate}
+\item[(iv)] for all $a,b\in C$, 
+\[
+\theta_{a\otimes b}=\kappa\circ (\theta_a\otimes \theta_b);
+\]
+\item[(v)] for $f\in C(a,[b^*,p])$ and $g\in C(c,[d^*,p])$,
+\[
+\kappa_{b,d}\circ(\hat f\otimes \hat g)=(\kappa_{b,d}\circ(f\otimes g))^\wedge\circ
+\kappa_{a,c}.
+\]
+
+\end{enumerate}
+
+Then one can check that $\kappa_{a,b}$ are natural in $a,b$ and that 
+\[
+\nu_{a\otimes b}\circ P_p(\kappa_{a,b})\circ
+\kappa_{[a^*,p],[b^*,p]}=\kappa_{a,b}\circ(\nu_a\otimes \nu_b).
+\]
+We also need some properties with respect to $\alpha,\lambda,\rho$ and $\sigma$:
+\begin{enumerate}
+\item[(vi)] for all $a,b,c$,
+\[
+\kappa_{a,b\otimes c}\circ
+(id_{[a^*,p]}\otimes\kappa_{b,c})\circ\alpha_{[a^*,p],[b^*,p],[c^*,p]}=P_p(\alpha_{a,b,c})\circ\kappa_{a\otimes
+b,c}\circ(\kappa_{a,b}\otimes id_{[c^*,p]})
+\]
+\item[(vii)] for all $a$,
+\begin{align*}
+(\theta_a\circ \lambda_a)^\wedge\circ \kappa_{I,a}\circ (\theta_I\otimes
+id_{[a^*,p]})&=\lambda_{[a^*,p]}\\
+(\theta_a\circ \rho_a)^\wedge\circ \kappa_{I,a}\circ (id_{[a^*,p]}\otimes
+\theta_I)&=\rho_{[a^*,p]};
+\end{align*}
+
+\item[(viii)] for all $a,b$,
+\[
+(\theta_{b\otimes a}\circ \sigma_{a,b})^\wedge\circ \kappa_{a,b}=\kappa_{b,a}\circ
+\sigma_{[a^*,p],[b^*,p]}.
+\]
+\end{enumerate}
+Then $(P_p,\theta,\nu,\kappa)$ is a monoidal monad, \cite{seal2013tensors}. 
+
+\subsection{The Kleisli category for $P_p$}
+
+The Kleisli category $C_p:=C_{P_p}$ has the same objects as $C$, with morphisms
+$C_p(a,b)=C(a, [b^*,p])$, the identity is $id^p_a=\theta_a$ and for $f\in C_p(a,b)$, $g\in
+C_p(b,c)$, the composition is fiven as 
+\[
+g\circ_p f= \hat g\circ f.
+\]
+Let $j$ be the natural iso (in $C$):
+\[
+j: C(a\otimes b,c)\simeq C(a,[b,c])
+\]
+\begin{remark}
+Note that  $C_p(a,b)$ can be identified with $C(a\otimes b^*,p)$, with composition given by
+\[
+j^{-1}(j(\psi)^\wedge\circ j(\varphi)),\qquad \varphi\in C(a\otimes b^*,p),\ \psi\in
+C(b\otimes c^*,p).
+\]
+\end{remark}
+
+We equip $C_p$ with the tensor product  $\otimes_p$ defined by $a\otimes_p b=a\otimes
+b$ on objects and $f\otimes_p g=\kappa\circ(f\otimes g)$ on morphisms. 
+Then  $(C_p,\otimes_p,I)$ is a symmetric monoidal category, with  the natural isomorphisms
+$\alpha,\lambda,\rho,\sigma$ extended by $\theta$, that is,
+$\alpha^p:=\theta\circ \alpha$, $\lambda^p:=\theta\circ \lambda$, $\rho^p:=\theta\circ
+\rho$, $\sigma^p:=\theta\circ \sigma$.
+
+
+ \end{document}
 
