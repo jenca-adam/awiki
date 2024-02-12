@@ -391,7 +391,7 @@ id_{[a^*,p]})&=\lambda_{[a^*,p]}\\
 \end{enumerate}
 Then $(P_p,\theta,\nu,\kappa)$ is a monoidal monad, \cite{seal2013tensors}. 
 
-\subsection{The Kleisli category for $P_p$}
+\subsection{The Kleisli category  $C_p$}
 
 The Kleisli category $C_p:=C_{P_p}$ has the same objects as $C$, with morphisms
 $C_p(a,b)=C(a, [b^*,p])$, the identity is $id^p_a=\theta_a$ and for $f\in C_p(a,b)$, $g\in
@@ -399,11 +399,11 @@ C_p(b,c)$, the composition is fiven as
 \[
 g\circ_p f= \hat g\circ f.
 \]
+\begin{remark}
 Let $j$ be the natural iso (in $C$):
 \[
 j: C(a\otimes b,c)\simeq C(a,[b,c])
 \]
-\begin{remark}
 Note that  $C_p(a,b)$ can be identified with $C(a\otimes b^*,p)$, with composition given by
 \[
 j^{-1}(j(\psi)^\wedge\circ j(\varphi)),\qquad \varphi\in C(a\otimes b^*,p),\ \psi\in
@@ -417,6 +417,55 @@ Then  $(C_p,\otimes_p,I)$ is a symmetric monoidal category, with  the natural is
 $\alpha,\lambda,\rho,\sigma$ extended by $\theta$, that is,
 $\alpha^p:=\theta\circ \alpha$, $\lambda^p:=\theta\circ \lambda$, $\rho^p:=\theta\circ
 \rho$, $\sigma^p:=\theta\circ \sigma$.
+
+\subsection{When is $C_p$ closed?} 
+
+We need to define the internal hom $b\overset{p}{\multimap} c$, such that
+$b\overset{p}\multimap -$ is the right adjoint of $b\otimes_p -$ in $C_p$. In fact, it is
+enough to specify $b\overset{p}\multimap c$ on objects and to find an iso
+\[
+C_p(a\otimes_p b,c)\simeq C_p(a,b\overset{p}\multimap c)
+\]
+natural in $a$. As for the isomorphism, we must have
+\[
+C(a\otimes b,[c^*,p])\simeq C(a, [(b\overset{p}\multimap c)^*,p])
+\]
+Since $C$ is SMC, we have
+\[
+C(a\otimes b, [c^*,p])\simeq C((a\otimes b)\otimes c^*,p)\simeq C(a\otimes (b\otimes
+c^*),p)\simeq C(a, [b\otimes c^*,p]) 
+\]
+and the isomorphisms are natural (in $C$) in all variables. This suggests to define $b
+\overset{p}\multimap c$ as the object such that $(b\overset{p}\multimap c)^*=b\otimes
+c^*$. Since $(-)^*$ is bijective, such an object exists and is unique. 
+
+As for naturality of the isomorphism, let us denote by $i$ the resulting isomorphism
+\[
+i: C(a\otimes b, [c^*,p])\simeq C(a, [b\otimes c^*,p])
+\]
+Let $f\in C_p(a',a)=C(a',[a^*,p])$. Then naturality means that we require
+\[
+i(h\circ_p(f\otimes_p id^p_b))=i(h)\circ_p f=i(h)^\wedge \circ f.
+\]
+on the left hand side  we obtain 
+\[
+h\circ_p(f\otimes_p id^p_b)=\hat h\circ \kappa_{a,b}\circ (f\otimes \theta_b)=\hat
+h\circ s_{a,b}\circ (f\otimes b),
+\]
+where $\hat h\circ s_{a,b}\in C([a^*,p]\otimes b, [c^*,p])$. By naturality in $C$, we see
+that 
+\[
+i(\hat h\circ s_{a,b}\circ (f\otimes b))=i(\hat h \circ s_{a,b})\circ f,
+\]
+where $i(\hat h\circ s_{a,b})\in C([a^*,p],[b\otimes c^*,p])$.
+It follows that we need to have
+\begin{equation}\label{eq:cpclosed}
+i(\hat h\circ s_{a,b})=i(h)^\wedge.
+\end{equation}
+
+
+
+
 
 
  \end{document}

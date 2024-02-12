@@ -1,6 +1,11 @@
 title: Vedecká rada MÚ SAV
 ---
 
+Dokumenty na  [gdisc](https://drive.google.com/drive/folders/1rRYqOioCWSx3km9gGfFyuVdH7nQWn8Ba?usp=drive_link),
+ pre DŠ na [gdisc DŠ](https://drive.google.com/drive/folders/1ySfbCzjdcpMk7_4W8MOaR8w9aNUV0DKS?usp=drive_link)
+
+
+
 **Členovia:** 
 
     -  doc. RNDr. Ľubica Holá, DrSc.
@@ -18,6 +23,15 @@ externí pracovníci:
 ## 2023
 
 ### Hlasovania
+
+* (6. 2. 2024) Návrh tém DŠ, stanovisko k súťaži mladých vedeckých pracovníkov SAV (M. Hospodár)
+
+
+* (29. 1. 2024) Návrh na nového školiteľa DŠ - Natalia Dilna  
+
+
+* (23. 1: 2024) Vybrané výsledky MÚ SAV, návrh na udelenie Medaily SAV - Wimmer, nový školiteľ DŠ - M. Hospodár
+
 
 * (4. 10. 2023) Návrh na IIa Michal Hospodár    
 

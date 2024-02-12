@@ -33,6 +33,8 @@ Dokumenty na [gdisc](https://drive.google.com/drive/folders/1ySfbCzjdcpMk7_4W8MO
 
 ## Lajstrá
 
+[Lajstrá na FMFI](https://zona.fmph.uniba.sk/sluzby-a-administrativa/tlaciva/)
+
 Oznámenie VR o schválení nového školiteľa - [vzor](DS_garant/vzor_skolitel.pdf)
 
 Zápisnica z prijímacieho konania - [vzor](DS_garant/vzor.pdf)
