@@ -31,6 +31,20 @@ Dokumenty na [gdisc](https://drive.google.com/drive/folders/1ySfbCzjdcpMk7_4W8MO
 * Ing. F. [Čapka](DS_capka)  (2019 - )    
 
 
+## Čo a kedy
+
+* Január: Témy DP    
+    -  vyžiadať od školiteľov    
+    - zoznam schváliť na VR   
+    - vložiť do AISu   
+    - poslať: garant (Ševčovič) + prodekan (Jajcay)
+
+* Do konca júna: Prijímacie konanie    
+    - robíme si my
+
+
+
+
 ## Lajstrá
 
 [Lajstrá na FMFI](https://zona.fmph.uniba.sk/sluzby-a-administrativa/tlaciva/)

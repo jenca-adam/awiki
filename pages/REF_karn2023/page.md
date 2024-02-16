@@ -18,6 +18,8 @@ title: karn, 2023, AIOT
 
 [revision](REF_karn2023/revision.pdf)
 
+**Decision:** Accept (editors decision, review cancelled) 
+
 
 
 

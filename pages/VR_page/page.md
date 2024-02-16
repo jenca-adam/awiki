@@ -20,9 +20,12 @@ externí pracovníci:
     - prof. RNDr. Pavol Zlatoš, CSc.
 
 
-## 2023
+## 2024
 
-### Hlasovania
+### Hlasovania   
+
+* (13. 2. 2024) Výročná správa MÚ SAV, stanovisko VR    
+
 
 * (6. 2. 2024) Návrh tém DŠ, stanovisko k súťaži mladých vedeckých pracovníkov SAV (M. Hospodár)
 
@@ -31,6 +34,15 @@ externí pracovníci:
 
 
 * (23. 1: 2024) Vybrané výsledky MÚ SAV, návrh na udelenie Medaily SAV - Wimmer, nový školiteľ DŠ - M. Hospodár
+
+
+
+
+
+
+## 2023
+
+### Hlasovania     
 
 
 * (4. 10. 2023) Návrh na IIa Michal Hospodár    
