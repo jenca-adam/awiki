@@ -2,6 +2,12 @@ title: My own papers
 ---
 ## Published papers
 
+### 2024
+
+1. [jencova2024theexponential](jencova2024theexponential) special issue of IG
+
+1. [jencova2024recoverability](jencova2024recoverability) recoverability by hypothesis testing, Beth's special issue 
+
 
 ### 2023
 
@@ -9,6 +15,8 @@ title: My own papers
 1. [heinosaari2023dispensing](heinosaari2023dispensing)  broadcasting, with Teiko Heinosaari and Martin Plávala
 
 1. [jencova2023spectrality](jencova2023spectrality)
+
+
 ### 2022
 
 1. [jencova2022assemblages](jencova2022assemblages)  steering of dichotomic assemblages, Choquet order 
@@ -151,9 +159,7 @@ torsion-free duals,  divergences, conference proceedings,  not on arxiv!
 
 ## Preprints
 
-1. [jencova2023theexponential](jencova2023theexponential) special issue of IG, (<span style='color:red'>accepted</span>)
-
-1. [jencova2023recoverability](jencova2023recoverability)     
+1.    
 1. [jencova2015aextreme](jencova2015aextreme) C^\*-extreme (or $\mathcal A$-extreme) points of UCP maps into matrix
 algebras, not on arxiv!  (<span style='color:red'>unpublished draft</span>)
 

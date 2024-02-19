@@ -1,10 +1,10 @@
-title: jencova2023recoverability
+title: jencova2024recoverability
 ---
 
 
 ## Reference
 
-Anna Jenčová, Recoverability of quantum channels via hypothesis testing, arxiv:2303.11707, Mar 2023,
+Anna Jenčová, Recoverability of quantum channels via hypothesis testing, Lett Math Phys 114, 31 (2024).
 
 ## Abstract 
   A quantum channel is sufficient with respect to a set of input states if it
@@ -17,5 +17,8 @@ success probabilities in hypothesis testing problems, equivalently, by
 preservation of $L_1$-distance.
 
     
+[doi](https://doi.org/10.1007/s11005-024-01775-2)
 
 [arxiv:2303.11707v1](https://arxiv.org/abs/2303.11707)
+
+[sharedIt link](https://rdcu.be/dyQ19)
