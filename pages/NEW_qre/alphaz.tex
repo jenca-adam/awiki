@@ -105,16 +105,26 @@ contained in this range as $D_\alpha(\psi\|\varphi)=D_{\alpha,1}(\psi\|\varphi)$
 sandwiched R\'enyi divergence  is obtained as $\tilde
 D_\alpha(\psi\|\varphi)=D_{\alpha,\alpha}(\psi\|\varphi)$, see
 \cite{berta2018renyi,hiai2021quantum,jencova2018renyi, jencova2021renyi} for some
-alternative definitions and properties of $\tilde D_\alpha$. 
-
+alternative definitions and properties of $\tilde D_\alpha$. The definition in
+\cite{jencova2018renyi} and \cite{jencova2021renyi} is based on the Kosaki interpolation
+spaces  $L_p(\Me,\varphi)$ with respect to a state \cite{kosaki1986applications}. These spaces and
+complex interpolation method will be used frequently also in the present work. 
 
 
 Many of the  properties of $D_{\alpha,z}(\psi\|\varphi)$ 
-were extended from the finite dimensional case in \cite{kato2023onrenyi}. In particular, the following variational formulas will be an important tool for our work.
+were extended from the finite dimensional case in \cite{kato2023onrenyi}. In particular,
+the following variational expressions will be an important tool for our work.
 
-\begin{theorem}\label{thm:variational}
+\begin{theorem}\label{thm:variational} Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$. 
 \begin{enumerate}
-\item[(i)] $\alpha<1$, + attained
+\item[(i)] Let $0<\alpha<1$ and $\max\{\alpha,1-\alpha\}\le z$. Then
+\[
+Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me^{++}}\left\{\alpha \Tr\left((
+a^{1/2}h_\psi^{\alpha/z}a^{1/2})^{z/\alpha}\right)+(1-\alpha)\Tr
+\left((a^{-1/2}h\varphi^{(1-\alpha)/z}a^{-1/2})^{z/(1-\alpha)}\right)\right\}.
+\]
+Moreover, if $\lambda^{-1}\varphi\le \psi\le \lambda \varphi$ for some $\lambda>0$, then
+the infimum is attained and...
 \item[(ii)] $\alpha>1$
 
 \end{enumerate}
