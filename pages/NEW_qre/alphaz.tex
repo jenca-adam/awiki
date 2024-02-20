@@ -28,7 +28,7 @@
 \def\Me{\mathcal M}
 \def\Ne{\mathcal N}
 \def \Tr{\mathrm{Tr}\,}
-\def\Se {\mathcal S}
+\def\states {\mathfrak S}
 \def\supp{\mathrm{supp}}
 \def\<{\langle\.}
 \def\>{\.\rangle}
@@ -47,26 +47,70 @@
 
 \subsection{Basic definitions}
 
-Let $\mathcal M$ be a von Neumann algebra and let $\mathcal M_*$ be its predual. We will
-denote the cone of positive operators in $\mathcal M$ by $\mathcal M^+$, similarly,
-$\mathcal M_*^+$ will denote the cone of positive normal linear functionals on $\mathcal
-M$.  
+Let $\Me$ be a von Neumann algebra  and let $\Me^+$ be the cone of positive elements in $\Me$. We denote the predual by $\Me_*$, its positive part by $\Me_*^+$ and the set of normal states by $\states_*(\Me)$. For $\psi\in \Me_*^+$, we will denote by $s(\psi)$ the support projection  of $\psi$.
 
-Haagerup $L_p$ spaces
+For $0< p\le \infty$, let $L_p(\Me)$ be the Haagerup $L_p$-space over $\Me$ and let
+$L_p(\Me)$ its positive cone, 
+\cite{haagerup1979Lp}. We will use the identifications $\Me\simeq L_\infty(\Me)$, $\Me_*\ni \psi \leftrightarrow h_\psi\in L_1(\Me)$ and the notation $\Tr h_\psi=\psi(1)$ for the trace in $L_1(\Me)$. It this way,
+ $\Me_*^+$  is identified with the positive cone $L_1(\Me)^+$ and $\states_*(\Me)$ with subset of elements in $L_1(\Me)^+$ 
+ with unit trace. 
+Precise definitions and further details on the spaces $L_p(\Me)$ can be found in the notes \cite{terp1981lpspaces}.
+ 
 
-Kosaki, complex interpolation. Generalized s-numbers. Haagerup reduction.
+
+%Kosaki, complex interpolation. Generalized s-numbers. Haagerup reduction. Martingale
+%convergence
 
 
 \subsection{The $\alpha-z$-R\'enyi divergences}
 
-In \cite{kato2023onrenyi}, the
+In \cite{kato2023aremark, kato2023onrenyi}, the
 $\alpha-z$-R\'enyi divergence for $\psi,\varphi\in \mathcal M_*^+$  was defined as
 follows: 
+\begin{defi}\label{defi:renyi} Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$ and let
+$\alpha,z>0$, $\alpha\ne 1$. The $\alpha-z$-R\'enyi divergence is defined as 
+\[
+D_{\alpha,z}(\psi\|\varphi):=\frac1{\alpha-1}\log
+\frac{Q_{\alpha,z}(\psi\|\varphi)}{\psi(1)},
+\]
+where 
+\[
+Q_{\alpha,z}=\begin{dcases} \Tr
+\left(h_\varphi^{(1-\alpha)/2z}h_\psi^{\alpha/z}h_\varphi^{(1-\alpha)/2z}\right)^z, &
+\text{if } 0<\alpha<1\\[0.3em]
+\|x\|_z^z, & \text{if } \alpha>1 \text{ and }\\
+\ & h_\psi^{\alpha/z}=h_\varphi^{(\alpha-1)/2z}xh_\varphi^{(\alpha-1)/2z},\text{ with }
+x\in s(\varphi)L_z(\Me)s(\varphi)\\[0.3em]
+\infty& \text{otherwise}.
+\end{dcases}
+\]
+\end{defi}
+
+%It is easily checked that this definition coincides with \eqref{eq:fdrenyi} in the finitedimensional case.
+
+In the case $\alpha>1$, the following alternative form will be useful.
+
+\begin{lemma}\cite{kato2023onrenyi} \label{lemma:renyi_2z}
+Let $\alpha>1$ and $\psi,\varphi\in \Me_*^+$. Then $Q_{\alpha,z}(\psi\|\varphi)<\infty$ if
+and only if there is some $y\in L_{2z}(\Me)s(\varphi)$ such that 
+\[
+h_\psi^{\alpha/2z}=yh_\varphi^{(\alpha-1)/2z}.
+\]
+Moreover, in this case, such $y$ is unique and we have
+$Q_{\alpha,z}(\psi\|\varphi)=\|y\|_{2z}^{2z}$. 
+\end{lemma}
+
+The standard R\'enyi divergence \cite{petz1985quasi, hiai2018quantum, hiai2021quantum} is
+contained in this range as $D_\alpha(\psi\|\varphi)=D_{\alpha,1}(\psi\|\varphi)$. The
+sandwiched R\'enyi divergence  is obtained as $\tilde
+D_\alpha(\psi\|\varphi)=D_{\alpha,\alpha}(\psi\|\varphi)$, see
+\cite{berta2018renyi,hiai2021quantum,jencova2018renyi, jencova2021renyi} for some
+alternative definitions and properties of $\tilde D_\alpha$. 
 
 
 
-
-The following variational formulas will be an important tool for our work.
+Many of the  properties of $D_{\alpha,z}(\psi\|\varphi)$ 
+were extended from the finite dimensional case in \cite{kato2023onrenyi}. In particular, the following variational formulas will be an important tool for our work.
 
 \begin{theorem}\label{thm:variational}
 \begin{enumerate}

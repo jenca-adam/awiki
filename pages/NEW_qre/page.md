@@ -78,7 +78,9 @@ In von Neumann algebras:
 * [kato2023onrenyi](kato2023onrenyi) $\alpha-z$ Renyi divergences in von Neumann algebra setting    
 * [kato2023aremark](kato2023aremark) tensor product of Haagerup $L_p$-spaces    
 * [gu2019interpolation](gu2019interpolation) interpolation of Haagerup $L_p$-spaces for $p<1$.    
-* [berta2018renyi](berta2018renyi) sandwiched Renyi divergence via Araki-Masuda $L_p$-spaces
+* [berta2018renyi](berta2018renyi) sandwiched Renyi divergence via Araki-Masuda $L_p$-spaces    
+* [BOOK_hiai2021quantum](BOOK_hiai2021quantum) Hiai's book on quantum divergences     
+* [hiai2018quantum](hiai2018quantum) Hiai's paper on standard divergences    
 
 Tools
 
