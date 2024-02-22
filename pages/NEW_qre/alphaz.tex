@@ -2,6 +2,7 @@
 
 \usepackage{hyperref}
 \usepackage{amsmath, amssymb, amsthm}
+\usepackage{xcolor}
 \usepackage[sort&compress,numbers]{natbib}
 \usepackage{doi}
 \usepackage[margin=0.8in]{geometry}
@@ -119,13 +120,26 @@ the following variational expressions will be an important tool for our work.
 \begin{enumerate}
 \item[(i)] Let $0<\alpha<1$ and $\max\{\alpha,1-\alpha\}\le z$. Then
 \[
-Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me^{++}}\left\{\alpha \Tr\left((
-a^{1/2}h_\psi^{\alpha/z}a^{1/2})^{z/\alpha}\right)+(1-\alpha)\Tr
-\left((a^{-1/2}h\varphi^{(1-\alpha)/z}a^{-1/2})^{z/(1-\alpha)}\right)\right\}.
+Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me^{++}}\left\{\alpha
+\Tr\left((a^{1/2}h_\psi^{\alpha/z}a^{1/2})^{z/\alpha}\right)+(1-\alpha)
+\Tr\left((a^{-1/2}h_\varphi^{(1-\alpha)/2z}a^{-1/2})^{z/(1-\alpha)}\right) \right\}.
 \]
 Moreover, if $\lambda^{-1}\varphi\le \psi\le \lambda \varphi$ for some $\lambda>0$, then
-the infimum is attained and...
-\item[(ii)] $\alpha>1$
+the infimum is attained at some $a_0\in \Me^{++}$ satisfying
+\[
+h_\varphi^{(1-\alpha)/2z}a_0^{-1}h_\varphi^{(1-\alpha)/2z}=\left(h_\varphi^{(1-\alpha)/2z}h_\psi^{\alpha/z}h_\varphi^{(1-\alpha)/2z}\right)^{1-\alpha}
+\]
+and
+\[
+\Tr\left((h_\psi^{\alpha/2z}a_0h_\psi^{\alpha/2z})^{z/\alpha}\right)=
+\Tr\left((h_\varphi^{(1-\alpha)/2z}h_\psi^{\alpha/z}h_\varphi^{(1-\alpha)/2z})^{z}\right).
+\]
+\item[(ii)] Let $1<\alpha\le 2z$, then
+\[
+Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me_+} \left\{\alpha
+\Tr\left((a^{1/2}h_\psi^{\alpha/z}a^{1/2})^{z/\alpha}\right)-(\alpha-1)
+\Tr\left((a^{1/2}h_\varphi^{(\alpha-1)/2z}a^{1/2})^{z/(\alpha-1)}\right) \right\}.
+\]
 
 \end{enumerate}
 
@@ -133,15 +147,199 @@ the infimum is attained and...
 \end{theorem}
 
 
-\begin{proof} \cite{kato2023onrenyi} for (i).
+\begin{proof} For part (i) see \cite[Theorem 1 (vi)]{kato2023onrenyi} and its proof. The
+inequality $\ge$ in part (ii) holds for all $\alpha$ and $z$ and was proved in
+\cite[Theorem 2 (vi)]{kato2023onrenyi}. We now prove the opposite inequality. 
 
+Assume first that $Q_{\alpha,z}(\psi\|\varphi)<\infty$, so that there is some $x\in
+s(\varphi)L_z(\Me)^+s(\varphi)$ such that
+$h_\psi^{\alpha/z}=h_\varphi^{(\alpha-1)/2z}xh_\varphi^{(\alpha-1)/2z}$. Plugging this
+into the right hand side, we obtain
+\begin{align*}
+&\sup_{a\in \Me_+} \left\{\alpha
+\Tr\left((a^{1/2}h_\psi^{\alpha/z}a^{1/2})^{z/\alpha}\right)-(\alpha-1)
+\Tr\left((a^{1/2}h_\varphi^{(\alpha-1)/2z}a^{1/2})^{z/(\alpha-1)}\right) \right\}\\
+&=\sup_{a\in \Me_+} \left\{\alpha
+\Tr\left((a^{1/2}h_\varphi^{(\alpha-1)/2z}xh_\varphi^{(\alpha-1)/2z}    a^{1/2})^{z/\alpha}\right)-(\alpha-1)
+\Tr\left((a^{1/2}h_\varphi^{(\alpha-1)/2z}a^{1/2})^{z/(\alpha-1)}\right) \right\}\\
+&=\sup_{a\in \Me_+} \left\{\alpha
+\Tr\left((x^{1/2}h_\varphi^{(\alpha-1)/2z}ah_\varphi^{(\alpha-1)/2z}    x^{1/2})^{z/\alpha}\right)-(\alpha-1)
+\Tr\left((h_\varphi^{(\alpha-1)/2z}a h_\varphi^{(\alpha-1)/2z} )^{z/(\alpha-1)}\right)
+\right\}\\
+&=\sup_{w\in L_{z/(\alpha-1)}(\Me)^+} \left\{\alpha
+\Tr\left((x^{1/2}wx^{1/2})^{z/\alpha}\right)-(\alpha-1)
+\Tr\left(w^{z/(\alpha-1)}\right)
+\right\},
+\end{align*}
+where we used the fact that $\Tr \left((a^*a)^p\right)=\Tr \left((aa^*)^p\right)$ for
+$p>0$ and $a\in L_{p/2}(\Me)$ and the fact that the set of
+elements of the form $h_\varphi^{(\alpha-1)/2z}a h_\varphi^{(\alpha-1)/2z}$ with $a \in
+\Me^+$ is dense in the positive cone $L_{z/(\alpha-1)}(\Me)^+$. Putting $w=x^{\alpha-1}$ we
+get
+\[
+\sup_{w\in L_{z/(\alpha-1)}(\Me)^+} \left\{\alpha
+\Tr\left((x^{1/2}wx^{1/2})^{z/\alpha}\right)-(\alpha-1)
+\Tr\left(w^{z/(\alpha-1)}\right)
+\right\}\ge \Tr(x^z)=\|x\|_z^z= Q_{\alpha,z}(\psi\|\varphi).
+\]
+This finishes the proof in the case that $Q_{\alpha,z}(\psi\|\varphi)<\infty$.  Note that
+this holds if $\psi\le \lambda\varphi$ for some $\lambda>0$. Indeed, since
+$\alpha/2z\in (0,1]$ by the assumption, we then have 
+\[
+h_\psi^{\alpha/2z}\le \lambda^{\alpha/2z}h_\varphi^{\alpha/2z},
+\]
+hence by \cite[Lemma A.58]{hiai2021quantum} there is some $b\in \Me$ such that 
+\[
+h_\psi^{\alpha/2z}=bh_\varphi^{\alpha/2z}=yh_\varphi^{(\alpha-1)/2z},
+\]
+where $y=bh_\varphi^{1/2z}\in L_{2z}(\Me)$. By Lemma \ref{lemma:renyi_2z} we get 
+$Q_{\alpha,z}(\psi\|\varphi)=\|y\|_{2z}^{2z}<\infty$. 
 
+In the general case, note that lower semicontinuity \cite[]{kato2023onrenyi}, we have
+\[
+Q_{\alpha,z}(\psi\|\varphi)\le \liminf_{\epsilon\searrow 0}
+Q_{\alpha,z}(\psi\|\varphi+\epsilon \psi) 
+\]
+and by the previous paragraph, the variational expression holds for
+$Q_{\alpha,z}(\psi\|\varphi)$  for all $\epsilon>0$. The proof is finished 
+by using norm continuity of the map $L_1(\Me)^+\ni h\mapsto h^{1/p}\in L_p(\Me)^+$ for
+$p>1$. 
+ 
+
+ {\color{red} I am not entirely sure about this proof, since the convergence of the
+ expressions 
+\[
+ \Tr\left((a^{1/2}(h_\varphi+\epsilon
+ h_\psi)^{(\alpha-1)/2z}a^{1/2})^{z/(\alpha-1)}\right)\to
+ \Tr\left((a^{1/2}h_\varphi^{(\alpha-1)/2z}a^{1/2})^{z/(\alpha-1)}\right)\]
+ also depends
+ on $\|a\|$, which is not bounded. But probably I misinterpreted something, or I am just being
+ stupid. }
+ 
 \end{proof}
 
 \section{Data processing inequality and reversibility of quantum channels}
 
+Let  $\gamma: \Ne\to \Me$ be a normal positive unital map. Then the  predual of $\gamma$  defines a 
+positive linear map $\gamma_*: L_1(\Me)\to L_1(\Ne)$ that preserves the trace. The support
+of $\gamma$ will be denoted by $s(\gamma)$, recall that this is the largest projection
+$p\in \Ne$ such that $\gamma(p)=1$. For any $\rho\in \Me_*^+$ we clearly have
+$s(\rho\circ\gamma)\le s(\gamma)$, with equality if $\rho$ is faithful. 
+It follows that $\gamma_*$ maps $L_1(\Me)$ to $s(\gamma)L_1(\Ne)s(\gamma)\equiv
+L_1(s(\gamma)\Ne s(\gamma))$.  For any $\rho\in \Me_+^*$, $\rho\ne 0$, the map
+\[
+s(\gamma)\Ne s(\gamma)\to s(\rho)\Me s(\rho),\qquad a\mapsto s(\rho) \gamma(a)s(\rho)
+\]
+is a faithful normal positive unital map, so using such  restrictions we may always assume that both $\rho$ and $\rho\circ
+\gamma$ are faithful.
 
-\end{document}
+The Petz dual  of $\gamma$ with respect to a faithful  $\rho\in \Me_*^+$
+is a map $\gamma_\rho^*:\Me\to \Ne$,
+introduced in \cite{petz...,petz1988sufficiency}. It was proved that it is again
+normal, positive and unital, in addition, it is $n$-positive whenever $\gamma$ is. 
+As explained in \cite{jencova2018renyi} $\gamma^*_\rho$ is determined by the equality
+\begin{equation}\label{eq:petzdual}
+(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{1/2}bh_{\rho\circ\gamma}^{1/2})=h_\rho^{1/2}\gamma(b)h_\rho^{1/2},
+\end{equation}
+for all $b\in \Ne^+$, here $(\gamma^*_\rho)_*$ is the predual map of $\gamma^*_\rho$. We
+also have
+\[
+(\gamma^*_\rho)_*(h_{\rho\circ\gamma})=(\gamma^*_\rho)_*\circ \gamma_*(h_\rho)=h_\rho.
+\]
+
+
+\subsection{Data processing inequality}
+
+
+In this paragraph we prove the data processing inequality (DPI) for $D_{\alpha,z}$ with respect to normal
+positive unital maps. In the case of the sandwiched divergences $\tilde D_\alpha$ with
+$1/2\le \alpha \ne 1$, DPI was proved in \cite{jencova2018renyi,
+jencova2021renyi}, see also \cite{berta2018renyi} for an alternative proof in the case
+when the maps are  also completely positive.
+
+\begin{lemma}\label{lemma:dpi} Let $\gamma:\Ne\to \Me$ be a normal positive unital map and
+let $\rho\in \Me_*^+$, $b\in \Ne^+$. 
+\begin{enumerate}
+\item[(i)]  If $p\in [1/2,1)$, then 
+\[
+\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\|_p\le
+\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\|_p.
+\]
+
+\item[(ii)]  If $p\in [1,\infty]$, the inequality reverses.
+
+\end{enumerate}
+
+
+\end{lemma}
+
+\begin{proof} Let us denote $\beta:=\gamma_\rho^*$ and let $\omega\in \Me_*^+$ be such
+that 
+$h_\omega:=h_{\rho\circ\gamma}^{1/2}bh_{\rho\circ\gamma}^{1/2}\in L_1(\Ne)^+$. Then
+$\beta$ is a normal positive unital map and  we have 
+\[
+\beta_*(h_\omega)=h_\rho^{1/2}\gamma(b)h_\rho^{1/2},\qquad
+\beta_*(h_{\rho\circ\gamma})=h_\rho.
+\]
+Let $p\in [1/2,1)$, then  
+\begin{align*}
+\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\|^p_p&=
+\|h_\rho^{\frac{1-p}{2p}}\beta_*(h_\omega)h_\rho^{\frac{1-p}{2p}}\|_p^p=
+Q_{p,p}(\beta_*(h_\omega)\|h_\rho)=Q_{p,p}(\beta_*(h_\omega)\|\beta_*(h_{\rho\circ\gamma}))\\
+&\ge  Q_{p,p}(h_\omega\|h_{\rho\circ\gamma})=\|h_{\rho\circ\gamma}^{\frac{1-p}{2p}}h_\omega
+h_{\rho\circ\gamma}^{\frac{1-p}{2p}}\|_p^p=\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\|^p_p.
+\end{align*}
+Here we have used the DPI for the sandwiched R\'enyi  divergence $D_{\alpha,\alpha}$ for
+$\alpha\in [1/2,1)$, \cite[Theorem 4.1]{jencova2021renyi}.  This proves (i). 
+The case (ii) was proved in \cite{kato2023onrenyi} (see Eq. (22) therein), using the
+relation of the sandwiched R\'enyi divergence to the Kosaki $L_p$ norms as
+\begin{align*}
+\|h_\rho^{1/2p}\gamma(b)h_\rho^{1/2p}\|_p^p&=Q_{p,p}(h_\rho^{1/2}\gamma(b)h_\rho^{1/2}\|h_\rho)=Q_{p,p}(\beta_*(h_\omega)\|\beta_*(h_{\rho\circ\gamma}))\\
+&\le
+Q_{p,p}(h_\omega\|h_{\rho\circ\gamma})=\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\|^p_p,
+\end{align*}
+here the inequality follows from the DPI for sandwiched R\'enyi divergence $D_{p,p}$ with
+$p>1$, \cite[]{jencova2018renyi}.
+
+
+\end{proof}
+
+
+
+
+\begin{theorem}[DPI] \label{thm:dpi} Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$ and let $\gamma:
+\Ne\to \Me$ be a normal positive unital map. Assume either of the following conditions:
+\begin{enumerate}
+\item[(i)] $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$
+\item[(ii)] $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le \alpha$.
+\end{enumerate}
+Then we have
+\[
+D_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)\le D_{\alpha,z}(\psi\|\varphi).
+\]
+
+
+\end{theorem}
+
+
+\begin{proof} Under the conditions (i), the DPI was proved in \cite[Theorem 1
+(viii)]{kato2023onrenyi}. There an additional assumption was used, namely  that $\Ne$ is
+$\sigma$-finite, to construct a faithful map out of $\gamma$. This can be done using the
+restriction described above, so the additional condition is not needed. 
+
+We next prove that DPI holds under the condition (ii). 
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
 
 
 Let $\psi$ be a faithful normal state on a von Neumann algebra $\Me$. We will prove the following inequality:

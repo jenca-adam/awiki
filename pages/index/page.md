@@ -94,6 +94,13 @@ title: My work
 
  ORCID  https://orcid.org/0000-0002-4019-268X. 
 
+### grants
+
+
+ * VEGA 2/0128/24    
+ * APVV apvv-22-0570
+
+
 * [CV](cv)    
 
 * [Proposals](proposals)

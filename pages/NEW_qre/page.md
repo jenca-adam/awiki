@@ -87,7 +87,7 @@ Tools
 * [BOOK_bergh1976interpolation](BOOK_bergh1976interpolation)   interpolation theory    
 * [calderon1964intermediate](calderon1964intermediate) complex interpolation method    
 * [cwikel1978complex](cwikel1978complex)  reiteration theorem     
-* [kosaki1984applications](kosaki1984applications) noncommutative $L_p$-spaces   
+* [kosaki1984applications](kosaki1984applications), [kosaki1984applicationsuc](kosaki1984applicationsuc) noncommutative $L_p$-spaces   
 * [terp1981lpspaces](terp1981lpspaces) Haagerup $L_p$-spaces    
 * [fack1986generalized](fack1986generalized) measurable operators   
 * [haagerup2010areduction](haagerup2010areduction) Haagerup reduction theorem   
