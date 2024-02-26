@@ -11,4 +11,4 @@ The $\alpha$-$z$ Rényi relative entropies are a two-parameter family of Rényi 
     
 
 [arxiv:2007.06644v2](https://arxiv.org/abs/2007.06644v2)    
-[doi]( )
+[doi](https://doi.org/10.1063/5.0022787)

@@ -4,7 +4,8 @@ title: hiai2021quantum
 
 ## Reference
 
-Fumio Hiai, Milán Mosonyi;Quantum Rényi divergences and the strong converse exponent of state discrimination in operator algebras;; Oct 2021;
+Hiai, F., Mosonyi, M. Quantum Rényi Divergences and the Strong Converse Exponent of State Discrimination in Operator Algebras.i
+Annales Henri Poincaré 24, 1681–1724 (2023)
 
 ## Abstract 
   The sandwiched Rényi $\alpha$-divergences of two finite-dimensional quantum
@@ -27,4 +28,5 @@ more generally for pairs of states on a nuclear $C^\*$-algebra.
 
     
 
-[arxiv:2110.07320](https://arxiv.org/abs/2110.07320)
+[arxiv:2110.07320](https://arxiv.org/abs/2110.07320)    
+[doi](https://doi.org/10.1007/s00023-022-01250-5)    

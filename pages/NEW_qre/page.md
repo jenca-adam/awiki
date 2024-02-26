@@ -24,7 +24,9 @@ title: Rényi relative entropy in von Neumann algebras
 * [My note on monotonicity in $\alpha$](NEW_qre/notes5.pdf) January 10, 2024    
 * [Fumio's note on monotonicity in $\alpha\in (0,1)$](NEW_qre/note_hiai8.pdf) January 12, 2024    
 * [My notes on monotonicity in $z$ for $1<\alpha\le 2z$](NEW_qre/notes6.pdf)  January 18 (<span style=color:red> mistake! </span>)    
-* [My notes on monotonicity in $z$, $\alpha$ and the limit $\alpha\searrow 1$](NEW_qre/notes7.pdf) January 23
+* [My notes on monotonicity in $z$, $\alpha$ and the limit $\alpha\searrow 1$](NEW_qre/notes7.pdf) January 23    
+* [Fumio's note on equality in DPI, $\alpha<1$](NEW_qre/note_hiai9.pdf) (2/21/2024)     
+* [Fumio's note on variational expression, $\alpha>1](NEW_qre/note_hiai10.pdf) (2/26/2024)    
 
 
 ### Questions
@@ -88,11 +90,13 @@ Tools
 * [calderon1964intermediate](calderon1964intermediate) complex interpolation method    
 * [cwikel1978complex](cwikel1978complex)  reiteration theorem     
 * [kosaki1984applications](kosaki1984applications), [kosaki1984applicationsuc](kosaki1984applicationsuc) noncommutative $L_p$-spaces   
-* [terp1981lpspaces](terp1981lpspaces) Haagerup $L_p$-spaces    
+* [terp1981lpspaces](terp1981lpspaces) Haagerup $L_p$-spaces   
+* [haagerup1979lpspaces](haagerup1979lpspaces) Haagerup $L_p$-spaces    
 * [fack1986generalized](fack1986generalized) measurable operators   
 * [haagerup2010areduction](haagerup2010areduction) Haagerup reduction theorem   
 * [junge2003noncommutative](junge2003noncommutative) conditional expectations extended to Haagerup $L_p$-spaces   
-* [BOOK_ohya1993quantum](BOOK_ohya1993quantum) quantum entropy and its use
+* [BOOK_ohya1993quantum](BOOK_ohya1993quantum) quantum entropy and its use     
+* [choi1974aschwarz](choi1974aschwarz)   Choi inequality   
 
 General von Neumann algebra theory
 

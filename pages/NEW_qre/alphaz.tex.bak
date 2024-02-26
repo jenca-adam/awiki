@@ -14,20 +14,19 @@
 
 \usepackage{amsmath, amssymb, amsthm, mathtools}
 
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
 \newtheorem{coro}{Corollary}
 
-\newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{prop}{Proposition}
 
 \theoremstyle{definition}
-\newtheorem{defi}[theorem]{Definition}
+\newtheorem{defi}{Definition}
 
 
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}
 
-\def\cM{\mathcal{M}}
 \def\Me{\mathcal M}
 \def\Ne{\mathcal N}
 \def \Tr{\mathrm{Tr}\,}
@@ -35,7 +34,6 @@
 \def\supp{\mathrm{supp}}
 \def\<{\langle\.}
 \def\>{\.\rangle}
-\def\ffi{\varphi}
 
 \title{On the properties $\alpha-z$ R\'enyi divergences on general von Neumann algebras}
 \author{Fumio Hiai and Anna Jen\v cov\'a}
@@ -55,7 +53,7 @@ Let $\Me$ be a von Neumann algebra  and let $\Me^+$ be the cone of positive elem
 
 For $0< p\le \infty$, let $L_p(\Me)$ be the Haagerup $L_p$-space over $\Me$ and let
 $L_p(\Me)$ its positive cone, 
-\cite{haagerup1979lpspaces}. We will use the identifications $\Me\simeq L_\infty(\Me)$, $\Me_*\ni \psi \leftrightarrow h_\psi\in L_1(\Me)$ and the notation $\Tr h_\psi=\psi(1)$ for the trace in $L_1(\Me)$. It this way,
+\cite{haagerup1979Lp}. We will use the identifications $\Me\simeq L_\infty(\Me)$, $\Me_*\ni \psi \leftrightarrow h_\psi\in L_1(\Me)$ and the notation $\Tr h_\psi=\psi(1)$ for the trace in $L_1(\Me)$. It this way,
  $\Me_*^+$  is identified with the positive cone $L_1(\Me)^+$ and $\states_*(\Me)$ with subset of elements in $L_1(\Me)^+$ 
  with unit trace. 
 Precise definitions and further details on the spaces $L_p(\Me)$ can be found in the notes \cite{terp1981lpspaces}.
@@ -80,11 +78,10 @@ D_{\alpha,z}(\psi\|\varphi):=\frac1{\alpha-1}\log
 where 
 \[
 Q_{\alpha,z}=\begin{dcases} \Tr
-\left(h_\varphi^{\frac{1-\alpha}{2z}}h_\psi^{\frac{\alpha}{z}}h_\varphi^{\frac{1-\alpha}{2z}}\right)^z, &
+\left(h_\varphi^{(1-\alpha)/2z}h_\psi^{\alpha/z}h_\varphi^{(1-\alpha)/2z}\right)^z, &
 \text{if } 0<\alpha<1\\[0.3em]
 \|x\|_z^z, & \text{if } \alpha>1 \text{ and }\\
-\ &
-h_\psi^{\frac{\alpha}{z}}=h_\varphi^{\frac{\alpha-1}{2z}}xh_\varphi^{\frac{\alpha-1}{2z}},\text{ with }
+\ & h_\psi^{\alpha/z}=h_\varphi^{(\alpha-1)/2z}xh_\varphi^{(\alpha-1)/2z},\text{ with }
 x\in s(\varphi)L_z(\Me)s(\varphi)\\[0.3em]
 \infty& \text{otherwise}.
 \end{dcases}
@@ -95,11 +92,11 @@ x\in s(\varphi)L_z(\Me)s(\varphi)\\[0.3em]
 
 In the case $\alpha>1$, the following alternative form will be useful.
 
-\begin{lemma}\cite[Lemma 7]{kato2023onrenyi} \label{lemma:renyi_2z}
+\begin{lemma}\cite{kato2023onrenyi} \label{lemma:renyi_2z}
 Let $\alpha>1$ and $\psi,\varphi\in \Me_*^+$. Then $Q_{\alpha,z}(\psi\|\varphi)<\infty$ if
 and only if there is some $y\in L_{2z}(\Me)s(\varphi)$ such that 
 \[
-h_\psi^{\frac{\alpha}{2z}}=yh_\varphi^{\frac{\alpha-1}{2z}}.
+h_\psi^{\alpha/2z}=yh_\varphi^{(\alpha-1)/2z}.
 \]
 Moreover, in this case, such $y$ is unique and we have
 $Q_{\alpha,z}(\psi\|\varphi)=\|y\|_{2z}^{2z}$. 
@@ -112,15 +109,13 @@ D_\alpha(\psi\|\varphi)=D_{\alpha,\alpha}(\psi\|\varphi)$, see
 \cite{berta2018renyi,hiai2021quantum,jencova2018renyi, jencova2021renyi} for some
 alternative definitions and properties of $\tilde D_\alpha$. The definition in
 \cite{jencova2018renyi} and \cite{jencova2021renyi} is based on the Kosaki interpolation
-spaces  $L_p(\Me,\varphi)$ with respect to a state \cite{kosaki1984applications}. These spaces and
+spaces  $L_p(\Me,\varphi)$ with respect to a state \cite{kosaki1986applications}. These spaces and
 complex interpolation method will be used frequently also in the present work. 
 
 
 Many of the  properties of $D_{\alpha,z}(\psi\|\varphi)$ 
 were extended from the finite dimensional case in \cite{kato2023onrenyi}. In particular,
-a variational expression for $Q_{\alpha,z}$ in the case $0<\alpha<1$ was proved there,
-see part (i) in the theorem below. We will prove a similar variational expression also in
-the case when $\alpha>1$. 
+the following variational expressions will be an important tool for our work.
 
 \begin{theorem}[Variational expressions]\label{thm:variational} Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$. 
 \begin{enumerate}
@@ -130,8 +125,17 @@ Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me^{++}}\left\{\alpha
 \Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)+(1-\alpha)
 \Tr\left((a^{\frac12}h_\varphi^{\frac{1-\alpha}{z}}a^{\frac12})^{\frac{z}{1-\alpha}}\right) \right\}.
 \]
+Moreover, if $\lambda^{-1}\varphi\le \psi\le \lambda \varphi$ for some $\lambda>0$, then
+the infimum is attained at a unique element  $\bar a\in \Me^{++}$. This element  satisfies
+\[
+h_\psi^{\frac{\alpha}{2z}}\bar ah_\psi^{\frac{\alpha}{2z}}=\left(h_\psi^{\frac{\alpha}{2z}}h_\varphi^{\frac{1-\alpha}{2z}}h_\psi^{\frac{\alpha}{2z}}\right)^\alpha
+\]
+and
+\[
+h_\varphi^{\frac{1-\alpha}{2z}}\bar a^{-1}h_\varphi^{\frac{1-\alpha}{2z}}=\left(h_\varphi^{\frac{1-\alpha}{2z}}h_\psi^{\frac{\alpha}{z}}h_\varphi^{\frac{1-\alpha}{2z}}\right)^{1-\alpha}.
+\]
 
-\item[(ii)] Let $1<\alpha$, $\max\{\frac{\alpha}{2},\alpha-1\}\le z$. Then
+\item[(ii)] Let $1<\alpha\le 2z$, then
 \[
 Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me_+} \left\{\alpha
 \Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
@@ -144,7 +148,7 @@ Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me_+} \left\{\alpha
 \end{theorem}
 
 
-\begin{proof} For part (i) see \cite[Theorem 1 (vi)]{kato2023onrenyi}. The
+\begin{proof} For part (i) see \cite[Theorem 1 (vi)]{kato2023onrenyi} and its proof. The
 inequality $\ge$ in part (ii) holds for all $\alpha$ and $z$ and was proved in
 \cite[Theorem 2 (vi)]{kato2023onrenyi}. We now prove the opposite inequality. 
 
@@ -171,8 +175,10 @@ x^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
 \Tr\left(w^{\frac{z}{\alpha-1}}\right)
 \right\},
 \end{align*}
-where we used the fact that $\Tr \left((h^*h)^p\right)=\Tr \left((hh^*)^p\right)$ for
-$p>0$ and $h\in L_{\frac{p}{2}}(\Me)$, and Lemma \ref{lemma:cone}.  Putting $w=x^{\alpha-1}$ we
+where we used the fact that $\Tr \left((a^*a)^p\right)=\Tr \left((aa^*)^p\right)$ for
+$p>0$ and $a\in L_{\frac{p}{2}}(\Me)$ and the fact that the set of
+elements of the form $h_\varphi^{\frac{\alpha-1}{2z}}a h_\varphi^{\frac{\alpha-1}{2z}}$ with $a \in
+\Me^+$ is dense in the positive cone $L_{\frac{z}{\alpha-1}}(\Me)^+$. Putting $w=x^{\alpha-1}$ we
 get
 \[
 \sup_{w\in L_{\frac{z}{\alpha-1}}(\Me)^+} \left\{\alpha
@@ -193,107 +199,28 @@ h_\psi^{\frac{\alpha}{2z}}=bh_\varphi^{\frac{\alpha}{2z}}=yh_\varphi^{\frac{\alp
 where $y=bh_\varphi^{\frac{1}{2z}}\in L_{2z}(\Me)$. By Lemma \ref{lemma:renyi_2z} we get 
 $Q_{\alpha,z}(\psi\|\varphi)=\|y\|_{2z}^{2z}<\infty$. 
 
-In the general case, the variational expression holds for
-$Q_{\alpha,z}(\psi\|\varphi+\epsilon\psi)$  for all $\epsilon>0$, so that we have
-\begin{align*}
-Q_{\alpha,z}(\psi\|\varphi+\epsilon\psi)&=\sup_{a\in \Me_+} \left\{\alpha
-\Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
-\Tr\left((a^{\frac12}h_{\varphi+\epsilon \psi}^{\frac{\alpha-1}{2z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right) \right\}\\
-&\le\sup_{a\in \Me_+} \left\{\alpha
-\Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
-\Tr\left((a^{\frac12}h_\varphi^{\frac{\alpha-1}{2z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right)
-\right\},
-\end{align*}
-where the inequality above follows by Lemma \ref{lemma:order}. Therefore, since lower
-semicontinuity  \cite[Theorem 2 (iv)]{kato2023onrenyi} gives
+In the general case, note that lower semicontinuity \cite[]{kato2023onrenyi}, we have
 \[
 Q_{\alpha,z}(\psi\|\varphi)\le \liminf_{\epsilon\searrow 0}
 Q_{\alpha,z}(\psi\|\varphi+\epsilon \psi) 
 \]
-the desired inequality follows.
+and the variational expression holds for
+$Q_{\alpha,z}(\psi\|\varphi+\epsilon\psi)$  for all $\epsilon>0$. The proof is finished 
+by using norm continuity of the map $L_1(\Me)^+\ni h\mapsto h^{\frac1p}\in L_p(\Me)^+$ for
+$p>1$. 
+ 
 
-
-\end{proof}
-
-\begin{lemma}\label{lemma:variational_majorized}  Assume that $\lambda^{-1}\varphi\le
-\psi\le \lambda \varphi$ for some $\lambda>0$. Then
-the infimum in the variational expression in Theorem \ref{thm:variational}(i) is attained at a unique element  $\bar a\in \Me^{++}$. This element  satisfies
-\begin{align}
-h_\psi^{\alpha\over2z}ah_\psi^{\alpha\over2z}
-&=\bigl(h_\psi^{\alpha\over2z}h_\ffi^{1-\alpha\over z}h_\psi^{\alpha\over2z}\bigr)^\alpha
-\label{eq:minimizer1}\\
-h_\ffi^{1-\alpha\over2z}a^{-1}h_\ffi^{1-\alpha\over2z}
-&=\bigl(h_\ffi^{1-\alpha\over2z}h_\psi^{\alpha\over
-z}h_\ffi^{1-\alpha\over2z}\bigr)^{1-\alpha}.
-\label{eq:minimizer2}
-\end{align}
-\end{lemma}
-
-
-\begin{proof} We may assume that $\varphi$ and hence also $\psi$ is faithful. Following
- the proof of \cite[Theorem 1 (vi)]{kato2023onrenyi},  we may use the
-assumptions and \cite[Lemma A.58]{hiai2021quantum} to show  that there are $b,c\in\cM$  such that
-\begin{align}\label{eq:bc}
-h_\ffi^{1-\alpha\over2z}
-=b\bigl(h_\ffi^{1-\alpha\over2z}h_\psi^{\alpha\over z}h_\ffi^{1-\alpha\over2z}\bigr)^{1-\alpha\over2},\qquad
-\bigl(h_\ffi^{1-\alpha\over2z}h_\psi^{\alpha\over z}h_\ffi^{1-\alpha\over2z}\bigr)^{1-\alpha\over2}
-=ch_\ffi^{1-\alpha\over2z}.
-\end{align}
-Put $\bar a:=bb^*\in\cM^{++}$, then we have  $\bar a^{-1}=c^*c$ and $\bar a$ is indeed a
-minimizer of 
-\begin{align}\label{eq:infimum}
-Q_{\alpha,z}(\psi\|\ffi)
-=\inf_{a\in\cM^{++}}\biggl\{\alpha\Big\|h_\psi^{\alpha\over2z}ah_\psi^{\alpha\over2z}\Big\|_{z\over\alpha}^{z\over\alpha}
-+(1-\alpha)\Big\|h_\ffi^{1-\alpha\over2z}a^{-1}h_\ffi^{1-\alpha\over2z}\Big\|_{z\over
-1-\alpha}^{z\over 1-\alpha}\biggr\}.
-\end{align}
-We next observe that such  minimizer is unique. Indeed, suppose that the infimum is
-attained  at some $a_1,a_2\in \Me^{++}$. Let $a_0:=(a_1+a_2)/2$. Since the map 
-$L^{p}(\cM)\ni k\mapsto\|k\|_{p}^{p}$ is convex for any $p\ge 1$ and
-$a_0^{-1}\le(a_1^{-1}+a_2^{-1})/2$, we have
-\begin{align*}
-\Big\|h_\psi^{\alpha\over2z}a_0h_\psi^{\alpha\over2z}\Big\|_{z\over\alpha}^{z\over\alpha}
-&\le{1\over2}\biggl\{\Big\|h_\psi^{\alpha\over2z}a_1h_\psi^{\alpha\over2z}\Big\|_{z\over\alpha}^{z\over\alpha}
-+\Big\|h_\psi^{\alpha\over2z}a_2h_\psi^{\alpha\over2z}\Big\|_{z\over\alpha}^{z\over\alpha}\biggr\}, \\
-\Big\|h_\ffi^{1-\alpha\over2z}a_0^{-1}h_\ffi^{1-\alpha\over2z}\Big\|_{z\over1-\alpha}^{z\over1-\alpha}
-&\le\Big\|h_\ffi^{1-\alpha\over2z}\biggl({a_1^{-1}+a_2^{-1}\over2}\biggr)
-h_\ffi^{1-\alpha\over2z}\Big\|_{z\over1-\alpha}^{z\over1-\alpha} \\
-&\le{1\over2}\biggl\{\Big\|h_\ffi^{1-\alpha\over2z}a_1^{-1}h_\ffi^{1-\alpha\over2z}\Big\|_{z\over1-\alpha}^{z\over1-\alpha}
-+\Big\|h_\ffi^{1-\alpha\over2z}a_2^{-1}h_\ffi^{1-\alpha\over2z}\Big\|_{z\over1-\alpha}^{z\over1-\alpha}\biggr\}.
-\end{align*}
-Hence we have
+ {\color{red} I am not entirely sure about this proof, since the convergence of the
+ expressions 
 \[
-\Big\|h_\ffi^{1-\alpha\over2z}a_0^{-1}h_\ffi^{1-\alpha\over2z}\Big\|_{z\over1-\alpha}
-=\Big\|h_\ffi^{1-\alpha\over2z}\biggl({a_1^{-1}+a_2^{-1}\over2}\biggr)
-h_\ffi^{1-\alpha\over2z}\Big\|_{z\over1-\alpha},
-\]
-which implies that $a_0^{-1}={a_1^{-1}+a_2^{-1}\over2}$, as easily verified. From this we easily have $a_1=a_2$.
-
-The equality  \eqref{eq:minimizer2} is obvious from the second equality in \eqref{eq:bc}
-and $\bar a^{-1}=c^*c$. Since
-$Q_{\alpha,z}(\psi\|\ffi)=Q_{1-\alpha,z}(\ffi\|\psi)$, we see by uniqueness that the minimizer of the
-infimum expression for $Q_{1-\alpha,z}(\ffi\|\psi)$ (instead of \eqref{eq:infimum}) is
-$\bar a^{-1}$ (instead of $\bar a$). This
-says that \eqref{eq:minimizer1} is the equality corresponding to \eqref{eq:minimizer2} when $\psi,\ffi,\alpha$ are replaced with
-$\ffi,\psi,1-\alpha$, respectively. 
-
-
-
+ \Tr\left((a^{\frac12}(h_\varphi+\epsilon h_\psi)^{\frac{\alpha-1}{2z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right)\to
+ \Tr\left((a^{\frac12}h_\varphi^{\frac{\alpha-1}{2z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right)\]
+ also depends
+ on $\|a\|$, which is not bounded. But probably I misunderstand something, or I do not see 
+ something trivial. }
+ 
 \end{proof}
 
-
-
-
-
-
-
-
-%h_\psi^{\frac{\alpha}{2z}}\bar
-%ah_\psi^{\frac{\alpha}{2z}}=\left(h_\psi^{\frac{\alpha}{2z}}h_\varphi^{\frac{1-\alpha}{2z}}h_\psi^{\frac{\alpha}{2z}}\right)^\alpha,\qquad
-%h_\varphi^{\frac{1-\alpha}{2z}}\bar a^{-1}h_\varphi^{\frac{1-\alpha}{2z}}=\left(h_\varphi^{\frac{1-\alpha}{2z}}h_\psi^{\frac{\alpha}{z}}h_\varphi^{\frac{1-\alpha}{2z}}\right)^{1-\alpha}.
-%\]
-%
-%
 \section{Data processing inequality and reversibility of channels}
 
 Let  $\gamma: \Ne\to \Me$ be a normal positive unital map. Then the  predual of $\gamma$  defines a 
@@ -315,7 +242,7 @@ is a faithful normal positive unital map, so using such  restrictions we may alw
 
 The Petz dual  of $\gamma$ with respect to a faithful  $\rho\in \Me_*^+$
 is a map $\gamma_\rho^*:\Me\to \Ne$,
-introduced in \cite{petz1988sufficiency}. It was proved that it is again
+introduced in \cite{petz...,petz1988sufficiency}. It was proved that it is again
 normal, positive and unital, in addition, it is $n$-positive whenever $\gamma$ is. 
 As explained in \cite{jencova2018renyi} $\gamma^*_\rho$ is determined by the equality
 \begin{equation}\label{eq:petzdual}
@@ -413,7 +340,7 @@ Since parts of this proof will be used below, we repeat it here.
 
  Assume the conditions in (i) and put $p:=\frac{z}{\alpha}$, $r:=\frac{z}{1-\alpha}$, so
  that  $p,r\ge 1$. 
-For any   $b\in \Ne^{++}$, we have by  the Choi inequality \cite{choi1974aschwarz} 
+For any   $b\in \Ne^{++}$, we have by  the Choi inequality \cite{}
 that  $\gamma(b)^{-1}\le \gamma(b^{-1})$, so that  
 \[
 \|h_\varphi^{\frac{1}{2r}}\gamma(b)^{-1}\varphi^{\frac{1}{2r}}\|_r\le
@@ -531,7 +458,7 @@ $\psi_0$ and $\varphi_0$ also satisfy this condition an all the states
 $\psi,\varphi,\psi_0,\varphi_0$ are faithful. By Theorem \ref{thm:variational}
 (i), there are  some $\bar a\in \Me^{++}$ and  $\bar a_0\in \Ne^{++}$ such that the
 infimum in the variational formula for $D_{\alpha,z}(\psi\|\varphi)$ resp.
-$D_{\alpha,z}(\psi_0\|\varphi_0)$ is attained. Using the inequalities in \eqref{eq:dpif} -
+$D_{\alpha,z}(\psi_0\|\varphi_0)$ is attained. Usinq the inequalities in \eqref{eq:dpif} -
 \eqref{eq:dpil}, we obtain
 \begin{align*}
 Q_{\alpha,z}(\psi\|\varphi)&\le \alpha\|h_\psi^{\frac{1}{2p}}\gamma(\bar a_0)h_\psi^{\frac{1}{2p}}\|_p^p+
@@ -636,61 +563,6 @@ $\{\psi,\varphi\}$.
 
 \subsubsection{The case $\alpha>1$}
 
-
-\appendix
-
-\section{Haagerup  $L_p$-spaces}
-
-
-The following lemmas are well known, proofs are given for completeness.
-
-\begin{lemma}\label{lemma:cone} For any $0<p<\infty$ and $\varphi\in \Me_*^+$, 
-$h_\varphi^{\frac1{2p}}\Me^+h_\varphi^{\frac1{2p}}$ is dense in $L_p(\Me)^+$ with respect
-to the (quasi)-norm $\|\cdot\|_p$.
-
-\end{lemma}
-
-\begin{proof} We may assume that $\varphi$ is faithful. By \cite[Lemma 1.1]{junge2003noncommutative}, $\Me
-h_\varphi^{\frac1{2p}}$ is dense in $L_{2p}(\Me)$ for any $0<p<\infty$. Let $y\in L_p(\Me)^+$, then
-$y^{\frac12}\in L_{2p}(\Me)$, hence there is a sequence $a_n\in \Me$ such that
-$\|a_nh^{\frac1{2p}}_\varphi-y^{\frac12}\|_{2p}\to 0$. Then also 
-\[
-\|h^{\frac1{2p}}_\varphi
-a_n^*-y^{\frac12}\|_p=\|(a_nh^{\frac1{2p}}_\varphi-y^{\frac12})^*\|_p=\|a_nh^{\frac1{2p}}_\varphi-y^{\frac12}\|_p\to 0
-\]
-and 
-\[
-\|h^{\frac1{2p}}_\varphi a_n^*a_nh^{\frac1{2p}}_\varphi-y\|_p=\|(h^{\frac1{2p}}_\varphi
-a_n^*-y^{\frac12})a_nh^{\frac1{2p}}_\varphi+y^{\frac12}(a_nh^{\frac1{2p}}_\varphi-y^{\frac12})\|_p
-\]
-Since $\|\cdot\|_p$ is a (quasi)-norm, the above expression goes to 0 by the H\"older
-inequality.
-
-
-
-\end{proof}
-
-\begin{lemma}\label{lemma:order} Let $\psi,\varphi\in \Me_*^+$ with $\psi\le \varphi$.
-Then for any $a\in \Me$ and $p\in [1,\infty)$,
-\[
-\Tr\left( (a^*h_\psi^{\frac1p}a)^p\right)\le Tr\left( (a^*h_\varphi^{\frac1p}a)^p\right)
-\]
-
-
-\end{lemma}
-
-\begin{proof} Since $1/p\in (p,1]$, it follows (see \cite[Lemma B.7]{hiai2021quantum} and
-\cite[Lemma 3.2]{hiai2021connections}) that $h_\psi^{1/p}\le h_\varphi^{1/p}$ as
-$\tau$-measurable operators affiliated with $\Me \rtimes_{\sigma^\phi} \mathbb R$ (in
-which $L_p(\Me)$ lives).  Hence $a^*h_\psi^{1/p}a\le a^*h_\varphi^{1/p}a$
-in the same sense. Therefore, by \cite[Lemma 2.5 (iii), Lemma 4.8]{fack1986generalized},
-we have the statement.
-
-\end{proof}
-
-
-\bibliography{alphaz}
-\bibliographystyle{abbrvnat}
 
 \end{document}
 
