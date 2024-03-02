@@ -19,7 +19,14 @@ title: Arai, Hayashi, 2023, Derivation of quantum theory
 
 [revised](REF_arai2023/revised.pdf),  [reply](REF_arai2023/reply.pdf)
 
-Revision due: 22. 2. 2024
+Revision due: 22. 2. 2024    
+
+[revised report](REF_arai2023/report2.pdf)    
+
+**Decision** reject
+
+
+
 
 
 

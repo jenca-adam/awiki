@@ -5,7 +5,14 @@ title: Rényi relative entropy in von Neumann algebras
 
 ## 1. $\alpha-z$ - Renyi relative entropies
 
-**With: Fumio Hiai, Shinya Kato, Yoshimichi Ueda**
+**With: Fumio Hiai, Shinya Kato, Yoshimichi Ueda**   
+
+
+### Paper versions
+
+* [February 24](NEW_qre/alphaz.pdf) AJ  
+* [February 28](NEW_qre/alphaz-1.pdf) FH    
+* [my current version](NEW_qre/alphaz-2.pdf) AJ
 
 ### Notes
 
@@ -97,6 +104,7 @@ Tools
 * [junge2003noncommutative](junge2003noncommutative) conditional expectations extended to Haagerup $L_p$-spaces   
 * [BOOK_ohya1993quantum](BOOK_ohya1993quantum) quantum entropy and its use     
 * [choi1974aschwarz](choi1974aschwarz)   Choi inequality   
+* [zalinesco2002convex](BOOK_zalinescu2002convex) Uniform convexity and smoothness...
 
 General von Neumann algebra theory
 

@@ -10,5 +10,14 @@ title: Lipka-Barstosik, 2023, dichotomies
 [file](REF_lipka2023/file.pdf)
 
 
-**Decision:** revise 
+**Decision:** revise     
+
+**Revision due:** 15.3.2023    
+
+[revised version](REF_lipka2023/revised.pdf)  with changes in red    
+
+[reply](REF_lipka2023/reply.pdf)     
+
+
+
 
