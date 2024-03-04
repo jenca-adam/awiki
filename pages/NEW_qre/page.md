@@ -1,5 +1,4 @@
-
-title: Rényi relative entropy in von Neumann algebras
+title: "R\xE9nyi relative entropy in von Neumann algebras"
 ---
 
 
@@ -76,6 +75,8 @@ Finite dimensional
 * [audenaert2015alpha](audenaert2015alpha) introduction of $\alpha-z$-Renyi relative entropies    
 * [lin2015investigating](lin2015investigating) limit to 1, derivative at 1    
 * [zhang2020fromwyd](zhang2020fromwyd) proof of DPI in bounds       
+* [zhang2020equality](zhang2020equality) some conditions for equality in DPI    
+
 
 The $B(\mathcal H)$ case
 
@@ -104,7 +105,7 @@ Tools
 * [junge2003noncommutative](junge2003noncommutative) conditional expectations extended to Haagerup $L_p$-spaces   
 * [BOOK_ohya1993quantum](BOOK_ohya1993quantum) quantum entropy and its use     
 * [choi1974aschwarz](choi1974aschwarz)   Choi inequality   
-* [zalinesco2002convex](BOOK_zalinescu2002convex) Uniform convexity and smoothness...
+* [zalinescu2002convex](BOOK_zalinescu2002convex) Uniform convexity and smoothness...
 
 General von Neumann algebra theory
 
@@ -160,7 +161,6 @@ Myown
 * [petz1986quasi](petz1986quasi) quasi entropies (finite dim)    
 * [petz1986sufficient](petz1986sufficient) sufficient subalgebras and relative entropy (von Neumann)    
 * [petz1988sufficiency](petz1988sufficiency) sufficient channels, petz dual  (von Neumann)   
-
 
 
 
