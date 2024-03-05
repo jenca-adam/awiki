@@ -1,7 +1,4 @@
 \documentclass[12pt]{article}
-%DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL alphaz-2.tex    Tue Mar  5 14:47:44 2024
-%DIF ADD alphaz-21.tex   Tue Mar  5 14:47:13 2024
 
 \usepackage{hyperref}
 %\usepackage[dvipdfmx]{hyperref}
@@ -47,46 +44,6 @@
 
 \title{On the properties $\alpha-z$ R\'enyi divergences on general von Neumann algebras}
 \author{Fumio Hiai and Anna Jen\v cov\'a}
-%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
-%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
-\RequirePackage[normalem]{ulem} %DIF PREAMBLE
-\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
-\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
-\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
-%DIF SAFE PREAMBLE %DIF PREAMBLE
-\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
-\providecommand{\DIFaddend}{} %DIF PREAMBLE
-\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
-\providecommand{\DIFdelend}{} %DIF PREAMBLE
-\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
-\providecommand{\DIFmodend}{} %DIF PREAMBLE
-%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
-\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
-\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
-\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
-\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
-\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
-\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
-%DIF HYPERREF PREAMBLE %DIF PREAMBLE
-\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
-\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
-%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
-\RequirePackage{listings} %DIF PREAMBLE
-\RequirePackage{color} %DIF PREAMBLE
-\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
-%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
-  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
-  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
-} %DIF PREAMBLE
-\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
-	language=DIFcode, %DIF PREAMBLE
-	basicstyle=\ttfamily, %DIF PREAMBLE
-	columns=fullflexible, %DIF PREAMBLE
-	keepspaces=true %DIF PREAMBLE
-} %DIF PREAMBLE
-\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
-\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
-%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
 
@@ -107,7 +64,7 @@ $L_p(\Me)$ its positive cone,
  $\Me_*^+$  is identified with the positive cone $L_1(\Me)^+$ and $\states_*(\Me)$ with subset of elements in $L_1(\Me)^+$ 
  with unit trace. 
 Precise definitions and further details on the spaces $L_p(\Me)$ can be found in the notes \cite{terp1981lpspaces}.
-
+ 
 
 
 %Kosaki, complex interpolation. Generalized s-numbers. Haagerup reduction. Martingale
@@ -122,7 +79,7 @@ follows:
 \begin{defi}\label{defi:renyi} Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$ and let
 $\alpha,z>0$, $\alpha\ne 1$. The $\alpha-z$-R\'enyi divergence is defined as 
 \[
-D_{\alpha,z}(\psi\|\varphi):=\frac{1}{\alpha-1}\log
+D_{\alpha,z}(\psi\|\varphi):=\frac1{\alpha-1}\log
 \frac{Q_{\alpha,z}(\psi\|\varphi)}{\psi(1)},
 \]
 where
@@ -173,15 +130,15 @@ the following variational expressions will be an important tool for our work.
 \item[(i)] Let $0<\alpha<1$ and $\max\{\alpha,1-\alpha\}\le z$. Then
 \[
 Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me^{++}}\left\{\alpha
-\Tr\left((a^{\frac{1}{2}}h_\psi^{\frac{\alpha}{z}}a^{\frac{1}{2}})^{\frac{z}{\alpha}}\right)+(1-\alpha)
-\Tr\left((a^{\frac{1}{2}}h_\varphi^{\frac{1-\alpha}{z}}a^{\frac{1}{2}})^{\frac{z}{1-\alpha}}\right) \right\}.
+\Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)+(1-\alpha)
+\Tr\left((a^{\frac12}h_\varphi^{\frac{1-\alpha}{z}}a^{\frac12})^{\frac{z}{1-\alpha}}\right) \right\}.
 \]
 
 \item[(ii)] Let $1<\alpha$, $\max\{\frac{\alpha}{2},\alpha-1\}\le z$. Then
 \[
 Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me_+} \left\{\alpha
-\Tr\left((a^{\frac{1}{2}}h_\psi^{\frac{\alpha}{z}}a^{\frac{1}{2}})^{\frac{z}{\alpha}}\right)-(\alpha-1)
-\Tr\left((a^{\frac{1}{2}}h_\varphi^{\frac{\alpha-1}{2z}}a^{\frac{1}{2}})^{\frac{z}{\alpha-1}}\right) \right\}.
+\Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
+\Tr\left((a^{\frac12}h_\varphi^{\frac{\alpha-1}{2z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right) \right\}.
 \]
 
 \end{enumerate}
@@ -200,20 +157,20 @@ $h_\psi^{\frac{\alpha}{z}}=h_\varphi^{\frac{\alpha-1}{2z}}xh_\varphi^{\frac{\alp
 into the right hand side, we obtain
 \begin{align*}
 &\sup_{a\in \Me_+} \left\{\alpha
-\Tr\left((a^{\frac{1}{2}}h_\psi^{\frac{\alpha}{z}}a^{\frac{1}{2}})^{\frac{z}{\alpha}}\right)-(\alpha-1)
-\Tr\left((a^{\frac{1}{2}}h_\varphi^{\frac{\alpha-1}{2z}}a^{\frac{1}{2}})^{\frac{z}{\alpha-1}}\right) \right\}\\
+\Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
+\Tr\left((a^{\frac12}h_\varphi^{\frac{\alpha-1}{2z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right) \right\}\\
 &=\sup_{a\in \Me_+} \left\{\alpha
-\Tr\left((a^{\frac{1}{2}}h_\varphi^{\frac{\alpha-1}{2z}}xh_\varphi^{\frac{\alpha-1}{2z}}
-a^{\frac{1}{2}})^{\frac{z}{\alpha}}\right)-(\alpha-1)
-\Tr\left((a^{\frac{1}{2}}h_\varphi^{\frac{\alpha-1}{2z}}a^{\frac{1}{2}})^{\frac{z}{\alpha-1}}\right) \right\}\\
+\Tr\left((a^{\frac12}h_\varphi^{\frac{\alpha-1}{2z}}xh_\varphi^{\frac{\alpha-1}{2z}}
+a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
+\Tr\left((a^{\frac12}h_\varphi^{\frac{\alpha-1}{2z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right) \right\}\\
 &=\sup_{a\in \Me_+} \left\{\alpha
-\Tr\left((x^{\frac{1}{2}}h_\varphi^{\frac{\alpha-1}{2z}}ah_\varphi^{\frac{\alpha-1}{2z}}
-x^{\frac{1}{2}})^{\frac{z}{\alpha}}\right)-(\alpha-1)
+\Tr\left((x^{\frac12}h_\varphi^{\frac{\alpha-1}{2z}}ah_\varphi^{\frac{\alpha-1}{2z}}
+x^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
 \Tr\left((h_\varphi^{\frac{\alpha-1}{2z}}a h_\varphi^{\frac{\alpha-1}{2z}}
 )^{\frac{z}{\alpha-1}}\right)
 \right\}\\
 &=\sup_{w\in L_{\frac{z}{\alpha-1}}(\Me)^+} \left\{\alpha
-\Tr\left((x^{\frac{1}{2}}wx^{\frac{1}{2}})^{\frac{z}{\alpha}}\right)-(\alpha-1)
+\Tr\left((x^{\frac12}wx^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
 \Tr\left(w^{\frac{z}{\alpha-1}}\right)
 \right\},
 \end{align*}
@@ -223,7 +180,7 @@ $p>0$ and $h\in L_{\frac{p}{2}}(\Me)$ and Lemma \ref{lemma:cone}.
 get
 \[
 \sup_{w\in L_{\frac{z}{\alpha-1}}(\Me)^+} \left\{\alpha
-\Tr\left((x^{\frac{1}{2}}wx^{\frac{1}{2}})^{\frac{z}{\alpha}}\right)-(\alpha-1)
+\Tr\left((x^{\frac12}wx^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
 \Tr\left(w^{\frac{z}{\alpha-1}}\right)
 \right\}\ge \Tr(x^z)=\|x\|_z^z= Q_{\alpha,z}(\psi\|\varphi).
 \]
@@ -244,11 +201,11 @@ In the general case,  the variational expression holds for
 $Q_{\alpha,z}(\psi\|\varphi+\epsilon\psi)$  for all $\epsilon>0$, so that we have
 \begin{align*}
 Q_{\alpha,z}(\psi\|\varphi+\epsilon\psi)&=\sup_{a\in \Me_+} \left\{\alpha
-\Tr\left((a^{\frac{1}{2}}h_\psi^{\frac{\alpha}{z}}a^{\frac{1}{2}})^{\frac{z}{\alpha}}\right)-(\alpha-1)
-\Tr\left((a^{\frac{1}{2}}h_{\varphi+\epsilon \psi}^{\frac{\alpha-1}{2z}}a^{\frac{1}{2}})^{\frac{z}{\alpha-1}}\right) \right\}\\
+\Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
+\Tr\left((a^{\frac12}h_{\varphi+\epsilon \psi}^{\frac{\alpha-1}{2z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right) \right\}\\
 &\le\sup_{a\in \Me_+} \left\{\alpha
-\Tr\left((a^{\frac{1}{2}}h_\psi^{\frac{\alpha}{z}}a^{\frac{1}{2}})^{\frac{z}{\alpha}}\right)-(\alpha-1)
-\Tr\left((a^{\frac{1}{2}}h_\varphi^{\frac{\alpha-1}{2z}}a^{\frac{1}{2}})^{\frac{z}{\alpha-1}}\right)
+\Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
+\Tr\left((a^{\frac12}h_\varphi^{\frac{\alpha-1}{2z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right)
 \right\},
 \end{align*}
 where the inequality above follows by Lemma \ref{lemma:order}. Therefore, since lower
@@ -363,24 +320,24 @@ A similar statement holds if $r>1$.
 \begin{proof} By assumptions, $p,r\ge 1$.  For
 $a,b\in \Me^{++}$ and $s\in (1/2,0)$, we have
 \begin{align*}
-\|\xi_p(sb+(1-s)a)\|_p^p&=\|s\xi_p(b)+(1-s)\xi_p(a)\|_p^p=\|(1-2s)\xi_p(a)+2s\frac{1}{2}(\xi_p(a)+\xi_p(b))\|_p^p\\
-&\le (1-2s)\|\xi_p(a)\|_p^p+2s\|\frac{1}{2}(\xi_p(a)+\xi_p(b))\|_p^p.
+\|\xi_p(sb+(1-s)a)\|_p^p&=\|s\xi_p(b)+(1-s)\xi_p(a)\|_p^p=\|(1-2s)\xi_p(a)+2s\frac12(\xi_p(a)+\xi_p(b))\|_p^p\\
+&\le (1-2s)\|\xi_p(a)\|_p^p+2s\|\frac12(\xi_p(a)+\xi_p(b))\|_p^p.
 \end{align*}
 Similarly,
 \[
 \|\eta_r(sb+(1-s)a)\|_r^r\le
-(1-2s)\|\eta_r(a)\|_r^r+2s\|\frac{1}{2}(\eta_r(a)+\eta_r(b))\|_r^r,
+(1-2s)\|\eta_r(a)\|_r^r+2s\|\frac12(\eta_r(a)+\eta_r(b))\|_r^r,
 \]
 here  we also used the fact that $(t a+(1-t)b)^{-1}\le t
 a^{-1}+(1-t)b^{-1}$ for $t\in (0,1)$ and Lemma \ref{lemma:order1}. It follows
 that 
 \begin{align*}
 \<\nabla f(a),b-a\>&=\lim_{s\to 0^+} s^{-1}[ f(sb+(1-s)a)-f(a)]\\
-&\le 2\alpha\biggl(\|\frac{1}{2}
-(\xi_p(a)+\xi_p(b))\|_p^p-\|\xi_p(a)\|_p^p\biggr)+2(1-\alpha)\biggl(\|\frac{1}{2}
+&\le 2\alpha\biggl(\|\frac12
+(\xi_p(a)+\xi_p(b))\|_p^p-\|\xi_p(a)\|_p^p\biggr)+2(1-\alpha)\biggl(\|\frac12
 (\eta_r(a)+\eta_r(b))\|_r^r-\|\eta_r(a)\|_r^r\biggr)\\
-&= \begin{multlined}[t]f(b)-f(a)-2\biggl(\alpha\bigl(\frac{1}{2} \|\xi_p(a)\|_p^p+\frac{1}{2} \|\xi_p(b)\|_p^p-\|\frac{1}{2}
-(\xi_p(a)+\xi_p(b))\|_p^p\bigr)\\ +(1-\alpha)\bigl(\frac{1}{2} \|\eta_r(a)\|_r^r+\frac{1}{2} \|\eta_r(b)\|_r^r-\|\frac{1}{2}
+&= \begin{multlined}[t]f(b)-f(a)-2\biggl(\alpha\bigl(\frac12 \|\xi_p(a)\|_p^p+\frac12 \|\xi_p(b)\|_p^p-\|\frac12
+(\xi_p(a)+\xi_p(b))\|_p^p\bigr)\\ +(1-\alpha)\bigl(\frac12 \|\eta_r(a)\|_r^r+\frac12 \|\eta_r(b)\|_r^r-\|\frac12
 (\eta_r(a)+\eta_r(b))\|_r^r\bigr)\biggr).\end{multlined}
 \end{align*}
 Since $p,r\ge 1$, both terms in brackets
@@ -388,7 +345,7 @@ in  the last expression above are nonnegative. Assume now that $p>1$.
 Let $\bar a\in \Me^{++}$ be the minimizer as in Lemma \ref{lemma:variational_majorized},
 then $f(\bar a)=Q_{\alpha,z}(\psi\|\varphi)$ and $\nabla f(\bar a)=0$, so that we get
 \begin{align*}
-f(b)-Q_{\alpha,z}(\psi\|\varphi)\ge 2\alpha\bigl(\frac{1}{2} \|\xi_p(a)\|_p^p+\frac{1}{2} \|\xi_p(b)\|_p^p-\|\frac{1}{2}
+f(b)-Q_{\alpha,z}(\psi\|\varphi)\ge 2\alpha\bigl(\frac12 \|\xi_p(a)\|_p^p+\frac12 \|\xi_p(b)\|_p^p-\|\frac12
 (\xi_p(a)+\xi_p(b))\|_p^p\bigr).
 \end{align*}
 The space $L_p(\Me)$ is uniformly
@@ -396,7 +353,7 @@ convex, so that the function $h\mapsto \|h\|_p^p$ is uniformly convex on  each s
 288]{zalinescu2002convex}). Hence for each $C>0$ and $\epsilon>0$ there is some $\delta>0$ such
 that for every $h,k$ with $\|h\|_p^p,\|k\|_p^p\le C$ and $\|h-k\|_p\ge \epsilon$, we have
 \[
-\frac{1}{2}\|h\|_p^p+\frac{1}{2}\|k\|_p^p-\|\frac{1}{2}(h+k)\|_p^p\ge \delta,
+\frac12\|h\|_p^p+\frac12\|k\|_p^p-\|\frac12(h+k)\|_p^p\ge \delta,
 \]
 (\cite[Exercise 3.3]{zalinescu2002convex}).  The proof
 in the case $r>1$ is similar. 
@@ -444,22 +401,21 @@ The Petz dual  of $\gamma$ with respect to a faithful  $\rho\in \Me_*^+$
 is a map $\gamma_\rho^*:\Me\to \Ne$,
 introduced in \cite{petz1988sufficiency}. It was proved that it is again
 normal, positive and unital, in addition, it is $n$-positive whenever $\gamma$ is.
-\DIFaddbegin \DIFadd{More generally, if $e=s(\rho)$ and $e_0=s(\rho\circ\gamma)$, we may use restrictions as
+More generally, if $e=s(\rho)$ and $e_0=s(\rho\circ\gamma)$, we may use restrictions as
 above to define $\gamma^*_\rho: e\Me e\to e_0\Ne e_0$. 
-}\DIFaddend As explained in \cite{jencova2018renyi} $\gamma^*_\rho$ is determined by the equality
+As explained in \cite{jencova2018renyi} $\gamma^*_\rho$ is determined by the equality
 \begin{equation}\label{eq:petzdual}
-(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{\frac{1}{2}}bh_{\rho\circ\gamma}^{\frac{1}{2}})=h_\rho^{\frac{1}{2}}\gamma(b)h_\rho^{\frac{1}{2}},
+(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{\frac12}bh_{\rho\circ\gamma}^{\frac12})=h_\rho^{\frac12}\gamma(b)h_\rho^{\frac12},
 \end{equation}
 for all $b\in \Ne^+$, here $(\gamma^*_\rho)_*$ is the predual map of $\gamma^*_\rho$.
 We also have
 \[
 (\gamma^*_\rho)_*(h_{\rho\circ\gamma})=(\gamma^*_\rho)_*\circ
-\gamma_*(h_\rho)=h_\rho\DIFaddbegin \DIFadd{,}\qquad \DIFadd{(\gamma_\rho^*)_{\rho\circ\gamma}^*=\gamma.
-}\DIFaddend \]
- \DIFdelbegin \DIFdel{and $(\gamma_\rho^*)_{\rho\circ\gamma}^*=\gamma$. }\DIFdelend \DIFaddbegin 
+\gamma_*(h_\rho)=h_\rho,\qquad (\gamma_\rho^*)_{\rho\circ\gamma}^*=\gamma.
+\]
+ 
 
-
-\DIFaddend In the special case that $\gamma$ is the
+In the special case that $\gamma$ is the
 inclusion map $\gamma: \Ne\hookrightarrow \Me$ for a subalgebra $\Ne\subseteq \Me$, the Petz dual is the generalized 
 conditional expectation $\cE_{\Ne,\varphi}:\Me\to \Ne$, as introduced in \cite{accardi}; see e.g.
 \cite[Proposition 6.5]{hiai2021quantum}. Hence  $\cE_{\Ne,\varphi}$ is a normal completely
@@ -482,44 +438,43 @@ jencova2021renyi}, see also \cite{berta2018renyi} for an alternative proof in th
 when the maps are  also completely positive.
 
 
-\begin{lemma}\DIFaddbegin \label{lemma:pcontraction} \DIFadd{Let $\gamma:\Ne\to \Me$ be a normal positive unital map and
+\begin{lemma}\label{lemma:pcontraction} Let $\gamma:\Ne\to \Me$ be a normal positive unital map and
 let $\rho\in \Me_*^+$, $s(\rho)=e$, $s(\rho\circ\gamma)=e_0$.
 For any $p\ge 1$, the map $\gamma^*_{\rho,p}:L_p(e_0 \Ne e_0)\to L_p(e\Me e)$, determined
 by
-}\[
-\DIFadd{\gamma^*_{\rho,p}(h_{\rho\circ\gamma}^{1\over 2p}bh^{1\over
+\[
+\gamma^*_{\rho,p}(h_{\rho\circ\gamma}^{1\over 2p}bh^{1\over
 2p}_{\rho\circ\gamma})=h_\rho^{1\over 2p}\gamma(b) h_\rho^{1\over 2p},\qquad b\in \Ne
-}\]
-\DIFadd{is a contraction such that 
-}\[
-\DIFadd{(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{p-1\over 2p}kh_{\rho\circ\gamma}^{p-1\over
+\]
+is a contraction such that 
+\[
+(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{p-1\over 2p}kh_{\rho\circ\gamma}^{p-1\over
 2p})=h_\rho^{p-1\over 2p}\gamma^*_{\rho,p}(k)h_\rho^{p-1\over 2p},\qquad k\in L_p(e_0 \Ne
 e_0).
-}\]
-\DIFadd{Moreover, if $\rho_n\in \Me_*^+$ are such that $s(\rho)\le s(\rho_n)$ and
+\]
+Moreover, if $\rho_n\in \Me_*^+$ are such that $s(\rho)\le s(\rho_n)$ and
 $\|\rho_n-\rho\|_1\to 0$, then for any $k\in L_p(e_0 \Ne e_0)$ we have
 $\gamma^*_{\rho_n,p}(k)\to \gamma^*_{\rho,p}(k)$ in $L_p(\Me)$.
-}
 
 \end{lemma}
 
-\begin{proof} \DIFadd{For $b\in \Ne$, let $\sigma\in e_0 (\Ne_*)e_0$ be such that
-$h_\sigma=h_{\rho\circ\gamma}^{\frac{1}{2}}b h_{\rho\circ\gamma}^{\frac{1}{2}}$. Then
-}\[
-\DIFadd{(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{\frac{1}{2}}b
-h_{\rho\circ\gamma}^{\frac{1}{2}})=h_\rho^{\frac{1}{2}}\gamma(b)h_\rho^{\frac{1}{2}}=h_\rho^{p-1\over
+\begin{proof} For $b\in \Ne$, let $\sigma\in e_0 (\Ne_*)e_0$ be such that
+$h_\sigma=h_{\rho\circ\gamma}^{\frac12}b h_{\rho\circ\gamma}^{\frac12}$. Then
+\[
+(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{\frac12}b
+h_{\rho\circ\gamma}^{\frac12})=h_\rho^{\frac12}\gamma(b)h_\rho^{\frac12}=h_\rho^{p-1\over
 2p}\gamma^*_{\rho,p}(h_{\rho\circ\gamma}^{1\over 2p}bh_{\rho\circ\gamma}^{1\over
 2p})h_\rho^{p-1\over 2p}.
-}\]
-\DIFadd{Since $\gamma^*_\rho$ is a normal positive unital map, its predual $(\gamma^*_\rho)_*$
+\]
+Since $\gamma^*_\rho$ is a normal positive unital map, its predual $(\gamma^*_\rho)_*$
 defines  a contraction on the Kosaki $L_p$-spaces  $L_p(\Ne,\rho\circ\gamma)\to L_p(\Me,\rho)$, so that 
-}\[
-\DIFadd{\|h_\rho^{1\over 2p}\gamma(b) h_\rho^{1\over 2p}\|_p=\|(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{\frac{1}{2}}b
-h_{\rho\circ\gamma}^{\frac{1}{2}})\|_{p,\rho}\le \|h_{\rho\circ\gamma}^{\frac{1}{2}}b
-h_{\rho\circ\gamma}^{\frac{1}{2}}\|_{p,\rho\circ\gamma}=\|h_{\rho\circ\gamma}^{1\over 2p}b
+\[
+\|h_\rho^{1\over 2p}\gamma(b) h_\rho^{1\over 2p}\|_p=\|(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{\frac12}b
+h_{\rho\circ\gamma}^{\frac12})\|_{p,\rho}\le \|h_{\rho\circ\gamma}^{\frac12}b
+h_{\rho\circ\gamma}^{\frac12}\|_{p,\rho\circ\gamma}=\|h_{\rho\circ\gamma}^{1\over 2p}b
 h_{\rho\circ\gamma}^{1\over 2p}\|_p
-}\]
-\DIFadd{Since $h_{\rho\circ\gamma}^{1\over 2p}\Ne h^{1\over
+\]
+Since $h_{\rho\circ\gamma}^{1\over 2p}\Ne h^{1\over
 2p}_{\rho\circ\gamma}$ is dense in $L_p(e_0 \Ne e_0)$, this proves the first part of the
 statement.  Let $\rho_n$ be a sequence as required and let $k\in L_p(e_0 \Ne e_0)$. By the
 assumptions on the supports, $\gamma^*_{\rho_n,p}$ is well defined on $k$ for all $n$.
@@ -528,26 +483,24 @@ h_{\rho\circ\gamma}^{1\over 2p}$ for some $b\in \Ne$, since the set of such elem
 dense in $L_p(e_0 \Ne e_0)$ and all the maps are contractions. 
 Put $k_n:=h_{\rho_n\circ\gamma}^{1\over 2p}b
 h_{\rho_n\circ\gamma}^{1\over 2p}$, then we have
-}\[
-\DIFadd{\gamma^*_{\rho,p}(k)=h_\rho^{1\over p}\gamma(b)h_\rho^{1\over p},\qquad
+\[
+\gamma^*_{\rho,p}(k)=h_\rho^{1\over p}\gamma(b)h_\rho^{1\over p},\qquad
 \gamma^*_{\rho_n,p}(k_n)= h_{\rho_n}^{1\over p}\gamma(b)h_{\rho_n}^{1\over p}
-}\]
-\DIFadd{and we have $k_n\to k$ in $L_p(\Ne)$ and  $\gamma^*_{\rho_n,p}(k_n)\to
+\]
+and we have $k_n\to k$ in $L_p(\Ne)$ and  $\gamma^*_{\rho_n,p}(k_n)\to
 \gamma^*_{\rho,p}(k)$ in $L_p(\Me)$, this follows by H\"older and continuity of the map
-$L_1(\Me)^+\ni h\mapsto h^{\frac{1}p}\in L_p(\Me)^+$, \mbox{%DIFAUXCMD
-\cite{kosaki1986aplicationsuc}}\hskip0pt%DIFAUXCMD
-.
+$L_1(\Me)^+\ni h\mapsto h^{\frac1p}\in L_p(\Me)^+$, \cite{kosaki1986aplicationsuc}.
 Therefore
-}\[
-\DIFadd{\|\gamma^*_{\rho_n,p}(k)-\gamma^*_{\rho,p}(k)\|_p\le
+\[
+\|\gamma^*_{\rho_n,p}(k)-\gamma^*_{\rho,p}(k)\|_p\le
 \|\gamma^*_{\rho_n,p}(k-k_n)\|_p+\|\gamma_{\rho_n,p}(k_n)-\gamma_{\rho,p}(k)\|_p\to 0.
-}\]
+\]
 
 
 \end{proof}
 
 
-\begin{lemma}\DIFaddend \label{lemma:dpi} Let $\gamma:\Ne\to \Me$ be a normal positive unital map and
+\begin{lemma}\label{lemma:dpi} Let $\gamma:\Ne\to \Me$ be a normal positive unital map and
 let $\rho\in \Me_*^+$, $b\in \Ne^+$. 
 \begin{enumerate}
 \item[(i)]  If $p\in [1/2,1)$, then 
@@ -565,10 +518,10 @@ let $\rho\in \Me_*^+$, $b\in \Ne^+$.
 
 \begin{proof} Let us denote $\beta:=\gamma_\rho^*$ and let $\omega\in \Me_*^+$ be such
 that 
-$h_\omega:=h_{\rho\circ\gamma}^{\frac{1}{2}}bh_{\rho\circ\gamma}^{\frac{1}{2}}\in L_1(\Ne)^+$. Then
+$h_\omega:=h_{\rho\circ\gamma}^{\frac12}bh_{\rho\circ\gamma}^{\frac12}\in L_1(\Ne)^+$. Then
 $\beta$ is a normal positive unital map and  we have 
 \[
-\beta_*(h_\omega)=h_\rho^{\frac{1}{2}}\gamma(b)h_\rho^{\frac{1}{2}},\qquad
+\beta_*(h_\omega)=h_\rho^{\frac12}\gamma(b)h_\rho^{\frac12},\qquad
 \beta_*(h_{\rho\circ\gamma})=h_\rho.
 \]
 Let $p\in [1/2,1)$, then  
@@ -581,22 +534,8 @@ h_{\rho\circ\gamma}^{\frac{1-p}{2p}}\|_p^p=\|h_{\rho\circ\gamma}^{\frac{1}{2p}}b
 \end{align*}
 Here we have used the DPI for the sandwiched R\'enyi  divergence $D_{\alpha,\alpha}$ for
 $\alpha\in [1/2,1)$, \cite[Theorem 4.1]{jencova2021renyi}.  This proves (i). 
-The case (ii) \DIFdelbegin \DIFdel{was proved }\DIFdelend \DIFaddbegin \DIFadd{is immediate from Lemma \ref{lemma:pcontraction}. This was proved also 
-}\DIFaddend in \cite{kato2023onrenyi} (see Eq. (22) therein), using the \DIFdelbegin \DIFdel{relation of the sandwiched R\'enyi divergence to the Kosaki $L_p$ norms.
-In our setting,
-the proof can be written as 
-}\begin{align*}
-\DIFdel{\|h_\rho^{\frac{1}{2p}}\gamma(b)h_\rho^{\frac{1}{2p}}\|_p^p}&\DIFdel{=Q_{p,p}(h_\rho^{\frac{1}{2}}\gamma(b)h_\rho^{\frac{1}{2}}\|h_\rho)=Q_{p,p}(\beta_*(h_\omega)\|\beta_*(h_{\rho\circ\gamma}))}\\
-&\DIFdel{\le
-Q_{p,p}(h_\omega\|h_{\rho\circ\gamma})=\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\|^p_p,
-}\end{align*}%DIFAUXCMD
-\DIFdel{here the inequality follows from the DPI for sandwiched R\'enyi divergence
-$D_{\alpha,\alpha}$ with
-$\alpha>1$, \mbox{%DIFAUXCMD
-\cite[]{jencova2018renyi}}\hskip0pt%DIFAUXCMD
-.
-}\DIFdelend \DIFaddbegin \DIFadd{same argument.
-}\DIFaddend 
+The case (ii) is immediate from Lemma \ref{lemma:pcontraction}. This was proved also 
+in \cite{kato2023onrenyi} (see Eq. (22) therein), using the same argument.
 
 
 \end{proof}
@@ -604,31 +543,7 @@ $\alpha>1$, \mbox{%DIFAUXCMD
 
 
 
-\DIFdelbegin %DIFDELCMD < \begin{remark}\label{rem:pcontraction} %%%
-\DIFdel{Using the fact that $(\gamma^*_\rho)_*$ is a contraction for
-the Kosaki $L_p$ spaces $L_p(\Ne,\rho\circ\gamma)\to L_p(\Me,\rho)$ for all $p\ge 1$ (see \mbox{%DIFAUXCMD
-\cite[Thm.
-]{jencova2018renyi} }\hskip0pt%DIFAUXCMD
-and properties of the Petz dual), we can see that the map
-$\gamma_{\rho,p}: L_p(\Ne)\to L_p(\Me)$ determined by
-}\[
-\DIFdel{\gamma_{\rho,p}:h_{\rho\circ\gamma}^{1\over 2p}ah_{\rho\circ\gamma}^{1\over 2p}\mapsto h_{\rho}^{1\over
-2p}\gamma(a)h_{\rho}^{1\over 2p},\qquad a\in \Ne
-}\]%DIFAUXCMD
-\DIFdel{is a contraction. Notice that $\gamma_{\rho,1}=(\gamma^*_\rho)_*$, 
-$\gamma_{\rho,\infty}=\gamma$ and for any $p\ge 1$,
-}\[
-\DIFdel{(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{p-1\over 2p}w h_{\rho\circ\gamma}^{p-1\over
-2p})=h_{\rho}^{p-1\over 2p}\gamma^*_{\rho,p}(w) h_{\rho}^{p-1\over 2p},\qquad w\in
-L_p(\Ne).
-}\]%DIFAUXCMD
-%DIFDELCMD < 
-
-%DIFDELCMD < \end{remark}
-%DIFDELCMD < 
-
-%DIFDELCMD < %%%
-\DIFdelend \begin{theorem}[DPI] \label{thm:dpi} Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$ and let $\gamma:
+\begin{theorem}[DPI] \label{thm:dpi} Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$ and let $\gamma:
 \Ne\to \Me$ be a normal positive unital map. Assume either of the following conditions:
 \begin{enumerate}
 \item[(i)] $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$
@@ -803,8 +718,6 @@ is the set  of fixed points of the channel $\gamma\circ\gamma_\varphi^*$.
 
 We first prove some equivalent conditions for equality in DPI, in the case $\psi\sim
 \ffi$. We will use the notations $\psi_0:=\psi\circ\gamma$, $\ffi_0:=\ffi\circ\gamma$.
-\DIFdelbegin \DIFdel{Note that these conditions do not require $\gamma$ to be 2-positive. 
-}\DIFdelend 
 
 \begin{prop}\label{prop:DPI_equality}
 Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$ and assume that $\psi\sim \ffi$. Let
@@ -902,183 +815,170 @@ Indeed, the condition (ii) with $\alpha=z$ is equivalent to the condition in \ci
 automatic. Moreover, (ii) extends the necessary condition in \cite[Thm. 1.2
 (2)]{zhang2020equality} to a necessary and sufficient one. While in both these
  works $\gamma$ was required to be completely positive, we have shown that only
-positivity is enough. See also the related condition in \DIFdelbegin \DIFdel{Corollary \ref{coro:zhang} }\DIFdelend \DIFaddbegin \DIFadd{Proposition
-\ref{prop:DPI_equality2} }\DIFaddend below.
+positivity is enough. See also the related condition in Proposition
+\ref{prop:DPI_equality2} below.
 
 \end{remark}
-\DIFaddbegin 
 
 
-\DIFadd{We give further equality conditions related to those by Zhang \mbox{%DIFAUXCMD
-\cite[Thm.
-1.2]{zhang2020equality}}\hskip0pt%DIFAUXCMD
-. Again, 2-positivity is not required for $\gamma$. 
-}
+We give further equality conditions related to those by Zhang \cite[Thm.
+1.2]{zhang2020equality}. Again, 2-positivity is not required for $\gamma$. 
 
 
 
-\begin{prop}\label{prop:DPI_equality2} \DIFadd{Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$ and let
+\begin{prop}\label{prop:DPI_equality2} Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$ and let
 $\gamma$ be a normal positive unital map. Let $p=\frac{z}{\alpha}$ and
 $r=\frac{z}{1-\alpha}$. 
-}\begin{enumerate}
-\item[\DIFadd{(i)}]  \DIFadd{Let $p>1$. Then equality in DPI for $D_{\alpha,z}$ is equivalent to
-}\[
-\DIFadd{\gamma_*\bigl((h_\psi^{1\over 2p}h_\ffi^{1\over 2r}h_\psi^{1\over
+\begin{enumerate}
+\item[(i)]  Let $p>1$. Then equality in DPI for $D_{\alpha,z}$ is equivalent to
+\[
+\gamma_*\bigl((h_\psi^{1\over 2p}h_\ffi^{1\over 2r}h_\psi^{1\over
 2p})^{z}\bigr)=(h_{\psi_0}^{1\over 2p}h_{\ffi_0}^{1\over 2r}h_{\psi_0}^{1\over
 2p})^{z}.
-}\]
-\item[\DIFadd{(ii)}] \DIFadd{Let $r>1$. Then equality in DPI for $D_{\alpha,z}$ is equivalent to
-}\[
-\DIFadd{\gamma_*\bigl((h_\ffi^{1\over 2r}h_\psi^{1\over 2p}h_\ffi^{1\over
+\]
+\item[(ii)] Let $r>1$. Then equality in DPI for $D_{\alpha,z}$ is equivalent to
+\[
+\gamma_*\bigl((h_\ffi^{1\over 2r}h_\psi^{1\over 2p}h_\ffi^{1\over
 2r})^{z}\bigr)=(h_{\ffi_0}^{1\over 2r}h_{\psi_0}^{1\over 2p}h_{\ffi_0}^{1\over 2r})^{z}.
-}\]
+\]
 
 \end{enumerate}
 
 
 \end{prop}
 
-\begin{proof} \DIFadd{We will prove (i), the statement (ii) is then obtained using the equality
+\begin{proof} We will prove (i), the statement (ii) is then obtained using the equality
 $Q_{\alpha,z}(\psi\|\ffi)=Q_{1-\alpha,z}(\ffi\|\psi)$. 
 The strategy of the proof is to use the relation of $D_{\alpha,z}$ to $D_{p,p}$ and then apply the known
 properties of the sandwiched divergences and their connection with the Kosaki interpolation $L_p$
 spaces.  Notice that
-}\[
-\DIFadd{Q_{z,\alpha}(\psi\|\ffi)=Q_{p,p}(\omega\|\psi),
-}\]
-\DIFadd{where $\omega\in \Me_*^+$ is such that
-}\begin{equation}\DIFadd{\label{eq:omega}
-h_\omega=h_\psi^{p-1\over 2p}h_\mu^{\frac{1}p}h_\psi^{p-1\over 2p},\qquad
+\[
+Q_{z,\alpha}(\psi\|\ffi)=Q_{p,p}(\omega\|\psi),
+\]
+where $\omega\in \Me_*^+$ is such that
+\begin{equation}\label{eq:omega}
+h_\omega=h_\psi^{p-1\over 2p}h_\mu^{\frac1p}h_\psi^{p-1\over 2p},\qquad
 h_{\mu}=|h_{\ffi}^{1\over 2r}h_{\psi}^{1\over 2p}|^{2z}.
-}\end{equation}
-\DIFadd{Let $\omega_0,\mu_0\in \Ne_*^+$ be similar functionals obtained from $\psi_0,\ffi_0$.
+\end{equation}
+Let $\omega_0,\mu_0\in \Ne_*^+$ be similar functionals obtained from $\psi_0,\ffi_0$.
 Assume equality in DPI, then
 we have
-}\[
-\DIFadd{Q_{p,p}(\omega_0\|\psi_0)=Q_{\alpha,z}(\psi_0\|\ffi_0)=Q_{\alpha,z}(\psi\|\ffi)=Q_{p,p}(\omega\|\psi).
-}\]
-\DIFadd{Our first goal is to show that $\omega_0=\omega\circ\gamma$. Let us remark here that in the situation of Proposition \ref{prop:DPI_equality}, we have
-$h_\omega=h_\psi^{\frac{1}{2}}\bar ah_\psi^{\frac{1}{2}}$ and
-$h_{\omega_0}=h_{\psi_0}^{\frac{1}{2}}\bar a_0h_{\psi_0}^{\frac{1}{2}}$, so that the equality
-}\[
-\DIFadd{(\gamma^*_{\psi})_*(h_{\omega_0})=h_\psi^{\frac{1}{2}}\gamma(\bar
-a_0)h_\psi^{\frac{1}{2}}=h_\omega
-}\]
-\DIFadd{is immediate from the condition (iii) in Proposition \ref{prop:DPI_equality}.
-}
+\[
+Q_{p,p}(\omega_0\|\psi_0)=Q_{\alpha,z}(\psi_0\|\ffi_0)=Q_{\alpha,z}(\psi\|\ffi)=Q_{p,p}(\omega\|\psi).
+\]
+Our first goal is to show that $\omega_0=\omega\circ\gamma$. Let us remark here that in the situation of Proposition \ref{prop:DPI_equality}, we have
+$h_\omega=h_\psi^{\frac12}\bar ah_\psi^{\frac12}$ and
+$h_{\omega_0}=h_{\psi_0}^{\frac12}\bar a_0h_{\psi_0}^{\frac12}$, so that the equality
+\[
+(\gamma^*_{\psi})_*(h_{\omega_0})=h_\psi^{\frac12}\gamma(\bar
+a_0)h_\psi^{\frac12}=h_\omega
+\]
+is immediate from the condition (iii) in Proposition \ref{prop:DPI_equality}.
 
-\DIFadd{In the general case, let $\psi_n:=\psi+\frac{1}n \ffi$ and $\ffi_n:=\ffi+\frac{1}n \psi$. Then
+In the general case, let $\psi_n:=\psi+\frac1n \ffi$ and $\ffi_n:=\ffi+\frac1n \psi$. Then
 we have $s(\psi)\le s(\psi_n)$ and  $\psi_n\to \psi$,  $\ffi_n\to \ffi$ in $\Me_*^+$,
 moreover,  $\psi_n\sim \ffi_n$ for
 all $n$. Then $\psi_n\circ\gamma\sim \ffi_n\circ\gamma$, $\psi_n\circ\gamma\to \psi_0$, $\ffi_n \circ \gamma\to \ffi_0$ and by joint
-continuity of $Q_{\alpha,z}$ (\mbox{%DIFAUXCMD
-\cite[Thm. 1 (iv)]{kato2023onrenyi}}\hskip0pt%DIFAUXCMD
-), we have
-}\[
-\DIFadd{\lim_n
+continuity of $Q_{\alpha,z}$ (\cite[Thm. 1 (iv)]{kato2023onrenyi}), we have
+\[
+\lim_n
 Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)=Q_{\alpha,z}(\psi_0\|\ffi_0)=Q_{\alpha,z}(\psi\|\ffi)=\lim_n
 Q_{\alpha,z}(\psi_n\|\ffi_n).
-}\]
-\DIFadd{Let $\bar b_{n}\in \Ne^{++}$ be the minimizer for the variational expression for
+\]
+Let $\bar b_{n}\in \Ne^{++}$ be the minimizer for the variational expression for
 $Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)$. Let also $\bar a_n$ be the minimizer
 for $Q_{\alpha,z}(\psi_n\|\ffi_n)$ and let $f_n:\Me^{++}\to \mathbb R^+$
 be the function minimized in the expression for $Q_{\alpha,z}(\psi_n\|\ffi_n)$. 
 We then have 
-}\begin{align*}
-\DIFadd{Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)-f_n(\gamma(\bar
-b_{n}))=}&\DIFadd{\alpha\left(\|h_{\psi_n\circ\gamma}^{\frac{1}{2p}}\bar b_{n}
-h_{\psi_n\circ\gamma}^{\frac{1}{2p}}\|_p^p-\|h_{\psi_n}^{1\over 2p}\gamma(\bar
-b_n)h_{\psi_n}^{1\over 2p}\|_p^p\right)}\\
-& \DIFadd{+ (1-\alpha)\left(\|h_{\ffi_n\circ\gamma}^{\frac{1}{2r}}\bar b_{n}^{-1}
-h_{\ffi_n\circ\gamma}^{\frac{1}{2r}}\|_r^r-\|h_{\ffi_n}^{1\over 2r}\gamma(\bar
+\begin{align*}
+Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)-f_n(\gamma(\bar
+b_{n}))=&\alpha\left(\|h_{\psi_n\circ\gamma}^{\frac1{2p}}\bar b_{n}
+h_{\psi_n\circ\gamma}^{\frac1{2p}}\|_p^p-\|h_{\psi_n}^{1\over 2p}\gamma(\bar
+b_n)h_{\psi_n}^{1\over 2p}\|_p^p\right)\\
+& + (1-\alpha)\left(\|h_{\ffi_n\circ\gamma}^{\frac1{2r}}\bar b_{n}^{-1}
+h_{\ffi_n\circ\gamma}^{\frac1{2r}}\|_r^r-\|h_{\ffi_n}^{1\over 2r}\gamma(\bar
 b_n)^{-1}h_{\ffi_n}^{1\over 2r}\|_r^r\right)\ge 0,
-}\end{align*}
-\DIFadd{where the inequality follows from Lemma \ref{lemma:dpi} (ii) and \eqref{eq:ineq}. We
+\end{align*}
+where the inequality follows from Lemma \ref{lemma:dpi} (ii) and \eqref{eq:ineq}. We
 obtain
-}\begin{equation}\DIFadd{\label{eq:qfn}
+\begin{equation}\label{eq:qfn}
 Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)-Q_{\alpha,z}(\psi_n\|\ffi_n)\ge f_n(\gamma(\bar
 b_{n}))-Q_{\alpha,z}(\psi_n\|\ffi_n)\ge 0.
-}\end{equation}
+\end{equation}
 
-\DIFadd{Now let $\mu_{n,0}\in \Ne_*^+$ and $\mu_n\in \Me_*^+$ be such that by  \eqref{eq:minimizer1}
+Now let $\mu_{n,0}\in \Ne_*^+$ and $\mu_n\in \Me_*^+$ be such that by  \eqref{eq:minimizer1}
 in Lemma \ref{lemma:variational_majorized}
-}\begin{align*}
-\DIFadd{h_{\mu_{n,0}}^{\frac{1}p}= |h_{\ffi_n\circ\gamma}^{1\over 2r}h_{\psi_n\circ\gamma}^{1\over 2p}|^{2\alpha}=
-h_{\psi_n\circ\gamma}^{\frac{1}{2p}}\bar b_{n}
-h_{\psi_n\circ\gamma}^{\frac{1}{2p}},\qquad
-h_{\mu_{n}}^{\frac{1}p}=|h_{\ffi_n}^{1\over 2r}h_{\psi_n}^{1\over 2p}|^{2\alpha}= h_{\psi_n}^{\frac{1}{2p}}\bar a_{n}
-h_{\psi_n}^{\frac{1}{2p}}. 
-}\end{align*}
-\DIFadd{Then $h_{\mu_{n,0}}^{\frac{1}p}\to h_{\mu_0}^{\frac{1}p}$ in $L_p(\Ne)$, this follows by the H\"older
+\begin{align*}
+h_{\mu_{n,0}}^{\frac 1p}= |h_{\ffi_n\circ\gamma}^{1\over 2r}h_{\psi_n\circ\gamma}^{1\over 2p}|^{2\alpha}=
+h_{\psi_n\circ\gamma}^{\frac 1{2p}}\bar b_{n}
+h_{\psi_n\circ\gamma}^{\frac1{2p}},\qquad
+h_{\mu_{n}}^{\frac1p}=|h_{\ffi_n}^{1\over 2r}h_{\psi_n}^{1\over 2p}|^{2\alpha}= h_{\psi_n}^{\frac 1{2p}}\bar a_{n}
+h_{\psi_n}^{\frac1{2p}}. 
+\end{align*}
+Then $h_{\mu_{n,0}}^{\frac1p}\to h_{\mu_0}^{\frac1p}$ in $L_p(\Ne)$, this follows by the H\"older
 inequality and the fact that the map $L_{2z}(\Ne)\to L_p(\Ne)$, given as $h\mapsto
-|h|^{2\alpha}$ is norm to norm continuous, \mbox{%DIFAUXCMD
-\cite{kosaki1986aplicationsuc}}\hskip0pt%DIFAUXCMD
-. Similarly,
-$h_{\mu_n}^{\frac{1}p}\to h_\mu^{\frac{1}p}$ in $L_p(\Me)$. 
+|h|^{2\alpha}$ is norm to norm continuous, \cite{kosaki1986aplicationsuc}. Similarly,
+$h_{\mu_n}^{\frac1p}\to h_\mu^{\frac1p}$ in $L_p(\Me)$. 
 Next, note that since
 $Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)$ and $Q_{\alpha,z}(\psi_n\|\ffi_n)$
 have the same limit, we see from \eqref{eq:qfn} and Lemma
 \ref{lemma:variational_majorized2} that 
-$h_{\psi_n}^{\frac{1}{2p}}\gamma(\bar b_{n})h_{\psi_n}^{1\over 2p}-h_{\mu_n}^{\frac{1}p}\to
+$h_{\psi_n}^{\frac 1{2p}}\gamma(\bar b_{n})h_{\psi_n}^{1\over 2p}-h_{\mu_n}^{\frac1p}\to
 0$ in $L_p(\Me)$. On the other hand, let $\gamma^*_{\psi_n,p}, \gamma^*_{\psi,p}$ be the
 contractions defined in Lemma \ref{lemma:pcontraction}. We
 then have 
-}\[
-\DIFadd{h_{\psi_n}^{\frac{1}{2p}}\gamma(\bar b_{n})h_{\psi_n}^{1\over
-2p}=\gamma_{\psi_{n},p}^*(h_{\mu_{n,0}}^{\frac{1}p})
-}\]
-\DIFadd{and since $\gamma^*_{\psi_{n},p}(k)\to \gamma^*_{\psi,p}(k)$ in $L_p(\Me)$ for any
+\[
+h_{\psi_n}^{\frac 1{2p}}\gamma(\bar b_{n})h_{\psi_n}^{1\over
+2p}=\gamma_{\psi_{n},p}^*(h_{\mu_{n,0}}^{\frac1p})
+\]
+and since $\gamma^*_{\psi_{n},p}(k)\to \gamma^*_{\psi,p}(k)$ in $L_p(\Me)$ for any
 $k\in L_p(s(\psi\circ\gamma)\Ne s(\psi\circ\gamma))$ by Lemma \ref{lemma:pcontraction}, we have 
-}\[
-\DIFadd{\|\gamma^*_{\psi,p}(h_{\mu_0}^{\frac{1}p})-\gamma_{\psi_{n},p}^*(h_{\mu_{n,0}}^{\frac{1}p})\|_p\le
-\|(\gamma^*_{\psi,p}-\gamma^*_{\psi_{n},p})(h_{\mu_0}^{\frac{1}p})\|_p+
-\|\gamma^*_{\psi_{n},p}(h_{\mu_0}^{\frac{1}p}-h_{\mu_{n,0}}^{\frac{1}p})\|_p\to 0.
-}\]
-\DIFadd{Putting all together, we obtain that 
-}\[
-\DIFadd{h_\mu^{\frac{1}p}=\lim_n h_{\mu_n}^{\frac{1}p}=\lim_n
-\gamma^*_{\psi_{n},p}(h_{\mu_{n,0}}^{\frac{1}p})=\gamma^*_{\psi,p}(h_{\mu_0}^{\frac{1}p}).
-}\]
-\DIFadd{It follows that 
-}\[
-\DIFadd{(\gamma^*_{\psi})_*(h_{\omega_0})=h_{\psi}^{\frac{p-1}{2p}}\gamma^*_{\psi,p}(h_{\mu_0}^{\frac{1}p})h_{\psi}^{\frac{p-1}{2p}}=h_{\psi}^{\frac{p-1}{2p}}h_\mu^{\frac{1}p}h_{\psi}^{\frac{p-1}{2p}}=h_\omega.
-}\]
-\DIFadd{Notice that $h_\omega\in L_p(\Me,\psi)$ and we have
-}\[
-\DIFadd{f_{\omega,p}(s)=\mu(1)^{\frac{1}p-s} h_\psi^{1-s\over 2}h_\mu^sh_\psi^{1-s\over 2},\qquad
+\[
+\|\gamma^*_{\psi,p}(h_{\mu_0}^{\frac1p})-\gamma_{\psi_{n},p}^*(h_{\mu_{n,0}}^{\frac1p})\|_p\le
+\|(\gamma^*_{\psi,p}-\gamma^*_{\psi_{n},p})(h_{\mu_0}^{\frac1p})\|_p+
+\|\gamma^*_{\psi_{n},p}(h_{\mu_0}^{\frac1p}-h_{\mu_{n,0}}^{\frac1p})\|_p\to 0.
+\]
+Putting all together, we obtain that 
+\[
+h_\mu^{\frac1p}=\lim_n h_{\mu_n}^{\frac1p}=\lim_n
+\gamma^*_{\psi_{n},p}(h_{\mu_{n,0}}^{\frac1p})=\gamma^*_{\psi,p}(h_{\mu_0}^{\frac1p}).
+\]
+It follows that 
+\[
+(\gamma^*_{\psi})_*(h_{\omega_0})=h_{\psi}^{\frac{p-1}{2p}}\gamma^*_{\psi,p}(h_{\mu_0}^{\frac1p})h_{\psi}^{\frac{p-1}{2p}}=h_{\psi}^{\frac{p-1}{2p}}h_\mu^{\frac1p}h_{\psi}^{\frac{p-1}{2p}}=h_\omega.
+\]
+Notice that $h_\omega\in L_p(\Me,\psi)$ and we have
+\[
+f_{\omega,p}(s)=\mu(1)^{\frac1p-s} h_\psi^{1-s\over 2}h_\mu^sh_\psi^{1-s\over 2},\qquad
 s\in S,
-}\]
-\DIFadd{see Appendix \ref{app:kosaki_lp}. Similarly,
-}\[
-\DIFadd{f_{\omega_0,p}(s)=\mu_0(1)^{\frac{1}p-s} h_{\psi_0}^{1-s\over 2}h_{\mu_0}^sh_{\psi_0}^{1-s\over 2},\qquad
+\]
+see Appendix \ref{app:kosaki_lp}. Similarly,
+\[
+f_{\omega_0,p}(s)=\mu_0(1)^{\frac1p-s} h_{\psi_0}^{1-s\over 2}h_{\mu_0}^sh_{\psi_0}^{1-s\over 2},\qquad
 s\in S.
-}\]
-\DIFadd{Equality in DPI implies that $\mu(1)=\mu_0(1)$ and by the Hadamard three lines theorem and
+\]
+Equality in DPI implies that $\mu(1)=\mu_0(1)$ and by the Hadamard three lines theorem and
 the fact that $(\gamma^*_\psi)_*$ is a contraction on $L_q(\Ne,\psi_0)$ for each $q\ge 1$,
-}\begin{align*}
-\DIFadd{\|h_{\omega}\|_{p,\psi}}&\DIFadd{=\|(\gamma^*_\psi)_*(f_{\omega_0,p}(1/p))\|_{p,\psi}\le
-\left(\sup_t \|(\gamma^*_\psi)_*(f_{\omega_0,p}(it))\|_{\infty,\psi}\right)^{1-\frac{1}p}\left(\sup_t
-\|(\gamma^*_\psi)_*(f_{\omega_0,p}(1+it))\|_{1}\right)^{\frac{1}p}}\\
-&\DIFadd{\le \left(\sup_t \|f_{\omega_0,p}(it)\|_{\infty,\psi_0}\right)^{1-\frac{1}p}\left(\sup_t
-\|f_{\omega_0,p}(1+it)\|_{1}\right)^{\frac{1}p}=\|h_{\omega_0}\|_{p,\psi_0}=\|h_{\omega}\|_{p,\psi}.
-}\end{align*}
-\DIFadd{We see that the function $h(s)=(\gamma^*_\psi)_*(f_{\omega_0,p}(s))$, $s\in S$, satisfies equality in
-Hadamard three lines at $s=1/p\in (0,1)$, whence by \mbox{%DIFAUXCMD
-\cite[Thm.
-2.10]{jencova2018renyi} }\hskip0pt%DIFAUXCMD
-we must have
-$h(s)=f_{\omega,p}(s)M^{s-\frac{1}p}$ for all $s\in S$,  where $M=M_1/M_0$ with
+\begin{align*}
+\|h_{\omega}\|_{p,\psi}&=\|(\gamma^*_\psi)_*(f_{\omega_0,p}(1/p))\|_{p,\psi}\le
+\left(\sup_t \|(\gamma^*_\psi)_*(f_{\omega_0,p}(it))\|_{\infty,\psi}\right)^{1-\frac1p}\left(\sup_t
+\|(\gamma^*_\psi)_*(f_{\omega_0,p}(1+it))\|_{1}\right)^{\frac1p}\\
+&\le \left(\sup_t \|f_{\omega_0,p}(it)\|_{\infty,\psi_0}\right)^{1-\frac1p}\left(\sup_t
+\|f_{\omega_0,p}(1+it)\|_{1}\right)^{\frac1p}=\|h_{\omega_0}\|_{p,\psi_0}=\|h_{\omega}\|_{p,\psi}.
+\end{align*}
+We see that the function $h(s)=(\gamma^*_\psi)_*(f_{\omega_0,p}(s))$, $s\in S$, satisfies equality in
+Hadamard three lines at $s=1/p\in (0,1)$, whence by \cite[Thm.
+2.10]{jencova2018renyi} we must have
+$h(s)=f_{\omega,p}(s)M^{s-\frac1p}$ for all $s\in S$,  where $M=M_1/M_0$ with
 $M_0= \sup_t \|f_{\omega,p}(it)\|_{\infty,\psi}$, $M_1=\sup_t
 \|f_{\omega,p}(1+it)\|_{1}$. The equality above implies that we have
 $M_0=M_1=\|h_\omega\|_{p,\psi}$, so that $M=1$.
 Putting $s=1$ implies that $\gamma_*(h_\mu)=h_{\mu_0}$, which is the equality in
 (i).  
 The converse implication is clear.
-}
 
 
 \end{proof}
-\DIFaddend 
 
 
 
@@ -1109,7 +1009,7 @@ Q_{z,\alpha}(\psi\|\ffi)=Q_{p,p}(\omega\|\psi),
 \]
 where $\omega\in \Me_*^+$ is such that
 \begin{equation}\label{eq:omega}
-h_\omega=h_\psi^{p-1\over 2p}h_\mu^{\frac{1}p}h_\psi^{p-1\over 2p},\qquad
+h_\omega=h_\psi^{p-1\over 2p}h_\mu^{\frac1p}h_\psi^{p-1\over 2p},\qquad
 h_{\mu}=|h_{\ffi}^{1\over 2r}h_{\psi}^{1\over 2p}|^{2z}.
 \end{equation}
 Let $\omega_0,\mu_0\in \Ne_*^+$ be similar functionals obtained from $\psi_0,\ffi_0$. Then
@@ -1136,11 +1036,11 @@ be the function minimized in the expression for $Q_{\alpha,z}(\psi_n\|\ffi_n)$.
 We then have 
 \begin{align*}
 Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)-f_n(\gamma(\bar
-b_{n}))=&\alpha\left(\|h_{\psi_n\circ\gamma}^{\frac{1}{2p}}\bar b_{n}
-h_{\psi_n\circ\gamma}^{\frac{1}{2p}}\|_p^p-\|h_{\psi_n}^{1\over 2p}\gamma(\bar
+b_{n}))=&\alpha\left(\|h_{\psi_n\circ\gamma}^{\frac1{2p}}\bar b_{n}
+h_{\psi_n\circ\gamma}^{\frac1{2p}}\|_p^p-\|h_{\psi_n}^{1\over 2p}\gamma(\bar
 b_n)h_{\psi_n}^{1\over 2p}\|_p^p\right)\\
-& + (1-\alpha)\left(\|h_{\ffi_n\circ\gamma}^{\frac{1}{2r}}\bar b_{n}^{-1}
-h_{\ffi_n\circ\gamma}^{\frac{1}{2r}}\|_r^r-\|h_{\ffi_n}^{1\over 2r}\gamma(\bar
+& + (1-\alpha)\left(\|h_{\ffi_n\circ\gamma}^{\frac1{2r}}\bar b_{n}^{-1}
+h_{\ffi_n\circ\gamma}^{\frac1{2r}}\|_r^r-\|h_{\ffi_n}^{1\over 2r}\gamma(\bar
 b_n)^{-1}h_{\ffi_n}^{1\over 2r}\|_r^r\right)\ge 0,
 \end{align*}
 where the inequality follows from Lemma \ref{lemma:dpi} (ii) and \eqref{eq:ineq}. We
@@ -1153,43 +1053,43 @@ b_{n}))-Q_{\alpha,z}(\psi_n\|\ffi_n)\ge 0.
 Now let $\mu_{n,0}\in \Ne_*^+$ and $\mu_n\in \Me_*^+$ be such that by  \eqref{eq:minimizer1}
 in Lemma \ref{lemma:variational_majorized}
 \begin{align*}
-h_{\mu_{n,0}}^{\frac{1}p}= |h_{\ffi_n\circ\gamma}^{1\over 2r}h_{\psi_n\circ\gamma}^{1\over 2p}|^{2\alpha}=
-h_{\psi_n\circ\gamma}^{\frac{1}{2p}}\bar b_{n}
-h_{\psi_n\circ\gamma}^{\frac{1}{2p}},\qquad
-h_{\mu_{n}}^{\frac{1}p}=|h_{\ffi_n}^{1\over 2r}h_{\psi_n}^{1\over 2p}|^{2\alpha}= h_{\psi_n}^{\frac{1}{2p}}\bar a_{n}
-h_{\psi_n}^{\frac{1}{2p}}. 
+h_{\mu_{n,0}}^{\frac 1p}= |h_{\ffi_n\circ\gamma}^{1\over 2r}h_{\psi_n\circ\gamma}^{1\over 2p}|^{2\alpha}=
+h_{\psi_n\circ\gamma}^{\frac 1{2p}}\bar b_{n}
+h_{\psi_n\circ\gamma}^{\frac1{2p}},\qquad
+h_{\mu_{n}}^{\frac1p}=|h_{\ffi_n}^{1\over 2r}h_{\psi_n}^{1\over 2p}|^{2\alpha}= h_{\psi_n}^{\frac 1{2p}}\bar a_{n}
+h_{\psi_n}^{\frac1{2p}}. 
 \end{align*}
-Then $h_{\mu_{n,0}}^{\frac{1}p}\to h_{\mu_0}^{\frac{1}p}$ in $L_p(\Ne)$, this follows by the H\"older
+Then $h_{\mu_{n,0}}^{\frac1p}\to h_{\mu_0}^{\frac1p}$ in $L_p(\Ne)$, this follows by the H\"older
 inequality and the fact that the map $L_{2z}(\Ne)\to L_p(\Ne)$, given as $h\mapsto
 |h|^{2\alpha}$ is norm to norm continuous, \cite{kosaki1986aplicationsuc}. Similarly,
-$h_{\mu_n}^{\frac{1}p}\to h_\mu^{\frac{1}p}$ in $L_p(\Me)$. 
+$h_{\mu_n}^{\frac1p}\to h_\mu^{\frac1p}$ in $L_p(\Me)$. 
 Next, note that since
 $Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)$ and $Q_{\alpha,z}(\psi_n\|\ffi_n)$
 have the same limit, we see from \eqref{eq:qfn} and Lemma
 \ref{lemma:variational_majorized2} that 
-$h_{\psi_n}^{\frac{1}{2p}}\gamma(\bar b_{n})h_{\psi_n}^{1\over 2p}-h_{\mu_n}^{\frac{1}p}\to
+$h_{\psi_n}^{\frac 1{2p}}\gamma(\bar b_{n})h_{\psi_n}^{1\over 2p}-h_{\mu_n}^{\frac1p}\to
 0$ in $L_p(\Me)$. On the other hand, let $\gamma^*_{\psi_n,p}, \gamma^*_{\psi,p}:
 L_p(\Ne)\to L_p(\Me)$ be the contractions as in Remark \ref{rem:pcontraction}. We
 then have 
 \[
-h_{\psi_n}^{\frac{1}{2p}}\gamma(\bar b_{n})h_{\psi_n}^{1\over
-2p}=\gamma_{\psi_{n},p}^*(h_{\mu_{n,0}}^{\frac{1}p})
+h_{\psi_n}^{\frac 1{2p}}\gamma(\bar b_{n})h_{\psi_n}^{1\over
+2p}=\gamma_{\psi_{n},p}^*(h_{\mu_{n,0}}^{\frac1p})
 \]
 and since $\gamma^*_{\psi_{n},p}(k)\to \gamma^*_{\psi,p}(k)$ in $L_p(\Me)$ for any
 $k\in L_p(\Ne)$ by \cite[Lemma 4.3]{jencova2018renyi}, we have 
 \[
-\|\gamma^*_{\psi,p}(h_{\mu_0}^{\frac{1}p})-\gamma_{\psi_{n},p}^*(h_{\mu_{n,0}}^{\frac{1}p})\|_p\le
-\|(\gamma^*_{\psi,p}-\gamma^*_{\psi_{n},p})(h_{\mu_0}^{\frac{1}p})\|_p+
-\|\gamma^*_{\psi_{n},p}(h_{\mu_0}^{\frac{1}p}-h_{\mu_{n,0}}^{\frac{1}p})\|_p\to 0.
+\|\gamma^*_{\psi,p}(h_{\mu_0}^{\frac1p})-\gamma_{\psi_{n},p}^*(h_{\mu_{n,0}}^{\frac1p})\|_p\le
+\|(\gamma^*_{\psi,p}-\gamma^*_{\psi_{n},p})(h_{\mu_0}^{\frac1p})\|_p+
+\|\gamma^*_{\psi_{n},p}(h_{\mu_0}^{\frac1p}-h_{\mu_{n,0}}^{\frac1p})\|_p\to 0.
 \]
 Putting all together, we obtain that 
 \[
-h_\mu^{\frac{1}p}=\lim_n h_{\mu_n}^{\frac{1}p}=\lim_n
-\gamma^*_{\psi_{n},p}(h_{\mu_{n,0}}^{\frac{1}p})=\gamma^*_{\psi,p}(h_{\mu_0}^{\frac{1}p}).
+h_\mu^{\frac1p}=\lim_n h_{\mu_n}^{\frac1p}=\lim_n
+\gamma^*_{\psi_{n},p}(h_{\mu_{n,0}}^{\frac1p})=\gamma^*_{\psi,p}(h_{\mu_0}^{\frac1p}).
 \]
 It follows that 
 \[
-(\gamma^*_{\psi})_*(h_{\omega_0})=h_{\psi}^{\frac{p-1}{2p}}\gamma^*_{\psi,p}(h_{\mu_0}^{\frac{1}p})h_{\psi}^{\frac{p-1}{2p}}=h_{\psi}^{\frac{p-1}{2p}}h_\mu^{\frac{1}p}h_{\psi}^{\frac{p-1}{2p}}=h_\omega,
+(\gamma^*_{\psi})_*(h_{\omega_0})=h_{\psi}^{\frac{p-1}{2p}}\gamma^*_{\psi,p}(h_{\mu_0}^{\frac1p})h_{\psi}^{\frac{p-1}{2p}}=h_{\psi}^{\frac{p-1}{2p}}h_\mu^{\frac1p}h_{\psi}^{\frac{p-1}{2p}}=h_\omega,
 \]
 so that we have
 \[
@@ -1198,11 +1098,11 @@ Q_{p,p}(\omega_0\|\psi_0)=Q_{p,p}(\omega\|\psi)=Q_{p,p}(\omega_0\circ
 \]
 
 Let us remark here that in the situation of Proposition \ref{prop:DPI_equality}, we have
-$h_\omega=h_\psi^{\frac{1}{2}}\bar ah_\psi^{\frac{1}{2}}$ and
-$h_{\omega_0}=h_{\psi_0}^{\frac{1}{2}}\bar a_0h_{\psi_0}^{\frac{1}{2}}$, so that the equality
+$h_\omega=h_\psi^{\frac12}\bar ah_\psi^{\frac12}$ and
+$h_{\omega_0}=h_{\psi_0}^{\frac12}\bar a_0h_{\psi_0}^{\frac12}$, so that the equality
 \[
-(\gamma^*_{\psi})_*(h_{\omega_0})=h_\psi^{\frac{1}{2}}\gamma(\bar
-a_0)h_\psi^{\frac{1}{2}}=h_\omega
+(\gamma^*_{\psi})_*(h_{\omega_0})=h_\psi^{\frac12}\gamma(\bar
+a_0)h_\psi^{\frac12}=h_\omega
 \]
 is immediate from the condition (iii) in Proposition \ref{prop:DPI_equality}.
 
@@ -1220,25 +1120,25 @@ set of fixed points of $\gamma\circ\gamma^*_\psi$, as in Proposition \ref{prop:u
 $\mathcal E$ preserves both $\psi$ and $\omega$, which by
 \cite{junge2003noncommutative} {\color{red}...!!}  implies that 
 \[
-h_\psi^{p-1\over 2p}h_\mu^{\frac{1}p}h_\psi^{p-1\over 2p}=h_\omega=\mathcal
-E_*(h_\omega)=h_\psi^{p-1\over 2p}\cE_p(h_\mu^{\frac{1}p})h_\psi^{p-1\over 2p},
+h_\psi^{p-1\over 2p}h_\mu^{\frac1p}h_\psi^{p-1\over 2p}=h_\omega=\mathcal
+E_*(h_\omega)=h_\psi^{p-1\over 2p}\cE_p(h_\mu^{\frac1p})h_\psi^{p-1\over 2p},
 \]
-so that $|h_\ffi^{1\over 2r}h_\psi^{1\over 2p}|^{2\alpha}= h_\mu^{\frac{1}p}\in
-L_p(\cE(\Me))$ and consequently $|h_\varphi^{\frac{1}{2r}}h_\psi^{\frac{1}{2p}}|=h_\mu^{1\over
+so that $|h_\ffi^{1\over 2r}h_\psi^{1\over 2p}|^{2\alpha}= h_\mu^{\frac1p}\in
+L_p(\cE(\Me))$ and consequently $|h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}|=h_\mu^{1\over
 2z}\in L_{2z}(\mathcal E(\Me))$.
 Note that by the assumptions $2z>1$, so that we may use the multiplicativity properties
 of the extension of $\mathcal E$ \cite{junge2003noncommutative}. Let 
 \[
-h_\varphi^{\frac{1}{2r}}h_\psi^{\frac{1}{2p}}=u|h_\varphi^{\frac{1}{2r}}h_\psi^{\frac{1}{2p}}|
+h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}=u|h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}|
 \]
 be the polar decomposition in $L_{2z}(\Me)$, then we have 
 \[
-u^*h_\varphi^{\frac{1}{2r}}h_\psi^{\frac{1}{2p}}=\mathcal
-E_{2z}(u^*h_\varphi^{\frac{1}{2r}}h_\psi^{\frac{1}{2p}})=\mathcal
-E_{2r}(u^*h_\varphi^{\frac{1}{2r}})h_\psi^{\frac{1}{2p}},
+u^*h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}=\mathcal
+E_{2z}(u^*h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}})=\mathcal
+E_{2r}(u^*h_\varphi^{\frac1{2r}})h_\psi^{\frac1{2p}},
 \]
-which implies that $u^*h_\varphi^{\frac{1}{2r}}\in L_{2r}(\cE(\Me))$. Since $\psi$ is
-faithful, we have $uu^*=r(h_\varphi^{\frac{1}{2r}}h_\psi^{\frac{1}{2p}})=s(\ffi)$, so that by uniqueness of the polar decomposition in
+which implies that $u^*h_\varphi^{\frac1{2r}}\in L_{2r}(\cE(\Me))$. Since $\psi$ is
+faithful, we have $uu^*=r(h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}})=s(\ffi)$, so that by uniqueness of the polar decomposition in
 $L_{2r}(\Me)$ and $L_{2r}(\cE(\Me))$, we
 must have $h_\ffi^{1\over 2r}\in L_{2r}(\cE(\Me))$ and $u\in \cE(\Me)$.
 Hence $\ffi\circ\mathcal E=\ffi$ and $\gamma$ is sufficient with respect to
@@ -1280,12 +1180,12 @@ and the condition in (ii) as
 \]
 This is similar to the condition by Zhang, but not the same, Zhang's condition is
 \[
-\gamma_*\bigl((\bar a^{\frac{1}{2}}h_\psi^{1\over p}\bar a^{\frac{1}{2}})^p\bigr)=(\bar
-a_0^{\frac{1}{2}}h_{\psi_0}^{1\over
-p}\bar a_0^{\frac{1}{2}})^p\qquad \text{or}\qquad \gamma_*\bigl((\bar
-a^{-\frac{1}{2}}h_\ffi^{1\over r}\bar a^{-\frac{1}{2}})^r\bigr)=(\bar
-a_0^{-\frac{1}{2}}h_{\psi_0}^{1\over
-r}\bar a_0^{-\frac{1}{2}})^r.
+\gamma_*\bigl((\bar a^{\frac12}h_\psi^{1\over p}\bar a^{\frac12})^p\bigr)=(\bar
+a_0^{\frac12}h_{\psi_0}^{1\over
+p}\bar a_0^{\frac12})^p\qquad \text{or}\qquad \gamma_*\bigl((\bar
+a^{-\frac12}h_\ffi^{1\over r}\bar a^{-\frac12})^r\bigr)=(\bar
+a_0^{-\frac12}h_{\psi_0}^{1\over
+r}\bar a_0^{-\frac12})^r.
 \]
 Note that by the proof of \cite[Thm. 1 (vi)]{kato2023onrenyi}, we have 
 \[
@@ -1305,34 +1205,34 @@ exchanging the roles of $\psi$ and $\ffi$ as before. As one of the steps in the 
 Theorem \ref{thm:suffle1}, we have shown that if equality in DPI holds,  $\gamma$ is
 sufficient with respect to $\{\omega,\psi\}$, where $\omega\in \Me_*^+$ is given by
 \[
-h_\omega=h_\psi^{p-1\over 2p}h_\mu^{\frac{1}p}h_\psi^{p-1\over 2p},\qquad
+h_\omega=h_\psi^{p-1\over 2p}h_\mu^{\frac1p}h_\psi^{p-1\over 2p},\qquad
 h_\mu=(h_\psi^{1\over 2p}h_\ffi^{1\over r} h_\psi^{1\over 2p})^z.
 \]
 We also proved that $\omega\circ \gamma =\omega_0$ where $\omega_0\in \Ne_*^+$ is
 similarly obtained from $\psi_0,\ffi_0$. Notice that $h_\omega\in L_p(\Me,\psi)$ and we
 have
 \[
-f_{\omega,p}(s)=\mu(1)^{\frac{1}p-s} h_\psi^{1-s\over 2}h_\mu^sh_\psi^{1-s\over 2},\qquad
+f_{\omega,p}(s)=\mu(1)^{\frac1p-s} h_\psi^{1-s\over 2}h_\mu^sh_\psi^{1-s\over 2},\qquad
 s\in S,
 \]
 see Appendix \ref{app:kosaki_lp}. Similarly,
 \[
-f_{\omega_0,p}(s)=\mu_0(1)^{\frac{1}p-s} h_{\psi_0}^{1-s\over 2}h_{\mu_0}^sh_{\psi_0}^{1-s\over 2},\qquad
+f_{\omega_0,p}(s)=\mu_0(1)^{\frac1p-s} h_{\psi_0}^{1-s\over 2}h_{\mu_0}^sh_{\psi_0}^{1-s\over 2},\qquad
 s\in S.
 \]
 Equality in DPI implies that $\mu(1)=\mu_0(1)$ and by the Hadamard three lines theorem and
 the fact that $\gamma_*$ is a contraction on $L_q(\Me,\psi)$ for each $q\ge 1$,
 \begin{align*}
-\|h_{\omega_0}\|_{p,\psi_0}&=\|\gamma_*(f_{\omega,p}(\frac{1}p))\|_{p,\psi_0}\le
-\left(\sup_t \|\gamma_*(f_{\omega,p}(it))\|_{\infty,\psi}\right)^{1-\frac{1}p}\left(\sup_t
-\|\gamma_*(f_{\omega,p}(1+it))\|_{1}\right)^{\frac{1}p}\\
-&\le \left(\sup_t \|f_{\omega,p}(it)\|_{\infty,\psi}\right)^{1-\frac{1}p}\left(\sup_t
-\|f_{\omega,p}(1+it)\|_{1}\right)^{\frac{1}p}=\|h_\omega\|_{p,\psi}=\|h_{\omega_0}\|_{p,\psi_0}.
+\|h_{\omega_0}\|_{p,\psi_0}&=\|\gamma_*(f_{\omega,p}(\frac1p))\|_{p,\psi_0}\le
+\left(\sup_t \|\gamma_*(f_{\omega,p}(it))\|_{\infty,\psi}\right)^{1-\frac1p}\left(\sup_t
+\|\gamma_*(f_{\omega,p}(1+it))\|_{1}\right)^{\frac1p}\\
+&\le \left(\sup_t \|f_{\omega,p}(it)\|_{\infty,\psi}\right)^{1-\frac1p}\left(\sup_t
+\|f_{\omega,p}(1+it)\|_{1}\right)^{\frac1p}=\|h_\omega\|_{p,\psi}=\|h_{\omega_0}\|_{p,\psi_0}.
 \end{align*}
 We see that the function $S\ni s\mapsto \gamma_*(f_{\omega,p}(s))$ satisfies equality in
 Hadamard three lines at $\theta=1/p\in (0,1)$, whence by \cite[Thm.
 2.10]{jencova2018renyi} we must have
-$\gamma_*(f_{\omega,p}(s))=f_{\omega_0,p}(s)M^{s-\frac{1}p}$ for all $s\in S$,  where $M=M_1/M_0$ with
+$\gamma_*(f_{\omega,p}(s))=f_{\omega_0,p}(s)M^{s-\frac1p}$ for all $s\in S$,  where $M=M_1/M_0$ with
 $M_0= \sup_t \|f_{\omega,p}(it)\|_{\infty,\psi}$, $M_1=\sup_t
 \|f_{\omega,p}(1+it)\|_{1}$. The equality above implies that we have
 $M_0=M_1=\|h_\omega\|_{p,\psi}$, so that $M=1$.
@@ -1347,8 +1247,8 @@ The converse implication is clear.
 
 \subsubsection{The case $\alpha>1$}
 
-We now turn to the case $\alpha>1$. We will put $p:=\frac{z}{\alpha}$ and
-$q:=\frac{z}{\alpha-1}$, then within the DPI bounds, we have $p\in [1/2,1)$ and $q\ge 1$. Here we need to assume that
+We now turn to the case $\alpha>1$. We will put $p:=\frac z\alpha$ and
+$q:=\frac z{\alpha-1}$, then within the DPI bounds, we have $p\in [1/2,1)$ and $q\ge 1$. Here we need to assume that
 $D_{\alpha,z}(\psi\|\ffi)<\infty$, so that by Lemma \ref{lemma:renyi_2z} there is some
 (unique)  $y\in L_{2z}(\Me)$ such that
 \[
@@ -1368,7 +1268,7 @@ function $w\mapsto \alpha\Tr\bigl((ywy^*)^p\bigr)-(\alpha-1)\Tr\bigl( w^q\bigr)$
 By DPI, we have $D_{\alpha,z}(\psi_0\|\varphi_0)\le D_{\alpha,z}(\psi\|\varphi)<\infty$,
 so that there is some (unique) $y_0\in L_{2z}(\Ne)$ such that 
 \[
-h_{\psi_0}^{\frac{1}{2p}}=y_0h_{\varphi_0}^{\frac{1}{2q}}.
+h_{\psi_0}^{\frac1{2p}}=y_0h_{\varphi_0}^{\frac1{2q}}.
 \]
 
 
@@ -1385,15 +1285,15 @@ L_q(\Ne)^+$
 \end{lemma}
 
 \begin{proof} Let us first assume that
-$w_0=h_{\varphi_0}^{\frac{1}{2q}}bh_{\varphi_0}^{\frac{1}{2q}}$ for some $b\in \Ne_+$. Then 
-$\gamma^*_{\varphi,q}(w_0)=h_{\varphi}^{\frac{1}{2q}}\gamma(b)h_{\varphi}^{\frac{1}{2q}}$.
+$w_0=h_{\varphi_0}^{\frac1{2q}}bh_{\varphi_0}^{\frac1{2q}}$ for some $b\in \Ne_+$. Then 
+$\gamma^*_{\varphi,q}(w_0)=h_{\varphi}^{\frac1{2q}}\gamma(b)h_{\varphi}^{\frac1{2q}}$.
 Therefore
 \begin{align*}
-\Tr\bigl((y\gamma^*_{\varphi,q}(w_0)y^*)^p\bigr)&=\Tr\bigl((yh_{\varphi}^{\frac{1}{2q}}\gamma(b)h_{\varphi}^{\frac{1}{2q}}y^*)^p\bigr)=
-\Tr\bigl((h_\psi^{\frac{1}{2p}}\gamma(b)h_\psi^{\frac{1}{2p}})^p\bigr)\ge
-\Tr\bigl((h_{\psi_0}^{\frac{1}{2p}}bh_{\psi_0}^{\frac{1}{2p}})^p\bigr)\\
+\Tr\bigl((y\gamma^*_{\varphi,q}(w_0)y^*)^p\bigr)&=\Tr\bigl((yh_{\varphi}^{\frac1{2q}}\gamma(b)h_{\varphi}^{\frac1{2q}}y^*)^p\bigr)=
+\Tr\bigl((h_\psi^{\frac1{2p}}\gamma(b)h_\psi^{\frac1{2p}})^p\bigr)\ge
+\Tr\bigl((h_{\psi_0}^{\frac1{2p}}bh_{\psi_0}^{\frac1{2p}})^p\bigr)\\
 &=
-\Tr\bigl((y_0h_{\varphi_0}^{\frac{1}{2q}}bh_{\varphi_0}^{\frac{1}{2q}}y_0^*)^p\bigr)=\Tr\bigl((y_0w_0y_0^*)^p\bigr),
+\Tr\bigl((y_0h_{\varphi_0}^{\frac1{2q}}bh_{\varphi_0}^{\frac1{2q}}y_0^*)^p\bigr)=\Tr\bigl((y_0w_0y_0^*)^p\bigr),
 \end{align*}
 here the inequality is from Lemma \ref{lemma:dpi} (i). The statement follows by Lemma
 \ref{lemma:cone}.
@@ -1453,15 +1353,15 @@ w)h_\varphi^{q-1\over 2q},
 \]
 which implies that $\bar w=\cE(\bar w)\in L_q(\cE(\Me))^+$. But then also 
 \[
-|y|=\bar w^{\frac{1}{2(\alpha-1)}}=\bar w^{\frac{q}{2z}}\in L_{2z}(\cE(\Me))^+
+|y|=\bar w^{\frac1{2(\alpha-1)}}=\bar w^{\frac{q}{2z}}\in L_{2z}(\cE(\Me))^+
 \]
 Let $y=u|y|$ be the polar decomposition of $y$, then we obtain from the definition of $y$ that
 $uu^*=s(|y|)=s(\psi)$. Further,
 \[
-u^*h_\psi^{\frac{1}{2p}}=|y|h_\varphi^{\frac{1}{2q}}\in L_{2p}(\cE(\Me))
+u^*h_\psi^{\frac1{2p}}=|y|h_\varphi^{\frac1{2q}}\in L_{2p}(\cE(\Me))
 \]
 and by uniqueness of the polar decomposition in $L_{2p}(\Me)$ and $L_{2p}(\cE(\Me))$, we
-obtain that $h_{\psi}^{\frac{1}{2p}}\in L_{2p}(\cE(\Me))^+$, $u\in \cE(\Me)$. Hence we must
+obtain that $h_{\psi}^{\frac1{2p}}\in L_{2p}(\cE(\Me))^+$, $u\in \cE(\Me)$. Hence we must
 have $h_\psi\in L_1(\cE(\Me))$ so that $\psi\circ\cE=\psi$.
 
 
@@ -1896,23 +1796,23 @@ $\alpha\in(1,2z]$. Then we have
 The following lemmas are well known, proofs are given for completeness.
 
 \begin{lemma}\label{lemma:cone} For any $0<p<\infty$ and $\varphi\in \Me_*^+$, 
-$h_\varphi^{\frac{1}{2p}}\Me^+h_\varphi^{\frac{1}{2p}}$ is dense in $L_p(\Me)^+$ with respect
+$h_\varphi^{\frac1{2p}}\Me^+h_\varphi^{\frac1{2p}}$ is dense in $L_p(\Me)^+$ with respect
 to the (quasi)-norm $\|\cdot\|_p$.
 
 \end{lemma}
 
 \begin{proof} We may assume that $\varphi$ is faithful. By \cite[Lemma 1.1]{junge2003noncommutative}, $\Me
-h_\varphi^{\frac{1}{2p}}$ is dense in $L_{2p}(\Me)$ for any $0<p<\infty$. Let $y\in L_p(\Me)^+$, then
-$y^{\frac{1}{2}}\in L_{2p}(\Me)$, hence there is a sequence $a_n\in \Me$ such that
-$\|a_nh^{\frac{1}{2p}}_\varphi-y^{\frac{1}{2}}\|_{2p}\to 0$. Then also 
+h_\varphi^{\frac1{2p}}$ is dense in $L_{2p}(\Me)$ for any $0<p<\infty$. Let $y\in L_p(\Me)^+$, then
+$y^{\frac12}\in L_{2p}(\Me)$, hence there is a sequence $a_n\in \Me$ such that
+$\|a_nh^{\frac1{2p}}_\varphi-y^{\frac12}\|_{2p}\to 0$. Then also 
 \[
-\|h^{\frac{1}{2p}}_\varphi
-a_n^*-y^{\frac{1}{2}}\|_p=\|(a_nh^{\frac{1}{2p}}_\varphi-y^{\frac{1}{2}})^*\|_p=\|a_nh^{\frac{1}{2p}}_\varphi-y^{\frac{1}{2}}\|_p\to 0
+\|h^{\frac1{2p}}_\varphi
+a_n^*-y^{\frac12}\|_p=\|(a_nh^{\frac1{2p}}_\varphi-y^{\frac12})^*\|_p=\|a_nh^{\frac1{2p}}_\varphi-y^{\frac12}\|_p\to 0
 \]
 and 
 \[
-\|h^{\frac{1}{2p}}_\varphi a_n^*a_nh^{\frac{1}{2p}}_\varphi-y\|_p=\|(h^{\frac{1}{2p}}_\varphi
-a_n^*-y^{\frac{1}{2}})a_nh^{\frac{1}{2p}}_\varphi+y^{\frac{1}{2}}(a_nh^{\frac{1}{2p}}_\varphi-y^{\frac{1}{2}})\|_p
+\|h^{\frac1{2p}}_\varphi a_n^*a_nh^{\frac1{2p}}_\varphi-y\|_p=\|(h^{\frac1{2p}}_\varphi
+a_n^*-y^{\frac12})a_nh^{\frac1{2p}}_\varphi+y^{\frac12}(a_nh^{\frac1{2p}}_\varphi-y^{\frac12})\|_p
 \]
 Since $\|\cdot\|_p$ is a (quasi)-norm, the above expression goes to 0 by the H\"older
 inequality.
@@ -1942,7 +1842,7 @@ $\|h\|_p\le \|k\|_p$. Moreover, if $1\le p<\infty$, then
 \begin{lemma}\label{lemma:order} Let $\psi,\varphi\in \Me_*^+$ with $\psi\le \varphi$.
 Then for any $a\in \Me$ and $p\in [1,\infty)$,
 \[
-\Tr\left( (a^*h_\psi^{\frac{1}p}a)^p\right)\le Tr\left( (a^*h_\varphi^{\frac{1}p}a)^p\right)
+\Tr\left( (a^*h_\psi^{\frac1p}a)^p\right)\le Tr\left( (a^*h_\varphi^{\frac1p}a)^p\right)
 \]
 
 
