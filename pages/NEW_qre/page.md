@@ -76,7 +76,7 @@ Finite dimensional
 * [lin2015investigating](lin2015investigating) limit to 1, derivative at 1    
 * [zhang2020fromwyd](zhang2020fromwyd) proof of DPI in bounds       
 * [zhang2020equality](zhang2020equality) some conditions for equality in DPI    
-
+* [leditzky2017data](leditzky2017data) DPI equality conditions for sandwiched     
 
 The $B(\mathcal H)$ case
 
