@@ -3,6 +3,8 @@ title: Not my own papers
 ## A list
 
 ### A
+
+[accardi1982conditional](accardi1982conditional),   
 [araujo2015witnessing](araujo2015witnessing),
 [apadula2022nosignalling](apadula2022nosignalling),
 [audenaert2015alpha](audenaert2015alpha),
@@ -119,6 +121,7 @@ title: Not my own papers
 [grumm1973two](grumm1973two)
 
 ### H
+[hiai2021connections](hiai2021connections),
 [hayden2004structure](hayden2004structure),
 [hayashi2016correlation](hayashi2016correlation),
 [hayashi2007error](hayashi2007error),
@@ -159,6 +162,8 @@ title: Not my own papers
 [junge2003noncommutative](junge2003noncommutative)
 
 ### K
+
+[kosaki1992aninequality](kosaki1992aninequality),   
 [kissinger2019acategorical](kissinger2019acategorical),
 [kato2023onrenyi](kato2023onrenyi),
 [kato2023aremark](kato2023aremark),
@@ -188,6 +193,7 @@ title: Not my own papers
 
 
 ### M
+[mosonyi2023somecontinuity](mosonyi2023somecontinuity),
 [mosonyi2022geometric](mosonyi2022geometric),
 [mosonyi2015quantum](mosonyi2015quantum),
 [mullerhermes2017monotonicity](mullerhermes2017monotonicity),

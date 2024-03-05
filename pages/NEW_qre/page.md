@@ -11,7 +11,9 @@ title: "R\xE9nyi relative entropy in von Neumann algebras"
 
 * [February 24](NEW_qre/alphaz.pdf) AJ  
 * [February 28](NEW_qre/alphaz-1.pdf) FH    
-* [my current version](NEW_qre/alphaz-2.pdf) AJ
+* [my current version](NEW_qre/alphaz-2.pdf) AJ    
+      * [equality conditions](NEW_qre/alphaz-21.pdf) AJ, some blunder    
+
 
 ### Notes
 
@@ -105,11 +107,17 @@ Tools
 * [junge2003noncommutative](junge2003noncommutative) conditional expectations extended to Haagerup $L_p$-spaces   
 * [BOOK_ohya1993quantum](BOOK_ohya1993quantum) quantum entropy and its use     
 * [choi1974aschwarz](choi1974aschwarz)   Choi inequality   
-* [zalinescu2002convex](BOOK_zalinescu2002convex) Uniform convexity and smoothness...
+* [zalinescu2002convex](BOOK_zalinescu2002convex) Uniform convexity and smoothness...    
+* [mosonyi2023somecontinuity](mosonyi2023somecontinuity) properties of $D_{\alpha,z}$, monotonicity in $z$....     
+* [hiai2021connections](hiai2021connections) connections for unbounded operators     
+* [kosaki1992aninequality](kosaki1992aninequality)  Kosaki ALT inequality    
+* [accardi1982conditional](accardi1982conditional)  generalized conditional expectations   
+
 
 General von Neumann algebra theory
 
-* [BOOK_takesaki123theory](BOOK_takesaki123theory)
+* [BOOK_takesaki123theory](BOOK_takesaki123theory)     
+* [BOOK_hiai2021lectures](BOOK_hiai2021lectures)     
 
 
 

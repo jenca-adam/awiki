@@ -400,7 +400,8 @@ s(\rho)}$, we may  assume that both $\rho$ and $\rho\circ
 The Petz dual  of $\gamma$ with respect to a faithful  $\rho\in \Me_*^+$
 is a map $\gamma_\rho^*:\Me\to \Ne$,
 introduced in \cite{petz1988sufficiency}. It was proved that it is again
-normal, positive and unital, in addition, it is $n$-positive whenever $\gamma$ is. 
+normal, positive and unital, in addition, it is $n$-positive whenever $\gamma$ is. More generally, if $e=s(\rho)$ and $e_0=s(\rho\circ\gamma)$, we may use restrictions as
+above to define $\gamma^*_\rho: e\Me e\to e_0\Ne e_0$. 
 As explained in \cite{jencova2018renyi} $\gamma^*_\rho$ is determined by the equality
 \begin{equation}\label{eq:petzdual}
 (\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{\frac12}bh_{\rho\circ\gamma}^{\frac12})=h_\rho^{\frac12}\gamma(b)h_\rho^{\frac12},
@@ -408,9 +409,9 @@ As explained in \cite{jencova2018renyi} $\gamma^*_\rho$ is determined by the equ
 for all $b\in \Ne^+$, here $(\gamma^*_\rho)_*$ is the predual map of $\gamma^*_\rho$. We
 also have
 \[
-(\gamma^*_\rho)_*(h_{\rho\circ\gamma})=(\gamma^*_\rho)_*\circ \gamma_*(h_\rho)=h_\rho
+\rho\circ\gamma\circ\gamma^*_\rho=\rho,\qquad (\gamma_\rho^*)_{\rho\circ\gamma}^*=\gamma.
 \]
-and $(\gamma_\rho^*)_{\rho\circ\gamma}^*=\gamma$. In the special case that $\gamma$ is the
+In the special case that $\gamma$ is the
 inclusion map $\gamma: \Ne\hookrightarrow \Me$ for a subalgebra $\Ne\subseteq \Me$, the Petz dual is the generalized 
 conditional expectation $\cE_{\Ne,\varphi}:\Me\to \Ne$, as introduced in \cite{accardi}; see e.g.
 \cite[Proposition 6.5]{hiai2021quantum}. Hence  $\cE_{\Ne,\varphi}$ is a normal completely
@@ -431,6 +432,67 @@ positive unital maps. In the case of the sandwiched divergences $\tilde D_\alpha
 $1/2\le \alpha \ne 1$, DPI was proved in \cite{jencova2018renyi,
 jencova2021renyi}, see also \cite{berta2018renyi} for an alternative proof in the case
 when the maps are  also completely positive.
+\begin{lemma}\label{lemma:pcontraction} Let $\gamma:\Ne\to \Me$ be a normal positive unital map and
+let $\rho\in \Me_*^+$, $s(\rho)=e$, $s(\rho\circ\gamma)=e_0$.
+For any $p\ge 1$, the map $\gamma^*_{\rho,p}:L_p(e_0 \Ne e_0)\to L_p(e\Me e)$, determined
+by
+\[
+\gamma^*_{\rho,p}(h_{\rho\circ\gamma}^{1\over 2p}bh^{1\over
+2p}_{\rho\circ\gamma})=h_\rho^{1\over 2p}\gamma(b) h_\rho^{1\over 2p},\qquad b\in \Ne
+\]
+is a contraction such that 
+\[
+(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{p-1\over 2p}kh_{\rho\circ\gamma}^{p-1\over
+2p})=h_\rho^{p-1\over 2p}\gamma^*_{\rho,p}(k)h_\rho^{p-1\over 2p},\qquad k\in L_p(e_0 \Ne
+e_0).
+\]
+Moreover, if $\rho_n\in \Me_*^+$ are such that $s(\rho)\le s(\rho_n)$ and
+$\|\rho_n-\rho\|_1\to 0$, then for any $k\in L_p(e_0 \Ne e_0)$ we have
+$\gamma^*_{\rho_n,p}(k)\to \gamma^*_{\rho,p}(k)$ in $L_p(\Me)$.
+
+\end{lemma}
+
+\begin{proof} For $b\in \Ne$, let $\sigma\in e_0 (\Ne_*)e_0$ be such that
+$h_\sigma=h_{\rho\circ\gamma}^{\frac12}b h_{\rho\circ\gamma}^{\frac12}$. Then
+\[
+(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{\frac12}b
+h_{\rho\circ\gamma}^{\frac12})=h_\rho^{\frac12}\gamma(b)h_\rho^{\frac12}=h_\rho^{p-1\over
+2p}\gamma^*_{\rho,p}(h_{\rho\circ\gamma}^{1\over 2p}bh_{\rho\circ\gamma}^{1\over
+2p})h_\rho^{p-1\over 2p}.
+\]
+Since $\gamma^*_\rho$ is a normal positive unital map, its predual $(\gamma^*_\rho)_*$
+defines  a contraction on the Kosaki $L_p$-spaces  $L_p(\Ne,\rho\circ\gamma)\to L_p(\Me,\rho)$, so that 
+\[
+\|h_\rho^{1\over 2p}\gamma(b) h_\rho^{1\over 2p}\|_p=\|(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{\frac12}b
+h_{\rho\circ\gamma}^{\frac12})\|_{p,\rho}\le \|h_{\rho\circ\gamma}^{\frac12}b
+h_{\rho\circ\gamma}^{\frac12}\|_{p,\rho\circ\gamma}=\|h_{\rho\circ\gamma}^{1\over 2p}b
+h_{\rho\circ\gamma}^{1\over 2p}\|_p
+\]
+Since $h_{\rho\circ\gamma}^{1\over 2p}\Ne h^{1\over
+2p}_{\rho\circ\gamma}$ is dense in $L_p(e_0 \Ne e_0)$, this proves the first part of the
+statement.  Let $\rho_n$ be a sequence as required and let $k\in L_p(e_0 \Ne e_0)$. By the
+assumptions on the supports, $\gamma^*_{\rho_n,p}$ is well defined on $k$ for all $n$.
+Further, we may assume that $k=h_{\rho\circ\gamma}^{1\over 2p}b
+h_{\rho\circ\gamma}^{1\over 2p}$ for some $b\in \Ne$, since the set of such elements is
+dense in $L_p(e_0 \Ne e_0)$ and all the maps are contractions. 
+Put $k_n:=h_{\rho_n\circ\gamma}^{1\over 2p}b
+h_{\rho_n\circ\gamma}^{1\over 2p}$, then we have
+\[
+\gamma^*_{\rho,p}(k)=h_\rho^{1\over p}\gamma(b)h_\rho^{1\over p},\qquad
+\gamma^*_{\rho_n,p}(k_n)= h_{\rho_n}^{1\over p}\gamma(b)h_{\rho_n}^{1\over p}
+\]
+and we have $k_n\to k$ in $L_p(\Ne)$ and  $\gamma^*_{\rho_n,p}(k_n)\to
+\gamma^*_{\rho,p}(k)$ in $L_p(\Me)$, this follows by H\"older and continuity of the map
+$L_1(\Me)^+\ni h\mapsto h^{\frac1p}\in L_p(\Me)^+$, \cite{kosaki1986aplicationsuc}.
+Therefore
+\[
+\|\gamma^*_{\rho_n,p}(k)-\gamma^*_{\rho,p}(k)\|_p\le
+\|\gamma^*_{\rho_n,p}(k-k_n)\|_p+\|\gamma_{\rho_n,p}(k_n)-\gamma_{\rho,p}(k)\|_p\to 0.
+\]
+
+
+\end{proof}
+
 
 \begin{lemma}\label{lemma:dpi} Let $\gamma:\Ne\to \Me$ be a normal positive unital map and
 let $\rho\in \Me_*^+$, $b\in \Ne^+$. 
@@ -465,40 +527,12 @@ Q_{p,p}(\beta_*(h_\omega)\|h_\rho)=Q_{p,p}(\beta_*(h_\omega)\|\beta_*(h_{\rho\ci
 h_{\rho\circ\gamma}^{\frac{1-p}{2p}}\|_p^p=\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\|^p_p.
 \end{align*}
 Here we have used the DPI for the sandwiched R\'enyi  divergence $D_{\alpha,\alpha}$ for
-$\alpha\in [1/2,1)$, \cite[Theorem 4.1]{jencova2021renyi}.  This proves (i). 
-The case (ii) was proved in \cite{kato2023onrenyi} (see Eq. (22) therein), using the
-relation of the sandwiched R\'enyi divergence to the Kosaki $L_p$ norms. In our setting,
-the proof can be written as 
-\begin{align*}
-\|h_\rho^{\frac1{2p}}\gamma(b)h_\rho^{\frac{1}{2p}}\|_p^p&=Q_{p,p}(h_\rho^{\frac12}\gamma(b)h_\rho^{\frac12}\|h_\rho)=Q_{p,p}(\beta_*(h_\omega)\|\beta_*(h_{\rho\circ\gamma}))\\
-&\le
-Q_{p,p}(h_\omega\|h_{\rho\circ\gamma})=\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\|^p_p,
-\end{align*}
-here the inequality follows from the DPI for sandwiched R\'enyi divergence
-$D_{\alpha,\alpha}$ with
-$\alpha>1$, \cite[]{jencova2018renyi}.
+$\alpha\in [1/2,1)$, \cite[Theorem 4.1]{jencova2021renyi}.  This proves (i). The case (ii) is immediate from Lemma \ref{lemma:pcontraction}. This was proved also 
+in \cite{kato2023onrenyi} (see Eq. (22) therein), using the same argument.
+
 
 
 \end{proof}
-
-\begin{remark}\label{rem:pcontraction} Using the fact that $(\gamma^*_\rho)_*$ is a contraction for
-the Kosaki $L_p$ spaces $L_p(\Ne,\rho\circ\gamma)\to L_p(\Me,\rho)$ for all $p\ge 1$ (see \cite[Thm.
-]{jencova2018renyi} and properties of the Petz dual), we can see that the map
-$\gamma_{\rho,p}: L_p(\Ne)\to L_p(\Me)$ determined by
-\[
-\gamma_{\rho,p}:h_{\rho\circ\gamma}^{1\over 2p}ah_{\rho\circ\gamma}^{1\over 2p}\mapsto h_{\rho}^{1\over
-2p}\gamma(a)h_{\rho}^{1\over 2p},\qquad a\in \Ne
-\]
-is a contraction. Notice that $\gamma_{\rho,1}=(\gamma^*_\rho)_*$, 
-$\gamma_{\rho,\infty}=\gamma$ and for any $p\ge 1$,
-\[
-(\gamma^*_\rho)_*(h_{\rho\circ\gamma}^{p-1\over 2p}w h_{\rho\circ\gamma}^{p-1\over
-2p})=h_{\rho}^{p-1\over 2p}\gamma^*_{\rho,p}(w) h_{\rho}^{p-1\over 2p},\qquad w\in
-L_p(\Ne).
-\]
-
-
-\end{remark}
 
 
 
@@ -677,7 +711,6 @@ is the set  of fixed points of the channel $\gamma\circ\gamma_\varphi^*$.
 
 We first prove some equivalent conditions for equality in DPI, in the case $\psi\sim
 \ffi$. We will use the notations $\psi_0:=\psi\circ\gamma$, $\ffi_0:=\ffi\circ\gamma$.
-Note that these conditions do not require $\gamma$ to be 2-positive. 
 
 \begin{prop}\label{prop:DPI_equality}
 Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$ and assume that $\psi\sim \ffi$. Let
@@ -771,11 +804,11 @@ Q_{\alpha,z}(\psi\|\ffi)
 obtained in \cite{leditzky2017data} and \cite{zhang2020equality} in
 the finite dimensional case.
 Indeed, the condition (ii) with $\alpha=z$ is equivalent to the condition in \cite[Thm.
-1]{laditzky2017data}, note here that in this case the second condition in (ii) is
+1]{leditzky2017data}, note here that in this case the second condition in (ii) is
 automatic. Moreover, (ii) extends the necessary condition in \cite[Thm. 1.2
 (2)]{zhang2020equality} to a necessary and sufficient one. While in both these
  works $\gamma$ was required to be completely positive, we have shown that only
-positivity is enough. See also the related condition in Corollary \ref{coro:zhang} below.
+positivity is enough. 
 
 \end{remark}
 
@@ -818,12 +851,22 @@ we have the equality
 Q_{p,p}(\omega_0\|\psi_0)=Q_{\alpha,z}(\psi_0\|\ffi_0)=Q_{\alpha,z}(\psi\|\ffi)=Q_{p,p}(\omega\|\psi).
 \]
 Our first goal is to show that $\omega_0=\omega\circ\gamma$, which implies by
-\cite[]{jencova2018renyi} that $\gamma$ is sufficient with respect to $\{\omega,\psi\}$. 
+\cite[]{jencova2018renyi} that $\gamma$ is sufficient with respect to $\{\omega,\psi\}$. Let us remark here that in the situation of Proposition \ref{prop:DPI_equality}, we have
+$h_\omega=h_\psi^{\frac12}\bar ah_\psi^{\frac12}$ and
+$h_{\omega_0}=h_{\psi_0}^{\frac12}\bar a_0h_{\psi_0}^{\frac12}$, so that the equality
+\[
+(\gamma^*_{\psi})_*(h_{\omega_0})=h_\psi^{\frac12}\gamma(\bar
+a_0)h_\psi^{\frac12}=h_\omega
+\]
+is immediate from the condition (iii) in Proposition \ref{prop:DPI_equality}.
 
-Let $\psi_n\to\psi$ and
-$\varphi_n\to \varphi$ in $\Me_*^+$ be some sequences such that $\psi_n\sim \ffi_n$ for
-all $n$. Then $\psi_n\circ\gamma\sim \ffi_n\circ\gamma$, $\psi_n\circ\gamma\to \psi_0$, $\ffi_n \circ \gamma\to \ffi_0$ and by joint
-continuity of $Q_{\alpha,z}$ (\cite[Thm. 1 (iv)]{kato2023onrenyi}), we have
+
+
+ In the general case, let $\psi_n:=\psi+\frac1n \ffi$ and $\ffi_n:=\ffi+\frac1n \psi$.
+ Then all $\psi_n$, $\ffi_n$ are faithful,  $\psi_n\to \psi$,  $\ffi_n\to \ffi$ in $\Me_*^+$,
+moreover,  $\psi_n\sim \ffi_n$ for
+all $n$. Then $\psi_n\circ\gamma\sim \ffi_n\circ\gamma$, $\psi_n\circ\gamma\to \psi_0$,
+$\ffi_n \circ \gamma\to \ffi_0$ and by joint continuity of $Q_{\alpha,z}$ (\cite[Thm. 1 (iv)]{kato2023onrenyi}), we have
 \[
 \lim_n
 Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)=Q_{\alpha,z}(\psi_0\|\ffi_0)=Q_{\alpha,z}(\psi\|\ffi)=\lim_n
@@ -868,15 +911,15 @@ $Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)$ and $Q_{\alpha,z}(\psi_n\|\
 have the same limit, we see from \eqref{eq:qfn} and Lemma
 \ref{lemma:variational_majorized2} that 
 $h_{\psi_n}^{\frac 1{2p}}\gamma(\bar b_{n})h_{\psi_n}^{1\over 2p}-h_{\mu_n}^{\frac1p}\to
-0$ in $L_p(\Me)$. On the other hand, let $\gamma^*_{\psi_n,p}, \gamma^*_{\psi,p}:
-L_p(\Ne)\to L_p(\Me)$ be the contractions as in Remark \ref{rem:pcontraction}. We
+0$ in $L_p(\Me)$.  On the other hand, let $\gamma^*_{\psi_n,p}, \gamma^*_{\psi,p}$ be the
+contractions defined in Lemma \ref{lemma:pcontraction}. We
 then have 
 \[
 h_{\psi_n}^{\frac 1{2p}}\gamma(\bar b_{n})h_{\psi_n}^{1\over
 2p}=\gamma_{\psi_{n},p}^*(h_{\mu_{n,0}}^{\frac1p})
 \]
 and since $\gamma^*_{\psi_{n},p}(k)\to \gamma^*_{\psi,p}(k)$ in $L_p(\Me)$ for any
-$k\in L_p(\Ne)$ by \cite[Lemma 4.3]{jencova2018renyi}, we have 
+$k\in L_p(s(\psi\circ\gamma)\Ne s(\psi\circ\gamma))$ by Lemma \ref{lemma:pcontraction}, we have  
 \[
 \|\gamma^*_{\psi,p}(h_{\mu_0}^{\frac1p})-\gamma_{\psi_{n},p}^*(h_{\mu_{n,0}}^{\frac1p})\|_p\le
 \|(\gamma^*_{\psi,p}-\gamma^*_{\psi_{n},p})(h_{\mu_0}^{\frac1p})\|_p+
@@ -897,17 +940,9 @@ Q_{p,p}(\omega_0\|\psi_0)=Q_{p,p}(\omega\|\psi)=Q_{p,p}(\omega_0\circ
 \gamma^*_\psi\|\psi_0\circ\gamma^*_\psi).
 \]
 
-Let us remark here that in the situation of Proposition \ref{prop:DPI_equality}, we have
-$h_\omega=h_\psi^{\frac12}\bar ah_\psi^{\frac12}$ and
-$h_{\omega_0}=h_{\psi_0}^{\frac12}\bar a_0h_{\psi_0}^{\frac12}$, so that the equality
-\[
-(\gamma^*_{\psi})_*(h_{\omega_0})=h_\psi^{\frac12}\gamma(\bar
-a_0)h_\psi^{\frac12}=h_\omega
-\]
-is immediate from the condition (iii) in Proposition \ref{prop:DPI_equality}.
 
-
-By the properties of the sandwiched R\'enyi divergence $D_{p,p}$, it follows that
+By the properties of the sandwiched R\'enyi divergence $D_{p,p}$ for $p>1$
+\cite[Thm. ]{jencova2018renyi} it follows that
 $\gamma^*_\psi$ is sufficient with respect to $\{\omega_0,\psi_0\}$. By Proposition \ref{prop:universal} and the fact that the
 Petz dual  $(\gamma_\psi^*)_{\psi_0}^*$ is $\gamma$ itself, this implies 
 \[
@@ -945,104 +980,6 @@ Hence $\ffi\circ\mathcal E=\ffi$ and $\gamma$ is sufficient with respect to
 $\{\psi,\varphi\}$. 
 
 \end{proof}
-
-We give further equality conditions related to those by Zhang (?) \cite{zhang2020equality} in
-finite dimensions.
-
-
-\begin{coro}\label{coro:zhang} Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$ and let
-$\gamma$ be a normal positive unital map. 
-\begin{enumerate}
-\item[(i)]  Let $s(\ffi)\le s(\psi)$ and $p>1$. Then equality in DPI for $D_{\alpha,z}$ is equivalent to
-\[
-\gamma_*\bigl((h_\psi^{1\over 2p}h_\ffi^{1\over 2r}h_\psi^{1\over
-2p})^z\bigr)=(h_{\psi_0}^{1\over 2p}h_{\ffi_0}^{1\over 2r}h_{\psi_0}^{1\over 2p})^z.
-\]
-\item[(ii)] Let $s(\psi)\le s(\ffi)$ and $r>1$. Then equality in DPI for $D_{\alpha,z}$ is equivalent to
-\[
-\gamma_*\bigl((h_\ffi^{1\over 2r}h_\psi^{1\over 2p}h_\ffi^{1\over
-2r})^z\bigr)=(h_{\ffi_0}^{1\over 2r}h_{\psi_0}^{1\over 2p}h_{\ffi_0}^{1\over 2r})^z.
-\]
-\end{enumerate}
-
-\end{coro}
-
-{\color{red} 
-Note that in the case $\psi\sim\ffi$, the condition in (i) can be written as 
-\[
-\gamma_*\bigl((h_\psi^{1\over 2p}\bar a h_\psi^{1\over 2p})^p\bigr)=(h_{\psi_0}^{1\over
-2p}\bar a_0 h_{\psi_0}^{1\over 2p})^p
-\]
-and the condition in (ii) as 
-\[
-\gamma_*\bigl((h_\ffi^{1\over 2r}\bar a^{-1}h_\ffi^{1\over
-2r})^r\bigr)=(h_{\ffi_0}^{1\over 2r}\bar a_0^{-1}h_{\ffi_0}^{1\over 2r})^r.
-\]
-This is similar to the condition by Zhang, but not the same, Zhang's condition is
-\[
-\gamma_*\bigl((\bar a^{\frac12}h_\psi^{1\over p}\bar a^{\frac12})^p\bigr)=(\bar
-a_0^{\frac12}h_{\psi_0}^{1\over
-p}\bar a_0^{\frac12})^p\qquad \text{or}\qquad \gamma_*\bigl((\bar
-a^{-\frac12}h_\ffi^{1\over r}\bar a^{-\frac12})^r\bigr)=(\bar
-a_0^{-\frac12}h_{\psi_0}^{1\over
-r}\bar a_0^{-\frac12})^r.
-\]
-Note that by the proof of \cite[Thm. 1 (vi)]{kato2023onrenyi}, we have 
-\[
-b^*h_\psi^{1\over p}b=(h_\ffi^{1\over 2r}h_\psi^{1\over p}h_\ffi^{1\over 2r})^\alpha,
-\]
-where $bb^*=\bar a$, so that the first Zhang's equality above  seems to be related to part (ii)
-rather than part (i), although the requirement for this in \cite[Thm. 1.2
-(iii)]{zhang2020equality} is that $z\ne \alpha$, which is the condition in (i). I am a bit
-confused about this.
-
-}
-
-
-
-\begin{proof} We prove (i), the statement (ii) is proved by
-exchanging the roles of $\psi$ and $\ffi$ as before. As one of the steps in the proof of
-Theorem \ref{thm:suffle1}, we have shown that if equality in DPI holds,  $\gamma$ is
-sufficient with respect to $\{\omega,\psi\}$, where $\omega\in \Me_*^+$ is given by
-\[
-h_\omega=h_\psi^{p-1\over 2p}h_\mu^{\frac1p}h_\psi^{p-1\over 2p},\qquad
-h_\mu=(h_\psi^{1\over 2p}h_\ffi^{1\over r} h_\psi^{1\over 2p})^z.
-\]
-We also proved that $\omega\circ \gamma =\omega_0$ where $\omega_0\in \Ne_*^+$ is
-similarly obtained from $\psi_0,\ffi_0$. Notice that $h_\omega\in L_p(\Me,\psi)$ and we
-have
-\[
-f_{\omega,p}(s)=\mu(1)^{\frac1p-s} h_\psi^{1-s\over 2}h_\mu^sh_\psi^{1-s\over 2},\qquad
-s\in S,
-\]
-see Appendix \ref{app:kosaki_lp}. Similarly,
-\[
-f_{\omega_0,p}(s)=\mu_0(1)^{\frac1p-s} h_{\psi_0}^{1-s\over 2}h_{\mu_0}^sh_{\psi_0}^{1-s\over 2},\qquad
-s\in S.
-\]
-Equality in DPI implies that $\mu(1)=\mu_0(1)$ and by the Hadamard three lines theorem and
-the fact that $\gamma_*$ is a contraction on $L_q(\Me,\psi)$ for each $q\ge 1$,
-\begin{align*}
-\|h_{\omega_0}\|_{p,\psi_0}&=\|\gamma_*(f_{\omega,p}(\frac1p))\|_{p,\psi_0}\le
-\left(\sup_t \|\gamma_*(f_{\omega,p}(it))\|_{\infty,\psi}\right)^{1-\frac1p}\left(\sup_t
-\|\gamma_*(f_{\omega,p}(1+it))\|_{1}\right)^{\frac1p}\\
-&\le \left(\sup_t \|f_{\omega,p}(it)\|_{\infty,\psi}\right)^{1-\frac1p}\left(\sup_t
-\|f_{\omega,p}(1+it)\|_{1}\right)^{\frac1p}=\|h_\omega\|_{p,\psi}=\|h_{\omega_0}\|_{p,\psi_0}.
-\end{align*}
-We see that the function $S\ni s\mapsto \gamma_*(f_{\omega,p}(s))$ satisfies equality in
-Hadamard three lines at $\theta=1/p\in (0,1)$, whence by \cite[Thm.
-2.10]{jencova2018renyi} we must have
-$\gamma_*(f_{\omega,p}(s))=f_{\omega_0,p}(s)M^{s-\frac1p}$ for all $s\in S$,  where $M=M_1/M_0$ with
-$M_0= \sup_t \|f_{\omega,p}(it)\|_{\infty,\psi}$, $M_1=\sup_t
-\|f_{\omega,p}(1+it)\|_{1}$. The equality above implies that we have
-$M_0=M_1=\|h_\omega\|_{p,\psi}$, so that $M=1$.
-Putting $s=1$ implies that $\gamma_*(h_\mu)=h_{\mu_0}$, which is the equality in
-(i).  
-The converse implication is clear.
-\end{proof}
-
-
-
 
 
 \subsubsection{The case $\alpha>1$}
@@ -1168,27 +1105,6 @@ have $h_\psi\in L_1(\cE(\Me))$ so that $\psi\circ\cE=\psi$.
 \end{proof}
 
 
-\begin{coro}\label{coro:zhangge1} Let $\alpha> 1$ and $\max\{\alpha/2,\alpha-1\}\le
-z\le \alpha$. Let $\psi,\ffi\in \Me_*^+$ be such that $s(\psi)\le s(\ffi)$. Let
-$\gamma:\Ne\to \Me$ be a normal positive unital map. Assume that
-$D_{\alpha,z}(\psi\|\ffi)<\infty$ and let $x\in L_z(\Me)^+$, $x_0\in L_z(\Ne)^+$ be such that 
-\[
-h_\psi^{\alpha\over z}=h_\ffi^{\alpha-1\over 2z}xh_\ffi^{\alpha-1\over 2z},\qquad
-h_{\psi_0}^{\alpha\over z}=h_{\ffi_0}^{\alpha-1\over 2z}x_0h_{\ffi_0}^{\alpha-1\over 2z}.
-\]
-Then equality
-in DPI holds if and only if $\gamma_*(x^z)=x_0^z$.
-
-
-\end{coro}
-
-\begin{proof} This can be proved the same way as Corollary \ref{coro:zhang}, using  $h_\omega$ and $h_{\omega_0}$ given by
-\eqref{eq:omega}. Note that here $\bar w=(y^*y)^{\alpha-1}=x^{\alpha-1}$ and $\bar
-w_0=(y^*_0y_0)^{\alpha-1}=x_0^{\alpha-1}$ and the equality $\omega\circ\gamma=\omega_0$ only uses positivity of
-$\gamma$. 
-
-
-\end{proof}
 
 ////////////////////////
 
