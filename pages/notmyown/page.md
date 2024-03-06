@@ -121,6 +121,8 @@ title: Not my own papers
 [grumm1973two](grumm1973two)
 
 ### H
+
+[hiai1984strong](hiai1984strong),   
 [hiai2021connections](hiai2021connections),
 [hayden2004structure](hayden2004structure),
 [hayashi2016correlation](hayashi2016correlation),

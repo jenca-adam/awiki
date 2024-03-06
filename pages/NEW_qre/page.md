@@ -1,4 +1,4 @@
-title: "R\xE9nyi relative entropy in von Neumann algebras"
+title: "Renyi relative entropy in von Neumann algebras"
 ---
 
 
@@ -55,6 +55,7 @@ title: "R\xE9nyi relative entropy in von Neumann algebras"
     - solved for $z\ge 1$ in  [Fumio Dec. 3-8](NEW_qre/note_hiai3.pdf), [Fumio Dec. 23](NEW_qre/note_hiai5.pdf), [Anna Dec. 19](NEW_qre/notes3.pdf).     
     - The case $1/2< z<1$ solved in [Fumio Dec. 27](NEW_qre/note_hiai4.pdf) under the restrictions $\lambda^{-1}\varphi\le \psi\le \lambda\varphi$ for some $\lambda>0$, using state perturbation theory (in fact, analyticity of the Connes cocycle). Can we extend this to $\psi\le\lambda\varphi$?     
     - <span style='color:green'> Can we prove this for $z=\alpha/2$ (the left Kosaki $L_p$-spaces)? The result would follow.</span>   
+    - solved for $1/2<z$ in [Anna Jan. 23](NEW_qre/notes7.pdf) 
 
 1. *Monotonicity in $\alpha$*: 
     
@@ -66,7 +67,8 @@ title: "R\xE9nyi relative entropy in von Neumann algebras"
 1. *Reversibility and DPI equality*
 
     - proved for $\alpha>1$, $z$ in DPI bounds in [Anna Dec. 30](NEW_qre/notes4.pdf)    
-    - <span style='color:green'> Try the case $\alpha<1$ using the variational formula, as in [jencova2021renyi](jencova2021renyi) </span>
+    - proved for $\alpha\in (0,1)$ in [this version of the paper]( NEW_qre/alphaz-2.pdf)    
+    - <span style='color:green'> Some ideas for equality conditions [here](NEW_qre/alphaz-21.pdf). What about only positive (not 2-positive) maps? Can we use some ideas there and the case $\alpha=2$ - sandwiched?   </span>
 
 
 
@@ -111,8 +113,8 @@ Tools
 * [mosonyi2023somecontinuity](mosonyi2023somecontinuity) properties of $D_{\alpha,z}$, monotonicity in $z$....     
 * [hiai2021connections](hiai2021connections) connections for unbounded operators     
 * [kosaki1992aninequality](kosaki1992aninequality)  Kosaki ALT inequality    
-* [accardi1982conditional](accardi1982conditional)  generalized conditional expectations   
-
+* [accardi1982conditional](accardi1982conditional)  generalized conditional expectations     
+* [hiai1984strong](hiai1984strong)  martingale convergence    
 
 General von Neumann algebra theory
 
