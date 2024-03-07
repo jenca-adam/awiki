@@ -35,7 +35,7 @@ title: "Renyi relative entropy in von Neumann algebras"
 * [My notes on monotonicity in $z$, $\alpha$ and the limit $\alpha\searrow 1$](NEW_qre/notes7.pdf) January 23    
 * [Fumio's note on equality in DPI, $\alpha<1$](NEW_qre/note_hiai9.pdf) (2/21/2024)     
 * [Fumio's note on variational expression, $\alpha>1](NEW_qre/note_hiai10.pdf) (2/26/2024)    
-
+* [My notes on equality in DPI for sandwiched rd, $\alpha>1$](NEW_qre/notes9.pdf) March 7    
 
 ### Questions
 
@@ -68,7 +68,8 @@ title: "Renyi relative entropy in von Neumann algebras"
 
     - proved for $\alpha>1$, $z$ in DPI bounds in [Anna Dec. 30](NEW_qre/notes4.pdf)    
     - proved for $\alpha\in (0,1)$ in [this version of the paper]( NEW_qre/alphaz-2.pdf)    
-    - <span style='color:green'> Some ideas for equality conditions [here](NEW_qre/alphaz-21.pdf). What about only positive (not 2-positive) maps? Can we use some ideas there and the case $\alpha=2$ - sandwiched?   </span>
+    - <span style='color:green'> Some ideas for equality conditions [here](NEW_qre/alphaz-21.pdf).    </span>
+    - proved for sandwiched rd, $\alpha>1$ and positive maps in [Anna March 7](NEW_qre/notes9.pdf)     
 
 
 

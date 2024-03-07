@@ -706,6 +706,11 @@ $\{\psi,\varphi\}$ if and only if also $\psi\circ\mathcal E=\psi$.
 Note that the range of the conditional expectation $\mathcal E$ in the above proposition
 is the set  of fixed points of the channel $\gamma\circ\gamma_\varphi^*$. 
 
+
+
+
+
+
 \subsubsection{The case $\alpha\in (0,1)$}
 
 
@@ -808,8 +813,8 @@ Indeed, the condition (ii) with $\alpha=z$ is equivalent to the condition in \ci
 1]{leditzky2017data}, note here that in this case the second condition in (ii) is
 automatic. Moreover, (ii) extends the necessary condition in \cite[Thm. 1.2
 (2)]{zhang2020equality} to a necessary and sufficient one. While in both these
- works $\gamma$ was required to be completely positive, we have shown that only
-positivity is enough. 
+ works $\gamma$ was required to be completely positive,  only
+positivity is enough for our result. 
 
 \end{remark}
 
@@ -848,22 +853,37 @@ h_{\mu}=|h_{\ffi}^{1\over 2r}h_{\psi}^{1\over 2p}|^{2z}.
 \end{equation}
 Let $\omega_0,\mu_0\in \Ne_*^+$ be similar functionals obtained from $\psi_0,\ffi_0$. Then
 we have the equality
-\[
+\begin{equation}\label{eq:sandwiched}
 Q_{p,p}(\omega_0\|\psi_0)=Q_{\alpha,z}(\psi_0\|\ffi_0)=Q_{\alpha,z}(\psi\|\ffi)=Q_{p,p}(\omega\|\psi).
-\]
+\end{equation}
 Our first goal is to show that $\omega_0=\omega\circ\gamma$, which implies by
-\cite[]{jencova2018renyi} that $\gamma$ is sufficient with respect to $\{\omega,\psi\}$. Let us remark here that in the situation of Proposition \ref{prop:DPI_equality}, we have
+\cite[]{jencova2018renyi} that $\gamma$ is sufficient with respect to $\{\omega,\psi\}$. 
+We then apply Proposition \ref{prop:universal} and the properties of the extensions of the
+conditional expectation $\cE$ to Haagerup $L_p$-spaces proved in
+\cite{junge2003noncommutative}. 
+
+
+Let us remark here that if $\psi\sim \ffi$, we have
 $h_\omega=h_\psi^{\frac12}\bar ah_\psi^{\frac12}$ and
-$h_{\omega_0}=h_{\psi_0}^{\frac12}\bar a_0h_{\psi_0}^{\frac12}$, so that the equality
+$h_{\omega_0}=h_{\psi_0}^{\frac12}\bar a_0h_{\psi_0}^{\frac12}$, so that from the condition (iii) in Proposition
+\ref{prop:DPI_equality}, we immediately get
 \[
 (\gamma^*_{\psi})_*(h_{\omega_0})=h_\psi^{\frac12}\gamma(\bar
-a_0)h_\psi^{\frac12}=h_\omega
+a_0)h_\psi^{\frac12}=h_\omega.
 \]
-is immediate from the condition (iii) in Proposition \ref{prop:DPI_equality}.
+This and \eqref{eq:sandwiched} shows that $\gamma^*_\psi$ is sufficient with respect to
+$\{\omega_0,\psi_0\}$. By Proposition \ref{prop:universal} and the fact that the
+Petz dual  $(\gamma_\psi^*)_{\psi_0}^*$ is $\gamma$ itself, this implies the desired
+equality
+\[
+\omega\circ\gamma= \omega_0\circ \gamma_\psi^*\circ\gamma=\omega_0.
+\]
 
 
 
- In the general case, let $\psi_n:=\psi+\frac1n \ffi$ and $\ffi_n:=\ffi+\frac1n \psi$.
+
+
+ In the case $\psi\not\sim \ffi$ some more work is required. Let $\psi_n:=\psi+\frac1n \ffi$ and $\ffi_n:=\ffi+\frac1n \psi$.
  Then all $\psi_n$, $\ffi_n$ are faithful,  $\psi_n\to \psi$,  $\ffi_n\to \ffi$ in $\Me_*^+$,
 moreover,  $\psi_n\sim \ffi_n$ for
 all $n$. Then $\psi_n\circ\gamma\sim \ffi_n\circ\gamma$, $\psi_n\circ\gamma\to \psi_0$,
@@ -954,7 +974,7 @@ Petz dual  $(\gamma_\psi^*)_{\psi_0}^*$ is $\gamma$ itself, this implies
 Next, let $\mathcal E$ be the faithful  normal conditional expectation onto the
 set of fixed points of $\gamma\circ\gamma^*_\psi$, as in Proposition \ref{prop:universal}. Then
 $\mathcal E$ preserves both $\psi$ and $\omega$, which by
-\cite{junge2003noncommutative} {\color{red}...!!}  implies that 
+\cite{junge2003noncommutative}   implies that 
 \[
 h_\psi^{p-1\over 2p}h_\mu^{\frac1p}h_\psi^{p-1\over 2p}=h_\omega=\mathcal
 E_*(h_\omega)=h_\psi^{p-1\over 2p}\cE_p(h_\mu^{\frac1p})h_\psi^{p-1\over 2p},
@@ -986,7 +1006,8 @@ $\{\psi,\varphi\}$.
 \subsubsection{The case $\alpha>1$}
 
 We now turn to the case $\alpha>1$. We will put $p:=\frac z\alpha$ and
-$q:=\frac z{\alpha-1}$, then within the DPI bounds, we have $p\in [1/2,1)$ and $q\ge 1$. Here we need to assume that
+$q:=\frac z{\alpha-1}$, then within the DPI bounds, we have $p\in [1/2,1]$ and $q\ge 1$,
+note that we always have $p<q$. Here we need to assume that
 $D_{\alpha,z}(\psi\|\ffi)<\infty$, so that by Lemma \ref{lemma:renyi_2z} there is some
 (unique)  $y\in L_{2z}(\Me)$ such that
 \[
@@ -1008,21 +1029,27 @@ so that there is some (unique) $y_0\in L_{2z}(\Ne)$ such that
 \[
 h_{\psi_0}^{\frac1{2p}}=y_0h_{\varphi_0}^{\frac1{2q}}.
 \]
+Since $D_{\alpha,z}(\psi\|\ffi)<\infty$ implies that $s(\psi)\le s(\ffi)$, we may assume that both $\ffi$ and $\ffi_0$ are faithful.
 
 
+\begin{lemma}\label{lemma:le} Let $\gamma:\Ne\to\Me$ be a normal positive unital map. 
+Let $\gamma^*_{\ffi,q}:L_q(\Ne)\to L_q(\Me)$ be the contraction as in lemma \ref{lemma:pcontraction}. 
+Let $\bar w:(y^*y)^{\alpha-1}\in L_q(\Me)$ and $\bar w_0:=(y_0^*y_0)^{\alpha-1}\in
+L_q(\Ne)$. Then equality in DPI holds if and only if
+\begin{equation}\label{eq:dpiw}
+\bar w=\gamma^*_{\ffi,q}(\bar w_0)\quad \text{and}\quad  
+\Tr \bigl(\bar w_0^q\bigr)=\Tr \bigl(\gamma^*_{\varphi,q}(\bar w_0)^q\bigr).
+\end{equation}
 
-\begin{lemma}\label{lemma:le} Let us assume that both $\ffi$ and $\ffi_0$ are faithful.
-Let $\gamma^*_{\ffi,q}$ be the contraction as in Remark \ref{rem:pcontraction}. Keeping
-the above assumptions and notations,   we  have for any $w_0\in
-L_q(\Ne)^+$
-\[
-\Tr\bigl((y\gamma^*_{\ffi,q}(w_0)y^*)^p\bigr)\ge
-\Tr \bigl((y_0w_0y_0^*)^p\bigr).
-\]
 
 \end{lemma}
 
-\begin{proof} Let us first assume that
+\begin{proof} We first show that  for any $w_0\in L_q(\Ne)^+$,
+\begin{equation}\label{eq:lemma}
+\Tr\bigl((y\gamma^*_{\ffi,q}(w_0)y^*)^p\bigr)\ge
+\Tr \bigl((y_0w_0y_0^*)^p\bigr).
+\end{equation}
+Let us first assume that
 $w_0=h_{\varphi_0}^{\frac1{2q}}bh_{\varphi_0}^{\frac1{2q}}$ for some $b\in \Ne_+$. Then 
 $\gamma^*_{\varphi,q}(w_0)=h_{\varphi}^{\frac1{2q}}\gamma(b)h_{\varphi}^{\frac1{2q}}$.
 Therefore
@@ -1033,10 +1060,31 @@ Therefore
 &=
 \Tr\bigl((y_0h_{\varphi_0}^{\frac1{2q}}bh_{\varphi_0}^{\frac1{2q}}y_0^*)^p\bigr)=\Tr\bigl((y_0w_0y_0^*)^p\bigr),
 \end{align*}
-here the inequality is from Lemma \ref{lemma:dpi} (i). The statement follows by Lemma
-\ref{lemma:cone}.
+here the inequality is from Lemma \ref{lemma:dpi} (i). The proof of the inequality
+\eqref{eq:lemma} is  finished  by Lemma \ref{lemma:cone}.
+Using this and the fact that $\gamma^*_{\ffi,q}$ is a contraction in the variational expression \eqref{eq:variationalq}, we get
+\begin{align*}
+Q_{\alpha,z}(\psi\|\varphi)&\ge \alpha\Tr\bigl((y\gamma^*_{\varphi,q}(\bar
+w_0)y^*)^p\bigr)-(\alpha-1)\Tr
+\bigl(\gamma^*_{\varphi,q}(\bar w_0)^q\bigr)\\
+&\ge \alpha\Tr\bigr((y_0\bar w_0 y_0^*)^p\bigr)-(\alpha-1)\Tr \bigl(\bar
+w_0^q\bigr)=Q_{\alpha,z}(\psi_0\|\varphi_0).
+\end{align*}
+Supose that $Q_{\alpha,z}(\psi_0\|\varphi_0)=Q_{\alpha,z}(\psi\|\varphi)$, then both the
+inequalities must be equalities. Since $\bar
+w\in L_q(\Me)^+$ and $\bar w_0\in L_q(\Ne)^+$ are the unique elements such that the suprema
+in the variational expression \eqref{eq:variationalq} for $Q_{\alpha,z}(\psi\|\varphi)$ resp.
+$Q_{\alpha,z}(\psi_0\|\varphi_0)$ are attained, this proves \eqref{eq:dpiw}. Conversely,
+if the equalities in \eqref{eq:dpiw} hold, then
+\[
+Q_{\alpha,z}(\psi\|\ffi)=\Tr \bigl((y^*y)^z\bigr)=\Tr\bigl(\bar
+w^q\bigr)=\Tr\bigl(\bar w_0^q\bigr)=\Tr \bigl((y_0^*y_0)^z\bigr)=Q_{\alpha,z}(\psi_0\|\ffi_0).
+\]
+
+
 
 \end{proof}
+
 
 \begin{theorem}\label{thm:suffge1} Let $\gamma:\Ne\to \Me$ be a channel and let $\psi,\varphi\in \Me_*^+$ be
 such that 
@@ -1047,37 +1095,22 @@ $\gamma$ is sufficient with respect to $\{\psi,\ffi\}$.
 
 \end{theorem}
 
-\begin{proof} Supose that $D_{\alpha,z}(\psi_0\|\varphi_0)=D_{\alpha,z}(\psi\|\varphi)$.
-As before, we may assume that both $\varphi$ and $\varphi_0$ are
-faithful.  Let $\bar
-w\in L_q(\Me)^+$ and $\bar w_0\in L_q(\Ne)^+$ be the unique elements such that the suprema
-in the variational expression \eqref{eq:variationalq} for $D_{\alpha,z}(\psi\|\varphi)$ resp.
-$D_{\alpha,z}(\psi_0\|\varphi_0)$ are attained. We have by Lemma \ref{lemma:le} and the
-fact that $\gamma^*_{\ffi,q}$ is a contraction,
-\begin{align*}
-D_{\alpha,z}(\psi\|\varphi)&\ge \alpha\Tr\bigl((y\gamma^*_{\varphi,q}(\bar
-w_0)y^*)^p\bigr)-(\alpha-1)\Tr
-\bigl(\gamma^*_{\varphi,q}(\bar w_0)^q\bigr)\\
-&\ge \alpha\Tr\bigr((y_0\bar w_0 y_0^*)^p\bigr)-(\alpha-1)\Tr \bigl(\bar
-w_0^q\bigr)=D_{\alpha,z}(\psi_0\|\varphi_0)=D_{\alpha,z}(\psi\|\varphi),
-\end{align*}
-so that both inequalities must be equalities. This implies that in particular
+\begin{proof} Let $\bar w$ and $\bar w_0$ be as in Lemma \ref{lemma:le}. Let $\omega\in
+\Me_*^+$ and $\omega_0\in \Ne_*^+$ be such that
 \[
-\Tr \bigl(\bar w_0^q\bigr)=\Tr \bigl(\gamma^*_{\varphi,q}(\bar w_0)^q\bigr).
+h_\omega=h_\ffi^{\frac1{2\alpha}}\bar wh_\ffi^{\frac1{2\alpha}},\qquad
+h_{\omega_0}=h_{\ffi_0}^{\frac1{2\alpha}}\bar w_0h_{\ffi_0}^{\frac1{2\alpha}}.
 \]
-By uniqueness, we must also have  $\bar w=\gamma^*_{\varphi,q}(\bar w_0)$. Let now
-$\omega\in \Me_*^+$, $\
-\omega_0\in \Ne_*^+$ be given by
-\begin{equation}\label{eq:omega}
-h_{\omega}=h_\varphi^{q-1\over 2q}\bar wh_\varphi^{q-1\over 2q},\qquad 
-h_{\omega_0}=h_{\varphi_0}^{q-1\over 2q}\bar w_0h_{\varphi_0}^{q-1\over 2q},
-\end{equation}
-then 
-we get  $(\gamma^*_\varphi)_*(\omega_0)=\omega$ and also by
-definition of the sandwiched R\'enyi divergence,
+ Assume the equality in DPI holds, then by Lemma
+\ref{lemma:le} we have
 \[
-D_{q,q}(\omega_0\|\varphi_0)=\Tr \bigl(\bar w_0^q\bigr)=\Tr \bigl(\gamma^*_{\varphi,q}(\bar
-w_0)^q\bigr)=D_{q,q}(\omega_0\circ\gamma^*_\ffi\|\varphi_0\circ\gamma^*_\ffi).
+Q_{\alpha,z}(\omega_0\|\varphi_0)=\Tr \bigl(\bar w_0^q\bigr)=\Tr \bigl(\bar
+w^q\bigr)=Q_{\alpha,z}(\omega\|\varphi).
+\]
+and using also Lemma \ref{lemma:pcontraction}, we have
+\[
+(\gamma^*_\ffi)_*(h_{\omega_0})=h_\ffi^{\frac1{2\alpha}}\gamma^*_{\ffi,q}(\bar
+w_0)h_\ffi^{\frac1{2\alpha}}=h_\omega.
 \]
 Similarly as in the proof of Theorem \ref{thm:suffge1}, this shows that $\gamma$ is sufficient with
 respect to $\{\omega,\ffi\}$. Hence $\omega\circ \cE=\omega$, where $\cE$ is the
@@ -1100,7 +1133,9 @@ u^*h_\psi^{\frac1{2p}}=|y|h_\varphi^{\frac1{2q}}\in L_{2p}(\cE(\Me))
 \]
 and by uniqueness of the polar decomposition in $L_{2p}(\Me)$ and $L_{2p}(\cE(\Me))$, we
 obtain that $h_{\psi}^{\frac1{2p}}\in L_{2p}(\cE(\Me))^+$, $u\in \cE(\Me)$. Hence we must
-have $h_\psi\in L_1(\cE(\Me))$ so that $\psi\circ\cE=\psi$.
+have $h_\psi\in L_1(\cE(\Me))$ so that $\psi\circ\cE=\psi$ and $\gamma$ is sufficient with
+respect to $\{\psi,\ffi\}$ by Proposition \ref{prop:universal}. The converse is clear from
+DPI.
 
 
 \end{proof}
@@ -1573,94 +1608,183 @@ we have the statement.
 \end{proof}
 
 
+\begin{thebibliography}{24}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Accardi and Cecchini(1982)]{accardi1982conditional}
+L.~Accardi and C.~Cecchini.
+\newblock Conditional expectations in von {Neumann} algebras and a theorem of
+  {T}akesaki.
+\newblock \emph{Journal of Functional Analysis}, 45:\penalty0 245--273, 1982.
+\newblock \doi{10.1016/0022-1236(82)90022-2}.
+
+\bibitem[Berta et~al.(2018)Berta, Scholz, and Tomamichel]{berta2018renyi}
+M.~Berta, V.~B. Scholz, and M.~Tomamichel.
+\newblock {R{\'e}nyi divergences as weighted non-commutative vector valued
+  $L_p$-spaces}.
+\newblock \emph{Annales Henri Poincar{\'e}}, 19:\penalty0 1843--1867, 2018.
+\newblock \doi{https://doi.org/10.48550/arXiv.1608.05317}.
+
+\bibitem[Choi(1974)]{choi1974aschwarz}
+M.-D. Choi.
+\newblock {A Schwarz inequality for positive linear maps on $C$*-algebras}.
+\newblock \emph{Illinois Journal of Mathematics}, 18\penalty0 (4):\penalty0
+  565--574, 1974.
+\newblock \doi{10.1215/ijm/1256051007}.
+
+\bibitem[Fack and Kosaki(1986)]{fack1986generalized}
+T.~Fack and H.~Kosaki.
+\newblock {Generalized $s$-numbers of $\tau$-measurable operators.}
+\newblock \emph{Pacific Journal of Mathematics}, 123\penalty0 (2):\penalty0 269
+  -- 300, 1986.
+
+\bibitem[Haagerup(1979)]{haagerup1979lpspaces}
+U.~Haagerup.
+\newblock {$L_p$-spaces associated with an arbitrary von Neumann algebra}.
+\newblock In \emph{Algebres d’op{\'e}rateurs et leurs applications en
+  physique math{\'e}matique (Proc. Colloq., Marseille, 1977)}, volume 274,
+  pages 175--184, 1979.
+
+\bibitem[Hiai(2018)]{hiai2018quantum}
+F.~Hiai.
+\newblock {Quantum $f$-divergences in von Neumann algebras. I. Standard
+  $f$-divergences}.
+\newblock \emph{Journal of Mathematical Physics}, 59\penalty0 (10):\penalty0
+  102202, 2018.
+
+\bibitem[Hiai(2021{\natexlab{a}})]{hiai2021lectures}
+F.~Hiai.
+\newblock \emph{Lectures on Selected Topics in von Neumann Algebras}.
+\newblock EMS Press, Berlin, 2021{\natexlab{a}}.
+\newblock \doi{10.4171/ELM/32}.
+
+\bibitem[Hiai(2021{\natexlab{b}})]{hiai2021quantum}
+F.~Hiai.
+\newblock \emph{Quantum $f$-Divergences in von Neumann Algebras: Reversibility
+  of Quantum Operations}.
+\newblock Mathematical Physics Studies. Springer, Singapore,
+  2021{\natexlab{b}}.
+\newblock ISBN 9789813341999.
+\newblock \doi{10.1007/978-981-33-4199-9}.
+
+\bibitem[Hiai and Kosaki(2021)]{hiai2021connections}
+F.~Hiai and H.~Kosaki.
+\newblock Connections of unbounded operators and some related topics: von
+  {N}eumann algebra case.
+\newblock \emph{International Journal of Mathematics}, 32\penalty0
+  (05):\penalty0 2150024, 2021.
+\newblock \doi{10.1142/S0129167X21500245}.
+
+\bibitem[Hiai and Tsukada(1984)]{hiai1984strong}
+F.~Hiai and M.~Tsukada.
+\newblock Strong martingale convergence of generalized conditional expectations
+  on von {N}eumann algebras.
+\newblock \emph{Transactions of the American Mathematical Society},
+  282\penalty0 (2):\penalty0 791--798, 1984.
+\newblock \doi{10.1090/S0002-9947-1984-0732120-1}.
+
+\bibitem[Jen{\v c}ov{\'a}(2018)]{jencova2018renyi}
+A.~Jen{\v c}ov{\'a}.
+\newblock {R{\'e}nyi relative entropies and noncommutative $L_p$-spaces}.
+\newblock \emph{Annales Henri Poincar{\'e}}, 19:\penalty0 2513--2542, 2018.
+\newblock \doi{10.1007/s00023-018-0683-5}.
+
+\bibitem[Jen{\v{c}}ov{\'a}(2021)]{jencova2021renyi}
+A.~Jen{\v{c}}ov{\'a}.
+\newblock {R{\'e}nyi relative entropies and noncommutative $L_p$-spaces II}.
+\newblock \emph{Annales Henri Poincar{\'e}}, 22:\penalty0 3235–3254, 2021.
+\newblock \doi{10.1007/s00023-021-01074-9}.
+
+\bibitem[Junge and Xu(2003)]{junge2003noncommutative}
+M.~Junge and Q.~Xu.
+\newblock Noncommutative {B}urkholder/{R}osenthal inequalities.
+\newblock \emph{The Annals of Probability}, 31\penalty0 (2):\penalty0 948--995,
+  2003.
+
+\bibitem[Kato(2023)]{kato2023onrenyi}
+S.~Kato.
+\newblock On $\alpha $-$ z $-{R}\'enyi divergence in the von {N}eumann algebra
+  setting.
+\newblock \emph{arXiv preprint arXiv:2311.01748}, 2023.
+
+\bibitem[Kato and Ueda(2023)]{kato2023aremark}
+S.~Kato and Y.~Ueda.
+\newblock A remark on non-commutative {$L^p$}-spaces.
+\newblock \emph{arXiv preprint arXiv:2307.01790}, 2023.
+
+\bibitem[Kosaki(1992)]{kosaki1992aninequality}
+H.~Kosaki.
+\newblock {An inequality of Araki-Lieb-Thirring (von Neumann algebra case)}.
+\newblock \emph{Proceedings of the American Mathematical Society}, 114\penalty0
+  (2):\penalty0 477--481, 1992.
+\newblock \doi{10.1090/S0002-9939-1992-1065951-1}.
+
+\bibitem[Leditzky et~al.(2017)Leditzky, Rouz{\'e}, and Datta]{leditzky2017data}
+F.~Leditzky, C.~Rouz{\'e}, and N.~Datta.
+\newblock Data processing for the sandwiched {R}{\'e}nyi divergence: a
+  condition for equality.
+\newblock \emph{Letters in Mathematical Physics}, 107\penalty0 (1):\penalty0
+  61--80, 2017.
+\newblock \doi{10.1007/s11005-016-0896-9}.
+
+\bibitem[Mosonyi and Hiai(2023)]{mosonyi2023somecontinuity}
+M.~Mosonyi and F.~Hiai.
+\newblock Some continuity properties of quantum {R}ényi divergences.
+\newblock \emph{IEEE Transactions on Information Theory}, 2023.
+\newblock \doi{10.1109/TIT.2023.3324758}.
+
+\bibitem[Petz(1985)]{petz1985quasi}
+D.~Petz.
+\newblock Quasi-entropies for states of a von {N}eumann algebra.
+\newblock \emph{Publications of the Research Institute for Mathematical
+  Sciences}, 21\penalty0 (4):\penalty0 787--800, 1985.
+\newblock \doi{10.2977/prims/1195178929}.
+
+\bibitem[Petz(1986)]{petz1986sufficient}
+D.~Petz.
+\newblock Sufficient subalgebras and the relative entropy of states of a von
+  {Neumann} algebra.
+\newblock \emph{Communications in Mathematical Physics}, 105\penalty0
+  (1):\penalty0 123--131, 1986.
+\newblock \doi{10.1007/BF01212345}.
+
+\bibitem[Petz(1988)]{petz1988sufficiency}
+D.~Petz.
+\newblock Sufficiency of channels over von {Neumann} algebras.
+\newblock \emph{The Quarterly Journal of Mathematics}, 39\penalty0
+  (1):\penalty0 97--108, 1988.
+\newblock \doi{10.1093/qmath/39.1.97}.
+
+\bibitem[Terp({1981})]{terp1981lpspaces}
+M.~Terp.
+\newblock {$L_p$-spaces associated with von Neumann algebras}.
+\newblock {Notes, Copenhagen University}, {1981}.
+
+\bibitem[Zalinescu(2002)]{zalinescu2002convex}
+C.~Zalinescu.
+\newblock \emph{Convex Analysis in General Vector Spaces}.
+\newblock World scientific, Singapore, 2002.
+
+\bibitem[Zhang(2020)]{zhang2020equality}
+H.~Zhang.
+\newblock Equality conditions of data processing inequality for $\alpha$-z
+  {R}{\'e}nyi relative entropies.
+\newblock \emph{Journal of Mathematical Physics}, 61\penalty0 (10), 2020.
+\newblock \doi{10.1063/5.0022787}.
+
+\end{thebibliography}
 
 
-\bibliography{alphaz}
-\bibliographystyle{abbrvnat}
+%\bibliography{alphaz}
+%\bibliographystyle{abbrvnat}
 
 \end{document}
 
 
 
-\begin{thebibliography}{99}
-\bibitem{berta2018renyi}
-M. Berta, V. B. Scholz, and M. Tomamichel. R\'enyi divergences as weighted noncommutative
-vector valued $Lp$-spaces. Annales Henri Poincar\'e, 19:1843--1867, 2018.
-doi:https://doi.org/10.48550/arXiv.1608.05317.
-
-\bibitem{choi1974aschwarz}
-M.-D. Choi. A Schwarz inequality for positive linear maps on $C^*$-algebras. Illinois Journal
-of Mathematics, 18(4):565--574, 1974. doi:10.1215/ijm/1256051007.
-
-\bibitem{fack1986generalized}
-T. Fack and H. Kosaki. Generalized $s$-numbers of $\tau$-measurable operators. Pacific Journal
-of Mathematics, 123(2):269--300, 1986.
-
-\bibitem{haagerup1979lpspaces}
-U. Haagerup. $L_p$-spaces associated with an arbitrary von Neumann algebra. In Algebres
-d’op\'erateurs et leurs applications en physique mathématique (Proc. Colloq., Marseille, 1977),
-volume 274, pages 175--184, 1979.
-
-\bibitem{hiai2018quantum}
-F. Hiai. Quantum $f$-divergences in von Neumann algebras. I. Standard $f$-divergences. Journal
-of Mathematical Physics, 59(10):102202, 2018.
-
-\bibitem{hiai2021quantum}
-F. Hiai. Quantum $f$-Divergences in von Neumann Algebras: Reversibility of Quantum Operations.
-Mathematical Physics Studies. Springer, Singapore, 2021. ISBN 9789813341999.
-doi:10.1007/978-981-33-4199-9.
-
-\bibitem{hiai2021lectures}
-F. Hiai. Lectures on Selected Topics in Von Neumann Algebras. EMS Series of Lectures in Mathematics.
-EMS Press, Berlin, 2021.
-
-\bibitem{jencova2018renyi}
-A. Jen\v cov\'a. R\'enyi relative entropies and noncommutative Lp-spaces. Annales Henri Poincar\'e,
-19:2513--2542, 2018. doi:10.1007/s00023-018-0683-5.
-
-\bibitem{jencova2021renyi}
-A. Jen\v cov\'a. R\'enyi relative entropies and noncommutative $Lp$-spaces II. Annales Henri
-Poincar\'e, 22:3235--3254, 2021. doi:10.1007/s00023-021-01074-9.
-
-\bibitem{junge2003noncommutative}
-M. Junge and Q. Xu. Noncommutative Burkholder/Rosenthal inequalities. The Annals of
-Probability, 31(2):948--995, 2003.
-
-\bibitem{kato2023onrenyi}
-S. Kato. On $\alpha$-$z$-R\'enyi divergence in the von Neumann algebra setting. arXiv preprint
-arXiv:2311.01748, 2023.
-
-\bibitem{kato2023aremark}
-S. Kato and Y. Ueda. A remark on non-commutative $Lp$-spaces. arXiv preprint
-arXiv:2307.01790, 2023.
-
-\bibitem{kosaki1984applications}
-H. Kosaki. Applications of the complex interpolation method to a von Neumann algebra: Noncommutative
-$L^p$-spaces. J. Funct. Anal., 56:26--78, 1984. doi:https://doi.org/10.1016/0022-1236(84)90025-9.
-
-\bibitem{kosaki1992aninequality}
-H. Kosaki. An inequality of Araki--Lieb--Thirring (von Neumann algebra case).
-Proc. Amer. Math. Soc., 114:477--481, 1992.
-
-\bibitem{mosonyi2023somecontinuity}
-M. Mosonyi and F. Hiai. Some continuity properties of quantum R\'enyi divergences.
-IEEE Transactions on Information Theory, to appear, DOI 10.1109/TIT.2023.3324758.
-
-\bibitem{petz1985quasi}
-D. Petz. Quasi-entropies for states of a von Neumann algebra. Publications of the Research
-Institute for Mathematical Sciences, 21(4):787--800, 1985. doi:10.2977/prims/1195178929.
-
-\bibitem{petz1986sufficient}
-D. Petz. Sufficient subalgebras and the relative entropy of states of a von Neumann algebra.
-Communications in Mathematical Physics, 105(1):123--131, 1986. doi:10.1007/BF01212345.
-
-\bibitem{petz1988sufficiency}
-D. Petz. Sufficiency of channels over von Neumann algebras. The Quarterly Journal of
-Mathematics, 39(1):97–108, 1988. doi:10.1093/qmath/39.1.97.8
-
-\bibitem{terp1981lpspaces}
-M. Terp. $L_p$-spaces associated with von Neumann algebras. Notes, Copenhagen University,
-1981.
-\end{thebibliography}
 
 \end{document}
