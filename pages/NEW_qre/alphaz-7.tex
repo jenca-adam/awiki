@@ -1869,11 +1869,14 @@ $|\,\|a\|_z^z-\|b\|_z^z|\le\|a-b\|_z^z$ for $a,b\in L_z(\Me)$.
 
 \noindent
 {\bf The first proof of Theorem \ref{T-5.1}.}\enspace
-We may assume that $s(\psi)\not\perp s(\ffi)$; otherwise, $D_{\alpha,z}(\psi\|\ffi)=0$ for all $\alpha\in(0,1)$.
+We may assume that $s(\psi)\not\perp s(\ffi)$; otherwise,
+\textcolor{orange}{$Q_{\alpha,z}(\psi\|\ffi)=0$} for all $\alpha\in(0,1)$.
 Then by Lemma \ref{L-5.4}, $Q_{\alpha,z}(\psi\|\ffi)\in(0,\infty)$ for all $\alpha\in(0,1)$, and
 $\alpha\mapsto Q_{\alpha,z}(\psi\|\ffi)$ is continuous on $(0,1)$. Hence $\alpha\mapsto D_{\alpha,z}(\psi\|\ffi)$
 is continuous on $(0,1)$ too.
 
+\textcolor{orange}{I noticed that we use both $L_p$ and $L^p$ for the Lp spaces, we
+should settle on lower or upper index, I don't know which is better.}
 Let $\alpha_1,\alpha_2\in(0,1)$ and $z>0$. Let $(\Ne,\tau)$ be as in the proof of Lemma \ref{L-5.4}. Consider
 $a_j:=h_\psi^{\alpha_j/z}$ and $b_j:=h_\ffi^{(1-\alpha_j)/z}$ in $\widetilde\Ne_+$. Since
 $a_j\in L^{z/\alpha_j}(\Me)$, we note by \cite[Lemma 4.8]{fack1986generalized} that
@@ -1921,7 +1924,12 @@ formula of $D_{\alpha,z}$ in Definition \ref{defi:renyi}.\qed
 
 \subsubsection{The second proof when $z>1/2$}\label{Sec-5.1.2}
 
-Assume that $z>1/2$ and let $p:=2z$ and $q:={2z\over2z-1}$ so that $1/p+1/q=1$. Let
+\textcolor{orange}{Maybe we could skip this part, since the result is weaker (restricted
+to $z>1/2$) and the ''real analysis'' proof of 4.1.1 seems much more interesting to me.} 
+
+Assume that $z>1/2$ and let $p:=2z$ and $q:={2z\over2z-1}$ so that $1/p+1/q=1$.
+\textcolor{orange}{We may clearly restrict to the support $s(\psi+\ffi)=s(\psi)\vee
+s(\ffi)$, so that we may assume that $\psi+\ffi$ is faithful.} Let
 $\rho,\sigma\in\Me_*^+$ be such that $s(\rho)=\1-s(\psi)$ and $s(\sigma)=\1-s(\ffi)$. Put
 $\psi_0:=\psi+\rho$ and $\ffi_0:=\ffi+\sigma$, which are faithful elements in $\Me_*^+$. Below, for each
 $p\in(1,\infty)$ and $\eta\in(0,1)$, we use for simplicity the notations
