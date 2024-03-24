@@ -62,14 +62,14 @@ For $0< p\le \infty$, let $L_p(\Me)$ be the Haagerup $L_p$-space over $\Me$ and 
 $L_p(\Me)$ its positive cone, 
 \cite{haagerup1979lpspaces}. We will use the identifications $\Me\simeq L_\infty(\Me)$, $\Me_*\ni \psi \leftrightarrow h_\psi\in L_1(\Me)$ and the notation $\Tr h_\psi=\psi(1)$ for the trace in $L_1(\Me)$. It this way,
  $\Me_*^+$  is identified with the positive cone $L_1(\Me)^+$ and $\states_*(\Me)$ with subset of elements in $L_1(\Me)^+$ 
- with unit trace. 
-Precise definitions and further details on the spaces $L_p(\Me)$ can be found in the notes \cite{terp1981lpspaces}. 
+ with unit trace.  
+Precise definitions and further details on the spaces $L_p(\Me)$ can be found in
+\cite[Chap. 9]{hiai2021lectures}, or in the notes \cite{terp1981lpspaces}. 
 Some technical results that will be used below can be found in Appendix \ref{app:lp}.
  
 
 
-%Kosaki, complex interpolation. Generalized s-numbers. Haagerup reduction. Martingale
-%convergence
+
 
 
 \subsection{The $\alpha-z$-R\'enyi divergences}
@@ -1217,7 +1217,7 @@ We need to prove that
 \begin{align}\label{F-4.5}
 Q_{\alpha,z}(\psi\|\ffi)&=\lim_{\eps\searrow0}Q_{\alpha,z}(\psi\|\ffi+\eps\tau)\quad\mbox{increasingly}.
 \end{align}
-For any $\eps>0$, since $h_{\ffi+\eps\tau}=h_\psi+\eps\1$ has the bounded inverse
+For any $\eps>0$, since $h_{\ffi+\eps\tau}={\color{orange}h_\ffi}+\eps\1$ has the bounded inverse
 $h_{\ffi+\eps\tau}^{-1}=(h_\ffi+\eps\1)^{-1}\in\Me^+$, one can define
 $x_\eps:=(h_\ffi+\eps\1)^{-{\alpha-1\over2z}}h_\psi^{\alpha/z}(h_\ffi+\eps\1)^{-{\alpha-1\over2z}}
 \in\widetilde\Me^+$ so that
@@ -1293,12 +1293,13 @@ The case $0<\alpha<1$ was shown in \cite[Theorem 1(x)]{kato2023onrenyi} for gene
 For the case $\alpha>1$, by Lemma \ref{L-4.1} it suffices to show that, for every $\eps>0$,
 \[
 \tau\Bigl(\Bigl(y_\eps^{\alpha-1\over2z}h_\psi^{\alpha/z}y_\eps^{\alpha-1\over2z}\Bigr)^z\Bigr)
-\ge\tau\Bigl(\Bigl(y_\eps^{\alpha-1\over2z'}h_\psi^{\alpha/z'}y_\eps^{\alpha-1\over2z'}\Bigr)^z\Bigr),
+\ge\tau\Bigl(\Bigl(y_\eps^{\alpha-1\over2z'}h_\psi^{\alpha/z'}y_\eps^{\alpha-1\over2z'}\Bigr)^{\color{orange}
+z'}\Bigr),
 \]
 where $y_\eps:=(h_\ffi+\eps\1)^{-1}\in\Me_+$. The above is equivalently written as
 \[
-\tau\Bigl(\big|(h_\psi^{\alpha/2z'})^r(y^{(\alpha-1)/2z'})^r\big|^{2z}\Bigr)
-\ge\tau\Bigl(\big|h_\psi^{\alpha/2z'}y^{(\alpha-1)/2z'}\big|^{2zr}\Bigr),
+\tau\Bigl(\big|(h_\psi^{\alpha/2z'})^r(y_{\color{orange}\eps}^{(\alpha-1)/2z'})^r\big|^{2z}\Bigr)
+\ge\tau\Bigl(\big|h_\psi^{\alpha/2z'} y_{\color{orange}\eps}^{(\alpha-1)/2z'}\big|^{2zr}\Bigr),
 \]
 where $r:=z'/z\ge1$. Hence the desired inequality follows from Kosaki's ALT inequality
 \cite[Corollary 3]{kosaki1992aninequality}.
@@ -1307,7 +1308,7 @@ where $r:=z'/z\ge1$. Hence the desired inequality follows from Kosaki's ALT ineq
 When $(\Me,\tau)$ and $\psi,\ffi$ are as in Lemma \ref{L-4.1}, one can define, thanks to Lemma \ref{L-4.2},
 for any $\alpha\in(0,\infty)\setminus\{1\}$,
 \begin{align}
-Q_{\alpha,\infty}(\psi\|\ffi)&:=\lim_{z\to\infty}Q_{\alpha,\infty}(\psi\|\ffi)
+Q_{\alpha,\infty}(\psi\|\ffi)&:=\lim_{z\to\infty}Q_{\alpha,{\color{orange} z}}(\psi\|\ffi)
 =\inf_{z>0}Q_{\alpha,z}(\psi\|\ffi), \nonumber\\
 D_{\alpha,\infty}(\psi\|\ffi)&:={1\over\alpha-1}\log{Q_{\alpha,\infty}(\psi\|\ffi)\over\psi(\1)} \nonumber\\
 &\ =\lim_{z\to\infty}D_{\alpha,z}(\psi\|\ffi)
@@ -1340,6 +1341,17 @@ F'(\alpha)&={\tau\bigl(e^{\alpha H+(1-\alpha)K}(H-K)\bigr)\over\tau\bigl(e^{\alp
 F''(\alpha)&={\bigl\{\tau\bigl(e^{\alpha H+(1-\alpha)K}(H-K)\bigr)\bigr\}^2
 -\tau\bigl(e^{\alpha H+(1-\alpha)K}(H-K)^2\bigr)\over\bigl\{\tau\bigl(e^{\alpha H+(1-\alpha)K}\bigr)\bigr\}^2}.
 \end{align*}
+{\color{orange}I think the second derivative should be
+\[
+F''(\alpha)={\tau\bigl(e^{\alpha H+(1-\alpha)K}(H-K)^2\bigr)\tau\bigl(e^{\alpha
+H+(1-\alpha)K}\bigr)-\bigl\{\tau\bigl(e^{\alpha H+(1-\alpha)K}(H-K)\bigr)\bigr\}^2
+ \over\bigl\{\tau\bigl(e^{\alpha H+(1-\alpha)K}\bigr)\bigr\}^2.}
+\]
+The rest of the argument below is fine.
+
+}
+
+
 Since $F''(\alpha)\ge0$ on $(0,\infty)$ thanks to the Schwarz inequality, we see that $F(\alpha)$ is
 convex on $(0,\infty)$ and hence
 \[
@@ -1408,7 +1420,7 @@ Q_{\alpha,z}(\psi\|\ffi)&=\int_0^\infty\mu_s\bigl(h_\psi^{\alpha/2z}h_\ffi^{-{\a
 h_\psi^{\alpha/2z}\bigr)^z\,ds \\
 &=\lim_{n\to\infty}\int_0^\infty\mu_s\bigl(h_\psi^{\alpha/2z}h_{\ffi_n}^{-{\alpha-1\over z}}
 h_\psi^{\alpha/2z}\bigr)^z\,ds
-=\lim_{n\to\infty}Q_{\alpha,z}(\psi,\ffi_n).
+=\lim_{n\to\infty}Q_{\alpha,z}(\psi{\color{orange}\|}\ffi_n).
 \end{align*}
 From this and (1) above the extension holds in this case too.
 
@@ -1808,4 +1820,3 @@ H.~Zhang.
 
 
 
-\end{document}
