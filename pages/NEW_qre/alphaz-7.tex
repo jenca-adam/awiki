@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 
-\usepackage{hyperref}
-%\usepackage[dvipdfmx]{hyperref}
+%\usepackage{hyperref}
+\usepackage[dvipdfmx]{hyperref}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{xcolor}
 \usepackage[sort&compress,numbers]{natbib}
@@ -51,18 +51,18 @@
 \def\bC{\mathbb{C}}
 \def\Re{\mathrm{Re}\,}
 
-\title{On the properties $\alpha$-$z$-R\'enyi divergences on general von Neumann algebras
+%\title{On the properties $\alpha$-$z$-R\'enyi divergences on general von Neumann algebras
 
-{\color{red}
-------------------------
+%{\color{red}
+%------------------------
 
-$\alpha$-$z$-R\'enyi divergences in von Neumann algebras:
-data-processing inequality, reversibility and monotonicity properties
+\title{$\alpha$-$z$-R\'enyi divergences in von Neumann algebras:
+data-processing inequality, reversibility and monotonicity properties}
 
------------------------
+%-----------------------
 
-$\alpha$-$z$-R\'enyi divergences in von Neumann algebras via non-commutative $L_p$-spaces
-}}
+%$\alpha$-$z$-R\'enyi divergences in von Neumann algebras via non-commutative $L_p$-spaces
+%}}
 \author{Fumio Hiai and Anna Jen\v cov\'a}
 
 
@@ -101,8 +101,8 @@ $\alpha$-$z$-R\'enyi divergences in von Neumann algebras via non-commutative $L_
 
 %\subsection{Basic definitions}
 
-{\color{red}[Since the subsection ``Basic definitions'' is very short, it seems better to write this
-without making a subsection.]}
+%{\color{red}[Since the subsection ``Basic definitions'' is very short, it seems better to write this
+%without making a subsection.]}
 
 Let $\Me$ be a von Neumann algebra and let $\Me^+$ be the cone of positive elements in $\Me$. We
 denote the predual of $\Me$ by $\Me_*$, its positive part by $\Me_*^+$ and the set of normal states by
@@ -114,7 +114,7 @@ use the identifications $\Me\cong L_\infty(\Me)$ and $\Me_*\ni \psi \leftrightar
 so that the $\Tr$-functional on $L_1(\Me)$ defined by $\Tr\,h_\psi:=\psi(1)$ for $\psi\in \Me_*$. It this way,
 $\Me_*^+$ is identified with the positive cone $L_1(\Me)^+$, and $\states_*(\Me)$ with the set of elements
 $h\in L_1(\Me)^+$ with $\Tr\,h=1$. Precise definitions and further details on the spaces $L_p(\Me)$ can be
-found in \cite[Chap.~9]{hiai2021lectures}, or in the notes \cite{terp1981lpspaces}. {\color{red}A short summary
+found in \cite[Chap.~9]{hiai2021lectures}, or in the notes \cite{terp1981lpspaces}. {A short summary
 on the Haagerup $L_P$-spaces and} some technical results that will be used below can be found in
 Appendix \ref{app:lp}.
 
@@ -160,13 +160,13 @@ The \emph{standard} or \emph{Petz-type R\'enyi divergence}
 $D_\alpha(\psi\|\varphi)=D_{\alpha,1}(\psi\|\varphi)$. Also, the \emph{sandwiched R\'enyi divergence} is
 obtained as $\tilde D_\alpha(\psi\|\varphi)=D_{\alpha,\alpha}(\psi\|\varphi)$; see
 \cite{berta2018renyi,hiai2021quantum,jencova2018renyi, jencova2021renyi} for some
-alternative definitions and properties of $\tilde D_\alpha$. {\color{red}The definitions in
+alternative definitions and properties of $\tilde D_\alpha$. {The definitions in
 \cite{jencova2018renyi,jencova2021renyi} are based on \emph{Kosaki's interpolation $L_p$-spaces}
 $L_p(\Me,\varphi)$ \cite{kosaki1984applications} with respect to $\varphi$. These spaces and the
 complex interpolation method are briefly summarized in Appendix \ref{Appen-Kosaki-Lp}, and will be used
 frequently in the present work.}
 
-{\color{red}As have already been done by Kato in \cite{kato2023onrenyi}, many of the properties of
+{As have already been done by Kato in \cite{kato2023onrenyi}, many of the properties of
 $D_{\alpha,z}(\psi\|\varphi)$ are extended from the finite-dimensional case into the general von Neumann
 algebra case}. In particular, the following variational expressions will be an important tool for our work.
 
@@ -185,8 +185,8 @@ Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me_+} \left\{\alpha
 \Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
 \Tr\left((a^{\frac12}h_\varphi^{\frac{\alpha-1}{z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right) \right\}.
 \end{align}
-{\color{red}Moreover, if $\psi\le\lambda\ffi$ for some $\lambda>0$, then \eqref{F-1.2} holds for all
-$z\ge\alpha-1>0$. [Please check if this addition is OK.]}
+{Moreover, if $\psi\le\lambda\ffi$ for some $\lambda>0$, then \eqref{F-1.2} holds for all
+$z\ge\alpha-1>0$. }
 \end{enumerate}
 \end{theorem}
 
@@ -229,7 +229,7 @@ get
 \right\}\ge \Tr(x^z)=\|x\|_z^z= Q_{\alpha,z}(\psi\|\varphi).
 \]
 This finishes the proof of \eqref{F-1.2} in the case that $Q_{\alpha,z}(\psi\|\varphi)<\infty$. Note that
-this holds if $\psi\le \lambda\varphi$ for some $\lambda>0$. {\color{red}Indeed, since
+this holds if \textcolor{orange}{$z\ge \alpha-1>0$ and} $\psi\le \lambda\varphi$ for some $\lambda>0$. {Indeed, since
 $\frac{\alpha-1}{z}\in (0,1]$ by the assumption, we then have 
 $h_\psi^{\frac{\alpha-1}{z}}\le \lambda^{\frac{\alpha-1}{z}}h_\varphi^{\frac{\alpha-1}{z}}$.
 Hence by \cite[Lemma A.58]{hiai2021quantum} there is some $b\in \Me$ such that 
@@ -239,9 +239,11 @@ h_\psi^{\frac{\alpha-1}{2z}}=bh_\varphi^{\frac{\alpha-1}{2z}},
 so that $h_\psi^{\alpha\over2z}=yh_\ffi^{\alpha-1\over2z}$, where
 $y:=h_\varphi^{\frac{1}{2z}}b\in L_{2z}(\Me)$. By Lemma \ref{lemma:renyi_2z},
 $Q_{\alpha,z}(\psi\|\varphi)=\|y\|_{2z}^{2z}<\infty$. This shows the latter assertion too.}
-{\color{red}[My previous proof here is bad. Is this OK?]}
+{\color{orange}[Note that this follows also from the order relations in \cite[Theorem 2(iii)]{kato2023onrenyi},
+but the direct proof is short so I think we can keep it.]}
 
-In the general case, the variational expression holds for
+In the general case, \textcolor{orange}{assume that $\max\{\alpha/2,\alpha-1\}\le z$. As
+shown above}, the variational expression holds for
 $Q_{\alpha,z}(\psi\|\varphi+\varepsilon\psi)$  for all $\varepsilon>0$, so that we have
 \begin{align*}
 Q_{\alpha,z}(\psi\|\varphi+\varepsilon\psi)&=\sup_{a\in \Me_+} \left\{\alpha
@@ -254,7 +256,7 @@ a^{\frac12})^{\frac{z}{\alpha-1}}\right)\right\}\\
 \right\},
 \end{align*}
 where the inequality above follows by Lemma \ref{lemma:order}. Therefore,
-{\color{red}since $z\ge\alpha/2$, from lower semicontinuity \cite[Theorem 2(iv)]{kato2023onrenyi}
+{since $z\ge\alpha/2$, from lower semicontinuity \cite[Theorem 2(iv)]{kato2023onrenyi}
 we have}
 \[
 Q_{\alpha,z}(\psi\|\varphi)\le \liminf_{\varepsilon\searrow 0}
@@ -281,7 +283,7 @@ z}h_\ffi^{1-\alpha\over2z}\Bigr)^{1-\alpha}.
 \end{align}
 \end{lemma}
 
-\begin{proof} We may assume that $\varphi$ and hence also $\psi$ {\color{red}are(?)} faithful. Following
+\begin{proof} We may assume that $\varphi$ and hence also $\psi$ {are} faithful. Following
  the proof of \cite[Theorem 1(vi)]{kato2023onrenyi},  we may use the
 assumptions and \cite[Lemma A.58]{hiai2021quantum} to show  that there are $b,c\in\cM$  such that
 \begin{align}\label{eq:bc}
@@ -346,16 +348,16 @@ Theorem \ref{thm:variational}(i) by $f$, that is,
 f(a)=\alpha\|\xi_p(a)\|_p^p
 +(1-\alpha)\|\eta_r(a)\|_r^r,\qquad a\in \Me^{++}.
 \end{equation}
-{\color{red}When $p\in(1,\infty)$, recall that $L_p(\Me)$ is uniformly convex (see
+{When $p\in(1,\infty)$, recall that $L_p(\Me)$ is uniformly convex (see
 \cite{haagerup1979lpspaces}, \cite[Theorem 4.2]{kosaki1984applications}), so that the norm
 $\|\cdot\|_p$ is uniformly Fr\'echet differentiable (see, e.g.,
-\cite[Part 3, Chap.~II]{beauzamy1982introduction}). Hence $a\mapsto\|\xi_p(a)\|_p^p$
+\cite[Part 3, Chap.~II]{beauzamy1982introduction}). Hence \textcolor{orange}{if $p,r>1$}, $a\mapsto\|\xi_p(a)\|_p^p$
 and $a\mapsto\|\eta_r(a)\|_r^r$ are Fr\'echet differentiable on $\Me^{++}$. Since differentiability of
 these functions is obvious when $p=1$ and $r=1$, we see that the function $f$ is Fr\'echet differentiable
 on $\Me^{++}$ for any $p,r\ge1$, whose Fr\'echet derivative at $a$ will be denoted by $\nabla f(a)$.}
 
 \begin{lemma}\label{lemma:variational_majorized2}
-Assume that $\psi\sim\ffi$  and let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$. {\color{red}Let
+Assume that $\psi\sim\ffi$  and let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$. {Let
 $\bar a\in\Me^{++}$ be as given in Lemma \ref{lemma:variational_majorized}.} If $p>1$, then for
 every $C\ge Q_{\alpha,z}(\psi\|\ffi)$ and $\eps>0$ there is some $\delta>0$ such that whenever
 $\|\xi_p(b)\|^p_p\le C$ and $\|\xi_p(b)-\xi_p(\bar a)\|_p\ge \eps$, we have
@@ -394,15 +396,13 @@ a^{-1}+(1-t)b^{-1}$ for $t\in (0,1)$ and Lemma \ref{lemma:order1}. It follows th
 %-\Big\|\frac12(\eta_r(a)+\eta_r(b))\Big\|_r^r\biggr]\Biggr\}.\end{multlined}
 \end{align*}
 Since $p,r\ge 1$, both terms in brackets
-{\color{red}[I have changed parentheses $(,)$ into bracket $[,]$ in the above expression.]}
-in the last expression above are nonnegative. Assume now that $p>1$. 
 Let $\bar a\in \Me^{++}$ be the minimizer as in Lemma \ref{lemma:variational_majorized},
 then $f(\bar a)=Q_{\alpha,z}(\psi\|\varphi)$ and $\nabla f(\bar a)=0$, so that we get
 \begin{align*}
 f(b)-Q_{\alpha,z}(\psi\|\varphi)\ge 2\alpha\biggl[\frac12 \|\xi_p(a)\|_p^p+\frac12 \|\xi_p(b)\|_p^p
 -\Big\|\frac12(\xi_p(a)+\xi_p(b))\Big\|_p^p\biggr].
 \end{align*}
-Since $L_p(\Me)$ is uniformly convex, note (see, e.g., \cite[Thmeorem 3.7.7]{zalinescu2002convex})
+Since $L_p(\Me)$ is uniformly convex, note (see, e.g., \cite[Theorem 3.7.7]{zalinescu2002convex})
 that the function $h\mapsto \|h\|_p^p$ is uniformly convex on each bounded subset of $L_p(\Me)$.
 Hence for each $C>0$ and $\varepsilon>0$ there is some $\delta>0$ such that for every $h,k$
 with $\|h\|_p^p,\|k\|_p^p\le C$ and $\|h-k\|_p\ge \varepsilon$, we have
@@ -413,10 +413,10 @@ with $\|h\|_p^p,\|k\|_p^p\le C$ and $\|h-k\|_p\ge \varepsilon$, we have
 \end{proof}
 
 
-\section{Data processing inequality and reversibility of channels}
+\section{Data processing inequality and \textcolor{orange}{martingale convergence}}
 
 Let  $\gamma: \Ne\to \Me$ be a normal positive unital map. Then the  predual of $\gamma$  defines a 
-positive linear map $\gamma_*: L_1(\Me)\to L_1(\Ne)$ that preserves the {\color{red}$\Tr$-functional,}
+positive linear map $\gamma_*: L_1(\Me)\to L_1(\Ne)$ that preserves the {$\Tr$-functional,}
 acting as
 \[
 L_1(\Me)\ni h_\rho\mapsto h_{\rho\circ\gamma} \in L_1(\Ne).
@@ -429,30 +429,30 @@ $s(\rho\circ\gamma)\le s(\gamma)$, with equality if $\rho$ is faithful.
 It follows that $\gamma_*$ maps $L_1(\Me)$ to $s(\gamma)L_1(\Ne)s(\gamma)\equiv
 L_1(s(\gamma)\Ne s(\gamma))$.  For any $\rho\in \Me_+^*$, $\rho\ne 0$, the map
 \[
-\gamma_0: {\color{red}s(\rho\circ\gamma)\Ne s(\rho\circ\gamma)}\to s(\rho)\Me s(\rho),
+\gamma_0: {s(\rho\circ\gamma)\Ne s(\rho\circ\gamma)}\to s(\rho)\Me s(\rho),
 \qquad a\mapsto s(\rho) \gamma(a)s(\rho)
 \]
-is a faithful normal positive unital {\color{red}(i.e., $\gamma_0(\rho\circ\gamma)=s(\rho)$)} map;
-{\color{red}see \cite[Remark 6.7]{hiai2021lectures}.} Moreover, for any $\ffi\in \Me_*^+$ such that
+is a faithful normal positive unital {(i.e., $\gamma_0(\rho\circ\gamma)=s(\rho)$)} map;
+{see \cite[Remark 6.7]{hiai2021lectures}.} Moreover, for any $\ffi\in \Me_*^+$ such that
 $s(\ffi)\le s(\rho)$, we have for any $a\in \Ne$,
 \[
-\ffi(\gamma_0(s(\gamma)as(\gamma)))=\ffi(s(\rho)\gamma(a)s(\rho))={\color{red}\ffi(\gamma(a)).}
+\ffi(\gamma_0(s(\gamma)as(\gamma)))=\ffi(s(\rho)\gamma(a)s(\rho))={\ffi(\gamma(a)).}
 \]
 Replacing $\gamma$ by $\gamma_0$ and $\rho$ by the restriction
-{\color{red}$\rho|_{s(\rho\circ\gamma)\Me s(\rho\circ\gamma)}$,} we may  assume that both $\rho$
-and $\rho\circ\gamma$ are faithful, {\color{red}as far as we are concerned with $\ffi\in\Me_*^+$ and
+{$\rho|_{s(\rho\circ\gamma)\Me s(\rho\circ\gamma)}$,} we may  assume that both $\rho$
+and $\rho\circ\gamma$ are faithful, {as far as we are concerned with $\ffi\in\Me_*^+$ and
 $\ffi\circ\gamma\in\Ne_*^+$ with $s(\ffi)\le s(\rho)$.}
 
 The \emph{Petz dual} of $\gamma$ with respect to $\rho\in \Me_*^+$ is a map
-$\gamma_\rho^*:\Me\to \Ne$, introduced in \cite{petz1988sufficiency} {\color{red}when $\rho$ and
+$\gamma_\rho^*:\Me\to \Ne$, introduced in \cite{petz1988sufficiency} {when $\rho$ and
 $\rho\circ\gamma$ are faithful (hence so is $\gamma$ as well).} It was proved that
 $\gamma_\rho^*$ is again normal, positive and unital, and in addition, it is $n$-positive whenever
-$\gamma$ is. More generally, {\color{red}even though none of $\rho$, $\rho\circ\gamma$ and
+$\gamma$ is. More generally, {even though none of $\rho$, $\rho\circ\gamma$ and
 $\gamma$ is faithful, letting $e:=s(\rho)$ and $e_0:=s(\rho\circ\gamma)$,} we may use the restriction
 $\gamma_0$ as mentioned above to define the Petz dual $\gamma^*_\rho: e\Me e\to e_0\Ne e_0$. 
 As explained in \cite{jencova2018renyi}, in this general setting, $\gamma^*_\rho$ is determined by
 the equality
-{\color{red}
+{
 \[
 h_{\rho\circ\gamma}^{1/2}\gamma_\rho^*(a)h_{\rho\circ\gamma}^{1/2}
 =\gamma_*\bigl(h_\rho^{1/2}ah_\rho^{1/2}\bigr),
@@ -464,7 +464,7 @@ equivalently,
 =h_\rho^{1/2}\gamma(b)h_\rho^{1/2},\qquad b\in\Ne^+,
 \end{equation}
 where $\gamma_*$ and $(\gamma^*_\rho)_*$ are the predual maps of $\gamma$ and $\gamma^*_\rho$,
-respectively. [This seems better (?)]}
+respectively.}
 We also have
 \begin{equation}\label{eq:petzdual2}
 \rho\circ\gamma\circ\gamma^*_\rho=\rho,\qquad (\gamma_\rho^*)_{\rho\circ\gamma}^*=\gamma.
@@ -481,21 +481,21 @@ $\cE_{\Ne,\rho}$ is a normal completely positive unital with range in $\Ne$ and 
 
 \subsection{Data processing inequality}
 
-In this {\color{red}subsection} we prove the \emph{data processing inequality} (\emph{DPI}) for
+In this {subsection} we prove the \emph{data processing inequality} (\emph{DPI}) for
 $D_{\alpha,z}$ with respect to normal positive unital maps. For standard R\'enyi divergence, that is,
-for $z=1$, {\color{red}the} DPI is known to hold for $\alpha\in (0,1)\cup (1,2]$ under stronger positivity
+for $z=1$, {the} DPI is known to hold for $\alpha\in (0,1)\cup (1,2]$ under stronger positivity
 assumptions \cite{hiai2018quantum}. In the case of the sandwiched divergences $\tilde D_\alpha$ with
-{\color{red}$\alpha\in[1/2,1)\cup(1,\infty)$,} DPI was proved in \cite{jencova2018renyi,jencova2021renyi};
+{$\alpha\in[1/2,1)\cup(1,\infty)$,} DPI was proved in \cite{jencova2018renyi,jencova2021renyi};
 see also \cite{berta2018renyi} for an alternative proof in the case when the maps are assumed
-completely positive. In the finite-dimensional case, {\color{red}the DPI for $D_{\alpha,z}$ under completely
+completely positive. In the finite-dimensional case, {the DPI for $D_{\alpha,z}$ under completely
 positive maps was proved in \cite{zhang2020fromwyd}, for $\alpha,z$ in the range specified as
 in Theorem \ref{thm:dpi} below.}
 
-{\color{red}The first part of the next lemma was essentially shown in
+{The first part of the next lemma was essentially shown in
 \cite[Proposition 3.12]{jencova2018renyi}, while we give the proof for the convenience of the reader.}
 
 \begin{lemma}\label{lemma:pcontraction} Let $\gamma:\Ne\to \Me$ be a normal positive unital map.
-Let $\rho\in \Me_*^+$, {\color{red}$\rho\ne0$,} $e:=s(\rho)$ and $e_0:=s(\rho\circ\gamma)$. For any
+Let $\rho\in \Me_*^+$, {$\rho\ne0$,} $e:=s(\rho)$ and $e_0:=s(\rho\circ\gamma)$. For any
 $p\ge 1$, the map $\gamma^*_{\rho,p}:L_p(e_0 \Ne e_0)\to L_p(e\Me e)$, determined by
 \begin{align}\label{gamma-rho-p1}
 \gamma^*_{\rho,p}\Bigl(h_{\rho\circ\gamma}^{1\over 2p}bh^{1\over2p}_{\rho\circ\gamma}\Bigr)
@@ -526,7 +526,7 @@ $\gamma^*_{\rho_n,p}(k)\to \gamma^*_{\rho,p}(k)$ in $L_p(\Me)$.
 %Since $\gamma^*_\rho$ is a normal positive unital map, its predual $(\gamma^*_\rho)_*$
 %defines a contraction {\color{red}between Kosaki's symmetric} $L_p$-spaces
 %$L_p(\Ne,\rho\circ\gamma)\to L_p(\Me,\rho)$ (see \eqref{F-C.4} in Appendix \ref{Appen-Kosaki-Lp}),
-{\color{red}
+{
 We use Kosaki's symmetric $L_p$-spaces $L_p(e_0\Ne e_0,\rho\circ\gamma)$ and
 $L_p(e\Me e,\rho)$ (see \eqref{F-C.4} in Appendix \ref{Appen-Kosaki-Lp}). The map
 $(\gamma_\rho^*)_*:L_1(e_0\Ne e_0)\to L_1(e\Me e)$ is contractive
@@ -559,7 +559,7 @@ so that \eqref{gamma-rho-p1} holds.
 %\]
 Since $h_{\rho\circ\gamma}^{1\over 2p}\Ne h^{1\over
 2p}_{\rho\circ\gamma}$ is dense in $L_p(e_0 \Ne e_0)$, this proves the first part of the statement.
-[I have written here slightly in more detail.]}
+}
 
 Let $\rho_n$ be a sequence as required and let $k\in L_p(e_0 \Ne e_0)$. By the
 assumptions on the supports, $\gamma^*_{\rho_n,p}$ is well defined on $k$ for all $n$.
@@ -569,12 +569,12 @@ dense in $L_p(e_0 \Ne e_0)$ and all the maps are contractions.
 Put $k_n:=h_{\rho_n\circ\gamma}^{1\over 2p}b
 h_{\rho_n\circ\gamma}^{1\over 2p}$, then we have
 \[
-\gamma^*_{\rho,p}(k)={\color{red}h_\rho^{1\over2p}\gamma(b)h_\rho^{1\over2p},}\qquad
-\gamma^*_{\rho_n,p}(k_n)= {\color{red}h_{\rho_n}^{1\over2p}\gamma(b)h_{\rho_n}^{1\over2p},}
+\gamma^*_{\rho,p}(k)={h_\rho^{1\over2p}\gamma(b)h_\rho^{1\over2p},}\qquad
+\gamma^*_{\rho_n,p}(k_n)= {h_{\rho_n}^{1\over2p}\gamma(b)h_{\rho_n}^{1\over2p},}
 \]
 and we have $k_n\to k$ in $L_p(\Ne)$ and  $\gamma^*_{\rho_n,p}(k_n)\to
 \gamma^*_{\rho,p}(k)$ in $L_p(\Me)$. Indeed, this follows by the H\"older inequality and continuity
-of the map $L_1(\Me)^+\ni h\mapsto {\color{red}h^{1\over2p}\in L_{2p}(\Me)^+}$; see
+of the map $L_1(\Me)^+\ni h\mapsto {h^{1\over2p}\in L_{2p}(\Me)^+}$; see
 \cite[Lemma 3.4]{kosaki1984applicationsuc}. Therefore
 \[
 \|\gamma^*_{\rho_n,p}(k)-\gamma^*_{\rho,p}(k)\|_p\le
@@ -585,7 +585,7 @@ showing the latter statement.
 
 
 \begin{lemma}\label{lemma:dpi} Let $\gamma:\Ne\to \Me$ be a normal positive unital map, and
-let $\rho\in \Me_*^+$, {\color{red}$\rho\ne0$, and} $b\in \Ne^+$. 
+let $\rho\in \Me_*^+$, {$\rho\ne0$, and} $b\in \Ne^+$. 
 \begin{enumerate}
 \item[(i)]  If $p\in [1/2,1)$, then 
 \[
@@ -597,10 +597,10 @@ let $\rho\in \Me_*^+$, {\color{red}$\rho\ne0$, and} $b\in \Ne^+$.
 \end{enumerate}
 \end{lemma}
 
-\begin{proof} Let us denote $\beta:=\gamma_\rho^*$ and let $\omega\in {\color{red}\Ne_*^+}$ be such
+\begin{proof} Let us denote $\beta:=\gamma_\rho^*$ and let $\omega\in {\Ne_*^+}$ be such
 that 
 $h_\omega:=h_{\rho\circ\gamma}^{\frac12}bh_{\rho\circ\gamma}^{\frac12}\in L_1(\Ne)^+$. Then
-$\beta$ is a normal positive unital map, and {\color{red}by \eqref{eq:petzdual}} we have
+$\beta$ is a normal positive unital map, and {by \eqref{eq:petzdual}} we have
 \[
 \beta_*(h_\omega)=h_\rho^{\frac12}\gamma(b)h_\rho^{\frac12},\qquad
 \beta_*(h_{\rho\circ\gamma})=h_\rho.
@@ -675,13 +675,14 @@ $b\in \Ne^+$, we get the desired inequality.
 \subsection{Martingale convergence}
 
 An important consequence of DPI is the martingale convergence property that will be
-proved in this {\color{red}subsection. Here assume that $\cM$ is a $\sigma$-finite von Neumann algebra.}
+proved in this {subsection. Here assume that $\cM$ is a $\sigma$-finite von Neumann algebra.}
 
 \begin{theorem}\label{thm:martingale}
 Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$, and let $\{\cM_i\}$ be an increasing net of von Neumann
 subalgebras of $\cM$ containing the unit of $\cM$ such that $\cM=\bigl(\bigcup_i\cM_i\bigr)''$.
-Assume that $\alpha$ and $z$ satisfy the DPI bounds (that is, conditions (i) or (ii)
-{\color{red}["condition" is correct grammatically? If then, "bounds" $\to$ "bound"?]}
+Assume that $\alpha$ and $z$ satisfy the DPI bounds (that is, condition (i) or (ii)
+{\color{orange}[I think you are right, "condition" is better. But there are several inequalities in both
+(i) and (ii), so I would leave "bounds"]}
 in Theorem \ref{thm:dpi}). Then we have
 \begin{align}\label{eq:martingale}
 D_{\alpha,z}(\psi\|\ffi)=\lim_iD_{\alpha,z}(\psi|_{\cM_i}\|\ffi|_{\cM_i})
@@ -728,7 +729,7 @@ D_{\alpha,z}(\psi_i\|\varphi)\le \sup_i D_{\alpha,z}(\psi_i\|\ffi).
 \]
 \end{proof}
 
-{\color{red}[I like to add:]
+{
 The following proposition is another martingale type convergence, which is not included in
 Theorem \ref{thm:martingale} since $e_i\Me e_i$'s do not contain the unit of $\Me$.
 
@@ -784,7 +785,7 @@ if there exists a channel $\beta:\Me\to \Ne$ such that
 The notion of sufficient channels was introduced by Petz
 \cite{petz1986sufficient,petz1988sufficiency}, who also obtained a number of conditions
 characterizing this situation. It particular, it was proved in \cite{petz1988sufficiency}
-that sufficient channels can be characterized by equality in {\color{red}the} DPI for the relative entropy
+that sufficient channels can be characterized by equality in {the} DPI for the relative entropy
 $D(\psi\|\varphi)$: if $D(\psi\|\varphi)<\infty$, then a channel $\gamma$ is sufficient
 with respect to $\{\psi,\varphi\}$ if and only if 
 \[
@@ -811,14 +812,13 @@ respect to $\{\psi,\varphi\}$ if and only if also $\psi\circ\mathcal E=\psi$.
 \end{itemize}
 \end{prop}
 
-Note {\color{red}(see \cite[Theorem 2]{petz1988sufficiency} and the proof of
+Note {(see \cite[Theorem 2]{petz1988sufficiency} and the proof of
 \cite[Theorem 3]{petz1988sufficiency})}
 that the range of the conditional expectation $\mathcal E$ in statement (ii) above is the set of
 fixed points of the channel $\gamma\circ\gamma_\varphi^*$.
-{\color{red}[I write references in detail, since statement (ii) is implicit in \cite{petz1988sufficiency}.]}
 
 
-Our aim in this section is to prove that equality in {\color{red}the} DPI for $D_{\alpha,z}$ with 
+Our aim in this section is to prove that equality in {the} DPI for $D_{\alpha,z}$ with 
 values of the parameters (strictly) contained in the DPI bounds of Theorem \ref{thm:dpi}
 characterizes sufficiency of channels. Throughout this section, we use the
 notations $\psi_0:=\psi\circ\gamma$ and $\ffi_0:=\ffi\circ\gamma$. We also denote
@@ -829,7 +829,7 @@ p:=\frac{z}{\alpha},\qquad r:=\frac{z}{1-\alpha},\qquad q:=-r=\frac{z}{\alpha-1}
 
 \subsection{The case $\alpha\in (0,1)$}
 
-Here we study equality in {\color{red}the} DPI for $D_{\alpha,z}$ with $\alpha\in (0,1)$,  for a pair of positive
+Here we study equality in {the} DPI for $D_{\alpha,z}$ with $\alpha\in (0,1)$,  for a pair of positive
 normal functionals $\psi,\ffi\in \Me_*^+$ and a normal positive unital map $\gamma:\Ne\to \Me$. We first
 prove some equality conditions  in the case $\psi\sim \ffi$. 
 
@@ -858,8 +858,8 @@ $\Big\|h_\ffi^{1\over2r}\gamma(\bar a_0^{-1})h_\ffi^{1\over2r}\Big\|_{r}
 
 
 \begin{proof}
-{\color{red}Since $\psi\sim\ffi$ by assumption and hence $\psi_0\sim \ffi_0$, we have
-$s(\psi)=s(\ffi)$ and $s(\psi_0)=s(\ffi_0)$.} Using restrictions {\color{red}explained in the beginning
+{Since $\psi\sim\ffi$ by assumption and hence $\psi_0\sim \ffi_0$, we have
+$s(\psi)=s(\ffi)$ and $s(\psi_0)=s(\ffi_0)$.} Using restrictions {explained in the beginning
 of Sec.~2}, we may assume that all $\psi,\ffi,\psi_0,\ffi_0$ are faithful.
 
 (i)$\implies$(ii) \& (iv).\enspace
@@ -921,14 +921,14 @@ Q_{\alpha,z}(\psi\|\ffi)
 
 \begin{remark}\label{rem:conditions} Note that the above conditions extend the results
 obtained in \cite{leditzky2017data} and \cite{zhang2020equality} in the finite-dimensional case.
-Indeed, the {\color{red}first} condition in (ii) with $\alpha=z$ is equivalent to the condition in
-\cite[Theorem 1]{leditzky2017data}, {\color{red}as seen from \eqref{eq:minimizer2}.}
-{\color{red}[Better to mention that \cite[Theorem 1]{leditzky2017data} was shown when
-$s(\psi)\le s(\ffi)$, while $\psi\sim\ffi$ is assumed in the above proposition.]}
-Note here that in this case the second condition in (ii) is automatic. {\color{red}[Is this directly
-checked? Or, do you mean this is a consequence of the above proposition?]}
+Indeed,  {\color{orange} as seen from \eqref{eq:minimizer2}, the first condition in (ii) with $\alpha=z$ is 
+equivalent to the condition in \cite[Theorem 1]{leditzky2017data} (obtained under the more
+general assumption that $s(\psi)\le s(\ffi)$). Since $p=1$ in this case and 
+$\Big\|h_\psi^{1\over2}\gamma(a_0)h_\psi^{1\over2}\Big\|_{1}=\Tr
+\bigl(\gamma(\alpha_0)h_\psi\bigr)=\Big\|h_{\psi_0}^{1\over2}a_0h_{\psi_0}^{1\over2}\Big\|_{1}$
+for any $a_0\in \Ne$, the second condition in (ii) is automatic.}
 Moreover, (ii) extends the necessary condition in \cite[Theorem 1.2(2)]{zhang2020equality}
-to a necessary and sufficient one. While in both {\color{red}of} these works $\gamma$ was required
+to a necessary and sufficient one. While in both {of} these works $\gamma$ was required
 to be completely positive, only positivity is enough for our result. 
 \end{remark}
 
@@ -952,7 +952,7 @@ $Q_{\alpha,z}(\psi\|\varphi)=Q_{1-\alpha,z}(\varphi\|\psi)$. As before, we may a
 both $\psi$ and $\psi_0$ are faithful.
 
 The strategy of the proof is to use known results in \cite{jencova2018renyi} for the sandwiched
-R\'enyi divergence $D_{p,p}$ with $p>1$. For this, {\color{red}let $\mu,\omega\in\Me_*^+$ be such that
+R\'enyi divergence $D_{p,p}$ with $p>1$. For this, {let $\mu,\omega\in\Me_*^+$ be such that
 \[
 h_{\mu}=\Big|h_{\ffi}^{1\over 2r}h_{\psi}^{1\over 2p}\Big|^{2z},\qquad
 h_\omega=h_\psi^{p-1\over 2p}h_\mu^{\frac1p}h_\psi^{p-1\over 2p},
@@ -972,17 +972,17 @@ We then apply Proposition \ref{prop:universal} and the properties of the extensi
 conditional expectation $\cE$ to the Haagerup $L_p$-spaces proved in
 \cite{junge2003noncommutative}. 
 
-Let us remark here that if $\psi\sim \ffi$, {\color{red}it follows from \eqref{eq:minimizer1} that}
+Let us remark here that if $\psi\sim \ffi$, {it follows from \eqref{eq:minimizer1} that}
 $h_\omega=h_\psi^{\frac12}\bar ah_\psi^{\frac12}$ and
-$h_{\omega_0}=h_{\psi_0}^{\frac12}\bar a_0h_{\psi_0}^{\frac12}$. Hence from {\color{red}\eqref{eq:petzdual}
+$h_{\omega_0}=h_{\psi_0}^{\frac12}\bar a_0h_{\psi_0}^{\frac12}$. Hence from {\eqref{eq:petzdual}
 and condition (ii)} in Proposition \ref{prop:DPI_equality}, we immediately have
 \[
 (\gamma^*_{\psi})_*(h_{\omega_0})=h_\psi^{\frac12}\gamma(\bar
 a_0)h_\psi^{\frac12}=h_\omega,\quad
-{\color{red}\mbox{i.e.},\quad\omega_0\circ\gamma_\psi^*=\omega,}
+{\mbox{i.e.},\quad\omega_0\circ\gamma_\psi^*=\omega,}
 \]
-{\color{red}as well as $\psi_0\circ\gamma_\psi^*=\psi$ by \eqref{eq:petzdual2}.}
-These and \eqref{eq:sandwiched} {\color{red}show} that $\gamma^*_\psi$ is sufficient with respect to
+{as well as $\psi_0\circ\gamma_\psi^*=\psi$ by \eqref{eq:petzdual2}.}
+These and \eqref{eq:sandwiched} {show} that $\gamma^*_\psi$ is sufficient with respect to
 $\{\omega_0,\psi_0\}$. By Proposition \ref{prop:universal} and the fact that the
 Petz dual  $(\gamma_\psi^*)_{\psi_0}^*$ is $\gamma$ itself, this implies the desired
 equality
@@ -992,9 +992,9 @@ equality
 
 In the case $\psi\not\sim \ffi$ some more work is required. Let $\psi_n:=\psi+\frac1n \ffi$ and
 $\ffi_n:=\ffi+\frac1n \psi$. Then all $\psi_n$, $\ffi_n$ are faithful,  $\psi_n\to \psi$, $\ffi_n\to \ffi$ in
-$\Me_*^+$, {\color{red}and} moreover,  $\psi_n\sim \ffi_n$ for all $n$. Then
+$\Me_*^+$, {and} moreover,  $\psi_n\sim \ffi_n$ for all $n$. Then
 $\psi_n\circ\gamma\sim \ffi_n\circ\gamma$, $\psi_n\circ\gamma\to \psi_0$,
-$\ffi_n \circ \gamma\to \ffi_0$ and by joint continuity of $Q_{\alpha,z}$ {\color{red}in the norm}
+$\ffi_n \circ \gamma\to \ffi_0$ and by joint continuity of $Q_{\alpha,z}$ {in the norm}
 (\cite[Theorem 1(iv)]{kato2023onrenyi}), we have
 \[
 \lim_n
@@ -1002,10 +1002,10 @@ Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)=Q_{\alpha,z}(\psi_0\|\ffi_0)
 =Q_{\alpha,z}(\psi\|\ffi)=\lim_nQ_{\alpha,z}(\psi_n\|\ffi_n).
 \]
 Let $\bar b_{n}\in \Ne^{++}$ be the minimizer for the variational expression for
-$Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)$ {\color{red}given in \eqref{F-1.1}.}
+$Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)$ {given in \eqref{F-1.1}.}
 Let also $\bar a_n$ be the minimizer for $Q_{\alpha,z}(\psi_n\|\ffi_n)$, and let
 $f_n:\Me^{++}\to \mathbb R^+$ be the function minimized in the expression for
-$Q_{\alpha,z}(\psi_n\|\ffi_n)$ {\color{red}(see \eqref{func-variational}).} We then have 
+$Q_{\alpha,z}(\psi_n\|\ffi_n)$ {(see \eqref{func-variational}).} We then have 
 \begin{align*}
 Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)-f_n(\gamma(\bar
 b_{n}))&=\alpha\left(\Big\|h_{\psi_n\circ\gamma}^{\frac1{2p}}\bar b_{n}
@@ -1047,7 +1047,11 @@ $f_n(\gamma(\bar b_{n}))-Q_{\alpha,z}(\psi_n\|\ffi_n)\to0$.
 h_{\psi_n\circ\gamma}^{\frac 1{2p}}\Big\|_p^p
 \le{1\over\alpha}\sup_nD_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)<\infty.
 \]}
-Therefore, {\color{red}since
+\textcolor{orange}{[I think we just have
+$=\sup_nQ_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)<\infty$ after the first
+inequality (?)]}
+
+Therefore, {since
 $\big\|h_{\psi_n}^{\frac 1{2p}}\gamma(\bar b_{n})h_{\psi_n}^{1\over 2p}-h_{\mu_n}^{\frac1p}\big\|_p$
 means $\|\xi_p(\gamma(\bar b_n))-\xi_p(\bar a_n)\|_p$ defined for $\psi_n$ (in place of $\psi$),
 it follows} from Lemma \ref{lemma:variational_majorized2} that 
@@ -1078,11 +1082,11 @@ It follows from \eqref{gamma-rho-p2} that
 h_{\psi}^{\frac{p-1}{2p}}\gamma^*_{\psi,p}(h_{\mu_0}^{\frac1p})h_{\psi}^{\frac{p-1}{2p}}=
 h_{\psi}^{\frac{p-1}{2p}}h_\mu^{\frac1p}h_{\psi}^{\frac{p-1}{2p}}=h_\omega.
 \]
-As we have seen {\color{red}in the case $\psi\sim \ffi$ above,} this and \eqref{eq:sandwiched} imply that
+As we have seen {in the case $\psi\sim \ffi$ above,} this and \eqref{eq:sandwiched} imply that
 \[
 \omega\circ\gamma= \omega_0\circ \gamma_\psi^*\circ\gamma=\omega_0.
 \]
-{\color{red}Therefore, we have shown that $\gamma$ is sufficient with respect to $\{\omega,\psi\}$.}
+{Therefore, we have shown that $\gamma$ is sufficient with respect to $\{\omega,\psi\}$.}
 
 Next, let $\mathcal E$ be the faithful  normal conditional expectation onto the
 set of fixed points of $\gamma\circ\gamma^*_\psi$ (see a note after Proposition \ref{prop:universal}). Then
@@ -1095,7 +1099,7 @@ E_*(h_\omega)=h_\psi^{p-1\over 2p}\cE_p\bigl(h_\mu^{\frac1p}\bigr)h_\psi^{p-1\ov
 so that $\big|h_\ffi^{1\over 2r}h_\psi^{1\over 2p}\big|^{2\alpha}= h_\mu^{\frac1p}\in
 L_p(\cE(\Me))$ and consequently $\big|h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}\big|=h_\mu^{1\over
 2z}\in L_{2z}(\mathcal E(\Me))^+$. By the assumption $2z>1$ note that we may use the
-{\color{red}bimodule property} of the extension of $\mathcal E$; {\color{red}see
+{bimodule property} of the extension of $\mathcal E$; {see
 \cite[Proposition 2.3(ii)]{junge2003noncommutative}.}
 Let  $h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}=u\big|h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}\big|$ be the
 polar decomposition in $L_{2z}(\Me)$; then we have 
@@ -1106,12 +1110,12 @@ E_{2r}\bigl(u^*h_\varphi^{\frac1{2r}}\bigr)h_\psi^{\frac1{2p}},
 \]
 which implies that $u^*h_\varphi^{\frac1{2r}}\in L_{2r}(\cE(\Me))$. Since $\psi$ is
 faithful, we have
-{\color{red}
+{
 \[
-\ker\bigl(h_\ffi^{1\over2r}h_\psi^{1\over2p}\bigr)=\ker\bigl(h_\psi^{1\over2p}h_\ffi^{1\over2r}\bigr)
+\textcolor{orange}{\ker\bigl((h_\ffi^{1\over2r}h_\psi^{1\over2p})^*\bigr)}=\ker\bigl(h_\psi^{1\over2p}h_\ffi^{1\over2r}\bigr)
 =\ker h_\ffi^{1\over2r}=\ker h_\ffi,
 \]
-which implies that $uu^*=s(\ffi)$. [This seems more transparent.]}
+which implies that $uu^*=s(\ffi)$.}
 Hence by uniqueness of the polar decomposition in $L_{2r}(\Me)$ and $L_{2r}(\cE(\Me))$,
 we obtain that $h_\ffi^{1\over 2r}\in L_{2r}(\cE(\Me))^+$ and $u\in \cE(\Me)$. 
 Therefore, we must have $h_\ffi\in L_1(\cE(\Me))$, so that $\ffi\circ\mathcal E=\ffi$ and $\gamma$ is
@@ -1122,8 +1126,8 @@ sufficient with respect to $\{\psi,\varphi\}$ by Proposition \ref{prop:universal
 \subsection{The case $\alpha>1$}
 
 We now turn to the case $\alpha>1$. %We will put $p:=\frac z\alpha$ and $q:=\frac z{\alpha-1}$,
-Then within the DPI bounds{\color{red}[bound (?)]}, we have $p:=\frac z\alpha\in [1/2,1]$ and
-$q:=\frac z{\alpha-1}\ge 1$, and we note that we always have $p<q$. Here we need to assume that
+Then within the DPI bounds, we have $p=\frac z\alpha\in [1/2,1]$ and
+$q=\frac z{\alpha-1}\ge 1$, and we note that we always have $p<q$. Here we need to assume that
 $D_{\alpha,z}(\psi\|\ffi)<\infty$, so that by Lemma \ref{lemma:renyi_2z} there is some
 (unique) $y\in L_{2z}(\Me)$ such that
 \[
@@ -1134,7 +1138,7 @@ By the proof of Theorem \ref{thm:variational}, we have the following variational
 Q_{\alpha,z}(\psi\|\varphi) =\sup_{w\in
 L_q(\Me)^+}\bigl\{\alpha\Tr\bigl((ywy^*)^p\bigr)-(\alpha-1)\Tr\bigl(w^q\bigr)\bigr\}.
 \end{align}
-{\color{red}Indeed, we note that $x$ in the proof of Theorem \ref{thm:variational} is $y^*y$ and
+{Indeed, we note that $x$ in the proof of Theorem \ref{thm:variational} is $y^*y$ and
 $\Tr\bigl((x^{1\over2}wx^{1\over2})^p\bigr)$ in expression \eqref{F-1.3} is rewritten as
 $\Tr\bigl((|y|w|y|)^p\bigr)=\Tr\bigl((ywy^*)^p\bigr)$.}
 The supremum is attained at a unique point $\bar
@@ -1154,7 +1158,7 @@ $\ffi_0$ are faithful.
 \begin{lemma}\label{lemma:le} Let $\gamma:\Ne\to\Me$ be a normal positive unital map. 
 Let $\gamma^*_{\ffi,q}:L_q(\Ne)\to L_q(\Me)$ be the contraction as in lemma \ref{lemma:pcontraction}. 
 Let $\bar w:=(y^*y)^{\alpha-1}\in L_q(\Me)$ and $\bar w_0:=(y_0^*y_0)^{\alpha-1}\in
-L_q(\Ne)$. Then equality in {\color{red}the DPI for $D_{\alpha,z}(\psi\|\ffi)$} holds if and only if
+L_q(\Ne)$. Then equality in {the DPI for $D_{\alpha,z}(\psi\|\ffi)$} holds if and only if
 \begin{equation}\label{eq:dpiw}
 \bar w=\gamma^*_{\ffi,q}(\bar w_0)\quad \text{and}\quad  
 \Tr\bigl(\bar w_0^q\bigr)=\Tr\bigl(\gamma^*_{\varphi,q}(\bar w_0)^q\bigr).
@@ -1192,7 +1196,7 @@ w_0^q\bigr)=Q_{\alpha,z}(\psi_0\|\varphi_0).
 Supose that $Q_{\alpha,z}(\psi_0\|\varphi_0)=Q_{\alpha,z}(\psi\|\varphi)$, then both the
 inequalities must be equalities. Since $\bar
 w\in L_q(\Me)^+$ and $\bar w_0\in L_q(\Ne)^+$ are the unique elements such that the suprema
-in the {\color{red}respective} variational expressions in \eqref{eq:variationalq} for
+in the {respective} variational expressions in \eqref{eq:variationalq} for
 $Q_{\alpha,z}(\psi\|\varphi)$ and $Q_{\alpha,z}(\psi_0\|\varphi_0)$ are attained, this proves
 \eqref{eq:dpiw}. Conversely, if the equalities in \eqref{eq:dpiw} hold, then
 \[
@@ -1212,25 +1216,26 @@ $\gamma$ is sufficient with respect to $\{\psi,\ffi\}$.
 
 \begin{proof} Let $\bar w$ and $\bar w_0$ be as in Lemma \ref{lemma:le}. Let $\omega\in
 \Me_*^+$ and $\omega_0\in \Ne_*^+$ be such that
-{\color{red}\[
+{\[
 h_\omega=h_\ffi^{\frac{q-1}{2q}}\bar wh_\ffi^{\frac{q-1}{2q}},\qquad
 h_{\omega_0}=h_{\ffi_0}^{\frac{q-1}{2q}}\bar w_0h_{\ffi_0}^{\frac{q-1}{2q}}.
 \]}
  Assume that the equality in DPI holds; then by Lemma
 \ref{lemma:le} we have
 \[
-Q_{\alpha,z}(\omega_0\|\varphi_0)=\Tr\bigl(\bar w_0^q\bigr)=\Tr\bigl(\bar
-w^q\bigr)=Q_{\alpha,z}(\omega\|\varphi).
+\textcolor{orange}{Q_{q,q}}(\omega_0\|\varphi_0)=\Tr\bigl(\bar w_0^q\bigr)=\Tr\bigl(\bar
+w^q\bigr)=
+\textcolor{orange}{Q_{q,q}}(\omega\|\varphi).
 \]
 and using also Lemma \ref{lemma:pcontraction}, we have
 \[
 (\gamma^*_\ffi)_*(h_{\omega_0})=h_\ffi^{\frac1{2\alpha}}\gamma^*_{\ffi,q}(\bar
 w_0)h_\ffi^{\frac1{2\alpha}}=h_\omega.
 \]
-Similarly as in the proof of {\color{red}Theorem \ref{thm:suffle1},} this shows that $\gamma$ is sufficient
+Similarly as in the proof of {Theorem \ref{thm:suffle1},} this shows that $\gamma$ is sufficient
 with respect to $\{\omega,\ffi\}$. Hence $\omega\circ \cE=\omega$, where $\cE$ is the
 conditional expectation onto the fixed points of $\gamma\circ\gamma^*_\ffi$.  Using the
-extensions of $\cE$ and their properties {\color{red}in \cite{junge2003noncommutative}, we have}
+extensions of $\cE$ and their properties {in \cite{junge2003noncommutative}, we have}
 \[
 h_\varphi^{q-1\over2q}\bar
 wh_\varphi^{q-1\over 2q}=h_\omega=\cE(h_\omega)=h_\varphi^{q-1\over 2q}\cE(\bar
@@ -1854,8 +1859,8 @@ Assume that $Q_{\alpha,z}(\psi\|\ffi)=0$ for some $z>0$ and $\alpha\in(0,1)$. Th
 $h_\psi^{\alpha/2z}h_\ffi^{(1-\alpha)/2z}=0$ as a $\tau$-measurable operator affiliated with
 $\Ne:=\Me\rtimes_\sigma\bR$ \textcolor{orange}{that is a semi-finite von Neumann algebra with the canonical semi-finite
 trace $\tau$, where $\sigma_t$ is the modular automorphism group associated with some faithful normal
-state (or weight) - maybe skip this and just give a reference to Appendix
-\ref{app:lp}}. Since $s(\psi)=s(h_\psi^{\alpha/2z})$ and $s(\ffi)=s(h_\ffi^{(1-\alpha)/2z})$, it is easy to
+state (or weight). [Maybe skip this and just give a reference to Appendix
+\ref{app:lp}]} Since $s(\psi)=s(h_\psi^{\alpha/2z})$ and $s(\ffi)=s(h_\ffi^{(1-\alpha)/2z})$, it is easy to
 see that $s(\psi)\perp s(\ffi)$. Hence the first assertion follows.
 
 Next, since $p>0\mapsto a^p\in\widetilde\Ne$ is differentiable in the measure topology for any
@@ -1875,8 +1880,8 @@ Then by Lemma \ref{L-5.4}, $Q_{\alpha,z}(\psi\|\ffi)\in(0,\infty)$ for all $\alp
 $\alpha\mapsto Q_{\alpha,z}(\psi\|\ffi)$ is continuous on $(0,1)$. Hence $\alpha\mapsto D_{\alpha,z}(\psi\|\ffi)$
 is continuous on $(0,1)$ too.
 
-\textcolor{orange}{I noticed that we use both $L_p$ and $L^p$ for the Lp spaces, we
-should settle on lower or upper index, I don't know which is better.}
+\textcolor{orange}{[I noticed that we use both $L_p$ and $L^p$ for the Lp spaces, we
+should settle on lower or upper index, I don't know which is better.]}
 Let $\alpha_1,\alpha_2\in(0,1)$ and $z>0$. Let $(\Ne,\tau)$ be as in the proof of Lemma \ref{L-5.4}. Consider
 $a_j:=h_\psi^{\alpha_j/z}$ and $b_j:=h_\ffi^{(1-\alpha_j)/z}$ in $\widetilde\Ne_+$. Since
 $a_j\in L^{z/\alpha_j}(\Me)$, we note by \cite[Lemma 4.8]{fack1986generalized} that
@@ -1924,12 +1929,13 @@ formula of $D_{\alpha,z}$ in Definition \ref{defi:renyi}.\qed
 
 \subsubsection{The second proof when $z>1/2$}\label{Sec-5.1.2}
 
-\textcolor{orange}{Maybe we could skip this part, since the result is weaker (restricted
-to $z>1/2$) and the ''real analysis'' proof of 4.1.1 seems much more interesting to me.} 
+\textcolor{orange}{[Maybe we could skip this part, since the result is weaker (restricted
+to $z>1/2$) and the real analysis proof of 5.1.1 seems much more interesting to
+me.]} 
 
 Assume that $z>1/2$ and let $p:=2z$ and $q:={2z\over2z-1}$ so that $1/p+1/q=1$.
 \textcolor{orange}{We may clearly restrict to the support $s(\psi+\ffi)=s(\psi)\vee
-s(\ffi)$, so that we may assume that $\psi+\ffi$ is faithful.} Let
+s(\ffi)$, so that we may assume that $\psi+\ffi$ is faithful and $\Me$ is $\sigma$-finite.} Let
 $\rho,\sigma\in\Me_*^+$ be such that $s(\rho)=\1-s(\psi)$ and $s(\sigma)=\1-s(\ffi)$. Put
 $\psi_0:=\psi+\rho$ and $\ffi_0:=\ffi+\sigma$, which are faithful elements in $\Me_*^+$. Below, for each
 $p\in(1,\infty)$ and $\eta\in(0,1)$, we use for simplicity the notations
@@ -1981,11 +1987,13 @@ From \eqref{F-5.11} and \eqref{F-5.8} (for $\eta,\eta_1,\eta_2$) we have \eqref{
 shown. Moreover, (1) immediately implies (2) as in the last part of the first proof of Theorem \ref{T-5.1}.
 {\color{red}[I don't see how to modify Remark 2 in your notes (Jan.\ 10, 2024) in the case $\alpha<1$. On
 the other hand, (2) is immediate from (1) in this case, as in the last part of the first proof of Th.~\ref{T-5.1}.]}
+{\color{orange} [I think the proof is fine as it is.]}
 \qed
 
 \bigskip
 Next we turn to the case $1/2<z<1$. Here we will need a bit more of the complex interpolation method.
-Let us denote $\Sigma=\Sigma(L_{p,L},L_{p,R}):=L_{p,L}+L_{p,R}$, and let $\cF'(L_{p,L},L_{p,R})$ be
+Let us denote $\Sigma=\Sigma(L_{p,L},L_{p,R}):=L_{p,L}+L_{p,R}$, and let
+\textcolor{orange}{$\tilde \cF(L_{p,L},L_{p,R})$} be
 the set of functions $f:S:=\{w\in\bC:0\le\Re w\le1\}\to\Sigma$ satisfying
 \begin{itemize}
 \item[(i)] $f$ is bounded, continuous on $S$ and analytic in the interior of $S$ (with respect to the norm
@@ -1997,7 +2005,16 @@ and
 \max\biggl\{\sup_{t\in\bR}\|f(it)\|_{L_{p,L}},\sup_{t\in\bR}\|f(1+it)\|_{L_{p,R}}\biggr\}<\infty.
 \]
 \end{itemize}
-(See \cite[Definition 1.4]{kosaki1984applications}.)
+%(See \cite[Definition 1.4]{kosaki1984applications}.)
+\textcolor{orange}{[In fact, the space
+$\tilde \cF$ is not the same as in \cite[Definition 1.4]{kosaki1984applications} (that is
+why I suggest to change the notation from $\cF'$), since we also
+require in (iii) that the maps are continuous. I am not sure that we can use the spaces of
+Def. 1.4 for the interpolation here (that is, Theorem 1.5 in
+\cite{kosaki1984applications}). The above space $\tilde \cF$ gives an equivalent definition of
+the interpolation space as Def. 1.1 in \cite{kosaki1984applications} (this is easily seen
+considering functions of the form $e^{\delta (z-\theta)^2}f(z)$ for $f\in \tilde \cF$ and letting
+$\delta\to 0$.)]}
 
 Consider the function $f:S\to L_1(\Me)$ defined by
 \begin{align}\label{F-5.12}
@@ -2006,7 +2023,7 @@ f(w):=h_\psi^{{w\over q}+{1-w\over p}}h_\ffi^{{1-w\over q}+{w\over p}},\qquad w\
 The next lemma shows that $f$ has values in $\Sigma$.
 
 \begin{lemma}\label{L-5.5}
-We have $f\in\cF'(L_{p,L},L_{p,R})$. Moreover, for each $\eta\in(0,1)$ and $t\in\bR$,
+We have $f\in\textcolor{orange}{\tilde \cF(L_{p,L},L_{p,R})}$. Moreover, for each $\eta\in(0,1)$ and $t\in\bR$,
 $f(\eta+it)\in L_{p,\eta}$ and
 \[
 \|f(\eta+it)\|_{p,\ffi_0,\psi_0,\eta}^p=Q_{1-\eta,z}(\psi\|\ffi).
@@ -2023,7 +2040,8 @@ h_\ffi^{\eta\over p}h_{\ffi_0}^{i({1\over p}-{1\over q})t}\Bigr)h_{\ffi_0}^{1-\e
 \]
 Recall \cite[Lemmas 10.1 and 10.2]{kosaki1984applications} that $h_{\psi_0}^{it}\cdot h_{\ffi_0}^{-it}$
 defines a strongly continuous one-parameter group of isometries on $L_p(\Me)$ for every $p\in[1,\infty)$.
-This implies properties (ii) and (iii) in the definition of $\cF'(L_{p,L},L_{p,R})$. Furthermore, for $\eta\in(0,1)$
+This implies properties (ii) and (iii) in the definition of $\textcolor{orange}{\tilde
+\cF(L_{p,L},L_{p,R})}$. Furthermore, for $\eta\in(0,1)$
 we see that $f(\eta+it)\in L_{p,\eta}$ and
 \[
 \|f(\eta+it)\|_{p,\ffi_0,\psi_0,\eta}^p
@@ -2058,8 +2076,9 @@ the interior of $S$.
 Let $\alpha_1,\alpha_2\in(0,1)$ and for each $\theta\in(0,1)$ let $\alpha:=(1-\theta)\alpha_1+\theta\alpha_2$.
 Put $\eta_j:=1-\alpha_j$, $j=1,2$, so that $\eta:=1-\alpha=(1-\theta)\eta_1+\theta\eta_2$. With the function
 $f$ given in \eqref{F-5.12} define $f_1(w):=f((1-w)\eta_1+w\eta_2)$, which belongs to the set
-$\cF(L_{p,\eta_1},L_{p,\eta_2})$ (see \cite[Definition 1.1]{kosaki1984applications}) by Lemma \ref{L-5.5}
-and \eqref{F-C.6}. Since $L_{p,\eta}=C_\theta(L_{p,\eta_1},L_{p,\eta_2})$ by the iteration theorem, we have
+\textcolor{orange}{$\tilde \cF(L_{p,\eta_1},L_{p,\eta_2})$} %(see \cite[Definition 1.1]{kosaki1984applications}) 
+by Lemma \ref{L-5.5} and \eqref{F-C.6}. Since $L_{p,\eta}=C_\theta(L_{p,\eta_1},L_{p,\eta_2})$ by the
+\textcolor{orange}{reiteration} theorem, we have
 by usual arguments
 \[
 \|f(\eta)\|_{p,\ffi_0,\psi_0,\eta}=\|f_1(\theta)\|_{C_\theta(L_{p,\eta_1},L_{p,\eta_2})}
@@ -2090,7 +2109,8 @@ Let $\psi,\ffi\in\Me_*^+$ and $z>1/2$. Then we have
 \end{theorem}
 
 \begin{proof}
-Assume that $z>1/2$ and let $p$, $q$, $\psi_0$ and $\ffi_0$ be defined in the same way as in the beginning
+Assume that $z>1/2$ and 
+let $p$, $q$, $\psi_0$ and $\ffi_0$ be defined in the same way as in the beginning
 of Sec.~\ref{Sec-5.1.2}. For each $\alpha\in(1,2z]$ put $\eta:={2z-\alpha\over2z-1}\in[0,1)$. Assume that
 $Q_{\alpha,z}(\psi\|\ffi)<\infty$ (hence $s(\psi)\le s(\ffi)$), so that there exists a unique
 $y\in s(\psi)L^p(\Me)s(\ffi)$ such that $h_\psi^{\alpha\over2z}=yh_\ffi^{\alpha-1\over2z}$. Since
@@ -2102,14 +2122,15 @@ we have $h_\psi\in L_{p,\eta}$ and
 \[
 \|h_\psi\|_{p,\psi_0,\ffi_0,\eta}^p=\|y\|_p^p=Q_{\alpha,z}(\psi\|\ffi),
 \]
-where for $\eta-0$ ($\alpha=2z$) the left-hand side is $\|h_\psi\|_{L_{p,L}}^p$. Now let
+where for \textcolor{orange}{$\eta=0$} ($\alpha=2z$) the left-hand side is $\|h_\psi\|_{L_{p,L}}^p$. Now let
 $\alpha_1,\alpha_2\in(1,2z]$ and $\alpha=(1-\theta)\alpha_1+\theta\alpha_2$ for any $\theta\in(0,1)$.
 Put $\eta_j:={2z-\alpha_j\over2z-1}$, $j=1,2$, and $\eta:={2z-\alpha\over2z-1}=(1-\theta)\eta+\theta\eta_1$.
 To show (1), it suffices to prove that \eqref{F-5.9} holds in the present situation. For this, we may assume
 that $Q_{\alpha_j,z}(\psi\|\ffi)<\infty$, $j=1,2$. Then we can use \eqref{F-5.10} similarly to the proof in
 Sec.~\ref{Sec-5.1.2} with $h_\psi$ instead of $h_0$. Hence we have \eqref{F-5.9}, and (1) holds.
 
-As for (2), note that $h_\psi=h_{\psi_0}^{1/q}h_\psi^{1/p}\in K_{p,R}^p$ (see \eqref{F-C.3}) and
+As for (2), note that \textcolor{orange}{$h_\psi=h_{\psi_0}^{1/q}h_\psi^{1/p}\in
+L_{p,R}$} (see \eqref{F-C.3}) and
 $\|h_\psi\|_{L_{p,R}}^p=\|h_\psi^{1/p}\|_p^p=\psi(1)$. Assume that $1<\alpha<\alpha_1\le2z$ and
 $Q_{\alpha_1,z}(\psi\|\ffi)<\infty$, so that $\alpha=(1-\theta)\alpha_1+\theta$ for some $\theta\in(0,1)$.
 Let $\eta:={2z-\alpha\over2z-1}$ and $\eta_1:={2z-\alpha_1\over2z-1}$. Since
@@ -2154,7 +2175,7 @@ D_{\beta,1}(\psi\|\ffi)\le D_{\alpha,z}(\psi\|\ffi)\le D_{\alpha,1}(\psi\|\ffi).
 
 \begin{proof}
 Since the statement is trivial for $z=1$, we may assume that $z\in(0,1)$. The second inequality follows
-from Theorem \ref{T-4.7}(1). For the first inequality, noting that $\beta\in(0,1)$ by assumption and usnig
+from Theorem \ref{T-4.7}(1). For the first inequality, noting that $\beta\in(0,1)$ by assumption and 
 by the H\"older inequality with ${1\over2z}={1-z\over2z}+{1\over2}$, we have
 \begin{align*}
 Q_{\alpha,z}(\psi\|\ffi)&=\Big\|h_\psi^{\alpha\over2z}h_\ffi^{1-\alpha\over2z}\Big\|_{2z}^{2z}
@@ -2203,13 +2224,13 @@ so that $\<a_0,f(1/\alpha)\>=\|f(1/\alpha)\|_{L_{2z,L}}$, where the dual pairing
 and $L_{2z,L}$ is given in \eqref{F-C.5} in Appendix \ref{Appen-Kosaki-Lp} with $p={2z\over2z-1}$.} Then
 the uniform Fr\'echet differentiability of $\|\cdot\|_{2z,L}$ at $1/\alpha$ implies that
 \begin{align}\label{F-5.13}
-\<a_0,f(1/\alpha)\>
+\textcolor{orange}{\<a_0,h\>}
 =\lim_{\alpha'\searrow\1}{\|f(\alpha'/\alpha)\|_{L_{2z,L}}-\|f(1/\alpha)\|_{L_{2z,L}}
 \over{\alpha'-1\over\alpha}}
 \end{align}
 and also
 \begin{align}
-\<a_0,f(1/\alpha)\>
+\textcolor{orange}{\<a_0,h\>}
 &=\lim_{t\to0}{1\over it}\<a_0,f((1/\alpha)+it)-f(1/\alpha)\> \nonumber\\
 &=\psi(\1)^{-{2z-1\over2z}}\lim_{t\to0}{1\over it}\Bigl\<h_\psi^{2z-1\over2z}h_\ffi^{1\over2z},
 h_\psi^{1\over2z}\Bigl(h_{\psi_0}^{{\alpha\over2z}it}h_\ffi^{-{\alpha\over2z}it}-\1\Bigr)

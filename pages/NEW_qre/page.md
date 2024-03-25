@@ -13,6 +13,9 @@ title: "Renyi relative entropy in von Neumann algebras"
 * [February 28](NEW_qre/alphaz-1.pdf) FH    
 * [my current version](NEW_qre/alphaz-2.pdf) AJ    
       * [equality conditions](NEW_qre/alphaz-21.pdf) AJ, some blunder    
+* [March 23](NEW_qre/alphaz-6.pdf) FH    
+* [March 25](NEW_qre/alphaz-7.pdf) AJ
+
 
 
 ### Notes
