@@ -35,13 +35,13 @@ distribution.
 In this part of the thesis, an analogical formula is used to define barycentric R\'enyi
 divergences for pairs or families of quantum states (or positive semidefinite operators). 
 Since there exist many versions of the quantum relative entropy,  a different version  may be used, even for each state,
-so that the obtained class of quantities is quite large.  These quantities inherit some useful properties of the defining relative entropies, such as the scaling property or the data processing inequality. It is also proved that 
+so that the obtained class of quantities is quite large.  These quantities inherit some useful properies of the defining relative entropies, such as the scaling property or the data processing inequality. It is also proved that 
  the previously known quantum versions of the R\'enyi divergences, that is,  the
 $\alpha-z$-divergences, measured or maximal R\'enyi divergences, are not contained in this
 class. 
 
 Another approach, described in Section 4, is axiomatic, based on the fact that the
-elements in the spectrum of certain preordered semirings constructed from relative
+elements in the spectrum of certain ordered semirings constructed from relative
 (sub)majorization of families of probability vectors (or vectors of nonnegative numbers)
 are obtained from R\'enyi divergences.  The importance of the spectrum lies in the fact
 that its elements characterize asymptotic or catalytic majorization in preordered semirings. 
@@ -51,15 +51,15 @@ positive definite operators on a finite dimensional Hilbert space and with preor
 relative submajorization with respect to completely positive trace nonincreasing maps. 
 In the case when all elements in the range of $\sigma$ commute, the spectrum is fully
 characterized in terms of sandwiched R\'enyi divergences with $\alpha>1$, which leads to a
-characterization of asymptotic submajorization and a sufficient condition for catalytic
+characterization of asymptotic submajorization and a sufficient condition for catalityc
 submajorization. In the general
 case, some further elements of the spectrum are constructed by composing the sandwiched
 R\'enyi divergence with a quantum version of the geometric mean, thus obtaining a set of
 necessary conditions.
 
 Applications discussed in the thesis include characterization of the error exponents
-in the strong converse regime in the composite hypothesis testing, equivariant relative
-submajorization and a description of asymptotic transformations of by thermal
+in the strong converse regime in the composite hypotesis testing, equivariant relative
+subjaoriztion and a description of asymptotic transformations of by thermal
 processes, hypothesis testing with group symmetry or with reference frames and  approximate
 joint transformations. 
 
@@ -91,7 +91,7 @@ presentation.
 discusses more material than described in the thesis. Some parts of this paper are
 contained in the thesis  and some are not, as a consequence, some important definitions seem to be
 missing. Some instances are listed below, but it is recommended to check whether there are
-more:
+some more:
 
 \begin{itemize}
 \item a quantum divergence is defined in [MBV23] to be invariant under
@@ -112,7 +112,7 @@ again not defined in the thesis.
 \end{itemize}
 
 
-\item In Sec. 2.2.2, properties of the quantum R\'enyi divergences are often referred to before their
+\item In Sec. 2.2.2, properties of the quantum R\'enyi divergences are often refered to before their
 definition in Section 2.2.4. This is  confusing, especially when it concerns some
 commonly used expressions  like ''nonnegative'', which is not easy to guess  that
 this is actually  some special property to be defined later.  I strongly suggest to rearrange this part. 

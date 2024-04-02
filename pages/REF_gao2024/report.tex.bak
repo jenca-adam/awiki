@@ -27,7 +27,7 @@ a Riemannian metric on the manifold of density matrices of full rank,  which is
 nonincreasing under quantum channels. For a large class of such metrics, called regular in
 the paper, it is shown that preservation of the metric is equivalent to sufficiency of the
 channels for the given parametrized family of states (that is, the channel is reversible
-on this family). The most commonly known quantum
+on thsi family). The most commonly known quantum
 Fisher information, the SLD QFI, does not have this property. The approximate case is also
 treated and recoverability bounds are given in terms of the QFI. Similar questions are studied for the closely related $\chi^2$-divergences.  Some applications to quantum thermodynamics and the resource theory of asymmetry
 are discussed.
@@ -52,15 +52,16 @@ description of the results below.
 
 \medskip
 \noindent
-\textbf{A more detailed description}
+\textbf{A more detailed descripton}
 
 \medskip
 
 The equality case, that is the exact recoverability or sufficiency of a channel, has been
 treated before in the cited paper [Jen12], at least for the $\chi^2$-divergences or
 linearly parametrized families of states. The present paper generalizes this result to
-arbitrary (smoothly) parametrized families of full rank states (Theorem 5.2). The fact
-that the SLD  QFI does not characterize sufficiency of channels was also already suggested in [Jen12]. 
+arbitrary (smoothly) parametrized families of full rank states (Theorem 5.2). The example showing that
+the SLD  QFI does not characterize sufficiency of channels also comes from
+the ideas in [Jen12]. 
 
 The approximate case is more tricky, and seems to be treated for the first time here. In
 Sec. 4, the difference  $\gamma_\rho(A)-\gamma_{\Phi(\rho)}(\Phi(A))$ for a strongly
@@ -75,7 +76,7 @@ Usefulness of the general bound obtained in Lemma 4.4 is not immediately
 clear, but from there  some more practically looking  bounds are obtained in the special
 cases of the BKM (Cor. 4.6) and the $x^\alpha$-metrics (Cor. 4.7). These bounds are far from universal, in fact,
 the only universal bound is found in Sec. 4.2 for the $x^{\frac12}$-metric, which is a nice result.
-It is obtained in a quite different way, and it is not compared to the one coming from
+It is obtained in a quite different way, and it is not compared to the one comming from
 Corollary 4.7 (which is probably quite far from that of Theorem 4.9). Optimality
 questions for  the obtained bounds are not discussed.
 

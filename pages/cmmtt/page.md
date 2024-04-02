@@ -15,6 +15,7 @@ title: Committees - defences, exams, etc.
 
     [thesis](cmmtt/bunth_thesis.pdf)    
     [report](cmmtt/bunth_report.pdf)
+    [final report](cmmtt/gbunth_report_podpis.pdf)
 
 
 

@@ -2,8 +2,6 @@ title: To referee
 ---
 
 
-* Due [28.3. 2024](REF_gao2024)     
-* Due [31.3.2024](cmmtt) (PhD thesis)   
 * Due [4.4.2024](REF_sreekumar2024)    
 * Due [29.4.2024](REF_luczak2023) (revision)    
 
@@ -15,6 +13,8 @@ title: To referee
 1. <del> Due [15.1.2024](REF_karn2023) (revision)</del> Review cancelled.    
 1. <del> Due [22.2.2024](REF_arai2023) (revision)</del> Done.    
 1. <del> Due [15.3.2024](REF_lipka2023) (revision)</del> Done.    
+1. <del> Due [31.3.2024](cmmtt) (PhD thesis)</del> Done.     
+1. <del> Due [28.3. 2024](REF_gao2024)</del> Done.    
 
 
 

@@ -10,6 +10,6 @@ title: Gao et al., sufficiency, 2024
 [file](REF_gao2024/file.pdf)
 
 
-**Decision:** 
+**Decision:** Reject (my decision). Good, but not good enough. 
 
 
