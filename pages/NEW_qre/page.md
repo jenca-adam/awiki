@@ -14,7 +14,8 @@ title: "Renyi relative entropy in von Neumann algebras"
 * [my current version](NEW_qre/alphaz-2.pdf) AJ    
       * [equality conditions](NEW_qre/alphaz-21.pdf) AJ, some blunder    
 * [March 23](NEW_qre/alphaz-6.pdf) FH    
-* [March 25](NEW_qre/alphaz-7.pdf) AJ
+* [March 25](NEW_qre/alphaz-7.pdf) AJ     
+* [March 28](NEW_qre/alphaz-8.pdf) FH    
 
 
 
@@ -81,6 +82,7 @@ title: "Renyi relative entropy in von Neumann algebras"
 Finite dimensional
 
 * [audenaert2015alpha](audenaert2015alpha) introduction of $\alpha-z$-Renyi relative entropies    
+* [carlen2018inequalities](carlen2018inequalities) some dpi bounds
 * [lin2015investigating](lin2015investigating) limit to 1, derivative at 1    
 * [zhang2020fromwyd](zhang2020fromwyd) proof of DPI in bounds       
 * [zhang2020equality](zhang2020equality) some conditions for equality in DPI    
