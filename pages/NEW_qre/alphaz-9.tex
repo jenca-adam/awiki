@@ -109,16 +109,6 @@ monotonicity properties in $\alpha,z$}
 \section{Introduction}
 
 
-%The classical R\'enyi divergences form a one-parameter family of dissimilarity measures on
-%pairs of probability vectors. These quantities and derived information measures are fundamental in information theory. 
-%In an axiomatic approach, it was proved by R\'enyi \cite{renyi} that they form the unique
-%family of such measures satisfying certain properties. For quantum states,
-%however, such uniqueness is no longer true, there are many different possible
-%noncommutative extensions of the R\'enyi divergences with resonable properties and at
-%least two of them have already established their importance through their operational
-%significance.  These are the Petz-type or standard R\'enyi divergences, based on Petz's quasi-entropies
-%\cite{petz,petz} and the sandwiched R\'enyi divergences \cite{...}. ...
-%
 
 The $\alpha-z$-R\'enyi divergences were introduced in \cite{audenaert2015alpha}
 as a two parameter family of quantum generalizations of  the classical R\'enyi
@@ -132,8 +122,8 @@ where $0<\alpha\ne 1$ and $z>0$. This family includes the quantum relative entro
 limit $\alpha\to 1$ and unifies the two most important quantum
 versions of R\'enyi divergences, which have already an established operational
 significance. Namely, the standard or Petz-type R\'enyi divergences,  based on the Petz
-quasi-entropy \cite{petz} are obtained for $z=1$,  whereas $z=\alpha$ gives the sandwiched
-R\'enyi divergences introduced in \cite{,}. These two
+quasi-entropy \cite{petz1985quasi,petz1986quasi} are obtained for $z=1$,  whereas $z=\alpha$ gives the sandwiched
+R\'enyi divergences introduced in \cite{mullerlennert2013onquantum, wilde2014strong}. These two
 quantities have important applications in...
 
 A fundamental property of any information measure is the data processing inequality (DPI), that
@@ -144,12 +134,12 @@ D_{\alpha,z}(\Phi(\rho)\|\Phi(\sigma))\le D_{\alpha,z}(\rho\|\sigma)
 \]
 for any quantum channel $\Phi$ and any pair of states $\rho,\sigma$. This requirement
 leads to a restriction on the values of the parameters. For the Petz-type divergences,
- the convexity theorem of Ando \cite{ando} shows that  $\alpha$ is restricted to the interval
+ the convexity theorem of Ando \cite{ando1979concavity} shows that  $\alpha$ is restricted to the interval
 $(0,1)\cup (1,2]$. The DPI in the sandwiched case holds for $\alpha\in
-[1/2,1)\cup(1,\infty)$, as was proved in  \cite{frank}  and independently in
-\cite{beigi}. The proof in \cite{beigi} was given only for
+[1/2,1)\cup(1,\infty)$, as was proved in  \cite{frank2013monotonicity}  and independently in
+\cite{beigi2013sandwiched}. The proof in \cite{beigi2013sandwiched} was given only for
 the case $\alpha>1$, but is interesting for us, because it utilizes complex interpolation
-methods and, as later observed in \cite{mh}, it shows that DPI holds also for maps that are trace
+methods and, as later observed in \cite{mullerhermes2017monotonicity}, it shows that DPI holds also for maps that are trace
 preserving and positive but not necessarily completely positive. Remarkably, by taking the limit
 $\alpha\searrow 1$, this proves this property also for the relative entropy. 
 
@@ -171,9 +161,11 @@ case, but there is a growing interest in extensions beyond this setting. Von Neu
 algebras form a suitable framework for such extensions, since their are general enough to
 cover many finite or infinite dimensional situations and  there are also strong mathematical
 tools and techniques available to deal with them. Some important quantum divergences were
-already extended to this setting, notably the Araki relative entropy \cite{araki}. The
-quasi-entropies were first introduced for states of von Neumann algebras \cite{petz} and
-studied in detail in \cite{hiai}. The definition of  sandwiched R\'enyi divergences  in
+already extended to this setting, notably the Araki relative entropy
+\cite{araki1976relative}. The
+quasi-entropies were first introduced for states of von Neumann algebras
+\cite{petz1985quasi} and
+studied in detail in \cite{hiai2018quantum}. The definition of  sandwiched R\'enyi divergences  in
 this setting, based on noncommutative $L^p$-spaces,  was
 introduced independently in \cite{berta2018renyi}  using Araki-Masuda $L^p$-spaces and in  \cite{jencova2018renyi,
 jencova2021renyi} using Kosaki $L^p$-spaces. A number of properties of the divergences
@@ -188,19 +180,21 @@ the states in the given set can be recovered by another channel. It is an import
 that this property is characterized by equality in the DPI for relative entropy, as well
 as for the transition probability (which is basically the Petz-type R\'enyi divergence for
 $\alpha=1/2$). This result has been generalized and extended to a large class of
-divergences and other quantities satisfying the DPI \cite{}. In particular, this property
-for the standard R\'enyi divergence was proved in \cite{} in the interval $(0,1)\cup(0,2)$
-and in \cite{jencova2018renyi, jencova2021renyi} for sandwiched version with $\alpha\in
-(1/2,1)\cup(1,\infty)$. See also \cite{hiai2021quantum} for a summary.  Various  approximate versions were studied as
-well, in both the finitine dimensional \cite{} and von Neumann algebra setting \cite{}. 
+divergences and other quantities satisfying the DPI, in both finite and infinite
+dimensional settings. In particular, this property 
+for the standard R\'enyi divergence was proved in \cite{hiai2017different} in the interval $(0,1)\cup(0,2)$
+and in \cite{jencova2017preservation, jencova2018renyi, jencova2021renyi} for the sandwiched version with $\alpha\in
+(1/2,1)\cup(1,\infty)$. See also \cite{hiai2021quantum} for a summary of these result for
+von Neumann algebras.  
 
 
 
 The $\alpha-z$-R\'enyi divergences $D_{\alpha,z}$ in von Neumann algebras were introduced in
-\cite{kato2023aremark} and a number of their important properties was subsequently proved
+\cite{kato2023aremark} and a number of their properties was subsequently proved
 in \cite{kato2023onrenyi}. In particular, most of the important properties including the
 DPI (with respect to normal positive unital maps), monotonicity in the parameter $z$ and a
-variational expression were proved in the case $0<\alpha<1$. 
+variational expression were proved in the case $0<\alpha<1$. In the type I case,
+$D_{\alpha,z}$ and their properties were studied also in \cite{mosonyi2023thestrong}.
 
 
 Inspired by the papers \cite{kato2023aremark, kato2023onrenyi}, our aim in the present
@@ -218,11 +212,14 @@ DPI implies sufficiency of the channel, where by channel we here mean a normal 2
 unital map. The proofs again use the variational expressions and their relation to the sandwiched
 R\'enyi divergences, together with the properties of conditional expectations. 
 
-We then turn to monotonicity in the parameters $z$ and $\alpha$.
+We then turn to monotonicity in the parameters $z$ and $\alpha$. We first show that in the
+case of finite von Neumann algebras,  monotonicity in $z$ holds for all values of the parameter. 
+In the case of general von Neumann algebras for $\alpha>1$, we prove monotonicity in $z$
+on the interval $[\alpha/2,\infty)$ using complex interpolation method. In addition, we
+also  prove monotonicity in the parameter $\alpha$, which seems to be new even in the finite
+dimensional case,  and the limits $\alpha\searrow 1$ and $\alpha\nearrow 1$.
 
 
-
-especially the variational expression, DPI and monotonicity in $z$ for $\alpha>1$. 
 
 
 }
@@ -1978,7 +1975,7 @@ We are indeed interested in whether a stronger inequality
 \Lambda_t\bigl(a_2^{1/2}b_2a_2^{1/2}\bigr)^{1-\theta}
 \]
 hold or not in the situation of Proposition \ref{P-5.2}. The last inequality is known to hold in the
-finite-dimensional setting, as shown in \cite[Theorem 2.1]{hiai2024log-majorization}.
+finite-dimensional setting, as shown in \cite[Theorem 2.1]{hiai2024logmajorization}.
 \end{remark}
 
 \begin{lemma}\label{L-5.4}
@@ -2482,7 +2479,7 @@ Let $\cR:=\Me\rtimes_{\sigma^\omega}\bR$ be the crossed product of $\Me$ by the
 \emph{modular automorphism group} $\sigma_t^\omega$, $t\in\bR$, for a faithful normal semi-finite weight
 $\omega$ on $\Me$. Then $\cR$ is a semi-finite von Neumann algebra with the canonical trace $\tau$.
 Let $\theta_s$, $s\in\bR$, be the \emph{dual action} on $\cR$ having the $\tau$-scaling property
-$\tau\circ\theta_s=e^{-s}\tau$, $s\in\bR$; see \cite[Chap.~X]{takesaki2003theoryof} (also
+$\tau\circ\theta_s=e^{-s}\tau$, $s\in\bR$; see \cite[Chap.~X]{takesaki2003theory2} (also
 \cite[Chap.~8]{hiai2021lectures}). Let $\widetilde\cR$ denote the space of $\tau$-measurable operators
 affiliated with $\cR$; see \cite{fack1986generalized} (also \cite[Chap.~4]{hiai2021lectures}). For $0<p\le\infty$,
 the \emph{Haagerup $L^p$-space} $L^p(\Me)$ \cite{haagerup1979lpspaces,terp1981lpspaces} (also
@@ -2701,6 +2698,11 @@ L^p(\Me,\psi_0,\ffi_0)_\eta
 =C_\eta(L^p(\Me,\ffi_0)_L,L^p(\Me,\psi_0)_R).
 \end{align}
 
+%\bibliography{alphaz}
+%\bibliographystyle{abbrvnat}
+
+%\end{document}
+
 \addcontentsline{toc}{section}{References}
 
 \begin{thebibliography}{27}
@@ -2717,10 +2719,40 @@ L.~Accardi and C.~Cecchini.
 \newblock \emph{Journal of Functional Analysis}, 45:\penalty0 245--273, 1982.
 \newblock \doi{10.1016/0022-1236(82)90022-2}.
 
+\bibitem[Ando(1979)]{ando1979concavity}
+T.~Ando.
+\newblock Concavity of certain maps on positive definite matrices and
+  applications to {Hadamard} products.
+\newblock \emph{Linear algebra and its applications}, 26:\penalty0 203--241,
+  1979.
+\newblock \doi{10.1016/0024-3795(79)90179-4}.
+
+\bibitem[Araki(1976)]{araki1976relative}
+H.~Araki.
+\newblock Relative entropy of states of von {Neumann} algebras.
+\newblock \emph{Publications of the Research Institute for Mathematical
+  Sciences}, 11\penalty0 (3):\penalty0 809--833, 1976.
+
+\bibitem[Audenaert and Datta(2015)]{audenaert2015alpha}
+K.~M. Audenaert and N.~Datta.
+\newblock $\alpha$-z-{R{\'e}nyi} relative entropies.
+\newblock \emph{Journal of Mathematical Physics}, 56\penalty0 (2), 2015.
+\newblock \doi{10.1063/1.4906367}.
+
+
 \bibitem[Beauzamy(1982)]{beauzamy1982introduction}
 B.~Beauzamy.
 \newblock \emph{Introduction to Banach Spaces and their Geometry}.
 \newblock Mathematics Studies, 68, North-Holland, Amsterdam, 1982.
+
+\bibitem[Beigi(2013)]{beigi2013sandwiched}
+S.~Beigi.
+\newblock Sandwiched {R{\'e}nyi} divergence satisfies data processing
+  inequality.
+\newblock \emph{Journal of Mathematical Physics}, 54\penalty0 (12), 2013.
+\newblock \doi{10.1063/1.4838855}.
+
+
 
 \bibitem[Bergh and L\"ofstr\"om(1976)]{bergh1976interpolation}
 J.~Bergh and J.~L\"ofstr\"om.
@@ -2734,10 +2766,20 @@ M.~Berta, V.~B. Scholz, and M.~Tomamichel.
 \newblock \emph{Annales Henri Poincar{\'e}}, 19:\penalty0 1843--1867, 2018.
 \newblock \doi{https://doi.org/10.48550/arXiv.1608.05317}.
 
-\bibitem[Calder\'on(1964)]{calderon1964intermediate}
-A.~Calder\'on.
-\newblock Intermediate spaces and interpolation, the complex method.
-\newblock \emph{Studia Mathematics}, 24\penalty0 (2):\penalty0 113--190, 1964.
+%\bibitem[Calder\'on(1964)]{calderon1964intermediate}
+%A.~Calder\'on.
+%\newblock Intermediate spaces and interpolation, the complex method.
+%\newblock \emph{Studia Mathematics}, 24\penalty0 (2):\penalty0 113--190, 1964.
+
+\bibitem[Carlen et~al.(2018)Carlen, Frank, and Lieb]{carlen2018inequalities}
+E.~A. Carlen, R.~L. Frank, and E.~H. Lieb.
+\newblock Inequalities for quantum divergences and the {Audenaert--Datta}
+  conjecture.
+\newblock \emph{Journal of Physics A: Mathematical and Theoretical},
+  51\penalty0 (48):\penalty0 483001, 2018.
+\newblock \doi{https://doi.org/10.1088/1751-8121/aae8a3}.
+
+
 
 \bibitem[Choi(1974)]{choi1974aschwarz}
 M.-D.~Choi.
@@ -2762,6 +2804,14 @@ T.~Fack and H.~Kosaki.
 O.~Fawzi, L.~Gao, and M.~Rahaman.
 \newblock Asymptotic equipartition theorems in von Neumann algebras.
 \newblock \emph{arXiv preprint arXiv:2212.14700v2 [quant-ph]}, 2023.
+
+\bibitem[Frank and Lieb(2013)]{frank2013monotonicity}
+R.~L. Frank and E.~H. Lieb.
+\newblock Monotonicity of a relative {R}{\'e}nyi entropy.
+\newblock \emph{Journal of Mathematical Physics}, 54\penalty0 (12):\penalty0
+  122201, 2013.
+\newblock \doi{10.1063/1.4838835}.
+
 
 \bibitem[Haagerup(1979)]{haagerup1979lpspaces}
 U.~Haagerup.
@@ -2812,6 +2862,14 @@ F.~Hiai and H.~Kosaki.
   (05):\penalty0 2150024, 2021.
 \newblock \doi{10.1142/S0129167X21500245}.
 
+\bibitem[Hiai and Mosonyi(2017)]{hiai2017different}
+F.~Hiai and M.~Mosonyi.
+\newblock Different quantum f-divergences and the reversibility of quantum
+  operations.
+\newblock \emph{Reviews in Mathematical Physics}, 29\penalty0 (07):\penalty0
+  1750023, 2017.
+\newblock \doi{10.1142/S0129055X17500234}.
+
 \bibitem[Hiai and Tsukada(1984)]{hiai1984strong}
 F.~Hiai and M.~Tsukada.
 \newblock Strong martingale convergence of generalized conditional expectations
@@ -2819,6 +2877,15 @@ F.~Hiai and M.~Tsukada.
 \newblock \emph{Transactions of the American Mathematical Society},
   282\penalty0 (2):\penalty0 791--798, 1984.
 \newblock \doi{10.1090/S0002-9947-1984-0732120-1}.
+
+\bibitem[Jen{\v{c}}ov{\'a}(2017)]{jencova2017preservation}
+A.~Jen{\v{c}}ov{\'a}.
+\newblock {Preservation of a quantum R{\'e}nyi relative entropy implies
+  existence of a recovery map}.
+\newblock \emph{Journal of Physics A}, 50:\penalty0 085303, 2017.
+\newblock \doi{10.1088/1751-8121/aa5661}.
+
+
 
 \bibitem[Jen{\v c}ov{\'a}(2018)]{jencova2018renyi}
 A.~Jen{\v c}ov{\'a}.
@@ -2850,7 +2917,7 @@ S.~Kato and Y.~Ueda.
 {\color{red}\newblock \emph{Studia Math.}, to appear.}
 \newblock \emph{arXiv preprint arXiv:2307.01790}, 2023.
 
-\bibitem[Kosaki(1984)]{kosaki1984applications}
+\bibitem[Kosaki(1984{\natexlab{a}})]{kosaki1984applications}
 H.~Kosaki.
 \newblock {Applications of the complex interpolation method to a von Neumann
   algebra: Non-commutative $L^p$-spaces}.
@@ -2858,7 +2925,7 @@ H.~Kosaki.
   {1984}{\natexlab{a}}.
 \newblock \doi{https://doi.org/10.1016/0022-1236(84)90025-9}.
 
-\bibitem[Kosaki(1984)]{kosaki1984applicationsuc}
+\bibitem[Kosaki(1984{\natexlab{b}})]{kosaki1984applicationsuc}
 H.~Kosaki.
 \newblock {Applications of uniform convexity of noncommutative $L\sp{p}$-spaces}.
 \newblock \emph{Trans. Amer. Math. Soc.}, {283}:\penalty0 265--282,
@@ -2896,6 +2963,23 @@ M.~Mosonyi and F.~Hiai.
 \newblock \emph{IEEE Transactions on Information Theory}, 2023.
 \newblock \doi{10.1109/TIT.2023.3324758}.
 
+\bibitem[Mosonyi(2023)]{mosonyi2023thestrong}
+M.~Mosonyi.
+\newblock The strong converse exponent of discriminating infinite-dimensional
+  quantum states.
+\newblock \emph{Communications in Mathematical Physics}, 400\penalty0
+  (1):\penalty0 83--132, 2023.
+\newblock \doi{10.1007/s00220-022-04598-1}.
+
+
+\bibitem[M{\"u}ller-Hermes and Reeb(2017)]{mullerhermes2017monotonicity}
+A.~M{\"u}ller-Hermes and D.~Reeb.
+\newblock Monotonicity of the quantum relative entropy under positive maps.
+\newblock \emph{Annales Henri Poincar{\'e}}, 18:\penalty0 1777--1788, 2017.
+\newblock \doi{doi.org/10.1007/s00023-017-0550-9}.
+
+
+
 \bibitem[Ohya and Petz(1993)]{ohya1993quantum}
 M.~Ohya and D.~Petz.
 \newblock \emph{Quantum Entropy and Its Use}.
@@ -2908,7 +2992,14 @@ D.~Petz.
   Sciences}, 21\penalty0 (4):\penalty0 787--800, 1985.
 \newblock \doi{10.2977/prims/1195178929}.
 
-\bibitem[Petz(1986)]{petz1986sufficient}
+
+\bibitem[Petz(1986{\natexlab{a}})]{petz1986quasi}
+D.~Petz.
+\newblock Quasi-entropies for finite quantum systems.
+\newblock \emph{Reports on Mathematical Physics}, 23\penalty0 (1):\penalty0
+  57--65, 1986{\natexlab{a}}.
+
+\bibitem[Petz(1986{\natexlab{b}})]{petz1986sufficient}
 D.~Petz.
 \newblock Sufficient subalgebras and the relative entropy of states of a von
   {Neumann} algebra.
@@ -2933,6 +3024,22 @@ M.~Terp.
 \newblock {$L^p$-spaces associated with von Neumann algebras}.
 \newblock {Notes, Copenhagen University}, {1981}.
 
+\bibitem[M{\" u}ller Lennert et~al.({2013})Muller Lennert, Dupuis, Szehr, Fehr, and
+  Tomamichel]{mullerlennert2013onquantum}
+M.~M. M{\" u}ller Lennert, F.~Dupuis, O.~Szehr, S.~Fehr, and M.~Tomamichel.
+\newblock {On quantum R\'enyi entropies: a new generalization and some
+  properties}.
+\newblock \emph{{J. Math. Phys.}}, {54}:\penalty0 {122203}, {2013}.
+
+\bibitem[Wilde et~al.(2014)Wilde, Winter, and Yang]{wilde2014strong}
+M.~M. Wilde, A.~Winter, and D.~Yang.
+\newblock Strong converse for the classical capacity of entanglement-breaking
+  and {Hadamard channels via a sandwiched R{\'e}nyi} relative entropy.
+\newblock \emph{Communications in Mathematical Physics}, 331:\penalty0
+  593--622, 2014.
+\newblock \doi{10.1007/s00220-014-2122-x}.
+
+
 \bibitem[Zalinescu(2002)]{zalinescu2002convex}
 C.~Zalinescu.
 \newblock \emph{Convex Analysis in General Vector Spaces}.
@@ -2956,9 +3063,19 @@ H.~Zhang.
 
 \end{thebibliography}
 
-%\bibliography{alphaz}
-%\bibliographystyle{abbrvnat}
 
 \end{document}
 
-\end{document}
+
+
+
+
+
+
+i
+
+
+
+
+
+

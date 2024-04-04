@@ -7,7 +7,8 @@ title: All books
 
 ### B
 
-* [bergh1976interpolation](BOOK_bergh1976interpolation)
+* [bergh1976interpolation](BOOK_bergh1976interpolation)    
+* [beauzamy1982introduction](BOOK_beauzamy1982introduction)    
 
 
 ### H

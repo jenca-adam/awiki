@@ -3,6 +3,7 @@ title: Not my own papers
 ## A list
 
 ### A
+[ando1979concavity](ando1979concavity),    
 
 [accardi1982conditional](accardi1982conditional),   
 [araujo2015witnessing](araujo2015witnessing),
@@ -21,6 +22,9 @@ title: Not my own papers
 
 
 ### B
+
+[BOOK_beauzamy1982introduction](BOOK_beauzamy1982introduction),    
+[beigi2013sandwiched](beigi2013sandwiched),
 [berta2022chainrules](berta2022chainrules),
 [blumekohout2010informationpreserving](blumekohout2010informationpreserving),
 [batkai2012decomposition](batkai2012decomposition),
@@ -122,6 +126,7 @@ title: Not my own papers
 [grumm1973two](grumm1973two)
 
 ### H
+[hiai2024logmajorization](hiai2024logmajorization),
 
 [hiai1984strong](hiai1984strong),   
 [hiai2021connections](hiai2021connections),
@@ -286,6 +291,7 @@ title: Not my own papers
 [vetterlein2019orthogonality](vetterlein2019orthogonality)
 
 ### W
+[wilde2014strong](wilde2014strong),
 
 [BOOK_watrous2018thetheory](BOOK_watrous2018thetheory), 
 [BOOK_wilde2017quantum](BOOK_wilde2017quantum), 

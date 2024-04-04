@@ -100,7 +100,7 @@ In von Neumann algebras:
 * [gu2019interpolation](gu2019interpolation) interpolation of Haagerup $L_p$-spaces for $p<1$.    
 * [berta2018renyi](berta2018renyi) sandwiched Renyi divergence via Araki-Masuda $L_p$-spaces    
 * [BOOK_hiai2021quantum](BOOK_hiai2021quantum) Hiai's book on quantum divergences     
-* [hiai2018quantum](hiai2018quantum) Hiai's paper on standard divergences    
+* [hiai2018quantum](hiai2018quantum) Hiai's paper on standard divergences in von Neumann algebra setting   
 
 Tools
 
@@ -116,11 +116,34 @@ Tools
 * [BOOK_ohya1993quantum](BOOK_ohya1993quantum) quantum entropy and its use     
 * [choi1974aschwarz](choi1974aschwarz)   Choi inequality   
 * [zalinescu2002convex](BOOK_zalinescu2002convex) Uniform convexity and smoothness...    
+* [beauzamy1982introduction](BOOK_beauzamy1982introduction) Banach spaces, uniform convexity and differentiability,....     
 * [mosonyi2023somecontinuity](mosonyi2023somecontinuity) properties of $D_{\alpha,z}$, monotonicity in $z$....     
 * [hiai2021connections](hiai2021connections) connections for unbounded operators     
 * [kosaki1992aninequality](kosaki1992aninequality)  Kosaki ALT inequality    
 * [accardi1982conditional](accardi1982conditional)  generalized conditional expectations     
 * [hiai1984strong](hiai1984strong)  martingale convergence    
+* [ando1979concavity](ando1979concavity) Ando convexity theorem     
+* [fawzi2022asymptotic](fawzi2022asymptotic) AEP in von Neumann algebras, Haagerup reduction theorem     
+* [hiai2024logmajorization](hiai2024logmajorization) Log-majorization, finite dim     
+
+
+
+
+Relative entropies
+
+* [araki1976relative](araki1976relative) Araki relative entropy (part 1)    
+* [kosaki1986relative](kosaki1986relative) relative entropy, variational formula, DPI    
+* [mullerlennert2013onquantum](mullerlennert2013onquantum) sandwiched, finite dimensional    
+* [wilde2014strong](wilde2014strong) sandwiched, finite dimensional    
+* [frank2013monotonicity](frank2013monotonicity) monotonicity of sandwiched divergence, variational     
+* [beigi2013sandwiched](beigi2013sandwiched) monotonicity of sandwiched divergence, interpolation    
+* [mullerhermes2017monotonicity](mullerhermes2017monotonicity) DPI for raltive entropy, positive maps    
+
+
+Sufficiency
+
+* [hiai2017different](hiai2017different) sufficiency for quantum $f$-divergences       
+
 
 General von Neumann algebra theory
 
