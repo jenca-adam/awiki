@@ -60,7 +60,7 @@ argument in the proof of the theorems, the authors just write that ''This is pos
 Skorohods representation theorem (see e.g. [95])'', as if a rabbit was just taken out of the hat. 
 This seems to be the crucial argument in most of
 the proofs and should be better explained. There are also other points, for example the
-use of the portmanteau theorem at the beginning of p.~19 (and similarly also in other
+use of the portmanteau theorem at the befinning of p.~19 (and similarly also in other
 proofs). 
 
 There are also mistakes, most notably, Lemma 1, part (i). This is quite obviously wrong,
@@ -90,7 +90,7 @@ s^{(n)}(\rho)\|_2>1$. The definition of $\hat\rho_n$ should be modified in an ob
 which seems to be also used in the proof of Proposition 1. 
 \item in Eq.~(19a): also the notation $\mathbb{1}_{\|s^{(n)}\|_2\le 1}$ etc, should better
 be explained.
-\item Eqs.~(30) (and elsewhere) it would really be better to use a notation that shows
+\item Eqs.~(30) (and elsewehere) it would really be better to use a notation that shows
 that these are also functions of $t$
 \item page 20, last set of displayed equations: in the last line, all the ''tilded'' terms
 are equal to their ''untilded'' versions, except for the last one, where it is not so
