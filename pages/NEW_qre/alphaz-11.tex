@@ -81,54 +81,73 @@ monotonicity properties in $\alpha,z$}
 
 \maketitle
 
-
 \begin{abstract}
-
-///////////////////////////////
-
-//////////////////////////////
-
-//////////////////////////////
+This paper is aimed at following up S.~Kato's paper ``On $\alpha$-$z$-R\'enyi divergence in the
+von Neumann algebra setting''. We finish the proofs of the variational expression and of the data processing
+inequality (DPI) for the $\alpha$-$z$-R\'enyi divergences $D_{\alpha,z}(\psi\|\ffi)$ for normal positive
+functionals $\psi,\ffi$ on a von Neumann algebra. We establish the sufficiency theorem for
+$D_{\alpha,z}(\psi\|\ffi)$, saying that for $(\alpha,z)$ inside the DPI bounds, equality in the DPI under
+a quantum channel implies the reversibility of the channel. Moreover, we show the monotonicity properties
+of $D_{\alpha,z}(\psi\|\ffi)$ in the parameters $\alpha,z$ and their limits to the normalized relative entropy as
+$\alpha\nearrow1$ and $\alpha\searrow1$.
 
 \bigskip\noindent
 {\it 2020 Mathematics Subject Classification:}
-
-////////////////////////////////////
+81P45, 81P16, 46L10, 46L53, 94A17
 
 \medskip\noindent
 {\it Keywords and phrases:}
-
-//////////////////////////////////
+$\alpha$-$z$-R\'enyi divergence,
+relative entropy,
+Petz-type R\'enyi divergence,
+sandwiched R\'enyi divergence,
+von Neumann algebra,
+Haagerup $L^p$-space,
+Kosaki's interpolation $L^p$-space,
+%Petz dual,
+%generalized conditional expectation,
+quantum channel,
+data processing inequality,
+reversibility,
+sufficiency,
+%generalized $s$-number,
+%modular automorphism group,
+%dual action,
+%left and right $L^p$-spaces,
+%symmetric $L^p$-space,
 
 \end{abstract}
 
-
 \tableofcontents
 
-{%\color{orange}
+
 \section{Introduction}
 
-
-
-The $\alpha-z$-R\'enyi divergences were introduced in \cite{audenaert2015alpha}
-as a two parameter family of quantum generalizations of  the classical R\'enyi
-divergences. For a pair of density operators (or more generally positive
+The $\alpha$-$z$-R\'enyi divergences were {first introduced in \cite{jaksic2012entropic}, and
+were further studied} in \cite{audenaert2015alpha} as a two-parameter family of quantum generalizations
+of the classical R\'enyi divergences. For a pair of density operators (or more generally positive
 operators) $\rho$ and $\sigma$ on a finite dimensional Hilbert space, the divergence
 $D_{\alpha,z}(\rho\|\sigma)$ is defined by 
 \[
-D_{\alpha,z}(\rho\|\sigma)=\frac{1}{\alpha-1}\log\frac{\Tr(\rho^{\frac{\alpha}{2z}}\sigma^{\frac{1-\alpha}{z}}\rho^{\frac{\alpha}{2z}})}{\Tr\rho},
+D_{\alpha,z}(\rho\|\sigma)=\frac{1}{\alpha-1}\log
+{\frac{\mathrm{Tr}\bigl(\rho^{\frac{\alpha}{2z}}\sigma^{\frac{1-\alpha}{z}}
+\rho^{\frac{\alpha}{2z}}\bigr)^z}{\mathrm{Tr}\,\rho},}
 \]
-where $0<\alpha\ne 1$ and $z>0$. This family includes the quantum relative entropy in the
+where $0<\alpha\ne 1$ and $z>0$. This family includes the {Umegaki} relative entropy in the
 limit $\alpha\to 1$ and unifies the two most important quantum
 versions of R\'enyi divergences, which have already an established operational
 significance. Namely, the standard or Petz-type R\'enyi divergences,  based on the Petz
-quasi-entropy \cite{petz1985quasi,petz1986quasi} are obtained for $z=1$,  whereas $z=\alpha$ gives the sandwiched
-R\'enyi divergences introduced in \cite{mullerlennert2013onquantum, wilde2014strong}. These two
-quantities have important applications in...
+quasi-entropy \cite{petz1985quasi,petz1986quasi} are obtained for $z=1$,  whereas $z=\alpha$ gives
+the sandwiched R\'enyi divergences introduced in \cite{mullerlennert2013onquantum, wilde2014strong}.
+These two quantities have important applications, {in particular, in describing asymptotic error bounds in
+binary quantum state discrimination problems; see \cite{audenaert2007discriminating,jaksic2012quantum,
+mosonyi2015quantum,mosonyi2015twoapproaches,nussbaum2009thechernoff} and references therein.}
+
 
 A fundamental property of any information measure is the data processing inequality (DPI), that
-is, such a quantity must be nonincreasing under quantum channels, which are defined as completely
-positive trace preserving maps. For the R\'enyi divergences, this means that we require
+is, such a quantity must be non-increasing under quantum channels that are defined as completely
+positive and trace-preserving maps. For the {$\alpha$-$z$-R\'enyi} divergences, this means
+that we require
 \[
 D_{\alpha,z}(\Phi(\rho)\|\Phi(\sigma))\le D_{\alpha,z}(\rho\|\sigma)
 \]
@@ -139,91 +158,87 @@ $(0,1)\cup (1,2]$. The DPI in the sandwiched case holds for $\alpha\in
 [1/2,1)\cup(1,\infty)$, as was proved in  \cite{frank2013monotonicity}  and independently in
 \cite{beigi2013sandwiched}. The proof in \cite{beigi2013sandwiched} was given only for
 the case $\alpha>1$, but is interesting for us, because it utilizes complex interpolation
-methods and, as later observed in \cite{mullerhermes2017monotonicity}, it shows that DPI holds also for maps that are trace
-preserving and positive but not necessarily completely positive. Remarkably, by taking the limit
-$\alpha\searrow 1$, this proves this property also for the relative entropy. 
+methods and, as later observed in \cite{mullerhermes2017monotonicity}, it shows that DPI holds also for
+maps that are trace-preserving and positive but not necessarily completely positive. Remarkably, by taking
+the limit $\alpha\searrow 1$, this proves {the same} property also for the relative entropy.
 
 The problem of finding the values of $(\alpha,z)$ for which the DPI holds was posed and studied
 already in \cite{audenaert2015alpha}. The conjecture stated in
-\cite{carlen2018inequalities} suggests the bounds 
+\cite{carlen2018inequalities} suggests the bounds
 \[
 0<\alpha<1, \quad \max\{\alpha,1-\alpha\}\le z\qquad \text{or}\qquad \alpha>1,\quad
-\max\{\alpha,\alpha-1\}\le z\le \alpha.
+\max\{{\alpha/2},\alpha-1\}\le z\le \alpha.
 \]
-This conjecture was finally proved in \cite{zhang2020fromwyd}. 
-
- 
-
+This conjecture was finally proved in \cite{zhang2020fromwyd}.
 
 
 Quantum divergences and their properties were mostly studied in the finite dimensional
 case, but there is a growing interest in extensions beyond this setting. Von Neumann
-algebras form a suitable framework for such extensions, since their are general enough to
+algebras form a suitable framework for such extensions, since {they} are general enough to
 cover many finite or infinite dimensional situations and  there are also strong mathematical
 tools and techniques available to deal with them. Some important quantum divergences were
-already extended to this setting, notably the Araki relative entropy
-\cite{araki1976relative}. The
-quasi-entropies were first introduced for states of von Neumann algebras
-\cite{petz1985quasi} and
-studied in detail in \cite{hiai2018quantum}. The definition of  sandwiched R\'enyi divergences  in
-this setting, based on noncommutative $L^p$-spaces,  was
-introduced independently in \cite{berta2018renyi}  using Araki-Masuda $L^p$-spaces and in  \cite{jencova2018renyi,
-jencova2021renyi} using Kosaki $L^p$-spaces. A number of properties of the divergences
-including DPI was proved in these works and it was shown in \cite{jencova2018renyi} that
-the two definitions are indeed equivalent. See \cite{hiai2021quantum} for an overview of both the Petz-type and
-sandwiched R\'enyi divergences in the von Neumann algebra setting.
+already extended to this setting, notably the Araki relative entropy \cite{araki1976relative}. The
+quasi-entropies were first introduced for states of von Neumann algebras {in}
+\cite{petz1985quasi} and studied in detail in \cite{hiai2018quantum}. The definition of sandwiched
+R\'enyi divergences in this setting, based on non-commutative $L^p$-spaces,  was
+introduced independently in \cite{berta2018renyi}  using {Araki-Masuda's} $L^p$-spaces and
+in \cite{jencova2018renyi,jencova2021renyi} using {Kosaki's} $L^p$-spaces. A number of
+properties of the divergences including DPI was proved in these works and it was shown in
+\cite{jencova2018renyi} that the two definitions are indeed equivalent. See \cite{hiai2021quantum} for
+an overview of both the Petz-type and {the} sandwiched R\'enyi divergences in the
+von Neumann algebra setting.
 
-Sufficiency quantum channels with respect to a set of states was introduced by Petz
+Sufficiency {of} quantum channels with respect to a set of states was introduced by Petz
 \cite{petz1986sufficient,petz1988sufficiency}. This definition was inspired by sufficient statistics 
-for classical statistical models. The quantum counterpart in Petz's definition is that all
+{in} classical statistical models. The quantum counterpart in Petz's definition is that all
 the states in the given set can be recovered by another channel. It is an important result
 that this property is characterized by equality in the DPI for relative entropy, as well
-as for the transition probability (which is basically the Petz-type R\'enyi divergence for
+as for the transition probability (that is basically the Petz-type R\'enyi divergence for
 $\alpha=1/2$). This result has been generalized and extended to a large class of
 divergences and other quantities satisfying the DPI, in both finite and infinite
 dimensional settings. In particular, this property 
-for the standard R\'enyi divergence was proved in \cite{hiai2017different} in the interval $(0,1)\cup(0,2)$
-and in \cite{jencova2017preservation, jencova2018renyi, jencova2021renyi} for the sandwiched version with $\alpha\in
-(1/2,1)\cup(1,\infty)$. See also \cite{hiai2021quantum} for a summary of these result for
-von Neumann algebras.  
+for the standard R\'enyi divergence was proved in \cite{hiai2017different} in the interval $(0,1)\cup(1,2)$
+and in \cite{jencova2017preservation, jencova2018renyi, jencova2021renyi} for the sandwiched version
+with $\alpha\in(1/2,1)\cup(1,\infty)$. See also \cite{hiai2021quantum} for a summary of these {results}
+{in} von Neumann algebras.  
 
 
-
-The $\alpha-z$-R\'enyi divergences $D_{\alpha,z}$ in von Neumann algebras were introduced in
-\cite{kato2023aremark} and a number of their properties was subsequently proved
-in \cite{kato2023onrenyi}. In particular, most of the important properties including the
-DPI (with respect to normal positive unital maps), monotonicity in the parameter $z$ and a
-variational expression were proved in the case $0<\alpha<1$. In the type I case,
+The $\alpha$-$z$-R\'enyi divergences $D_{\alpha,z}$ in von Neumann algebras were {very recently}
+introduced in \cite{kato2023aremark}, {based on the Haagerup $L^p$-spaces}, and a number of
+their properties was subsequently proved in \cite{kato2023onrenyi}. In particular, most of the important
+properties including the DPI (with respect to normal positive unital maps), monotonicity in the parameter $z$
+and a variational expression were proved in the case $0<\alpha<1$. {In the infinite dimensional
+$\mathcal{B}(\mathcal{H})$ case,}
 $D_{\alpha,z}$ and their properties were studied also in \cite{mosonyi2023thestrong}.
 
 
 Inspired by the papers \cite{kato2023aremark, kato2023onrenyi}, our aim in the present
-work is to complete their results on the properties of the $\alpha-z$-R\'enyi divergences.
-We first finish the proof of the variational expression for $\alpha>1$ and prove the DPI,
-in the same bounds as in the finite dimensional case. Similarly to Zhang in
-\cite{zhang2020fromwyd}, we apply the variational expressions to so this, but, not having the
-techniques of matrix analysis at our disposal, we use their relation to the sandwiched
-R\'enyi divergences for the proof. This allows us to show the DPI with respect to normal
-positive unital maps, similarly as in the case $0<\alpha<1$ in \cite{kato2023onrenyi} and
-for the sandwiched R\'enyi divergences in \cite{jencova2018renyi,jencova2021renyi}. As as
-a consequence, we prove martingale convergence theorems for $D_{\alpha,z}$. 
-We further show that for the values of $(\alpha,z)$ inside the DPI bounds, equality in the
-DPI implies sufficiency of the channel, where by channel we here mean a normal 2-positive
-unital map. The proofs again use the variational expressions and their relation to the sandwiched
-R\'enyi divergences, together with the properties of conditional expectations. 
+work is to complete their results on the properties of the $\alpha$-$z$-R\'enyi divergences.
+{Section 2 of the present paper is a preliminary on $D_{\alpha,z}$. In Sec.~3} we first finish
+the proof of the variational expression for $\alpha>1$ and prove the DPI, in the same bounds as in the
+finite dimensional case. Similarly to {Zhang's approach} in \cite{zhang2020fromwyd}, we apply the
+variational expressions to {do} this, but, not having the techniques of matrix analysis
+at our disposal, we use their relation to the sandwiched R\'enyi divergences for the proof. This allows us
+to show the DPI with respect to normal positive unital maps, similarly {to} the case $0<\alpha<1$
+in \cite{kato2023onrenyi} and for the sandwiched R\'enyi divergences in
+\cite{jencova2018renyi,jencova2021renyi}. As a consequence, we prove martingale convergence
+theorems for $D_{\alpha,z}$. {In Sec.~4 we next show the most significant result} that for the
+values of $(\alpha,z)$ inside the DPI bounds, equality in the DPI implies sufficiency of the channel,
+where by channel we here mean a normal 2-positive unital map. The proofs again use the variational
+expressions and their relation to the sandwiched R\'enyi divergences, together with the properties of
+conditional expectations {extended to the Haagerup $L^p$-spaces.}
 
-We then turn to monotonicity in the parameters $z$ and $\alpha$. We first show that in the
+We then turn to monotonicity in the parameters $z$ and $\alpha$. {In Sec.~5 we} first show that in the
 case of finite von Neumann algebras,  monotonicity in $z$ holds for all values of the parameter. 
 In the case of general von Neumann algebras for $\alpha>1$, we prove monotonicity in $z$
-on the interval $[\alpha/2,\infty)$ using complex interpolation method. In addition, we
-also  prove monotonicity in the parameter $\alpha$, which seems to be new even in the finite
-dimensional case,  and the limits $\alpha\searrow 1$ and $\alpha\nearrow 1$.
+on the interval $[\alpha/2,\infty)$ using {a} complex interpolation method
+{based on Kosaki's $L^p$-spaces. In Sec.~6} we further prove monotonicity in the parameter
+$\alpha$, which seems to be new even in the finite dimensional case, {using a real analysis method
+for $0<\alpha<1$ and a complex interpolation method for $1<\alpha\le2z$. Finally, we show the limits
+to the normalized relative entropy as} $\alpha\searrow 1$ and $\alpha\nearrow 1$.
 
-
-
-
-}
-
+{Appendices A--C are brief summaries on the Haagerup $L^p$-spaces, Haagerup's reduction theorem,
+and Kosaki's interpolation $L^p$-spaces with some technical lemmas, which are utilized in the main body.}
 
 
 \section{Preliminaries}
@@ -274,7 +289,6 @@ h_\psi^{\frac{\alpha}{z}}=h_\varphi^{\frac{\alpha-1}{2z}}xh_\varphi^{\frac{\alph
 \]
 \end{defi}
 
-
 \begin{remark}\label{remark:defi}
 As mentioned in Appendix \ref{app:lp}, the Haagerup $L^p(\Me)$ spaces are constructed inside the
 crossed product $\cR:=\Me\rtimes_{\sigma^\omega}\bR$ by the modular automorphism group
@@ -284,8 +298,7 @@ $\cR_j:=\Me\rtimes_{\sigma^{\omega_j}}\bR$ with the canonical trace $\tau_j$. Th
 isomorphism $\kappa:\cR_0\to\cR_1$ (extended to $\kappa:\widetilde\cR_0\to\widetilde\cR_1$, the spaces
 of $\tau_j$-measurable operators) such that $\tau_0\circ\kappa^{-1}=\tau_1$,
 $\kappa\bigl(L^p(\Me)^{(0)}\bigr)=L^p(\Me)^{(1)}$ for $0<p\le\infty$, and $\Tr_0\circ\kappa^{-1}=\Tr_1$ on
-$L^1(\Me)^{(1)}$, where $\Tr_j$ is the $\Tr$-functional on
-\textcolor{orange}{$L^1(\Me)^{(j)}$}. (For more details on the isomorphism
+$L^1(\Me)^{(1)}$, where $\Tr_j$ is the $\Tr$-functional on $L^1(\Me)^{(j)}$. (For more details on the isomorphism
 $\kappa$, see, e.g., \cite[Remark 9.10]{hiai2021lectures}.) Hence we note that the above definition
 of $D_{\alpha,z}(\psi\|\ffi)$ is indeed independent of the choice of the Haagerup $L^p$-spaces. From this
 fact, we also note that for $\psi,\ffi\in\Me_*^+$, $\psi\ne0$, with $s(\psi),s(\ffi)\le e$, where $e$ is a projection
@@ -318,25 +331,25 @@ complex interpolation method are briefly summarized in Appendix \ref{Appen-Kosak
 frequently in the present work.}
 
 {As have already been done by Kato in \cite{kato2023onrenyi}, many of the properties of
-$D_{\alpha,z}(\psi\|\varphi)$ are extended from the finite-dimensional case into the general von Neumann
+$D_{\alpha,z}(\psi\|\varphi)$ are extended from the finite dimensional case into the general von Neumann
 algebra case}. In particular, the following variational expressions will be an important tool for our work.
 
 \begin{theorem}[Variational expressions]\label{thm:variational} Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$. 
 \begin{enumerate}
 \item[(i)] Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$. Then
-\begin{align}\label{F-1.1}
+\begin{align}\label{F-2.1}
 Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me^{++}}\left\{\alpha
 \Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)+(1-\alpha)
 \Tr\left((a^{-\frac12}h_\varphi^{\frac{1-\alpha}{z}}a^{-\frac12})^{\frac{z}{1-\alpha}}\right) \right\}.
 \end{align}
 
 \item[(ii)] Let $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z$. Then
-\begin{align}\label{F-1.2}
+\begin{align}\label{F-2.2}
 Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me^+} \left\{\alpha
 \Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
 \Tr\left((a^{\frac12}h_\varphi^{\frac{\alpha-1}{z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right) \right\}.
 \end{align}
-{Moreover, if $\psi\le\lambda\ffi$ for some $\lambda>0$, then \eqref{F-1.2} holds for all
+{Moreover, if $\psi\le\lambda\ffi$ for some $\lambda>0$, then \eqref{F-2.2} holds for all
 $z\ge\alpha-1>0$. }
 \end{enumerate}
 \end{theorem}
@@ -348,7 +361,7 @@ the opposite inequality.
 Assume first that $Q_{\alpha,z}(\psi\|\varphi)<\infty$, so that there is some $x\in
 s(\varphi)L^z(\Me)^+s(\varphi)$ such that
 $h_\psi^{\frac{\alpha}{z}}=h_\varphi^{\frac{\alpha-1}{2z}}xh_\varphi^{\frac{\alpha-1}{2z}}$. Plugging this
-into the right-hand side of \eqref{F-1.2}, we obtain
+into the right-hand side of \eqref{F-2.2}, we obtain
 \begin{align}
 &\sup_{a\in \Me^+} \left\{\alpha
 \Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
@@ -367,7 +380,7 @@ x^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
 &\quad=\sup_{w\in L^{\frac{z}{\alpha-1}}(\Me)^+} \left\{\alpha
 \Tr\left((x^{\frac12}wx^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
 \Tr\left(w^{\frac{z}{\alpha-1}}\right)
-\right\}, \label{F-1.3}
+\right\}, \label{F-2.3}
 \end{align}
 where we have used the fact that $\Tr\left((h^*h)^p\right)=\Tr\left((hh^*)^p\right)$ for
 $p>0$, $h\in L^{\frac{p}{2}}(\Me)$, and Lemma \ref{lemma:cone}.
@@ -379,7 +392,7 @@ get
 \Tr\left(w^{\frac{z}{\alpha-1}}\right)
 \right\}\ge \Tr(x^z)=\|x\|_z^z= Q_{\alpha,z}(\psi\|\varphi).
 \]
-This finishes the proof of \eqref{F-1.2} in the case that $Q_{\alpha,z}(\psi\|\varphi)<\infty$. Note that
+This finishes the proof of \eqref{F-2.2} in the case that $Q_{\alpha,z}(\psi\|\varphi)<\infty$. Note that
 this holds if $z\ge \alpha-1>0$ and $\psi\le \lambda\varphi$ for some $\lambda>0$. {Indeed, since
 $\frac{\alpha-1}{z}\in (0,1]$ by the assumption, we then have 
 $h_\psi^{\frac{\alpha-1}{z}}\le \lambda^{\frac{\alpha-1}{z}}h_\varphi^{\frac{\alpha-1}{z}}$.
@@ -420,7 +433,7 @@ $0<\alpha<1$, in the case when $\lambda^{-1}\ffi\le \psi\le \lambda \ffi$ for so
 $\lambda>0$. This case will be denoted as $\psi\sim \ffi$. 
 
 \begin{lemma}\label{lemma:variational_majorized}
-Assume that $\psi\sim\ffi$. Then the infimum in \eqref{F-1.1} of Theorem \ref{thm:variational}(i) is
+Assume that $\psi\sim\ffi$. Then the infimum in \eqref{F-2.1} of Theorem \ref{thm:variational}(i) is
 attained at a unique element $\bar a\in \Me^{++}$. This element satisfies
 \begin{align}
 h_\psi^{\alpha\over2z}\bar ah_\psi^{\alpha\over2z}
@@ -443,7 +456,7 @@ h_\ffi^{1-\alpha\over2z}
 =ch_\ffi^{1-\alpha\over2z}.
 \end{align}
 With $\bar a:=bb^*\in\cM^{++}$ we have  $\bar a^{-1}=c^*c$ and $\bar a$ is indeed a minimizer of
-\eqref{F-1.2}, so that
+\eqref{F-2.2}, so that
 \begin{align}\label{eq:infimum}
 Q_{\alpha,z}(\psi\|\ffi)
 =\Big\|h_\psi^{\alpha\over2z}\bar ah_\psi^{\alpha\over2z}\Big\|_{z\over\alpha}^{z\over\alpha}
@@ -454,15 +467,15 @@ Q_{\alpha,z}(\psi\|\ffi)
 (see the proof of \cite[Theorem 1(vi)]{kato2023onrenyi} for more detail).
 We next observe that such a minimizer is unique. Indeed, suppose that the infimum is
 attained  at some $a_1,a_2\in \Me^{++}$. Let $a_0:=(a_1+a_2)/2$. Since the map 
-$L^{p}(\cM)\ni k\mapsto\|k\|_{p}^{p}$ is convex for any $p\ge 1$ and
-$a_0^{-1}\le(a_1^{-1}+a_2^{-1})/2$, we have 
+$L^{p}(\cM)\ni k\mapsto\|k\|_{p}^{p}$ is convex for any $p\ge 1$, we have 
 \[
 \Big\|h_\psi^{\alpha\over2z}a_0h_\psi^{\alpha\over2z}\Big\|_{z\over\alpha}^{z\over\alpha}
 \le{1\over2}\biggl\{\Big\|h_\psi^{\alpha\over2z}a_1
 h_\psi^{\alpha\over2z}\Big\|_{z\over\alpha}^{z\over\alpha}
 +\Big\|h_\psi^{\alpha\over2z}a_2h_\psi^{\alpha\over2z}\Big\|_{z\over\alpha}^{z\over\alpha}\biggr\}.
 \]
-Moreover, using Lemma \ref{lemma:order1} we have
+Moreover, {since $a_0^{-1}\le(a_1^{-1}+a_2^{-1})/2$}, using Lemma \ref{lemma:order1}
+we have
 \begin{align*}
 \Big\|h_\ffi^{1-\alpha\over2z}a_0^{-1}h_\ffi^{1-\alpha\over2z}\Big\|_{z\over1-\alpha}^{z\over1-\alpha}
 &\le\Big\|h_\ffi^{1-\alpha\over2z}\biggl({a_1^{-1}+a_2^{-1}\over2}\biggr)
@@ -512,6 +525,7 @@ on $\Me^{++}$ for any $p,r\ge1$, whose Fr\'echet derivative at $a$ will be denot
 Assume that $\psi\sim\ffi$  and let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$. {Let
 $\bar a\in\Me^{++}$ be as given in Lemma \ref{lemma:variational_majorized}.} If $p>1$, then for
 every $C\ge Q_{\alpha,z}(\psi\|\ffi)$ and $\eps>0$ there is some $\delta>0$ such that whenever
+{$b\in\Me^{++}$ satisfies}
 $\|\xi_p(b)\|^p_p\le C$ and $\|\xi_p(b)-\xi_p(\bar a)\|_p\ge \eps$, we have
 \[
 f(b)-Q_{\alpha,z}(\psi\|\ffi)\ge \delta.
@@ -535,7 +549,7 @@ where we have also used the fact that $(t a+(1-t)b)^{-1}\le t
 a^{-1}+(1-t)b^{-1}$ for $t\in (0,1)$ and Lemma \ref{lemma:order1}. It follows that
 \begin{align*}
 &\<\nabla f(a),b-a\>\\
-&\quad=\lim_{s\to 0^+} {1\over s}[ f(sb+(1-s)a)-f(a)]\\
+&\quad=\lim_{s\searrow0} {1\over s}[ f(sb+(1-s)a)-f(a)]\\
 &\quad\le 2\alpha\biggl[\Big\|\frac12(\xi_p(a)+\xi_p(b))\Big\|_p^p-\|\xi_p(a)\|_p^p\biggr]
 +2(1-\alpha)\biggl[\Big\|\frac12(\eta_r(a)+\eta_r(b))\Big\|_r^r-\|\eta_r(a)\|_r^r\biggr]\\
 &\quad=f(b)-f(a)-2\Biggl\{\alpha\biggl[\frac12 \|\xi_p(a)\|_p^p
@@ -547,8 +561,8 @@ a^{-1}+(1-t)b^{-1}$ for $t\in (0,1)$ and Lemma \ref{lemma:order1}. It follows th
 %+(1-\alpha)\biggl[\frac12 \|\eta_r(a)\|_r^r+\frac12 \|\eta_r(b)\|_r^r
 %-\Big\|\frac12(\eta_r(a)+\eta_r(b))\Big\|_r^r\biggr]\Biggr\}.\end{multlined}
 \end{align*}
-\textcolor{orange}{Since $p,r\ge 1$, both terms in brackets in the last expression above are nonnegative.
-Let $\bar a\in \Me^{++}$ be the minimizer as in Lemma \ref{lemma:variational_majorized},
+Since $p,r\ge 1$, both terms in brackets in the last expression above are non-negative.
+Let $\bar a\in \Me^{++}$ be the minimizer as in Lemma \ref{lemma:variational_majorized};
 then $f(\bar a)=Q_{\alpha,z}(\psi\|\varphi)$ and $\nabla f(\bar a)=0$, so that we get
 \begin{align*}
 f(b)-Q_{\alpha,z}(\psi\|\varphi)\ge 2\alpha\biggl[\frac12 \|\xi_p(\bar a)\|_p^p+\frac12 \|\xi_p(b)\|_p^p
@@ -562,7 +576,8 @@ with $\|h\|_p^p,\|k\|_p^p\le C$ and $\|h-k\|_p\ge \varepsilon$, we have
 \frac12\|h\|_p^p+\frac12\|k\|_p^p-\Big\|\frac12(h+k)\Big\|_p^p\ge \delta
 \]
 (see \cite[p.~288, Exercise 3.3]{zalinescu2002convex}). Since $\|\xi_p(\bar
-a)\|_p=Q_{\alpha,z}(\psi\|\varphi)$ by \eqref{eq:infimum}, this proves the statement.} The proof in the case $r>1$ is similar. 
+a)\|_p=Q_{\alpha,z}(\psi\|\varphi)$ by \eqref{eq:infimum}, this proves the statement.
+The proof in the case $r>1$ is similar. 
 \end{proof}
 
 
@@ -605,12 +620,11 @@ $\gamma$ is faithful, letting $e:=s(\rho)$ and $e_0:=s(\rho\circ\gamma)$,} we ma
 $\gamma_0$ as mentioned above to define the Petz dual $\gamma^*_\rho: e\Me e\to e_0\Ne e_0$. 
 As explained in \cite{jencova2018renyi}, in this general setting, $\gamma^*_\rho$ is determined by
 the equality
-\textcolor{orange}{
 \[
 h_{\rho\circ\gamma}^{1/2}\gamma_\rho^*(a)h_{\rho\circ\gamma}^{1/2}
 =\gamma_*\bigl(h_\rho^{1/2}ah_\rho^{1/2}\bigr),
 \qquad a\in e\Me e,
-\]}
+\]
 equivalently,
 \begin{equation}\label{eq:petzdual}
 (\gamma^*_\rho)_*\bigl(h_{\rho\circ\gamma}^{1/2}bh_{\rho\circ\gamma}^{1/2}\bigr)
@@ -619,10 +633,9 @@ equivalently,
 where $\gamma_*$ and $(\gamma^*_\rho)_*$ are the predual maps of $\gamma$ and $\gamma^*_\rho$,
 respectively.
 We also have
-\textcolor{orange}{
 \begin{equation}\label{eq:petzdual2}
 \rho\circ\gamma\circ\gamma^*_\rho=\rho,\qquad (\gamma_\rho^*)_{\rho\circ\gamma}^*=\gamma_0.
-\end{equation}}
+\end{equation}
 In the special case where $\gamma$ is the
 inclusion map $\gamma: \Ne\hookrightarrow \Me$ for a subalgebra $\Ne\subseteq \Me$, the Petz dual
 is the \emph{generalized conditional expectation} $\cE_{\Ne,\rho}:\Me\to \Ne$, as introduced in
@@ -641,7 +654,7 @@ for $z=1$, {the} DPI is known to hold for $\alpha\in (0,1)\cup (1,2]$ under stro
 assumptions \cite{hiai2018quantum}. In the case of the sandwiched divergences $\tilde D_\alpha$ with
 {$\alpha\in[1/2,1)\cup(1,\infty)$,} DPI was proved in \cite{jencova2018renyi,jencova2021renyi};
 see also \cite{berta2018renyi} for an alternative proof in the case when the maps are assumed
-completely positive. In the finite-dimensional case, {the DPI for $D_{\alpha,z}$ under completely
+completely positive. In the finite dimensional case, {the DPI for $D_{\alpha,z}$ under completely
 positive maps was proved in \cite{zhang2020fromwyd}, for $\alpha,z$ in the range specified as
 in Theorem \ref{thm:dpi} below.}
 
@@ -937,11 +950,13 @@ whose details are omitted here.
 
 \section{Equality in DPI and reversibility of channels}
 
-In what follows, a channel is a normal 2-positive unital map $\gamma: \Ne\to \Me$.
+In what follows, a (quantum) \emph{channel} is a normal 2-positive unital map $\gamma: \Ne\to \Me$.
+{We use this term for the sake of convenience, while in most literature, a quantum channel is
+assumed to be completely positive.}
 
 \begin{defi} Let $\gamma:\Ne\to \Me$ be a channel and let $\mathcal S \subset
-\Me_*^+$. We say that $\gamma$ is reversible (or sufficient) with respect to $\mathcal S$
-if there exists a channel $\beta:\Me\to \Ne$ such that
+\Me_*^+$. We say that $\gamma$ is \emph{reversible} (or \emph{sufficient}) with respect to
+$\mathcal S$ if there exists a channel $\beta:\Me\to \Ne$ such that
 \[
 \rho\circ\gamma\circ\beta=\rho\quad\mbox{for all}\ \rho\in \mathcal S.
 \]
@@ -950,9 +965,9 @@ if there exists a channel $\beta:\Me\to \Ne$ such that
 The notion of sufficient channels was introduced by Petz
 \cite{petz1986sufficient,petz1988sufficiency}, who also obtained a number of conditions
 characterizing this situation. It particular, it was proved in \cite{petz1988sufficiency}
-that sufficient channels can be characterized by equality in {the} DPI for the relative entropy
-$D(\psi\|\varphi)$: if $D(\psi\|\varphi)<\infty$, then a channel $\gamma$ is sufficient
-with respect to $\{\psi,\varphi\}$ if and only if 
+{(also \cite{jencova2006sufficiency})} that sufficient channels can be characterized by
+equality in the DPI for the \emph{relative entropy} $D(\psi\|\varphi)$: if $D(\psi\|\varphi)<\infty$,
+then a channel $\gamma$ is sufficient with respect to $\{\psi,\varphi\}$ if and only if 
 \[
 D(\psi\circ\gamma\|\varphi\circ\gamma)=D(\psi\|\varphi). 
 \]
@@ -983,7 +998,7 @@ that the range of the conditional expectation $\mathcal E$ in statement (ii) abo
 fixed points of the channel $\gamma\circ\gamma_\varphi^*$.
 
 
-Our aim in this section is to prove that equality in {the} DPI for $D_{\alpha,z}$ with 
+Our aim in this section is to prove that equality in the DPI for $D_{\alpha,z}$ with 
 values of the parameters (strictly) contained in the DPI bounds of Theorem \ref{thm:dpi}
 characterizes sufficiency of channels. Throughout this section, we use the
 notations $\psi_0:=\psi\circ\gamma$ and $\ffi_0:=\ffi\circ\gamma$. We also denote
@@ -994,12 +1009,12 @@ p:=\frac{z}{\alpha},\qquad r:=\frac{z}{1-\alpha},\qquad q:=-r=\frac{z}{\alpha-1}
 
 \subsection{The case $\alpha\in (0,1)$}
 
-Here we study equality in {the} DPI for $D_{\alpha,z}$ with $\alpha\in (0,1)$,  for a pair of positive
+Here we study equality in the DPI for $D_{\alpha,z}$ with $\alpha\in (0,1)$,  for a pair of positive
 normal functionals $\psi,\ffi\in \Me_*^+$ and a normal positive unital map $\gamma:\Ne\to \Me$. We first
 prove some equality conditions  in the case $\psi\sim \ffi$. 
 
 \begin{prop}\label{prop:DPI_equality}
-Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$.  Assume that $\psi\sim \ffi$ and  let
+Let $0<\alpha<1$ and $\max\{\alpha,1-\alpha\}\le z$.  Assume that $\psi\sim \ffi$ and  let
 $\gamma:\Ne\to \Me$ be a normal positive unital map. Let 
 $\bar a\in \Me^{++}$  
 be the unique minimizer as in Lemma \ref{lemma:variational_majorized} for
@@ -1085,7 +1100,7 @@ Q_{\alpha,z}(\psi\|\ffi)
 
 
 \begin{remark}\label{rem:conditions} Note that the above conditions extend the results
-obtained in \cite{leditzky2017data} and \cite{zhang2020equality} in the finite-dimensional case.
+obtained in \cite{leditzky2017data} and \cite{zhang2020equality} in the finite dimensional case.
 Indeed, as seen from \eqref{eq:minimizer2}, the first condition in (ii) with $\alpha=z$ is 
 equivalent to the condition in \cite[Theorem 1]{leditzky2017data} (obtained under the more
 general assumption that $s(\psi)\le s(\ffi)$). Since $p=1$ in this case and 
@@ -1135,7 +1150,7 @@ Our first goal is to show that $\omega_0=\omega\circ\gamma$, which implies by
 \cite[Theorem 4.6]{jencova2018renyi} that $\gamma$ is sufficient with respect to $\{\omega,\psi\}$. 
  We then apply Proposition \ref{prop:universal},  and the properties of the extensions of the
 conditional expectation $\cE$ to the Haagerup $L^p$-spaces proved in
-\cite{junge2003noncommutative}, {\color{orange} see also Appendix \ref{app:lp}.} 
+\cite{junge2003noncommutative}; see also Appendix \ref{app:lp}.
 
 Let us remark here that if $\psi\sim \ffi$, {it follows from \eqref{eq:minimizer1} that}
 $h_\omega=h_\psi^{\frac12}\bar ah_\psi^{\frac12}$ and
@@ -1167,7 +1182,7 @@ Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)=Q_{\alpha,z}(\psi_0\|\ffi_0)
 =Q_{\alpha,z}(\psi\|\ffi)=\lim_nQ_{\alpha,z}(\psi_n\|\ffi_n).
 \]
 Let $\bar b_{n}\in \Ne^{++}$ be the minimizer for the variational expression for
-$Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)$ {given in \eqref{F-1.1}.}
+$Q_{\alpha,z}(\psi_n\circ\gamma\|\ffi_n\circ\gamma)$ {given in \eqref{F-2.1}.}
 Let also $\bar a_n$ be the minimizer for $Q_{\alpha,z}(\psi_n\|\ffi_n)$, and let
 $f_n:\Me^{++}\to \mathbb R^+$ be the function minimized in the expression for
 $Q_{\alpha,z}(\psi_n\|\ffi_n)$ {(see \eqref{func-variational}).} We then have 
@@ -1252,10 +1267,9 @@ As we have seen {in the case $\psi\sim \ffi$ above,} this and \eqref{eq:sandwich
 Next, let $\mathcal E$ be the faithful  normal conditional expectation onto the
 set of fixed points of $\gamma\circ\gamma^*_\psi$ (see a note after Proposition \ref{prop:universal}). Then
 by Proposition \ref{prop:universal}(ii), $\mathcal E$ preserves both $\psi$ and $\omega$.
-{\color{orange} Since $\psi$ is assumed faithful, we may construct the Haagerup
-$L^p$-spaces with respect
-to $\psi$, see Remark \ref{remark:defi}. We then have the extensions of $\cE$ to any
-$L^p$-space as in Appendix \ref{app:lp},  such that  by the bimodule property
+Since $\psi$ is assumed faithful, we may construct the Haagerup $L^p$-spaces with respect
+to $\psi$; see Remark \ref{remark:defi}. We then have the extensions of $\cE$ to any
+$L^p$-space as in Appendix \ref{app:lp}, such that  by the bimodule property
 \eqref{eq:cond}, 
 \[
 h_\psi^{p-1\over 2p}h_\mu^{\frac1p}h_\psi^{p-1\over 2p}=h_\omega=\mathcal
@@ -1265,7 +1279,7 @@ It follows that $\big|h_\ffi^{1\over 2r}h_\psi^{1\over 2p}\big|^{2\alpha}= h_\mu
 L^p(\cE(\Me))$ and consequently $\big|h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}\big|=h_\mu^{1\over
 2z}\in L^{2z}(\mathcal E(\Me))^+$. Note that by the  assumptions we must have $2z>1$. 
 Let  $h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}=u\big|h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}\big|$ be the
-polar decomposition in $L^{2z}(\Me)$; then we have by using \eqref{eq:cond} again,}
+polar decomposition in $L^{2z}(\Me)$; then we have by using \eqref{eq:cond} again,
 \[
 u^*h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}=\mathcal
 E_{2z}\bigl(u^*h_\varphi^{\frac1{2r}}h_\psi^{\frac1{2p}}\bigr)=\mathcal
@@ -1289,11 +1303,11 @@ sufficient with respect to $\{\psi,\varphi\}$ by Proposition \ref{prop:universal
 
 \subsection{The case $\alpha>1$}
 
-We now turn to the case $\alpha>1$. %We will put $p:=\frac z\alpha$ and $q:=\frac z{\alpha-1}$,
-Then within the DPI bounds, we have $p=\frac z\alpha\in [1/2,1]$ and
-$q=\frac z{\alpha-1}\ge 1$, and we note that we always have $p<q$. Here we need to assume that
-$D_{\alpha,z}(\psi\|\ffi)<\infty$, so that by Lemma \ref{lemma:renyi_2z} there is some
-(unique) $y\in L^{2z}(\Me)$ such that
+We now turn to the case $\alpha>1$. {Assume that $(\alpha,z)$ is within the DPI bounds,
+that is, $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le\alpha$. [Better to write this assumption explicitly.] Then}
+we have $p=\frac z\alpha\in [1/2,1]$ and $q=\frac z{\alpha-1}\ge 1$, and we note that we always have $p<q$.
+Here we need to assume that $D_{\alpha,z}(\psi\|\ffi)<\infty$, so that by Lemma \ref{lemma:renyi_2z}
+there is some (unique) $y\in L^{2z}(\Me)$ such that
 \[
 h_{\psi}^{1\over 2p}=y h_\ffi^{1\over 2q}.
 \]
@@ -1303,7 +1317,7 @@ Q_{\alpha,z}(\psi\|\varphi) =\sup_{w\in
 L^q(\Me)^+}\bigl\{\alpha\Tr\bigl((ywy^*)^p\bigr)-(\alpha-1)\Tr\bigl(w^q\bigr)\bigr\}.
 \end{align}
 {Indeed, we note that $x$ in the proof of Theorem \ref{thm:variational} is $y^*y$ and
-$\Tr\bigl((x^{1\over2}wx^{1\over2})^p\bigr)$ in expression \eqref{F-1.3} is rewritten as
+$\Tr\bigl((x^{1\over2}wx^{1\over2})^p\bigr)$ in expression \eqref{F-2.3} is rewritten as
 $\Tr\bigl((|y|w|y|)^p\bigr)=\Tr\bigl((ywy^*)^p\bigr)$.}
 The supremum is attained at a unique point $\bar
 w=(y^*y)^{\alpha-1}\in L^q(\Me)^+$, uniqueness follows from strict concavity of the
@@ -1319,10 +1333,11 @@ Since $D_{\alpha,z}(\psi\|\ffi)<\infty$ implies that $s(\psi)\le s(\ffi)$, we ma
 $\ffi_0$ are faithful.
 
 
-\begin{lemma}\label{lemma:le} Let $\gamma:\Ne\to\Me$ be a normal positive unital map. 
+\begin{lemma}\label{lemma:le}
+{Let $(\alpha,z)$ be as assumed above.} Let $\gamma:\Ne\to\Me$ be a normal positive unital map. 
 Let $\gamma^*_{\ffi,q}:L^q(\Ne)\to L^q(\Me)$ be the contraction as in lemma \ref{lemma:pcontraction}. 
 Let $\bar w:=(y^*y)^{\alpha-1}\in L^q(\Me)$ and $\bar w_0:=(y_0^*y_0)^{\alpha-1}\in
-L^q(\Ne)$. Then equality in {the DPI for $D_{\alpha,z}(\psi\|\ffi)$} holds if and only if
+L^q(\Ne)$. Then equality in the DPI for $D_{\alpha,z}(\psi\|\ffi)$ holds if and only if
 \begin{equation}\label{eq:dpiw}
 \bar w=\gamma^*_{\ffi,q}(\bar w_0)\quad \text{and}\quad  
 \Tr\bigl(\bar w_0^q\bigr)=\Tr\bigl(\gamma^*_{\varphi,q}(\bar w_0)^q\bigr).
@@ -1370,12 +1385,12 @@ Q_{\alpha,z}(\psi_0\|\ffi_0)=\Tr\bigl((y_0^*y_0)^z\bigr)=\Tr\bigl(\bar w_0^q\big
 \end{proof}
 
 
-\begin{theorem}\label{thm:suffge1} \textcolor{orange}{Assume that $1<\alpha<z+1$}.
-Let $\gamma:\Ne\to \Me$ be a channel and let $\psi,\varphi\in \Me_*^+$ be such that 
+\begin{theorem}\label{thm:suffge1}
+{Let $\alpha>1$ and $\max\{\alpha/2,\alpha-1\}\le z\le\alpha$, and assume further that
+$\alpha<z+1$.} Let $\gamma:\Ne\to \Me$ be a channel and let $\psi,\varphi\in \Me_*^+$ be such that 
 $s(\psi)\le s(\ffi)$ and $D_{\alpha,z}(\psi\|\varphi)<\infty$. Then
 $D_{\alpha,z}(\psi\circ\gamma\|\ffi\circ\gamma)=D_{\alpha,z}(\psi\|\varphi)$ if and only if
 $\gamma$ is sufficient with respect to $\{\psi,\ffi\}$.
-
 \end{theorem}
 
 \begin{proof} Let $\bar w$ and $\bar w_0$ be as in Lemma \ref{lemma:le}. Let $\omega\in
@@ -1395,12 +1410,11 @@ and using also Lemma \ref{lemma:pcontraction}, we have
 (\gamma^*_\ffi)_*(h_{\omega_0})=h_\ffi^{\frac1{2\alpha}}\gamma^*_{\ffi,q}(\bar
 w_0)h_\ffi^{\frac1{2\alpha}}=h_\omega.
 \]
-Similarly as in the proof of Theorem \ref{thm:suffle1} \textcolor{orange}{(note that we
-have $q>1$ by the assumption)}, this shows that $\gamma$ is sufficient
+Similarly {to} the proof of Theorem \ref{thm:suffle1} (note that we
+have $q>1$ by the assumption), this shows that $\gamma$ is sufficient
 with respect to $\{\omega,\ffi\}$. Hence $\omega\circ \cE=\omega$, where $\cE$ is the
 conditional expectation onto the fixed points of $\gamma\circ\gamma^*_\ffi$.
-{\color{orange} Using again the
-extensions of $\cE$ and their properties in  Appendix \ref{app:lp},}
+Using again the extensions of $\cE$ and their properties in  Appendix \ref{app:lp},
 \[
 h_\varphi^{q-1\over2q}\bar
 wh_\varphi^{q-1\over 2q}=h_\omega=\cE(h_\omega)=h_\varphi^{q-1\over 2q}\cE(\bar
@@ -1421,6 +1435,15 @@ have $h_\psi\in L^1(\cE(\Me))$ so that $\psi\circ\cE=\psi$ and $\gamma$ is suffi
 respect to $\{\psi,\ffi\}$ by Proposition \ref{prop:universal}(ii). The converse is clear from DPI.
 \end{proof}
 
+{
+\begin{remark}
+We note that an extra assumption $\alpha<z+1$ is essential in Theorem \ref{thm:suffge1}.
+In fact, for the Petz-type R\'enyi divergence $D_{2,1}$ (i.e., in the case $\alpha=2$ and $z=1$),
+equality in the DPI does not necessarily imply the sufficiency of completely positive channels,
+as exemplified in \cite[Example 2.2]{jencova2010markov} and \cite[Example 4.8]{hiai2017different}
+in the finite dimensional case.
+\end{remark}}
+
 
 \section{Monotonicity in the parameter $z$}
 
@@ -1428,12 +1451,12 @@ It is well known \cite{berta2018renyi,hiai2018quantum,jencova2018renyi} that the
 $D_{\alpha,1}(\psi\|\ffi)$ is monotone increasing in $\alpha\in(0,1)\cup(1,\infty)$ and the sandwiched R\'enyi
 divergence $D_{\alpha,\alpha}(\psi\|\ffi)$ is monotone increasing in $\alpha\in[1/2,1)\cup(1,\infty)$. It is also
 known \cite{berta2018renyi,hiai2018quantum,jencova2018renyi} that
-\begin{align}\label{F-4.1}
+\begin{align}\label{F-5.1}
 \lim_{\alpha\nearrow1}D_{\alpha,1}(\psi\|\ffi)=\lim_{\alpha\nearrow1}D_{\alpha,\alpha}(\psi\|\ffi)
 =D_1(\psi\|\ffi),
 \end{align}
 and if $D_{\alpha,1}(\psi\|\ffi)<\infty$ (resp., $D_{\alpha,\alpha}(\psi\|\ffi)<\infty$) for some $\alpha>1$, then
-\begin{align}\label{F-4.2}
+\begin{align}\label{F-5.2}
 \lim_{\alpha\searrow1}D_{\alpha,1}(\psi\|\ffi)=D_1(\psi\|\ffi)\quad
 \Bigl(\mbox{resp.,}\ \lim_{\alpha\searrow1}D_{\alpha,\alpha}(\psi\|\ffi)=D_1(\psi\|\ffi)\Bigr),
 \end{align}
@@ -1463,7 +1486,7 @@ Radon--Nikodym derivative $d\psi/d\tau\in L^1(\Me,\tau)^+$. Below we use the sym
 denote $d\psi/d\tau$ as well. Note that $\tau$ on $\Me^+$ is naturally extended to the positive part
 $\widetilde\Me^+$ of the space $\widetilde\Me$ of $\tau$-measurable operators. By
 \cite[Proposition 2.7]{fack1986generalized} (also \cite[Proposition 4.20]{hiai2021lectures}) we then have
-\begin{align}\label{F-4.3}
+\begin{align}\label{F-5.3}
 \tau(a)=\int_0^\infty\mu_s(a)\,ds,\qquad a\in\widetilde\Me^+,
 \end{align}
 where $\mu_s(a)$ is the generalized $s$-number of $a$ (see \cite{fack1986generalized}).
@@ -1475,7 +1498,7 @@ self-adjoint operators affiliated with $\Me$.
 \begin{lemma}\label{L-4.2}
 Let $(\Me,\tau)$ be as mentioned above.
 For every $\psi,\ffi\in\Me_*^+$ with $\psi\ne0$ and for any $\alpha,z>0$ with $\alpha\ne1$,
-\begin{align}\label{F-4.4}
+\begin{align}\label{F-5.4}
 D_{\alpha,z}(\psi\|\ffi)&=\lim_{\eps\searrow0}D_{\alpha,z}(\psi\|\ffi+\eps\tau)\quad\mbox{increasingly},
 \end{align}
 and hence $D_{\alpha,z}(\psi\|\ffi)=\sup_{\eps>0}D_{\alpha,z}(\psi\|\ffi+\eps\tau)$.
@@ -1484,11 +1507,11 @@ and hence $D_{\alpha,z}(\psi\|\ffi)=\sup_{\eps>0}D_{\alpha,z}(\psi\|\ffi+\eps\ta
 \begin{proof}
 {\it Case $0<\alpha<1$}.\enspace
 We need to prove that
-\begin{align}\label{F-4.5}
+\begin{align}\label{F-5.5}
 Q_{\alpha,z}(\psi\|\ffi)&=\lim_{\eps\searrow0}Q_{\alpha,z}(\psi\|\ffi+\eps\tau)\quad\mbox{decreasingly}.
 \end{align}
-In the present setting we have by \eqref{F-4.3}
-\begin{align}\label{F-4.6}
+In the present setting we have by \eqref{F-5.3}
+\begin{align}\label{F-5.6}
 Q_{\alpha,z}(\psi\|\ffi)
 =\tau\Bigl(\bigl(h_\psi^{\alpha/2z}h_\ffi^{1-\alpha\over z}h_\psi^{\alpha/2z}\bigr)^z\Bigr)
 =\int_0^\infty\mu_s\Bigl(h_\psi^{\alpha/2z}h_\ffi^{1-\alpha\over z}h_\psi^{\alpha/2z}\Bigr)^z\,ds,
@@ -1507,11 +1530,11 @@ $\mu_s\bigl(h_\psi^{\alpha/2z}h_{\ffi+\eps\tau}^{1-\alpha\over z}h_\psi^{\alpha/
 \searrow\mu_s\bigl(h_\psi^{\alpha/2z}h_\ffi^{1-\alpha\over z}h_\psi^{\alpha/2z}\bigr)$
 as $\eps\searrow0$ for almost every $s>0$. Since
 $s\mapsto\mu_s\bigl(h_\psi^{\alpha/2z}h_{\ffi+\tau}^{1-\alpha\over z}h_\psi^{\alpha/2z}\bigr)$ is
-integrable on $(0,\infty)$, the Lebesgue convergence theorem yields \eqref{F-4.5}.
+integrable on $(0,\infty)$, the Lebesgue convergence theorem yields \eqref{F-5.5}.
 
 {\it Case $\alpha>1$}.\enspace
 We need to prove that
-\begin{align}\label{F-4.7}
+\begin{align}\label{F-5.7}
 Q_{\alpha,z}(\psi\|\ffi)&=\lim_{\eps\searrow0}Q_{\alpha,z}(\psi\|\ffi+\eps\tau)\quad\mbox{increasingly}.
 \end{align}
 For any $\eps>0$, since $h_{\ffi+\eps\tau}=h_\ffi+\eps\1$ has the bounded inverse
@@ -1521,8 +1544,8 @@ $x_\eps:=(h_\ffi+\eps\1)^{-{\alpha-1\over2z}}h_\psi^{\alpha/z}(h_\ffi+\eps\1)^{-
 \[
 h_\psi^{\alpha/z}=(h_\ffi+\eps\1)^{\alpha-1\over2z}x_\eps(h_\ffi+\eps\1)^{\alpha-1\over2z}.
 \]
-In the present setting one can write by \eqref{F-4.3}
-\begin{align}\label{F-4.8}
+In the present setting one can write by \eqref{F-5.3}
+\begin{align}\label{F-5.8}
 Q_{\alpha,z}(\psi\|\ffi+\eps\tau)=\tau(x_\eps^z)=\int_0^\infty\mu_s(x_\eps)^z\,ds\quad(\in[0,\infty]).
 \end{align}
 Let $0<\eps\le\eps'$. Since $(h_\ffi+\eps\1)^{-{\alpha-1\over z}}\ge(h_\ffi+\eps'\1)^{-{\alpha-1\over z}}$,
@@ -1540,7 +1563,7 @@ otherwise, $h_\psi^{\alpha/2z}s(\ffi)^\perp h_\psi^{\alpha/2z}=0$ so that $s(\ps
 \ge\eps^{-{\alpha-1\over z}}\mu_s\Bigl(h_\psi^{\alpha/2z}s(\ffi)^\perp h_\psi^{\alpha/2z}\Bigr)
 \nearrow\infty\quad\mbox{as $\eps\searrow0$}
 \]
-for all $s\in(0,s_0]$. Therefore, it follows from \eqref{F-4.8} that
+for all $s\in(0,s_0]$. Therefore, it follows from \eqref{F-5.8} that
 $Q_{\alpha,z}(\psi\|\ffi+\eps\tau)\nearrow\infty=Q_{\alpha,z}(\psi\|\ffi)$.
 
 Next, assume that $s(\psi)\le s(\ffi)$. Take the spectral decomposition $h_\ffi=\int_0^\infty t\,de_t$ and
@@ -1555,8 +1578,8 @@ h_\psi^{\alpha/z}=s(\ffi)h_\psi^{\alpha/z}s(\ffi)
 =h_\ffi^{\alpha-1\over2z}y^{1/2}h_\psi^{\alpha/z}y^{1/2}h_\ffi^{\alpha-1\over2z}
 =h_\ffi^{\alpha-1\over2z}xh_\ffi^{\alpha-1\over2z},
 \]
-one has, similarly to \eqref{F-4.8},
-\begin{align}\label{F-4.9}
+one has, similarly to \eqref{F-5.8},
+\begin{align}\label{F-5.9}
 Q_{\alpha,z}(\psi\|\ffi)=\tau(x^z)=\int_0^\infty\mu_s(x)^z\,ds.
 \end{align}
 We write $(h_\ffi+\eps\1)^{-{\alpha-1\over z}}s(\ffi)=\int_{(0,\infty)}(t+\eps)^{-{\alpha-1\over z}}\,de_t$,
@@ -1571,8 +1594,8 @@ we have by \cite[Lemma 3.4]{fack1986generalized}
 \mu_s(x_\eps)=\mu_s\Bigl(h_\psi^{\alpha/2z}(h_\ffi+\eps\1)^{-{\alpha-1\over z}}h_\psi^{\alpha/2z}\Bigr)
 \nearrow\mu_s\Bigl(h_\psi^{\alpha/2z}yh_\psi^{\alpha/2z}\Bigr)=\mu_s(x)
 \]
-for all $s>0$. Therefore, by \eqref{F-4.8} and \eqref{F-4.9} the monotone convergence theorem yields
-\eqref{F-4.7}.
+for all $s>0$. Therefore, by \eqref{F-5.8} and \eqref{F-5.9} the monotone convergence theorem yields
+\eqref{F-5.7}.
 \end{proof}
 
 \begin{lemma}\label{L-4.3}
@@ -1609,11 +1632,11 @@ Q_{\alpha,\infty}(\psi\|\ffi)&:=\lim_{z\to\infty}Q_{\alpha,z}(\psi\|\ffi)
 D_{\alpha,\infty}(\psi\|\ffi)&:={1\over\alpha-1}\log{Q_{\alpha,\infty}(\psi\|\ffi)\over\psi(\1)} \nonumber\\
 &\ =\lim_{z\to\infty}D_{\alpha,z}(\psi\|\ffi)
 =\begin{cases}\sup_{z>0}D_{\alpha,z}(\psi\|\ffi), & \text{$0<\alpha<1$},\\
-\inf_{z>0}D_{\alpha,z}(\psi\|\ffi), & \text{$\alpha>1$}.\end{cases} \label{F-4.10}
+\inf_{z>0}D_{\alpha,z}(\psi\|\ffi), & \text{$\alpha>1$}.\end{cases} \label{F-5.10}
 \end{align}
 If $h_\psi,h_\ffi\in\Me^{++}$ (i.e., $\lambda^{-1}\tau\le\psi,\ffi\le\lambda\tau$ for some $\lambda>0$), then
 the Lie--Trotter formula gives
-\begin{align}\label{F-4.11}
+\begin{align}\label{F-5.11}
 Q_{\alpha,\infty}(\psi\|\ffi)=\tau\bigl(\exp(\alpha\log h_\psi+(1-\alpha)\log h_\ffi)\bigr).
 \end{align}
 
@@ -1630,7 +1653,7 @@ D_{\alpha,z}(\psi\|\ffi)\ge D_1(\psi\|\ffi), & \text{$\alpha>1$}.
 \begin{proof}
 First assume that $h_\psi,h_\ffi\in\Me^{++}$. Set self-adjoint $H:=\log h_\psi$ and $K:=\log h_\ffi$ in $\Me$
 and define $F(\alpha):=\log\tau\bigl(e^{\alpha H+(1-\alpha)K}\bigr)$ for $\alpha>0$.
-Then by \eqref{F-4.11}, $F(\alpha)=\log Q_{\alpha,\infty}(\psi\|\ffi)$ for all $\alpha\in(0,\infty)\setminus\{1\}$,
+Then by \eqref{F-5.11}, $F(\alpha)=\log Q_{\alpha,\infty}(\psi\|\ffi)$ for all $\alpha\in(0,\infty)\setminus\{1\}$,
 and we compute
 \begin{align*}
 F'(\alpha)&={\tau\bigl(e^{\alpha H+(1-\alpha)K}(H-K)\bigr)\over\tau\bigl(e^{\alpha H+(1-\alpha)K}\bigr)}, \\
@@ -1648,7 +1671,7 @@ is increasing in $\alpha\in(0,\infty)$, where for $\alpha=1$ the above right-han
 F'(1)={\tau(e^H(H-K))\over\tau(e^H)}={\tau\bigl(h_\psi(\log h_\psi-\log h_\ffi)\bigr)\over\tau(h_\psi)}
 =D_1(\psi\|\ffi).
 \]
-Hence by \eqref{F-4.10} the assertion holds when $h_\psi,h_\ffi\in\Me^{++}$. Below we extend this to
+Hence by \eqref{F-5.10} the assertion holds when $h_\psi,h_\ffi\in\Me^{++}$. Below we extend this to
 general $\psi,\ffi\in\Me_*^+$.
 
 {\it Case $0<\alpha<1$}.\enspace
@@ -1676,14 +1699,14 @@ $h_\psi=\int_0^\infty t\,e_t^\psi$ and $h_\ffi=\int_0^\infty t\,de_t^\ffi$ are t
 (1)\enspace
 Assume that $h_\psi\in\Me^+$ and $h_\ffi\in\Me^{++}$. Set $\psi_n\in\Me_*^+$ by
 $h_{\psi_n}=(1/n)e_{[0,1/n]}^\psi+\int_{(1/n,\infty)}t\,de_t^\psi$ ($\in\Me^{++}$). Since
-$h_{\psi_n}^{\alpha/z}\searrow h_\psi^{\alpha/z}$ in the operator norm, we have by \eqref{F-4.6} and
+$h_{\psi_n}^{\alpha/z}\searrow h_\psi^{\alpha/z}$ in the operator norm, we have by \eqref{F-5.6} and
 \cite[Lemma 3.4]{fack1986generalized}
 \begin{align}
 Q_{\alpha,z}(\psi\|\ffi)&=\int_0^\infty\mu_s\Bigl((h_\ffi^{-1})^{\alpha-1\over2z}h_\psi^{\alpha/z}
 (h_\ffi^{-1})^{\alpha-1\over2z}\Bigr)^z\,ds \nonumber\\
 &=\lim_{n\to\infty}\int_0^\infty\mu_s\Bigl((h_\ffi^{-1})^{\alpha-1\over2z}h_{\psi_n}^{\alpha/z}
 (h_\ffi^{-1})^{\alpha-1\over2z}\Bigr)^z\,ds
-=\lim_{n\to\infty}Q_{\alpha,z}(\psi_n\|\ffi). \label{F-4.12}
+=\lim_{n\to\infty}Q_{\alpha,z}(\psi_n\|\ffi). \label{F-5.12}
 \end{align}
 From this and the lower semi-continuity of $D_1$ the extension holds in this case.
 
@@ -1691,7 +1714,7 @@ From this and the lower semi-continuity of $D_1$ the extension holds in this cas
 Assume that $h_\psi\in\Me^+$ and $h_\ffi\ge\delta\1$ for some $\delta>0$. Set $\ffi_n\in\Me_*^+$
 by $h_{\ffi_n}=\int_{[\delta,n]}t\,de_t^\ffi+ne_{(n,\infty)}^\ffi$ ($\in\Me^{++}$). Since
 $h_{\ffi_n}^{-{\alpha-1\over z}}\searrow h_\ffi^{-{\alpha-1\over z}}$ in the operator norm, we have by
-\eqref{F-4.6} and \cite[Lemma 3.4]{fack1986generalized} again
+\eqref{F-5.6} and \cite[Lemma 3.4]{fack1986generalized} again
 \begin{align*}
 Q_{\alpha,z}(\psi\|\ffi)&=\int_0^\infty\mu_s\Bigl(h_\psi^{\alpha/2z}h_\ffi^{-{\alpha-1\over z}}
 h_\psi^{\alpha/2z}\Bigr)^z\,ds \\
@@ -1704,7 +1727,7 @@ From this and (1) above the extension holds in this case too.
 (3)\enspace
 Assume that $\psi$ is general and $\ffi\ge\delta\tau$ for some $\delta>0$. Set $\psi_n\in\Me_*^+$
 by $h_{\psi_n}=\int_{[0,n]}t\,de_t^\psi+ne_{(n,\infty)}^\ffi$ ($\in\Me^+$). Since
-$h_{\psi_n}^{\alpha/z}\nearrow h_\psi^{\alpha/z}$ in the measure topology, one can argue as in \eqref{F-4.12}
+$h_{\psi_n}^{\alpha/z}\nearrow h_\psi^{\alpha/z}$ in the measure topology, one can argue as in \eqref{F-5.12}
 with use of the monotone convergence theorem to see from (2) that the extension holds in this case too.
 
 (4)\enspace
@@ -1725,11 +1748,11 @@ D_{\alpha,z}(\psi\|\ffi)\le D_{\alpha,z'}(\psi\|\ffi)\le D_1(\psi\|\ffi)
 \le D_{\alpha',z'}(\psi\|\ffi)\le D_{\alpha',z}(\psi\|\ffi).
 \]
 \item[(ii)] For any $z\in[1,\infty]$,
-\begin{align}\label{F-4.13}
+\begin{align}\label{F-5.13}
 \lim_{\alpha\nearrow1}D_{\alpha,z}(\psi\|\ffi)=D_1(\psi\|\ffi).
 \end{align}
 \item[(iii)] If $D_{\alpha,\alpha}(\psi\|\ffi)<\infty$ for some $\alpha>1$, then for any $z\in(1,\infty]$,
-\begin{align}\label{F-4.14}
+\begin{align}\label{F-5.14}
 \lim_{\alpha\searrow1}D_{\alpha,z}(\psi\|\ffi)=D_1(\psi\|\ffi).
 \end{align}
 \end{itemize}
@@ -1743,8 +1766,8 @@ For every $z\in[1,\infty]$ and $\alpha\in(0,1)$, it follows from (i) above that
 \[
 D_{\alpha,1}(\psi\|\ffi)\le D_{\alpha,z}(\psi\|\ffi)\le D_1(\psi\|\ffi).
 \]
-Hence \eqref{F-4.13} follows since it holds for $D_{\alpha,1}$ by
-\cite[Proposition 5.3(3)]{hiai2018quantum}, as stated in \eqref{F-4.1}.
+Hence \eqref{F-5.13} follows since it holds for $D_{\alpha,1}$ by
+\cite[Proposition 5.3(3)]{hiai2018quantum}, as stated in \eqref{F-5.1}.
 
 (iii)\enspace
 Assume that $D_{\alpha,\alpha}(\psi\|\ffi)<\infty$ for some $\alpha>1$. For every $z\in(1,\infty]$
@@ -1752,17 +1775,17 @@ and $\alpha\in(1,z]$, it follows from (i) that
 \[
 D_1(\psi\|\ffi)\le D_{\alpha,z}(\psi\|\ffi)\le D_{\alpha,\alpha}(\psi\|\ffi).
 \]
-Hence \eqref{F-4.14} follows since it holds for $D_{\alpha,\alpha}$ by
-\cite[Proposition 3.8(ii)]{jencova2018renyi}, as stated in \eqref{F-4.2}.
+Hence \eqref{F-5.14} follows since it holds for $D_{\alpha,\alpha}$ by
+\cite[Proposition 3.8(ii)]{jencova2018renyi}, as stated in \eqref{F-5.2}.
 \end{proof}}
 
 In this subsection, in the specialized setting of finite von Neumann algebras, we have considered the
-monotonicity of $D_{\alpha,z}$ in the parameter $z$ in an essentially similar way to the finite-dimensional
-case \cite{lin2015investigating,mosonyi2023somecontinuity}. \textcolor{orange}{By  Theorem
+monotonicity of $D_{\alpha,z}$ in the parameter $z$ in an essentially similar way to the finite dimensional
+case \cite{lin2015investigating,mosonyi2023somecontinuity}. By Theorem
 \ref{T-4.1}, for $0<\alpha<1$ this monotonicity holds in general von Neumann algebras. In the next
 subsection, we will extend it to this general setting also for $\alpha>1$, under a
 restriction on $z$, by using the Haagerup reduction theorem and the complex interpolation method. Furthermore,
-we will extend the  limits given in \eqref{F-4.13} and \eqref{F-4.14} in Sec.~5.3.}
+we will extend the  limits given in \eqref{F-5.13} and \eqref{F-5.14} in Sec.~5.3.
 
 
 \subsection{The general von Neumann algebra case}\label{Sec-4.2}
@@ -1824,7 +1847,7 @@ for simplicity the notation $L^p_L$ for Kosaki's left $L^p$-space $L^p(\Me,\ffi)
 see \eqref{F-C.2} in Appendix \ref{Appen-Kosaki-Lp}.
 
 Consider the function
-\begin{align}\label{F-4.15}
+\begin{align}\label{F-5.15}
 f(w):=h_{\psi_0}^{{\alpha\over2z}w}eh_\ffi^{1-{\alpha\over2z}w},\qquad w\in S,
 \end{align}
 where $S:=\{w\in\bC:0\le\Re w\le1\}$. Then, for $w=s+it$ with $0\le s\le1$ and $t\in\bR$, since
@@ -1894,30 +1917,30 @@ To prove this, we obtain a certain ``log-majorization'' result for positive $\ta
 operators, which might be meaningful in its own. Assume that $(\cR,\tau)$ be a semi-finite von Neumann
 algebra $\cR$ with a faithful normal semi-finite trace $\tau$. Let $\widetilde\cR$ denote the space of
 $\tau$-measurable operators affiliated with $\cR$. We consider operators $a\in\widetilde\cR$ satisfying
-\begin{align}\label{F-5.1}
+\begin{align}\label{F-6.1}
 \mbox{$a\in\cR$\ \ or\ \ $\mu_t(a)\le Ct^{-\gamma}$ ($t>0$) for some $C,\gamma>0$,}
 \end{align}
 where $\mu_t(a)$, $t>0$, is the ($t$th) \emph{generalized $s$-number} of $a$. 
-For each $a\in\widetilde\cR$ satisfying \eqref{F-5.1} we define (see \cite{fack1986generalized})
+For each $a\in\widetilde\cR$ satisfying \eqref{F-6.1} we define (see \cite{fack1986generalized})
 \[
 \Lambda_t(a):=\exp\int_0^t\log\mu_s(a)\,ds,\qquad t>0.
 \]
 Note \cite[]{fack1986generalized} that $\Lambda_t(a)\in[0,\infty)$, $t>0$, are well defined whenever $a$
-satisfies \eqref{F-5.1}. Also, note that if $a,b\in\widetilde\cR$ satisfy \eqref{F-5.1}, then $|a|^p$ $(p>0$)
-and $ab$ satisfy \eqref{F-5.1} too, as it is clear since $\mu_t(ab)\le\|a\|\mu_t(b)$ for $a\in\cR$,
+satisfies \eqref{F-6.1}. Also, note that if $a,b\in\widetilde\cR$ satisfy \eqref{F-6.1}, then $|a|^p$ $(p>0$)
+and $ab$ satisfy \eqref{F-6.1} too, as it is clear since $\mu_t(ab)\le\|a\|\mu_t(b)$ for $a\in\cR$,
 $\mu_t(|a|^p)=\mu_t(a)^p$, and $\mu_t(ab)\le\mu_{t/2}(a)\mu_{t/2}(b)$; see
 \cite[Lemma 2.5]{fack1986generalized}.
 
 \begin{prop}\label{P-5.2}
-Let $a_j,b_j\in\widetilde\cR^+$, $j=1,2$, satisfying \eqref{F-5.1} and assume that $a_1a_2=a_2a_1$
+Let $a_j,b_j\in\widetilde\cR^+$, $j=1,2$, satisfying \eqref{F-6.1} and assume that $a_1a_2=a_2a_1$
 and $b_1b_2=b_2b_1$. Then for every $\theta\in(0,1)$ and any $t>0$,
-\begin{align}\label{F-5.2}
+\begin{align}\label{F-6.2}
 \Lambda_t\Bigl((a_1^\theta a_2^{1-\theta})^{1/2}(b_1^\theta b_2^{1-\theta})
 (a_1^\theta a_2^{1-\theta})^{1/2}\Bigr)
 &\le\Lambda_t\bigl(a_1^\theta b_1^\theta\bigr)\Lambda_t\bigl(a_2^{1-\theta}b_2^{1-\theta}\bigr).
 \end{align}
 In particular,
-\begin{align}\label{F-5.3}
+\begin{align}\label{F-6.3}
 \Lambda_t\Bigl((a_1^{1/2}a_2^{1/2})^{1/2}(b_1^{1/2}b_2^{1/2})(a_1^{1/2}a_2^{1/2})^{1/2}\Bigr)
 \le\Lambda_t\bigl(a_1^{1/2}b_1a_1^{1/2}\bigr)^{1/2}\Lambda_t\bigl(a_2^{1/2}b_2a_2^{1/2}\bigr)^{1/2}.
 \end{align}
@@ -1936,7 +1959,7 @@ Let $\theta\in(0,1)$ and $t>0$ be arbitrary. For any $k\in\bN$ we note that
 b_1^\theta(a_1^\theta a_2^{1-\theta})^{1/2}.
 \end{align*}
 Since $(a_1^\theta a_2^{1-\theta})^{1/2}b_2^{1-\theta}$, $b_1^\theta a_1^\theta$,
-etc.\ are $\tau$-measurable operators satisfying \eqref{F-5.1}, we have
+etc.\ are $\tau$-measurable operators satisfying \eqref{F-6.1}, we have
 by \cite[Theorem 4.2(ii)]{fack1986generalized}
 \begin{align*}
 &\Lambda_t\bigl((a_1^\theta a_2^{1-\theta})^{1/2}(b_1^\theta b_2^{1-\theta})
@@ -1953,14 +1976,14 @@ so that
 \Lambda_t(b_1^\theta a_1^\theta)^{1-{1\over k}}\Lambda_t\bigl(a_2^{1-\theta}b_2^{1-\theta}\bigr)^{1-{1\over k}}
 \Lambda_t\bigl(b_1^\theta(a_1^\theta a_2^{1-\theta})^{1/2}\bigr)^{1/k}.
 \end{align*}
-Letting $k\to\infty$ gives \eqref{F-5.2}. When $\theta=1/2$, \eqref{F-5.2}  is rewritten as \eqref{F-5.3}.
+Letting $k\to\infty$ gives \eqref{F-6.2}. When $\theta=1/2$, \eqref{F-6.2}  is rewritten as \eqref{F-6.3}.
 \end{proof}
 
 
 
 \begin{remark}\label{R-5.3}
 Since $\Lambda_t(a_j^rb_j^r)\le\Lambda_t(a_jb_j)^r$ for any $r\in(0,1)$ by \cite{kosaki1992aninequality},
-inequality \eqref{F-5.2} implies that
+inequality \eqref{F-6.2} implies that
 \[
 \Lambda_t\bigl((a_1^\theta a_2^{1-\theta})^{1/2}(b_1^\theta b_2^{1-\theta})
 (a_1^\theta a_2^{1-\theta})^{1/2}\bigr)
@@ -1975,7 +1998,7 @@ We are indeed interested in whether a stronger inequality
 \Lambda_t\bigl(a_2^{1/2}b_2a_2^{1/2}\bigr)^{1-\theta}
 \]
 hold or not in the situation of Proposition \ref{P-5.2}. The last inequality is known to hold in the
-finite-dimensional setting, as shown in \cite[Theorem 2.1]{hiai2024logmajorization}.
+finite dimensional setting, as shown in \cite[Theorem 2.1]{hiai2024logmajorization}.
 \end{remark}
 
 \begin{lemma}\label{L-5.4}
@@ -2013,15 +2036,15 @@ $\alpha\mapsto D_{\alpha,z}(\psi\|\ffi)$ is continuous on $(0,1)$ too.
 Let $\alpha_1,\alpha_2\in(0,1)$ and $z>0$. Let $(\cR,\tau)$ be as in the proof of Lemma \ref{L-5.4}. Consider
 $a_j:=h_\psi^{\alpha_j/z}$ and $b_j:=h_\ffi^{(1-\alpha_j)/z}$ in $\widetilde\cR^+$. Since
 $a_j\in L^{z/\alpha_j}(\Me)$, we note by \cite[Lemma 4.8]{fack1986generalized} that
-$\mu_t(a_j)=t^{-\alpha_j/z}\|a_j\|_{z/\alpha_j}$, $t>0$, and hence $a_j$ satisfies \eqref{F-5.1}. Similarly, $b_j$
-does so. Therefore, we can apply \eqref{F-5.3} to $a_j,b_j$ with $t=1$ to obtain
+$\mu_t(a_j)=t^{-\alpha_j/z}\|a_j\|_{z/\alpha_j}$, $t>0$, and hence $a_j$ satisfies \eqref{F-6.1}. Similarly, $b_j$
+does so. Therefore, we can apply \eqref{F-6.3} to $a_j,b_j$ with $t=1$ to obtain
 \begin{align}
 &\int_0^1\log\mu_s\Bigl(h_\psi^{\alpha_1+\alpha_2\over4z}
 h_\ffi^{2-\alpha_1-\alpha_2\over2z}h_\psi^{\alpha_1+\alpha_2\over4z}\Bigr)\,ds \nonumber\\
 &\quad\le{1\over2}\biggl[\int_0^1\log\mu_s\Bigl(h_\psi^{\alpha_1\over2z}
 h_\ffi^{1-\alpha_1\over z}h_\psi^{\alpha_1\over2z}\Bigr)\,ds
 +\int_0^1\log\mu_s\Bigl(h_\psi^{\alpha_2\over2z}
-h_\ffi^{1-\alpha_2\over z}h_\psi^{\alpha_2\over2z}\Bigr)\,ds\biggr]. \label{F-5.4}
+h_\ffi^{1-\alpha_2\over z}h_\psi^{\alpha_2\over2z}\Bigr)\,ds\biggr]. \label{F-6.4}
 \end{align}
 Since $h_\psi^{\alpha_1+\alpha_2\over4z}h_\ffi^{2-\alpha_1-\alpha_2\over2z}h_\psi^{\alpha_1+\alpha_2\over4z}$
 is in $L^z(\Me)$, we have by \cite[Lemma 4.8]{fack1986generalized} again
@@ -2032,17 +2055,17 @@ h_\ffi^{2-\alpha_1-\alpha_2\over2z}h_\psi^{\alpha_1+\alpha_2\over4z}\Bigr)
 h_\ffi^{2-\alpha_1-\alpha_2\over2z}h_\psi^{\alpha_1+\alpha_2\over4z}\Big\|_z
 \]
 so that
-\begin{align}\label{F-5.5}
+\begin{align}\label{F-6.5}
 \log\mu_s\Bigl(h_\psi^{\alpha_1+\alpha_2\over4z}
 h_\ffi^{2-\alpha_1-\alpha_2\over2z}h_\psi^{\alpha_1+\alpha_2\over4z}\Bigr)^z
 =-\log s+\log Q_{{\alpha_1+\alpha_2\over2},z}(\psi\|\ffi).
 \end{align}
 Similarly,
-\begin{align}\label{F-5.6}
+\begin{align}\label{F-6.6}
 \log\mu_s\Bigl(h_\psi^{\alpha_j\over2z}h_\ffi^{1-\alpha_j\over z}h_\psi^{\alpha_j\over2z}\Bigr)^z
 =-\log s+\log Q_{\alpha_j,z}(\psi\|\ffi),\qquad j=1,2.
 \end{align}
-Multiply $z$ to both sides of \eqref{F-5.4} and insert \eqref{F-5.5} and \eqref{F-5.6} into it. Since
+Multiply $z$ to both sides of \eqref{F-6.4} and insert \eqref{F-6.5} and \eqref{F-6.6} into it. Since
 $\int_0^1(-\log s)\,ds=1$, we then arrive at
 \[
 1+\log Q_{{\alpha_1+\alpha_2\over2},z}(\psi\|\ffi)
@@ -2069,7 +2092,7 @@ L^p_L:=L^p(\Me,\ffi_0)_L,\qquad L^p_R:=L^p(\Me,\psi_0)_R,\qquad
 L^p_\eta:=L^p(\Me,\psi_0,\ffi_0)_\eta,
 \]
 (see \eqref{F-C.1}--\eqref{F-C.3} in Appendix \ref{Appen-Kosaki-Lp}). Then by \eqref{F-C.6},
-\begin{align}\label{F-5.7}
+\begin{align}\label{F-6.7}
 L^p_\eta=C_\eta(L^p_L,L^p_R)
 \end{align}
 with equal norms. We divide the proof into the cases $z\ge1$ and $1/2<z<1$.
@@ -2085,14 +2108,14 @@ h_{\ffi_0}^{1-\eta\over q},
 we have $h_0\in L^p_\eta$ and $\|h_0\|_{p,\psi_0,\ffi_0,\eta}^p=Q_{\alpha,z}(\psi\|\ffi)$. 
 Now let $\alpha_1,\alpha_2\in(0,1)$. For each $\theta\in(0,1)$ put
 $\alpha:=(1-\theta)\alpha_1+\theta\alpha_2$ and $\eta_j:={z-\alpha_j\over2z-1}$, $j=1,2$, so that
-$\eta:={z-\alpha\over2z-1}=(1-\theta)\eta_1+\theta\eta_2$. From \eqref{F-5.7} and the reiteration
+$\eta:={z-\alpha\over2z-1}=(1-\theta)\eta_1+\theta\eta_2$. From \eqref{F-6.7} and the reiteration
 theorem, note that
-\begin{align}\label{F-5.8}
+\begin{align}\label{F-6.8}
 L^p_\eta=C_\theta(L^p_{\eta_1},L^p_{\eta_2}).
 \end{align}
 Since $h_0\in L^p_{\eta_1}\cap L^p_{\eta_2}$ as shown above, $\|h_0\|_{p,\psi_0,\ffi_0,\eta}\le
 \|h_0\|_{p,\psi_0,\ffi_0,\eta_1}^{1-\theta}\|h_0\|_{p,\psi_0,\ffi_0,\eta_2}^\theta$, which implies that
-\begin{align}\label{F-5.9}
+\begin{align}\label{F-6.9}
 Q_{\alpha,z}(\psi\|\ffi)\le Q_{\alpha_1,z}(\psi\|\ffi)^{1-\theta}Q_{\alpha_2,z}(\psi\|\ffi)^\theta,
 \end{align}
 as desired.
@@ -2111,14 +2134,14 @@ and
 \]
 \end{itemize}
 Consider the function $f:S\to L^1(\Me)$ defined by
-\begin{align}\label{F-5.10}
+\begin{align}\label{F-6.10}
 f(w):=h_\psi^{{w\over q}+{1-w\over p}}h_\ffi^{{1-w\over q}+{w\over p}},\qquad w\in S.
 \end{align}
 Then we can manage to show that $f\in\tilde \cF(L^p_L,L^p_R)$ and for each $\eta\in(0,1)$ and
 $t\in\bR$, $f(\eta+it)\in L^p_\eta$ and $\|f(\eta+it)\|_{p,\ffi_0,\psi_0,\eta}^p=Q_{1-\eta,z}(\psi\|\ffi)$.
 Now let $\alpha_1,\alpha_2\in(0,1)$. For each $\theta\in(0,1)$ let
 $\alpha:=(1-\theta)\alpha_1+\theta\alpha_2$ and $\eta_j:=1-\alpha_j$, $j=1,2$, so that
-$\eta:=1-\alpha=(1-\theta)\eta_1+\theta\eta_2$. With $f$ given in \eqref{F-5.10}
+$\eta:=1-\alpha=(1-\theta)\eta_1+\theta\eta_2$. With $f$ given in \eqref{F-6.10}
 define $f_1(w):=f((1-w)\eta_1+w\eta_2)$; then we have $f_1\in\tilde \cF(L^p_{\eta_1},L^p_{\eta_2})$.
 Since $L^p_\eta=C_\theta(L^p_{\eta_1},L^p_{\eta_2})$ by the reiteration theorem,
 \[
@@ -2149,7 +2172,7 @@ Q_{1-\eta_1,z}(\psi\|\ffi)^{1-\theta}Q_{1-\eta_2,z}(\psi\|\ffi)^\theta$, as desi
 %\]
 %(see \eqref{F-C.1}--\eqref{F-C.3} in Appendix \ref{Appen-Kosaki-Lp}). Then, by
 %\cite[Theorem 11.1]{kosaki1984applications} (also see \eqref{F-C.6}) note that
-%\begin{align}\label{F-5.7}
+%\begin{align}\label{F-6.7}
 %L^p_\eta=C_\eta(L^p_L,L^p_R)
 %\end{align}
 %with equal norms. We divide the second proof into the cases $z\ge1$ and $1/2<z<1$.
@@ -2167,27 +2190,27 @@ Q_{1-\eta_1,z}(\psi\|\ffi)^{1-\theta}Q_{1-\eta_2,z}(\psi\|\ffi)^\theta$, as desi
 %=h_{\psi_0}^{\eta\over q}\Bigl(h_\psi^{\alpha\over2z}h_\ffi^{1-\alpha\over2z}\Bigr)h_{\ffi_0}^{1-\eta\over q},
 %\]
 %we have $h_0\in L^p_\eta$ and
-%\begin{align}\label{F-5.9}
+%\begin{align}\label{F-6.9}
 %\|h_0\|_{p,\psi_0,\ffi_0,\eta}^p=\Big\|h_\psi^{\alpha\over2z}h_\ffi^{1-\alpha\over2z}\Big\|_p^p
 %=\Big\|h_\psi^{\alpha\over2z}h_\ffi^{1-\alpha\over2z}\Big\|_{2z}^{2z}=Q_{\alpha,z}(\psi\|\ffi).
 %\end{align}
 %Now let $\alpha_1,\alpha_2\in(0,1)$ and for each $\theta\in(0,1)$ let
 %$\alpha:=(1-\theta)\alpha_1+\theta\alpha_2$. Put $\eta_j:={z-\alpha_j\over2z-1}$, $j=1,2$, so that
 %$\eta:={z-\alpha\over2z-1}=(1-\theta)\eta_1+\theta\eta_2$. To show (1), it suffices to prove that
-%\begin{align}\label{F-5.8}
+%\begin{align}\label{F-6.8}
 %Q_{\alpha,z}(\psi\|\ffi)\le Q_{\alpha_1,z}(\psi\|\ffi)^{1-\theta}Q_{\alpha_2,z}(\psi\|\ffi)^\theta.
 %\end{align}
-%From the complex interpolation space in \eqref{F-5.7} and the reiteration theorem \cite{cwikel1978complex},
+%From the complex interpolation space in \eqref{F-6.7} and the reiteration theorem \cite{cwikel1978complex},
 %we have
-%\begin{align}\label{F-5.10}
+%\begin{align}\label{F-6.10}
 %L^p_\eta=C_\theta(L^p_{\eta_1},L^p_{\eta_2}).
 %\end{align}
 %Since $h_0\in L^p_{\eta_1}\cap L^p_{\eta_2}$ as shown above, it follows that
-%\begin{align}\label{F-5.11}
+%\begin{align}\label{F-6.11}
 %\|h_0\|_{p,\psi_0,\ffi_0,\eta}\le\|h_0\|_{p,\psi_0,\ffi_0,\eta_1}^{1-\theta}\|h_0\|_{p,\psi_0,\ffi_0,\eta_2}^\theta.
 %\end{align}
 %(Indeed, this is a special case of the Riesz--Thorin theorem applied to the map $T(z):=zh_0$, $z\in\bC$.)
-%From \eqref{F-5.11} and \eqref{F-5.9} (for $\eta,\eta_1,\eta_2$) we have \eqref{F-5.8}, so that (1) has been
+%From \eqref{F-6.11} and \eqref{F-6.9} (for $\eta,\eta_1,\eta_2$) we have \eqref{F-6.8}, so that (1) has been
 %shown. Moreover, (1) immediately implies (2) as in the last part of the first proof of Theorem \ref{T-5.1}.
 %{\color{red}[I don't see how to modify Remark 2 in your notes (Jan.\ 10, 2024) in the case $\alpha<1$. On
 %the other hand, (2) is immediate from (1) in this case, as in the last part of the first proof of Th.~\ref{T-5.1}.]}
@@ -2221,7 +2244,7 @@ Q_{1-\eta_1,z}(\psi\|\ffi)^{1-\theta}Q_{1-\eta_2,z}(\psi\|\ffi)^\theta$, as desi
 %$\delta\to 0$.)]}
 %
 %Consider the function $f:S\to L^1(\Me)$ defined by
-%\begin{align}\label{F-5.10}
+%\begin{align}\label{F-6.10}
 %f(w):=h_\psi^{{w\over q}+{1-w\over p}}h_\ffi^{{1-w\over q}+{w\over p}},\qquad w\in S.
 %\end{align}
 %The next lemma shows that $f$ has values in $\Sigma$.
@@ -2279,7 +2302,7 @@ Q_{1-\eta_1,z}(\psi\|\ffi)^{1-\theta}Q_{1-\eta_2,z}(\psi\|\ffi)^\theta$, as desi
 %{\bf The second proof of Theorem \ref{T-5.1} when $1/2<z<1$.}\enspace
 %Let $\alpha_1,\alpha_2\in(0,1)$ and for each $\theta\in(0,1)$ let $\alpha:=(1-\theta)\alpha_1+\theta\alpha_2$.
 %Put $\eta_j:=1-\alpha_j$, $j=1,2$, so that $\eta:=1-\alpha=(1-\theta)\eta_1+\theta\eta_2$. With the function
-%$f$ given in \eqref{F-5.10} define $f_1(w):=f((1-w)\eta_1+w\eta_2)$, which belongs to the set
+%$f$ given in \eqref{F-6.10} define $f_1(w):=f((1-w)\eta_1+w\eta_2)$, which belongs to the set
 %\textcolor{orange}{$\tilde \cF(L^p_{\eta_1},L^p_{\eta_2})$} %(see \cite[Definition 1.1]{kosaki1984applications}) 
 %by Lemma \ref{L-5.5} and \eqref{F-C.6}. Since $L^p_\eta=C_\theta(L^p_{\eta_1},L^p_{\eta_2})$ by the
 %\textcolor{orange}{reiteration} theorem, we have
@@ -2301,8 +2324,9 @@ Q_{1-\eta_1,z}(\psi\|\ffi)^{1-\theta}Q_{1-\eta_2,z}(\psi\|\ffi)^\theta$, as desi
 
 \subsection{The case $1<\alpha\le2z$}
 
-In this subsection let us show monotonicity of $D_{\alpha,z}$ in the parameter $\alpha\in(1,2z]$ when $z>1/2$,
-based on the complex interpolation {\color{orange} in a similar way as discussed in Remark \ref{remark:2nd-proof}.}
+In this subsection let us show monotonicity of $D_{\alpha,z}$ in the parameter $\alpha\in(1,2z]$ when
+$z>1/2$, based on the complex interpolation in a similar way {to arguments} in
+Remark \ref{remark:2nd-proof}.
 
 \begin{theorem}\label{T-5.6}
 Let $\psi,\ffi\in\Me_*^+$ and $z>1/2$. Then we have
@@ -2330,9 +2354,9 @@ where for $\eta=0$ ($\alpha=2z$) the left-hand side is $\|h_\psi\|_{L^p_L}^p$. N
 $\alpha_1,\alpha_2\in(1,2z]$ and $\alpha=(1-\theta)\alpha_1+\theta\alpha_2$ for any $\theta\in(0,1)$.
 Put $\eta_j:={2z-\alpha_j\over2z-1}$, $j=1,2$, and
 $\eta:={2z-\alpha\over2z-1}=(1-\theta)\eta+\theta\eta_1$. To show (1), it suffices to prove that
-\eqref{F-5.9} holds in the present situation. For this, we may assume that
-$Q_{\alpha_j,z}(\psi\|\ffi)<\infty$, $j=1,2$. Then we can use \eqref{F-5.8} similarly to the discussion
-in Remark \ref{remark:2nd-proof} with $h_\psi$ instead of $h_0$. Hence we have \eqref{F-5.9},
+\eqref{F-6.9} holds in the present situation. For this, we may assume that
+$Q_{\alpha_j,z}(\psi\|\ffi)<\infty$, $j=1,2$. Then we can use \eqref{F-6.8} similarly to the discussion
+in Remark \ref{remark:2nd-proof} with $h_\psi$ instead of $h_0$. Hence we have \eqref{F-6.9},
 and (1) follows.
 
 As for (2), note that $h_\psi=h_{\psi_0}^{1/q}h_\psi^{1/p}\in L^p_R$ (see \eqref{F-C.3}) and
@@ -2354,7 +2378,7 @@ $D_{\alpha,z}(\psi\|\ffi)\le D_{\alpha_1,z}(\psi\|\ffi)$, proving (2).
 \subsection{Limits as $\alpha\nearrow1$ and $\alpha\searrow1$}
 
 The aim of this last subsection is to show the limits of $D_{\alpha,z}$ as $\alpha\nearrow1$ and
-$\alpha\searrow1$, extending the limits in \eqref{F-4.1} and \eqref{F-4.2}.
+$\alpha\searrow1$, extending the limits in \eqref{F-5.1} and \eqref{F-5.2}.
 
 \begin{theorem}\label{T-5.7}
 Let $\psi,\ffi\in\Me_*^+$, $\psi\ne0$. For every $z>0$ we have
@@ -2366,8 +2390,8 @@ Let $\psi,\ffi\in\Me_*^+$, $\psi\ne0$. For every $z>0$ we have
 \begin{proof}
 Assume first that $z\in(0,1]$ and $0\le1-z<\alpha<1$. Let $\beta:={\alpha-1+z\over z}$; then
 $0<\beta<1$ and $\beta\nearrow1$ as $\alpha\nearrow1$. Hence the result follows from Lemma \ref{L-5.8}
-below and \eqref{F-4.1} for $D_{\alpha,1}$. On the other hand, for the case $z\in[1,\infty)$ the result
-follows from Proposition \ref{P-4.6}(i) as \eqref{F-4.13} does from Proposition \ref{P-4.5}(i).
+below and \eqref{F-5.1} for $D_{\alpha,1}$. On the other hand, for the case $z\in[1,\infty)$ the result
+follows from Proposition \ref{P-4.6}(i) as \eqref{F-5.13} does from Proposition \ref{P-4.5}(i).
 \end{proof}
 
 \begin{lemma}\label{L-5.8}
@@ -2402,7 +2426,7 @@ $\alpha\in(1,2z]$. Then we have
 
 \begin{proof}
 Assume that $z>1/2$ and $D_{\alpha,z}(\psi\|\ffi)<\infty$ for some $\alpha\in(1,2z]$. We may assume that
-$\ffi$ is faithful. We utilize the function $f$ on $S$ given in \eqref{F-4.15}, whose values are in $L^{2z}_L$
+$\ffi$ is faithful. We utilize the function $f$ on $S$ given in \eqref{F-5.15}, whose values are in $L^{2z}_L$
 as seen from the proof of Theorem \ref{T-4.7}. Since $f$ is analytic in a neighborhood of $1/\alpha$, we have
 the expansion
 \[
@@ -2428,7 +2452,7 @@ a_0:=\biggl({h_\psi\over\psi(\1)}\biggr)^{2z-1\over2z}h_\ffi^{1\over2z},
 so that $\<a_0,f(1/\alpha)\>=\|f(1/\alpha)\|_{L^{2z}_L}$, where the dual pairing of $L^{2z\over2z-1}_L$
 and $L^{2z}_L$ is given in \eqref{F-C.5} in Appendix \ref{Appen-Kosaki-Lp} with $p={2z\over2z-1}$. Then
 the uniform Fr\'echet differentiability of $\|\cdot\|_{L^{2z}_L}$ at $1/\alpha$ implies that
-\begin{align}\label{F-5.11}
+\begin{align}\label{F-6.11}
 \<a_0,h\>=\lim_{\alpha'\searrow1}{\|f(\alpha'/\alpha)\|_{L^{2z}_L}-\|f(1/\alpha)\|_{L^{2z}_L}
 \over{\alpha'-1\over\alpha}}
 \end{align}
@@ -2442,11 +2466,11 @@ h_\ffi^{2z-1\over2z}\Bigr\> \nonumber\\
 \bigl(h_{\psi_0}^{{\alpha\over2z}it}h_\ffi^{-{\alpha\over2z}it}-\1\bigr)\Bigr] \nonumber\\
 &=\psi(\1)^{-{2z-1\over2z}}{\alpha\over2z}
 \lim_{t\to0}\Tr\bigl[h_\psi\bigl(h_{\psi_0}^{it}h_\ffi^{-it}-\1\bigr)\bigr] \nonumber\\
-&=\psi(\1)^{-{2z-1\over2z}}{\alpha\over2z}\,D(\psi\|\ffi), \label{F-5.12}
+&=\psi(\1)^{-{2z-1\over2z}}{\alpha\over2z}\,D(\psi\|\ffi), \label{F-6.12}
 \end{align}
 where we have used \eqref{F-C.5} for the third equality and \cite[Theorem 5.7]{ohya1993quantum}
-for the last equality. Since $\psi(\1)=\|f(1/\alpha)\|_{L^{2z}_L}^{2z}$, it follows from \eqref{F-5.11} and
-\eqref{F-5.12} that
+for the last equality. Since $\psi(\1)=\|f(1/\alpha)\|_{L^{2z}_L}^{2z}$, it follows from \eqref{F-6.11} and
+\eqref{F-6.12} that
 \begin{align*}
 D_{\alpha',z}(\psi\|\ffi)
 &={\log Q_{\alpha',z}(\psi\|\ffi)-\log\psi(\1)\over\alpha'-1}
@@ -2468,18 +2492,27 @@ as $\alpha'\searrow1$, proving the statement.
 
 \subsection*{Acknowledgments}
 
-////////////////////////
+The present work started when the authors met at Nagoya University in November 2023 and had
+the opportunity to discuss some open problems in \cite{kato2023onrenyi} with Shinya Kato. The authors
+thank Yoshimichi Ueda for his arranging the meeting, and are also grateful to Ueda and Kato for discussions.
+AJ wishes to thank Francesco Buscemi for the invitation to Nagoya, which enabled the
+meeting,  and his kind hospitality during the visit. AJ also acknowledges the support by
+the grant VEGA 2/0128/24 and the  Science and Technology Assistance Agency under the
+contract No. APVV-20-0069.
 
 
 \appendix
 
 \section{Haagerup  $L^p$-spaces}\label{app:lp}
 
-Let $\cR:=\Me\rtimes_{\sigma^\omega}\bR$ be the crossed product of $\Me$ by the
-\emph{modular automorphism group} $\sigma_t^\omega$, $t\in\bR$, for a faithful normal semi-finite weight
-$\omega$ on $\Me$. Then $\cR$ is a semi-finite von Neumann algebra with the canonical trace $\tau$.
+{Let $\Me$ be a von Neumann algebra on a Hilbert space $\mathcal{H}$. Let $\omega$ be
+a faithful normal semi-finite weight $\omega$ on $\Me$ and $\sigma_t^\omega$, $t\in\bR$, be the
+associated \emph{modular automorphism group} on $\Me$. Then we have the crossed product
+$\cR:=\Me\rtimes_{\sigma^\omega}\bR$, which is a semi-finite von Neumann algebra on the Hilbert
+space $\mathcal{H}\otimes L^2(\bR)$ with the canonical trace $\tau$. [Here I refer to the space
+$\mathcal{H}\otimes L^2(\bR)$ since $\mathrm{id}_{L^2(\bR)}$ appears below.]}
 Let $\theta_s$, $s\in\bR$, be the \emph{dual action} on $\cR$ having the $\tau$-scaling property
-$\tau\circ\theta_s=e^{-s}\tau$, $s\in\bR$; see \cite[Chap.~X]{takesaki2003theory2} (also
+$\tau\circ\theta_s=e^{-s}\tau$, $s\in\bR$; see \cite[Chap.~X]{takesaki2003theoryof} (also
 \cite[Chap.~8]{hiai2021lectures}). Let $\widetilde\cR$ denote the space of $\tau$-measurable operators
 affiliated with $\cR$; see \cite{fack1986generalized} (also \cite[Chap.~4]{hiai2021lectures}). For $0<p\le\infty$,
 the \emph{Haagerup $L^p$-space} $L^p(\Me)$ \cite{haagerup1979lpspaces,terp1981lpspaces} (also
@@ -2497,16 +2530,16 @@ space is $L^q(\Me)$, where $1/p+1/q=1$, by the duality pairing
 (a,b)\in L^p(\Me)\times L^q(\Me)\mapsto\Tr(ab)=\Tr(ba).
 \end{align}
 
-{\color{orange}We will next recall the extensions of a conditional expectations to the
+We will next recall the extensions of conditional expectations to the
 Haagerup $L^p$-spaces, obtained in \cite{junge2003noncommutative}. 
 Let $\Ne\subseteq \Me$ be a subalgebra such that
-$\sigma^\omega(\Ne)\subseteq \Ne$. Equivalently, there is a faithful normal conditional
+$\sigma_t^\omega(\Ne)\subseteq \Ne$, $t\in\bR$. Equivalently, there is a faithful normal conditional
 expectation $\cE$ on $\Me$ with range $\Ne$. We then have
 $\sigma^{\omega|_\Ne}=\sigma^\omega|_\Ne$ for the modular group of the restriction
 $\omega|_\Ne$ and we may identify $\cS:=\Ne \rtimes_{\sigma^{\omega_\Ne}}\bR$
 with a subalgebra in $\cR$. It can be seen that 
 \[
-\tilde \cE:=\cE\otimes id_{L_2(\bR)}
+\tilde \cE:=\cE\otimes \mathrm{id}_{L^2(\bR)}
 \]
 defines a conditional expectation of $\cR$ onto $\cS$. Further, let $\tau_0$ be the
 canonical trace for $\cS$, then we have $\tau_0=\tau|_\cS$ and
@@ -2529,7 +2562,7 @@ and for $1\le p,q,r\le \infty$ such that $\tfrac1p+\tfrac1q+\tfrac1r=\tfrac1s\le
 \end{equation}
 see \cite[Prop.~2.3]{junge2003noncommutative}.
 
-We finish this section by  some well known lemmas,  proofs are given for completeness.}
+We finish this section by  some well-known lemmas,  proofs are given for completeness.
 
 \begin{lemma}\label{lemma:cone}
 For any $0<p<\infty$ and $\varphi\in \Me_*^+$, 
@@ -2626,18 +2659,18 @@ Theorem \ref{thm:dpi}), then we have
 \begin{align}
 D_{\alpha,z}(\psi\|\ffi)&=D_{\alpha,z}(\hat\psi\|\hat\ffi)
 =\lim_{n\to\infty}D_{\alpha,z}(\hat\psi|_{\Me_n}\|\hat\ffi|_{\Me_n})\quad\mbox{increasingly},
-\label{F-4.16}\\
+\label{F-5.16}\\
 D_1(\psi\|\ffi)&=D_1(\hat\psi\|\hat\ffi)
-=\lim_{n\to\infty}D_1(\hat\psi|_{\Me_n}\|\hat\ffi|_{\Me_n})\quad\mbox{increasingly}. \label{F-4.17}
+=\lim_{n\to\infty}D_1(\hat\psi|_{\Me_n}\|\hat\ffi|_{\Me_n})\quad\mbox{increasingly}. \label{F-5.17}
 \end{align}
 \end{lemma}
 
 \begin{proof}
 Apply the DPI for $D_{\alpha,z}$ proved in Theorem \ref{thm:dpi} to the injection
 $\Me\hookrightarrow\hat\Me$ and to the conditional expectation $E_\Me:\hat\Me\to\Me$. We then have
-the first equality in \eqref{F-4.16}. By Theorem \ref{T-B.1} we can apply the martingale convergence
-in Theorem \ref{thm:martingale} to obtain the latter equality in \eqref{F-4.16} with increasing convergence.
-The assertion of $D_1$ in \eqref{F-4.17} is included in \cite[Proposition 2.2]{fawzi2023asymptotic},
+the first equality in \eqref{F-5.16}. By Theorem \ref{T-B.1} we can apply the martingale convergence
+in Theorem \ref{thm:martingale} to obtain the latter equality in \eqref{F-5.16} with increasing convergence.
+The assertion of $D_1$ in \eqref{F-5.17} is included in \cite[Proposition 2.2]{fawzi2023asymptotic},
 while this is an immediate consequence of the well-known martingale convergence and the DPI
 of the relative entropy \cite{kosaki1986relative}.
 \end{proof}
@@ -2723,7 +2756,7 @@ L.~Accardi and C.~Cecchini.
 T.~Ando.
 \newblock Concavity of certain maps on positive definite matrices and
   applications to {Hadamard} products.
-\newblock \emph{Linear algebra and its applications}, 26:\penalty0 203--241,
+\newblock \emph{Linear Algebra and its Applications}, 26:\penalty0 203--241,
   1979.
 \newblock \doi{10.1016/0024-3795(79)90179-4}.
 
@@ -2733,26 +2766,32 @@ H.~Araki.
 \newblock \emph{Publications of the Research Institute for Mathematical
   Sciences}, 11\penalty0 (3):\penalty0 809--833, 1976.
 
+\bibitem[Audenaert et~al.(2007)Audenaert, Calsamiglia, Masanes, Mu{\~n}oz-Tapia, Acin,
+Bagan, and Verstraete]{audenaert2007discriminating}
+K.~M.~R.~Audenaert, J.~Calsamiglia, Ll.~Masanes, R.~Mu{\~n}oz-Tapia, A.~Acin, E.~Bagan,
+and F.~Verstraete.
+\newblock Discriminating states: the quantum Chernoff bound.
+\newblock \emph{Physical Review Letters}, 98:\penalty0 160501 (4 pages), 2007.
+
 \bibitem[Audenaert and Datta(2015)]{audenaert2015alpha}
 K.~M. Audenaert and N.~Datta.
 \newblock $\alpha$-z-{R{\'e}nyi} relative entropies.
-\newblock \emph{Journal of Mathematical Physics}, 56\penalty0 (2), 2015.
+\newblock \emph{Journal of Mathematical Physics}, 56\penalty0 (2):\penalty0
+022202 (16 pages), 2015.
 \newblock \doi{10.1063/1.4906367}.
-
 
 \bibitem[Beauzamy(1982)]{beauzamy1982introduction}
 B.~Beauzamy.
 \newblock \emph{Introduction to Banach Spaces and their Geometry}.
-\newblock Mathematics Studies, 68, North-Holland, Amsterdam, 1982.
+\newblock Mathematics Studies, volume 68, North-Holland, Amsterdam, 1982.
 
 \bibitem[Beigi(2013)]{beigi2013sandwiched}
 S.~Beigi.
 \newblock Sandwiched {R{\'e}nyi} divergence satisfies data processing
   inequality.
-\newblock \emph{Journal of Mathematical Physics}, 54\penalty0 (12), 2013.
+\newblock \emph{Journal of Mathematical Physics}, 54\penalty0 (12):\penalty0
+122202 (11 pages), 2013.
 \newblock \doi{10.1063/1.4838855}.
-
-
 
 \bibitem[Bergh and L\"ofstr\"om(1976)]{bergh1976interpolation}
 J.~Bergh and J.~L\"ofstr\"om.
@@ -2776,10 +2815,8 @@ E.~A. Carlen, R.~L. Frank, and E.~H. Lieb.
 \newblock Inequalities for quantum divergences and the {Audenaert--Datta}
   conjecture.
 \newblock \emph{Journal of Physics A: Mathematical and Theoretical},
-  51\penalty0 (48):\penalty0 483001, 2018.
+  51\penalty0 (48):\penalty0 483001 (23 pages), 2018.
 \newblock \doi{https://doi.org/10.1088/1751-8121/aae8a3}.
-
-
 
 \bibitem[Choi(1974)]{choi1974aschwarz}
 M.-D.~Choi.
@@ -2797,8 +2834,8 @@ M.~Cwikel.
 \bibitem[Fack and Kosaki(1986)]{fack1986generalized}
 T.~Fack and H.~Kosaki.
 \newblock {Generalized $s$-numbers of $\tau$-measurable operators.}
-\newblock \emph{Pacific Journal of Mathematics}, 123\penalty0 (2):\penalty0 269
-  -- 300, 1986.
+\newblock \emph{Pacific Journal of Mathematics}, 123\penalty0 (2):\penalty0
+269--300, 1986.
   
 \bibitem[Fawzi et~al.(2023)Fawzi, Gao, and Rahaman]{fawzi2023asymptotic}
 O.~Fawzi, L.~Gao, and M.~Rahaman.
@@ -2809,9 +2846,8 @@ O.~Fawzi, L.~Gao, and M.~Rahaman.
 R.~L. Frank and E.~H. Lieb.
 \newblock Monotonicity of a relative {R}{\'e}nyi entropy.
 \newblock \emph{Journal of Mathematical Physics}, 54\penalty0 (12):\penalty0
-  122201, 2013.
+122201 (5 pages), 2013.
 \newblock \doi{10.1063/1.4838835}.
-
 
 \bibitem[Haagerup(1979)]{haagerup1979lpspaces}
 U.~Haagerup.
@@ -2831,7 +2867,8 @@ F.~Hiai.
 \newblock {Quantum $f$-divergences in von Neumann algebras. I. Standard
   $f$-divergences}.
 \newblock \emph{Journal of Mathematical Physics}, 59\penalty0 (10):\penalty0
-  102202, 2018.
+ 102202 (27pages), 2018.
+ \newblock \doi{10.1063/1.5039973}.
 
 \bibitem[Hiai(2021{\natexlab{a}})]{hiai2021lectures}
 F.~Hiai.
@@ -2859,15 +2896,15 @@ F.~Hiai and H.~Kosaki.
 \newblock Connections of unbounded operators and some related topics: von
   {N}eumann algebra case.
 \newblock \emph{International Journal of Mathematics}, 32\penalty0
-  (05):\penalty0 2150024, 2021.
+  (05):\penalty0 2150024 (88 pages), 2021.
 \newblock \doi{10.1142/S0129167X21500245}.
 
 \bibitem[Hiai and Mosonyi(2017)]{hiai2017different}
 F.~Hiai and M.~Mosonyi.
 \newblock Different quantum f-divergences and the reversibility of quantum
   operations.
-\newblock \emph{Reviews in Mathematical Physics}, 29\penalty0 (07):\penalty0
-  1750023, 2017.
+\newblock \emph{Reviews in Mathematical Physics}, 29\penalty0 (7):\penalty0
+  1750023 (80 pages), 2017.
 \newblock \doi{10.1142/S0129055X17500234}.
 
 \bibitem[Hiai and Tsukada(1984)]{hiai1984strong}
@@ -2878,14 +2915,28 @@ F.~Hiai and M.~Tsukada.
   282\penalty0 (2):\penalty0 791--798, 1984.
 \newblock \doi{10.1090/S0002-9947-1984-0732120-1}.
 
+\bibitem[V.~Jak{\v{s}}i{\'c}, Y.~Ogata, Y.~Pautrat, and C.-A.~Pillet(2012)]{jaksic2012entropic}
+V.~Jak{\v{s}}i{\'c}, Y.~Ogata, Y.~Pautrat, and C.-A.~Pillet.
+\newblock {Entropic fluctuations in quantum statistical mechanics. An introduction}.
+\newblock In \emph{Quantum Theory from Small to Large Scales}, August 2010,
+Lecture Notes of the Les Houches Summer School,  (Oxford University Press, 2012),
+volume 95, pages 213--410.
+\newblock \emph{arXiv:1106.3786}.
+
+\bibitem[Jak{\v s}i{\'c}, Ogata, Pillet, and Seiringer(2012)]{jaksic2012quantum}
+V.~Jak{\v s}i{\'c}, Y.~Ogata, C.-A.~Pillet, and R.~Seiringer.
+\newblock Quantum hypothesis testing and non-equilibrium statistical mechanics.
+\newblock \emph{Reviews in Mathematical Physics}, 24\penalty0 (6):\penalty0
+1230002 (67 pages), 2012.
+\newblock \doi{10.1142/S0129055X12300026}.
+
 \bibitem[Jen{\v{c}}ov{\'a}(2017)]{jencova2017preservation}
 A.~Jen{\v{c}}ov{\'a}.
 \newblock {Preservation of a quantum R{\'e}nyi relative entropy implies
   existence of a recovery map}.
-\newblock \emph{Journal of Physics A}, 50:\penalty0 085303, 2017.
+\newblock \emph{Journal of Physics A: Mathematical and Theoretical}, 50\penalty0
+(8):\penalty0 085303 (12 pages), 2017.
 \newblock \doi{10.1088/1751-8121/aa5661}.
-
-
 
 \bibitem[Jen{\v c}ov{\'a}(2018)]{jencova2018renyi}
 A.~Jen{\v c}ov{\'a}.
@@ -2898,6 +2949,19 @@ A.~Jen{\v{c}}ov{\'a}.
 \newblock {R{\'e}nyi relative entropies and noncommutative $L^p$-spaces II}.
 \newblock \emph{Annales Henri Poincar{\'e}}, 22:\penalty0 3235–3254, 2021.
 \newblock \doi{10.1007/s00023-021-01074-9}.
+
+\bibitem[Jen{\v c}ov{\'a} and Petz(2006)]{jencova2006sufficiency}
+A.~Jen{\v c}ov{\'a} and D.~Petz.
+\newblock Sufficiency in quantum statistical inference.
+\newblock \emph{Communications in Mathematical Physics}, 263:\penalty0
+259--276, 2006.
+\newblock \doi{10.1007/s00220-005-1510-7}.
+
+\bibitem[Jen{\v c}ov{\'a}, Petz, and Pitrik(2006)]{jencova2010markov}
+A.~Jen{\v c}ov{\'a}, D.~Petz, and J.~Pitrik.
+\newblock Markov triplets on CCR-algebras.
+\newblock \emph{Acta Scientiarum Mathematicarum}, 76\penalty0 (1-2):\penalty0
+111--134, 2010.
 
 \bibitem[Junge and Xu(2003)]{junge2003noncommutative}
 M.~Junge and Q.~Xu.
@@ -2914,27 +2978,27 @@ S.~Kato.
 \bibitem[Kato and Ueda(2023)]{kato2023aremark}
 S.~Kato and Y.~Ueda.
 \newblock A remark on non-commutative {$L^p$}-spaces.
-{\color{red}\newblock \emph{Studia Math.}, to appear.}
+\newblock \emph{Studia Math.}, to appear.
 \newblock \emph{arXiv preprint arXiv:2307.01790}, 2023.
 
 \bibitem[Kosaki(1984{\natexlab{a}})]{kosaki1984applications}
 H.~Kosaki.
 \newblock {Applications of the complex interpolation method to a von Neumann
   algebra: Non-commutative $L^p$-spaces}.
-\newblock \emph{J. Funct. Anal.}, {56}:\penalty0 26--78,
+\newblock \emph{Journal of Functional Analysis}, {56}:\penalty0 26--78,
   {1984}{\natexlab{a}}.
 \newblock \doi{https://doi.org/10.1016/0022-1236(84)90025-9}.
 
 \bibitem[Kosaki(1984{\natexlab{b}})]{kosaki1984applicationsuc}
 H.~Kosaki.
 \newblock {Applications of uniform convexity of noncommutative $L\sp{p}$-spaces}.
-\newblock \emph{Trans. Amer. Math. Soc.}, {283}:\penalty0 265--282,
+\newblock \emph{Transactions of the American Mathematical Society}, {283}:\penalty0 265--282,
   {1984}{\natexlab{b}}.
 
 \bibitem[Kosaki(1986)]{kosaki1986relative}
 H.~Kosaki.
 \newblock Relative entropy of states: A variational expression.
-\newblock \emph{J. Operator Theory}, 16:\penalty335--348, 1986.
+\newblock \emph{Journal of Operator Theory}, 16:\penalty0 335--348, 1986.
 
 \bibitem[Kosaki(1992)]{kosaki1992aninequality}
 H.~Kosaki.
@@ -2957,12 +3021,6 @@ M.~S.~Lin and M.~Tomamichel.
 \newblock \emph{Quantum Information Processing}, 14\penalty0
  (4):\penalty0 1501--1512, 2015.
 
-\bibitem[Mosonyi and Hiai(2023)]{mosonyi2023somecontinuity}
-M.~Mosonyi and F.~Hiai.
-\newblock Some continuity properties of quantum {R}ényi divergences.
-\newblock \emph{IEEE Transactions on Information Theory}, 2023.
-\newblock \doi{10.1109/TIT.2023.3324758}.
-
 \bibitem[Mosonyi(2023)]{mosonyi2023thestrong}
 M.~Mosonyi.
 \newblock The strong converse exponent of discriminating infinite-dimensional
@@ -2971,6 +3029,26 @@ M.~Mosonyi.
   (1):\penalty0 83--132, 2023.
 \newblock \doi{10.1007/s00220-022-04598-1}.
 
+\bibitem[Mosonyi and Hiai(2023)]{mosonyi2023somecontinuity}
+M.~Mosonyi and F.~Hiai.
+\newblock Some continuity properties of quantum {R}ényi divergences.
+\newblock \emph{IEEE Transactions on Information Theory}, 70\penalty0 (4):\penalty0
+2674--2700, 2023.
+\newblock \doi{10.1109/TIT.2023.3324758}.
+
+\bibitem[Mosonyi and Ogawa(2015)]{mosonyi2015quantum}
+M.~Mosonyi and T.~Ogawa.
+\newblock Quantum hypothesis testing and the operational interpretation of the quantum
+R\'enyi relative entropies.
+\newblock \emph{Communications in Mathematical Physics}, 334:\penalty0 1617--1648, 2015.
+\newblock \doi{10.1007/s00220-014-2248-x}.
+
+\bibitem[Mosonyi and Ogawa(2015)]{mosonyi2015twoapproaches}
+M.~Mosonyi and T.~Ogawa.
+\newblock Two approaches to obtain the strong converse exponent of quantum
+hypothesis testing for general sequences of quantum states.
+\newblock \emph{IEEE Transactions on Information Theory}, 61\penalty0 (12):\penalty0
+6975--6994, 2015.
 
 \bibitem[M{\"u}ller-Hermes and Reeb(2017)]{mullerhermes2017monotonicity}
 A.~M{\"u}ller-Hermes and D.~Reeb.
@@ -2978,7 +3056,18 @@ A.~M{\"u}ller-Hermes and D.~Reeb.
 \newblock \emph{Annales Henri Poincar{\'e}}, 18:\penalty0 1777--1788, 2017.
 \newblock \doi{doi.org/10.1007/s00023-017-0550-9}.
 
+\bibitem[M{\" u}ller-Lennert et~al.({2013})Muller-Lennert, Dupuis, Szehr, Fehr, and
+  Tomamichel]{mullerlennert2013onquantum}
+M.~M{\" u}ller-Lennert, F.~Dupuis, O.~Szehr, S.~Fehr, and M.~Tomamichel.
+\newblock {On quantum R\'enyi entropies: A new generalization and some
+  properties}.
+\newblock \emph{Journal of Mathematical Physics}, {54}\penalty0 (12):\penalty0
+{122203} (20 pages), {2013}.
 
+\bibitem[Nussbaum and Szko{\l}a(2009)]{nussbaum2009thechernoff}
+M.~Nussbaum and A.~Szko{\l}a.
+\newblock The Chernoff lower bound for symmetric quantum hypothesis testing.
+\newblock \emph{The Annals of Statistics} 37\penalty0 (2):\penalty0 1040--1057, 2009.
 
 \bibitem[Ohya and Petz(1993)]{ohya1993quantum}
 M.~Ohya and D.~Petz.
@@ -2991,7 +3080,6 @@ D.~Petz.
 \newblock \emph{Publications of the Research Institute for Mathematical
   Sciences}, 21\penalty0 (4):\penalty0 787--800, 1985.
 \newblock \doi{10.2977/prims/1195178929}.
-
 
 \bibitem[Petz(1986{\natexlab{a}})]{petz1986quasi}
 D.~Petz.
@@ -3017,19 +3105,12 @@ D.~Petz.
 \bibitem[Takesaki(2003)]{takesaki2003theoryof}
 M.~Takesaki.
 \newblock \emph{Theory of Operator Algebras II}.
-\newblock Encyclopaedia of Mathematical Sciences, vol. 125, Springer, Berlin, 2003.
+\newblock Encyclopaedia of Mathematical Sciences, volume 125, Springer, Berlin, 2003.
 
 \bibitem[Terp({1981})]{terp1981lpspaces}
 M.~Terp.
 \newblock {$L^p$-spaces associated with von Neumann algebras}.
 \newblock {Notes, Copenhagen University}, {1981}.
-
-\bibitem[M{\" u}ller Lennert et~al.({2013})Muller Lennert, Dupuis, Szehr, Fehr, and
-  Tomamichel]{mullerlennert2013onquantum}
-M.~M. M{\" u}ller Lennert, F.~Dupuis, O.~Szehr, S.~Fehr, and M.~Tomamichel.
-\newblock {On quantum R\'enyi entropies: a new generalization and some
-  properties}.
-\newblock \emph{{J. Math. Phys.}}, {54}:\penalty0 {122203}, {2013}.
 
 \bibitem[Wilde et~al.(2014)Wilde, Winter, and Yang]{wilde2014strong}
 M.~M. Wilde, A.~Winter, and D.~Yang.
@@ -3038,7 +3119,6 @@ M.~M. Wilde, A.~Winter, and D.~Yang.
 \newblock \emph{Communications in Mathematical Physics}, 331:\penalty0
   593--622, 2014.
 \newblock \doi{10.1007/s00220-014-2122-x}.
-
 
 \bibitem[Zalinescu(2002)]{zalinescu2002convex}
 C.~Zalinescu.
@@ -3049,7 +3129,7 @@ C.~Zalinescu.
 H.~Zhang.
 \newblock {From Wigner-Yanase-Dyson conjecture to Carlen-Frank-Lieb
   conjecture}.
-\newblock \emph{Advances in Mathematics}, 365:\penalty0 107053,
+\newblock \emph{Advances in Mathematics}, 365:\penalty0 107053 (18 pages),
   2020{\natexlab{b}}.
 \newblock \doi{10.1016/j.aim.2020.107053}.
 
@@ -3057,25 +3137,11 @@ H.~Zhang.
 H.~Zhang.
 \newblock Equality conditions of data processing inequality for $\alpha$-z
   {R}{\'e}nyi relative entropies.
-\newblock \emph{Journal of Mathematical Physics}, 61\penalty0 (10),
-  2020{\natexlab{a}}.
+\newblock \emph{Journal of Mathematical Physics}, 61\penalty0 (10):\penalty0
+102201 (15 pages), 2020{\natexlab{a}}.
 \newblock \doi{10.1063/5.0022787}.
 
 \end{thebibliography}
 
-
 \end{document}
-
-
-
-
-
-
-
-i
-
-
-
-
-
 

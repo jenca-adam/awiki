@@ -173,7 +173,7 @@ title: Not my own papers
 
 [kosaki1992aninequality](kosaki1992aninequality),   
 [kissinger2019acategorical](kissinger2019acategorical),
-[kato2023onrenyi](kato2023onrenyi),
+[kato2024onrenyi](kato2024onrenyi),
 [kato2023aremark](kato2023aremark),
 [koashi2002operations](koashi2002operations),
 [kribs2018quantum](kribs2018quantum),

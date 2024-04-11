@@ -16,6 +16,10 @@ title: "Renyi relative entropy in von Neumann algebras"
 * [March 23](NEW_qre/alphaz-6.pdf) FH    
 * [March 25](NEW_qre/alphaz-7.pdf) AJ     
 * [March 28](NEW_qre/alphaz-8.pdf) FH    
+* [April 5](NEW_qre/alphaz-9.pdf) AJ    
+* [April 6](NEW_qre/alphaz-10.pdf) FH    
+* [April 8](NEW_qre/alphaz-11.pdf) AJ      
+* [April 10](NEW_qre/alphaz-13.pdf) (pre)final
 
 
 
@@ -43,12 +47,12 @@ title: "Renyi relative entropy in von Neumann algebras"
 
 ### Questions
 
-1. *Variational expressions*: solved for $\alpha<1$ and $1<\alpha\le 2z$ in [kato2023onrenyi](kato2023onrenyi) and  [Kato Nov. 26](NEW_qre/note_kato.pdf)    
-1. *DPI*: solved in [kato2023onrenyi](kato2023onrenyi) and [Anna Nov. 23](NEW_qre/notes.pdf)    
+1. *Variational expressions*: solved for $\alpha<1$ and $1<\alpha\le 2z$ in [kato2024onrenyi](kato2024onrenyi) and  [Kato Nov. 26](NEW_qre/note_kato.pdf)    
+1. *DPI*: solved in [kato2024onrenyi](kato2024onrenyi) and [Anna Nov. 23](NEW_qre/notes.pdf)    
 1. *Martingale convergence*: solved in [Fumio Dec. 2](NEW_qre/note_hiai2.pdf) and a remark in [Anna Dec. 7](NEW_qre/notes2.pdf)    
 1. *Monotonicity in $z$*:
 
-    - solved for $\alpha<1$ in [kato2023onrenyi](kato2023onrenyi).     
+    - solved for $\alpha<1$ in [kato2024onrenyi](kato2024onrenyi).     
     - For $\alpha>1$, solved for finite von Neumann algebras in [Fumio Dec. 3-8](NEW_qre/note_hiai3.pdf). In the general case, the use of Haagerup reduction still needs the restriction $\max\{\alpha/2,\alpha-1\}\le z\le\alpha$, then monotonicity holds for $z\le z'$, this is discussed in [Fumio Dec. 3-8](NEW_qre/note_hiai3.pdf), [Anna Dec. 19](NEW_qre/notes3.pdf)    
     - <span style='color:green'> Try to improve this using the variational formulas? </span> - <span style='color:red'> does not work outside the DPI bounds!</span>    
     - <span style='color:green'> Try using complex interpolation as in monotonicity in $\alpha$. Hm? </span> Done in [Anna Jan. 18](NEW_qre/notes6.pdf)    
@@ -95,7 +99,7 @@ The $B(\mathcal H)$ case
 
 In von Neumann algebras:
 
-* [kato2023onrenyi](kato2023onrenyi) $\alpha-z$ Renyi divergences in von Neumann algebra setting    
+* [kato2024onrenyi](kato2024onrenyi) $\alpha-z$ Renyi divergences in von Neumann algebra setting    
 * [kato2023aremark](kato2023aremark) tensor product of Haagerup $L_p$-spaces    
 * [gu2019interpolation](gu2019interpolation) interpolation of Haagerup $L_p$-spaces for $p<1$.    
 * [berta2018renyi](berta2018renyi) sandwiched Renyi divergence via Araki-Masuda $L_p$-spaces    

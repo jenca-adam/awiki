@@ -94,11 +94,12 @@ title: My work
 
  ORCID  https://orcid.org/0000-0002-4019-268X. 
 
-### grants
+### grant thanks
 
 
  * VEGA 2/0128/24    
- * APVV apvv-22-0570
+ *  Science and Technology Assistance Agency under the contract No. APVV-22-0570  (+ FUSAV)
+ *  Science and Technology Assistance Agency under the contract No. APVV-20-0069 (AD)    
 
 
 * [CV](cv)    
