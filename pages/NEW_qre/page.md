@@ -19,7 +19,18 @@ title: "Renyi relative entropy in von Neumann algebras"
 * [April 5](NEW_qre/alphaz-9.pdf) AJ    
 * [April 6](NEW_qre/alphaz-10.pdf) FH    
 * [April 8](NEW_qre/alphaz-11.pdf) AJ      
-* [April 10](NEW_qre/alphaz-13.pdf) (pre)final
+* [April 10](NEW_qre/alphaz-13.pdf) (pre)final    
+
+**Submissions**
+
+* [April 11](NEW_qre/alphaz-arxiv.pdf) arxiv submission    
+* [April 12](NEW_qre/alphaz-cmp.pdf) cmp submission
+* [April 17](NEW_qre/alphaz-cmp2.pdf) cmp submission new (inclusing ethical staements and the corrections below)
+
+* [April 17](NEW_qre/alphaz-14.pdf) new corrections by FH
+
+
+
 
 
 

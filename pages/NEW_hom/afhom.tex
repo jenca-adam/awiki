@@ -1,0 +1,713 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb, amsthm, bm}
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage{doi}
+\usepackage[margin=0.8in]{geometry}
+%\textheight23cm \topmargin-20mm  
+%\textwidth175mm  
+%\oddsidemargin=0mm
+%\evensidemargin=0mm
+%
+
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{coro}{Corollary}
+\newtheorem{prop}{Proposition}
+
+
+\theoremstyle{definition}
+\newtheorem{defi}{Definition}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\def\type{\mathrm {setting}}
+\def\ii{\bm{\emptyset}}
+\def\tt{\bm{0}}
+\def\Ce{\mathcal C}
+\def\Ne{\mathcal N}
+\def \Tr{\mathrm{Tr}\,}
+\def\Se {\mathcal S}
+\def\supp{\mathrm{supp}}
+\def\<{\langle\,}
+\def\>{\,\rangle}
+\def \BS{\mathrm{BS}}
+\def \Afh{\mathrm{AfH}}
+\def \Af{\mathrm{Af}}
+\def \FV{\mathrm{FinVect}}
+\def\bV{\mathbf V}
+\def\bW{\mathbf W}
+\def\bE{ E}
+\def\bI{I}
+
+\def\bX{ X}
+\def\bQ{\mathbf Q}
+\def\bY{ Y}
+\def\bZ{Z}
+
+\title{On the category of affine subspaces}
+\author{Anna Jen\v cov\'a}
+
+\begin{document}
+
+\maketitle
+
+We present some important categories.
+
+\subsection{The category $\FV$}
+
+Let  $\FV$ be the category of finite dimensional real vector spaces with linear maps. Then
+$(\FV,\otimes, \mathbb R)$ is a symmetric monoidal category, with the usual tensor product
+of vector spaces. With the usual duality $(-)^*: V\mapsto V^*$  of vector spaces, $\FV$ is
+compact closed.  Put
+\[
+e_U: U\otimes U^*\to \mathbb R,\qquad e_U(u\otimes u^*)=\<u^*,u\>,
+\]
+then $e_U$ is the cap (counit) for the duality of $U$ and $U^*$. The unit (cup) of the
+duality is 
+\[
+\eta_U: \mathbb R\to U^*\otimes U, \qquad \eta_U(1)=\sum_i e_i^*\otimes e_i,
+\]
+where $\{e_i\}$ is a basis of $U$ and $\{e_i^*\}$ the dual basis of $U^*$, determined by
+$\<e_i^*,e_j\>=\delta_{ij}$. It is easily verified that $\eta_U$ does not depend on the
+choice of the basis $\{e_i\}$. We will identify $\eta_U:=\eta_U(1)$. Note that $\eta_U$ is
+just $e_U$ seen as an element in $(U\otimes U^*)^*=U^*\otimes U$.
+
+By compactness, the internal hom is  $[U,V]=U^*\otimes V$. Note that we have the usual identification 
+\begin{equation}\label{eq:fvhoms}
+\<f(u),v^*\>=\<w,u\otimes v^*\>,\qquad u\in U,\
+v^*\in V^*
+\end{equation}
+between maps $f:U\to V$ and elements $w\in U^*\otimes V=[U,V]$, so the internal hom is
+identified with  the set of all morphisms $U\to V$.  The above relation of $f$ and $w$ can be also
+written as
+\[
+f(u)=(e_U\otimes V)(u\otimes w),\qquad 
+w=(f^*\otimes V)(\eta_V),
+\]
+(we write $V$ for the identity map  $id_V$). Here $f^*$ is the usual adjoint map
+$f^*:V^*\to U^*$.  
+
+The composition $\circ$ defines a map
+\[
+[U,V]\otimes [V,W]\to [U,W],
+\]
+using the identification $[U,V]=U^*\otimes V$, $\circ$ is identified with 
+\[
+U^*\otimes V\otimes V^*\otimes W\xrightarrow{U^*\otimes e_V\otimes W} U^*\otimes W.
+\]
+Using symmetry and $e_V$, we can also define partial compositions through $V$ in an obvious way.
+This can be depicted graphically in a nice way.
+
+
+\subsection{Affine subspaces}
+
+A subset $A\subseteq V$ of a finite dimensional vector space $V$ is an affine subspace if 
+$\sum_i\alpha_i a_i\in A$ whenever all $a_i\in A$ and $\sum_i\alpha_i=1$. We say that $A$
+is proper if $0\ne A$ and $A\ne \emptyset$. We will always
+mean  that an affine subspace is proper (if not explicitly stated otherwise).
+
+An affine
+subspace can be determined in two ways:
+\begin{enumerate}
+\item[(i)] Let $L\subseteq V$ be a linear subspace and $a_0\ne L$. Then 
+\[
+A=a_0+L
+\]
+is a proper affine subspace.  Note that $a_0\in A$ and $A\cap L=\emptyset$.
+Conversely, any proper affine subspace $A$ can be given in this way, with $a_0$ an arbitrary element in $A$ and
+\[
+L=Lin(A):=\{a_1-a_2,\ a_1,a_2\in A\}=\{a-a_0,\ a\in A\}.
+\]
+\item[(ii)] Let $S\subseteq V$ be a linear subspace and $a_0^*\in V^*\setminus S^\perp$. Then
+\[
+A=\{a\in S, \<a_0^*,a\>=1\}
+\]
+is a proper affine subspace. Conversely, any proper affine subspace $A$ is given in this way, with
+$S=span(A)$ and $a_0^*$ an arbitrary element in 
+\[
+\tilde A=\{a^*\in V^*,\ \<a^*,a\>=1,\ \forall a\in A\}.
+\]
+\end{enumerate}
+
+For an affine subspace $A$, $\tilde A$ is an affine subspace as well. If $A$ is proper,
+then $\tilde A$ is proper and we have
+$\tilde{\tilde A}=A$. More generally, if $\emptyset\ne C\subseteq A$ is any  subset of a
+proper  affine
+subspace $A$, then $\tilde C$ is a proper affine subspace 
+and $\tilde{\tilde C}$ is the smallest
+affine subspace containing $C$, that is,
+\[
+\tilde{\tilde C}=\{\sum_i \alpha_i c_i,\ c_i\in C,\ \sum_i\alpha_i=1\}.
+\]
+In this case, we may write $\tilde{\tilde C}$ as
+\[
+\tilde{\tilde C}=c_0+Lin(C)=c_0+span(\{c_1-c_2,\ c_1,c_2\in C\})
+\]
+with an arbitrary element $c_0\in C$, or as
+\[
+\tilde{\tilde C}=\{c\in span(C),\ \<a_0^*,c\>=1\}
+\]
+for an arbitrary element $a_0^*\in \tilde A$. We clearly have
+\[
+Lin(\tilde C)=C^\perp=span(C)^\perp,\qquad Lin(C)=Lin(\tilde{\tilde C})=\tilde
+C^\perp=span(\tilde C)^\perp
+\]
+and by duality also
+\[
+span(C)=C^{\perp\perp} =Lin(\tilde C)^\perp,\qquad span(\tilde C)=Lin(C)^\perp.
+\]
+
+
+
+
+
+\subsection{The category $\Af$}
+
+
+The objects of $\Af$ are of the form $X=(V_X,A_X,a_X,\tilde a_X)$, where $V_X$ is in
+$\FV$, $A_X\subseteq V_X$ an affine subspace, $a_X\in A_X$ and $\tilde a_X\in \tilde A_X$
+are some elements. Morphisms $X\to Y$ are linear maps $f:V_X\to V_Y$ such that
+$f(A_X)\subseteq A_Y$. Note that by definition $A_X$ is proper for any object $X$. We may
+also add
+two special objects: the initial object $\emptyset:=(\{0\}, \emptyset, -, 0)$ and the terminal
+object $0:=(\{0\},\{0\},0,-)$, here the affine subspaces are obviously not proper.
+
+For any object $X$, we also put 
+\[
+L_X:=Lin(A_X)\qquad S_X:=span(A_X),\qquad  d_X:=\dim(L_X),\qquad D_X:=\dim(V_X).
+\]
+Note that $X$ is
+uniquely determined also when $A_X$ is replaced by $L_X$ or $S_X$. 
+
+
+\subsubsection{Limits and colimits}
+
+Limits and colimits should be obtained from those in $\FV$, we have to spectify the other
+structures and check  whether the corresponding arrows are in $\Af$. 
+
+First, note that $\{0\}$ is both initial and terminal in $\FV$. In $\Af$, it is easily
+seen that $\emptyset$ is \textbf{initial} and $0$ is \textbf{terminal} in $\Af$. 
+
+Let $\bX$, $\bY$ be two objects in $\Af$. Assume first that both are proper. We define
+their \textbf{product} as
+\[
+\bX\times \bY:=(V_\bX\times V_\bY, A_\bX\times A_\bY, (a_X,a_Y), \frac12(\tilde a_X,\tilde
+a_Y)),
+\]
+where 
+\[
+A_\bX\times A_\bY:=\{(x,y)\in V_\bX\times V_\bY,\ x\in A_\bX, y\in A_\bY\}
+\]
+is the direct product of $A_\bX$ and $A_\bY$. It is easily verified that this is indeed an
+affine subspace and the usual projections $\pi_\bX:V_\bX\times V_\bY\to V_\bX$ and $\pi_\bY:V_\bX\times
+V_\bY\to V_\bY$ are in $\Af$. Moreover, for $f:\bZ\to \bX$  and $g:\bZ\to \bY$, the map
+$f\times g(z)=(f(z),g(z))$ is also clearly a morphism $\bZ\to \bX\times\bY$  in $\Af$. 
+We have
+\[
+L_{X\times Y}=L_X\times L_Y,\qquad S_{X\times Y}= (S_X\times S_Y)\wedge \{(\tilde
+a_X,-\tilde a_Y)\}^\perp.
+\]
+We put $X\times \emptyset=\emptyset$, with the unique morphisms $\pi_X:\emptyset \to X$
+and $\pi_{\emptyset}:\emptyset \to \emptyset$. If $Y\xrightarrow{f}X$ and
+$Y\xrightarrow{g} \emptyset$, then it is clear that $Y=\emptyset$, this shows that this is
+indeed the product. Further, put  $X\times 0=X$, with $\pi_X=id_X$  and
+$\pi_0: X\xrightarrow{!}0$. It is also readily verified that this is the product.
+
+
+The \textbf{coproduct} for proper objects $X$, $Y$ is defined as 
+\[
+\bX\oplus \bY=(V_\bX\times V_\bY, A_\bX\oplus A_\bY,\frac12(a_X,a_Y), (\tilde a_X,\tilde
+a_Y)),
+\]
+where 
+\[
+A_\bX\oplus A_\bY:=\{(tx,(1-t)y),\ x\in A_{\bX}, y\in A_\bY,\ t\in \mathbb R\}
+\]
+is the direct sum. To check that this is an affine subspace, let $x_i\in A_\bX$, $y_i\in A_\bY$, $s_i\in
+\mathbb R$ and let $\sum_i\alpha_i=1$, then 
+\[
+\sum_i\alpha_i(s_ix_i,(1-s_i)y_i)=(\sum_is_i\alpha_ix_i,\sum_i(1-s_i)\alpha_iy_i)=(sx,(1-s)y)\in
+A_\bX\oplus A_\bY,
+\]
+where $s=\sum_is_i\alpha_i$, $x=s^{-1}\sum_is_i\alpha_ix_i$ if $s\ne 0$ and is arbitrary
+in $A_\bX$ otherwise, similarly $y=(1-s)^{-1}\sum_i(1-s_i)\alpha_iy_i$ if $s\ne 1$ and is
+arbitrary otherwise. The usual embeddings  $p_\bX:V_\bX\to V_\bX\times V_\bY$ and $p_\bY:
+V_{\bY}\to V_\bX\times V_\bY$ are easily seen to be morphsims in $\Af$.   
+
+Let  $f:\bX\to \bZ$, $g:\bY\to \bZ$ be any morphisms in $\Af$ and consider the map
+$V_\bX\times V_\bY\to \bZ$ given as
+$f\oplus g(u,v)=f(u)+g(v)$. We need to show that it preserves the affine subspaces. So let 
+$x\in A_\bX$, $y\in  A_\bY$, then since $f(x),g(y)\in A_\bZ$, we have for any $s\in \mathbb R$,
+\[
+f\oplus g(sx,(1-s)y)=sf(x)+(1-s)g(y)\in A_\bZ.
+\]
+We also have
+\[
+L_{X\oplus Y}= (L_X\times L_Y)\vee \mathbb R\{(a_X,-a_Y)\},\qquad S_{X\oplus Y}=S_X\times
+S_Y.
+\]
+Similarly as in the case of products, it is verified that $X\oplus \emptyset=X$ and
+$X\oplus 0=0$. (All the statements for coproducts can be obtained from duality defined
+below).
+
+
+One can also discuss equalizers and coequalizers, here we only note that these may be
+trivial even for proper objects. We next consider pullbacks and pushouts, in some special
+cases that will be needed below.
+
+
+Let $X,Y$ be proper objects. We say that $X\xrightarrow{f} Y$ is an inclusion if the
+corresponding arrow in $\FV$ is an isomorphism and $f(a_X)=a_Y$, $f^*(\tilde a_Y)=\tilde
+a_X$.  Assume that $X,Y,Z_0,Z_1$ are proper
+objects such that there are inclusions
+\[
+Z_0\xrightarrow{f_0} X\xrightarrow{f_1} Z_1,\qquad Z_0\xrightarrow{g_0} Y\xrightarrow{g_1}
+Z_1.
+\]
+Note that in particular $\psi_0:=f_0\circ g_0^{-1}$ is an isomorphism of $V_Y$ onto $V_X$ and
+$\psi_0(a_Y)=a_X$, $\psi_0^*(\tilde a_X)=\tilde a_Y$. 
+The \textbf{pushout} of $f_0,g_0$ is the object $X\sqcup_{f_0,g_0} Y=(V_X,
+A_{X\sqcup_{f_0,g_0} Y}, a_X,
+\tilde a_X)$, with 
+\[
+A_{X\sqcup_{f_0,g_0} Y}=\{sa+(1-s)\psi_0(b),\ a\in A_X,\ b\in A_Y,\ s\in \mathbb R\},
+\]
+together with the inclusions given by the linear maps $id:V_X\to V_X$ and $\psi_0:V_Y\to
+V_X$. Indeed, these are clearly morphisms in $\Af$, and we have 
+\[
+id\circ f_0=f_0=\psi_0\circ g_0.
+\]
+Also, if $X\xrightarrow{i} Z$ and $Y\xrightarrow{j} Z$ are such that $i\circ f_0=j\circ
+g_0$, then $i=i\circ id$, $j=i\circ \psi_0$, so $i$ is a morphism $X\sqcup_{f_0,g_0} Y\to Z$,
+obviously unique, with the required properties. We have
+\[
+L_{X\sqcup_{f_0,g_0}Y}=L_X\vee \psi_0(L_Y),\qquad S_{X\sqcup_{f_0,g_0}Y}=S_X\vee
+\psi_0(S_Y).
+\]
+Similarly, it can be shown that the \textbf{pullback} of $f_1, g_1$ is
+$X\sqcap_{f_1,g_1}Y=(V_X, A_X\cap \phi_1(A_Y),a_X,\tilde a_X)$ where $\phi_1=f_1^{-1}g_1$,
+and the inclusions given by $id_X$ and $\phi_1^{-1}$.
+
+
+
+
+%Let us turn to equalizers. So let $f,g:\bX\to \bY$ and let 
+%\[
+%V_E=\{v\in V_\bX,\ f(v)=g(v)\}. 
+%\]
+%Let $h: \bZ\to \bX$ equalize $f,g$, then $h(V_\bZ)\subseteq V_E$ and $h(A_\bZ)\subseteq
+%A_\bX\cap V_E$, so that $A_\bX\cap V_E$ must be nonempty. In this case, 
+%\[
+%\bE=(V_E, A_E:=V_E\cap A_\bX, a_E,\tilde a_E:=\tilde a_X)
+%\]
+%with the inclusion map $V_E\hookrightarrow V_\bX$ is an
+%equalizer of $f,g$ for any choice of $a_E\in A_E$ (note that choosing another $a_E$ gives
+%us an isomorphic object in $\Af$). If the
+%intersection $V_E\cap A_\bX$ is empty, then the only equalizing arrow 
+%for $f$ and $g$ is $\emptyset\to \bX$, which is
+%then the equalizer.
+%
+%For the coequalizer, let $V_Q$ be the quotient space $V_Q:=V_\bY|_{Im(f-g)}$ and let
+%$q:V_\bY\to V_Q$
+%be the quotient map. If  some $h: \bY\to \bZ$ coequalizes $f$ and $g$, then $h$ maps
+%$Im(f-g)$ to 0, so that $Im(f-g)\cap A_\bY=\emptyset$, unless $\bZ$ is the terminal
+%object. It is easily checked that if $Im(f-g)\cap A_\bY=\emptyset$, then
+%\[
+%Q=(V_Q,A_Q:=q(A_\bY),a_Q:=q(a_Y),\tilde a_Q )
+%\]
+%together with the quotient map  $q$ is the
+%coequalizer of $f$ and $g$ for any choice of $\tilde a_Q\in \tilde A_Q$.
+%If the intersection is nonempty,
+%then the unique coeqalizing arrow is $\bY\to 0$, which is then the coequalizer.
+%
+%Let us mention pullbacks and pushouts. Since pullbacks can be obtained from products and
+%equalizers, we see that we have a similar situation: if a pullback is ''well defined'',
+%then it coincides with the pullback in $\FV$, otherwise it is trivial. More precisely, if 
+%$f:\bX\to \bZ$ and $g:\bY\to \bZ$, then we put 
+%\[
+%V_P:=\{(x,y)\in V_\bX\times V_\bY, f(x)=g(y)\}.
+%\]
+%If $V_P\cap A_\bX\times A_\bY\ne \emptyset$, that is, there are some $x\in A_\bX$ and $y\in
+%A_\bY$ such that $f(x)=g(y)$, then 
+%\[
+%(V_P,A_P:=(A_\bX\times A_\bY)\cap V_P, a_P, \frac 12(\tilde a_X,\tilde a_Y))
+%\]
+%with the two projections
+%is a pullback of $f$ and $g$ for any choice of $a_P\in A_P$, otherwise the pullback is
+%just the initial object $\emptyset$.
+%
+%Similarly, let $f:\bZ\to \bX$, $g:\bZ\to \bY$, then let $V_Q$ be the quotient of
+%$V_\bX\times V_\bY$ by the subspace
+%\[
+%\{(f(z),-g(z)),\ x\in V_\bZ\}.
+%\]
+%If this subspace does not contain any element of $A_\bX\oplus A_\bY$, that is, there is no
+%$z\in V_\bZ$ such that for some $t\in \mathbb R$,
+%\[
+%f(tz)\in A_\bX,\qquad g((t-1)z)\in A_\bY,
+%\]
+%then 
+%\[
+%Q=(V_Q, A_Q:=q(A_\bX\oplus A_\bY), \frac12 q(a_X,a_Y), \tilde a_Q)
+%\]
+%with maps $x\mapsto q(x,0)$ and $y\mapsto q(0,y)$ is the
+%pushout of $f$ and $g$. Otherwise the pushout is just $0$.
+%
+\subsubsection{Tensor products}
+
+Let $X$, $Y$ be objects in $\Af$. Let us define
+\[
+A_{X\otimes Y}:=\{x\otimes y, x\in A_X, y\in A_Y\}^{\approx}.
+\]
+In other words, $A_{X\otimes Y}$ is the smallest affine subspace in $V_X\otimes V_Y$ containing
+$A_X\otimes A_Y$. 
+For proper objects, we  have
+\begin{align}
+L_{X\otimes Y}&=Lin(A_X\otimes A_Y)=span(\{x\otimes y-a_X\otimes a_Y,\ x\in A_X,\ y\in
+A_Y\})\notag\\
+&= (a_X\otimes L_Y)+ (L_X\otimes a_Y)+ (L_X\otimes L_Y)\label{eq:lxy}
+\end{align}
+(here $+$ denotes the direct sum of subspaces). We also have
+\[
+S_{X\otimes Y}=S_X\otimes S_Y.
+\]
+
+\begin{proof} Let $x\in A_X$, $y\in A_Y$, then
+\[
+x\otimes y-a_X\otimes a_Y=a_X\otimes (y-a_Y)+(x-a_X)\otimes a_Y+(x-a_X)\otimes (y-a_Y),
+\]
+so that $L_{X\otimes Y}=Lin(A_X\otimes A_Y)$ is contained in the subspace on the RHS of \eqref{eq:lxy}.
+Let $d$ be the dimension of this subspace, then clearly
+\[
+d_{X\otimes Y}\le d\le d_X+d_Y+d_Xd_Y.
+\]
+On the other hand, any element of $S_X$ has the form $tx$ for some $t\in \mathbb R$ and
+$x\in A_X$, so that it is easily seen that $S_X\otimes S_Y=S_{X\otimes Y}$. 
+Hence 
+\begin{align*}
+d_{X\otimes Y}&=\dim(L_{X\otimes Y})=\dim(S_{X\otimes
+X})-1=\dim(S_X)\dim(S_Y)-1=(d_X+1)(d_Y+1)-1\\
+&=d_X+d_Y+d_Xd_Y.
+\end{align*}
+This completes the proof.
+
+\end{proof}
+
+
+
+For $X,Y$ in $\Af$, put 
+\[
+X\otimes Y:=(V_X\otimes V_Y,A_{X\otimes Y},a_X\otimes a_Y, \tilde
+a_X\otimes \tilde a_Y).
+\]
+Note that by this definition, $X\otimes \emptyset =\emptyset$ and
+$X\otimes 0=0$ unless $X=\emptyset$, in which case $\emptyset\otimes 0=\emptyset$. 
+
+
+Also let $I:=(\mathbb R, \{1\},\{1\},\{1\})$. Then $(\Af,\otimes, I)$ is a symmetric
+monoidal category. We only have to check that the associators, unitors and symmetries from
+$\FV$ are morphisms in $\Af$. Indeed, let $\alpha_{X,Y,Z}:V_X\otimes (V_Y\otimes V_Z)\to
+(V_X\otimes V_Y)\otimes V_Z$ be the associator in $\FV$. We need to check that
+$\alpha_{X,Y,Z}(A_{X\otimes(Y\otimes Z)})\subseteq A_{(X\otimes Y)\otimes Z}$. It is easily
+checked that $A_{X\otimes(Y\otimes Z)}$ is the affine span of elements of the form
+$x\otimes (y\otimes z)$, $z\in A_X$, $y\in A_Y$ and $z\in A_Z$, and we have
+\[
+\alpha_{X,Y,Z}(x\otimes (y\otimes z))=(x\otimes y)\otimes z\in A_{(X\otimes Y)\otimes Z}
+\]
+for all such elements. The desired inclusion follows by linearity.
+The proof of the other inclusions is similar.
+
+
+
+
+\subsubsection{Duality}
+
+We define $X^*:=(V_X^*,\tilde A_X,\tilde a_X,a_X)$. Note that we have
+\[
+L_{X^*}=S_X^\perp,\qquad S_{X^*}=L_X^\perp,'\qquad d_{X^*}=D_X-d_X-1.
+\]
+It is easily seen  that $(-)^*$ defines a full and faithful functor $\Af^{op}\to \Af$,
+moreover, $X^{**}=X$ (if we us the canonical identification of  any $V$ in $\FV$ with its second dual). 
+
+
+\begin{theorem} $(\Af,\otimes,I)$ is a *-autonomous category, with duality $(-)^*$, such
+that $I^*=I$.
+
+\end{theorem}
+
+
+\begin{proof} We only need to check the natural isomorphisms 
+\[
+\Af(X\otimes Y,Z^*)\simeq \Af(X,(Y\otimes Z)^*).
+\]
+Since $\FV$ is compact, we have the natural isomorphisms
+\[
+\FV(V_X\otimes V_Y,V^*_Z)\simeq \FV(V_X,V_Y^*\otimes V_Z^*),
+\]
+determined by the equalities
+\[
+\<f(x\otimes y),z\>=\<h(x),y\otimes z\>,\qquad x\in V_X,\ y\in V_Y,\ z\in V_Z,
+\]
+for $f\in \FV(V_X\otimes V_Y,V_Z^*)$ and $h\in \FV(V_Z,V_Y^*\otimes V_Z^*)$. Since
+$A_{X\otimes Y}$ is an affine span of $A_X$ and $A_Y$, we see that
+$f$ is in $\Af$ if and only if $f(x\otimes y)\in \tilde A_Z$, that is, 
+\[
+1=\<f(x\otimes y),z\>=\<h(x),y\otimes z\>\qquad \forall x\in A_X,\
+y\in A_Y,\ z\in A_Z.
+\]
+But this is equivalent to
+\[
+h(x)\in (A_Y\otimes A_Z)^\sim=\tilde A_{Y\otimes Z},\qquad \forall x\in A_X,
+\]
+which means that $h\in \Af$.
+
+\end{proof}
+
+\subsubsection{The dual tensor product}
+
+Let us define the dual tensor product by $\odot$, that is
+\[
+X\odot Y=(X^*\otimes Y^*)^*.
+\]
+We then have
+\begin{align*}
+L_{X\odot Y}&=S^\perp_{X^*\otimes Y^*}=(S_{X^*}\otimes S_{Y^*})^\perp=(L_X^\perp\otimes
+L_Y^\perp)^\perp\\
+S_{X\odot Y}&= L_{X^*\otimes Y^*}^\perp=(\tilde a_X\otimes
+S_Y^\perp)^\perp\wedge(S_X^\perp\otimes \tilde a_Y)^\perp\wedge (S_X^\perp\otimes
+S_Y^\perp)^\perp
+\end{align*}
+In particular,
+\[
+d_{X\odot Y}=D_Xd_Y+d_XD_Y-d_Xd_Y.
+\]
+\begin{lemma}\label{lemma:tensors} Let $X$, $Y$ be nontrivial. Then $X\otimes Y=X\odot Y$
+if and only if $D_X=d_X+1$ and $D_Y=d_Y+1$.
+
+\end{lemma}
+
+\begin{proof} It is easy to see that (when identifying $X=X^{**}$), we have $A_X\otimes
+A_Y\subseteq \tilde A_{X^*\otimes  Y^*}$, hence $A_{X\otimes Y}\subseteq A_{X\odot Y}$. We see from the above computatons that
+\[
+d_{X\odot Y}-d_{X\otimes Y}=d_X(D_Y-1)+(D_X-1)d_Y-2d_Xd_Y\ge 0,
+\]
+with equality if and only if the conditions of the lemma hold.
+
+\end{proof}
+
+
+\subsubsection{Internal hom}
+
+The internal hom has the form
+\begin{equation}\label{eq:ihom}
+[X,Y]=(X\otimes Y^*)^*=X^*\odot Y.
+\end{equation}
+We then have 
+\[
+L_{[X,Y]}=(S_X\otimes L_Y^\perp)^\perp,\qquad S_{[X,Y]}=(\tilde a_X\otimes
+S_Y^\perp)^\perp\wedge(L_X\otimes \tilde a_Y)^\perp\wedge (L_X\otimes
+S_Y^\perp)^\perp
+\]
+and
+\[
+d_{[X,Y]}=D_XD_Y-(d_X+1)(D_Y-d_Y).
+\]
+
+
+As we have seen in $\FV$, the space $V_{[X,Y]}=V_X^*\otimes V_Y$ is identified with the
+space of all linear maps $V_X\to V_Y$, by \eqref{eq:fvhoms}. We will show that $A_{[X,Y]}$ corresponds to the
+affine subspace of maps mapping $A_X$ into $A_Y$, that is, morphisms in $\Af$. Indeed, we see from \eqref{eq:fvhoms}
+that $f$ is in $\Af$ if and only if 
+\[
+\<f(x),y^*\>=\<w,x\otimes y^*\>=1, \qquad x\in A_X,\ y^*\in \tilde A_Y,
+\]
+which is equivalent to $w\in (A_X\otimes \tilde A_Y)^\sim=\tilde A_{X\otimes Y^*}$. 
+
+\subsubsection{Dualizable (nuclear) objects}
+
+An object in $\Af$ is nuclear if the natural map $X^*\otimes X\to [X,X]$ is an isomorphism
+(santocanale). That is, the inclusion $X^*\otimes X\subseteq X^*\odot X$ that comes from the embedding 
+\[
+\tilde A_X\otimes A_X\subseteq (A_X\otimes \tilde A_X)^\sim
+\]
+becomes an equality. As we have seen in Lemma \ref{lemma:tensors}, for proper objects we
+have $X^*\otimes X=X^*\odot X$ if and only if
+\[
+d_X+1=D_X=D_{X^*}=d_{X^*}+1=D_X-d_X.
+\]
+It follows that $d_X=0$ and $D_X=1$, so that $X\simeq I$. Hence the tensor unit is the
+unique dualizable (or nuclear) object in $\Af$.
+
+
+\subsection{The category $\Afh$} 
+
+
+The category $\Afh$ will be constructed as a subcategory in $\Af$. 
+
+\subsubsection{First order objects}
+
+It is easily seen that the following are equivalent:
+\begin{enumerate}
+\item $D_X=d_X+1$;
+\item $S_X=V_X$;
+\item $L_X=\{\tilde a_X\}^\perp$;
+\item $S_{X^*}=\mathbb R \tilde a_X$;
+\item $L_{X^*}=\{0\}$.
+\end{enumerate}
+We say that an object $X$ is first order if any of these conditions is fulfilled. We have
+seen that for proper objects, $X\otimes Y=X\odot Y$ if and only if both $X$ and $Y$ are
+first order. We also have
+
+\begin{lemma}\label{lemma:firstorder} $X$ is first order if and only if  $X\otimes
+X=X\odot X$.
+
+\end{lemma}
+`
+\begin{lemma}\label{lemma:1ordertensor} Let $X$, $Y$ be first order, then $X\otimes Y$ is
+first order.
+
+\end{lemma}
+
+\begin{proof} We have
+\[
+S_{X\otimes Y}=S_X\otimes S_Y=V_X\otimes V_Y=V_{X\otimes Y}.
+\]
+
+\end{proof}
+
+
+\subsubsection{Channels}
+A channel is an object $[X,Y]$ where  $X$ and $Y$ are first order. As we have seen,
+\[
+X^*\otimes Y\subseteq X^*\odot Y=[X,Y].
+\]
+If $X$ is first order, $\tilde A_X=\{\tilde a_X\}$ and the elements of $A_{X^*\otimes
+Y}=\tilde a_X\otimes A_Y$ are identified with channels of the form
+\[
+f(x)=\<\tilde a_X,x\>y,\qquad x\in V_X,
+\]
+for some $y\in A_Y$. Such maps will be called replacement channels.
+
+\begin{lemma}\label{lemma:channels} Let $X$, $Y$ be first order and let  $w\in V_X^*\otimes V_Y$. Then $w
+\in A_{[X,Y]}$ if and only if
+\[
+\circ_Y :w_{X^*Y}\otimes \tilde a_Y\mapsto \tilde a_X.
+\]
+\end{lemma}
+
+\begin{proof} Let $f:V_X\to V_Y$ be the map corresponding to $w$, then 
+\[
+\circ_Y(w\otimes \tilde a_Y)=(V_X^*\otimes e_{V_Y})(w\otimes \tilde a_Y)=\tilde a_Y\circ
+f,
+\]
+where $\tilde a_Y\in V_Y^*$ is seen as a map $V_y\to \mathbb R$. So $\tilde a_Y\circ f:
+V_X\to \mathbb R$ is an element in $V_X^*$. We know that $w\in A_{[X,Y]}$ iff
+$f(A_X)\subseteq A_Y$, which is equivalent to  $\tilde a_Y\circ f(x)=1$ for all $x\in A_X$, so
+that $\tilde a_Y\circ f\in \tilde A_X=\{\tilde a_X\}$, since $X$ is first order.  
+\end{proof}
+
+\begin{lemma}\label{lemma:mapsdual} Let $Y$ be first order and $w\in V_X^*\otimes V_Y$.
+Then $w\in A_{[X,Y]}$ if and only if
+\[
+\circ_Y(w_{X^*Y}\otimes \tilde a_Y)\in \tilde A_X.
+\]
+Moreover, 
+\[
+\tilde A_{[X,Y]}=A_X\otimes \{\tilde a_Y\}.
+\]
+
+
+\end{lemma}
+
+\begin{proof} Since $Y$ is first order, we have $A_{Y^*}=\tilde A_Y=\{\tilde a_Y\}$ and by
+\eqref{eq:ihom}
+\[
+\tilde A_{[X,Y]}=A_{X\otimes Y^*}=A_X\otimes \{\tilde a_Y\}.
+\]
+As in the above proof, let $f:V_X\to V_Y$ be the map corresponding to $w$. Then $\tilde
+a_Y\circ f\in V_X^*$ and $w\in A_{[X,Y]}$ iff $f(A_X)\subseteq A_Y$. This means that
+\[
+\tilde a_Y\circ f(x)=1,\qquad \forall x\in A_X,
+\]
+which means that $\tilde a_Y\circ f\in \tilde A_X$.
+
+\end{proof}
+
+\subsubsection{$\Afh$}
+
+The category $\Afh$ is the full subcategory in $\Af$ created from first order objects by
+taking tensor products and duals. We will add more later. We will use the notation
+$V_{XY^*}$ for $V_X\otimes V^*_Y$, etc. 
+
+Any object $X$ in $\Afh$ is created from first order objects $X_1,\dots, X_k$, so that
+$V_X=\tilde V_{X_1}\otimes\dots\otimes \tilde V_{X_k}$, where $\tilde V_{X_i}$ is either
+$V_{X_i}$ or $V^*_{X_i}$, $i=1,\dots,k$. We will next show that any object is a set of
+channels that contains all replacement channels. 
+
+
+
+\begin{prop}\label{prop:afh} Let $X$ be an object in $\Afh$. Then there are  first order
+objects $Y_I$ and $Y_O$ and inclusions $f$, $g$ such that
+\begin{equation}\label{eq:inclusions}
+Y_I^*\otimes Y_O \xrightarrow{f} X\xrightarrow{g} [Y_I,Y_O].
+\end{equation}
+
+
+\end{prop}
+
+\begin{proof} Let $X$ be first order, then since $I$ is first order,
+\[
+I^*\otimes X=I\otimes X \xrightarrow{\lambda_X} X\xrightarrow{\lambda^{-1}_X} I\otimes
+X=I\odot X=[I,X].
+\]
+Clearly, $f=\lambda_X$ and $g=\lambda^{-1}_X$ are inclusions. Now assume that $Z$
+satisfies \eqref{eq:inclusions} and let $X=Z^*$. Taking duals and composing with
+symmetries, we get
+\[
+Y_O^*\otimes Y_I\xrightarrow{\sigma_{V_{Y,O}^*,V_{Y_I}}} Y_I\otimes Y_0^*=[Y_I\otimes
+Y_O]^*\xrightarrow{g^*} X\xrightarrow{f^*} (Y_I^*\otimes
+Y_O)^*\xrightarrow{\sigma_{V_{Y_I},V_{X_O}^*}} (Y_O\otimes Y_I)^*=[Y_O,Y_I].
+\]
+Since the compositions of $f^*$ and $g^*$ with symmetries are inclusions, we see that $X$
+satisfies \eqref{eq:inclusions}.
+
+Next, let $X_1$ and $X_2$ satisfy \eqref{eq:inclusions}  with some first order objects $Y_I^i$, $Y_O^i$ and
+inclusions $f^i,g^i$, $i=1,2$, and let $X=X_1\otimes X_2$. We then have, using the
+appropriate symmetries
+\[
+Y_I^1Y_I^2\otimes (Y_O^1Y_O^2)^*\xrightarrow{\sigma_{Y_I^2,Y_O^1}} Y_I^1\otimes
+(Y_O^1)^*\otimes Y_I^2\otimes (Y_O^1)^*\xrightarrow{f^1\otimes f^2} X
+\xrightarrow{g^1\otimes g^2} [Y_I^1,Y_O^1]\otimes
+[Y_I^2,Y_O^2]\xrightarrow{\sigma_{Y_O^1,Y_O^2}}[Y_I^1Y_I^2,I_O^1Y_O^2].
+\]
+Perhaps the last arrow needs some checking, so lt us do it properly. We need to show that
+for $w\in A_{[Y_I^1,Y_O^1]\otimes
+[Y_I^2,Y_O^2]}$, we have $\sigma_{Y_O^1,Y_O^2}(w)\in A_{[Y_I^1Y_I^2,I_O^1Y_O^2]}$, but
+this is clear using Lemma \ref{lemma:channels}.
+
+\end{proof}
+
+The pair $(Y_I,Y_O)$ for an object $X$ will be called the $\type$ of $X$. For objects of
+the same $\type$ we may take
+pullbacks and pushouts of the  corresponding inclusions.
+
+
+
+
+Pullbacks are intersections, pushouts the affine mixture.
+
+Channels into (from) products and coproducts
+
+We define $\Afh$ as the full subcategory of $\Af$ containing all first order objects and
+closed under (finite products,) duals and  tensor products . 
+
+
+
+\end{document}
+

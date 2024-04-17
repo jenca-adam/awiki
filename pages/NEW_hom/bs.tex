@@ -56,562 +56,562 @@
 
 \maketitle
 
-%\section{Definitions and properties}
-%
-%\subsection{Base sections}
-%
-%Let  $V$ be  a finite dimensional vector space. A subset $C\subseteq V$ is called a
-%\textbf{proper
-%cone} if 
-%\begin{itemize}
-%\item $C$ is a convex cone: for any $a,b\in C$ and $\lambda,\mu\ge 0$ we have $\lambda
-%a+\mu b\in C$;
-%\item $C$ is closed;
-%\item $C$ is generating in $V$: $V=C-C=\{a-b,\ a,b\in C\}$;
-%\item $C$ is pointed: $C\cap -C=\{0\}$. 
-%
-%\end{itemize}
-%
-%\medskip
-%\noindent
-%For a convex cone $C$, the \textbf{dual cone} $C^*$ is the set of positive linear
-%functionals 
-%\[
-%C^*=\{\varphi\in V^*,
-%\<\varphi,a\>\ge 0,\forall a\in C\}.
-%\]
-%If $C$ is a proper cone, then $C^*$ is a proper cone and we have $C^{**}=C$. 
-%From now on $C$ will be a proper cone.
-%
-%\medskip
-%\noindent
-%Let $J\subseteq V$ be a subspace. Then the dual space $J^*\equiv V^*|_{J^\perp}$. Let
-%$g_J: V^*\to J^*$, $q_J(\psi)=\psi+J^\perp$ be the quotient map.  Then $J\cap C$ is a closed pointed convex cone. If
-%$J\cap int(C)\ne \emptyset$, $J\cap C$ is also generating in $J$, and we have
-%\[
-%(J\cap C)^*=q_J(C^*)=\{\varphi+J^\perp,\ \varphi\in C^*\}.
-%\]
-%In other words, any positive linear functional on $(J,J\cap C)$ extends to a positive
-%linear functional on $(V,C)$. Moreover, we have
-%\[
-%int((J\cap C)^*)=q_J(int(C^*)).
-%\]
-%
-%\medskip
-%\noindent
-%A subset $K\subseteq C$ is a \textbf{base} of $C$ if 
-%\begin{itemize}
-%\item $K$ is convex;
-%\item for any $a\in C$, there are unique $x\in K$ and $\lambda\ge 0$ such that $a=\lambda
-%x$.
-%
-%\end{itemize}
-%Any base of $C$ is determined by a (unique) element $u\in int(C^*)$: 
-%\[
-%K=\{x\in C,\ \<u,x\>=1\}.
-%\]
-%Given such an element $u\in int(C^*)$, the corresponding base will be denoted by $K_u$.
-%
-%\medskip
-%\noindent
-%A subset $B\subseteq C$ is called a \textbf{base section} if 
-%\begin{itemize}
-%\item $B$ is a base of the cone ${span}(B)\cap C$;
-%\item $B\cap int(C)\ne \emptyset$.
-%
-%\end{itemize}
-%For relative interiors, we have $ri(B)=B\cap int(C)$. 
-%
-%
-%\medskip
-%\noindent
-%
-%
-%\begin{lemma}\label{lemma:base_sec} A subset $B\subseteq C$ is a base section if and only
-%if $B=span(B)\cap K$ for some base $K$ of the cone $C$. 
-%
-%\end{lemma}
-%
-%
-%\begin{proof} Let $B$ be a base section and let $J=span(B)$, then $B$ is a base of the
-%cone $J\cap C$, hence there is some (unique) $[\varphi]\in int((J\cap C)^*)=q_J(int(C^*))$, that 
-%is, $[\varphi]=\varphi+J^\perp$ for some $\varphi\in int(C^*)$, such that 
-%\[
-%B=\{x\in J\cap C,\ \<\varphi,x\>=1\}=J\cap C\cap \varphi^{-1}(1)=J\cap K_\varphi.
-%\]
-%The converse is obvious.
-%
-%\end{proof}
-%
-%
-%
-%\begin{lemma} \label{lemma:bases}
-%Let $K$ be a base of $C$ and let $B\subseteq K$ be such that $B\cap int(C)\ne \emptyset$. Then
-%\begin{enumerate}
-%\item[(i)] The set $\tilde B:=\{\varphi\in C^*,\ \<\varphi,x\>=1,\ \forall x\in B\}$
-% is a base section  in $(V^*,C^*)$.
-% \item[(ii)] Let $\tilde J=span(\tilde B)$, then $\dim(\tilde J)=1+\dim(V)-\dim(J)$.
-% \item[(iii)] $B$ is a base section if and only if  $\tilde{\tilde{B}}=B$.
-% \item[(iv)] $\tilde{\tilde{B}}$ is the smallest base section containing $B$.
-%\end{enumerate}
-%
-%
-%\end{lemma}
-%
-%
-%\begin{proof} Let $\tilde b\in int(C^*)$ be such that $K=K_{\tilde b}$, then clearly
-%$\tilde b\in \tilde B$, so that $\tilde B\cap int(C^*)\ne \emptyset$. 
-%Let $b\in B\cap int(C)$ be any element and let $K_b$ be the
-%corresponding base of $C^*$.  Then it is clear that 
-%$\tilde B\subseteq K_b$, so that $\tilde B\subseteq \tilde J\cap K_b$, where $\tilde
-%J=span(\tilde B)$. Since $\tilde B$ is  obviously convex, any element  $y\in \tilde J$ has
-%the form $s\tilde b_1-t\tilde b_2$ for some $\tilde b_1,\tilde b_2\in \tilde B$ and
-%$s,t\ge 0$. If $y\in \tilde J\cap K_b$, then $y\in C^*$ and $\<y,b\>=1$, so that $s-t=1$
-%and hence for any $b'\in B$, we must have
-%\[
-%\<y,b'\>=\<s\tilde b_1-t\tilde b_2,b'\>=s-t=1.
-%\]
-%Hence $y\in \tilde B$. This shows that $\tilde B=\tilde J\cap K_b$, so that $\tilde B$ is
-%a base section in $(V^*,C^*)$.
-%
-%
-%To show (ii), let $\tilde b\in ri(\tilde B)$ be any fixed element. Note that as in the firts part of
-%the proof,   $y\in \tilde J$ has the form
-%\[
-%y=s\tilde b_1-t\tilde b_2=(s-t)\tilde b+s\tilde b_1-t\tilde b_2-(s-t)\tilde b=(s-t)\tilde
-%b+x
-%\]
-%where $x\in J^\perp$. Conversely, let $y=\alpha\tilde b+x$ for some  $x\in J^\perp$, $\alpha\in \mathbb R$. Since $\tilde
-%b\in ri(\tilde B)=\tilde B\cap int(C^*)$, there is some $\lambda>0$ such that
-%$ \lambda\tilde b-y\in C^*$, which means that $y=\lambda\tilde b-(\lambda\tilde b-y)\in
-%\tilde J$. It follows that $\tilde J=span(\tilde b)\wedge J^\perp$, from this (ii)
-%follows.
-%
-%For (iii), assume that $B$ is a base section. It is clear that $B\subset
-%\tilde{\tilde{B}}$ and $\tilde{\tilde B}$ is a base setcion as well. Hence  $J\subseteq
-%\tilde{\tilde J}$, and we have by (ii)
-%\[
-%\dim(\tilde{\tilde J})=1+\dim(V^*)-\dim(\tilde J)=1+\dim(V^*)-(1+\dim(V)-\dim(J))=\dim(J),
-%\]
-%so that $J=\tilde{\tilde J}$. Since $B$ and $\tilde {\tilde B}$ are bases of the same cone
-%$J\cap C$, we must have $\tilde {\tilde B}=B$. The converse statement is clear from (i).
-%
-%Finally, it is clear that $\tilde{\tilde B}$ is a base section containing $B$. Let $B'$ be a
-%base section such that $B\subseteq B'$, then clearly $\tilde B'\subseteq \tilde B$ and
-%$\tilde{\tilde B}\subseteq \tilde {\tilde B}'=B'$, by (iii).
-%
-%
-%
-%\end{proof}
-%
-%For an affine subspace $A\subseteq V$, we put
-%\[
-%\tilde A=\{y\in V^*,\ \<y,x\>=1,\ \forall x\in A\}.
-%\]
-%
-%
-%
-%\begin{lemma}\label{lemma:affine} Let $A=Aff(B)$, $\tilde b\in ri(B)$. Then 
-%\begin{enumerate}
-%\item[(i)] $B=A\cap C$.
-%\item[(ii)] $\tilde A=Aff(\tilde B)=b+J^\perp$.
-%\end{enumerate}
-%
-%
-%\end{lemma}
-%
-%\begin{proof} (i) \enspace It is clear that $B\subseteq A\cap C$. Conversely, let $x\in A\cap C$, then
-%for every $y\in \tilde B$ we have $\<y,x\>=1$, so that $x\in \tilde{\tilde
-%B}=B$.   
-%
-%(ii)\enspace It is straightforward to verify that $Aff(\tilde B)\subseteq \tilde
-%A\subseteq \tilde b+J^\perp$. We now prove $\tilde b+J^\perp\subseteq Aff(\tilde B)$. So
-%let $z\in J^\perp$. Since $\tilde B\in int(C^*)$, there is some $s>0$ such that $\tilde
-%c:=\tilde
-%b+sz \in C^*$, so that clearly $\tilde c\in \tilde B$. We thena have
-%$\tilde b +z=(1-s^{-1})\tilde b+s^{-1}\tilde c\in Aff(\tilde B)$.
-%
-%
-%\end{proof}
-%\subsection{Affine subspaces}
-%
-%
-%A subset $A\subseteq V$ of a finite dimensional vector space $V$ is an affine subspace if 
-%$\sum_i\alpha_i a_i\in A$ whenever all $a_i\in A$ and $\sum_i\alpha_i=1$. 
-%
-%Let $A\subseteq V$ be an affine subspace:
-%\begin{itemize}
-%\item Let $a_0\in A$ be an arbitrary element. Then $A$ has the form $A=a_0+L$, where 
-%\[
-%L=Lin(A):=\{a-b,\ a,b\in A\}=\{a-a_0,\ a\in A\}
-%\]
-%is a vector subspace. The dimension of $A$ is $\dim(A):=\dim(Lin(A))$. 
-%\item If $0\in A$, then $Lin(A)=span(A)=A$ and $A$ is a vector subspace. If $0\notin A$,
-%then $A\cap Lin(A)=\emptyset$ and  $\dim(span(A))=\dim(A)+1$.
-%
-%\item Put $\tilde A:=\{a^*\in V^*,\ \<a^*,a\>=1,\ \forall a\in A\}$. Then $\tilde
-%A\subseteq V^*$ is an affine subspace and we have 
-%\[
-%Lin(\tilde A)=span(A)^\perp.
-%\]
-%Consequently, if $0\notin A$, $\dim(\tilde A)=\dim(V^*)-\dim(span(A))=\dim(V)-\dim(A)-1$.
-%\item $\tilde{\tilde A}=A$.
-%
-%\end{itemize}
-%
-%
-%
-%
-%
-%
-%\subsection{The category $\BS$}
-%
-%Let $\BS$ be the category whose objects are triples $\bV=(V,C,B)$, where $V$ is a finite
-%dimensional real vector space, $C\subseteq V$ a proper cone and $B$ a base section in $(V,C)$. 
-%Morphisms $\bV\to \bW$ are positive linear maps  preserving the base section.
-%
-%
-%Then $\BS$ is a symmetric monoidal category, inheriting the monoidal structure from $\FV$. 
-%Let us define 
-%\[
-%\bV_1\otimes \bV_2=(V_1\otimes V_2, C_1\otimes C_2, B_1\otimes B_2),
-%\]
-%where $V_1\otimes V_2$ the tensor product in $\FV$,
-%\[
-%C_1\otimes C_2=\left\{\sum_i x_i\otimes y_i,\ x_i\in V_1,\ y_i\in V_2\right\}
-%\]
-%is the (minimal) tensor product of cones and 
-%\[
-%B_1\otimes B_2:=\left\{b_1\otimes b_2,\ b_1\in B_1,\ b_2\in B_2\right\}^{\sim}.
-%\]
-%The monoidal unit $I=\mathbf{I}=(\mathbb R,\mathbb R^+,\{1\})$. All the isomorphisms are
-%those obtained from $\FV$. We have already shown that this is a symmetric monoidal structure.
-%
-%We define the dual of $\bV$ as $\bV^*=(V^*,C^*,\tilde B)$. For a morphism
-%$f:\bV_1\to\bV_2$, $f^*:\bV_2^*\to \bV_1^*$ is defined as the adjoint map in $\FV$, it is
-%easily checked that $f^*$ is indeed a morphism in $\BS$ and $(-)^*$ is a functor
-%$\BS^{op}\to \BS$. We moreover have $\bV^{**}=\bV$ and $(-)^*$ is full and faithful.  
-%
-%We next want to show that there is a natural isomorphism
-%\[
-%\BS(\bX\otimes \bY,\bZ^*)\simeq \BS(\bX,(\bY\otimes \bZ)^*).
-%\]
-%Note that we have natural iso 
-%\[
-%\FV(V_{\bX}\otimes V_{\bY},V^*_{\bZ})\simeq \FV(V_\bX,(V_\bY\otimes V_\bZ)^*)
-%\]
-%Since the morphisms in $\BS$ are special morphisms in $\FV$, it is enough to show that the
-%above iso maps  $\BS$-morphisms onto respective $\BS$-morphisms. We see that the relation
-%between $f\in \FV(V_{\bX}\otimes V_{\bY},V^*_{\bZ})$ and $\hat f\in
-%\FV(V_\bX,(V_\bY\otimes V_\bZ)^*)$ is given as
-%\[
-%\<f(x\otimes y),z\>=\<{\hat f}(x),y\otimes z\>,\qquad x\in V_\bX, y\in V_\bY, z\in V_\bZ.
-%\]
-%
-%
-%
-%\subsection{The category $\Af$}
-%
-%The objects of this category are pairs $\bX=(V,A)$, where $V$ is in $\FV$ and $A\subseteq
-%V$ is an affine subspace. Unless $V=\{0\}$, we always assume that $A\ne \emptyset$ and
-%$0\notin A$.
-%
-%
-%We sometimes use the notation $\bX=(V_\bX,A_\bX)$ is necessary.
-%Morphisms $\bX\to \bY$ are linear maps $f: V_\bX\to V_\bY$ such that $f(A_\bX)\subseteq
-%f(A_\bY)$.
-%
-%
-%
-%\subsubsection{The monoidal structure}
-%
-%
-%We define the monoidal structure as follows. We put
-%\[
-%\bX\otimes \bY:=(V_\bX\otimes V_\bY, \{x\otimes y,\ x\in A_\bX, y\in
-%A_\bY\}^{\approx})
-%\]
-%The unit is given as $\bI:=(\mathbb R, \mathbb R^+, \{1\})$. One can check that $(\Af,
-%\otimes, \bI)$ is a symmetric monoidal category, with all the structures inherited from
-%$\FV$. It only remains to check that $\alpha$, $\lambda$, $\rho$ and $\sigma$ from $\FV$
-%are morphisms in $\Af$. We will do it some other time, maybe.
-%
-%
-%\begin{lemma}\label{lemma:tensor_aff} Let $x_0\in A_\bX$, $y_0\in A_\bY$. Put $L_\bX=Lin(A_\bX)$.
-%
-%\begin{enumerate}
-%\item[(1)] $\bm{\emptyset}\otimes \bX=\bm{\emptyset}$, $\bm{0}\otimes \bX=\bm{0}$.
-%\item[(2)] $A_{\bX\otimes \bY}=Aff(\{x\otimes y, x\in A_\bX, y\in A_\bY\})$.
-%\item[(3)] $L_{\bX\otimes \bY}= (x_0\otimes L_\bY)\vee (L_\bX\otimes y_0)\vee (L_\bX\otimes
-%L_\bY)$.
-%\item[(4)] $\dim(A_{\bX\otimes \bY})=(\dim(A_\bX)+1)(\dim(A_{\bY}+1)-1$.
-%
-%
-%\end{enumerate}
-%
-%\end{lemma}
-%
-%\begin{proof} (1) is quite obvious from the definition.
-%
-%Let $0\notin C\subseteq V$ be any subset of a finite dimensional vector
-%space $V$. Then clearly $\tilde C=Aff(C)^\sim$ and $\tilde{\tilde
-%C}=Aff(C)^\approx=Aff(C)$, this proves (2). 
-%
-%Since $A_\bX=x_0+L_\bX$ and $A_\bY=y_0+L_\bY$, we see from (2) that $A_{\bX\otimes \bY}$
-%is an affine span of elements of the form
-%\[
-%(x_0+u)\otimes (y_0+v)=x_0\otimes y_0+u\otimes y_0+x_0\otimes v+u\otimes v,\qquad u\in L_\bX,\ v\in L_{\bY}.
-%\]
-%Clearly, any such element is in $x_0\otimes y_0+L_{\bX\otimes \bY}$ as defined in (3).
-%Moreover, since $x_0\notin L_\bX$ and $y_0\notin L_\bY$, the subspaces $x_0\otimes L_\bY$,
-%$L_\bX\otimes y_0$ and $L_\bX\otimes L_\bY$ are mutually linearly independent. For any
-%$u\in L_\bX$, 
-%\[
-%x_0\otimes y_0+u\otimes y_0=(x_0+u)\otimes y_0\in A_{\bX\otimes \bY},
-%\]
-%similarly $x_0\otimes y_0+x_0\otimes v\in A_{\bX\otimes \bY}$ for any $v\in L_\bY$.
-%Moreover,
-%\[
-%x_0\otimes y_0+u\otimes v=\frac12\left( (x_0+u)\otimes (y_0+v)+(x_0-u)\otimes
-%(y_0-v)\right)\in A_{\bX\otimes \bY}.
-%\]
-%Since any element  $w\in L_\bX\otimes L_\bY$ has the form $w=\sum_i u_i\otimes v_i$ with $u_i\in L_\bX$, $v_i\in
-%L_\bY$, we see that 
-%\[
-%A_{\bX\otimes \bY}= x_0\otimes y_0+L_{\bX\otimes \bY},
-%\]
-%this proves (3). (4) is quite obvious from (3).
-%
-%
-%\end{proof}
-%
-%\subsubsection{Duality}
-%
-%We  define the dual object
-%\[
-%\bX^*=(V_\bX^*, \tilde A_\bX).
-%\]
-%Note that 
-%\[
-%\bm{\emptyset}^*=\bm{0},\qquad \bm{0}^*=\bm{\emptyset}.
-%\]
-%We also have by Lemma \ref{lemma:affine}
-%\[
-%L_{\bX^*}=span(A_\bX)^\perp= (\mathbb Rx_0\vee L_\bX)^\perp=\{x_0\}^\perp\wedge
-%L_\bX^\perp.
-%\]
-%This means that 
-%\[
-%\dim(A_{\bX^*})=\dim(V_\bX)-\dim(A_\bX)-1.
-%\]
-%
-%Further, for $f:\bX\to \bY$ we define $f^*:\bY^*\to \bX^*$ as the usual adjoint of the map
-%$f:V_\bX\to V_\bY$. Let us check that $f^*(A_{\bY^*})\subseteq A_{\bX^*}$. So let $y^*\in
-%A_{\bY^*}=\tilde A_{\bY}$, we have to check that $\<f^*(y^*),x\>=1$ for all $x\in A_\bX$.
-%Indeed,
-%\[
-%\<f^*(y^*),x\>=\<y^*,f(x)\>=1.
-%\]
-%It follows that $(-)^*:\Af^{op}\to \Af$ is a functor, which is full and faithful since the
-%dual $(-)^*$ on  $\FV$ is such.
-%
-%We want to show that $(\Af,\otimes,\bI)$ is *-autonomous. For this we need to show that there is a natural isomorphism
-%\[
-%\Af(\bX\otimes \bY,\bZ^*)\simeq \Af(\bX,(\bY\otimes \bZ)^*).
-%\]
-%Note that we have natural iso 
-%\[
-%\FV(V_{\bX}\otimes V_{\bY},V^*_{\bZ})\simeq \FV(V_\bX,(V_\bY\otimes V_\bZ)^*)
-%\]
-%Since the morphisms in $\Af$ are special morphisms in $\FV$, it is enough to show that the
-%above iso maps  $\Af$-morphisms onto respective $\Af$-morphisms. We see that the relation
-%between $f\in \FV(V_{\bX}\otimes V_{\bY},V^*_{\bZ})$ and $\hat f\in
-%\FV(V_\bX,(V_\bY\otimes V_\bZ)^*)$ is given as
-%\[
-%\<f(x\otimes y),z\>=\<{\hat f}(x),y\otimes z\>,\qquad x\in V_\bX, y\in V_\bY, z\in V_\bZ.
-%\]
-%Assume that $f: \bX\otimes \bY\to \bZ^*$, we need to show that $\hat f: \bX\to (\bY\otimes
-%\bZ)^*$. Let $x\in A_\bX$ and let $y\in A_\bY$, $z\in A_\bZ$, then
-%\[
-%\<\hat f(x),y\otimes z\>=\<f(x\otimes y),z\>=1,
-%\]
-%since $f$ maps $x\otimes y\in A_{\bX\otimes \bY}$ into $A_\bZ$. It follows that 
-%\[
-%\hat f(x)\in (A_\bY\otimes A_\bZ)^\sim=\tilde A_{\bY\otimes \bZ}.
-%\]
-%The converse is similar: we see that $f$ maps all elements $x\otimes y$ into $\tilde
-%A_\bZ$, hence also the affine subspace generated by $x\otimes y$ is mapped to $\tilde
-%A_\bZ$. But this affine subspace is exactly $A_{\bX\otimes \bY}$.
-%
-%
-%
-%\subsubsection{First order objects (states)}
-%
-%We say that an object  $\bX$ in $\Af$ is a first order object if
-%$\dim(A_\bX)=\dim(V_\bX)-1$. We will use ordinary capital letters (not bold) to indicate
-%first order objects.
-%
-%If $X$ is first order, $A_X$ is determined by a single element 
-%$u_X\in V_{X^*}$ and we have  $X=(V_X,\{u_{X}\}^\sim)$, $X^*=(V_X^*,\{u_X\})$.  Note that if $X$ and $Y$ are
-%first order objects, then $X\otimes Y$ is a first order object as well, and we have
-%\[
-%u_{X\otimes Y}=u_{X}\otimes u_{Y}.
-%\]
-%Indeed,  this follows easily from Lemma \ref{lemma:tensor_aff}. Note also that the tensor
-%unit $\bI$ is first order, but $\ii$ and $\tt$ are not.
-%
-%\begin{lemma}
-%We  $(\bX\otimes \bY)^*\simeq \bX^*\otimes \bY^*$,
-%if and only if some of the following holds
-%\begin{enumerate}
-%\item one of the objects is $\ii$, $\tt$ or $\bI$,
-%\item both $\bX$, $\bY$  are firts order objects,
-%\item both $\bX^*$, $\bY^*$ are first order objects.
-%\end{enumerate}
-%
-%
-%\end{lemma}
-%
-%
-%\begin{proof} Using the expression for $\dim(A_{\bX\otimes\bY})$ and $\dim(\tilde A_\bX)$,
-%we get
-%
-%\begin{align*}
-%\dim(A_{(\bX\otimes \bY)^*})&=\dim(V_{\bX\otimes \bY})-\dim(A_{\bX\otimes \bY})-1\\
-%&=\dim(V_{\bX\otimes \bY})-(\dim(A_\bX)+1)(\dim(A_\bY)+1)\\
-%\dim(A_{\bX^*\otimes \bY^*})&=(\dim(A_{\bX^*})+1)(\dim(A_{\bY^*})+1)-1\\
-%&=(\dim(V_\bX)-\dim(A_\bX))(\dim(V_\bY)-\dim(A_\bY))-1
-%\end{align*}
-%From this one can check that 
-%\[
-%\dim(A_{(\bX\otimes \bY)^*})-\dim(A_{\bX^*\otimes \bY^*})=\dim(A_\bX)\dim(\tilde
-%A_\bY)+\dim(\tilde A_\bX)\dim(A_\bY).
-%\]
-%It is clear that this is equal to 0 if and only if some of the conditions holds. Since 
-%we always have $A_{\bX^*\otimes \bY^*}\subseteq \tilde A_{\bX\otimes\bY}$, the statement
-%follows.
-%
-%\end{proof}
-%
-%The above result also shows that the dual monoidal structure 
-%\[
-%\bX\odot \bY:=(\bX^*\otimes
-%\bY^*)^*
-%\]
-%coincides with $\otimes$ if and only if $\bX$ and $\bY$, or their duals, are
-%first order.
-%
-%
-%
-%Let us also note that the unique dualizable object in this category is $\bI$, so $\Af$ is
-%very noncompact. 
-%\begin{lemma}\label{lemma:dualizable}
-%An object $\bX$ in $\Af$  is dualizable if and only if $\bX\simeq \bI$.
-%\end{lemma}
-%
-%\begin{proof} Assume that $\bX$ is dualizable, 
-%then there must be some $\eta: \bI\to
-%\bX^*\otimes \bX$ and $\epsilon: \bX\otimes \bX^*\to I$ such that 
-%\[
-%(\epsilon\otimes \bX)\circ (\bX\otimes \eta)=id_\bX.
-%\]
-%This means that $\epsilon \in \tilde A_{\bX\otimes \bX^*}$ and  $\eta(1)\in A_{\bX^*\otimes
-%\bX}$, so that $\eta(1)=\sum\alpha_i x_i^*\otimes x_i$ for some $x_i^*\in \tilde A_\bX$,
-%$x_i\in A_\bX$ are  such that we have for any $x\in V_\bX$
-%\[
-%\sum_i\alpha_i\<\epsilon,x\otimes x_i^*\>x_i=x
-%\]
-%This implies that $\{x_i\}$ must be a basis of $V_\bX$, which implies that $A_\bX$ must
-%have codimension 1, that is, $\bX$ is first order. But then $\tilde A_\bX=\{u_\bX\}$, so
-%that $\eta(1)=u_\bX\otimes \alpha_i x_i=u_\bX\otimes \bar x$, so we get 
-%\[
-%\sum_i\alpha_i\<\epsilon,x\otimes x_i^*\>x_i=\<\epsilon,x\otimes u_\bX\>\bar x,
-%\]
-%so any element in $V_\bX$ is a multiple of $\bar x$, so $\dim(V_\bX)=1$ and $\bX\simeq 
-%\bI$.
-%\end{proof}
-%
-%\subsubsection{The subspaces}
-%
-%For $\bX$ in $\Af$, we put $L_\bX=Lin(A_\bX)$, $S_\bX=span(A_\bX)$. Let $x_0\in A_\bX$,
-%$x_0^*\in \tilde A_\bX$, $y_0\in A_\bY$, $y_0^*\in \tilde A_\bY$.
-%
-%We have
-%\[
-%L_{\bX^*}=S_\bX^\perp,\quad S_{\bX^*}=L_\bX^\perp
-%\]
-%and
-%\begin{align*}
-%A_{\bX\otimes \bY}&=\{w\in S_\bX\otimes S_\bY,\ \<w,x_0^*\otimes y_0^*\>=1\}=S_\bX\otimes
-%S_\bY\cap \{x_0^*\otimes y_0^*\}^\sim\\
-%&= (x_0\otimes y_0)+ (x_0\otimes L_\bY)\times (L_\bX\otimes y_0)\times  (L_\bX\otimes L_\bY).
-%\end{align*}
-%From this we see that 
-%\[
-%S_{\bX\otimes \bY}=S_\bX\otimes S_\bY
-%\]
-%and 
-%\begin{align*}
-%\tilde A_{\bX\otimes \bY}= x_0^*\otimes y_0^*+(S_\bX\otimes S_\bY)^\perp=x_0^*\otimes
-%y_0^*+(L_{\bX^*}^\perp\otimes L_{\bY^*}^\perp)^\perp.
-%\end{align*}
-%Note that then
-%\[
-%A_{\bX\odot \bY}=\tilde A_{\bX^*\otimes \bY^*}=x_0\otimes y_0+ (L_{\bX}^\perp\otimes L_{\bY}^\perp)^\perp
-%\]
-%\subsubsection{Internal homs}
-%
-%Since $\Af$ is *-autonomous, the internal hom is 
-%\[
-%[\bX,\bY]=(\bX\otimes \bY^*)^*=\bX^*\odot \bY.
-%\]
-%As we have seen above, 
-%\[
-%A_{[\bX,\bY]}=x_0^*\otimes y_0+(S_{\bX}\otimes L_{\bY}^\perp)^\perp
-%\]
-%Note that if $X$ and $Y$ are  first order, then
-%\[
-%A_{[X,\bY]}=u_X\otimes y_0+V_X^*\otimes L_\bY,\qquad A_{[\bX,Y]}=x_0^*\otimes
-%y_0+(S_\bX\otimes u_Y)^\perp
-%\]
-%for all $\bX$, $\bY$, and
-%\begin{align*}
-%A_{[X,Y]}&=u_X\otimes y_0+(V_X\otimes u_Y)^\perp=\{w\in V_X^*\otimes V_Y,\
-%\varphi_{u_Y}(w)=\hat w^*(u_Y)=u_X\},\\
-%\tilde A_{[X,Y]}&=A_{X\otimes Y^*}=A_X\otimes u_Y.
-%\end{align*}
-%
-%Note that through the usual identification in $\FV$, any $w\in U^*\otimes V$ is
-%identified with a linear map $\hat w:U\to V$, given by
-%\[
-%\<w,u\otimes v^*\>=\<v^*,\hat w(u)\>=\<\hat w^*(v^*),u\>,
-%\]
-%where $\hat w^*$ is the adjoint of $\hat w$. For $u^*\in U^*$, we define the map $\varphi^V_u:
-%U\otimes V\to V$ by
-%\[
-%\varphi^V_{u^*}(u\otimes v)= \<u^*,u\>v,\qquad u\in U, v\in V. 
-%\]
-%We omit the index $V$ if not necessary. 
-%Let $A\subseteq V$ be an affine subspace, $0\notin A$, $A\ne \emptyset$. Let $u^*\in U^*$ and put 
-%\[
-%B=\{w\in U\otimes V, \varphi_u(w)\in A\}
-%\]
-%Then $B$ is an affine subspace, $0\notin B\ne\emptyset$, indeed, for $a_0\in A$ and $u\in \{u^*\}^\sim$
-%\[
-%B=u\otimes a_0+ (\{u^*\}^\perp\otimes V)\vee (u\otimes Lin(A))
-%\]
-%
-%\begin{lemma}\label{lemma:alls}
-%\begin{enumerate}
-%\item $A_\bX=x_0+L_\bX$,
-%\item $\tilde A_\bX=x_0^*+S_\bX^\perp$,
-%\item $A_{\bX\otimes \bY}=x_0\otimes y_0+...$
-%
-%\end{enumerate}
-%
-%
-%\end{lemma}
-%
+\section{Definitions and properties}
+
+\subsection{Base sections}
+
+Let  $V$ be  a finite dimensional vector space. A subset $C\subseteq V$ is called a
+\textbf{proper
+cone} if 
+\begin{itemize}
+\item $C$ is a convex cone: for any $a,b\in C$ and $\lambda,\mu\ge 0$ we have $\lambda
+a+\mu b\in C$;
+\item $C$ is closed;
+\item $C$ is generating in $V$: $V=C-C=\{a-b,\ a,b\in C\}$;
+\item $C$ is pointed: $C\cap -C=\{0\}$. 
+
+\end{itemize}
+
+\medskip
+\noindent
+For a convex cone $C$, the \textbf{dual cone} $C^*$ is the set of positive linear
+functionals 
+\[
+C^*=\{\varphi\in V^*,
+\<\varphi,a\>\ge 0,\forall a\in C\}.
+\]
+If $C$ is a proper cone, then $C^*$ is a proper cone and we have $C^{**}=C$. 
+From now on $C$ will be a proper cone.
+
+\medskip
+\noindent
+Let $J\subseteq V$ be a subspace. Then the dual space $J^*\equiv V^*|_{J^\perp}$. Let
+$g_J: V^*\to J^*$, $q_J(\psi)=\psi+J^\perp$ be the quotient map.  Then $J\cap C$ is a closed pointed convex cone. If
+$J\cap int(C)\ne \emptyset$, $J\cap C$ is also generating in $J$, and we have
+\[
+(J\cap C)^*=q_J(C^*)=\{\varphi+J^\perp,\ \varphi\in C^*\}.
+\]
+In other words, any positive linear functional on $(J,J\cap C)$ extends to a positive
+linear functional on $(V,C)$. Moreover, we have
+\[
+int((J\cap C)^*)=q_J(int(C^*)).
+\]
+
+\medskip
+\noindent
+A subset $K\subseteq C$ is a \textbf{base} of $C$ if 
+\begin{itemize}
+\item $K$ is convex;
+\item for any $a\in C$, there are unique $x\in K$ and $\lambda\ge 0$ such that $a=\lambda
+x$.
+
+\end{itemize}
+Any base of $C$ is determined by a (unique) element $u\in int(C^*)$: 
+\[
+K=\{x\in C,\ \<u,x\>=1\}.
+\]
+Given such an element $u\in int(C^*)$, the corresponding base will be denoted by $K_u$.
+
+\medskip
+\noindent
+A subset $B\subseteq C$ is called a \textbf{base section} if 
+\begin{itemize}
+\item $B$ is a base of the cone ${span}(B)\cap C$;
+\item $B\cap int(C)\ne \emptyset$.
+
+\end{itemize}
+For relative interiors, we have $ri(B)=B\cap int(C)$. 
+
+
+\medskip
+\noindent
+
+
+\begin{lemma}\label{lemma:base_sec} A subset $B\subseteq C$ is a base section if and only
+if $B=span(B)\cap K$ for some base $K$ of the cone $C$. 
+
+\end{lemma}
+
+
+\begin{proof} Let $B$ be a base section and let $J=span(B)$, then $B$ is a base of the
+cone $J\cap C$, hence there is some (unique) $[\varphi]\in int((J\cap C)^*)=q_J(int(C^*))$, that 
+is, $[\varphi]=\varphi+J^\perp$ for some $\varphi\in int(C^*)$, such that 
+\[
+B=\{x\in J\cap C,\ \<\varphi,x\>=1\}=J\cap C\cap \varphi^{-1}(1)=J\cap K_\varphi.
+\]
+The converse is obvious.
+
+\end{proof}
+
+
+
+\begin{lemma} \label{lemma:bases}
+Let $K$ be a base of $C$ and let $B\subseteq K$ be such that $B\cap int(C)\ne \emptyset$. Then
+\begin{enumerate}
+\item[(i)] The set $\tilde B:=\{\varphi\in C^*,\ \<\varphi,x\>=1,\ \forall x\in B\}$
+ is a base section  in $(V^*,C^*)$.
+ \item[(ii)] Let $\tilde J=span(\tilde B)$, then $\dim(\tilde J)=1+\dim(V)-\dim(J)$.
+ \item[(iii)] $B$ is a base section if and only if  $\tilde{\tilde{B}}=B$.
+ \item[(iv)] $\tilde{\tilde{B}}$ is the smallest base section containing $B$.
+\end{enumerate}
+
+
+\end{lemma}
+
+
+\begin{proof} Let $\tilde b\in int(C^*)$ be such that $K=K_{\tilde b}$, then clearly
+$\tilde b\in \tilde B$, so that $\tilde B\cap int(C^*)\ne \emptyset$. 
+Let $b\in B\cap int(C)$ be any element and let $K_b$ be the
+corresponding base of $C^*$.  Then it is clear that 
+$\tilde B\subseteq K_b$, so that $\tilde B\subseteq \tilde J\cap K_b$, where $\tilde
+J=span(\tilde B)$. Since $\tilde B$ is  obviously convex, any element  $y\in \tilde J$ has
+the form $s\tilde b_1-t\tilde b_2$ for some $\tilde b_1,\tilde b_2\in \tilde B$ and
+$s,t\ge 0$. If $y\in \tilde J\cap K_b$, then $y\in C^*$ and $\<y,b\>=1$, so that $s-t=1$
+and hence for any $b'\in B$, we must have
+\[
+\<y,b'\>=\<s\tilde b_1-t\tilde b_2,b'\>=s-t=1.
+\]
+Hence $y\in \tilde B$. This shows that $\tilde B=\tilde J\cap K_b$, so that $\tilde B$ is
+a base section in $(V^*,C^*)$.
+
+
+To show (ii), let $\tilde b\in ri(\tilde B)$ be any fixed element. Note that as in the firts part of
+the proof,   $y\in \tilde J$ has the form
+\[
+y=s\tilde b_1-t\tilde b_2=(s-t)\tilde b+s\tilde b_1-t\tilde b_2-(s-t)\tilde b=(s-t)\tilde
+b+x
+\]
+where $x\in J^\perp$. Conversely, let $y=\alpha\tilde b+x$ for some  $x\in J^\perp$, $\alpha\in \mathbb R$. Since $\tilde
+b\in ri(\tilde B)=\tilde B\cap int(C^*)$, there is some $\lambda>0$ such that
+$ \lambda\tilde b-y\in C^*$, which means that $y=\lambda\tilde b-(\lambda\tilde b-y)\in
+\tilde J$. It follows that $\tilde J=span(\tilde b)\wedge J^\perp$, from this (ii)
+follows.
+
+For (iii), assume that $B$ is a base section. It is clear that $B\subset
+\tilde{\tilde{B}}$ and $\tilde{\tilde B}$ is a base setcion as well. Hence  $J\subseteq
+\tilde{\tilde J}$, and we have by (ii)
+\[
+\dim(\tilde{\tilde J})=1+\dim(V^*)-\dim(\tilde J)=1+\dim(V^*)-(1+\dim(V)-\dim(J))=\dim(J),
+\]
+so that $J=\tilde{\tilde J}$. Since $B$ and $\tilde {\tilde B}$ are bases of the same cone
+$J\cap C$, we must have $\tilde {\tilde B}=B$. The converse statement is clear from (i).
+
+Finally, it is clear that $\tilde{\tilde B}$ is a base section containing $B$. Let $B'$ be a
+base section such that $B\subseteq B'$, then clearly $\tilde B'\subseteq \tilde B$ and
+$\tilde{\tilde B}\subseteq \tilde {\tilde B}'=B'$, by (iii).
+
+
+
+\end{proof}
+
+For an affine subspace $A\subseteq V$, we put
+\[
+\tilde A=\{y\in V^*,\ \<y,x\>=1,\ \forall x\in A\}.
+\]
+
+
+
+\begin{lemma}\label{lemma:affine} Let $A=Aff(B)$, $\tilde b\in ri(B)$. Then 
+\begin{enumerate}
+\item[(i)] $B=A\cap C$.
+\item[(ii)] $\tilde A=Aff(\tilde B)=b+J^\perp$.
+\end{enumerate}
+
+
+\end{lemma}
+
+\begin{proof} (i) \enspace It is clear that $B\subseteq A\cap C$. Conversely, let $x\in A\cap C$, then
+for every $y\in \tilde B$ we have $\<y,x\>=1$, so that $x\in \tilde{\tilde
+B}=B$.   
+
+(ii)\enspace It is straightforward to verify that $Aff(\tilde B)\subseteq \tilde
+A\subseteq \tilde b+J^\perp$. We now prove $\tilde b+J^\perp\subseteq Aff(\tilde B)$. So
+let $z\in J^\perp$. Since $\tilde B\in int(C^*)$, there is some $s>0$ such that $\tilde
+c:=\tilde
+b+sz \in C^*$, so that clearly $\tilde c\in \tilde B$. We thena have
+$\tilde b +z=(1-s^{-1})\tilde b+s^{-1}\tilde c\in Aff(\tilde B)$.
+
+
+\end{proof}
+\subsection{Affine subspaces}
+
+
+A subset $A\subseteq V$ of a finite dimensional vector space $V$ is an affine subspace if 
+$\sum_i\alpha_i a_i\in A$ whenever all $a_i\in A$ and $\sum_i\alpha_i=1$. 
+
+Let $A\subseteq V$ be an affine subspace:
+\begin{itemize}
+\item Let $a_0\in A$ be an arbitrary element. Then $A$ has the form $A=a_0+L$, where 
+\[
+L=Lin(A):=\{a-b,\ a,b\in A\}=\{a-a_0,\ a\in A\}
+\]
+is a vector subspace. The dimension of $A$ is $\dim(A):=\dim(Lin(A))$. 
+\item If $0\in A$, then $Lin(A)=span(A)=A$ and $A$ is a vector subspace. If $0\notin A$,
+then $A\cap Lin(A)=\emptyset$ and  $\dim(span(A))=\dim(A)+1$.
+
+\item Put $\tilde A:=\{a^*\in V^*,\ \<a^*,a\>=1,\ \forall a\in A\}$. Then $\tilde
+A\subseteq V^*$ is an affine subspace and we have 
+\[
+Lin(\tilde A)=span(A)^\perp.
+\]
+Consequently, if $0\notin A$, $\dim(\tilde A)=\dim(V^*)-\dim(span(A))=\dim(V)-\dim(A)-1$.
+\item $\tilde{\tilde A}=A$.
+
+\end{itemize}
+
+
+
+
+
+
+\subsection{The category $\BS$}
+
+Let $\BS$ be the category whose objects are triples $\bV=(V,C,B)$, where $V$ is a finite
+dimensional real vector space, $C\subseteq V$ a proper cone and $B$ a base section in $(V,C)$. 
+Morphisms $\bV\to \bW$ are positive linear maps  preserving the base section.
+
+
+Then $\BS$ is a symmetric monoidal category, inheriting the monoidal structure from $\FV$. 
+Let us define 
+\[
+\bV_1\otimes \bV_2=(V_1\otimes V_2, C_1\otimes C_2, B_1\otimes B_2),
+\]
+where $V_1\otimes V_2$ the tensor product in $\FV$,
+\[
+C_1\otimes C_2=\left\{\sum_i x_i\otimes y_i,\ x_i\in V_1,\ y_i\in V_2\right\}
+\]
+is the (minimal) tensor product of cones and 
+\[
+B_1\otimes B_2:=\left\{b_1\otimes b_2,\ b_1\in B_1,\ b_2\in B_2\right\}^{\sim}.
+\]
+The monoidal unit $I=\mathbf{I}=(\mathbb R,\mathbb R^+,\{1\})$. All the isomorphisms are
+those obtained from $\FV$. We have already shown that this is a symmetric monoidal structure.
+
+We define the dual of $\bV$ as $\bV^*=(V^*,C^*,\tilde B)$. For a morphism
+$f:\bV_1\to\bV_2$, $f^*:\bV_2^*\to \bV_1^*$ is defined as the adjoint map in $\FV$, it is
+easily checked that $f^*$ is indeed a morphism in $\BS$ and $(-)^*$ is a functor
+$\BS^{op}\to \BS$. We moreover have $\bV^{**}=\bV$ and $(-)^*$ is full and faithful.  
+
+We next want to show that there is a natural isomorphism
+\[
+\BS(\bX\otimes \bY,\bZ^*)\simeq \BS(\bX,(\bY\otimes \bZ)^*).
+\]
+Note that we have natural iso 
+\[
+\FV(V_{\bX}\otimes V_{\bY},V^*_{\bZ})\simeq \FV(V_\bX,(V_\bY\otimes V_\bZ)^*)
+\]
+Since the morphisms in $\BS$ are special morphisms in $\FV$, it is enough to show that the
+above iso maps  $\BS$-morphisms onto respective $\BS$-morphisms. We see that the relation
+between $f\in \FV(V_{\bX}\otimes V_{\bY},V^*_{\bZ})$ and $\hat f\in
+\FV(V_\bX,(V_\bY\otimes V_\bZ)^*)$ is given as
+\[
+\<f(x\otimes y),z\>=\<{\hat f}(x),y\otimes z\>,\qquad x\in V_\bX, y\in V_\bY, z\in V_\bZ.
+\]
+
+
+
+\subsection{The category $\Af$}
+
+The objects of this category are pairs $\bX=(V,A)$, where $V$ is in $\FV$ and $A\subseteq
+V$ is an affine subspace. Unless $V=\{0\}$, we always assume that $A\ne \emptyset$ and
+$0\notin A$.
+
+
+We sometimes use the notation $\bX=(V_\bX,A_\bX)$ is necessary.
+Morphisms $\bX\to \bY$ are linear maps $f: V_\bX\to V_\bY$ such that $f(A_\bX)\subseteq
+f(A_\bY)$.
+
+
+
+\subsubsection{The monoidal structure}
+
+
+We define the monoidal structure as follows. We put
+\[
+\bX\otimes \bY:=(V_\bX\otimes V_\bY, \{x\otimes y,\ x\in A_\bX, y\in
+A_\bY\}^{\approx})
+\]
+The unit is given as $\bI:=(\mathbb R, \mathbb R^+, \{1\})$. One can check that $(\Af,
+\otimes, \bI)$ is a symmetric monoidal category, with all the structures inherited from
+$\FV$. It only remains to check that $\alpha$, $\lambda$, $\rho$ and $\sigma$ from $\FV$
+are morphisms in $\Af$. We will do it some other time, maybe.
+
+
+\begin{lemma}\label{lemma:tensor_aff} Let $x_0\in A_\bX$, $y_0\in A_\bY$. Put $L_\bX=Lin(A_\bX)$.
+
+\begin{enumerate}
+\item[(1)] $\bm{\emptyset}\otimes \bX=\bm{\emptyset}$, $\bm{0}\otimes \bX=\bm{0}$.
+\item[(2)] $A_{\bX\otimes \bY}=Aff(\{x\otimes y, x\in A_\bX, y\in A_\bY\})$.
+\item[(3)] $L_{\bX\otimes \bY}= (x_0\otimes L_\bY)\vee (L_\bX\otimes y_0)\vee (L_\bX\otimes
+L_\bY)$.
+\item[(4)] $\dim(A_{\bX\otimes \bY})=(\dim(A_\bX)+1)(\dim(A_{\bY}+1)-1$.
+
+
+\end{enumerate}
+
+\end{lemma}
+
+\begin{proof} (1) is quite obvious from the definition.
+
+Let $0\notin C\subseteq V$ be any subset of a finite dimensional vector
+space $V$. Then clearly $\tilde C=Aff(C)^\sim$ and $\tilde{\tilde
+C}=Aff(C)^\approx=Aff(C)$, this proves (2). 
+
+Since $A_\bX=x_0+L_\bX$ and $A_\bY=y_0+L_\bY$, we see from (2) that $A_{\bX\otimes \bY}$
+is an affine span of elements of the form
+\[
+(x_0+u)\otimes (y_0+v)=x_0\otimes y_0+u\otimes y_0+x_0\otimes v+u\otimes v,\qquad u\in L_\bX,\ v\in L_{\bY}.
+\]
+Clearly, any such element is in $x_0\otimes y_0+L_{\bX\otimes \bY}$ as defined in (3).
+Moreover, since $x_0\notin L_\bX$ and $y_0\notin L_\bY$, the subspaces $x_0\otimes L_\bY$,
+$L_\bX\otimes y_0$ and $L_\bX\otimes L_\bY$ are mutually linearly independent. For any
+$u\in L_\bX$, 
+\[
+x_0\otimes y_0+u\otimes y_0=(x_0+u)\otimes y_0\in A_{\bX\otimes \bY},
+\]
+similarly $x_0\otimes y_0+x_0\otimes v\in A_{\bX\otimes \bY}$ for any $v\in L_\bY$.
+Moreover,
+\[
+x_0\otimes y_0+u\otimes v=\frac12\left( (x_0+u)\otimes (y_0+v)+(x_0-u)\otimes
+(y_0-v)\right)\in A_{\bX\otimes \bY}.
+\]
+Since any element  $w\in L_\bX\otimes L_\bY$ has the form $w=\sum_i u_i\otimes v_i$ with $u_i\in L_\bX$, $v_i\in
+L_\bY$, we see that 
+\[
+A_{\bX\otimes \bY}= x_0\otimes y_0+L_{\bX\otimes \bY},
+\]
+this proves (3). (4) is quite obvious from (3).
+
+
+\end{proof}
+
+\subsubsection{Duality}
+
+We  define the dual object
+\[
+\bX^*=(V_\bX^*, \tilde A_\bX).
+\]
+Note that 
+\[
+\bm{\emptyset}^*=\bm{0},\qquad \bm{0}^*=\bm{\emptyset}.
+\]
+We also have by Lemma \ref{lemma:affine}
+\[
+L_{\bX^*}=span(A_\bX)^\perp= (\mathbb Rx_0\vee L_\bX)^\perp=\{x_0\}^\perp\wedge
+L_\bX^\perp.
+\]
+This means that 
+\[
+\dim(A_{\bX^*})=\dim(V_\bX)-\dim(A_\bX)-1.
+\]
+
+Further, for $f:\bX\to \bY$ we define $f^*:\bY^*\to \bX^*$ as the usual adjoint of the map
+$f:V_\bX\to V_\bY$. Let us check that $f^*(A_{\bY^*})\subseteq A_{\bX^*}$. So let $y^*\in
+A_{\bY^*}=\tilde A_{\bY}$, we have to check that $\<f^*(y^*),x\>=1$ for all $x\in A_\bX$.
+Indeed,
+\[
+\<f^*(y^*),x\>=\<y^*,f(x)\>=1.
+\]
+It follows that $(-)^*:\Af^{op}\to \Af$ is a functor, which is full and faithful since the
+dual $(-)^*$ on  $\FV$ is such.
+
+We want to show that $(\Af,\otimes,\bI)$ is *-autonomous. For this we need to show that there is a natural isomorphism
+\[
+\Af(\bX\otimes \bY,\bZ^*)\simeq \Af(\bX,(\bY\otimes \bZ)^*).
+\]
+Note that we have natural iso 
+\[
+\FV(V_{\bX}\otimes V_{\bY},V^*_{\bZ})\simeq \FV(V_\bX,(V_\bY\otimes V_\bZ)^*)
+\]
+Since the morphisms in $\Af$ are special morphisms in $\FV$, it is enough to show that the
+above iso maps  $\Af$-morphisms onto respective $\Af$-morphisms. We see that the relation
+between $f\in \FV(V_{\bX}\otimes V_{\bY},V^*_{\bZ})$ and $\hat f\in
+\FV(V_\bX,(V_\bY\otimes V_\bZ)^*)$ is given as
+\[
+\<f(x\otimes y),z\>=\<{\hat f}(x),y\otimes z\>,\qquad x\in V_\bX, y\in V_\bY, z\in V_\bZ.
+\]
+Assume that $f: \bX\otimes \bY\to \bZ^*$, we need to show that $\hat f: \bX\to (\bY\otimes
+\bZ)^*$. Let $x\in A_\bX$ and let $y\in A_\bY$, $z\in A_\bZ$, then
+\[
+\<\hat f(x),y\otimes z\>=\<f(x\otimes y),z\>=1,
+\]
+since $f$ maps $x\otimes y\in A_{\bX\otimes \bY}$ into $A_\bZ$. It follows that 
+\[
+\hat f(x)\in (A_\bY\otimes A_\bZ)^\sim=\tilde A_{\bY\otimes \bZ}.
+\]
+The converse is similar: we see that $f$ maps all elements $x\otimes y$ into $\tilde
+A_\bZ$, hence also the affine subspace generated by $x\otimes y$ is mapped to $\tilde
+A_\bZ$. But this affine subspace is exactly $A_{\bX\otimes \bY}$.
+
+
+
+\subsubsection{First order objects (states)}
+
+We say that an object  $\bX$ in $\Af$ is a first order object if
+$\dim(A_\bX)=\dim(V_\bX)-1$. We will use ordinary capital letters (not bold) to indicate
+first order objects.
+
+If $X$ is first order, $A_X$ is determined by a single element 
+$u_X\in V_{X^*}$ and we have  $X=(V_X,\{u_{X}\}^\sim)$, $X^*=(V_X^*,\{u_X\})$.  Note that if $X$ and $Y$ are
+first order objects, then $X\otimes Y$ is a first order object as well, and we have
+\[
+u_{X\otimes Y}=u_{X}\otimes u_{Y}.
+\]
+Indeed,  this follows easily from Lemma \ref{lemma:tensor_aff}. Note also that the tensor
+unit $\bI$ is first order, but $\ii$ and $\tt$ are not.
+
+\begin{lemma}
+We  $(\bX\otimes \bY)^*\simeq \bX^*\otimes \bY^*$,
+if and only if some of the following holds
+\begin{enumerate}
+\item one of the objects is $\ii$, $\tt$ or $\bI$,
+\item both $\bX$, $\bY$  are firts order objects,
+\item both $\bX^*$, $\bY^*$ are first order objects.
+\end{enumerate}
+
+
+\end{lemma}
+
+
+\begin{proof} Using the expression for $\dim(A_{\bX\otimes\bY})$ and $\dim(\tilde A_\bX)$,
+we get
+
+\begin{align*}
+\dim(A_{(\bX\otimes \bY)^*})&=\dim(V_{\bX\otimes \bY})-\dim(A_{\bX\otimes \bY})-1\\
+&=\dim(V_{\bX\otimes \bY})-(\dim(A_\bX)+1)(\dim(A_\bY)+1)\\
+\dim(A_{\bX^*\otimes \bY^*})&=(\dim(A_{\bX^*})+1)(\dim(A_{\bY^*})+1)-1\\
+&=(\dim(V_\bX)-\dim(A_\bX))(\dim(V_\bY)-\dim(A_\bY))-1
+\end{align*}
+From this one can check that 
+\[
+\dim(A_{(\bX\otimes \bY)^*})-\dim(A_{\bX^*\otimes \bY^*})=\dim(A_\bX)\dim(\tilde
+A_\bY)+\dim(\tilde A_\bX)\dim(A_\bY).
+\]
+It is clear that this is equal to 0 if and only if some of the conditions holds. Since 
+we always have $A_{\bX^*\otimes \bY^*}\subseteq \tilde A_{\bX\otimes\bY}$, the statement
+follows.
+
+\end{proof}
+
+The above result also shows that the dual monoidal structure 
+\[
+\bX\odot \bY:=(\bX^*\otimes
+\bY^*)^*
+\]
+coincides with $\otimes$ if and only if $\bX$ and $\bY$, or their duals, are
+first order.
+
+
+
+Let us also note that the unique dualizable object in this category is $\bI$, so $\Af$ is
+very noncompact. 
+\begin{lemma}\label{lemma:dualizable}
+An object $\bX$ in $\Af$  is dualizable if and only if $\bX\simeq \bI$.
+\end{lemma}
+
+\begin{proof} Assume that $\bX$ is dualizable, 
+then there must be some $\eta: \bI\to
+\bX^*\otimes \bX$ and $\epsilon: \bX\otimes \bX^*\to I$ such that 
+\[
+(\epsilon\otimes \bX)\circ (\bX\otimes \eta)=id_\bX.
+\]
+This means that $\epsilon \in \tilde A_{\bX\otimes \bX^*}$ and  $\eta(1)\in A_{\bX^*\otimes
+\bX}$, so that $\eta(1)=\sum\alpha_i x_i^*\otimes x_i$ for some $x_i^*\in \tilde A_\bX$,
+$x_i\in A_\bX$ are  such that we have for any $x\in V_\bX$
+\[
+\sum_i\alpha_i\<\epsilon,x\otimes x_i^*\>x_i=x
+\]
+This implies that $\{x_i\}$ must be a basis of $V_\bX$, which implies that $A_\bX$ must
+have codimension 1, that is, $\bX$ is first order. But then $\tilde A_\bX=\{u_\bX\}$, so
+that $\eta(1)=u_\bX\otimes \alpha_i x_i=u_\bX\otimes \bar x$, so we get 
+\[
+\sum_i\alpha_i\<\epsilon,x\otimes x_i^*\>x_i=\<\epsilon,x\otimes u_\bX\>\bar x,
+\]
+so any element in $V_\bX$ is a multiple of $\bar x$, so $\dim(V_\bX)=1$ and $\bX\simeq 
+\bI$.
+\end{proof}
+
+\subsubsection{The subspaces}
+
+For $\bX$ in $\Af$, we put $L_\bX=Lin(A_\bX)$, $S_\bX=span(A_\bX)$. Let $x_0\in A_\bX$,
+$x_0^*\in \tilde A_\bX$, $y_0\in A_\bY$, $y_0^*\in \tilde A_\bY$.
+
+We have
+\[
+L_{\bX^*}=S_\bX^\perp,\quad S_{\bX^*}=L_\bX^\perp
+\]
+and
+\begin{align*}
+A_{\bX\otimes \bY}&=\{w\in S_\bX\otimes S_\bY,\ \<w,x_0^*\otimes y_0^*\>=1\}=S_\bX\otimes
+S_\bY\cap \{x_0^*\otimes y_0^*\}^\sim\\
+&= (x_0\otimes y_0)+ (x_0\otimes L_\bY)\times (L_\bX\otimes y_0)\times  (L_\bX\otimes L_\bY).
+\end{align*}
+From this we see that 
+\[
+S_{\bX\otimes \bY}=S_\bX\otimes S_\bY
+\]
+and 
+\begin{align*}
+\tilde A_{\bX\otimes \bY}= x_0^*\otimes y_0^*+(S_\bX\otimes S_\bY)^\perp=x_0^*\otimes
+y_0^*+(L_{\bX^*}^\perp\otimes L_{\bY^*}^\perp)^\perp.
+\end{align*}
+Note that then
+\[
+A_{\bX\odot \bY}=\tilde A_{\bX^*\otimes \bY^*}=x_0\otimes y_0+ (L_{\bX}^\perp\otimes L_{\bY}^\perp)^\perp
+\]
+\subsubsection{Internal homs}
+
+Since $\Af$ is *-autonomous, the internal hom is 
+\[
+[\bX,\bY]=(\bX\otimes \bY^*)^*=\bX^*\odot \bY.
+\]
+As we have seen above, 
+\[
+A_{[\bX,\bY]}=x_0^*\otimes y_0+(S_{\bX}\otimes L_{\bY}^\perp)^\perp
+\]
+Note that if $X$ and $Y$ are  first order, then
+\[
+A_{[X,\bY]}=u_X\otimes y_0+V_X^*\otimes L_\bY,\qquad A_{[\bX,Y]}=x_0^*\otimes
+y_0+(S_\bX\otimes u_Y)^\perp
+\]
+for all $\bX$, $\bY$, and
+\begin{align*}
+A_{[X,Y]}&=u_X\otimes y_0+(V_X\otimes u_Y)^\perp=\{w\in V_X^*\otimes V_Y,\
+\varphi_{u_Y}(w)=\hat w^*(u_Y)=u_X\},\\
+\tilde A_{[X,Y]}&=A_{X\otimes Y^*}=A_X\otimes u_Y.
+\end{align*}
+
+Note that through the usual identification in $\FV$, any $w\in U^*\otimes V$ is
+identified with a linear map $\hat w:U\to V$, given by
+\[
+\<w,u\otimes v^*\>=\<v^*,\hat w(u)\>=\<\hat w^*(v^*),u\>,
+\]
+where $\hat w^*$ is the adjoint of $\hat w$. For $u^*\in U^*$, we define the map $\varphi^V_u:
+U\otimes V\to V$ by
+\[
+\varphi^V_{u^*}(u\otimes v)= \<u^*,u\>v,\qquad u\in U, v\in V. 
+\]
+We omit the index $V$ if not necessary. 
+Let $A\subseteq V$ be an affine subspace, $0\notin A$, $A\ne \emptyset$. Let $u^*\in U^*$ and put 
+\[
+B=\{w\in U\otimes V, \varphi_u(w)\in A\}
+\]
+Then $B$ is an affine subspace, $0\notin B\ne\emptyset$, indeed, for $a_0\in A$ and $u\in \{u^*\}^\sim$
+\[
+B=u\otimes a_0+ (\{u^*\}^\perp\otimes V)\vee (u\otimes Lin(A))
+\]
+
+\begin{lemma}\label{lemma:alls}
+\begin{enumerate}
+\item $A_\bX=x_0+L_\bX$,
+\item $\tilde A_\bX=x_0^*+S_\bX^\perp$,
+\item $A_{\bX\otimes \bY}=x_0\otimes y_0+...$
+
+\end{enumerate}
+
+
+\end{lemma}
+
 ---
 \section{Once more from the top}
 
