@@ -18,7 +18,9 @@ title: Luczak, 2023, SSA for Segal entropy
 
 [revision](REF_luczak2023/revised.pdf)   
 
-[reply](REF_luczak2023/reply.pdf)   
+[reply](REF_luczak2023/reply.pdf)  
+
+**Decision:** accept (my)
 
 
 

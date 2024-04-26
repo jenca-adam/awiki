@@ -2,7 +2,7 @@
 title: Higher order maps 
 ---
 
-*  **People:**   Bert Lindenhovius     
+*  **People:**   Bert Lindenhovius?     
 
 * **Project:** APVV-22-0570 
 
@@ -24,6 +24,16 @@ title: Higher order maps
 
 * read [santocanale2022frobenius](santocanale2022frobenius), check the "nuclear" objects in interesting \*-autonomous categories
 - this does not seem to give anything interesting
+
+* read [hoffreumon2022projective](hoffreumon2022projective)
+     - similar to my project of Afhom     
+     - Afhom: category of fd vector spaces with an affine subspace     
+     - we then add OVS to it: category of fd vect, but this time with a positive cone, star-autonomous subcategories here?? but with different tensor product?     
+     - check references    
+
+
+
+
      
 * BaSe - category and HOM-s for GPT (OT):     
      - SMC, \*-autonomous     

@@ -84,6 +84,8 @@ title: My work
 * [committees](cmmtt)    
 
 
+VEGA komisia c. 1, Stich - [pisomne stanovisko komisie](index/pisomne_stanovisko2.pdf),  [google docs](https://docs.google.com/document/d/1hUJHzKpQRzvsp3GbfmSYH38FL5AHXPjUkRyusqeBnCk/edit?usp=sharing)   
+
 --- 
 
 

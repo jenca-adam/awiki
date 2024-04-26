@@ -1,7 +1,7 @@
-title: names, (title), year
+title: Name(s), title, year
 ---
 
-**Paper:**   
+**Paper:** 
  
 **Journal:** 
 
