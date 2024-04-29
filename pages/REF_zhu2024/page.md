@@ -10,6 +10,5 @@ title: Zhu et al., 2024
 [file](REF_zhu2024/file.pdf), [supplementary material](REF_zhu2024/supplementary.pdf)
 
 
-**Decision:** 
-
+**Decision:**  minor revision
 
