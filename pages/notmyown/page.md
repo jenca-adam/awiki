@@ -155,6 +155,7 @@ title: Not my own papers
 ### I
 
 ### J
+[jaksic2011entropic](jaksic2011entropic),
 [jones2007entanglement](jones2007entanglement),
 [junge2018universal](junge2018universal),
 
@@ -254,6 +255,8 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), [BOOK_rao1991theory](BOOK_rao1991theory), 
 
 ### S
+
+[stormer1979positive](stormer1979positive),    
 [seal2013tensors](seal2012tensors),
 [saito2015ondefining](saito2015ondefining),
 

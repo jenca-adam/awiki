@@ -15,7 +15,7 @@ We should start by reading this:
 
 * [hanche1984jordan](BOOK_hanche1984jordan) some basic theory of Jordan and JB algebras
 
-
+* [stormer1979positive](stormer1979positive) Positive projections and Jordan structure in operator algebras
 
 ## Basic references
 

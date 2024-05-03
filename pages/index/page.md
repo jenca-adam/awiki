@@ -10,7 +10,9 @@ title: My work
 
 * [Renyi divergence](NEW_qre) in von Neumann algebras     
 
-* [Higher order maps](NEW_hom) 
+* [Higher order maps](NEW_hom)    
+
+* [Jordan algebras](NEW_seas)  with Sylvia
 
 
 
@@ -62,7 +64,9 @@ title: My work
 
 ### New
 
-[Rényi seminar](TALK_2023renyi)   2023
+[Rényi seminar](TALK_2023renyi)   2023     
+[Talk in Nagoya](TALK_2023nagoya)  2023    
+[IMAG worshop](TALK_2024imag)    2024
 
 
 

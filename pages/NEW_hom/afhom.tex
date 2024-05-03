@@ -26,6 +26,9 @@
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}
 
+\def\aff{\operatorname{Aff}}
+\def\lin{\operatorname{Lin}}
+\def\Span{\operatorname{Span}}
 \def\type{\mathrm {setting}}
 \def\ii{\bm{\emptyset}}
 \def\tt{\bm{0}}
@@ -64,7 +67,10 @@ We present some important categories.
 Let  $\FV$ be the category of finite dimensional real vector spaces with linear maps. Then
 $(\FV,\otimes, \mathbb R)$ is a symmetric monoidal category, with the usual tensor product
 of vector spaces. With the usual duality $(-)^*: V\mapsto V^*$  of vector spaces, $\FV$ is
-compact closed.  Put
+compact closed.  We will always use the identification $V=V^{**}$ by the canonical
+isomorphism.
+
+Put
 \[
 e_U: U\otimes U^*\to \mathbb R,\qquad e_U(u\otimes u^*)=\<u^*,u\>,
 \]
@@ -112,6 +118,7 @@ $\sum_i\alpha_i a_i\in A$ whenever all $a_i\in A$ and $\sum_i\alpha_i=1$. We say
 is proper if $0\ne A$ and $A\ne \emptyset$. We will always
 mean  that an affine subspace is proper (if not explicitly stated otherwise).
 
+\subsubsection{Description}
 An affine
 subspace can be determined in two ways:
 \begin{enumerate}
@@ -122,47 +129,57 @@ A=a_0+L
 is a proper affine subspace.  Note that $a_0\in A$ and $A\cap L=\emptyset$.
 Conversely, any proper affine subspace $A$ can be given in this way, with $a_0$ an arbitrary element in $A$ and
 \[
-L=Lin(A):=\{a_1-a_2,\ a_1,a_2\in A\}=\{a-a_0,\ a\in A\}.
+L=\lin(A):=\{a_1-a_2,\ a_1,a_2\in A\}=\{a-a_0,\ a\in A\}.
 \]
 \item[(ii)] Let $S\subseteq V$ be a linear subspace and $a_0^*\in V^*\setminus S^\perp$. Then
 \[
 A=\{a\in S, \<a_0^*,a\>=1\}
 \]
 is a proper affine subspace. Conversely, any proper affine subspace $A$ is given in this way, with
-$S=span(A)$ and $a_0^*$ an arbitrary element in 
+$S=\Span(A)$ and $a_0^*$ an arbitrary element in the dual 
 \[
 \tilde A=\{a^*\in V^*,\ \<a^*,a\>=1,\ \forall a\in A\}.
 \]
 \end{enumerate}
 
-For an affine subspace $A$, $\tilde A$ is an affine subspace as well. If $A$ is proper,
+For an affine subspace $A$, the relation of $L=\lin(A)$ and $S=\Span(A)$ is as follows:
+\[
+S=L+\mathbb R a,\qquad L=S\cap \{\tilde a\}^\perp,
+\]
+here $a\in A$ and $\tilde a\in \tilde A$ are arbitrary elements.
+
+
+\subsubsection{Duality}
+
+For an affine subspace $A$,  $\tilde A$ is an affine subspace as well. If $A$ is proper,
 then $\tilde A$ is proper and we have
 $\tilde{\tilde A}=A$. More generally, if $\emptyset\ne C\subseteq A$ is any  subset of a
 proper  affine
 subspace $A$, then $\tilde C$ is a proper affine subspace 
-and $\tilde{\tilde C}$ is the smallest
-affine subspace containing $C$, that is,
+and $\tilde{\tilde C}$ is the affine hull of $C$, that is,
 \[
-\tilde{\tilde C}=\{\sum_i \alpha_i c_i,\ c_i\in C,\ \sum_i\alpha_i=1\}.
+\tilde{\tilde C}=\aff(C):=\{\sum_i \alpha_i c_i,\ c_i\in C,\ \sum_i\alpha_i=1\}.
 \]
 In this case, we may write $\tilde{\tilde C}$ as
 \[
-\tilde{\tilde C}=c_0+Lin(C)=c_0+span(\{c_1-c_2,\ c_1,c_2\in C\})
+\tilde{\tilde C}=c_0+\lin(C)=c_0+\Span(\{c_1-c_2,\ c_1,c_2\in C\})
 \]
 with an arbitrary element $c_0\in C$, or as
 \[
-\tilde{\tilde C}=\{c\in span(C),\ \<a_0^*,c\>=1\}
+\tilde{\tilde C}=\{c\in \Span(C),\ \<a_0^*,c\>=1\}
 \]
-for an arbitrary element $a_0^*\in \tilde A$. We clearly have
-\[
-Lin(\tilde C)=C^\perp=span(C)^\perp,\qquad Lin(C)=Lin(\tilde{\tilde C})=\tilde
-C^\perp=span(\tilde C)^\perp
-\]
-and by duality also
-\[
-span(C)=C^{\perp\perp} =Lin(\tilde C)^\perp,\qquad span(\tilde C)=Lin(C)^\perp.
-\]
+for an arbitrary element $a_0^*\in \tilde A$.
 
+\begin{lemma}\label{lemma:duality}
+Let $A$ be a proper affine subspace and let $C\subseteq A$ be any subset. Then
+\begin{align*}
+\lin(C)&=\lin(\tilde{\tilde C})=\tilde
+C^\perp=\Span(\tilde C)^\perp,&  \lin(\tilde C)&=C^\perp=\Span(C)^\perp \\
+\Span(C)&=C^{\perp\perp} =\lin(\tilde C)^\perp,&  \Span(\tilde C)&=\lin(C)^\perp.
+\end{align*}
+
+
+\end{lemma}
 
 
 
@@ -170,20 +187,24 @@ span(C)=C^{\perp\perp} =Lin(\tilde C)^\perp,\qquad span(\tilde C)=Lin(C)^\perp.
 \subsection{The category $\Af$}
 
 
-The objects of $\Af$ are of the form $X=(V_X,A_X,a_X,\tilde a_X)$, where $V_X$ is in
-$\FV$, $A_X\subseteq V_X$ an affine subspace, $a_X\in A_X$ and $\tilde a_X\in \tilde A_X$
-are some elements. Morphisms $X\to Y$ are linear maps $f:V_X\to V_Y$ such that
-$f(A_X)\subseteq A_Y$. Note that by definition $A_X$ is proper for any object $X$. We may
+The objects of $\Af$ are of the form $X=(V_X,A_X)$, where $V_X$ is an object in 
+$\FV$ and  $A_X\subseteq V_X$ a proper affine subspace. Morphisms $X\to Y$ are morphisms
+$f:V_X\to V_Y$ in $\FV$ such that
+$f(A_X)\subseteq A_Y$.  We may
 also add
-two special objects: the initial object $\emptyset:=(\{0\}, \emptyset, -, 0)$ and the terminal
-object $0:=(\{0\},\{0\},0,-)$, here the affine subspaces are obviously not proper.
+two special objects: the initial object $\emptyset:=(\{0\}, \emptyset)$ and the terminal
+object $0:=(\{0\},\{0\})$, here the affine subspaces are obviously not proper.
+
 
 For any object $X$, we also put 
 \[
-L_X:=Lin(A_X)\qquad S_X:=span(A_X),\qquad  d_X:=\dim(L_X),\qquad D_X:=\dim(V_X).
+L_X:=\lin(A_X)\qquad S_X:=\Span(A_X),\qquad  d_X:=\dim(L_X),\qquad D_X:=\dim(V_X).
 \]
 Note that $X$ is
-uniquely determined also when $A_X$ is replaced by $L_X$ or $S_X$. 
+uniquely determined also by the triple $(V_X,L_X,a_X)$ with  an element $a_X\in A_X$, or
+by $(V_X,S_X,\tilde a_X)$ with an element $\tilde a_X\in \tilde A_X$. 
+
+
 
 
 \subsubsection{Limits and colimits}
@@ -191,11 +212,13 @@ uniquely determined also when $A_X$ is replaced by $L_X$ or $S_X$.
 Limits and colimits should be obtained from those in $\FV$, we have to spectify the other
 structures and check  whether the corresponding arrows are in $\Af$. 
 
+\medskip
+
 First, note that $\{0\}$ is both initial and terminal in $\FV$. In $\Af$, it is easily
-seen that $\emptyset$ is \textbf{initial} and $0$ is \textbf{terminal} in $\Af$. 
+seen that $\emptyset$ is {initial} and $0$ is {terminal} in $\Af$. 
 
 Let $\bX$, $\bY$ be two objects in $\Af$. Assume first that both are proper. We define
-their \textbf{product} as
+their {product} as
 \[
 \bX\times \bY:=(V_\bX\times V_\bY, A_\bX\times A_\bY, (a_X,a_Y), \frac12(\tilde a_X,\tilde
 a_Y)),
@@ -210,20 +233,23 @@ V_\bY\to V_\bY$ are in $\Af$. Moreover, for $f:\bZ\to \bX$  and $g:\bZ\to \bY$, 
 $f\times g(z)=(f(z),g(z))$ is also clearly a morphism $\bZ\to \bX\times\bY$  in $\Af$. 
 We have
 \[
-L_{X\times Y}=L_X\times L_Y,\qquad S_{X\times Y}= (S_X\times S_Y)\wedge \{(\tilde
-a_X,-\tilde a_Y)\}^\perp.
+L_{X\times Y}=L_X\times L_Y,\qquad S_{X\times Y}= (L_X\times L_Y)\vee \mathbb R(a_X,a_Y)=(S_X\times S_Y)\wedge \{(\tilde
+a_X,-\tilde a_Y)\}^\perp
 \]
-We put $X\times \emptyset=\emptyset$, with the unique morphisms $\pi_X:\emptyset \to X$
+for an arbitrary choice $a_X\in A_X$, $a_Y\in A_Y$ and $\tilde a_X\in \tilde A_X$, $\tilde
+a_Y\in \tilde A_Y$.
+
+Next, we put $X\times \emptyset=\emptyset$, with the unique morphisms $\pi_X:\emptyset \to X$
 and $\pi_{\emptyset}:\emptyset \to \emptyset$. If $Y\xrightarrow{f}X$ and
 $Y\xrightarrow{g} \emptyset$, then it is clear that $Y=\emptyset$, this shows that this is
 indeed the product. Further, put  $X\times 0=X$, with $\pi_X=id_X$  and
 $\pi_0: X\xrightarrow{!}0$. It is also readily verified that this is the product.
 
+\medskip
 
-The \textbf{coproduct} for proper objects $X$, $Y$ is defined as 
+The coproduct for proper objects $X$, $Y$ is defined as 
 \[
-\bX\oplus \bY=(V_\bX\times V_\bY, A_\bX\oplus A_\bY,\frac12(a_X,a_Y), (\tilde a_X,\tilde
-a_Y)),
+\bX\oplus \bY=(V_\bX\times V_\bY, A_\bX\oplus A_\bY)
 \]
 where 
 \[
@@ -241,7 +267,7 @@ arbitrary otherwise. The usual embeddings  $p_\bX:V_\bX\to V_\bX\times V_\bY$ an
 V_{\bY}\to V_\bX\times V_\bY$ are easily seen to be morphsims in $\Af$.   
 
 Let  $f:\bX\to \bZ$, $g:\bY\to \bZ$ be any morphisms in $\Af$ and consider the map
-$V_\bX\times V_\bY\to \bZ$ given as
+$V_\bX\times V_\bY\to V_\bZ$ given as
 $f\oplus g(u,v)=f(u)+g(v)$. We need to show that it preserves the affine subspaces. So let 
 $x\in A_\bX$, $y\in  A_\bY$, then since $f(x),g(y)\in A_\bZ$, we have for any $s\in \mathbb R$,
 \[
@@ -250,16 +276,58 @@ f\oplus g(sx,(1-s)y)=sf(x)+(1-s)g(y)\in A_\bZ.
 We also have
 \[
 L_{X\oplus Y}= (L_X\times L_Y)\vee \mathbb R\{(a_X,-a_Y)\},\qquad S_{X\oplus Y}=S_X\times
-S_Y.
+S_Y
 \]
+for some $a_X\in A_X$, $a_Y\in A_Y$.
+
 Similarly as in the case of products, it is verified that $X\oplus \emptyset=X$ and
 $X\oplus 0=0$. (All the statements for coproducts can be obtained from duality defined
 below).
 
+\medskip
 
 One can also discuss equalizers and coequalizers, here we only note that these may be
-trivial even for proper objects. We next consider pullbacks and pushouts, in some special
-cases that will be needed below.
+trivial even for proper objects. We will  consider pullbacks and pushouts for some special
+morphisms will be needed below.
+
+\subsubsection{Mono-, epi- and bimorphisms} 
+
+
+A morphism $X\xrightarrow{f} Y$ is a monomorphism if $f\circ h=f\circ g$ implies $h=g$ for
+any morphisms $g$, $h$, and an epimorphism if $h\circ f=g\circ f$ implies $h=g$. A
+morphism that is both mono and epi is called a bimorphism.
+
+
+\begin{lemma}\label{lemma:epimono} A morphism $X\xrightarrow{f} Y$ is a  monomorphism if and only
+if  it is injective as a map $f:V_X\to V_Y$. Similarly, $f$ is an epimorphism if and only if it is surjective. 
+
+\end{lemma}
+
+Consequently, $f$ is a bimorphism if and only if  it is an isomorphism of $V_X$ and $V_Y$. Note that a
+bimorphism is not necessarily an isomorphism in $\Af$.
+
+\begin{proof} Since injective maps are monomorphisms in $FV$, it is clear that any such
+map is a monomorphism also in $\Af$. For the converse, let $F$ be a monomorphism in $\Af$
+and let $K=Ker(f)$. Let $Z=(V_X\times K, A_X\times \{0\})$, then $Z$ is an object in
+$\Af$. Let $g,h:V_Z\to V_X$ be defined as $g=\pi_{V_X}$, $h=\pi_{V_X}+\pi_K$, then
+$g,h:Z\to X$ are morphisms in $\Af$ and we have
+\[
+f\circ g(x,y)=f(x)=f(x)+f(y)=f\circ h(x,y),\qquad \forall (x,y)\in V_Z.
+\]
+Hence $h=g$, so that we must have $K=\{0\}$. 
+
+Similarly, let $f$ be an epimorphism and let $R=f(V_X)\subseteq V_Y$. Let $Z=(V_Y\times
+V_Y|_R,
+A_Y\times \{[0]\})$ and let $g,h:V_Y\to V_Z$ be given by $g(y)= (y,[0])$, $h(y)=(y, q(y))$,
+where $q:V_Y\to V_Y|_R$ is the quotient map. Since $A_Y\subseteq R$, we have
+$q(A_Y)=\{[0]\}$, so that both $g,h$ are morphisms in $\Af$. Moreover,
+\[
+g\circ f(x)=(f(x),[0])=(f(x),q(f(x)))= h\circ f,
+\]
+so that $g=h$, but this implies that $R=V_Y$.
+
+
+\end{proof}
 
 
 Let $X,Y$ be proper objects. We say that $X\xrightarrow{f} Y$ is an inclusion if the

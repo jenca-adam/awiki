@@ -94,8 +94,9 @@ title: "Renyi relative entropy in von Neumann algebras"
 
 ### References
 
-Finite dimensional
+Finite dimensional     
 
+* [jaksic2011entropic](jaksic2011entropic) first introduced    
 * [audenaert2015alpha](audenaert2015alpha) introduction of $\alpha-z$-Renyi relative entropies    
 * [carlen2018inequalities](carlen2018inequalities) some dpi bounds
 * [lin2015investigating](lin2015investigating) limit to 1, derivative at 1    

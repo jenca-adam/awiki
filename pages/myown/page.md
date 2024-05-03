@@ -4,10 +4,9 @@ title: My own papers
 
 ### 2024
 
-1. [jencova2024theexponential](jencova2024theexponential) special issue of IG
-
-1. [jencova2024recoverability](jencova2024recoverability) recoverability by hypothesis testing, Beth's special issue 
-
+1. [jencova2024theexponential](jencova2024theexponential) special issue of IG    
+1. [jencova2024recoverability](jencova2024recoverability) recoverability by hypothesis testing, Beth's special issue    
+1. [hiai2024alphaz](hiai2024alphaz) $\alpha$-$z$ R\'enyi divergences: DPI, sufficient channels, monotonicity in parameters. Joint with Fumio Hiai   
 
 ### 2023
 
