@@ -700,7 +700,7 @@ h_{\omega_0}=h_{\varphi_0}^{\frac{q-1}{2q}}\bar w_0h_{\varphi_0}^{\frac{q-1}{2q}
 D_{q,q}(\omega_0\|\varphi_0)=D_{\alpha,z}(\psi_0\|\varphi_0)=D_{\alpha,z}(\psi\|\varphi)=D_{q,q}(\omega\|\varphi).
 \]
 \item By the variational formula and uniqueness, we get $\omega_0=\omega\circ\gamma$.
-\item By known properties of $D_{q,q}$, $q>1$, $\gamma$ is sufficient with respect to
+\item By known properties of $D_{q,q}$, $q>1$, $\gamma$ is suficient with respect to
 $\{\omega,\varphi\}$, so that 
 \[
 \omega\circ\Ee=\omega.
