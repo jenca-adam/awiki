@@ -4,7 +4,7 @@
 \usepackage{amsmath,amssymb,amsthm, mathtools}
 \usepackage{xcolor}
 %\usepackage{bbold}
-%\usepackage[skins]{tcolorbox}
+\usepackage[skins]{tcolorbox}
 %\newcommand{\ou}{\mathbb 1}
 \newcommand{\<}{\langle}
 \renewcommand{\>}{\rangle}
@@ -47,8 +47,8 @@
     \end{centering}
 }
 
-%\newtcolorbox{mybox}[1][]{before skip=3mm, after skip=3mm, enhanced,colbacktitle=blue!10!white, coltitle=blue!50!black,colback=white,colframe=white!98!black,drop fuzzy shadow southeast={black!50!white}, #1}
-%\newcommand{\vun}{\rotatebox[origin=c]{90}{$\subseteq$}}
+\newtcolorbox{mybox}[1][]{before skip=3mm, after skip=3mm, enhanced,colbacktitle=blue!20!white, coltitle=blue!50!black,colback=white,colframe=white!98!black,drop fuzzy shadow southeast={black!50!white}, #1}
+\newcommand{\vun}{\rotatebox[origin=c]{90}{$\subseteq$}}
 
 
 %\newtcolorbox{mybox}[1][]{before skip=3mm, after skip=3mm, enhanced,colbacktitle=blue!10!white, coltitle=blue!50!black,colback=white,colframe=white!98!black,drop fuzzy shadow southeast={black!50!white}, #1}
@@ -58,20 +58,19 @@
 %\titlegraphic{\includegraphics[width=1.5cm]{logomu.pdf}\hspace*{4.75cm}~%
 %   \includegraphics[width=1.5cm]{logosav}}
 
+
 \title{On $\alpha-z$-R\'enyi divergences in von Neumann algebras}
-\subtitle{\small\color{black}based on: Fumio Hiai and AJ, arxiv:2404.07617}
 \author{Anna Jen\v cov\'a}
-\institute{Mathematical Institute, Slovak Academy of Sciences, Bratislava,
-Slovakia\\[5mm]
-\includegraphics[width=1.5cm]{logomu.pdf}\hspace*{4.75cm}~%
-   \includegraphics[width=1.5cm]{logosav}
-}
+
+\institute{Mathematical Institute, Slovak Academy
+of Sciences\\[2mm]
+\includegraphics[width=1.3cm]{logomu.pdf}\hspace*{4.75cm}~%
+  \includegraphics[width=1.4cm]{logosav}\\[6mm]
+
+{\normalsize Joint work with Fumio Hiai}\\[6mm]}
 
 
-%\titlegraphic{\includegraphics[width=1.5cm]{logomu.pdf}\hspace*{4.75cm}~%
-%   \includegraphics[width=1.5cm]{logosav}
-%}
-\date{Towards Infinite Dimension and Beyond in Quantum Information, Granada, May 9, 2024}
+\date{ Granada, May 9, 2024}
 
 \begin{document}
 \begin{frame}
@@ -88,12 +87,14 @@ D_{\alpha,z}(\rho\|\sigma)=\frac{1}{\alpha-1}\log
 \frac{\mathrm{Tr}\bigl(\rho^{\frac{\alpha}{2z}}\sigma^{\frac{1-\alpha}{z}}
 \rho^{\frac{\alpha}{2z}}\bigr)^z}{\mathrm{Tr}\,\rho},
 \]
-where $0<\alpha\ne 1$ and $z>0$.\myfootnote{V. Jaksi\'c et al, 2011}
-\myfootnote{K. Audenaert, N. Datta, 2015}
+where $0<\alpha\ne 1$ and $z>0$.\myfootnote{Jaksi\'c, Ogata, Pautrat and  Pillett, 2011}
+\myfootnote{Audenaert and Datta, 2015}
 
 \bigskip
 
-For each $z>0$: a quantum extension of classical R\'enyi $\alpha$-divergences for
+\medskip
+
+For each $z>0$, $D_{\alpha,z}$ is a quantum extension of classical R\'enyi $\alpha$-divergences for
 probability vectors $p,q$:
 \[
 D_\alpha(p\|q)=\frac{1}{\alpha-1}\log(\sum_i p_i^\alpha q_i^{1-\alpha}).
@@ -282,7 +283,7 @@ hk\in L^r(\Me) \ \text{ and }\ \|hk\|_r\le \|h\|_p\|k\|_q
 \begin{frame}{$D_{\alpha,z}$ for von Neumann algebras}
 
 Let $0<\alpha\ne1$, $0<z$. 
-For $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$,  we define\footnote{Kato and Ueda, 2023; Kato 2024}
+For $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$,  we define\myfootnote{Kato and Ueda, 2023; Kato 2024}
 \[
 D_{\alpha,z}(\psi\|\varphi)=\frac{1}{\alpha-1}\log
 \frac{Q_{\alpha,z}(\psi\|\varphi)}{\psi(1)}
@@ -361,6 +362,37 @@ positive\footnote{Kato, 2024}
 
 \end{frame}
 
+\begin{frame}{DPI for sandwiched R\'enyi divergences, $\alpha>1$}
+
+Let $\tilde D_\alpha(\psi\|\varphi)=D_{\alpha,\alpha}(\psi\|\varphi)<\infty$. Then
+$h_\psi=h_\varphi^{\frac{\alpha-1}{2\alpha}}xh_\varphi^{\frac{\alpha-1}{2\alpha}}$ for
+some $x\in
+L^\alpha(\Me)^+$ and 
+\[
+\tilde
+Q_\alpha(\psi\|\varphi)=Q_{\alpha,\alpha}(\psi\|\varphi)={\|x\|_\alpha^\alpha}
+=\structure{\|h_\psi\|_{\alpha,\varphi}^\alpha}
+\]
+\structure{Kosaki $L^p$-norm}: complex interpolation between 
+\[
+\|h\|_1 \text{ and }
+\|h_\varphi^{\frac12}ah_\varphi^{\frac12}\|_{\infty,\varphi}=\|a\|.
+\]
+
+Since $\|\gamma_*(h)\|_1\le \|h\|_1$ and
+$\|\gamma_*(h_\varphi^{\frac12}ah_\varphi^{\frac12})\|_{\infty,\varphi\circ\gamma}=\|\gamma^*_\varphi(a)\|\le
+\|a\|$,
+\medskip
+\[
+\tilde
+Q_\alpha(\psi\circ\gamma\|\varphi\circ\gamma)=\|\gamma_*(h_\psi)\|_{\alpha,\varphi\circ\gamma}^\alpha\le 
+\|h_\psi\|_{\alpha,\varphi}=\tilde Q_\alpha(\psi\|\varphi),\quad \alpha>1
+\]
+by interpolation.\myfootnote{Beigi, 2013; AJ, 2018}
+\end{frame}
+
+
+
 \begin{frame}{Variational expressions}
 
 Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$.\myfootnote{Finite dimensions: Zhang, 2020}
@@ -385,16 +417,74 @@ Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me^+} \left\{\alpha
 
 \end{frame}
 
-\begin{frame}{Useful inequalities}
+\begin{frame}{A useful inequality}
 
  $\gamma:\Ne\to \Me$  a normal positive unital map,  $\rho\in \Me_*^+$,  $b\in \Ne^+$. 
 
 \bigskip
 \begin{enumerate}
-\item[(1)] If $p\in [1/2,1)$, then 
+\item[(1)] If $p\in [1,\infty]$, then 
 \[
-\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|_p\le
-\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|_p.
+\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|^p_p\ge
+\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|^p_p.
+\]
+\end{enumerate}
+
+\begin{proof} Let $\omega\in \Ne_*^+$,
+$h_\omega=h_{\rho\circ\gamma}^{\frac12}bh_{\rho\circ\gamma}^{\frac12}$.
+\begin{align*}
+\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|^p_p&=Q_{p,p}(\omega\circ
+\gamma^*_\rho\|\rho)=Q_{p,p}(\omega\circ
+\gamma^*_\rho\|\rho\circ\gamma\circ\gamma_\rho^*)\\
+&\le\footnotemark 
+Q_{p,p}(\omega\|\rho\circ\gamma)=\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|^p_p
+\end{align*}\footnotetext{Sandwiched case: AJ, 2018}
+
+
+
+\end{proof}
+
+\end{frame}
+
+\begin{frame}{DPI in the von Neumann algebra setting}
+
+Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$.  We have
+
+\medskip 
+
+\[
+Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me^{++}}\left\{\alpha
+\Big\|h_\psi^{\frac{1}{2p}}ah_\psi^{\frac{1}{2p}}\Big\|_p^{p}
++(1-\alpha) \Big\|h_\varphi^{\frac{1}{2r}}a^{-1}h_\varphi^{\frac{1}{2r}}\Big\|_r^{r}
+\right\},
+\]
+with $p:=\frac{z}{\alpha}$, $r:=\frac{z}{1-\alpha}$. In the above bounds, $p,r\ge 1$.
+
+\bigskip
+
+By the inequality \structure{(1)} and the Choi inequality:
+\[
+\gamma(b)^{-1}\le \gamma(b^{-1}),
+\]
+we get
+\[
+Q_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)\ge Q_{\alpha,z}(\psi\|\varphi).
+\]
+
+
+\end{frame}
+
+
+\begin{frame}{A useful inequality}
+
+ $\gamma:\Ne\to \Me$  a normal positive unital map,  $\rho\in \Me_*^+$,  $b\in \Ne^+$. 
+
+\bigskip
+\begin{enumerate}
+\item[(2)] If $p\in [1/2,1)$, then 
+\[
+\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|^p_p\le
+\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|^p_p.
 \]
 \end{enumerate}
 
@@ -417,91 +507,9 @@ Q_{p,p}(\omega\|\rho\circ\gamma)=\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rh
 
 \end{frame}
 
-\begin{frame}{Useful inequalities}
-
- $\gamma:\Ne\to \Me$  a normal positive unital map,  $\rho\in \Me_*^+$,  $b\in \Ne^+$. 
-
-\bigskip
-\begin{enumerate}
-\item[(2)] If $p\in [1,\infty]$, then 
-\[
-\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|_p\ge
-\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|_p.
-\]
-\end{enumerate}
-
-\begin{proof} Let $\omega\in \Ne_*^+$,
-$h_\omega=h_{\rho\circ\gamma}^{\frac12}bh_{\rho\circ\gamma}^{\frac12}$.
-\begin{align*}
-\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|^p_p&=Q_{p,p}(\omega\circ
-\gamma^*_\rho\|\rho)=Q_{p,p}(\omega\circ
-\gamma^*_\rho\|\rho\circ\gamma\circ\gamma_\rho^*)\\
-&\le\footnotemark 
-Q_{p,p}(\omega\|\rho\circ\gamma)=\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|^p_p
-\end{align*}\footnotetext{Sandwiched case: AJ, 2018}
-
-
-
-\end{proof}
-
-\end{frame}
-
-
 \begin{frame}{DPI in the von Neumann algebra setting}
 
-Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$ and let $\gamma:\Ne\to \Me$ be a normal positive
-unital map. 
 
-\bigskip 
-
-Assume either of the following conditions:
-\medskip
-
-\begin{enumerate}
-\item[(i)] $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$,
-\item[(ii)] $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le \alpha$.
-\end{enumerate}
-
-\bigskip
-
-Then we have
-\[
-D_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)\le D_{\alpha,z}(\psi\|\varphi).
-\]
-
-\end{frame}
-
-\begin{frame}{DPI in the von Neumann algebra setting}
-
-Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$.  We have
-
-\medskip 
-
-\[
-Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me^{++}}\left\{\alpha
-\Big\|h_\psi^{\frac{1}{2p}}ah_\psi^{\frac{1}{2p}}\Big\|_p^{p}
-+(1-\alpha) \Big\|h_\varphi^{\frac{1}{2r}}a^{-1}h_\varphi^{\frac{1}{2r}}\Big\|_r^{r}
-\right\},
-\]
-with $p:=\frac{z}{\alpha}$, $r:=\frac{z}{1-\alpha}$. In the above bounds, $p,r\ge 1$.
-
-\bigskip
-
-By the inequality \structure{(2)} and the Choi inequality:
-\[
-\gamma(b)^{-1}\le \gamma(b^{-1}),
-\]
-we get
-\[
-Q_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)\ge Q_{\alpha,z}(\psi\|\varphi).
-\]
-
-
-\end{frame}
-
-
-
-\begin{frame}{DPI in the von Neumann algebra setting}
 
 Let $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le \alpha$.  We have
 
@@ -525,6 +533,36 @@ Q_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)\le Q_{\alpha,z}(\psi\|\varphi)
 \]
 
 \end{frame}
+
+
+\begin{frame}{DPI in the von Neumann algebra setting}
+
+\begin{mybox}[title=Theorem]
+Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$ and let $\gamma:\Ne\to \Me$ be a normal positive
+unital map. 
+
+\bigskip 
+
+Assume either of the following conditions:
+\medskip
+
+\begin{enumerate}
+\item[(i)] $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$,
+\item[(ii)] $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le \alpha$.
+\end{enumerate}
+
+\bigskip
+
+Then we have
+\[
+D_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)\le D_{\alpha,z}(\psi\|\varphi).
+\]
+\end{mybox}
+
+\end{frame}
+
+
+
 
 \begin{frame}{Sufficient channels and equality in DPI}
 
@@ -623,7 +661,7 @@ for the \structure{conditional expectation} $\Ee:\Me\to \Me$ onto the fixed poin
 
 
 \begin{frame}{Sufficient channels and equality in DPI for $D_{\alpha,z}$}
-
+\begin{mybox}[title=Theorem]
 Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$.
 
 \bigskip
@@ -638,10 +676,13 @@ Then $\gamma$ is sufficient with respect to $\{\psi,\varphi\}$ if and only if
 D_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)=D_{\alpha,z}(\psi\|\varphi).
 \]
 
+\end{mybox}
 
 \end{frame}
 
 \begin{frame}{Sufficient channels and equality in DPI for $D_{\alpha,z}$}
+
+\begin{mybox}[title=Theorem]
 
 Let $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le \alpha\structure{<z+1}$.
 
@@ -652,6 +693,7 @@ $\gamma: \Ne\to \Me$ is sufficient with respect to $\{\psi,\varphi\}$ if and onl
 \[
 D_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)=D_{\alpha,z}(\psi\|\varphi).
 \]
+\end{mybox}
 
 \end{frame}
 
@@ -665,19 +707,20 @@ $q=\frac{z}{\alpha-1}>1$.
 \begin{itemize}
 \item By the assumptions, $D_{\alpha,z}(\psi_0\|\varphi_0)\le
 D_{\alpha,z}(\psi\|\varphi)<\infty$.
-\item In this case, for some $y\in L^{2z}(\Me)$, $y_0\in L^{2z}(\Ne)$: 
+\item In this case, for some $x\in L^{z}(\Me)^+$, $x_0\in L^{z}(\Ne)^+$: 
 \[
-h_\psi^{\frac1{2p}}=yh_\varphi^{\frac1{2q}},\qquad
-h_{\psi_0}^{\frac1{2p}}=y_0h_{\varphi_0}^{\frac1{2q}}
+h_\psi^{\frac1{p}}=h_\varphi^{\frac1{2q}}xh_\varphi^{\frac1{2q}},\qquad
+h_{\psi_0}^{\frac1{p}}=h_{\varphi_0}^{\frac1{2q}}x_0h_{\varphi_0}^{\frac1{2q}}
 \]
 \item Variational expression:
 \[
-Q_{\alpha,z}(\psi\|\varphi)=\sup_{L^q(\Me)^+}\bigl\{\alpha\Tr\bigl((ywy^*)^p\bigr)-(\alpha-1)\Tr\bigl(w^q\bigr)\bigr\},
+Q_{\alpha,z}(\psi\|\varphi)=\sup_{w\in
+L^q(\Me)^+}\bigl\{\alpha\Tr\bigl((x^{\frac12}wx^{\frac12})^p\bigr)-(\alpha-1)\Tr\bigl(w^q\bigr)\bigr\},
 \]
- \structure{uniquely} attained at $\bar w:=(y^*y)^{\alpha-1}\in L^q(\Me)^+$.
+ \structure{uniquely} attained at $\bar w:=x^{\alpha-1}\in L^q(\Me)^+$.
 \medskip 
 
-\item Similarly for $\psi_0$, $\varphi_0$, $\bar w_0:=(y_0^*y_0)^{\alpha-1}\in
+\item Similarly for $\psi_0$, $\varphi_0$, $\bar w_0:=x_0^{\alpha-1}\in
 L^q(\Ne)^+$.
 \end{itemize}
 
