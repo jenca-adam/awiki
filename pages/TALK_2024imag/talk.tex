@@ -63,9 +63,7 @@
 \author{Anna Jen\v cov\'a}
 
 \institute{Mathematical Institute, Slovak Academy
-of Sciences\\[2mm]
-\includegraphics[width=1.3cm]{logomu.pdf}\hspace*{4.75cm}~%
-  \includegraphics[width=1.4cm]{logosav}\\[6mm]
+of Sciences\\[8mm]
 
 {\normalsize Joint work with Fumio Hiai}\\[6mm]}
 
@@ -87,7 +85,7 @@ D_{\alpha,z}(\rho\|\sigma)=\frac{1}{\alpha-1}\log
 \frac{\mathrm{Tr}\bigl(\rho^{\frac{\alpha}{2z}}\sigma^{\frac{1-\alpha}{z}}
 \rho^{\frac{\alpha}{2z}}\bigr)^z}{\mathrm{Tr}\,\rho},
 \]
-where $0<\alpha\ne 1$ and $z>0$.\myfootnote{Jaksi\'c, Ogata, Pautrat and  Pillett, 2011}
+where $0<\alpha\ne 1$ and $z>0$.\myfootnote{Jaksi\'c, Ogata, Pautrat and  Pillet, 2011}
 \myfootnote{Audenaert and Datta, 2015}
 
 \bigskip
@@ -207,7 +205,7 @@ von Neumann algebra, using some technical tools:
 $\Delta_{\psi,\varphi}$
 \item Petz-type (\structure{Petz quasi divergence})\footnote{Petz, 1985}:
 $\Delta_{\psi,\varphi}$
-\item sandwiched R\'enyi divergence:\footnote{Berta, Scholtz and Tomamichel,
+\item sandwiched R\'enyi divergence:\footnote{Berta, Scholz and Tomamichel,
 2018; AJ, 2018; 2021}
  Araki-Masuda or Kosaki $L^p$-spaces
 \item general $\alpha$-$z$ R\'enyi divergences:\footnote{Kato and Ueda, 2023; Kato, 2024}
@@ -397,7 +395,7 @@ by interpolation.\myfootnote{Beigi, 2013; AJ, 2018}
 
 Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$.\myfootnote{Finite dimensions: Zhang, 2020}
 \begin{enumerate}
-\item[(i)] Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$. Then
+\item[(i)] Let $0<\alpha<1$. Then
 \begin{multline*}
 Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me^{++}}\left\{\alpha
 \Tr\left(\left(h_\psi^{\frac{\alpha}{2z}}ah_\psi^{\frac{\alpha}{2z}}\right)^{\frac{z}{\alpha}}\right)\right. \\
@@ -425,8 +423,8 @@ Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me^+} \left\{\alpha
 \begin{enumerate}
 \item[(1)] If $p\in [1,\infty]$, then 
 \[
-\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|^p_p\ge
-\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|^p_p.
+\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|_p\ge
+\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|_p.
 \]
 \end{enumerate}
 
@@ -436,9 +434,9 @@ $h_\omega=h_{\rho\circ\gamma}^{\frac12}bh_{\rho\circ\gamma}^{\frac12}$.
 \Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|^p_p&=Q_{p,p}(\omega\circ
 \gamma^*_\rho\|\rho)=Q_{p,p}(\omega\circ
 \gamma^*_\rho\|\rho\circ\gamma\circ\gamma_\rho^*)\\
-&\le\footnotemark 
+&\le 
 Q_{p,p}(\omega\|\rho\circ\gamma)=\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|^p_p
-\end{align*}\footnotetext{Sandwiched case: AJ, 2018}
+\end{align*}
 
 
 
@@ -746,13 +744,47 @@ D_{q,q}(\omega_0\|\varphi_0)=D_{\alpha,z}(\psi_0\|\varphi_0)=D_{\alpha,z}(\psi\|
 \item By known properties of $D_{q,q}$, $q>1$, $\gamma$ is sufficient with respect to
 $\{\omega,\varphi\}$, so that 
 \[
-\omega\circ\Ee=\omega.
+\omega\circ\Ee=\omega
+\]
+for the conditional expectation $\Ee$ onto the fixed points of
+$\gamma\circ\gamma^*_\varphi$.
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}{A sketch of proof for $\alpha>1$}
+
+
+\begin{itemize}
+
+\item  $\Ee$ extends to $L^p(\Me)$: projection onto $L^p(\Ee(\Me))\subseteq L^p(\Me)$\footnote{Junge and Xu,
+2003} 
+
+\item bimodule property: for $\frac1p+\frac1q+\frac1r\le 1$
+\[
+\Ee(xyz)=x\Ee(y)z,\quad x\in L^p(\Ee(\Me)),\ y\in L^q(\Me),\ z\in L^r(\Ee(\Me))
 \]
 
-\item Extensions of $\Ee$ to the $L^p$-spaces and their properties\footnote{Junge and Xu,
-2003} give us $\psi\circ\Ee=\psi$.
+\item since both $\varphi\circ\Ee=\varphi$, $\omega\circ\Ee=\omega$, we get
+$\psi\circ\Ee=\psi$.
 
 \end{itemize}
+
+\bigskip
+
+Finite dimensional case: $\Me=B(\mathcal H)$
+\begin{align*}
+\Ee(B(\mathcal H))&=\oplus_n B(\mathcal H^L_n)\otimes I_{\mathcal H^R_n}\\
+\Ee_*(B(\mathcal H))&=\left\{\oplus_n\rho_n\otimes \sigma_n,\ \rho_n\in B(\mathcal
+H^L_n)\right\}
+\end{align*}
+for some fixed states $\sigma_n\in B(\mathcal H_n^R)$. We have
+\[
+h_\psi=h_\varphi^{\frac1{2q}}\left(h_\varphi^{\frac{1-q}{2q}}h_\omega
+h_\varphi^{\frac{1-q}{2q}}\right)^{\frac1{\alpha-1}}h_\varphi^{\frac1{2q}}.
+\]
 
 
 \end{frame}

@@ -17,6 +17,10 @@ We should start by reading this:
 
 * [stormer1979positive](stormer1979positive) Positive projections and Jordan structure in operator algebras
 
+* [effros stormer 1965](NEW_seas/effros_stormer_JC.pdf)  a paper on Jordan algebras of self-adjoint operators
+
+
+
 ## Basic references
 
 

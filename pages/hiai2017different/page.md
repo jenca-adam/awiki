@@ -4,7 +4,7 @@ title: hiai2017different
 
 ## Reference
 
-Fumio Hiai, Milan Mosonyi, Different quantum f-divergences and the reversibility of quantum operations,Reviews in Mathematical Physics, 29(07), 1750023, Apr 2017,
+Fumio Hiai, Milan Mosonyi, Different quantum f-divergences and the reversibility of quantum operations, Reviews in Mathematical Physics, 29(07), 1750023, Apr 2017,
 
 ## Abstract 
   The concept of classical $f$-divergences gives a unified framework to

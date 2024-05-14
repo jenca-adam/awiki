@@ -126,6 +126,7 @@ title: Not my own papers
 [grumm1973two](grumm1973two)
 
 ### H
+[hiai2023equality](hiai2023equality),
 [hoffreumon2022projective](hoffreumon2022projective),
 [hiai2024logmajorization](hiai2024logmajorization),
 

@@ -14,6 +14,8 @@ title: My work
 
 * [Jordan algebras](NEW_seas)  with Sylvia
 
+* [ideas](IDEAS) some new ideas, project buds
+
 
 
 
