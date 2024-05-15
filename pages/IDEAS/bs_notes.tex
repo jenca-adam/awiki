@@ -56,14 +56,15 @@ under positive trace preserving maps $\Phi:B(\Ha)\to B(\Ka)$, and by \cite[Thm. 
 \begin{equation}\label{eq:eq}
 \hat D(\Phi(\rho)\|\Phi(\sigma))=\hat D(\rho\|\sigma)
 \end{equation}
-holds if and only if $d:=\sigma^{-1/2}\rho\sigma^{-1/2}$ satisfies
-$\Phi_\sigma(d^2)=\Phi_\sigma(d)^2$, where
+holds if and only if $R:=\sigma^{-1/2}\rho\sigma^{-1/2}$ satisfies
+$\Phi_\sigma(R^2)=\Phi_\sigma(R)^2$, where
 \[
 \Phi_\sigma(X)=\Phi(\sigma)^{-1/2}\Phi(\sigma^{1/2}X\sigma^{1/2})\Phi(\sigma)^{-1/2},\qquad
 X\in B(\Ha)
 \]
 is the Petz dual of $\Phi$ with respect to $\sigma$. Note that $\Phi_\sigma$ is  positive
-and unital. If $\Phi$ is completely positive, we may use the following fact.
+and unital and the equality condition means that $R$ is in the multiplicative domain of
+$\Phi_\sigma$. If $\Phi$ is completely positive, we may use the following fact.
 
 \begin{lemma}\label{lemma:multiplicative} Let $\Psi:B(\Ha)\to B(\Ka)$ be a completely positive unital map with Kraus
 representation $\Psi(\cdot)=\sum_i K_i^* (\cdot) K_i$. Then the multiplicative domain of
@@ -74,96 +75,18 @@ $\Psi$ has the form
 (here $C'$ denotes the commutant of a subset $C\subseteq B(\Ha)$).
 \end{lemma}
 
-This implies the following result. Assume that $\Phi: B(\Ha)\to B(\Ka)$ has the form
+ Assume that $\Phi: B(\Ha)\to B(\Ka)$ has the form
 $\Phi(\cdot)=\sum_{i=1}^n L_i^*(\cdot)L_i$, for some $L_i:\Ka\to \Ha$ such that
-$\sum_iL_iL_i^*=I_\Ha$. Then the equality \eqref{eq:eq} holds if and only if $d$ commutes
+$\sum_iL_iL_i^*=I_\Ha$. Then the equality \eqref{eq:eq} holds if and only if $R$ commutes
 with all elements of the form 
 \[
 \sigma^{1/2}L_i\Phi(\sigma)^{-1}L_j^*\sigma^{1/2},\qquad i,j=1,\dots,n.
 \]
 
-Let us apply this in the special case when $\rho=\rho_{ABC}\in B(\Ha_{ABC})^+$, $\sigma=\rho_{AB}\otimes
+We will  apply this in the special case when $\rho=\rho_{ABC}\in B(\Ha_{ABC})^+$, $\sigma=\rho_{AB}\otimes
 \tau_C$ and $\Phi=\Tr_A$, here $\tau_C=\dim(\Ha_C)^{-1}I_C$ is the maximally mixed state.
-The condition then becomes that $d$ must commute with all elements of the form
-\[
-\rho_{AB}^{1/2}(|i\>\<j|_A\otimes \rho_B^{-1})\rho_{AB}^{1/2}\otimes I_C,\qquad
-i,j=1,\dots\dim(\Ha_A).
-\]
-We may clearly replace $d$ by $\tilde d=(\rho_{AB}^{-1/2}\otimes
-I_C)\rho_{ABC}(\rho_{AB}^{-1/2}\otimes I_C)$. The condition is then 
-\[
-\tilde d\in \Rr\otimes B(\Ha_C),
-\]
-where $\Rr= \Gamma(B(\Ha_A))'$, with $\Gamma: B(\Ha_A)\to B(\Ha_{AB})$ is a cpmpletely
-positive map given as 
-\[
-\Gamma(X_A)=V^*(X_A\otimes I_B)V,\qquad X_A\in B(\Ha_A),
-\]
-here $V=(I_A\otimes \rho_B^{-1/2})\rho_{AB}^{1/2}$. Assume that $\rho_{AB}$ is invertible. By Arveson's commutant lifting
-theorem \cite[Thm. 1.3.1]{arveson1969subalgebras}, for every $T\in \Rr$ there is a unique
-$T_1\in B(\Ha_B)$ such that $(I_A\otimes T_1)V=VT$ and the map $T\mapsto T_1$ is a
-*-isomorphism of $\Rr$ onto $(I_A\otimes B(\Ha_B))\cap \{VV^*\}'$.
-
-Note that $VV^*=(I_A\otimes \rho_B^{-1/2})\rho_{AB}(I_A\otimes \rho_B^{-1/2})$, so that
-the map $T\mapsto T_1$ is given as
-\[
-\Tr_A [VTV^*]=\Tr_A[(I_A\otimes T_1)VV^*]=T_1\Tr_A [VV^*]=T_1.
-\]
-The inverse map $T_1\mapsto T$ is obtained from the polar decomposition of $V$: $V=HW$,
-where $H=(VV^*)^{1/2}$ and $W$ is a unitary. Then $T_1$ commutes with $H$ and we have
-\[
-VW^*(I_A\otimes T_1)W=H(I_A\otimes T_1)W=(I_A\otimes T_1)HW=(I_A\otimes T_1)V,
-\]
-so that $T=W^*(I_A\otimes T_1)W$. 
-
-This leads to the following construction of states $\rho_{ABC}$ such that 
-\[
-\hat D(\rho_{ABC}\|\rho_{AB}\otimes \tau_C)=\hat D(\rho_{BC}\|\rho_B\otimes  \tau_C).
-\]
-Let $M\in B(\Ha_{AB})^{++}$ be any element such that $\Tr_A[M]=I_B$.  Let $\Te\subseteq
-B(\Ha_B)$ be such that $I_A\otimes \Te=\{M\}'\cap I_A\otimes B(\Ha_B)$. Take any state
-$\rho_B\in B(\Ha_B)^{++}$ and put
-\[
-\rho_{AB}=(I_A\otimes \rho_B^{1/2})M(I_A\otimes \rho_B^{1/2}),
-\]
-then clearly $\rho_{AB}$ is a state and $\Tr_A \rho_{AB}=\rho_B$. Let $W$ be the unitary such that 
-\[
-(I_A\otimes \rho_B)^{1/2}M^{1/2}=\rho_{AB}^{1/2}W^*.
-\]
-Now choose any positive  element $\tilde d\in W^*(I_A\otimes \Te)W\otimes B(\Ha_C)$ such
-that $\Tr_C \tilde d=I_{AB}$ and put 
-\[
-\rho_{ABC}=(\rho_{AB}^{1/2}\otimes I_C)\tilde d (\rho_{AB}^{1/2}\otimes I_C).
-\]
-Then we have $\Tr_C \rho_{ABC}=\rho_{AB}$, $\Tr_{AC}\rho_{ABC}=\rho_{AB}$.
-
-Since $\Te$ is a subalgebra in $B(\Ha_B)$, there is a unitary $U_B$ and a decomposition
-\[
-\Te=U_B\left(\bigoplus_n I_{B^L_n}\otimes B(\Ha_{B^R_n})\right) U_B^*,
-\]
-so that 
-\[
-(W\otimes I_C)\tilde d(W^*\otimes I_C)=(I_A\otimes U_B\otimes I_C)\left(\oplus_n I_{AB^L_n}\otimes
-d_{B^R_nC}\right)(I_A\otimes U_B^*\otimes I_C)
-\]
-for some positive elements $d_{B^R_nC}\in B(\Ha_{B^R_n}\otimes \Ha_C)^+$.
-Moreover, from  $M\subseteq (I\otimes \Te)'$, we get
-\[
-M=(I_A\otimes U_B)\left(\oplus_n M_{AB^L_n}\otimes I_{B^R_n}\right)(I_A\otimes U_B^*)
-\]
-for $M_{AB^L_n}\in B(\Ha_A\otimes \Ha_{B^L_n})^+$. 
-Putting all together, we get
-\begin{align*}
-\rho_{ABC}&=(\rho_{AB}^{1/2}W^*W\otimes I_C)\tilde d (W^*W\rho_{AB}^{1/2}\otimes
-I_C)\\ &=((I_A\otimes \rho_B^{1/2})M^{1/2}\otimes I_C)(I_A\otimes U_B\otimes I_C)\left(\oplus_n I_{AB^L_n}\otimes
-d_{B^R_nC}\right)(I_A\otimes U_B^*\otimes I_C)(M^{1/2}(I_A\otimes \rho_B^{1/2})\otimes
-I_C)\\
-&= (I_A\otimes \rho_B^{1/2}U_B\otimes I_C)\left(\oplus_n M_{AB^L_n}\otimes
-d_{B^R_nC}\right)(I_A\otimes U_B^*\rho_B^{1/2}\otimes I_C). 
-\end{align*}
 
 
-\section{The structure of $\rho_{ABC}$}
 
 
 \begin{prop} Let $\rho_{ABC}$ be a state (such that $\rho_{AB}$ is invertible). The equality
@@ -176,25 +99,31 @@ holds if and only if there are:
 $\Ha_B\simeq \oplus_n(\Ha_{B^L_n}\otimes \Ha_{B^R_n})$,
 \item[(ii)] positive (invertible) elements $M_n\in B(\Ha_A\otimes \Ha_{B^L_n})$ such that
 $\Tr_A M_n=I_{B^L_n}$,
-\item [(iii)] positive elements $d_n\in B(\Ha_{B^R_n}\otimes \Ha_C)$ such that $\Tr_C
-d_n=I_{B^R_n}$,
+\item [(iii)] positive elements $N_n\in B(\Ha_{B^R_n}\otimes \Ha_C)$ such that $\Tr_C
+N_n=I_{B^R_n}$,
 \item[(iv)] an (invertible) operator $S_B: \oplus_n (\Ha_{B^L_n}\otimes \Ha_{B^R_n})\to \Ha_B$ such
 that $\Tr[S_BS_B^*]=1$
 \end{enumerate}
 such that
 \[
-\rho_{ABC}=(I_A\otimes S_B\otimes I_C)\left(\oplus_n M_n\otimes d_n \right)(I_A\otimes
+\rho_{ABC}=(I_A\otimes S_B\otimes I_C)\left(\oplus_n M_n\otimes N_n \right)(I_A\otimes
 S_B^*\otimes I_C)
 \]
 
 \end{prop}
 
-\begin{proof} Assume that $\rho_{ABC}$ has this form. Then 
+\begin{proof} Assume that $\rho_{ABC}$ has this form. Let us denote $M:= \oplus_n
+M_n\otimes I_{B^R_n}$, $N:=\oplus_n I_{B^L_n}\otimes N_n$, then $M\in B(\Ha_{AB})^+$ (is
+invertible), $N\in B(\Ha_{BC})^+$ are such that $\Tr_A[M]=I_B=\Tr_C[N]$ and $M\otimes
+I_C$ commutes with $I_A\otimes N$. We have
 \[
-\rho_{AB}=\Tr_C \rho_{ABC}= (I_A\otimes S_B)\left(\oplus_n M_n\otimes
-I_{B^R_n}\right)(I_A\otimes S_B^*),\qquad \rho_B=S_BS_B^*.
+\rho_{ABC}=(I_A\otimes S_B\otimes I_C)(M\otimes I_C)(I_A\otimes N)(I_A\otimes
+S_B^*\otimes I_C)
 \]
-Let us denote $M:= \oplus_n M_n\otimes I_{B^R_n}$, $d:=\oplus_n I_{B^L_n}\otimes d_n$. 
+and  
+\[
+\rho_{AB}=\Tr_C \rho_{ABC}= (I_A\otimes S_B)M(I_A\otimes S_B^*),\qquad \rho_B=S_BS_B^*.
+\]
 Using polar decompositions,  there is some unitary $W\in B(\Ha_{AB})$ such that 
 \[
 (I_A\otimes S_B)M^{1/2}W^*=\rho_{AB}^{1/2}=WM^{1/2}(I_A\otimes S_B^*).
@@ -202,7 +131,7 @@ Using polar decompositions,  there is some unitary $W\in B(\Ha_{AB})$ such that
 It follows that 
 \[
 (\rho_{AB}^{-1/2}\otimes I_C)\rho_{ABC}(\rho_{AB}^{-1/2}\otimes I_C)=(W\otimes
-I_C)(I_A\otimes d)(W^*\otimes I_C)
+I_C)(I_A\otimes N)(W^*\otimes I_C)
 \]
 and 
 \[
@@ -212,26 +141,26 @@ We may clearly replace $\tau_C$ by $I_C$ in the equality \eqref{eq:eqm}, since t
 adds a constant to both sides. We get
 \begin{align*}
 \hat D(\rho_{ABC}\|\rho_{AB}\otimes I_C)&=\Tr (\rho_{AB}\otimes I_C)f((W\otimes
-I_C)(I_A\otimes d)(W^*\otimes I_C))\\
-&=\Tr [(M^{1/2}(I_A\otimes S_B^*S_B)M^{1/2}\otimes I_C) f(I_A\otimes d)]\\
-&=\Tr [(M(I_A\otimes S_B^*S_B)\otimes I_C)f(I_A\otimes d)]=\Tr [(S_B^*S_B\otimes I_C) f(d)],
+I_C)(I_A\otimes N)(W^*\otimes I_C))\\
+&=\Tr [(M^{1/2}(I_A\otimes S_B^*S_B)M^{1/2}\otimes I_C) f(I_A\otimes N)]\\
+&=\Tr [(M(I_A\otimes S_B^*S_B)\otimes I_C)f(I_A\otimes N)]=\Tr [(S_B^*S_B\otimes I_C) f(N)],
 \end{align*}
 here $f(t)=t\log t$ and we have used the fact that $M\otimes I_C$ commutes with
-$I_A\otimes d$. 
+$I_A\otimes N$. 
 
 We also have
 \[
-\rho_{BC}=(S_B\otimes I_C)d(S_B^*\otimes I_C)
+\rho_{BC}=(S_B\otimes I_C)N(S_B^*\otimes I_C)
 \]
 and with the polar decomposition $S_B=\rho_B^{1/2}U_B$, we get 
 \[
 (\rho_B^{-1/2}\otimes I_C)\rho_{BC}(\rho_B^{-1/2}\otimes I_C)=(U_B\otimes
-I_C)d(U_B^*\otimes I_C).
+I_C)N(U_B^*\otimes I_C).
 \]
 It follows that
 \[
 \hat D(\rho_{BC}\|\rho_B\otimes I_C)=\Tr [(\rho_B\otimes I_C)f((U_B\otimes
-I_C)d(U_B^*\otimes I_C))]=\Tr [(S_B^*S_B\otimes I_C)f(d)]=\hat
+I_C)N(U_B^*\otimes I_C))]=\Tr [(S_B^*S_B\otimes I_C)f(N)]=\hat
 D(\rho_{ABC}\|\rho_{AB}\otimes I_C).
 \]
 
@@ -274,7 +203,7 @@ $T_1\in B(\Ha_B)$ such that $(I_A\otimes T_1)V=VT$ and the map $T\mapsto T_1$ is
 Note that $M:=VV^*=(I_A\otimes \rho_B^{-1/2})\rho_{AB}(I_A\otimes \rho_B^{-1/2})$
 satisfies $\Tr_A[M]=I_B$, so that this *-isomorphism is defined by
 \[
-\Tr_A [VTV^*]=\Tr_A[(I_A\otimes T_1)VV^*]=T_1\Tr_A [VV^*]=T_1.
+\Tr_A [VTV^*]=\Tr_A[(I_A\otimes T_1)VV^*]=T_1\Tr_A [M]=T_1.
 \]
 The inverse map $\Rr_1\to \Rr$ is obtained from the polar decomposition  $V=M^{1/2}W$,
 where  $W$ is a unitary. For any $T_1\in \Rr_1$, $I_A\otimes T_1$ commutes with $M^{1/2}$ and we have
@@ -285,7 +214,7 @@ so that $T=W^*(I_A\otimes T_1)W$. It follows that $\Rr=W^*(I_A\otimes \Rr_1)W$ a
 \[
 R\in \Rr\otimes B(\Ha_C)=(W^*\otimes I_C)(I_A\otimes \Rr_1\otimes B(\Ha_C))(W\otimes I_C). 
 \]
-It follows that there is some positive element $N\in \Rr_1\otimes B(\Ha_C)$ such that 
+Therefore  there is some positive element $N\in \Rr_1\otimes B(\Ha_C)$ such that 
 \begin{equation}\label{eq:R}
 R=(W^*\otimes I_C)(I_A\otimes N)(W\otimes I_C).
 \end{equation}
@@ -320,6 +249,10 @@ $S_B=\rho^{1/2}_BU^*_B$.
 
 
 \end{proof}
+
+
+\bibliography{IDEAS}
+\bibliographystyle{abbrvnat}
 
 
 
