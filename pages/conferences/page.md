@@ -8,6 +8,10 @@ title: Conference organization
 
 * [SSAOS 2023](ssaos23) organization     
 
-* [CEQIP 2023](ceqip23)  programme committee
+* [CEQIP 2023](ceqip23)  programme committee    
+
+* [IQSA 2024](https://clea.research.vub.be/iqsa-2024) scientific committee   
+
+
 
 

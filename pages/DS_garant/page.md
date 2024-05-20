@@ -66,6 +66,11 @@ Zápisnica z prijímacieho konania - [vzor](DS_garant/vzor.pdf)
 * [dizertačná skúška](https://zona.fmph.uniba.sk/fileadmin/fmfi/studium/PhD/Zasady_dizertacna_skuska_2021.pdf)
 
 
+## Prihlášky
+
+[zoznam po rokoch](DS_applications)     
+
+
 
 ## Ukončení doktorandi
 

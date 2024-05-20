@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{amsfonts}
+\geometry{total={210mm,290mm},
+ left=23mm,right=23mm,%
+ bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+
+
+
+\begin{document}
+\begin{center}
+{\large  Michele Dall’Arno, Francesco Buscemi: Tight conic approximation of testing regions for quantum statistical models and measurements
+}
+
+\end{center}
+\medskip
+
+\centerline{Referee report}
+
+\bigskip
+
+A testing region is the image of the set of states (or effects) under a measurement (or a set
+of quantum states, also called a statistical experiment) seen as linear mappings. In the
+present paper, the testing regions are approximated by ellipsoids, or other sets that the
+authors call d-cones. These approximations are optimal, at least in
+the information complete case, in the sense that the outer approximations are the minimal
+and the inner approximations the maximal possible.
+
+
+
+The authors claim that their results are used to provide a semi-device independent test of
+the possibility to transform one measurement (or statistical experiment) to another by a
+quantum channel. But this is not exactly true, e.g. in Corollary 1,  in general,  only the
+existence of a positive
+map on the span of the POVM is proved, which may not even have a positive extension to all
+of $\mathcal L(\mathbb C^d)$, let alone being completely positive. The only case when
+existence of a channel can be shown is under precisely the same conditions as in Corollary
+2 of Ref. [21], so this is hardly an extension of the said corollary to arbitrary
+dimensional case, as the authors claim. There is a similar problem with Corollary 2, which is
+claimed to be an extesion of Corollary 1 in [21].  So, in fact, the improvement that is
+provided in the present paper is that the conditions given in terms of approximating ellipsoids or
+d-cones are more tractable than the testing regions. 
+
+Nevertheless, the approximations obtained in the paper could be of some ineterest, but the
+paper is not written very well. I think it would add value to the paper if the authors
+were more pedagogical, and provide more explanations on their arguments and underlying
+ideas, not just giving references to other results without further comments. 
+
+
+
+\medskip
+
+\noindent
+\textbf{Some specific comments}
+
+
+\begin{itemize}
+\item page 3, Definition 1: better explain here that $Q^+$ is the pseudoinverse, this is
+not yet clear at this point
+\item page 3, example of the SIC measurement: $\hat{\mathbf{u}}$ is not defined.
+\item page 4, Corollary 1: what is the ''support of $\mathbf{\pi}_0$''?
+\item page 4, the definition of a $d$-cone is quite unclear. Also for the symmetric
+$d$-cone: it seems that the last ball should have radius 0, which should follow from $r(L)=r(0)=0$, but
+then there is another ball at the origin. So actually there are $d+1$ balls.
+\item page 6, Corollary 2: what is the ''support of $\rho_0$''?
+\item page 9, proof of Theorem 1: the paragraph starting with ''The inner ellipsoid...''
+is very unclear and should be better explained.
+\item page 11, proof of Theorem 2: should be better explained. (Perhaps it would suffice if
+the proof of Theorem 1 was better written.)
+\end{itemize}
+
+
+
+
+
+
+
+
+\end{document}
+
