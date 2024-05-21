@@ -1,8 +1,9 @@
 title: To referee
 ---
 
-* Due [7.6.2024](REF_zhang2024)    
-* Due [11.7.2024](REF_luczak2024)    
+* Due [4.6.2024](REF_gao2024)(revision)    
+* Due [7.6.2024](REF_zhang2024)     
+* Due [11.7.2024](REF_luczak2024)          
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
 
