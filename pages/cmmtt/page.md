@@ -21,7 +21,22 @@ title: Committees - defences, exams, etc.
 
 
 
-## Dizertačná skúška 
+## Dizertačná skúška
+
+
+* **Soham Sau**
+
+    - date, time: 10.6.2024, 14:00 
+    - place: QUTE    
+    - supervisor: M. Ziman, FU SAV    
+    - thesis: Optimization of Higher-order Quantum Structures - Sequential Implementations    
+    
+
+    [menovaci dekret](cmmtt/sau.pdf)    
+    [minimovka](cmmtt/sau_minthesis.pdf)    
+    [report](cmmtt/sau_minreport.pdt)    
+
+ 
 
 * **Ijaz Ahamed Mohammad** 
 

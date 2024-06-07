@@ -19,6 +19,8 @@ We should start by reading this:
 
 * [effros stormer 1965](NEW_seas/effros_stormer_JC.pdf)  a paper on Jordan algebras of self-adjoint operators
 
+* [kadison1952ageneralized](kadison1952ageneralized) Kadison-Schwarz inequality    
+
 
 
 ## Basic references

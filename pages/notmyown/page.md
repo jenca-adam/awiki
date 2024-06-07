@@ -174,6 +174,7 @@ title: Not my own papers
 
 ### K
 
+[kadison1952ageneralized](kadison1952ageneralized),    
 [kosaki1992aninequality](kosaki1992aninequality),   
 [kissinger2019acategorical](kissinger2019acategorical),
 [kato2024onrenyi](kato2024onrenyi),

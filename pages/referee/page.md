@@ -1,8 +1,9 @@
 title: To referee
 ---
 
-* Due [4.6.2024](REF_gao2024)(revision)    
-* Due [7.6.2024](REF_zhang2024)     
+* Due [7.6.2024](REF_zhang2024)    
+* Due [15.6.2024](REF_yang2024) (AQIS subreviewer)    
+* Due [16.6.2024](REF_dallarno2024aqis) (AQIS subreviewer)    
 * Due [11.7.2024](REF_luczak2024)          
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
@@ -18,7 +19,11 @@ title: To referee
 1. <del>Due [29.4.2024](REF_luczak2023) (revision)</del> Done.    
 1. <del> Due [28.4.2024](REF_zhu2024) </del> Done.    
 1. <del> Due [10.5.2024](REF_dallarno2024)</del> Done.
-1. <del> Due [21.5.2024](REF_junge2024) (BIID subreviewer)</del> Done.
+1. <del> Due [21.5.2024](REF_junge2024) (BIID subreviewer)</del> Done.    
+1. <del>Due [4.6.2024](REF_gao2024)(revision)</del> Done.     
+1. <del>Due [5.6.2024](REF_zhu2024)(revision)</del>  Done.
+
+
 
 
 

@@ -18,3 +18,12 @@ title: Gao et al., sufficiency, 2024
 **Revised due:** 4.6.2024
 
 
+**Decision:** accept (my decision). Whatever...
+
+[report for the revision](REF_gao2024/revised_report.pdf)  
+
+
+
+
+
+
