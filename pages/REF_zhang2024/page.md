@@ -10,6 +10,12 @@ title: Zhang et al., magic states, 2024
 [file](REF_zhang2024/file.pdf)
 
 
-**Decision:** 
+**Decision:** accept
+
+
+[report](REF_zhang2024/report.pdf)
+
+
+
 
 

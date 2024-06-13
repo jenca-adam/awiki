@@ -18,6 +18,15 @@ $d=\sigma^{-1/2}\rho\sigma^{-1/2}$ is in the *multuplicative domain* of the Petz
 [notes](IDEAS/bs_notes.pdf)    
 
 
+### Integral representations of BS entropy
+
+[notes](IDEAS/GL_notes.pdf)  by Filippo and Ludovico
+
+
+
+
+
+
 
 
 ---
