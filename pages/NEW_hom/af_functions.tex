@@ -303,31 +303,181 @@ for a permutation $\rho$, then we may define an object corresponding to $f\wedge
 pullback of the two arrows $f\xrightarrow{\sigma^{-1}} Y_{\max}$ and
 $g\xrightarrow{\rho^{-1}} Y_{\max}$, similarly, $Y_{f\vee g}$ can be found as a pushout.
 
+\section{Boolean functions}
 
-\subsection{Types}
 
-We next try to find some description of the set of 
-functions that define objects in $\Afh$. For fixed $n\in \mathbb N$, we will denote this
-set as $\Fe_n^H$. It will be called the set of types.
 
-As noted above, $\Fe_n^H$ is a subset in $\Fe_n$, which  is a (finite) distributive lattice, with top element
+We will work with certain boolean functions, which are defined as  functions from binary
+strings to $\{0,1\}$. We now list some basic notations used below.
+
+For $s\in \{0,1\}$, we denote $\bar s:=1-s$.
+For binary strings of fixed length $n$, that is, elements of
+$\{0,1\}^n$, we will denote by $0_n$ or just $0$ the string $00\dots0$ and by $e^i$ the
+string such that $e^i_j=\delta_{i,j}$.  For $m,n\in \mathbb N$, the concatenation of 
+strings $s\in \{0,1\}^m$ and $t\in \{0,1\}^n$ will be denoted by $st$, that is,
+\[
+st=s_1\dots s_mt_1\dots t_n\in \{0,1\}^{m+n}.
+\]
+For any permutation $\sigma\in S_n$, we will denote by the same symbol the obvious action
+on $\{0,1\}^n$, that is
+\[
+\sigma(s_1\dots s_n)=s_{\sigma^{-1}(1)}\dots s_{\sigma^{-1}(n)}.
+\]
+
+We start by looking at the set 
+\[
+\Fe_n:=\{f:\{0,1\}^n\to \{0,1\},\ f(0)=1\}.
+\]
+With the poitwise ordering, $\Fe_n$ is  a (finite) distributive lattice, with top element
  the constant 1 function and the bottom element $p_n:=\chi_{0}$. We may also
 define the complementation  in $\Fe_n$ as
 \[
 f^*:=1-f+p_n.
 \]
-It can be easily checked that with these structures $\Fe_n$ is a boolean algebra. 
-Let $n_1,n_2\in \mathbb N$ be such that $n=n_1+n_2$, then for $f_i\in \Fe_{n_i}$ we define
-the function $f_1\otimes f_2\in \Fe_n$ as
+It can be easily checked that with these structures $\Fe_n$ is a boolean algebra.
+
+We now introduce some more operations in $\Fe_n$. For $f\in \Fe_n$ and any permutation $\sigma\in S_n$, we see that $f\circ \sigma\in \Fe_n$.
+For $f\in \Fe_{m}$ and $g\in \Fe_n$, we define
+the function $f\otimes g\in \Fe_{m+n}$ as
 \[
-f_1\otimes f_2(s,t)=f_1(s)f_2(t). 
+(f\otimes g)(st)=f(s)g(t). 
 \]
-We can see from the proof of Theorem \ref{thm:boolean} that elements of $\Fe_n^H$ are
+As it is, this tensor product is not symmetric, but there is a permutation $\sigma\in S_{m+n}$ such that 
+$(g\otimes f)=(f\otimes g)\circ \sigma$ for any $f\in \Fe_m$ and $g\in \Fe_n$.
+
+\begin{lemma}\label{lemma:fproduct} For $f\in \Fe_m$, $g\in \Fe_n$, we have
+\[
+f\otimes g\le (f^*\otimes g^*)^*.
+\]
+Equality holds if and only if $f$ and $g$ are both maximal or both minimal elements in
+$\Fe_m$ resp. $\Fe_n$.
+\end{lemma}
+
+\begin{proof} The inequality is easily  checked, since $(f\otimes g)(st)$ can be 1 only if
+$f(s)=g(t)=1$. If both $s$ and $t$ are the zero strings, then $st=0_{m+n}$ and both sides
+are equal to 1. Otherwise, the condition $f(s)=g(t)=1$ implies that $(f^*\otimes
+g^*)(st)=0$, which implies that the right hand side must be 1. If $f$ and $g$ are both
+constant 1, then $(1\otimes 1)^*=1^*=p_{n+m}=1^*\otimes 1^*$, the other case follows by
+duality. Finally, asume the equality holds and that $f\ne 1$, so that there is some $s$ such that 
+$f(s)=0$. But then $s\ne 0$ and for any $t$,
+\[
+0=f(s)g(t)=1-f^*(s)g^*(t)+p_{m+n}(st)=1-g^*(t),
+\]
+which implies that $g(t)=0$ for all $t\ne0$, that is, $g=p_n$. By the same argument,
+$f=p_m$ if $g\ne 1$.
+
+
+
+\end{proof}
+
+
+
+We now show an important example. 
+
+
+\begin{example}\label{ex:ps} Let $S\subseteq [n]$ be any subset. We will denote
+\[
+p_S(s):=\prod_{i\in S}\bar s_i.
+\]
+It is clear that $p_S\in \Fe_n$, $p_{\emptyset}=1$, $p_{[n]}=\chi_0=p_n$. The folowing
+properies are also easy
+to see for $S,T\subseteq [n]$:
+\begin{enumerate}
+\item[(i)] if $S\subseteq T$, then $p_T\le p_S$,
+\item[(ii)]  $p_S\wedge p_T=p_Sp_T=p_{S\cup T}$,
+\item[(iii)]  $p_S\vee p_T=p_S+p_T-p_{S\cup T}$.
+\item[(iv)] let $S\subseteq [m]$ and $T\subseteq [n]$, then 
+\[
+p_S\otimes p_T=p_{S\cup (m+T)}.
+\]
+\end{enumerate}
+
+
+\end{example}
+
+
+
+
+We will use the above functions to introduce  a convenient  parametrization to $\Fe_n$.  
+For this, we first include $\Fe_n$ into a larger set
+\[
+\Fe_n\subseteq \{f:\{0,1\}^n\to \mathbb R\}=:\mathcal V,
+\]
+which is a $2^n$-dimensional real vector space. It becomes a Hilbert space with respect to
+the inner product
+\[
+\<f,g\>=\sum_{s\in \{0,1\}^n} f(s)g(s). 
+\]
+
+\begin{lemma}\label{lemma:Vbasis} The set $\{p_S,\ S\subseteq [n]\}$ is a basis of
+$\mathcal V$.
+Any $f\in \mathcal V$ can be written as
+\[
+f=\sum_{S\subseteq [n]} \hat f_Sp_S,
+\]
+where the coefficients are obtained as
+\[
+\hat f_S=\sum_{\substack{x\in \{0,1\}^n\\ x_i=1, \forall  i\in S^c}} (-1)^{\sum_{i\in S}x_i}f(x)
+\]
+\end{lemma}
+
+
+
+\begin{proof} For $T\subseteq [n]$, let us define the function $p_T^\perp$ as
+\[
+p_T^\perp(x):= (-1)^{\sum_{i\in T}x_i}\prod_{i\in T^c}x_i. 
+\]
+We prove that for $S,T\subseteq [n]$,
+\[
+\<p_S,p^\perp_T\>=\delta_{S,T},
+\]
+which shows that $\{p_S,\ S\subseteq [n]\}$ is a basis and 
+$\{p_T^\perp, \ T\subseteq [n]\}$  is the dual basis. We compute
+\[
+\<p_S,p^\perp_T\>=\sum_x p_S(x)p^\perp_T(x)=\sum_x (-1)^{\sum_{i\in T} x_i}\prod_{i\in S}
+\bar x_i\prod_{j\in T^c}x_j.
+\]
+This expression can be nonzero only if $S\cap T^c=\emptyset$, that is, $S\subseteq T$. In
+this case, the last sum  is equal to
+\[
+\sum_{\substack{x\in \{0,1\}^n\\ x_i=0,\forall i\in S\\x_i=1,\forall i\in T^c}}
+(-1)^{\sum_{j\in T\setminus S}x_j}=\begin{dcases} 0 & \text{if } S\subsetneq T\\
+  1 &\text{if } S=T
+  \end{dcases}
+\]
+It is now clear that the coefficients
+\[
+\hat f_S=\<f,p^\perp_S\>
+\]
+have the given form.
+
+
+\end{proof}
+
+It may be useful to visualise the lattice $\mathcal L_n=\{S\subseteq [n]\}$ as a
+hypercube, and the coefficients of $f$ as labels for its vertices. The fact that the
+function $f$ has values in $\{0,1\}$ means that for a string $x\in \{0,1\}^n$ such that
+$x_j=1$ if and only if $j\in T$, we must have 
+\[
+f(x)=\sum_{\substack{S\subseteq [n]\\ S\cap T=\emptyset}} \hat f_S\in \{0,1\},
+\]
+that is, the sum of labels $\hat f_S$ over any face containing the vertex $\emptyset$ must
+be 0 or 1. In particular, $\hat f_\emptyset=f(11\dots 1)\in \{0,1\}$, which restricts the
+values of $\hat f_{\{i\}}\in
+\{0,1,-1\}$, etc. The fact that $f\in \Fe_n$ means that in addition,
+\[
+f(0)=\sum_{S\subseteq [n]}\hat f_S=1.
+\]
+
+
+\subsection{Types}
+
+We are now interested in the subset  $\Fe_n^H$ in $\Fe_n$ of elements that can be 
 obtained from the constant function $1$ on $\{0,1\}$ by taking complements, tensor
 products and precomposing with permutations.
-In particular, $\Fe_n^H\subseteq \Fe_n$. This gives the following description. 
+This gives the following description. 
 
-\begin{prop}\label{prop:fhn} The set $\Fe_n^H$ is the smallest subset in $\Fe_n$ such
+\begin{defi}\label{defi:fhn} The set $\Fe_n^H$ is the smallest subset in $\Fe_n$ such
 that:
 \begin{enumerate}
 \item it is invariant under permutations: if $f\in \Fe_n^H$, then $f\circ \sigma\in
@@ -342,7 +492,28 @@ that:
 
 
 
-\end{prop}
+\end{defi}
+
+
+Given a function $f\in \Fe_n^H$, we see from the above definition that it has the form
+\[
+f(x_1\dots x_n)=((1(x_1\dots x_k)1^*(x_{k+1}\dots x_l))^*...)^*1(x_{m+1}\dots x_n)\circ
+\sigma
+\]
+where $\sigma$ is some permutation.  let $O\subseteq [n]$ be the set of indices such that 
+
+
+
+
+\begin{example}\label{ex:psh} We have $p_S\in \Fe_n^H$ for any $S\subseteq [n]$. 
+Indeed, we have $p_S=f_1\otimes\dots \otimes f_n$, where
+$f_i=\chi_0=1^*$ if $i\in S$ and $f_i=1$ otherwise.  The complement
+is $f^*=1-p_S+p_n$,  the corresponding objects are  $[X_{[n]\setminus S},X_S]$. Note
+that in this case, $S$ is the set of inputs of $p_S$ and the set of outputs of $p_S^*$.
+
+\end{example}
+
+
 
 For $Y\sim [X_1,\dots,X_n]$, let $f\in \Fe_n^H$ be the corresponding function and let
 $O\subseteq [n]$ be the corresponding set of outputs. By the construction of the functions
@@ -351,18 +522,6 @@ set of indices such that the corresponding element was under complementation an 
 number of times. 
 
 
-\begin{example}\label{ex:ps} For a subset $S\subseteq [n]$, we denote by $p_S$ the
-function $p_S(x)=\Pi_{i\in S}\bar x_i$, here we use the notation $\bar x=1-x$. Then
-$p_S\in \Fe_n^H$. Indeed, we have $p_S=\otimes_{i\in [n]}f_i$, where
-$f_i(x_i)=\bar x_i=\chi_0(x_i)$ if $i\in S$ and $f_i(x_i)=1$ otherwise. The corresponding
-objects in $\Afh$ have  (up to permutation) the form $X_S^*\otimes X_{[n]\setminus S}$. The complement
-is $f^*(x)=1-p_S(x)+p_n$,  the corresponding objects are  $[X_{[n]\setminus S},X_S]$. Note
-that in this case, $S$ is the set of inputs of $p_S$ and the set of outputs of $p_S^*$.
-
-
-
-
-\end{example}
 
 
 \begin{prop}\label{prop:fh_setting} Let $f\in \Fe_n^H$ and let $O\subseteq [n]$ be the set
