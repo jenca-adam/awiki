@@ -71,6 +71,14 @@ Zápisnica z prijímacieho konania - [vzor](DS_garant/vzor.pdf)
 [zoznam po rokoch](DS_applications)     
 
 
+## Prijímacie konania
+
+[2024](DS_garant/prijimacky24.pdf)
+
+
+
+
+
 
 ## Ukončení doktorandi
 

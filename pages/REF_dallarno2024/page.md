@@ -12,6 +12,9 @@ quantum statistical models and measurements
 [file](REF_dallarno2024/file.pdf)
 
 
-**Decision:** 
+**Decision:** revision
+
+[report](REF_dallarno2024/report.pdf)    
+
 
 

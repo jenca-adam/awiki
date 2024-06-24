@@ -29,15 +29,19 @@
 \newtheorem{remark}{Remark}
 \newtheorem{example}{Example}
 
+\def\blabla{blabla }
+\def\perm{\mathcal S}
 \def\aff{\operatorname{Aff}}
 \def\lin{\operatorname{Lin}}
 \def\Span{\operatorname{Span}}
 \def\type{\mathrm {setting}}
 \def\ii{\bm{\emptyset}}
 \def\tt{\bm{0}}
+\def\Le{\mathcal L}
+\def\Pe{\mathcal P}
 \def\Ce{\mathcal C}
 \def\Ae{\mathcal A}
-\def\Ne{\mathcal N}
+\def\Me{\mathcal M}
 \def\Fe{\mathcal F}
 \def \Tr{\mathrm{Tr}\,}
 \def\Se {\mathcal S}
@@ -200,7 +204,7 @@ S_Y=V_Y=L_{1,0}\oplus L_{1,1}=f(0)L_{1,0}\oplus f(1)L_{1,1},
 here $f:\{0,1\}\to \{0,1\}$ is the constant 1. Assume now that the assertion is true for
 all $m<n$. By construction, $Y$ is either the tensor product of two other objects in
 $\Afh$ or $Y$ is the dual of such a product. Let us assume the first case. Then there is a
-parmutation $i_1,\dots, i_n$ of $[n]$ and $0<m<n$  such that $Y=Y_1\otimes Y_2$, with
+permutation $i_1,\dots, i_n$ of $[n]$ and $0<m<n$  such that $Y=Y_1\otimes Y_2$, with
 \[
 Y_1\sim [X_{i_1},\dots, X_{i_m}],\qquad Y_2\sim[X_{i_{m+1}},\dots, X_{i_n}].
 \]
@@ -318,6 +322,10 @@ strings $s\in \{0,1\}^m$ and $t\in \{0,1\}^n$ will be denoted by $st$, that is,
 \[
 st=s_1\dots s_mt_1\dots t_n\in \{0,1\}^{m+n}.
 \]
+For a string $x\in \{0,1\}^n$ and any set of indices $\{i_1,\dots,i_k\}\subseteq [n]$, we
+will denote by $x^{i_1\dots i_k}$ the string in $\{0,1\}^{n-k}$ obtained from $x$ by removing
+$x_{i_1},\dots, x_{i_k}$.
+
 For any permutation $\sigma\in S_n$, we will denote by the same symbol the obvious action
 on $\{0,1\}^n$, that is
 \[
@@ -329,8 +337,8 @@ We start by looking at the set
 \Fe_n:=\{f:\{0,1\}^n\to \{0,1\},\ f(0)=1\}.
 \]
 With the poitwise ordering, $\Fe_n$ is  a (finite) distributive lattice, with top element
- the constant 1 function and the bottom element $p_n:=\chi_{0}$. We may also
-define the complementation  in $\Fe_n$ as
+ the constant 1 function and the bottom element $p_n:=\chi_{0}$.  We may also
+define complementation  in $\Fe_n$ as
 \[
 f^*:=1-f+p_n.
 \]
@@ -349,7 +357,7 @@ $(g\otimes f)=(f\otimes g)\circ \sigma$ for any $f\in \Fe_m$ and $g\in \Fe_n$.
 \[
 f\otimes g\le (f^*\otimes g^*)^*.
 \]
-Equality holds if and only if $f$ and $g$ are both maximal or both minimal elements in
+Equality holds if and only if $f$ and $g$ are either both the to top or both the bottom elements in
 $\Fe_m$ resp. $\Fe_n$.
 \end{lemma}
 
@@ -357,14 +365,15 @@ $\Fe_m$ resp. $\Fe_n$.
 $f(s)=g(t)=1$. If both $s$ and $t$ are the zero strings, then $st=0_{m+n}$ and both sides
 are equal to 1. Otherwise, the condition $f(s)=g(t)=1$ implies that $(f^*\otimes
 g^*)(st)=0$, which implies that the right hand side must be 1. If $f$ and $g$ are both
-constant 1, then $(1\otimes 1)^*=1^*=p_{n+m}=1^*\otimes 1^*$, the other case follows by
+constant 1, then $(1\otimes 1)^*=1^*=p_{n+m}=1^*\otimes 1^*$, in the case when both $f$
+and $g$ are the minimal elements equality  follows by
 duality. Finally, asume the equality holds and that $f\ne 1$, so that there is some $s$ such that 
 $f(s)=0$. But then $s\ne 0$ and for any $t$,
 \[
-0=f(s)g(t)=1-f^*(s)g^*(t)+p_{m+n}(st)=1-g^*(t),
+0=(f\otimes g)(st)=(f^*\otimes g^*)^*(st)=1-f^*(s)g^*(t)+p_{m+n}(st)=1-g^*(t),
 \]
 which implies that $g(t)=0$ for all $t\ne0$, that is, $g=p_n$. By the same argument,
-$f=p_m$ if $g\ne 1$.
+$f=p_m$ if $g\ne 1$, which implies that either $f=1$ and $g=1$, or $f=p_m$ and $g=p_n$.
 
 
 
@@ -411,13 +420,14 @@ the inner product
 
 \begin{lemma}\label{lemma:Vbasis} The set $\{p_S,\ S\subseteq [n]\}$ is a basis of
 $\mathcal V$.
-Any $f\in \mathcal V$ can be written as
+Any $f\in \mathcal V$ can be uniquely written as
 \[
 f=\sum_{S\subseteq [n]} \hat f_Sp_S,
 \]
-where the coefficients are obtained as
+where the coefficients $\hat f_S\in \mathbb R$ are obtained as
 \[
-\hat f_S=\sum_{\substack{x\in \{0,1\}^n\\ x_i=1, \forall  i\in S^c}} (-1)^{\sum_{i\in S}x_i}f(x)
+\hat f_S=\sum_{\substack{x\in \{0,1\}^n\\ x_i=1, \forall  i\in S^c}} (-1)^{\sum_{i\in
+S}x_i}f(x).
 \]
 \end{lemma}
 
@@ -461,7 +471,7 @@ $x_j=1$ if and only if $j\in T$, we must have
 \[
 f(x)=\sum_{\substack{S\subseteq [n]\\ S\cap T=\emptyset}} \hat f_S\in \{0,1\},
 \]
-that is, the sum of labels $\hat f_S$ over any face containing the vertex $\emptyset$ must
+that is, the sum of labels $\hat f_S$ over any face of the hypercube $\mathcal L_n$ containing the vertex $\emptyset$ must
 be 0 or 1. In particular, $\hat f_\emptyset=f(11\dots 1)\in \{0,1\}$, which restricts the
 values of $\hat f_{\{i\}}\in
 \{0,1,-1\}$, etc. The fact that $f\in \Fe_n$ means that in addition,
@@ -470,7 +480,7 @@ f(0)=\sum_{S\subseteq [n]}\hat f_S=1.
 \]
 
 
-\subsection{Types}
+\subsection{The type functions}
 
 We are now interested in the subset  $\Fe_n^H$ in $\Fe_n$ of elements that can be 
 obtained from the constant function $1$ on $\{0,1\}$ by taking complements, tensor
@@ -481,7 +491,7 @@ This gives the following description.
 that:
 \begin{enumerate}
 \item it is invariant under permutations: if $f\in \Fe_n^H$, then $f\circ \sigma\in
-\Fe_n^H$ for any permutation $\sigma$,
+\Fe_n^H$ for any permutation $\sigma\in S_n$,
 \item it is invariant under complementation: if $f\in \Fe_n^H$ then $f^*\in \Fe_n^H$,
 \item if $f\in \Fe_n^H$ and $g\in \Fe_m^H$, then $f\otimes g\in \Fe_{n+m}^H$,
 \item $\Fe_1^H=\{1,\chi_0\}=\Fe_1$. 
@@ -489,43 +499,41 @@ that:
 
 
 \end{enumerate}
-
+Elements of $\Fe_n^H$ are called type functions of order $n$.
 
 
 \end{defi}
 
 
-Given a function $f\in \Fe_n^H$, we see from the above definition that it has the form
+We can see by the above definiton that a type function can be constructed as 
 \[
-f(x_1\dots x_n)=((1(x_1\dots x_k)1^*(x_{k+1}\dots x_l))^*...)^*1(x_{m+1}\dots x_n)\circ
-\sigma
+f(x_1\dots x_n)=(((1\otimes ..1\otimes 1^*\otimes 1^*)^*...)\otimes (1\otimes..1\otimes
+1^*....)..)^*..)\circ
+\sigma(x_1\dots x_n)
 \]
-where $\sigma$ is some permutation.  let $O\subseteq [n]$ be the set of indices such that 
+where each 1 or $1^*$ acts on $\{0,1\}$ and  $\sigma$ is some permutation. This gives a
+decomposition of the set of indices as follows. We say that $i\in [n]$ is an output index
+for $f$ if $x_i$ in the above expression is subjected to complementation an even number of
+times. The subset of such indices in $[n]$ will be denoted by $O_f$, or just $O$. We also
+denote $I=I_f:=[n]\setminus O_f$, the elements of $I_f$ will be called input indices for
+$f$.
 
 
 
 
-\begin{example}\label{ex:psh} We have $p_S\in \Fe_n^H$ for any $S\subseteq [n]$. 
+
+
+\begin{example}\label{ex:psh}  Note that $p_S\in \Fe_n^H$ for any $S\subseteq [n]$. 
 Indeed, we have $p_S=f_1\otimes\dots \otimes f_n$, where
-$f_i=\chi_0=1^*$ if $i\in S$ and $f_i=1$ otherwise.  The complement
-is $f^*=1-p_S+p_n$,  the corresponding objects are  $[X_{[n]\setminus S},X_S]$. Note
-that in this case, $S$ is the set of inputs of $p_S$ and the set of outputs of $p_S^*$.
+$f_i=\chi_0=1^*$ if $i\in S$ and $f_i=1$ otherwise. It is clear that in this case $I=O$ is
+the set of input indices.
+
 
 \end{example}
 
 
 
-For $Y\sim [X_1,\dots,X_n]$, let $f\in \Fe_n^H$ be the corresponding function and let
-$O\subseteq [n]$ be the corresponding set of outputs. By the construction of the functions
-in Theorem \ref{thm:boolean}, we can see that the set $O$ can be obtained from $f$, as the
-set of indices such that the corresponding element was under complementation an even
-number of times. 
-
-
-
-
-\begin{prop}\label{prop:fh_setting} Let $f\in \Fe_n^H$ and let $O\subseteq [n]$ be the set
-of outputs, $I=[n]\setminus O$ the set of inputs. Then
+\begin{prop}\label{prop:fh_setting} Let $f\in \Fe_n^H$ and let $O=O_f$,  $I=I_f$. Then
 \[
 p_I\le f\le p_O^*.
 \]
@@ -533,25 +541,22 @@ p_I\le f\le p_O^*.
 \end{prop}
 
 \begin{proof} This is obviously true for $n=1$. In this case,
-$\Fe_1^H=\Fe_1=\{1,\chi_0=p_{\{1\}}\}$ and $1^*=p_{\{1\}}$. If $f=1$, then $O=\{1\}$, so
-that 
+$\Fe_1^H=\Fe_1=\{1,1^*=p_{[1]}\}$. If $f=1$, then $O=[1]$, $I=\emptyset$ and 
 \[
-p_I=p_{\emptyset}=1=p_{\{1\}}^*,
+p_I=p_{\emptyset}=1=p_O^*,
 \]
-the other case is obtained by taking complements. Assume that the assertion holds for
+the case  $f=1^*$ is obtained by taking complements. Assume that the assertion holds for
 $m<n$. Let $f\in \Fe^H_n$ and assume that  $f=g\otimes h$ for some  $g\in
-\Fe_m^H$, $h\in \Fe_{n-m}^H$. Let $O_1\subseteq [n_1]$ be the set of outputs for $g$ and
-$O_2\subseteq [n-m]$ for $h$. By the assumption,
+\Fe_m^H$, $h\in \Fe_{n-m}^H$.  By the assumption,
 \[
-p_{I_1}\otimes p_{I_2}\le g\otimes h\le p^*_{O_1}\otimes p^*_{O_2}\le (p_{O_1}\otimes
-p_{O_2})^*.
+p_{I_g}\otimes p_{I_h}\le g\otimes h\le p^*_{O_g}\otimes p^*_{O_h}\le (p_{O_1}\otimes
+p_{O_2})^*,
 \]
-Here the last inequality is from a more general inequality $f^*\otimes g^*\le (f\otimes
-g)^*$ which holds for any $f\in \Fe_m$, $g\in \Fe_{n-m}$. Indeed, for any $s,t$ not both
-equal to $0$, 
- we have $f^*(s)g^*(t)=1$ if and only if $f(t)=g(s)=0$, in which case $(f(s)g(t))^*=1$. 
-It is now enough to notice that the outputs of $f$ are precisely $i\in O_1$ and $m+j$,
-$j\in O_2$. Assume that the inequality holds for $f\in\Fe_n^H$, we will show that it is
+the last inequality follows from Lemma \ref{lemma:fproduct}. It is now enough to notice that 
+$O_f=O_g\cup (m+O_h)$, $I_f=I_g\cup (m+I_h)$, so that $p_{O_f}=p_{O_g}\otimes p_{O_h}$ and
+similarly for $p_{I_f}$. 
+
+Assume that the inequality holds for $f\in\Fe_n^H$, we will show that it is
 preserved by permutations and complements. Indeed, let $\sigma$ be any
 permutation of the indices, then clearly
 \[
@@ -563,7 +568,7 @@ Finally, we have by duality
 \[
 p_O\le f^* \le p_I^*,
 \]
-and taking complements exchanges inputs and outputs.
+and taking complements exchanges inputs and outputs: $O_{f^*}=I_f$, $I_{f^*}=O_f$.
 
 
 
@@ -577,17 +582,122 @@ and taking complements exchanges inputs and outputs.
 
 
 
-The next result shows that there is a direct way to obtain this set from
+The next result shows that there is a direct way to obtain the input-output decomposition
+from values of 
 $f$.
 
-\begin{prop}\label{prop:fh_outputs} Let $f\in \Fe_n^H$ and let $O\subseteq [n]$ be the
-corresponding set of outputs. Then $i\in O$ if and only if $f(e^i)=1$ (here
-$e^i_j=\delta_{i,j}$, $j=1,\dots,n$). 
+\begin{prop}\label{prop:fh_outputs} For $f\in \Fe_n^H$, $i\in O_f$ if and only if $f(e^i)=1$. 
 
 
 \end{prop}
 
-\begin{proof}
+In other words, the outputs of $f$ are precisely those indices for which the sum of the
+coefficients $\hat f_S$ over the facet $\{S\in \mathcal L_n,\ i\notin S\}$ is 1.
+
+
+\begin{proof} Let $i\in O_f$, then by Proposition \ref{prop:fh_setting}, $p_{I_f}(e^i)=1\le
+f(e^i)$, so that $f(e^i)=1$. Conversely, if $f(e^i)=1$, then by the other inequality in
+Proposition \ref{prop:fh_setting}, $p_{O_f}(e^i)=0$, whence $i\in O_f$.
+
+
+\end{proof}
+
+
+\begin{example}\label{ex:chain12} Let $n=2$, then it can be checked that 
+\[
+\Fe^H_2=\{p_2, p_{\{1\}}, p_{\{2\}}, p_{\{1\}}^*, p_{\{2\}}^*,1\}.
+\]
+Explicitly, the functions are given as
+\[
+x\mapsto   \qquad \bar x_1\bar x_2,\quad \bar x_1,\quad \bar x_2, \quad 1-\bar x_1+\bar
+x_1\bar x_2,\quad 1-\bar x_2+\bar x_1\bar x_2,\quad 1.
+\]
+It can be seen that $\Fe_n$ has $2^{2^n-1}$ elements, so that $\Fe_2$ has 8
+elements in total. The two of them that are not type functions are 
+\[
+g(x)=1-\bar x_1-\bar x_2+2\bar x_1x_2,\qquad g^*(x)=\bar x_1+\bar x_2-\bar x_1\bar x_2.
+\]
+This can be checked directly from Propositions \ref{prop:fh_setting} and
+\ref{prop:fh_outputs}. Indeed, if $g\in \Fe^H_n2$, we would have $O_g=\emptyset$, so that 
+$p_2\le g\le p_\emptyset^*=p_2$, which is obviously not the case. Clearly, also the
+complement $g^*\notin \Fe_2^H$. Notice also that $g^*=p_{\{1\}}\vee p_{\{2\}}$, so that
+$\Fe_n^H$ is a subposet in $\Fe_n$ but not a lattice.
+
+
+\end{example}
+
+
+\subsubsection{The poset $\mathcal P_f$}
+
+
+For $f\in \Fe_n^H$, let $\mathcal P_f$ be the subposet in $\mathcal L_n$ of elements such that
+$\hat f_S\ne 0$. Can we characterize such subposets? (we cannot so far.) Can we extract
+some information about some 'causal structure' on the indices? 
+
+We next give some properties such a poset must have. We say that a poset is graded of rank
+$k$ if every maximal chain in $P$ has the same length equal to $k$ (recall that the length
+of a chain is defined as number of its elements -1). Equivalently,  there is
+a unique rank function $\rho: P\to \{0,1,\dots,k\}$ such that $\rho(s)=0$ if $s$ is a
+minimal element of $P$ and $\rho(t)=\rho(s)+1$ if $t$ covers $s$. 
+
+\begin{prop}\label{prop:graded} Let $f\in \Fe_n^H$, then $\mathcal P_f$ is a graded poset
+with even rank $k\le n$. If $\rho$ is the rank function, then we have
+\[
+\hat f_S=(-1)^{\rho(S)},\qquad S\in \mathcal P_f.
+\]
+
+\end{prop}
+
+Then rank of $\Pe_f$ will be denoted by $r(f)$ and called the rank of $f$.
+
+\begin{proof} For $n=1$, we have $\mathcal L_1=\{\emptyset, [1]\}$ and
+$\Fe_1^H=\{1,1^*\}$. For $f=1$, $\mathcal P_f=\{\emptyset\}$ is a singleton, which 
+is clearly a graded poset, with rank $k=0$ and trivial rank function $\rho$.  We have
+\[
+\hat f_\emptyset = 1=(-1)^0=(-1)^{\rho(\emptyset)}.
+\]
+The proof for $f=1^*$ is similar.
+
+If the statement
+holds for $f$, then it holds also for $f\circ \sigma$ for any $\sigma\in S_n$, indeed,
+$\widehat{f\circ \sigma}_S=\hat f_{\sigma^{-1}}(S)$ so that 
+$\mathcal P_f$ and $\mathcal P_{f\circ \sigma}$ are isomorphic. For $f^*$, note that
+\begin{equation}\label{eq:dual_rank}
+f^*=1-f+p_n=(1-\hat f_\emptyset)1 -\sum_{\substack{S\in \mathcal P_f\\ \emptyset \ne S,
+[n]\ne S}}
+(-1)^{\rho(S)}+(1- \hat f_{[n]})p_n.
+\end{equation}
+
+If $\emptyset \in \Pe_f$, then $\emptyset$ is the least element of $\Pe_f$, so that 
+$\rho(\emptyset)=0$ and therefore $\hat f_\emptyset =
+(-1)^0=1$. Similarly, if $[n]\in \Pe_f$, then $[n]$ is the largest element in $\Pe_f$,
+hence it is the last element in any maximal chain. It follows that $\rho([n])=k$ and hence
+$\hat f_{[n]}=(-1)^k=1$. 
+Therefore the equality \eqref{eq:dual_rank} implies that $\mathcal P_{f^*}$ differs from $\mathcal P_f$ only in the bottom  and
+top elements:  $\emptyset \in \mathcal P_f$ iff  $\emptyset \notin \mathcal P_{f^*}$
+and $p_n \in \mathcal P_f$ iff  $p_n \notin \mathcal P_{f^*}$. It follows that $\mathcal
+P_{f^*}$ is graded as well, with rank  equal to $k-2$, $k$ or $k+2$, which in any case
+is even. Furthermore, let $\rho^*$ be the rank function of $f^*$, then this also implies 
+that for all $S\in \Pe_f$, $S\notin \{\emptyset, [n]\}$, we
+have  $\rho^*(S)=\rho(S)\pm 1$, according to whether $\emptyset$ was added or removed. The
+statement now follows from \eqref{eq:dual_rank}. 
+
+
+To finish the proof, assume that the statement is true for $m<n$ and let $f\in \Fe_n^H$.
+Then $f$ is either a permutation of a product of some $f_1\in \Fe_{m}^H$ and $f_2\in \Fe_{n-m}^H$, or a
+dual  of such an element. By the above discussion, it follows that we only need to prove
+that the statement holds for $f=f_1\otimes f_2$. But in this case, by the induction
+assumption, $\Pe_{f_i}$ is graded with even rank $k_i$ and rank function $\rho_i$. We also
+have
+\[
+f=\sum_{S\subseteq [m], T\subseteq [m-n]} (\widehat {f_1})_S(\widehat {f_2})_T p_Sp_T=
+\sum_{S\subseteq [m], T\subseteq [m-n]}(-1)^{\rho_1(S)+\rho_2(T)}p_{S\cup(m+T)}.
+\]
+It follows that $\Pe_f=\Pe_{f_1}\times \Pe_{f_2}$ is the product of the two posets, which
+is a graded poset with rank $k=k_1+k_2$ and rank function $\rho=\rho_1+\rho_2$. This
+proves the statement. 
+
+
 
 
 \end{proof}
@@ -595,7 +705,342 @@ $e^i_j=\delta_{i,j}$, $j=1,\dots,n$).
 
 
 
+\begin{example}[Chains]\label{ex:chains} Let $\Pe=\{S_1\subsetneq S_2\subsetneq \dots \subsetneq
+S_N\}$ be a chain in $\mathcal L_n$. Then  $\Pe$ is graded with rank $N-1$
+and rank function $\rho(S_i)=i-1$. Put 
+\[
+f=\sum_i (-1)^{i-1} p_{S_i}.
+\]
+By Proposition \ref{prop:graded}, if $f\in \Fe_n$, then the rank of $f$ must be even, so
+that $N$ must be odd. 
+We will show that the converse is true. We proceed by induction on $N$. For $N=1$, we have
+$f=p_{S_1}\in \Fe_n^H$. Assume that the statement holds for all odd numbers $M<N$ and let
+$\Pe$ be a chain as above. Then we have 
+\[
+f=p_{S_1}\otimes g\otimes 1_{[n]\setminus S_N}
+\]
+where $g$ is the function for the chain $\emptyset=S'_1\subsetneq S'_2\subsetneq \dots
+\subsetneq S'_N$, with $S'_i:=S_i\setminus S_1$. This shows that we may assume that the chain
+contains the least and the largest element in $\mathcal L_n$. But then 
+\[
+f=1+\sum_{j=2}^{N-1} (-1)^{j-1}p_{S_j}+ p_n 
+\]
+and
+\[
+f^*=1-f+p_n=\sum_{j=1}^{N-2} (-1)^{j-1}p_{T_j},
+\]
+where $T_j:=S_{j+1}$. By the induction assumption $f^*\in \Fe_n^H$, hence also $f=f^{**}\in \Fe_n^H$.
 
+
+As we can see from Example \ref{ex:chains}, all elements in $\Fe_2^H$ are chains. This is
+also true for $n=3$. Indeed, up to a permutation that does not change the chain structure, 
+any $f\in \Fe_3^H$ is either a product of two elements $g\in \Fe_2^H$ and $h\in \Fe_1^H$,
+or the dual of such a  product. Since $g$ must be a chain and $|\Pe_h|=1$, their product
+must be a chain as well. Taking the dual of a chain only adds/removes the least/largest
+elements, so the dual of a chain must be a chain as well.
+
+
+\end{example}
+
+\subsubsection{Separating type functions}
+
+
+
+Let $\Pe\subseteq \mathcal L_n$. We say that $\Pe$ separates the points of $[n]$, or $\Pe$
+is separating if for any
+$i,j\in [n]$ there is some $S\in \Pe$ that contains one of the points but not the other. 
+Note that in this case there can be at most one $i\in [n]$ that is not contained in any
+$S\in \Pe$, so that $(\cup \Pe)^c$ is at most a singleton. Similarly, there is at most one
+$i$ contained in all $S\in \Pe$, so that $\cap \Pe$ is at most a singleton. If $(\cup
+\Pe)^c=\emptyset$, we say that $\Pe$ is covering.  We say that $\Pe$ is \blabla if $\cap
+\Pe=\emptyset$.
+We say that $f\in \Fe_n$ is
+separating, covering or \blabla if $\Pe_f$ has these properties.
+
+It is easily seen that up to a permutation, any $f\in \Fe_n$ can be written as
+\[
+f=p_{n_1}\otimes g\otimes 1_{[n_2]},
+\]
+for some $g\in \Fe_m$ which is covering and \blabla, and  that $f\in \Fe_n^H$ if and only if $g\in \Fe_m^H$. 
+
+\begin{lemma}\label{lemma:cov_bla_sep}
+Let $f\in \Fe_n$, $g\in \Fe_m$. Then
+\begin{enumerate}
+\item[(i)] $f\otimes g$ is covering if and only if both $f$ and $g$ are covering.
+\item[(ii)] $f\otimes g$ is \blabla if and only if both $f$ and $g$ are blabla.
+\item[(iii)] $f\otimes g$ is separating if and only if both $f$ and $g$ are separating,
+at least one  of them is covering and at least one of them is \blabla. 
+
+\end{enumerate}
+
+
+
+\end{lemma}
+
+\begin{proof} 
+(i) and (ii) are easy to see from the equality
+\[
+\Pe_{f\otimes g}=\{S\cup (n+T),\ S\in \Pe_f,\ T\in \Pe_g\}\simeq \Pe_f\times \Pe_g.
+\]
+Indeed, since $S\subseteq [n]$ and $n+T\subseteq [n,n+m]$, we see that 
+\begin{equation}\label{eq:coverbla_product}
+(\cup \Pe_{f\otimes g})^c=(\cup \Pe_f)^c\cup (n+(\cup\Pe_g)^c), \quad \cap \Pe_{f\otimes g}=(\cap \Pe_f)\cup (n+\cap\Pe_g)
+\end{equation}
+For (iii), assume that $f\otimes g$ is separating and let $i,j\in [n]$. Then there are
+some $S'\in \Pe_f$ and $T\in \Pe_g$ such that $S\cup (n+T)$ separates $i$ and $j$. But
+then clearly $S$ must separate $i$ and $j$, so that $f$ is separating. Similarly, $g$ must
+be separating as well. The fact that at least one of them must be covering/blabla is
+immediate from \eqref{eq:coverbla_product}. 
+ 
+ For the converse, let $i,j\in [n+m]$. If both $i,j\in [n]$, then they msut be separated
+ by $\Pe_f$, hence there is some $S$ that contains one of them but not the other. Then the
+ same is true for any $S\cup (n+T)$, $T\in \Pe_g$. We can similarly deal with the case
+ that $i,j\in [n,n+m]$. So assume that $i\in [n]$, $j\in [n,n+m]$. By the assumption,
+ there must be some $S\in \Pe_f$ and $T\in \Pe_g$, such that $i\in S$ and $j\notin (n+T)$
+ (or $i\notin S$ and $j\in (n+T)$). But then $S\cup (n+T)$ separates $i$ and $j$. 
+
+ 
+\end{proof}
+
+
+
+
+Our next goal is to show that any type function $f\in \Fe_n^H$ of rank $k$ can be obtained 
+from a separating type function  $f'\in \Fe_m^H$ such that $\Pe_f\simeq \Pe_{f'}$.
+
+
+\begin{lemma}\label{lemma:separ} Let $f\in \Fe_n$ and let $f'\in \Fe_{n+1}$
+be such that 
+\[
+f'(x_1\dots x_{n+1})=f(x_1 \dots x_{n-1}(x_n\vee x_{n+1})).
+\]
+Then $\Pe_f\simeq \Pe_{f'}$ and $f\in \Fe_n^H$ if and only if $f'\in \Fe_{n+1}^H$.
+
+\end{lemma}
+
+\begin{proof}
+It can be seen using Lemma \ref{lemma:Vbasis} that for any $S\in \Pe_{f'}$, we have
+\[
+\hat f'_S =\begin{dcases} \hat f_S & \text{if } \{n,n+1\}\cap S=\emptyset,\\
+\hat f_{S\setminus \{n+1\}} & \text{if } \{n,n+1\}\subset S,\\
+0 & \text{otherwise}.
+\end{dcases}       
+\]
+It follows that $\Pe_{f'}$ does not separate $n$ and $n+1$, moreover, from this it is
+easily seen that   $\Pe_f$ is
+isomorphic to $\Pe_{f'}$. 
+
+We will show the second assertion by induction. 
+Let $n=1$, so that $f'(x_1x_2)=f(x_1\vee x_2)$. If $f\in \Fe_1=\{1,1^*\}$, then either
+$f'=1$ or $f'(x_1x_2)=\overline{x_1\vee x_2}=\bar x_1\bar x_2=p_2$. Conversely assume $f'\in
+\Fe_2^H$. Since $f'(x_1x_2)$ has the same value for all strings different from 00, it must
+be either equal to 1 or $p_2$, in which case $f$ is equal to 1 or $p_1$, repsectively. 
+
+Assume next that the statement holds for $m<n$ and let $f\in \Fe_n^H$. Assume first that $f=(g\otimes
+h)\circ \sigma$ for some $g\in \Fe_m^H$,
+$h\in \Fe_{n-m}^H$ and a permutation $\sigma\in \perm_n$.  Let $\sigma(n)> m$,  
+then we also have  $f'=(g\otimes h')\circ \tau$, where $h'(x_1\dots x_{m+1}) =h(x_1\dots x_{m-1}(x_m\vee x_{m+1}))$
+and $\tau$ is a suitable permutaton in $\perm_{n+1}$. 
+By the assumption, $h'\in \Fe_{n+1-m}^H$ so that $f'\in
+\Fe_{n+1}^H$. The case $\sigma(n)\le m$ is treated similarly, replacing $h$ by $g$. 
+Next, notice that since $p_{n+1}(x_1x_2\dots x_{n+1})=p_n(x_1\dots x_{n-1}(x_n\vee x_{n+1}))$,  we get
+\begin{equation}\label{eq:fprime_dual}
+(f')^*(x_1x_2\dots x_{n+1})=f^*(x_1\dots x_{n-1}(x_n\vee x_{n+1})),
+\end{equation}
+which finishes the proof in the case that $f=((g\otimes h)\circ\sigma)^*$. 
+
+
+Conversely, assume that $f'\in \Fe_{n+1}^H$. By \eqref{eq:fprime_dual}, we see that it is
+enough to show the statement in the case $f'=(g'\otimes h')\circ \sigma$ for some $g'\in
+\Fe_m^H$, $h'\in
+\Fe_{n+1-m}^H$ and a permutation $\sigma\in \perm_{n+1}$. Since
+$\Pe_{f'}$ does not separate $n$ and $n+1$, any $S\in \Pe_{f'}$
+either contains both  or none of them. Hence if $f'$ has the above product form,
+then we must have either  both $\sigma(n),\sigma(n+1)\le m$ or both strictly
+larger than $m$. Assume the latter, then (by applying a suitable permutation in
+$\perm_{n+1-m}$ if
+necessary) we get
+\[
+f(x_1\dots (x_n\vee x_{n+1}))=g'(x_{\sigma^{-1}(1)}\dots
+x_{\sigma^{-1}(m)})h'(x_{\sigma^{-1}(m+1)}\dots x_{\sigma^{-1}(n-1)}x_nx_{n+1}).
+\]
+It follows that $f=(g'\otimes h)\circ \tau$, where $\tau\in \perm_n$ and $h\in \Fe_{n-m}^H$ is
+given as
+\[
+h(x_1\dots x_{n-m})=h'(x_1\dots x_{n-m}x_{n-m}).
+\]
+By the induction assumption, $h\in \Fe_{n-m}^H$ so that $f\in \Fe_n^H$.
+
+
+\end{proof}
+
+\begin{lemma}\label{lemma:separateij}
+Let $f\in \Fe_n^H$ and let $i,j\in [n]$ be such that $\Pe_f$ does not separate $i$ and
+$j$. Then there is a function $f_{ij}\in \Fe_{n-1}^H$ with $\Pe_f\simeq \Pe_{f_{ij}}$, such that 
+\[
+f(x_1\dots x_n)=f_{ij}(x^{ij}(x_i\vee x_j)).
+\]
+
+\end{lemma}
+
+\begin{proof} Without loss of generality we may assume that $i=n-1$, $j=n$. Put 
+\[
+f_{(n-1)n}(x_1\dots x_{n-1}):=f(x_1\dots x_{n-1}x_{n-1}).
+\]
+By the previous lemma it is enough to prove that 
+\[
+f(x_1x_2\dots x_n)=f_{(n-1)n}(x_1\dots (x_{n-1}\vee x_n))=f(x_1\dots x_{n-2}(x_{n-1}\vee
+x_n)(x_{n-1}\vee
+x_n)).
+\]
+Since $\Pe_f$ does not separate $n-1$ and $n$, each $S\in \Pe_f$ either contains both or
+none of them. In either case,
+\[
+p_S(x_1x_2\dots x_n)=p_S(x_1\dots (x_{n-1}\vee x_n)(x_{n-1}\vee x_n)).
+\]
+This implies the statement.
+
+
+\end{proof}
+
+Clearly, the function $f_{ij}$ above is obtained from $f$ by ''glueing''  the
+nonseparable indices into one index.
+
+\begin{prop}\label{prop:separates} Let $f\in \Fe_n^H$, $r(f)=k$. Then there is a function
+$g\in \Fe_{m}^H$ such that $\Pe_g$ separates the points of $[m]$, $\Pe_g\simeq \Pe_f$  and there are subsets
+$I_1,\dots I_l$ of $[n]$ such that 
+\[
+f(x_1\dots x_n)=g(x^{\cup_j I_j}(\vee I_1)\dots (\vee I_l)).
+\]
+
+
+\end{prop}
+\begin{proof} We can construct the function $g$ by repeated application of Lemma
+\ref{lemma:separateij}, glueing together nonseparable points until, after a finite number
+of steps, none are left, so that the resulting function $g$ separates the points of $m$.
+
+\end{proof}
+
+\begin{example}[Separating chains] Clearly, a chain $\Pe=\{S_1\subsetneq \dots \subsetneq
+S_N\}$ is
+separating if and only if  $S_i\setminus S_{i-1}$ is a singleton for $i=2,\dots, N$ and
+both $S_1$ and $S_N^c$ are at most singletons (that is, these might be also empty). 
+We have seen that the correspnding function is in $\Fe_n^H$ if and only if $N=r(\Pe)+1$ is
+odd. By the separating property, we must have $n-1\le N\le n+1$, depending on whether
+$S_1$ or $S_N^C$ are empty or not.
+It follows that $n-2\le r(\Pe)\le n$. Since $N$ must be  odd, we see that the only
+possibilities are
+\begin{align*}
+N&=n-1 \text{ or } N=n+1  & \text{ if $n$ is even}\\
+N&=n & \text{ if $n$ is odd}.
+\end{align*}
+
+For even $n$, put
+\[
+\gamma_n(x):=\sum_{l=0}^n (-1)^lp_{[l]}(x)=1-\bar x_1+\bar x_1\bar x_2-\dots +\bar x_1\dots \bar x_n.
+\]
+Then $\gamma_n$  is a separating chain in $\Fe_n^H$ and the corresponding sets of input and output
+indices  are
+\[
+I=\{2j, j=1,\dots n/2\},\qquad O=\{2j-1,\ j=1,\dots n/2\}.
+\]
+
+For any other separating
+chain $f\in \Fe_n^H$, there is some permutation $\sigma\in \perm_n$ such that
+\[
+f=(p_1\otimes \gamma_{n-2}\otimes 1)\circ \sigma\ \text{ or }\  f=\gamma_n\circ \sigma.
+\]
+These two types are easily seen to be each others complement.
+Similarly, if $n$ is odd, then any separating chain in $\Fe_n^H$  must either of the two
+comlementary  forms
+\[
+f=(p_1\otimes \gamma_{n-1})\circ \sigma  \text{ or }\  (\gamma_{n-1}\otimes 1)\circ
+\sigma
+\]
+for some permutation $\sigma\in \perm_n$.  From this and Example \ref{ex:chains}, we see
+that there are  only two separating elements in $\Fe_2^H$:  $\gamma_2\circ \sigma$,
+$\sigma\in \perm_2$ that are complementary. Similarly, there are basically 
+two complementary forms of  separating elements in $\Fe_3^H$: 
+$(p_1\otimes \gamma_2)\circ\sigma$ or $(\gamma_2\otimes 1)\circ\sigma$, $\sigma\in
+\perm_3$. 
+
+
+
+\end{example}
+
+We say that $f\in \Fe_n$ is covering if $\cup \Pe_f=[n]$. \begin{lemma}\label{lemma:separating_product}
+Let $f\in \Fe_n^H$, $g\in \Fe_m^H$. Then 
+\begin{enumerate}
+\item $f\otimes g$ is covering if and only if  $f$ and $g$ are both covering.
+\item $f\otimes g$ is separating if and only if both $f$ and $g$ are separating and at
+least one of them is covering.
+\end{enumerate}
+
+
+\end{lemma}
+
+
+\subsubsection{Paths}
+
+Let $f\in \Fe_n^H$, assume that $f$ separates points of $[n]$. 
+We will study the structure of $\Pe_f$ in more detail.
+
+For each $i\in [n]$, let $\Pe_{f,i}:=\{S\in \Pe_f,\ i\in S\}$ and let $\mathcal M_{f,i}$ be the
+set of minimal elements in $\Pe_{f,i}$. Elements of $i$ will be called minimal sets for
+$i$. Note that $\Pe_{f,i}$ can be empty, there is a unique index with this property, it
+will be called the free output. 
+Another case is when $\Pe_{i,f}=\mathcal M_{f,i}=\{[n]\}$, there is again a unique index with this
+property, it will be called the first input of $f$. Note that taking complements turns the
+first input into the free output and vice versa.
+
+
+\begin{lemma}\label{lemma:points} 
+\begin{enumerate}
+\item[(i)]  All minimal sets of $i$ have the same rank $r_f(i)$, called the rank of $i$. If
+$\mathcal M_{f,i}=\emptyset$, we put $r_f(i)=r(f)+1$. 
+\item[(ii)] $i\in O_f$ if and only if $r_f(i)$ is odd.
+
+\end{enumerate}
+
+
+\end{lemma}
+
+\begin{proof}  We will proceed by induction. Both  assertions are quite trivial for $n=1$,
+assume the statements hold for $m<n$ and let $f\in \Fe_n^H$. Assume first that the assertions are
+true for $f$, then it is easily observed that they hold also for any permutation $f\circ
+\sigma$.
+Next, note that $\Pe_{f^*}$ differs from $\Pe_f$ only up to adding/removing the least and greatest elements $\emptyset$ and
+$p_n$. Let $\Me_{f^*,i}=\{[n]\}$, then (i) is trivially satisfied and
+$r_{f^*}(i)=\rho_{f^*}([n])=k=r(f^*)$ is even. Since $i\ne S$ for any $S\in \Pe_{f^*}$
+other than $[n]$, we have
+\[
+f^*(e^i)=\sum_{S\in \Pe_{f^*}, S\ne [n]} \hat f^*_S=1-p_n=0,
+\]
+so that $i\in I_{f^*}$ and (ii) holds. If $\Me_{f^*,i}=\emptyset$, then by definition
+$r_{f^*}(i)=r(f^*)+1$ is odd and clearly $f^*(e^i)=f^*(0)=1$, so that $i\in O_{f^*}$. 
+Assume now that $\Me_{f^*,i}$ is nonempty and not equal to $\{[n]\}$. Then the same is
+true for $\Me_{f,i}$, and by the assumption, $\rho_{f}(S)=r_f(i)$ for all elements  $S\in
+\Me_{f,i}$. Then $\rho_{f^*}(S)=\rho_f(S)\pm 1$, depending only on the fact whether $\emptyset
+\in \Pe_f$. It follows that $\rho_{f^*}(S)$ has the same value for all minimal sets for
+$i$, and this value is odd if and only if $r_f(i)$ is even. Since complementation
+exchanges inputs and outputs, the statements are proved for $f^*$.
+
+Let now $f\in \Fe_n^H$ be arbitrary and let $i\in [n]$. As we have seen, the statement
+holds if $i$ is the free output or the first input, so assume that $\emptyset\ne
+\Me_{f,i}\ne \{[n]\}$. By the first part of the proof, it is enough to assume that
+$f=g\otimes h$ for some $g\in \Fe_m^H$ and $h\in \Fe_{n-m}^H$. 
+Suppose without loss of generality that $i\in [m]$, then clearly $\Me_{g,i}\ne \emptyset$
+and $\Me_{f,i}$ consists of $S\cup T$, with $S\in \Me_{g,i}$ and $T$ a minimal element in
+$\Pe_h$. Since $\rho_h(T)=0$ for any minimal element $T$, we have
+\[
+\rho_f(S\cup T)=\rho_g(S)+\rho_h(T)=r_g(i),\qquad \forall S\cup T \in \Me_{f,i}.
+\]
+The statement (ii) follows from the fact that $i\in O_f$ if and only if $i\in O_g$. 
+
+
+
+
+\end{proof}
 
 
 

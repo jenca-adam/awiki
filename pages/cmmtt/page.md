@@ -1,6 +1,11 @@
 title: Committees - defences, exams, etc.
 ---
 
+[hlavickovy papier](https://docs.google.com/document/d/1iV4-bOOZgAsnzb4oIl-TDsByodryjeBZ/edit?usp=sharing&ouid=100760893452134072016&rtpof=true&sd=true)
+
+
+
+
 ## Obhajoba
 
 * Gergely Bunth
@@ -14,8 +19,8 @@ title: Committees - defences, exams, etc.
 
 
     [thesis](cmmtt/bunth_thesis.pdf)    
-    [report](cmmtt/bunth_report.pdf)
-    [final report](cmmtt/gbunth_report_podpis.pdf)
+    [report](cmmtt/gbunth_report_podpis.pdf)     
+    [final report](cmmtt/gbunth_report2.pdf)    
 
 
 
