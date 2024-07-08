@@ -3,7 +3,8 @@ title: To referee
 
     
 * Due [11.7.2024](REF_luczak2024)          
-* Due [11.7.2024](REF_rohilla2024)    
+* Due [11.7.2024](REF_rohilla2024)   
+* Due [20.11.2024](REF_das2024)    
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
 

@@ -770,6 +770,9 @@ Let $f\in \Fe_n$, $g\in \Fe_m$. Then
 \item[(ii)] $f\otimes g$ is \blabla if and only if both $f$ and $g$ are blabla.
 \item[(iii)] $f\otimes g$ is separating if and only if both $f$ and $g$ are separating,
 at least one  of them is covering and at least one of them is \blabla. 
+\item[(iv)] If $f$ is not covering, then $f^*$ is covering. The converse is not true.
+\item[(v)] If $f$ is not \blabla, then $f^*$ is \blabla. The converse is not true.
+\item[(vi)] If $f$ is separating, then $f^*$ is separating.
 
 \end{enumerate}
 
@@ -799,7 +802,20 @@ immediate from \eqref{eq:coverbla_product}.
  there must be some $S\in \Pe_f$ and $T\in \Pe_g$, such that $i\in S$ and $j\notin (n+T)$
  (or $i\notin S$ and $j\in (n+T)$). But then $S\cup (n+T)$ separates $i$ and $j$. 
 
- 
+For (iv), if $f$ is not covering, then $f=(h\otimes 1_{[l]})$ for some covering $h\in
+\Fe_{n-l}$. Then $\hat f_{[n]}=0$, so that $\hat f^*_{[n]}=1$. Hence $\cup\Pe_{f^*}=[n]$
+and $f^*$ is covering. On the other hand, let 
+$h(x)=1-\bar x_1+\bar x_1\bar x_2$ and let $f=h\otimes h\in \Fe_4^H$. It is easily checked
+that both $f$ and $f^*$ are covering and \blabla.
+
+For (v), if $f$ is not \blabla then $f=h\otimes p_l$ for some $h\in \Fe_{n-l}$, then $\hat
+f_\emptyset =0$, so that $\hat f^*_\emptyset =1$, so $f^*$ is \blabla.
+
+For (vi), let $i,j\in [n]$ and assume that $S\in \Pe_f$ is such that $i\in S$ and $j\notin
+S$. Then we must have $S\in \Pe_{f^*}$, since clearly $S\neq \emptyset$ and $S\neq
+[n]$. 
+
+
 \end{proof}
 
 
@@ -958,26 +974,72 @@ f=(p_1\otimes \gamma_{n-1})\circ \sigma  \text{ or }\  (\gamma_{n-1}\otimes 1)\c
 \sigma
 \]
 for some permutation $\sigma\in \perm_n$.  From this and Example \ref{ex:chains}, we see
-that there are  only two separating elements in $\Fe_2^H$:  $\gamma_2\circ \sigma$,
-$\sigma\in \perm_2$ that are complementary. Similarly, there are basically 
+that up to permutations, there are  only two separating elements in $\Fe_2^H$:  
+\[
+f=\gamma_2,\qquad f^*=p_1\otimes 1_1,
+\]
+that are complementary. Similarly, there are basically 
 two complementary forms of  separating elements in $\Fe_3^H$: 
-$(p_1\otimes \gamma_2)\circ\sigma$ or $(\gamma_2\otimes 1)\circ\sigma$, $\sigma\in
-\perm_3$. 
+\[
+f=p_1\otimes \gamma_2,\qquad f^*= \gamma_2\otimes 1. 
+\]
+
+
+\end{example}
+
+The following properties of $\gamma_n$ are easily checked directly.
+
+\begin{lemma}\label{lemma:gamma} Let $n\in \mathbb N$ be even.
+\begin{enumerate}
+\item[(i)] $(\gamma_n\otimes 1_1)^*=p_1\otimes \gamma_n$,
+\item[(ii)] $(p_1\otimes\gamma_n \otimes 1)^*=\gamma_{n+2}$.
+\end{enumerate}
+
+
+\end{lemma}
+
+\begin{example}[$\Fe_4^H$]\label{ex:type4} We will describe all separating elements
+$f\in \Fe_4^H$, up to permutations. We have  $f=g\otimes h$ or $f=(f\otimes g)^*$  for some $g\in
+\Fe_m^H$, $h\in \Fe_l^H$. Then either $m=1$, $l=3$ or $m=l=2$. In the first case, $h$ is a
+chain in $\Fe_3^H$. In order for $f$ to be separating, $h$ must be separating and if
+$g=1_1$, then $h$ must be covering, if $g=p_1$, then $h$ must be \blabla. Together with
+complements, this gives the functions:
+\[
+f=1_1\otimes \gamma_2\otimes p_1,\qquad f=\gamma_4.
+\]
+In the other case, $g$ and $h$ must be separating elements in $\Fe_2^H$. The only new
+functions obtained in this way are
+\begin{align*}
+f&= \gamma_2\otimes \gamma_2=1-\bar x_1-\bar x_3+\bar x_1\bar x_2+\bar x_1\bar x_3+\bar x_3\bar x_4- \bar x_1\bar
+x_2\bar x_3-\bar x_1\bar x_3\bar x_4+\bar x_1\bar x_2\bar x_3\bar x_4\\
+f^*&=  (\gamma_2\otimes \gamma_2)^*=\bar x_1+\bar x_3-\bar x_1\bar x_2-\bar x_1\bar x_3-\bar x_3\bar x_4+ \bar x_1\bar
+x_2\bar x_3+\bar x_1\bar x_3\bar x_4
+\end{align*}
 
 
 
 \end{example}
 
-We say that $f\in \Fe_n$ is covering if $\cup \Pe_f=[n]$. \begin{lemma}\label{lemma:separating_product}
-Let $f\in \Fe_n^H$, $g\in \Fe_m^H$. Then 
-\begin{enumerate}
-\item $f\otimes g$ is covering if and only if  $f$ and $g$ are both covering.
-\item $f\otimes g$ is separating if and only if both $f$ and $g$ are separating and at
-least one of them is covering.
-\end{enumerate}
+Let us now introduce the labeling of all separating chains as follows:
+\[
+\gamma_{i,n}=\begin{dcases} \gamma_n & \text{if $i=0$, $n$ is even}\\
+\gamma_n^*=p_1\otimes \gamma_n\otimes 1_1 & \text{if $i=1$, $n$ is even}\\
+\gamma_{n-1}\otimes 1_1 & \text{if $i=0$, $n$ is odd}\\
+p_1\otimes \gamma_{n-1} & \text{if $i=1$, $n$ is odd}.
+\end{dcases}
+\]
 
+
+\begin{lemma}\label{lemma:product_le} For $i,j\in \{0,1\}$, $n,m\in \mathbb N$,  we have 
+\[
+\gamma_{i,n}\otimes \gamma_{j,m}=?
+\]
 
 \end{lemma}
+
+
+
+
 
 
 \subsubsection{Paths}
