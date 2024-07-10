@@ -23,6 +23,12 @@ We should start by reading this:
 
 
 
+Some notes:
+
+* [notes](NEW_seas/posproj.pdf) on the results of [stormer1979positive](stormer1979positive) generalized to JB-algebras    
+* hand-written [notes](NEW_seas/projections.pdf) on the structure of positive unital (normal) projections on JB(W)-algebras    
+
+
 ## Basic references
 
 

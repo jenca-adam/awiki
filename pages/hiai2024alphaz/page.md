@@ -16,4 +16,7 @@ We study the $\alpha$-$z$-Rényi divergences $D_{\alpha,z}(\psi\|\varphi)$ where
 
 * submitted to CMP   
 
+[review](hiai2024alphaz/review.pdf)     
+
+
 
