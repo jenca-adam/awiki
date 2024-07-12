@@ -38,7 +38,7 @@ and proves some representations and properties similar to those of usual channel
 
 
 No motivation for studying the topic of the paper is given. The authors list some previous
-works, but no applications of the $U$-channels to quantum information or elsewhere are described.
+works, but no aplications of the $U$-channels to quantum information or elsewhere are described.
 Moreover, the $U$-channels ($U$-states, $U$-CP maps, etc..) have an obvious relation to
 the usual quantum channels (states, CP-maps, etc...), and all the results can  be
 straightforwardly  obtained from the well known results by
