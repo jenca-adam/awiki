@@ -11,4 +11,5 @@ We use the Tomita-Takesaki modular theory and the Kubo-Ando operator mean to wri
     
 
 [arxiv:2103.09893v5](https://arxiv.org/abs/2103.09893v5)     
-[doi]()
+[doi](https://doi.org/10.1063/5.0125505)
+

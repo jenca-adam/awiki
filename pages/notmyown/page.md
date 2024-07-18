@@ -83,6 +83,7 @@ title: Not my own papers
 [ekeland1999convex](BOOK_ekeland1999convex),
 
 ### F
+[furuya2023monotonic](furuya2023monotonic),
 [fack1986generalized](fack1986generalized),  
 [fawzi2021defining](fawzi2021defining),
 [fawzi2022asymptotic](fawzi2022asymptotic),

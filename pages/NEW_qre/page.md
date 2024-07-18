@@ -29,8 +29,10 @@ title: "Renyi relative entropy in von Neumann algebras"
 
 * [April 17](NEW_qre/alphaz-14.pdf) new corrections by FH
 
+**Reports and revisions**
 
-
+* [CMP report](NEW_qre/report_cmp.pdf)    
+* [CMP revision](NEW_qre.alphaz-cmp2-revised2.pdf)    
 
 
 
@@ -54,7 +56,9 @@ title: "Renyi relative entropy in von Neumann algebras"
 * [My notes on monotonicity in $z$, $\alpha$ and the limit $\alpha\searrow 1$](NEW_qre/notes7.pdf) January 23    
 * [Fumio's note on equality in DPI, $\alpha<1$](NEW_qre/note_hiai9.pdf) (2/21/2024)     
 * [Fumio's note on variational expression, $\alpha>1](NEW_qre/note_hiai10.pdf) (2/26/2024)    
-* [My notes on equality in DPI for sandwiched rd, $\alpha>1$](NEW_qre/notes9.pdf) March 7    
+* [My notes on equality in DPI for sandwiched rd, $\alpha>1$](NEW_qre/notes9.pdf) March 7   
+* [Hand-written Fumio's note on the variational expression](NEW_qre/note_hiai11.pdf)  May 8   
+
 
 ### Questions
 
@@ -117,6 +121,7 @@ In von Neumann algebras:
 * [berta2018renyi](berta2018renyi) sandwiched Renyi divergence via Araki-Masuda $L_p$-spaces    
 * [BOOK_hiai2021quantum](BOOK_hiai2021quantum) Hiai's book on quantum divergences     
 * [hiai2018quantum](hiai2018quantum) Hiai's paper on standard divergences in von Neumann algebra setting   
+* [furuya2023monotonic](furuya2023monotonic) a more general paper, multistate   
 
 Tools
 

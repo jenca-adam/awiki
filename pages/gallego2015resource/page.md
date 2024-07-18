@@ -4,7 +4,7 @@ title: gallego2015resource
 
 ## Reference
 
-Rodrigo Gallego, Leandro Aolita,The resource theory of steering,Physical Review X, 5(4), 041008, Sep 2015,
+Rodrigo Gallego, Leandro Aolita, The resource theory of steering, Physical Review X, 5(4), 041008, Sep 2015,
 
 ## Abstract 
   We present an operational framework for Einstein-Podolsky-Rosen steering as a
