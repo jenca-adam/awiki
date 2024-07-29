@@ -10,6 +10,9 @@ title: Project of Bert Lindenhovius
 
 * [proposal](PROJ_2023bert/proposal.docx)
 
+* [evaluation](PROJ_2023bert/evaluation.pdf)  
 
+
+Záver: projekt prijatý, ale nerealizovaný 
 
 

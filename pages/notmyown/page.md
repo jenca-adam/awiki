@@ -83,6 +83,9 @@ title: Not my own papers
 [ekeland1999convex](BOOK_ekeland1999convex),
 
 ### F
+[fritz2021abstract](fritz2021abstract),
+[fritz2023abstract](fritz2023abstract),
+[farooq2023matrix](farooq2023matrix),
 [furuya2023monotonic](furuya2023monotonic),
 [fack1986generalized](fack1986generalized),  
 [fawzi2021defining](fawzi2021defining),
@@ -107,6 +110,7 @@ title: Not my own papers
 
 
 ### G
+[grinko2024oncompatibility](grinko2024oncompatibility),
 [gao2021recoverability](gao2021recoverability),
 [gao2023sufficient](gao2023sufficient),
 [girard2021jordanproducts](girard2021jordanproducts),
@@ -206,6 +210,7 @@ title: Not my own papers
 
 
 ### M
+[milz2024characterising](milz2024characterising),
 [mosonyi2023somecontinuity](mosonyi2023somecontinuity),
 [mosonyi2022geometric](mosonyi2022geometric),
 [mosonyi2015quantum](mosonyi2015quantum),
@@ -294,6 +299,7 @@ title: Not my own papers
 [umanita2006classification](umanita2006classification), [umegaki1962conditional](umegaki1962conditional)
 
 ### V
+[verhagen2024matrix](verhagen2024matrix),
 [van2020commutativity](van2020commutativity),
 [vetterlein2019orthogonality](vetterlein2019orthogonality)
 

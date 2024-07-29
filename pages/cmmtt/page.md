@@ -8,6 +8,22 @@ title: Committees - defences, exams, etc.
 
 ## Obhajoba
 
+* Nidhin Sudarsanan Ragini
+
+    - role: opponent
+    - supervisor: Mario Ziman
+    - affiliation: FU SAV    
+    - thesis: Labeling outcomes of Quantum Devices and Higher-order distinguishability     
+    - report deadline: 15. 8 .2024 
+
+
+    [thesis](cmmtt/ragini_thesis.pdf)    
+    [report](cmmtt/ragini_report.pdf)    
+
+
+
+
+
 * Gergely Bunth
 
 

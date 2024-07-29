@@ -323,7 +323,7 @@ $D_{\alpha,z}(\psi\|\varphi)$ are extended from the finite dimensional case into
 algebra case. {\color{orange}The main result of this section is the proof of the following
 variational expressions}{\color{magenta}[I think this is better, the formulation before
 was ''The main theorem ... is the following variational expressions'', this seems
-grammatically strange to me.]}, which will
+gramatically strange to me.]}, which will
 be an important tool for our work. When $0<\alpha<1$, in \cite{kato2023onrenyi} Kato showed \eqref{F-2.1} for
 $z\ge\max\{\alpha,1-\alpha\}$ as well as the inequality $\le$ in \eqref{F-2.1} for all $z>0$. When $\alpha>1$,
 only the inequality $\ge$ in \eqref{F-2.2} for $\alpha>1$ and $z>0$ was shown in \cite{kato2023onrenyi}.
@@ -2998,14 +2998,14 @@ M.~Junge and Q.~Xu.
 S.~Kato.
 \newblock On $\alpha $-$ z $-{R}\'enyi divergence in the von {N}eumann algebra
   setting.
-\newblock \emph{Journal on Mathematical Physics}, 65:\penalty0 042202,  2024.
+\newblock \emph{Journal on Mathematical Physics}, 65:\penalty0 042202 (16 pages),  2024.
 \newblock \doi{10.1063/5.0186552}.
 
 \bibitem[Kato and Ueda(2023)]{kato2023aremark}
 S.~Kato and Y.~Ueda.
 \newblock A remark on non-commutative {$L^p$}-spaces.
-\newblock \emph{Studia Math.}, {275}:\penalty0 235--248, 2024.
-\newblock \doi{10.4064/sm230724-11-10}.
+\newblock \emph{Studia Math.}, to appear.
+\newblock \emph{arXiv preprint arXiv:2307.01790}, 2023.
 
 \bibitem[Kosaki(1984{\natexlab{a}})]{kosaki1984applications}
 H.~Kosaki.

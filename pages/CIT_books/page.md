@@ -18,6 +18,11 @@ title: All books
 * [hiai2021quantum](BOOK_hiai2021quantum)      
 
 
+### S
+
+* [strasser1985mathematical](BOOK_strasser1985mathematical)
+
+
 ### T
 
 * [takesaki123theory](BOOK_takesaki123theory)

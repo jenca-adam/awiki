@@ -22,7 +22,7 @@
 
 
 This paper introduces and studies some notions of incompatibility of  sets of quantum
-measurements, capturing the property that the measurements in the set remain incompatible
+measurements, capturing the property that the measumeremnts in the set remain incompatible
 even after undergoing some classical transformations. Namely, these transformations are
 coarse grainings and some specific convex mixtures combined with permutations of the outcomes. Noise
 robustness of such properties is considered and some operational witnesses are proposed,

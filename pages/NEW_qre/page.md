@@ -32,7 +32,7 @@ title: "Renyi relative entropy in von Neumann algebras"
 **Reports and revisions**
 
 * [CMP report](NEW_qre/report_cmp.pdf)    
-* [CMP revision](NEW_qre.alphaz-cmp2-revised2.pdf)    
+* [CMP revision](NEW_qre/alphaz-cmp2-revised3.pdf)    
 
 
 
@@ -116,7 +116,7 @@ The $B(\mathcal H)$ case
 In von Neumann algebras:
 
 * [kato2024onrenyi](kato2024onrenyi) $\alpha-z$ Renyi divergences in von Neumann algebra setting    
-* [kato2023aremark](kato2023aremark) tensor product of Haagerup $L_p$-spaces    
+* [kato2024aremark](kato2024aremark) tensor product of Haagerup $L_p$-spaces    
 * [gu2019interpolation](gu2019interpolation) interpolation of Haagerup $L_p$-spaces for $p<1$.    
 * [berta2018renyi](berta2018renyi) sandwiched Renyi divergence via Araki-Masuda $L_p$-spaces    
 * [BOOK_hiai2021quantum](BOOK_hiai2021quantum) Hiai's book on quantum divergences     

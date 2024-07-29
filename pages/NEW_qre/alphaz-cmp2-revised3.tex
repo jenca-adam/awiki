@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 
-%\usepackage{hyperref}
-\usepackage[dvipdfmx]{hyperref}
+\usepackage{hyperref}
+%\usepackage[dvipdfmx]{hyperref}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{xcolor}
 \usepackage[sort&compress,numbers]{natbib}
@@ -192,12 +192,9 @@ their properties was subsequently proved in \cite{kato2023onrenyi}. In particula
 properties including the DPI (with respect to normal positive unital maps), monotonicity in the parameter $z$
 and a variational expression were proved in the case $0<\alpha<1$. In the infinite dimensional
 $\mathcal{B}(\mathcal{H})$ case, $D_{\alpha,z}$ and their properties were studied also in
-\cite{mosonyi2023thestrong}. {\color{orange} In the von Neumann algebra setting, an alternative definition for $\alpha\in
+\cite{mosonyi2023thestrong}.  In the von Neumann algebra setting, an alternative definition for $\alpha\in
 [0,1]$ and $z\ge 1/2$ was given in \cite{furuya2023monotonic}, where the DPI with respect
-to completely positive normal unital maps was also proved for $z>1$}{\color{magenta} [I
-did not yet confirm that their definition is the same as ours, but I think a citation
-would be appropriate.]}
-
+to completely positive normal unital maps was also proved for $z>1$.
 
 Inspired by the papers \cite{kato2023aremark, kato2023onrenyi}, our aim in the present
 work is to complete their results on the properties of the $\alpha$-$z$-R\'enyi divergences.
@@ -218,7 +215,7 @@ conditional expectations extended to the Haagerup $L^p$-spaces.
 
 We then turn to monotonicity in the parameters $z$ and $\alpha$. In Sec.~5 we first show that in the
 case of finite von Neumann algebras,  monotonicity in $z$ holds for all values of the parameter. 
-In the case of general von Neumann algebras for $\alpha>1$, we prove monotonicity in $z$
+In the case of general von Neumann algebras, for $\alpha>1$ we prove monotonicity in $z$
 on the interval $[\alpha/2,\infty)$ using a complex interpolation method
 based on Kosaki's $L^p$-spaces. In Sec.~6 we further prove monotonicity in the parameter
 $\alpha$, which seems to be new even in the finite dimensional case, using a real analysis method
@@ -320,11 +317,9 @@ for $z=1$ and \cite[Lemma 9]{kato2023aremark} for $z=\alpha$.
 
 As have already been done by Kato in \cite{kato2023onrenyi}, many of the properties of
 $D_{\alpha,z}(\psi\|\varphi)$ are extended from the finite dimensional case into the general von Neumann
-algebra case. {\color{orange}The main result of this section is the proof of the following
-variational expressions}{\color{magenta}[I think this is better, the formulation before
-was ''The main theorem ... is the following variational expressions'', this seems
-grammatically strange to me.]}, which will
-be an important tool for our work. When $0<\alpha<1$, in \cite{kato2023onrenyi} Kato showed \eqref{F-2.1} for
+algebra case. The main purpose of this section is to prove the following
+variational expressions. These expressions will provide
+ an important tool for our work. When $0<\alpha<1$, in \cite{kato2023onrenyi} Kato showed \eqref{F-2.1} for
 $z\ge\max\{\alpha,1-\alpha\}$ as well as the inequality $\le$ in \eqref{F-2.1} for all $z>0$. When $\alpha>1$,
 only the inequality $\ge$ in \eqref{F-2.2} for $\alpha>1$ and $z>0$ was shown in \cite{kato2023onrenyi}.
 
@@ -343,9 +338,9 @@ Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me^+} \left\{\alpha
 \Tr\left((a^{\frac12}h_\psi^{\frac{\alpha}{z}}a^{\frac12})^{\frac{z}{\alpha}}\right)-(\alpha-1)
 \Tr\left((a^{\frac12}h_\varphi^{\frac{\alpha-1}{z}}a^{\frac12})^{\frac{z}{\alpha-1}}\right) \right\}.
 \end{align}
-{\color{orange} Moreover, the equality \eqref{F-2.2} holds for all $\alpha>1$ and $z>0$ such that
+ Moreover,  equality \eqref{F-2.2} holds for all $\alpha>1$ and $z>0$ such that
 $D_{\alpha,z}(\psi\|\ffi)<\infty$. In particular, if $\psi\le\lambda\ffi$ for some $\lambda>0$, then \eqref{F-2.2} holds for all
-$z\ge\alpha-1>0$.}
+$z\ge\alpha-1>0$.
 \end{enumerate}
 \end{theorem}
 
@@ -461,8 +456,8 @@ Hence by \cite[Lemma A.58]{hiai2021quantum} there is some $b\in \Me$ such that
 h_\psi^{\frac{\alpha-1}{2z}}=bh_\varphi^{\frac{\alpha-1}{2z}},
 \]
 so that $h_\psi^{\alpha\over2z}=yh_\ffi^{\alpha-1\over2z}$, where
-{\color{orange} $y:=h_\psi^{\frac{1}{2z}}b\in L^{2z}(\Me)$}. By Lemma \ref{lemma:renyi_2z},
-$Q_{\alpha,z}(\psi\|\varphi)=\|y\|_{2z}^{2z}<\infty$. This shows the {\color{orange} last} assertion too.
+ $y:=h_\psi^{\frac{1}{2z}}b\in L^{2z}(\Me)$. By Lemma \ref{lemma:renyi_2z},
+$Q_{\alpha,z}(\psi\|\varphi)=\|y\|_{2z}^{2z}<\infty$. This shows the  last assertion too.
 (Note that this follows also from the order relations in \cite[Theorem 2(iii)]{kato2023onrenyi}.)
 
 Next, assume that $z\ge\alpha/2$. For any $\eps>0$ define $\varphi_\eps\in\Me_*^+$ by
@@ -540,9 +535,8 @@ $0<\alpha<1$, in the case when $\lambda^{-1}\ffi\le \psi\le \lambda \ffi$ for so
 $\lambda>0$. This case will be denoted as $\psi\sim \ffi$. 
 
 \begin{lemma}\label{lemma:variational_majorized}
-Assume that $\psi\sim\ffi$ {\color{orange}and let $0<\alpha<1$,
-$\max\{\alpha,1-\alpha\}\le z$}{\color{magenta}[We need this assumption to use Kato's
-proof, we need to put it here since it is no longer assumed in Theorem 2.4]}. Then the infimum in \eqref{F-2.1} of Theorem \ref{thm:variational}(i) is
+Assume that $\psi\sim\ffi$ and let $0<\alpha<1$,
+$\max\{\alpha,1-\alpha\}\le z$. Then the infimum in \eqref{F-2.1} of Theorem \ref{thm:variational}(i) is
 attained at a unique element $\bar a\in \Me^{++}$. This element satisfies
 \begin{align}
 h_\psi^{\alpha\over2z}\bar ah_\psi^{\alpha\over2z}
@@ -1213,21 +1207,16 @@ Q_{\alpha,z}(\psi\|\ffi)
 obtained in \cite{leditzky2017data} and \cite{zhang2020equality} in the finite dimensional case.
 Indeed, as seen from \eqref{eq:minimizer2}, the first condition in (ii) with $\alpha=z$ is 
 equivalent to the condition in \cite[Theorem 1]{leditzky2017data} (obtained under the more
-general assumption that $s(\psi)\le s(\ffi)$). Since $p=1$ in this case and 
+general assumption that $s(\psi)\le s(\ffi)$). Since $p=\frac{z}{\alpha}=1$ in
+\cite{leditzky2017data} and 
 $\big\|h_\psi^{1\over2}\gamma(a_0)h_\psi^{1\over2}\big\|_{1}=\Tr
 \bigl(\gamma(\alpha_0)h_\psi\bigr)=\big\|h_{\psi_0}^{1\over2}a_0h_{\psi_0}^{1\over2}\big\|_{1}$
 for any $a_0\in \Ne$, the second condition in (ii) is automatic.
 Moreover, (ii) extends the necessary condition in \cite[Theorem 1.2(2)]{zhang2020equality}
 to a necessary and sufficient one. While in both of these works $\gamma$ was required
-to be completely positive, only positivity  {\color{orange} is assumed in Proposition
-\ref{prop:DPI_equality}}.
-{\color{blue}[In the beginning of Sec.~4 we have explained our meaning of a (quantum channel) and
-haven't assumed it throughout Section 4. However, this use of the term ``channel'' might be a bit confusing
-since it is not usual in quantum information. So it might be better to write ``$\gamma$ being a normal
-2-positive unital map'' in each theorem of Section 4(?)]} {\color{magenta}[I am not sure
-about this. If we define the notion of a channel and then do not use it, it might be even
-more confusing. A possibility would be to change the beginning of Sec. 4, without defining
-''channels'' as 2-positive maps.]}
+to be completely positive, only positivity   is assumed in Proposition
+\ref{prop:DPI_equality}.
+
 \end{remark}
 
 
@@ -2389,10 +2378,10 @@ $|\zeta|\to0$. For each $\alpha'\in(1,\alpha)$ it follows that
 f\biggl({\alpha'\over\alpha}\biggr)=f\biggl({1\over\alpha}\biggr)+{\alpha'-1\over\alpha}\,h
 +o\biggl({\alpha'-1\over\alpha}\biggr)\quad\mbox{as $\alpha'\searrow1$}.
 \]
-Furthermore, {\color{orange} since $f(\alpha'/\alpha)\in L^{2z}_L$, we have
+Furthermore,  since $f(\alpha'/\alpha)\in L^{2z}_L$, we have
 $f(\alpha'/\alpha)=h_\psi^{\alpha'\over2z}h_\ffi^{1-{\alpha'\over2z}}=y'h_\ffi^{2z-1\over2z}$ for some
 $y'\in L^{2z}(\Me)$, so that $h_\psi^{\alpha'\over 2z}=y'h_\ffi^{\alpha'-1\over 2z}$ and 
-$Q_{\alpha',z}(\psi\|\ffi)=\|y'\|_{2z}^{2z}=\|f(\alpha'/\alpha)\|_{L^{2z}_L}$.}
+$Q_{\alpha',z}(\psi\|\ffi)=\|y'\|_{2z}^{2z}=\|f(\alpha'/\alpha)\|_{L^{2z}_L}$.
 
 Now let us recall that $L^{2z}_L$ is uniformly convex thanks to $2z>1$ (see \cite{haagerup1979lpspaces},
 \cite[Theorem 4.2]{kosaki1984applications}), so that the norm $\|\cdot\|_{L^{2z}_L}$ is uniformly Fr\'echet
@@ -2417,7 +2406,7 @@ h_\ffi^{2z-1\over2z}\Bigr\> \nonumber\\
 &=\psi(\1)^{-{2z-1\over2z}}\lim_{t\to0}{1\over it}\Tr\Bigl[h_\psi^{2z-1\over2z}h_\psi^{1\over2z}
 \bigl(h_{\psi_0}^{{\alpha\over2z}it}h_\ffi^{-{\alpha\over2z}it}-\1\bigr)\Bigr] \nonumber\\
 &=\psi(\1)^{-{2z-1\over2z}}{\alpha\over2z}
-\lim_{t\to0}{\color{orange}{1\over it}}\Tr\bigl[h_\psi\bigl(h_{\psi_0}^{it}h_\ffi^{-it}-\1\bigr)\bigr] \nonumber\\
+\lim_{t\to0}{1\over it}\Tr\bigl[h_\psi\bigl(h_{\psi_0}^{it}h_\ffi^{-it}-\1\bigr)\bigr] \nonumber\\
 &=\psi(\1)^{-{2z-1\over2z}}{\alpha\over2z}\,D(\psi\|\ffi), \label{F-6.12}
 \end{align}
 where we have used \eqref{F-C.5} for the third equality and \cite[Theorem 5.7]{ohya1993quantum}
@@ -2572,7 +2561,7 @@ and for $1\le p,q,r\le \infty$ such that $\tfrac1p+\tfrac1q+\tfrac1r=\tfrac1s\le
 \end{equation}
 (see \cite[Proposition 2.3]{junge2003noncommutative}).
 
-We finish this section by  some well-known lemmas,  proofs are given for completeness.
+We finish this section by  some well-known lemmas. The proofs are given for completeness.
 
 \begin{lemma}\label{lemma:cone}
 For any $0<p<\infty$ and $\varphi\in \Me_*^+$, 
