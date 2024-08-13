@@ -12,7 +12,7 @@ title: Some ideas for further work
 
 
 
-### Equality in DPI for the Belavkin-Staszewski relaive entropy
+### Equality in DPI for the Belavkin-Staszewski relative entropy
 
 * A question asked by Angela Capel and Andreas Bluhm     
 
@@ -25,7 +25,8 @@ $d=\sigma^{-1/2}\rho\sigma^{-1/2}$ is in the *multuplicative domain* of the Petz
 
 
 
-[notes](IDEAS/bs_notes.pdf)    
+* my [notes](IDEAS/bs_notes.pdf)     
+* Their [notes](IDEAS/Fixed_points_BS_entropy_notes.pdf)
 
 
 ### Integral representations of BS entropy
