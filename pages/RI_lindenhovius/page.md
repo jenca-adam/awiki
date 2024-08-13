@@ -7,7 +7,9 @@ title: RI - Bert Lindenhovius
 
 * contact person: Anna Jenčová
 
-* Euraxess [anouncement](RI_lindenhovius/R2_QF.png)
+* Euraxess [anouncement](RI_lindenhovius/R2_QF.png)     
+
+* evaluation: 12.17 points, granted,  but not started
 
 ---
 

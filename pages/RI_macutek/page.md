@@ -8,8 +8,10 @@ title: RI - Ján Mačutek
 
 * Euraxess anouncement: - 
 
----
+* evaluation: points 12.58, granted
 
+---
+Project title: Mathematical Models of Linguistic Laws    
 [project](RI_macutek/project_jm.docx)
 
 

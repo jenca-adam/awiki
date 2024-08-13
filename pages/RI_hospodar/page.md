@@ -9,9 +9,13 @@ title: RI - Michal Hospodár
 
 * Euraxess anouncement: - 
 
+* Evaluation: points 0 (conditions not fulfilled)
 ---
 
-[project](RI_hospodar/project_mh.docx)
+Project title: Complexity and algorithmic issues in automata and formal languages
+
+[project](RI_hospodar/project_mh.docx)     
+
 
 
 

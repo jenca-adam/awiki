@@ -9,9 +9,13 @@ title: RI - Malgorzata Jastrzebska
 
 * Euraxess [anouncement](RI_jastrzebska/R2_ALG.png)
 
+* evaluation: points 10.5, conditions fulfilled, on a waiting list
+
 ---
 
-[project](RI_jastrzebska/project_mj.docx)
+Project title: Some Aspects of Universal Algebra Constructions Applied to Classical Algebras
+
+[project](RI_jastrzebska/jastrzebska_final.docx)
 
 
 ### Notes

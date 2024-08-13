@@ -9,7 +9,7 @@ title: RI - Raquel Fernandez-Peralta
 
 * Euraxess [anouncement](RI_fernandez/R2_MV.png)
 
-
+* Evaluation: points 12.17, granted, but not started
 
 ---
 

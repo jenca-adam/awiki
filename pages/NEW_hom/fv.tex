@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb, amsthm, bm}
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage{doi}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[all]{xy}
+
+%\textheight23cm \topmargin-20mm  
+%\textwidth175mm  
+%\oddsidemargin=0mm
+%\evensidemargin=0mm
+%
+
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{coro}{Corollary}
+\newtheorem{prop}{Proposition}
+
+
+\theoremstyle{definition}
+\newtheorem{defi}{Definition}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{exm}{Example}
+
+\def\aff{\operatorname{Aff}}
+\def\lin{\operatorname{Lin}}
+\def\Span{\operatorname{Span}}
+\def\type{\mathrm {setting}}
+\def\ii{\bm{\emptyset}}
+\def\tt{\bm{0}}
+\def\Ce{\mathcal C}
+\def\Ae{\mathcal A}
+\def\Ne{\mathcal N}
+\def\Fe{\mathcal F}
+\def \Tr{\mathrm{Tr}\,}
+\def\Se {\mathcal S}
+\def\supp{\mathrm{supp}}
+\def\<{\langle\,}
+\def\>{\,\rangle}
+\def \BS{\mathrm{BS}}
+\def \Afh{\mathrm{AfH}}
+\def \Af{\mathrm{Af}}
+\def \FV{\mathrm{FinVect}}
+\def\bV{\mathbf V}
+\def\bW{\mathbf W}
+\def\bE{ E}
+\def\bI{I}
+
+\def\bX{ X}
+\def\bQ{\mathbf Q}
+\def\bY{ Y}
+\def\bZ{Z}
+
+
+\title{Some useful categories}
+\author{Anna Jen\v cov\'a}
+
+\begin{document}
+
+\maketitle
+
+
+\section{The category $\FV$}
+
+Let  $\FV$ be the category of finite dimensional real vector spaces with linear maps. 
+We will denote the usual tensor product by $\otimes$, then  $(\FV,\otimes, I=\mathbb R)$
+is a symmetric monoidal category, with the associators, unitors and symmetries given by
+the obvious isomorphisms 
+\begin{align*}
+\alpha_{U,V,W}&:(U\otimes V)\otimes W\simeq U\otimes (V\otimes W), \\
+\lambda_V&: I\otimes
+V\simeq
+V, \qquad \rho_V: V\otimes I\simeq V,\\
+\sigma_{U,V}&: U\otimes V\simeq V\otimes U.
+\end{align*}
+
+
+Let  $(-)^*: V\mapsto V^*$ be the usual vector space dual, with duality denoted by
+$\<\cdot,\cdot\>: V^*\times V\to \mathbb R$. We will use the canonical identification
+$V^{**}=V$ and $(V_1\otimes V_2)^*=V_1^*\otimes V_2^*$. With this duality, $\FV$ is
+compact closed. This means that for each object $V$, there are maps $\eta_V: I\to V^*\otimes
+V$ (the ''cup'') and $\epsilon_V: V\otimes V^*\to I$ (the ''cap'') such that the following snake
+identities hold:
+\begin{equation}\label{eq:snake}
+(\epsilon_V\otimes V)\circ (V\otimes \eta_V)=V,\qquad (V^*\otimes \epsilon_V)\circ
+(\eta_V\otimes V^*)=V^*,
+\end{equation}
+here we denote the identity map on the object $V$ by $V$. Indeed, $\eta_V$ can be
+identified with an element $\eta_V(1)\in V^*\otimes V$ and   $\epsilon_V\in (V\otimes
+V^*)^*=V^*\otimes V$ is again an element of the same space.  Choose a basis
+$\{e_i\}$ of $V$, let $\{e_i^*\}$ be the dual basis of $V^*$, that is,
+$\<e_i^*,e_j\>=\delta_{i,j}$. Let us then define
+\[
+\eta_V(1)=\epsilon_V:=\sum_i e_i^*\otimes e_i.
+\]
+It is easy to see that this definition does not depend on the choice of the basis, indeed,
+$\epsilon_V$ is the linear functional on $V\otimes V^*$ defined by
+\[
+\<\epsilon_V, x\otimes x^*\>=\<x^*,x\>,\qquad x\in V, \ x^*\in V^*.
+\]
+It is also easily checked that the snake identities \eqref{eq:snake} hold.
+
+For two objects $V$ and $W$ in $\FV$, let $L(V,W)$ be the space of all linear maps $V\to
+W$. Then $L(V,W)$ is itself an object in $\FV$ and  we have the well-known identification 
+$L(V,W)\simeq V^*\otimes W$. This can be given as follows: for each $f\in L(V,W)$, we have 
+$C_f:=(V^*\otimes f)(\epsilon_V)=\sum_i e_i^*\otimes f(e_i)\in V^*\otimes W$. Conversely,
+since $\{e_i^*\}$ is a basis of $V^*$, 
+any element $w\in V^*\otimes W$ can be uniquely written as $w=\sum_i e_i^*\otimes w_i$ for
+$w_i\in W$, and since $\{e_i\}$ is a basis of $V$, the assignment $f(e_i):=w_i$ determines a
+unique map $f:V\to W$. The relations between $f\in L(V,W)$ and $C_f\in V^*\otimes V$ can be also determined as
+\[
+\<C_f,x\otimes y^*\>=\<\epsilon_V,x\otimes f^*(y^*)\>=\<f^*(y^*),x\>=\<y^*,f(x)\>,\qquad x\in
+V,\ y^*\in W^*,
+\]
+here $f^*:W^*\to V^*$ is the adjoint of $f$.
+Note that by compactness, $[V,W]=V^*\otimes W$ is the internal hom,
+and in the case of $\FV$, the object $[V,W]$ can be identified with the space of linear
+maps $V\to W$. 
+
+
+\begin{exm} Let $V=\mathbb R^N$. In this case, we fix the canonical basis $\{|i\>,\
+i=1,\dots,N\}$. We will identify $(\mathbb R^N)^*=\mathbb R^N$, with duality
+$\<x,y\>=\sum_i x_iy_i$, in particular, we identify $I=I^*$. We then have
+$\epsilon_V=\sum_i |i\>\otimes |i\>$ and if $f:\mathbb R^N\to \mathbb R^M$ is given by the
+matrix $A$ in the two canonical bases, then  $C_f=\sum_i |i\>\otimes A|i\>$ is the
+vectorization of $A$.
+
+\end{exm}
+
+
+\begin{exm} Let $V=M_n^h$ be the space of $n\times n$ complex hermitian matrices. We again
+identify $(M_n^H)^*=M_n^h$, with duality $\<A,B\>=\Tr A^TB$, where $A^T$ is the usual
+transpose of the matrix $A$. Let us choose the basis in $M_n^h$, given as
+\[
+\left\{|j\>\<k|+|k\>\<j|,\ j\le k,\ i\biggl(|j\>\<k|-|k\>\<j|\biggr),\ j<k\right\}.
+\]
+Then one can check that
+\[
+\left\{\frac12\biggl(|j\>\<k|+|k\>\<j|\biggl),\ j\le k,\
+\frac{i}{2}\biggl(|k\>\<j|-|j\>\<k|\biggr),\ j<k\right\}
+\]
+is the dual basis and we have
+\[
+\epsilon_V=\sum_{j,k} |j\>\<k|\otimes |j\>\<k|.
+\]
+For any $f:M_n^h\to M_m^h$, 
+\[
+C_f=\sum_{j,k} |j\>\<k|\otimes f(|j\>\<k|)
+\]
+is the Choi matrix of $f$.
+
+\end{exm}
+
+\end{document}
+

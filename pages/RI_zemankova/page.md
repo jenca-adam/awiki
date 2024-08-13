@@ -9,8 +9,9 @@ title: RI - Andrea Zemánková
 
 * Euraxess anouncement: - 
 
+* evaluation: points 12.17 conditions fulfilled, on a waiting list
 ---
-
-[project](RI_zemankova/project_az.docx)
+Project title: Structure of non-commutative associative functions on real intervals
+[project](RI_zemankova/zemankova_final.docx)
 
 
