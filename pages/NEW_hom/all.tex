@@ -27,6 +27,7 @@
 
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}
+\newtheorem{exm}{Example}
 
 \def\aff{\operatorname{Aff}}
 \def\lin{\operatorname{Lin}}
@@ -59,7 +60,7 @@
 \def\bY{ Y}
 \def\bZ{Z}
 
-\title{On the structure of quantum higher order maps}
+\title{On the structure of  higher order quantum maps}
 \author{Anna Jen\v cov\'a}
 
 \begin{document}
@@ -67,9 +68,282 @@
 \maketitle
 
 
-In Appendix we describe the category $\Af$, whose objects  are of the form $X=(V_X,A_X)$, where $V_X$ is a finite dimensional
-real vector space and $A_X\subseteq V_X$ a proper affine subspace, and morphisms $X\xrightarrow{f} Y$ are linear maps $f:V_X\to V_Y$  such that
-$f(A_X)\subseteq A_Y$. It is also shown that we can introduce a tensor product $\otimes$
+
+\section{The category of affine subspaces}
+
+\subsection{The category $\FV$}
+
+Let  $\FV$ be the category of finite dimensional real vector spaces with linear maps. 
+We will denote the usual tensor product by $\otimes$, then  $(\FV,\otimes, I=\mathbb R)$
+is a symmetric monoidal category, with the associators, unitors and symmetries given by
+the obvious isomorphisms 
+\begin{align*}
+\alpha_{U,V,W}&:(U\otimes V)\otimes W\simeq U\otimes (V\otimes W), \\
+\lambda_V&: I\otimes
+V\simeq
+V, \qquad \rho_V: V\otimes I\simeq V,\\
+\sigma_{U,V}&: U\otimes V\simeq V\otimes U.
+\end{align*}
+
+
+Let  $(-)^*: V\mapsto V^*$ be the usual vector space dual, with duality denoted by
+$\<\cdot,\cdot\>: V^*\times V\to \mathbb R$. We will use the canonical identification
+$V^{**}=V$ and $(V_1\otimes V_2)^*=V_1^*\otimes V_2^*$. With this duality, $\FV$ is
+compact closed. This means that for each object $V$, there are maps $\eta_V: I\to V^*\otimes
+V$ (the ''cup'') and $\epsilon_V: V\otimes V^*\to I$ (the ''cap'') such that the following snake
+identities hold:
+\begin{equation}\label{eq:snake}
+(\epsilon_V\otimes V)\circ (V\otimes \eta_V)=V,\qquad (V^*\otimes \epsilon_V)\circ
+(\eta_V\otimes V^*)=V^*,
+\end{equation}
+here we denote the identity map on the object $V$ by $V$. Indeed, $\eta_V$ can be
+identified with an element $\eta_V(1)\in V^*\otimes V$ and   $\epsilon_V\in (V\otimes
+V^*)^*=V^*\otimes V$ is again an element of the same space.  Choose a basis
+$\{e_i\}$ of $V$, let $\{e_i^*\}$ be the dual basis of $V^*$, that is,
+$\<e_i^*,e_j\>=\delta_{i,j}$. Let us then define
+\[
+\eta_V(1)=\epsilon_V:=\sum_i e_i^*\otimes e_i.
+\]
+It is easy to see that this definition does not depend on the choice of the basis, indeed,
+$\epsilon_V$ is the linear functional on $V\otimes V^*$ defined by
+\[
+\<\epsilon_V, x\otimes x^*\>=\<x^*,x\>,\qquad x\in V, \ x^*\in V^*.
+\]
+It is also easily checked that the snake identities \eqref{eq:snake} hold.
+
+For two objects $V$ and $W$ in $\FV$, let $L(V,W)$ be the space of all linear maps $V\to
+W$. Then $L(V,W)$ is itself an object in $\FV$ and  we have the well-known identification 
+$L(V,W)\simeq V^*\otimes W$. This can be given as follows: for each $f\in L(V,W)$, we have 
+$C_f:=(V^*\otimes f)(\epsilon_V)=\sum_i e_i^*\otimes f(e_i)\in V^*\otimes W$. Conversely,
+since $\{e_i^*\}$ is a basis of $V^*$, 
+any element $w\in V^*\otimes W$ can be uniquely written as $w=\sum_i e_i^*\otimes w_i$ for
+$w_i\in W$, and since $\{e_i\}$ is a basis of $V$, the assignment $f(e_i):=w_i$ determines a
+unique map $f:V\to W$. The relations between $f\in L(V,W)$ and $C_f\in V^*\otimes W$ can
+be also written as
+\[
+\<C_f,x\otimes y^*\>=\<\epsilon_V,x\otimes f^*(y^*)\>=\<f^*(y^*),x\>=\<y^*,f(x)\>,\qquad x\in
+V,\ y^*\in W^*,
+\]
+here $f^*:W^*\to V^*$ is the adjoint of $f$.
+Note that by compactness, the internal hom in $\FV$ satisfies $[V,W]\simeq V^*\otimes W$,
+so that  in the case of $\FV$, the object $[V,W]$ can be identified with the space of linear
+maps $L(V,W)$. 
+
+
+\begin{exm} Let $V=\mathbb R^N$. In this case, we fix the canonical basis $\{|i\>,\
+i=1,\dots,N\}$. We will identify $(\mathbb R^N)^*=\mathbb R^N$, with duality
+$\<x,y\>=\sum_i x_iy_i$, in particular, we identify $I=I^*$. We then have
+$\epsilon_V=\sum_i |i\>\otimes |i\>$ and if $f:\mathbb R^N\to \mathbb R^M$ is given by the
+matrix $A$ in the two canonical bases, then  $C_f=\sum_i |i\>\otimes A|i\>$ is the
+vectorization of $A$.
+
+\end{exm}
+
+
+\begin{exm} Let $V=M_n^h$ be the space of $n\times n$ complex hermitian matrices. We again
+identify $(M_n^h)^*=M_n^h$, with duality $\<A,B\>=\Tr A^TB$, where $A^T$ is the usual
+transpose of the matrix $A$. Let us choose the basis in $M_n^h$, given as
+\[
+\left\{|j\>\<k|+|k\>\<j|,\ j\le k,\ i\biggl(|j\>\<k|-|k\>\<j|\biggr),\ j<k\right\}.
+\]
+Then one can check that
+\[
+\left\{\frac12\biggl(|j\>\<k|+|k\>\<j|\biggl),\ j\le k,\
+\frac{i}{2}\biggl(|k\>\<j|-|j\>\<k|\biggr),\ j<k\right\}
+\]
+is the dual basis and we have
+\[
+\epsilon_V=\sum_{j,k} |j\>\<k|\otimes |j\>\<k|.
+\]
+For any $f:M_n^h\to M_m^h$, 
+\[
+C_f=\sum_{j,k} |j\>\<k|\otimes f(|j\>\<k|)
+\]
+is the Choi matrix of $f$.
+
+\end{exm}
+
+
+\subsection{The category $\Af$}
+
+We now introduce the category $\Af$, whose objects  are of the form $X=(V_X,A_X)$, where
+$V_X$ is an object in $\FV$  and $A_X\subseteq V_X$ a proper affine subspace, which means
+that $0\notin A_X\ne \emptyset$. Morphisms $X\xrightarrow{f} Y$ in $\Af$ are linear maps $f:V_X\to V_Y$  such that
+$f(A_X)\subseteq A_Y$. For any object $X$, we put
+\begin{align*}
+L_X=\lin(A_X):=\{a-a_X, a\in A_X\}, \qquad S_X:=\Span(A_X).
+\end{align*}
+Here $a_X$ is any element in $A_X$ and $L_X$ does not depend on this choice.
+Then $L_X$ and $S_X$ are linear subspaces such that $d_X:=\dim(L_X)=\dim(S_X)-1$. We will
+also denote $D_X=\dim(V_X)$. For
+any element $a_X\in A_X$, the affine subspace is determined as
+\[
+A_X=a_X+L_X.
+\]
+
+Let us now define the duality of affine subspaces as follows. Let $V$ be an object in
+$\FV$ and let $C\subseteq  V$ be any subset. Let
+\[
+\tilde C:=\{v^*\in V^*, \ \<v^*,c\>=1\}.
+\]
+The following lemma collects some properties that are easily proven.
+
+\begin{lemma}\label{lemma:dual}
+\begin{enumerate}
+\item[(i)] $\tilde C$ is an affine subspace.
+\item[(ii)] $0\in \tilde C$ if and only if $C= \emptyset$ and   $\tilde C=\emptyset$ if and only if $0\in \aff(C)$.
+\item[(iii)] Let  $0\notin \aff(C)$, then $\aff(C)=\tilde{\tilde C}$ and we have
+\begin{align*}
+\lin(C)&=\lin(\tilde{\tilde C})=\tilde
+C^\perp=\Span(\tilde C)^\perp,&  \lin(\tilde C)&=C^\perp=\Span(C)^\perp \\
+\Span(C)&=C^{\perp\perp} =\lin(\tilde C)^\perp,&  \Span(\tilde C)&=\lin(C)^\perp.
+\end{align*}
+
+\end{enumerate}
+
+
+\end{lemma}
+
+
+
+For any  $\tilde a_X\in \tilde A_X$, the subspace $A_X$ is determined as
+\[
+A_X=S_X\cap\{\tilde a_X\}^\sim.
+\]
+The relation between the subspaces $L_X$ and $S_X$ is given as
+\[
+S_X=L_X\oplus \mathbb R a_X,\qquad L_X=S_X\cap \{\tilde a_X\}^\perp.
+\]
+By Lemma \ref{lemma:dual} above,  $\tilde A_X$ is a proper affine subspace in $V_X^*$, so that
+$X^*:=(V_X^*,\tilde A_X)$ is an object in $\Af$. We have $X^{**}=X$ and the corresponding subspaces
+are related as
+\begin{equation}\label{eq:duality}
+L_{X^*}=S_X^\perp,\qquad S_{X^*}=L_X^\perp.
+\end{equation}
+Note also that for $X\xrightarrow{f} Y$, the adjoint map satisfies $f^*(\tilde
+A_Y)\subseteq \tilde A_X$, so that $Y^*\xrightarrow{f^*} X^*$ and the duality $(-)^*$ is a
+full and faithful functor 
+$\Af^{op}\to \Af$.
+
+We will next introduce a monoidal structure $\otimes$ as follows. For two objects $X$ and
+$Y$, we put  $V_{X\otimes Y}=V_X\otimes V_Y$ and construct the affine subspace
+$A_{X\otimes Y}$ as the affine span of 
+\[
+A_X\otimes A_Y=\{a\otimes b,\ a\in A_X,\ b\in A_Y\}.
+\]
+Fix any $\tilde a_X\in \tilde A_X$ and $\tilde a_Y\in \tilde A_Y$. 
+Since $A_X\otimes A_Y\subseteq \{\tilde a_X\otimes \tilde a_Y\}^\sim$, the affine span of
+$A_X\otimes A_Y$ is a proper affine subspace and we have by Lemma \ref{lemma:dual}
+\[
+A_{X\otimes Y}:=\aff(A_X\otimes A_Y)=\{A_X\otimes A_Y\}^{\approx}.
+\]
+\begin{lemma}\label{lemma:tensor_spaces}
+For any $a_X\in A_X$, $a_Y\in A_Y$, we  have
+\begin{align}
+L_{X\otimes Y}&=\lin(A_X\otimes A_Y)=\Span(\{x\otimes y-a_X\otimes a_Y,\ x\in A_X,\ y\in
+A_Y\})\label{eq:lxy1}\\
+&= (a_X\otimes L_Y)+ (L_X\otimes a_Y)+ (L_X\otimes L_Y)\label{eq:lxy}
+%\\ &= S_X\otimes L_Y+L_X\otimes a_Y=a_X\otimes L_Y+L_X\otimes S_Y
+\end{align}
+(here $+$ denotes the direct sum of subspaces). We also have
+\[
+S_{X\otimes Y}=S_X\otimes S_Y.
+\]
+\end{lemma}
+
+\begin{proof} The equality \eqref{eq:lxy1} follows from Lemma \ref{lemma:dual}. For any $x\in A_X$, $y\in A_Y$
+ we have
+\[
+x\otimes y-a_X\otimes a_Y=a_X\otimes (y-a_Y)+(x-a_X)\otimes a_Y+(x-a_X)\otimes (y-a_Y),
+\]
+so that $L_{X\otimes Y}=\lin(A_X\otimes A_Y)$ is contained in the subspace on the RHS of \eqref{eq:lxy}.
+Let $d$ be the dimension of this subspace, then clearly
+\[
+d_{X\otimes Y}\le d\le d_X+d_Y+d_Xd_Y.
+\]
+On the other hand, any element of $S_X$ has the form $tx$ for some $t\in \mathbb R$ and
+$x\in A_X$, so that it is easily seen that $S_X\otimes S_Y=S_{X\otimes Y}$. 
+Hence 
+\begin{align*}
+d_{X\otimes Y}&=\dim(L_{X\otimes Y})=\dim(S_{X\otimes
+Y})-1=\dim(S_X)\dim(S_Y)-1=(d_X+1)(d_Y+1)-1\\
+&=d_X+d_Y+d_Xd_Y.
+\end{align*}
+This completes the proof.
+
+\end{proof}
+
+
+
+
+\begin{lemma}\label{lemma:monoidal} Let $I=(\mathbb R,\{1\})$. Then 
+$(\Af,\otimes, I)$ is a symmetric monoidal category.
+\end{lemma}
+
+\begin{proof} Note that this structure is inherited from the symmetric monoidal structure
+in $\FV$. To show that $\otimes$ is a functor, we have to check that for $X_1\xrightarrow{f} Y_1$ and $X_2\xrightarrow{g} Y_2$ in
+$\Af$, we have $X_1\otimes Y_1\xrightarrow{f\otimes g} X_2\otimes Y_2$ which amounts to
+showing that 
+\[
+(f\otimes g)(A_{X_1\otimes Y_1})\subseteq A_{X_2\otimes Y_2}.
+\]
+Let $x\in A_{X_1}$, $y\in A_{Y_1}$, then $f(x)\otimes g(y)\in A_{X_2}\otimes
+A_{Y_2}\subseteq A_{X_2\otimes Y_2}$. Since  $A_{X_1\otimes Y_1}$ is the affine subspace
+generated by $A(X_1)\otimes A(Y_1)$, the above inclusion follows by linearity of $f\otimes
+g$. 
+
+It only remains to prove that the associators, unitors and symmetries from
+$\FV$ are morphisms in $\Af$. We will prove this for the associators $\alpha_{X,Y,Z}:V_X\otimes (V_Y\otimes V_Z)\to
+(V_X\otimes V_Y)\otimes V_Z$, the other proofs are similar. We need to check that
+$\alpha_{X,Y,Z}(A_{X\otimes(Y\otimes Z)})\subseteq A_{(X\otimes Y)\otimes Z}$. It is easily
+checked that $A_{X\otimes(Y\otimes Z)}$ is the affine span of elements of the form
+$x\otimes (y\otimes z)$, $x\in A_X$, $y\in A_Y$ and $z\in A_Z$, and we have
+\[
+\alpha_{X,Y,Z}(x\otimes (y\otimes z))=(x\otimes y)\otimes z\in A_{(X\otimes Y)\otimes Z}
+\]
+for all such elements. The desired inclusion follows by linearity.
+
+\end{proof}
+
+
+\begin{theorem} $(\Af,\otimes,I)$ is a *-autonomous category, with duality $(-)^*$, such
+that $I^*=I$.
+
+\end{theorem}
+
+
+\begin{proof} By Lemma \ref{lemma:monoidal}, we have that $(\Af,\otimes I)$ is a symmetric
+monoidal category. We have also seen that the duality $(-)^*$ is a full and faithful
+contravariant functor. We only need to check the natural isomorphisms 
+\[
+\Af(X\otimes Y,Z^*)\simeq \Af(X,(Y\otimes Z)^*).
+\]
+Since $\FV$ is compact, we have the natural isomorphisms
+\[
+\FV(V_X\otimes V_Y,V^*_Z)\simeq \FV(V_X,V_Y^*\otimes V_Z^*),
+\]
+determined by the equalities
+\[
+\<f(x\otimes y),z\>=\<h(x),y\otimes z\>,\qquad x\in V_X,\ y\in V_Y,\ z\in V_Z,
+\]
+for $f\in \FV(V_X\otimes V_Y,V_Z^*)$ and $h\in \FV(V_Z,V_Y^*\otimes V_Z^*)$. Since
+$A_{X\otimes Y}$ is an affine span of $A_X\otimes A_Y$, we see that
+$f$ is in $\Af(X\otimes Y, Z^*)$ if and only if $f(x\otimes y)\in \tilde A_Z$ for all $x\in A_X$, $y\in
+A_Y$, that is, 
+\[
+1=\<f(x\otimes y),z\>=\<h(x),y\otimes z\>\qquad \forall x\in A_X,\
+\forall y\in A_Y,\ \forall z\in A_Z.
+\]
+But this is equivalent to
+\[
+h(x)\in (A_Y\otimes A_Z)^\sim=\tilde A_{Y\otimes Z},\qquad \forall x\in A_X,
+\]
+which means that $h\in \Af(X, (Y\otimes Z)^*)$.
+
+\end{proof}
+
+
+It is also shown that we can introduce a tensor product $\otimes$
 and duality $(-)^*$ such that $\Af$ with these structures becomes a *-autonomous category.
 We will show that we may use this category to describe classical and quantum higher order
 maps. 
@@ -513,81 +787,6 @@ A_{X\otimes Y}:=\{x\otimes y, x\in A_X, y\in A_Y\}^{\approx}.
 In other words, $A_{X\otimes Y}$ is the smallest affine subspace in $V_X\otimes V_Y$ containing
 $A_X\otimes A_Y$. 
 
-\begin{lemma}\label{lemma:tensor_spaces}
-For any $a_X\in A_X$, $a_Y\in A_Y$, we  have
-\begin{align}
-L_{X\otimes Y}&=\lin(A_X\otimes A_Y)=\Span(\{x\otimes y-a_X\otimes a_Y,\ x\in A_X,\ y\in
-A_Y\})\notag\\
-&= (a_X\otimes L_Y)+ (L_X\otimes a_Y)+ (L_X\otimes L_Y)\label{eq:lxy}\\
-&= S_X\otimes L_Y+L_X\otimes a_Y=a_X\otimes L_Y+L_X\otimes S_Y
-\end{align}
-(here $+$ denotes the direct sum of subspaces). We also have
-\[
-S_{X\otimes Y}=S_X\otimes S_Y.
-\]
-\end{lemma}
-
-\begin{proof} Let $x\in A_X$, $y\in A_Y$, then
-\[
-x\otimes y-a_X\otimes a_Y=a_X\otimes (y-a_Y)+(x-a_X)\otimes a_Y+(x-a_X)\otimes (y-a_Y),
-\]
-so that $L_{X\otimes Y}=\lin(A_X\otimes A_Y)$ is contained in the subspace on the RHS of \eqref{eq:lxy}.
-Let $d$ be the dimension of this subspace, then clearly
-\[
-d_{X\otimes Y}\le d\le d_X+d_Y+d_Xd_Y.
-\]
-On the other hand, any element of $S_X$ has the form $tx$ for some $t\in \mathbb R$ and
-$x\in A_X$, so that it is easily seen that $S_X\otimes S_Y=S_{X\otimes Y}$. 
-Hence 
-\begin{align*}
-d_{X\otimes Y}&=\dim(L_{X\otimes Y})=\dim(S_{X\otimes
-Y})-1=\dim(S_X)\dim(S_Y)-1=(d_X+1)(d_Y+1)-1\\
-&=d_X+d_Y+d_Xd_Y.
-\end{align*}
-This completes the proof.
-
-\end{proof}
-
-
-
-For $X,Y$ in $\Af$, put $X\otimes Y:=(V_X\otimes V_Y,A_{X\otimes Y})$.
-Note that by this definition, $X\otimes \emptyset =\emptyset$ and
-$X\otimes 0=0$ unless $X=\emptyset$, in which case $\emptyset\otimes 0=\emptyset$. 
-Also let $I:=(\mathbb R, \{1\})$. 
-
-
-\begin{lemma}\label{lemma:monoidal}
-$(\Af,\otimes, I)$ is a symmetric
-monoidal category.
-\end{lemma}
-
-\begin{proof} Note that this structure is inherited from the symmetric monoidal structure
-in $\FV$. To show that $\otimes$ is a functor, we have to check that for $X_1\xrightarrow{f} Y_1$ and $X_2\xrightarrow{g} Y_2$ in
-$\Af$, we have $X_1\otimes Y_1\xrightarrow{f\otimes g} X_2\otimes Y_2$ which amounts to
-showing that 
-\[
-(f\otimes g)(A_{X_1\otimes Y_1})\subseteq A_{X_2\otimes Y_2}.
-\]
-Let $x\in A_{X_1}$, $y\in A_{Y_1}$, then $f(x)\otimes g(y)\in A_{X_2}\otimes
-A_{Y_2}\subseteq A_{X_2\otimes Y_2}$. Since  $A_{X_1\otimes Y_1}$ is the affine subspace
-generated by $A(X_1)\otimes A(Y_1)$, the above inclusion follows by linearity of $f\otimes
-g$. 
-
-It only remains to prove that the associators, unitors and symmetries from
-$\FV$ are morphisms in $\Af$. Indeed, let $\alpha_{X,Y,Z}:V_X\otimes (V_Y\otimes V_Z)\to
-(V_X\otimes V_Y)\otimes V_Z$ be the associator in $\FV$. We need to check that
-$\alpha_{X,Y,Z}(A_{X\otimes(Y\otimes Z)})\subseteq A_{(X\otimes Y)\otimes Z}$. It is easily
-checked that $A_{X\otimes(Y\otimes Z)}$ is the affine span of elements of the form
-$x\otimes (y\otimes z)$, $z\in A_X$, $y\in A_Y$ and $z\in A_Z$, and we have
-\[
-\alpha_{X,Y,Z}(x\otimes (y\otimes z))=(x\otimes y)\otimes z\in A_{(X\otimes Y)\otimes Z}
-\]
-for all such elements. The desired inclusion follows by linearity.
-The proof of the other inclusions is similar.
-
-\end{proof}
-
-
 
 \subsubsection{Duality}
 
@@ -599,39 +798,6 @@ It is easily seen  that $(-)^*$ defines a full and faithful functor $\Af^{op}\to
 moreover, $X^{**}=X$ (we will use  the canonical identification of  any $V$ in $\FV$ with its second dual). 
 
 
-\begin{theorem} $(\Af,\otimes,I)$ is a *-autonomous category, with duality $(-)^*$, such
-that $I^*=I$.
-
-\end{theorem}
-
-
-\begin{proof} We only need to check the natural isomorphisms 
-\[
-\Af(X\otimes Y,Z^*)\simeq \Af(X,(Y\otimes Z)^*).
-\]
-Since $\FV$ is compact, we have the natural isomorphisms
-\[
-\FV(V_X\otimes V_Y,V^*_Z)\simeq \FV(V_X,V_Y^*\otimes V_Z^*),
-\]
-determined by the equalities
-\[
-\<f(x\otimes y),z\>=\<h(x),y\otimes z\>,\qquad x\in V_X,\ y\in V_Y,\ z\in V_Z,
-\]
-for $f\in \FV(V_X\otimes V_Y,V_Z^*)$ and $h\in \FV(V_Z,V_Y^*\otimes V_Z^*)$. Since
-$A_{X\otimes Y}$ is an affine span of $A_X\otimes A_Y$, we see that
-$f$ is in $\Af$ if and only if $f(x\otimes y)\in \tilde A_Z$ for all $x\in A_X$, $y\in
-A_Y$, that is, 
-\[
-1=\<f(x\otimes y),z\>=\<h(x),y\otimes z\>\qquad \forall x\in A_X,\
-\forall y\in A_Y,\ \forall z\in A_Z.
-\]
-But this is equivalent to
-\[
-h(x)\in (A_Y\otimes A_Z)^\sim=\tilde A_{Y\otimes Z},\qquad \forall x\in A_X,
-\]
-which means that $h\in \Af$.
-
-\end{proof}
 
 \subsubsection{The dual tensor product}
 
