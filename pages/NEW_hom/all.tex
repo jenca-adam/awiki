@@ -71,7 +71,7 @@
 
 \section{The category of affine subspaces}
 
-\subsection{The category $\FV$}
+\subsection{The category $\FV$} \label{sec:fv}
 
 Let  $\FV$ be the category of finite dimensional real vector spaces with linear maps. 
 We will denote the usual tensor product by $\otimes$, then  $(\FV,\otimes, I=\mathbb R)$
@@ -111,14 +111,15 @@ $\epsilon_V$ is the linear functional on $V\otimes V^*$ defined by
 \]
 It is also easily checked that the snake identities \eqref{eq:snake} hold.
 
-For two objects $V$ and $W$ in $\FV$, let $L(V,W)$ be the space of all linear maps $V\to
-W$. Then $L(V,W)$ is itself an object in $\FV$ and  we have the well-known identification 
-$L(V,W)\simeq V^*\otimes W$. This can be given as follows: for each $f\in L(V,W)$, we have 
+For two objects $V$ and $W$ in $\FV$, we will denote the set of all morphisms (i.e. linear
+maps) $V\to
+W$ $L(V,W)$  by $\FV(V,W)$. Then $\FV(V,W)$ is itself a real linear space and  we have the well-known identification 
+$\FV(V,W)\simeq V^*\otimes W$. This can be given as follows: for each $f\in FV(V,W)$, we have 
 $C_f:=(V^*\otimes f)(\epsilon_V)=\sum_i e_i^*\otimes f(e_i)\in V^*\otimes W$. Conversely,
 since $\{e_i^*\}$ is a basis of $V^*$, 
 any element $w\in V^*\otimes W$ can be uniquely written as $w=\sum_i e_i^*\otimes w_i$ for
 $w_i\in W$, and since $\{e_i\}$ is a basis of $V$, the assignment $f(e_i):=w_i$ determines a
-unique map $f:V\to W$. The relations between $f\in L(V,W)$ and $C_f\in V^*\otimes W$ can
+unique map $f:V\to W$. The relations between $f\in \FV(V,W)$ and $C_f\in V^*\otimes W$ can
 be also written as
 \[
 \<C_f,x\otimes y^*\>=\<\epsilon_V,x\otimes f^*(y^*)\>=\<f^*(y^*),x\>=\<y^*,f(x)\>,\qquad x\in
@@ -127,10 +128,10 @@ V,\ y^*\in W^*,
 here $f^*:W^*\to V^*$ is the adjoint of $f$.
 Note that by compactness, the internal hom in $\FV$ satisfies $[V,W]\simeq V^*\otimes W$,
 so that  in the case of $\FV$, the object $[V,W]$ can be identified with the space of linear
-maps $L(V,W)$. 
+maps $\FV(V,W)$. 
 
 
-\begin{exm} Let $V=\mathbb R^N$. In this case, we fix the canonical basis $\{|i\>,\
+\begin{exm}\label{exm:classical} Let $V=\mathbb R^N$. In this case, we fix the canonical basis $\{|i\>,\
 i=1,\dots,N\}$. We will identify $(\mathbb R^N)^*=\mathbb R^N$, with duality
 $\<x,y\>=\sum_i x_iy_i$, in particular, we identify $I=I^*$. We then have
 $\epsilon_V=\sum_i |i\>\otimes |i\>$ and if $f:\mathbb R^N\to \mathbb R^M$ is given by the
@@ -140,7 +141,7 @@ vectorization of $A$.
 \end{exm}
 
 
-\begin{exm} Let $V=M_n^h$ be the space of $n\times n$ complex hermitian matrices. We again
+\begin{exm}\label{exm:quantum} Let $V=M_n^h$ be the space of $n\times n$ complex hermitian matrices. We again
 identify $(M_n^h)^*=M_n^h$, with duality $\<A,B\>=\Tr A^TB$, where $A^T$ is the usual
 transpose of the matrix $A$. Let us choose the basis in $M_n^h$, given as
 \[
@@ -341,6 +342,464 @@ h(x)\in (A_Y\otimes A_Z)^\sim=\tilde A_{Y\otimes Z},\qquad \forall x\in A_X,
 which means that $h\in \Af(X, (Y\otimes Z)^*)$.
 
 \end{proof}
+A *-autonomous category is compact closed if it satisfies $(X\otimes Y)^*=X^*\otimes
+Y^*$. 
+In general, $X\odot Y=(X^*\otimes Y^*)^*$ defines a dual symmetric monoidal
+structure that is different from $\otimes$. 
+We next show that $\Af$ is not compact.
+
+\begin{prop}\label{prop:noncompact} For objects in $\Af$, we have $(X\otimes
+Y)^*=X^*\otimes Y^*$ exactly in one of the following situations:
+\begin{enumerate}
+\item[(i)] $X\simeq I$ or $Y\simeq I$,
+\item[(ii)] $d_X=d_Y=0$,
+\item[(iii)] $d_{X^*}=d_{Y^*}=0$.
+\end{enumerate}
+
+
+
+\end{prop}
+
+\begin{proof} It is easily seen by definition that $A_{X^*}\otimes A_{Y^*}=\tilde A_X\otimes \tilde
+A_Y\subseteq \tilde A_{X\otimes Y}=A_{(X\otimes Y)^*}$. Hence the equality holds if and
+only if $d_{X^*\otimes Y^*}=d_{(X\otimes Y)^*}$. From Lemma
+\ref{lemma:tensor_spaces}, we see that
+\[
+d_{X^*\otimes Y^*}=d_{X^*}+d_{Y^*}+d_{X^*}d_{Y^*}.
+\]
+On the other hand, we have using \eqref{eq:duality} that $L_{(X\otimes Y)^*}=S_{X\otimes
+Y}^\perp=(S_X\otimes S_Y)^\perp$, so that
+\[
+d_{(X\otimes Y)^*}=D_XD_Y-\dim(S_X)\dim(S_Y)=D_XD_Y-(d_X+1)(d_Y+1).
+\]
+Taking into account that by \eqref{eq:duality} we have $d_{X^*}=D_X-d_{X}-1$, similarly
+for $d_{Y^*}$, we obtain
+
+\[
+d_{(X\otimes Y)^*}-d_{X^*\otimes Y^*}=d_Xd_{Y^*}+d_{X^*}d_Y.
+\]
+This is equal to 0 iff $d_Xd_{Y^*}=d_Yd_{X^*}=0$, which amounts to the conditions in the
+lemma.
+
+\end{proof}
+
+
+
+In a *-autonomous category, the internal hom can be identified as $[X,Y]=(X\otimes
+Y^*)^*$. The underlying vector space is $V_{[X,Y]}=(V_X\otimes V_Y^*)^*=V_X^*\otimes V_Y$
+and we have seen in Section \ref{sec:fv} that we may identify this space with
+$\FV(V_X,V_Y)$, by $f \leftrightarrow C_f$. This property is extended to $\Af$, in the
+following sense.
+
+\begin{prop}\label{prop:ihom_morphisms} For any objects $X,Y$ in $\Af$, the map $f\mapsto C_f$ is a bijection
+of $\Af(X,Y)$ onto $A_{[X,Y]}$. 
+
+\end{prop}
+
+\begin{proof} Let $f\in \FV(V_X,V_Y)$. Since by definition $A_{[X,Y]}=\tilde A_{X\otimes Y^*}$ and $A_{X\otimes
+Y^*}$ is an affine span of $A_X\otimes A_Y^*$, we see that $C_f\in A_{[X,Y]}$ if and only
+if for all $x\in A_X$ and $y^*\in \tilde A_Y$, we have
+\[
+1=\<C_f, x\otimes y^*\>=\<y^*,f(x)\>.
+\]
+This latter statement is clearly equivalent to $f(A_X)\subseteq A_Y$, so that $f\in
+\Af(X,Y)$. 
+\end{proof}
+
+In the next result, we restrict the objects to spaces of hermitian matrices, as in Example
+\ref{exm:quantum} and morphisms to completely positive maps. We show that this restriction
+amounts to taking an intersection of $A_{[X,Y]}$ with the cone of positive semidefinite
+matrices. This, and subsequent examples,  shows that for characterization of sets  of quantum
+objects such as states, channels, combs and transformations between them, it is enough to
+work with the category $\Af$. 
+
+An object $X$ of $\Af$ will be called quantum if $V_X=M_n^h$ for some $n$ and $A_X$ is an
+affine subspace such that both $A_X$ and $\tilde A_X$ have nonempty intersection with the
+interior of the positive cone 
+$int(M_n^+)$ (recall that we identify $(M_n^h)^*=M_n^h$). 
+
+
+
+
+\begin{prop}\label{prop:ihom_quantum} Let $X$, $Y$ be quantum objects in $\Af$. Then 
+\begin{enumerate}
+\item[(i)] $X^*$ and $X\otimes Y$ are quantum objects as well
+\item[(ii)] Let $V_X=M_n^h$, $V_Y=M_m^h$. Then for any $f\in \FV(M_n^h,M_m^h)$, we have
+$C_f\in A_{[X,Y]}\cap M_{mn}^+$ if and only if $f$ is completely positive and
+\[
+f(A_X\cap M_n^+)\subseteq A_Y\cap M_m^+.
+\]
+\end{enumerate}
+
+
+\end{prop}
+
+\begin{proof} The statement (i) is easily seen from  $A_X\otimes A_Y
+\subseteq  A_{X\otimes Y}$ and $\tilde A_X\otimes \tilde A_Y\subseteq \tilde A_{X\otimes
+Y}$, together with the fact that $int(M_n^+)\otimes int(M_m^+)\subseteq int(M_{mn}^+)$. 
+To show (ii), let $C_f\in   A_{[X,Y]}\cap M_{mn}^+$. By the properties of the Choi
+isomorphism $f$ is completely positive and by Proposition \ref{prop:ihom_morphisms},
+$f(A_X)\subseteq A_Y$, this proves one implication. For the converse, note that we only
+need to prove that under the given assumptions, $f(A_X)\subseteq A_Y$, for which it is enough
+to show that $A_X\subseteq \aff(A_X\cap M_n^+)$. To see this, pick some  $a_X\in  A_X\cap
+int(M_n^+)$. Any element in $A_X$ can be written in the form $a_X+v$ for some $v\in L_X$.
+Since $a_X\in int(M_n^+)$, there is some $s>0$ such that $a_\pm:=a_X\pm sv\in M_n^+$, and
+since $\pm sv\in L_X$, we see that $a_\pm \in A_X\cap M_n^+$. It is now easily checked
+that
+\[
+a_X+v=\frac{1+s}{2s}a_++\frac{s-1}{2s}a_-\in \aff(A_X\cap M_n^+). 
+\]
+
+
+\end{proof}
+
+We can define classical obejcts in $\Af$ in a similar way, replacing $M_n^h$ by $\mathbb
+R^N$ and the positive cone by $\mathbb R_+^N$. A similar statement holds in this case,
+with complete positivity replaced by positivity. We can similarly treat
+classical-to-quantum and quantum-to-classical maps as morphisms between these types of
+objects, satisfying appropriate positivity assumptions.
+
+\begin{exm}\label{exm:quantum_maps} States, channels, combs, nonsignaling, etb, dual, process
+matrices
+
+\end{exm}
+
+\begin{exm}\label{exm:qccq} POVMs, instruments, multimeters.
+
+
+\end{exm}
+
+
+\section{First order and higher order objects}
+
+
+We say that an object $X$ in $\Af$ is first order if $d_X=D_X-1$, equivalently, $S_X=V_X$.
+Another equivalent condition is $d_{X^*}=0$, which means that $A_X$ is determined by a
+single element $\tilde a_X\in V_X^*$ as 
+\[
+A_X=\{\tilde a_X\}^\sim,\qquad \tilde A_X=\{\tilde a_X\}.
+\]
+In the case of first order quantum objects we additionally require that $\tilde a_X\in
+int(M_n^+)$, similarly for classical first order objects.
+
+Higher order objects are those obtained from a finite set $\{X_1,\dots,X_n\}$ of first order objects by
+taking tensor products and duals. The above is indeed a set, so that all the objects are
+different (though they may be isomorphic) and the ordering is not essential. We will also
+assume that the tensor unit is not contained in this set. Note that we cannot say that
+such an object is automatically ''of order $n$'', as the following lemma shows. 
+
+\begin{lemma}\label{lemma:1ordertensor} Let $X$, $Y$ be first order, then $X\otimes Y$ is
+first order as well.
+
+\end{lemma}
+
+\begin{proof} We have
+\[
+S_{X\otimes Y}=S_X\otimes S_Y=V_X\otimes V_Y=V_{X\otimes Y}.
+\]
+
+\end{proof}
+
+Note also that first order objects, resp. their duals, are exactly those satisfying
+condition (iii), resp. condition (ii), in Proposition \ref{prop:noncompact}, in
+particular, $(X\otimes Y)^*=X^*\otimes Y^*$ for first order objects $X$ and $Y$.
+
+\begin{exm} (states quantum first order, channels,  supermaps - quantum higher order)
+
+\end{exm}
+
+\begin{exm} replacement $X^*\otimes Y$, quantum
+\end{exm}
+
+\subsection{Description of higher order objects}
+
+
+The full subcategory of higher order objects in $\Af$ will be denoted as $\Afh$. If such
+an object  $Y$ is constructed from a set of distinct first order object $X_1,\dots, X_n$,
+ we will write $Y\sim\{X_1,\dots,X_n\}$.  By compactness of $\FV$, we may assume
+ (relabeling the objects if necessary) that the vector space of $Y$ has the form
+\[
+V_Y=V_{1}\otimes \dots\otimes V_{n},
+\]
+where  $V_i$ is either $V_{X_i}$ or $V_{X_i}^*$, according to whether $X_i$ was subjected
+to taking duals an even or odd number of times. The indices such that the first
+case is true will be called the outputs and the subset of outputs in $[n]$ will be denoted
+by $O$, or $O_Y$, when we need to specify the object. The set $I=I_Y:=[n]\setminus O_Y$ is
+the set of inputs. The reason for this terminology will become clear later.
+
+For each $i\in [n]$ we fix some (any) element $a_{X_i}\in A_{X_i}$ and we denote 
+\[
+a_i:=\begin{dcases} a_{X_i} & i\in O\\
+\tilde a_{X_i} & i\in I
+\end{dcases}, \qquad \tilde a_i:=\begin{dcases} \tilde a_{X_i} & i\in O\\
+ a_{X_i} & i\in I
+\end{dcases}
+\]
+We also  introduce the following notations:
+\begin{equation}\label{eq:subspaces}
+\quad L_{i,0}:=\mathbb R a_i ,\quad L_{i,1}= \{\tilde a_i\}^\perp,\qquad \tilde
+L_{i,0}=\mathbb R \tilde a_i,\quad \tilde L_{i,1}=\{a_i\}^\perp.
+\end{equation}
+Since we have $\<a_i,\tilde a_i\>=1$ for all $i$, we have the direct sum decompositions
+\begin{equation}\label{eq:directsum}
+V_i=L_{i,0}+ L_{i,1},\qquad V^*_i=\tilde L_{i,0}+ \tilde L_{i,1}.
+\end{equation}
+Note also that 
+\begin{equation}\label{eq:complement}
+L_{i,u}^\perp=\tilde L_{i,1-u},\qquad u\in \{0,1\},\ i\in [n].
+\end{equation}
+ We will also denote for $s\in \{0,1\}^n$,
+\[
+L_s:=L_{1,s_{1}}\otimes\dots\otimes  L_{n,s_{n}},\qquad \tilde L_s:=\tilde
+L_{1,s_{1}}\otimes\dots\otimes  \tilde L_{n,s_{n}}.
+\]
+Notice that the subspaces  $L_s$, $s\in\{0,1\}^n$ form an independent decomposition of the space
+$V_Y$, so that they generate a distributive sublattice in the latice of subspaces of
+$V_Y$. Similarly, $\tilde L_s$, $s\in \{0,1\}^n$ form an independent decomposition of
+$V_Y^*$. 
+
+\begin{lemma}\label{lemma:Lperp}   For any $s\in \{0,1\}^n$, we have 
+\[
+L_s^\perp=
+\bigoplus_{\substack{t\in\{0,1\}^n\\ t\ne s}} \tilde L_t,\qquad \tilde L_s^\perp=
+\bigoplus_{\substack{t\in\{0,1\}^n\\ t\ne s}} L_t.
+\]
+
+
+\end{lemma}
+
+\begin{proof} Using
+\eqref{eq:directsum} and \eqref{eq:complement}, we get
+\begin{align*}
+\left(L_{1,s_{1}}\otimes \dots\otimes L_{n,s_{n}}\right)^\perp&= \bigvee_j\left(
+V_{1}^*\otimes
+\dots \otimes V_{j-1}^*\otimes \tilde L_{j,1-s_{j}}\otimes V_{j+1}^*\otimes\dots \otimes
+V_{n}^*\right)\\
+&= \bigvee_j \left( \bigoplus_{\substack{t\in \{0,1\}^n\\ t_{j}\ne s_{j}}} \tilde
+L_{1,t_{1}}\otimes\dots \otimes \tilde
+L_{n,t_{n}}\right)\\
+&= \bigoplus_{\substack{t\in \{0,1\}^n\\ t\ne s}} \left( \tilde L_{1,t_{1}}\otimes\dots \otimes \tilde
+L_{n,t_{n}}\right).
+\end{align*}
+The proof of the other equality is the same.
+
+\end{proof}
+
+
+We next describe the affine subspace $A_Y$. To do this, we will fix an element 
+$\tilde a_Y\in \tilde A_Y$ and describe the subspace $S_Y$, so that we may determine $A_Y$ as
+\[
+A_Y=S_Y\cap\{\tilde a_Y\}^\sim.
+\]
+
+
+\begin{lemma}\label{lemma:La} We have
+\[
+a_Y:=a_{1}\otimes \dots \otimes a_{n}\in A_Y,\quad \tilde a_Y:=\tilde a_{1}\otimes
+\dots \otimes \tilde a_{n}\in \tilde A_Y.
+\]
+
+\end{lemma}
+
+\begin{proof} We will proceed by induction on $n$.  The statement is immediate for $n=1$.
+Assume next that it holds true for any $m<n$. By the construction of higher order maps, 
+there is some $0<m<n$ such that 
+the object $Y$ is either a tensor product
+$Y=Y_1\otimes Y_2$, with $Y_1\sim\{X_{1},\dots,X_{m}\}$ and
+$Y_2\sim\{X_{m+1},\dots,X_{n}\}$, or
+the dual of such a product. In the first case, we have by the induction assumption
+\[
+a_{Y_1}=a_{1}\otimes\dots\otimes
+a_{m}\in A_{Y_1},  \qquad \tilde a_{Y_1}=\tilde a_{1}\otimes\dots\otimes
+\tilde a_{m}\in \tilde A_{Y_1}
+\]
+and 
+\[
+a_{Y_2}=a_{m+1}\otimes\dots\otimes
+a_{n}\in A_{Y_2},  \qquad \tilde a_{Y_2}=\tilde a_{m+1}\otimes\dots\otimes
+\tilde a_{n}\in \tilde A_{Y_2}.
+\]
+We then have
+\[
+a_Y=a_{Y_1}\otimes a_{Y_2}\in A_{Y_1}\otimes A_{Y_2}\subseteq A_Y,\qquad 
+\tilde a_Y=\tilde a_{Y_1}\otimes \tilde a_{Y_2}\in \tilde A_{Y_1}\otimes \tilde
+A_{Y_2}\subseteq \tilde A_Y.
+\]
+In the second case, we obtain  the statement for the dual object $Y^*$. Note that by taking
+the dual, the sets of inputs and outputs are exchanged, which entails  the exchange of
+$a_i$ and $\tilde a_i$ for each $i$. But then we have
+\[
+\tilde a_Y=a_{Y^*}\in A_{Y^*}=\tilde A_Y,\qquad a_Y=\tilde a_{Y^*}\in \tilde A_{Y^*}=A_Y.
+\]
+
+\end{proof}
+
+
+
+\begin{prop}\label{prop:boolean}
+There is a function $f:\{0,1\}^n\to \{0,1\}$ such that 
+\[
+S_Y=\bigoplus_{s\in \{0,1\}^n} f(s) L_s.
+\]
+
+
+\end{prop}
+
+\begin{proof} Similarly as before, we will proceed by induction on $n$. For $n=1$, the assertion is easily seen
+to be true, since in this case, $Y$ is itself first order and
+\[
+S_Y=V_Y=L_{1,0}\oplus L_{1,1}=1(0)L_{1,0}\oplus 1(1)L_{1,1},
+\]
+here $1:\{0,1\}\to \{0,1\}$ is the constant 1. Assume now that the assertion is true for
+all $m<n$. By construction, $Y$ is either the tensor product $Y=Y_1\otimes Y_2$, with
+\[
+Y_1\sim \{X_{1},\dots, X_{m}\},\qquad Y_2\sim\{X_{m+1},\dots, X_{n}\},
+\]
+ or $Y$ is the dual of such a product. Let us assume the first case.  By the induction 
+assumption, there are functions $f_1:\{0,1\}^{m}\to \{0,1\}$ and $f_2:\{0,1\}^{n-m}\to
+\{0,1\}$ such that
+\[
+S_Y=S_{Y_1}\otimes S_{Y_2}=\bigoplus_{\substack{s\in\{0,1\}^{m}\\ t\in
+\{0,1\}^{n-m}}}
+f_1(s)f_2(t)L_{1,s_{1}}\otimes\dots \otimes L_{m,s_{m}}\otimes
+L_{m+1,t_{1}}\otimes\dots\otimes L_{n,t_{n-m}}
+\]
+Since $\{0,1\}^n\simeq \{0,1\}^m\times \{0,1\}^{n-m}$, we get the assertion, with
+$f(s,t)=f_1(s)f_2(t)$.
+
+To finish the proof, it is now enough to observe that if the assertion holds for $Y$ then
+it also  holds for $Y^*$. So assume that $Y$ has the required form, that is
+\[
+S_Y=\bigoplus_{s\in\{0,1\}^n}f(s)L_s
+\]
+for some function $f:\{0,1\}^n\to \{0,1\}$. 
+Let $a_Y$ and $\tilde a_Y$ be as in  Lemma \ref{lemma:La}. 
+We have, using Lemma \ref{lemma:Lperp} and the definition of the subspaces
+\[
+\{\tilde a_Y\}^\perp=\tilde L_{0\dots 0}^\perp=\bigoplus_{t\ne 0\dots 0} L_t
+\]
+and hence
+\[
+L_Y=S_Y\cap\{\tilde a_Y\}^\perp=\bigoplus_{\substack{s\in \{0,1\}^n\\ s\ne 0\dots 0}} f(s) L_s.
+\]
+We then have using Lemma \ref{lemma:Lperp} and the fact that $\tilde L_t$, $t\in
+\{0,1\}^n$ form an independent decomposition of $V_Y^*$,
+\begin{align*}
+S_{Y^*}&=L_Y^\perp=\left(\bigoplus_{\substack{s\in \{0,1\}^n\\ s\ne 0}}
+f(s)L_s\right)^\perp=\bigwedge_{\substack{s\in\{0,1\}^n\\ s\ne 0, f(s)=1}}L_s^\perp=
+\bigwedge_{\substack{s\in\{0,1\}^n\\ s\ne 0,
+f(s)=1}}\left(\bigoplus_{\substack{t\in\{0,1\}^n\\t\ne s}} \tilde L_t\right)\\
+&=\bigoplus_{t\in\{0,1\}^n} \left(\bigwedge_{\substack{s\in \{0,1\}^n\\ s\ne 0, f(s)=1}}
+(1-\chi_s(t))\tilde L_t\right)=\bigoplus_{t\in \{0,1\}^n} f^*(t) \tilde L_t.
+\end{align*}
+Here $\chi_s:\{0,1\}^n\to \{0,1\}$ is the characteristic function of $s$ and
+$f^*:\{0,1\}^n\to \{0,1\}$ is given as
+\[
+f^*(t):=\bigwedge_{\substack{s\in \{0,1\}^n\\ s\ne 0, f(s)=1}}
+(1-\chi_s(t))=\begin{dcases} 1 & \text{if } t=0\\ 1-f(t) & \text{if } t\ne 0.
+\end{dcases}
+\]
+Note also that the change $L_s$ to $\tilde L_s$ corresponds precisely to swapping the sets
+of inputs and outputs, which is what happens after taking the dual. This finishes the
+proof.
+
+\end{proof}
+
+
+The above theorem shows that any element $Y\sim\{X_1,\dots,X_n\}$ is (up to a possible permutation
+of the involved first order objects)
+determined by a unique boolean function $f=f_Y:\{0,1\}^n\to \{0,1\}$. Uniqueness follows from
+the fact that $L_s, s\in \{0,1\}^n$ form an independent decomposition of $V_Y$. Functions
+obtained in this way will be called type functions and studied in more detail in
+Section \ref{sec:type}. 
+It is rather obvious that not all boolean functions are type functions, for
+example, for $Y\sim \{X\}$ we only have $Y=X$ and $Y=X^*$, which corresponds to constant
+1 and the negation, respectively. 
+
+In general, one can see from the above proof that we
+necessarily have 
+\[
+f\in \Fe_n=\{g:\{0,1\}^n\to \{0,1\},\ g(0)=1\}
+\]
+for any type function $f$. Note that the set $\Fe_n$ is a boolean algebra, with smallest
+element $1^*$ and largest element $1$, see Section
+\ref{sec:}. Pick any element $f\in \Fe_n$ and any permutation $\pi\in S_n$ and let
+$\sigma_\pi: X_1\otimes\dots\otimes  X_n\to X_{\sigma^{-1}(1)}\otimes \dots X_{\sigma^{-1}(n)}$ be the
+corresponding symmetry. Keeping the notations in \eqref{eq:subspaces},  let 
+\[
+S_{\pi,f}:=\bigoplus_{s\in \{0,1\}^n} f(s)\sigma_\pi(L_s),\qquad
+A_{\pi,f}:=S_{\pi,f}\cap\{\sigma_\pi(\tilde a_Y)\}^\sim,\qquad
+V_\pi:=\sigma_\pi(\otimes_{j}V_{j}).
+\]
+
+\begin{prop}\label{prop:xpif} Let $f,f_1,f_2\in \Fe_n$, $\pi,\pi_1,\pi_2
+\in S_n$. Then 
+\begin{enumerate}
+\item[(i)]  $X_{\pi,f}:=(V_\pi, A_{\pi,f})$ is an
+object in $\Af$.
+\item[(ii)] For the smallest and the largest element, we have  
+\[
+X_{\pi,1^*}=(V_\pi, \{\sigma_\pi(a_Y)\}),\qquad X_{\pi,1}=(V_\pi,\{\sigma_\pi(\tilde
+a_Y)\}^\sim).
+\]
+\item[(iii)] If $f_1\le f_2$, then 
+$\sigma_{\pi_2}\circ\sigma_{\pi_1}^{-1}$ is a morphism $X_{\pi_1,f_1}\to X_{\pi_2,f_2}$ in
+$\Af$.
+\item[(iv)] The diagram
+\[
+\xymatrixcolsep{5pc}\xymatrixrowsep{3pc}\xymatrix{
+X_{\pi,f_1\wedge
+f_2}\ar[r]^{\sigma_{\pi_1}\circ\sigma^{-1}_\pi}
+\ar[d]_{\sigma_{\pi_2}\circ\sigma^{-1}_\pi} & X_{\pi_1,f_1}\ar[d]^{\sigma_\pi^{-1}} \\
+X_{\pi_2,f_2} \ar[r]_{\sigma_\pi^{-1}}& X_{id,1} 
+}
+\]
+is a pullback.
+\item[(v)] The diagram
+\[
+\xymatrixcolsep{5pc}\xymatrixrowsep{3pc}\xymatrix{
+X_{id,1^*}\ar[r]^{\sigma_{\pi_1}}
+\ar[d]_{\sigma_{\pi_2}} & X_{\pi_1,f_1}\ar[d]^{\sigma_\pi\circ\sigma_{\pi_1}^{-1}} \\
+X_{\pi_2,f_2} \ar[r]_{\sigma_\pi\circ\sigma_{\pi_1}^{-1}}& X_{\pi, f_1\vee f_2} 
+}
+\]
+is a pushout.
+\end{enumerate}
+
+
+\end{prop}
+
+
+Then $A_{\pi,f}$ is a proper affinne subspace in $V_\pi:=\sigma_\pi(\otimes_{j}V_{j})$, this folows from the
+fact that $f(0)=1$, so that $S$ contains the subspace $\mathbb R a$. 
+Then $Y_f:=(\otimes_{j}V_{i_j},A_f)$ defines an object in $\Af$ such that $a\in A_f$ and
+$\tilde a\in \tilde A_f$. Such objects might not belong to $\Afh$ in
+general.
+With the pointwise ordering, $\Fe_n$ is a distributive lattice, with the smallest element
+$\chi_0$ and largest element $1$.  It is easy to see that for  $f,g\in \Fe_n$ and some
+corresponding objects $Y_f$, $Y_g$, we have $f\le g$  if
+and only if there is some permutation $\sigma\in S_n$ such that 
+$Y_f\xrightarrow{\sigma} Y_g$. In particular, since $\chi_0\le f\le 1$ for all $f\in
+\Fe_n$, there is some permutation $\sigma$ such that 
+\[
+Y_{\min}\xrightarrow{\sigma} Y_f\xrightarrow{\sigma^{-1}} Y_{\max},
+\]
+where 
+\[
+Y_{\min}:=(V_1\otimes\dots\otimes V_n, \{a_1\otimes\dots\otimes a_n\}),\qquad
+Y_{\max}:=(V_1\otimes \dots\otimes V_n,\{\tilde a_1\otimes\dots\otimes \tilde a_n\}^\sim).
+\]
+If $Y_g$ is an object such that 
+\[
+Y_{\min}\xrightarrow{\rho} Y_g\xrightarrow{\rho^{-1}} Y_{\max},
+\]
+for a permutation $\rho$, then we may define an object corresponding to $f\wedge g$ as the
+pullback of the two arrows $f\xrightarrow{\sigma^{-1}} Y_{\max}$ and
+$g\xrightarrow{\rho^{-1}} Y_{\max}$, similarly, $Y_{f\vee g}$ can be found as a pushout.
+
+
+-----
+
 
 
 It is also shown that we can introduce a tensor product $\otimes$
