@@ -483,7 +483,7 @@ In the case of first order quantum objects we additionally require that $\tilde 
 int(M_n^+)$, similarly for classical first order objects.
 
 Higher order objects are those obtained from a finite set $\{X_1,\dots,X_n\}$ of first order objects by
-taking tensor products and duals. The above is indeed a set, so that all the objects are
+taking tensor products and duals, and applying any permuations of the spaces. The above is indeed a set, so that all the objects are
 different (though they may be isomorphic) and the ordering is not essential. We will also
 assume that the tensor unit is not contained in this set. Note that we cannot say that
 such an object is automatically ''of order $n$'', as the following lemma shows. 
@@ -637,7 +637,7 @@ $a_i$ and $\tilde a_i$ for each $i$. But then we have
 
 
 \begin{prop}\label{prop:boolean}
-There is a function $f:\{0,1\}^n\to \{0,1\}$ such that 
+There is a unique function $f:\{0,1\}^n\to \{0,1\}$ such that 
 \[
 S_Y=\bigoplus_{s\in \{0,1\}^n} f(s) L_s.
 \]
@@ -645,15 +645,17 @@ S_Y=\bigoplus_{s\in \{0,1\}^n} f(s) L_s.
 
 \end{prop}
 
-\begin{proof} Similarly as before, we will proceed by induction on $n$. For $n=1$, the assertion is easily seen
+\begin{proof} Since the subspaces  $L_s, s\in \{0,1\}^n$ form an independent decomposition
+of $V_Y$, if such a function $f$ exists it must be unique. To show existence of this
+function, we will again proceed by induction on $n$. For $n=1$, the assertion is easily seen
 to be true, since in this case, $Y$ is itself first order and
 \[
 S_Y=V_Y=L_{1,0}\oplus L_{1,1}=1(0)L_{1,0}\oplus 1(1)L_{1,1},
 \]
 here $1:\{0,1\}\to \{0,1\}$ is the constant 1. Assume now that the assertion is true for
-all $m<n$. By construction, $Y$ is either the tensor product $Y=Y_1\otimes Y_2$, with
+all $m<n$. By construction,  up to a permutation of the spaces, $Y$ is either the tensor product $Y=Y_1\otimes Y_2$, with
 \[
-Y_1\sim \{X_{1},\dots, X_{m}\},\qquad Y_2\sim\{X_{m+1},\dots, X_{n}\},
+Y_1\sim \{X_{i_1},\dots, X_{i_m}\},\qquad Y_2\sim\{X_{i_{m+1}},\dots, X_{i_n}\},
 \]
  or $Y$ is the dual of such a product. Let us assume the first case.  By the induction 
 assumption, there are functions $f_1:\{0,1\}^{m}\to \{0,1\}$ and $f_2:\{0,1\}^{n-m}\to
@@ -661,11 +663,12 @@ assumption, there are functions $f_1:\{0,1\}^{m}\to \{0,1\}$ and $f_2:\{0,1\}^{n
 \[
 S_Y=S_{Y_1}\otimes S_{Y_2}=\bigoplus_{\substack{s\in\{0,1\}^{m}\\ t\in
 \{0,1\}^{n-m}}}
-f_1(s)f_2(t)L_{1,s_{1}}\otimes\dots \otimes L_{m,s_{m}}\otimes
-L_{m+1,t_{1}}\otimes\dots\otimes L_{n,t_{n-m}}
+f_1(s)f_2(t)L_{i_1,s_{1}}\otimes\dots \otimes L_{i_m,s_{m}}\otimes
+L_{i_{m+1},t_{1}}\otimes\dots\otimes L_{i_n,t_{n-m}}
 \]
 Since $\{0,1\}^n\simeq \{0,1\}^m\times \{0,1\}^{n-m}$, we get the assertion, with
-$f(s,t)=f_1(s)f_2(t)$.
+$f=f'\circ \pi$, where $\pi$ is an approriate permutation  and 
+$f'(s,t)=f_1(s)f_2(t)$.
 
 To finish the proof, it is now enough to observe that if the assertion holds for $Y$ then
 it also  holds for $Y^*$. So assume that $Y$ has the required form, that is
@@ -708,8 +711,7 @@ proof.
 
 The above theorem shows that any element $Y\sim\{X_1,\dots,X_n\}$ is (up to a possible permutation
 of the involved first order objects)
-determined by a unique boolean function $f=f_Y:\{0,1\}^n\to \{0,1\}$. Uniqueness follows from
-the fact that $L_s, s\in \{0,1\}^n$ form an independent decomposition of $V_Y$. Functions
+determined by a unique boolean function $f=f_Y:\{0,1\}^n\to \{0,1\}$. . Functions
 obtained in this way will be called type functions and studied in more detail in
 Section \ref{sec:type}. 
 It is rather obvious that not all boolean functions are type functions, for
