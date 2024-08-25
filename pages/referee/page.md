@@ -2,8 +2,8 @@ title: To referee
 ---
 
     
-* Due [15.8.2024](cmmtt) (PhD Thesis Ragini)    
 * Due [5.9.2024](REF_gilyen2024) (grant proposal)    
+* Due [20.9.2024](REF_lachman2024)     
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
 
@@ -27,7 +27,7 @@ title: To referee
 1. <del> Due [11.7.2024](REF_luczak2024)</del> Done.   
 1. <del> Due [11.7.2024](REF_rohilla2024)   </del>  Done.    
 1. <del>  Due [20.7.2024](REF_das2024) </del>  Done.    
-
+1. <del> Due [15.8.2024](cmmtt) (PhD Thesis Ragini)</del> Done. 
 
 ### Reviews finished 2023
 

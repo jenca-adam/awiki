@@ -14,7 +14,8 @@ title: Committees - defences, exams, etc.
     - supervisor: Mario Ziman
     - affiliation: FU SAV    
     - thesis: Labeling outcomes of Quantum Devices and Higher-order distinguishability     
-    - report deadline: 15. 8 .2024 
+    - report deadline: 15. 8. 2024     
+    - defense: 26. 8. 2024, 14:00, QUTE Bratislava
 
 
     [thesis](cmmtt/ragini_thesis.pdf)    
@@ -30,7 +31,8 @@ title: Committees - defences, exams, etc.
     - role: referee    
     - supervisor: Milán Mosonyi    
     - affiliation: BUTE    
-    - deadline: 31.3. 2024
+    - deadline: 31.3. 2024     
+    - defense: 22. 7., 15:00, BUTE Budapest    
 
 
 
