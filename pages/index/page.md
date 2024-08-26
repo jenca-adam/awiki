@@ -6,9 +6,11 @@ title: My work
 
 ### New
 
+* [BS relative entropy](NEW_BSentropy)  with Andreas and Angela
+
 * [Quantum hypothesis testing](AZ_qht) in von Neumann algebras
 
-* [Renyi divergence](NEW_qre) in von Neumann algebras     
+* [Renyi divergence](NEW_qre) in von Neumann algebras (already finished paper)         
 
 * [Higher order maps](NEW_hom)    
 
