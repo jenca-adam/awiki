@@ -100,6 +100,7 @@
 \DeclareMathOperator{\alphaQ}{\widetilde Q_\alpha}
 \DeclareMathOperator{\alphaI}{\widetilde I_\alpha}
 \DeclareMathOperator{\supp}{supp}
+
 \newcommand{\twoline}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
 
 
@@ -243,26 +244,222 @@ The starting point for the comparison between BS recovery states and quantum Mar
 \begin{equation}
     \rho_{ABC} = \underset{n }{\bigoplus} p_n \rho_{AB_n^L} \otimes  \rho_{B_n^R C} \, .
 \end{equation}
-Something similar, but more complicated, can be proven for BS recovery states. The following is the main result extracted from Anna Jen{\v c}ová's notes:
+
+{\color{magenta} 
+%Something similar, but more complicated, can be proven for BS recovery states. The following is the main result extracted from Anna Jen{\v c}ová's notes:
+
+For finding the structure of BS recovery states, it will be useful to use the following equivalent  condition for
+saturation of the DPI, proved in  \cite[Thm. 3.34(h)]{HiaiMosonyi-f-divergences-2017}: For a positive
+trace preserving map $\mathcal {T}$, the equality
+\[
+\hat D(\mathcal {T}(\rho)\|\mathcal {T}(\sigma))=\hat D(\rho\|\sigma)
+\]
+holds if and only if $R:=\sigma^{-1/2}\rho\sigma^{-1/2}$ satisfies
+$(\mathcal{R}_{\mathcal {T}}^\sigma)^*(R^2)=(\mathcal {R}_{\mathcal {T}}^\sigma)^*(R)^2$, where
+\[
+(\mathcal{R}_{\mathcal {T}}^\sigma)^*(X)=\mathcal {T}(\sigma)^{-1/2}\mathcal
+{T}(\sigma^{1/2}X\sigma^{1/2})\mathcal {T}(\sigma)^{-1/2},\qquad
+X\in B(\mathcal {H})
+\]
+is the adjoint of the Petz recovery map $\mathcal {R}_{\mathcal T}^\sigma$.  Note that
+$(\mathcal {R}_{\mathcal T}^\sigma)^*$ is  positive
+and unital and the equality condition means that $R$ is in its multiplicative domain. If
+$\mathcal {T}$ is completely positive, then $(\mathcal {R}_{\mathcal T}^\sigma)^*$ is a
+completely positive unital map and we have a convenient description of its multiplicative
+domain. The proof of the following fact can be found e.g. in \cite[Proposition 2]{carbone2020}.
+
+\begin{lemma}\label{lemma:multiplicative} Let $\Phi:B(\mathcal {H})\to B(\mathcal {K})$ be a completely positive unital map with Kraus
+representation $\Phi(\cdot)=\sum_i K_i^* (\cdot) K_i$. Then the multiplicative domain of
+$\Phi$ has the form
+\[
+\mathcal {M}_\Phi=\{K_iK_j^*,\ i,j\}',
+\]
+(here $C'$ denotes the commutant of a subset $C\subseteq B(\mathcal {H})$).
+\end{lemma}
+
+Assume that the map $\mathcal {T}: B(\mathcal {H})\to B(\mathcal {K})$ has the form
+$\mathcal {T}(\cdot)=\sum_{i=1}^n L_i^*(\cdot)L_i$, for some $L_i:\mathcal {K}\to \mathcal
+{H}$ such that
+$\sum_iL_iL_i^*=I_{\mathcal {H}}$. Then the equality in DPI for the BS relaitve entropy holds if and only if $R$ commutes
+with all elements of the form 
+\[
+\sigma^{1/2}L_i\mathcal {T}(\sigma)^{-1}L_j^*\sigma^{1/2},\qquad i,j=1,\dots,n.
+\]
+We will use this condition in our special case, when $\rho=\rho_{ABC}$, $\sigma=\rho_{AB}\otimes
+\tau_C$ and $\mathcal {T}=\tr_A$.
+
+
+
+
 
 \begin{theorem}\label{theo:StructureBSDPI}
-    Let $\rho_{ABC}$ be a state (such that $\rho_{AB}$ is invertible). The equality
-    \begin{equation}
+    Let $\rho_{ABC}$ be a state such that $\rho_{AB}$ is invertible. The equality
+    \begin{equation}\label{eq:dpieq}
         \widehat{D}(\rho_{ABC}\Vert \rho_{AB}\otimes \tau_C)=\widehat{D}(\rho_{BC}\Vert \rho_B \otimes \tau_C)
     \end{equation}
     holds if, and only if, there are:
     \begin{enumerate}[label=(\roman*)]
         \item Hilbert spaces $\mathcal{H}_{B_n^L}$, $\mathcal{H}_{B_n^R}$ such that $\displaystyle \mathcal{H}_B \simeq \bigoplus_{n=1}^N\left( \mathcal{H}_{B_n^L} \otimes \mathcal{H}_{B_n^R}\right)$,\\
-        \item \label{theo:Condition2} positive (invertible) elements $M_n \in B\left(\mathcal{H}_A \otimes \mathcal{H}_{B_n^L}\right)$ such that $\tr_A M_n=I_{B_n^L}$,\\
-        \item \label{theo:Condition3} positive (invertible) elements $N_n \in B\left( \mathcal{H}_{B_n^R}\otimes \mathcal{H}_C \right)$ such that $\tr_C N_n=I_{B_n^R}$,
-        \item an (invertible) operator $S_B:\bigoplus_{n=1}^N \left( \mathcal{H}_{B_n^L} \otimes \mathcal{H}_{B_n^R}\right) \to \mathcal{H}_B$ such that $\Vert S_B \Vert_2=1$ such that
+        \item \label{theo:Condition2} positive invertible elements $M_n \in B\left(\mathcal{H}_A \otimes \mathcal{H}_{B_n^L}\right)$ such that $\tr_A M_n=I_{B_n^L}$,\\
+        \item \label{theo:Condition3} positive elements $N_n \in B\left( \mathcal{H}_{B_n^R}\otimes \mathcal{H}_C \right)$ such that $\tr_C N_n=I_{B_n^R}$,
+        \item an invertible operator $S_B:\bigoplus_{n=1}^N \left( \mathcal{H}_{B_n^L} \otimes \mathcal{H}_{B_n^R}\right) \to \mathcal{H}_B$ such that $\Vert S_B \Vert_2=1$
+\end{enumerate}
+	such that
         \begin{equation}\label{AnnaStates}
             \rho_{ABC}=(I_A \otimes S_B \otimes I_C)(\oplus_n M_n \otimes N_n)(I_A\otimes S_B^*\otimes I_C)
         \end{equation}
-    \end{enumerate}
 \end{theorem}
 
 
+\begin{proof} Assume that $\rho_{ABC}$ has the form \eqref{AnnaStates}. Let us denote 
+\[
+M:= \oplus_n M_n\otimes I_{B^R_n}, \qquad N:=\oplus_n I_{B^L_n}\otimes N_n,
+\]
+then $M\in B(\mathcal{H}_{AB})^+$ is invertible and
+$N\in B(\mathcal {H}_{BC})^+$. Moreover, these elements satisfy $\tr_A[M]=I_B=\tr_C[N]$ and $M\otimes
+I_C$ commutes with $I_A\otimes N$. We have
+\[
+\rho_{ABC}=(I_A\otimes S_B\otimes I_C)(M\otimes I_C)(I_A\otimes N)(I_A\otimes
+S_B^*\otimes I_C)
+\]
+and  
+\[
+\rho_{AB}=\tr_C \rho_{ABC}= (I_A\otimes S_B)M(I_A\otimes S_B^*),\qquad \rho_B=\tr_A
+\rho_{AB}=S_BS_B^*.
+\]
+Using polar decompositions,  there is some unitary $W\in B(\mathcal {H}_{AB})$ such that 
+\[
+(I_A\otimes S_B)M^{1/2}W^*=\rho_{AB}^{1/2}=WM^{1/2}(I_A\otimes S_B^*).
+\]
+It follows that 
+\[
+R:=(\rho_{AB}^{-1/2}\otimes I_C)\rho_{ABC}(\rho_{AB}^{-1/2}\otimes I_C)=(W\otimes
+I_C)(I_A\otimes N)(W^*\otimes I_C)
+\]
+and 
+\[
+\rho_{AB}=WM^{1/2}(I_A\otimes S_B^*S_B)M^{1/2}W^*.
+\]
+We may clearly replace $\tau_C$ by $I_C$ in the equality \eqref{eq:dpieq}, since this only
+adds a constant to both sides. We get
+\begin{align}
+\widehat D(\rho_{ABC}\|\rho_{AB}\otimes I_C)&=\tr[(\rho_{AB}\otimes I_C)f(R)]\\
+&=\tr [(\rho_{AB}\otimes I_C)f((W\otimes I_C)(I_A\otimes N)(W^*\otimes I_C))]\\
+&=\tr [(M^{1/2}(I_A\otimes S_B^*S_B)M^{1/2}\otimes I_C) f(I_A\otimes N)]\\
+&=\tr [(M(I_A\otimes S_B^*S_B)\otimes I_C)f(I_A\otimes N)]=\tr [(S_B^*S_B\otimes I_C) f(N)],
+\end{align}
+here $f(t)=t\log t$ and we have used the fact that $M\otimes I_C$ commutes with
+$I_A\otimes N$. 
+We also have
+\[
+\rho_{BC}=(S_B\otimes I_C)N(S_B^*\otimes I_C)
+\]
+and with the polar decomposition $S_B=\rho_B^{1/2}U_B$, we get 
+\[
+(\rho_B^{-1/2}\otimes I_C)\rho_{BC}(\rho_B^{-1/2}\otimes I_C)=(U_B\otimes
+I_C)N(U_B^*\otimes I_C).
+\]
+Similarly as before, it follows that
+\begin{align}
+\widehat D(\rho_{BC}\|\rho_B\otimes I_C)=& \tr [(\rho_B\otimes I_C)f((\rho_B^{-1/2}\otimes
+I_C)\rho_{BC}(\rho_B^{-1/2}\otimes I_C))]\\
+=& \tr [(\rho_B\otimes I_C)f((U_B\otimes I_C)N(U_B^*\otimes I_C))]\\
+=&\tr [(S_B^*S_B\otimes I_C)f(N)]=\widehat D(\rho_{ABC}\|\rho_{AB}\otimes I_C).
+\end{align}
+
+
+For the converse, assume that \eqref{eq:dpieq} holds. Put $R:=(\rho_{AB}^{-1/2}\otimes
+I_C)\rho_{ABC}(\rho_{AB}^{-1/2}\otimes I_C)$, so that $R\ge 0$ and $\tr_C[R]=I_{AB}$.
+Moreover,  $R$ must be in the multiplicative domain of the map
+\[
+(\mathcal {R}_{\mathcal {T}}^\sigma)^*(X_{ABC})=(\rho_B^{-1/2}\otimes
+I_C)\tr_A[(\rho_{AB}^{1/2}\otimes I_C)X(\rho_{AB}^{1/2}\otimes I_C)](\rho_B^{-1/2}\otimes
+I_C)=\sum_i L_i^*XL_i,
+\]
+where the Kraus operators have the form
+\[
+L_i=(\rho_{AB}^{1/2}(|i\rangle_A\otimes I_B)\rho_B^{-1/2})\otimes I_C.
+\]
+By Lemma \ref{lemma:multiplicative}, the operator $R$ must commute with all elements of
+the form 
+\[
+\rho_{AB}^{1/2}(|i\rangle\langle j|_A\otimes \rho_B^{-1})\rho_{AB}^{1/2}\otimes I_C,\qquad
+i,j=1,\dots\dim(\mathcal {H}_A).
+\]
+This means that  
+\[
+R\in\Gamma(B(\mathcal {H}_A))' \otimes B(\mathcal{H}_C),
+\]
+where  $\Gamma: B(\mathcal {H}_A)\to
+B(\mathcal {H}_{AB})$ is a completely
+positive map given as 
+\[
+\Gamma(X_A)=V^*(X_A\otimes I_B)V,\qquad X_A\in B(\mathcal {H}_A),
+\]
+with $V:=(I_A\otimes \rho_B^{-1/2})\rho_{AB}^{1/2}$. Since  $\rho_{AB}$ is invertible by
+the assumption,  Arveson's commutant lifting
+theorem \cite[Thm. 1.3.1]{arveson1969subalgebras} says that  for every element $T\in \Gamma(B(\mathcal {H}_A))'$ there is a unique
+$T_1\in B(\mathcal{H}_B)$ such that $(I_A\otimes T_1)V=VT$ and the map $T\mapsto T_1$ is a
+*-isomorphism of $\Gamma(B(\mathcal {H}_A))'$ onto the subalgebra $\mathcal B\subseteq
+B(\mathcal{H}_B)$ given by
+\[
+(I_A\otimes B(\mathcal {H}_B))\cap \{VV^*\}'=I_A\otimes \mathcal{B}.
+\]
+Note that $M:=VV^*=(I_A\otimes \rho_B^{-1/2})\rho_{AB}(I_A\otimes \rho_B^{-1/2})$
+satisfies $\tr_A[M]=I_B$, so that the above *-isomorphism is defined by
+\[
+T\mapsto \tr_A [VTV^*]=\tr_A[(I_A\otimes T_1)VV^*]=T_1\tr_A [M]=T_1.
+\]
+The inverse map $\mathcal {B}\to\Gamma(B(\mathcal {H}_A))' $ is obtained from the polar decomposition  $V=M^{1/2}W$,
+where  $W$ is a unitary. For any $T_1\in \mathcal {B}$, $I_A\otimes T_1$ commutes with $M^{1/2}$ and we have
+\[
+VW^*(I_A\otimes T_1)W=M^{1/2}(I_A\otimes T_1)W=(I_A\otimes T_1)M^{1/2}W=(I_A\otimes T_1)V,
+\]
+so that $T=W^*(I_A\otimes T_1)W$. It follows that $\Gamma(B(\mathcal
+{H}_A))'=W^*(I_A\otimes \mathcal{B})W$ and hence
+\[
+R\in \Gamma(B(\mathcal {H}_A))'\otimes B(\mathcal{H}_C)=(W^*\otimes I_C)(I_A\otimes
+\mathcal{B}\otimes B(\mathcal{H}_C))(W\otimes I_C). 
+\]
+Therefore  there is some positive element $N\in \mathcal{B}\otimes B(\mathcal{H}_C)$ such that 
+\begin{equation}\label{eq:R}
+R=(W^*\otimes I_C)(I_A\otimes N)(W\otimes I_C).
+\end{equation}
+Moreover, since $\tr_C[R]=I_{AB}$, we must have
+$\Tr_C[N]=I_B$. 
+ Note also that 
+\[
+ M\otimes I_C\in (I_A\otimes \mathcal{B})'\otimes I_C=(I_A\otimes \mathcal{B}\otimes
+ B(\mathcal{H}_C))',
+\]
+so that $M\otimes I_C$ commutes with $I_A\otimes N$. To finish the proof, we write
+\[
+\rho_{ABC}=(\rho^{1/2}_{AB}\otimes I_C)R(\rho^{1/2}_{AB}\otimes I_C)
+\]
+and 
+\[
+\rho_{AB}^{1/2}=(I_A\otimes \rho_B^{1/2})V=(I_A\otimes \rho_B^{1/2})M^{1/2}W.
+\]
+Combining this with \eqref{eq:R}, we obtain
+\[
+\rho_{ABC}=(I_A\otimes \rho_B^{1/2}\otimes I_C)(M\otimes I_C)(I_A\otimes N)(I_A\otimes
+\rho_B^{1/2}\otimes I_C).
+\]
+Since $\mathcal {B}\subseteq B(\mathcal{H}_B)$ is a subalgebra, there are Hilbert spaces as in (i) and a
+unitary $U_B:\mathcal {H}_B\to \oplus_n \mathcal {H}_{B^L_n}\otimes \mathcal{H}_{B^R_n}$ such that
+\[
+\mathcal{B}=U^*_B\left(\bigoplus_n I_{B^L_n}\otimes B(\mathcal{H}_{B^R_n})\right) U_B.
+\]
+Using this decomposition, we see that there are elements $M_n$ as in (ii) such that 
+$M=(I_A\otimes U^*_B)(\oplus_n M_n\otimes I_{B^R_n})(I_A\otimes U_B)$ and similarly, there
+are elements $N_n$ as in (iii) such that $N=(U_B^*\otimes I_C)(\oplus_n I_{B^L_n}\otimes
+N_n)(U_B\otimes I_C)$. Now we see that $\rho_{ABC}$ has the required form, with
+$S_B=\rho^{1/2}_BU^*_B$.
+
+
+\end{proof}
+
+}
 \begin{remark} \label{rem:from-decomposition-to-map}
 From the proof of 
 \Cref{theo:StructureBSDPI}
@@ -378,7 +575,15 @@ The proof of the  converse is analogous using the same constructions.
     The set of quantum Markov chains has measure  zero on the  set of  BS recovery states, understanding the volume as the measure.
 \end{theorem}
 \begin{proof}
-      Consider the   map 
+\PCR{First, we separate the set of QMC in two disjoint sets
+\begin{equation}
+    QMC=\mathcal{F}_1\cup \mathcal{F}_2,
+\end{equation}
+where
+\begin{equation}
+    \mathcal{F}_1=\left\{ \rho_{ABC} =\bigoplus_{n=1}^N p_b \rho_{AB_n^L}\otimes \rho_{B_n^R}: \text{  there exists } m \text{ with } d_{B_m^L}\neq 1 \text{ and } d_{B_m^RC}\neq 1\right\}.
+\end{equation}
+and $\mathcal{F}_2=QMC\setminus \mathcal{F}_1$. To prove that $\mathcal{F}_1$ }has measure zero in BSRS, consider the   map 
     \begin{equation}
     \begin{array}{cccc}
         T_{AC}:& \{\rho_{ABC}: \rho_{ABC} \in BSRS\} &\to &  S(\HH_B)\\
@@ -386,38 +591,26 @@ The proof of the  converse is analogous using the same constructions.
     \end{equation}
     given by $T_{AC}=\tr_{AC}$. The partial trace is a linear map when embedding  the manifold of BSRS in  $\mathbb{R}^k$ such that they cannot be embedded in $\mathbb{R}^{k-1}$. Therefore the Jacobian is a constant function which has no critical points, so the measure of QMC in BSRS is zero if the measure of $T_{AC}(QMC)$ is zero in $S(\HH_B)$.  By Proposition \ref{prop:StructureQMC}, $\rho_{ABC}$ is a QMC if there exists a unitary $V_B$  such that $S_B=\left(\oplus_n S_{B_n^L}\otimes S_{B_n^R}\right)V_B$. Hence, for a QMC $\rho_{ABC}$,
     \begin{equation}
-        T_{AC}(\rho_{ABC})=\rho_B=S_B^*S_B=V_B^*\left(\bigoplus_n S_{B_n^L}^*S_{B_n^L}\otimes S_{B_n^R}^*S_{B_n^R}\right)V_B
+        T_{AC}(\rho_{ABC})=\rho_B=S_BS_B^*=V_B\left(\bigoplus_{n=1}^N S_{B_n^L}S_{B_n^L}^*\otimes S_{B_n^R}S_{B_n^R}^*\right)V_B^*
     \end{equation}
     and
     \begin{equation}
-        T_{AC}(QMC)\subseteq \left\{V_B^*\left(\bigoplus_n S_{B_n^L}^*S_{B_n^L}\otimes S_{B_n^R}^*S_{B_n^R}\right)V_B : V_B \text{ is unitary and } \Vert S_B \Vert_2=1 \right\} =:\mathcal{G}.
+        T_{AC}(QMC)\subseteq \left\{V_B\left(\bigoplus_{n=1}^N S_{B_n^L}S_{B_n^L}^*\otimes S_{B_n^R}S_{B_n^R}^*\right)V_B^* : V_B \text{ is unitary and } \Vert S_B \Vert_2=1 \right\} =:\mathcal{G}.
     \end{equation}
-    We will show that $\mathcal{G}$ has measure zero. First notice that 
+   Notice that 
 \begin{equation}
     \mathcal{G}_0:=\{ \rho_B \in \mathcal{G}: 0 \in \sigma(\rho_B)\}
 \end{equation}
 has measure zero. Now let 
 \begin{equation}
-    \mathcal{G}_1=\left\{ \rho_B \in \mathcal{G}\setminus \mathcal{G}_0: \rho_B=V_B^*\left(\bigoplus_{n=1}^N S_{B_n^L}^*S_{B_n^L}\otimes S_{B_n^R}^*S_{B_n^R}\right)V_B \text{ and there exists } m: d_{B_m^L}\neq 1 \text{ and } d_{B_m^R}\neq 1\right\}.
+    \mathcal{G}_1=\left\{ \rho_B \in \mathcal{G}\setminus \mathcal{G}_0: \rho_B=V_B\left(\bigoplus_{n=1}^N S_{B_n^L}S_{B_n^L}^*\otimes S_{B_n^R}S_{B_n^R}^*\right)V_B^* \text{ and there exists } m: d_{B_m^L}\neq 1 \text{ and } d_{B_m^R}\neq 1\right\}.
 \end{equation}
-Take $\rho_B=V_B^*(\oplus_n A_n \otimes B_n)V_B \in \mathcal{G}_1$, $A_n,B_n >0$, and  fix  the sector $1 \leq m \leq N$ where $d_{B_m^L}\neq 1 \text{ and } d_{B_m^R}\neq 1$. Since $A_m$ and $B_m$ are positive, there exist unitaries $U_{m_1}$ and $U_{m_2}$ such that
-\begin{equation}
-    U_{m_1} A_m U_{m_1}^*=\begin{pmatrix}
-        a_1 & \hdots &0\\
-        \vdots& \ddots&\vdots\\
-        0 & \hdots & a_{d_m^L}
-    \end{pmatrix} \quad  U_{m_2} B_m U_{m_2}^*=\begin{pmatrix}
-        b_1 & \hdots &0\\
-        \vdots& \ddots&\vdots\\
-        0 & \hdots & b_{d_m^L}
-    \end{pmatrix},
-\end{equation}
-so $A_m\otimes B_m$ will have eigenvalues of the form $\lambda_{ij}=a_i b_j$, but then
+Take $\rho_B=V_B(\oplus_n A_n \otimes B_n)V_B^* \in \mathcal{G}_1$, $A_n,B_n >0$, and  fix  the sector $1 \leq m \leq N$ where $d_{B_m^L}\neq 1 \text{ and } d_{B_m^R}\neq 1$. Since $A_m$ and $B_m$ are positive, $A_m\otimes B_m$ will have eigenvalues of the form $\lambda_{ij}=a_i b_j>0$, but then
 \begin{equation}
     \frac{b_1}{b_2}=\frac{\lambda_{i1}}{\lambda_{i2}}
 \end{equation}
-for every $i>1$ which are constrains proving that $\dim \mathcal{G}_1 < \dim S(\HH_B)$. 
-\textcolor{red}{It is still open the case  $\mathcal{G}_2=\mathcal{G}\setminus(\mathcal{G}_0\cup \mathcal{G}_1)$, where every sector has left or right with dimension one. For example $n=2$ with $\dim \HH_{B_1^R}=1$,  $\dim \HH_{B_2^L}=1$. }
+for some  $i>1$. These are constrains proving that $\dim \mathcal{G}_1 < \dim S(\HH_B)$. 
+\textcolor{red}{It is still open the case  $\mathcal{F}_2$  for example, states of the form $\rho_{AB}\otimes \rho_C$ have measure zero in BSRS?}
 \end{proof}
 
 \begin{comment}
