@@ -6,6 +6,7 @@ title: My own papers
 
 1. [jencova2024theexponential](jencova2024theexponential) special issue of IG    
 1. [jencova2024recoverability](jencova2024recoverability) recoverability by hypothesis testing, Beth's special issue    
+1. [hiai2024alphaz](hiai2024alphaz) with Fumio Hiai, $\alpha-z$-Renyi divergences in von Neumann algebras: DPI, sufficient channels, monotonicity in parameters
 
 
 ### 2023
@@ -158,7 +159,6 @@ torsion-free duals,  divergences, conference proceedings,  not on arxiv!
 
 ## Preprints
 
-1. [hiai2024alphaz](hiai2024alphaz) $\alpha$-$z$ R\'enyi divergences: DPI, sufficient channels, monotonicity in parameters. Joint with Fumio Hiai, submitted to CMP       
 1. [jencova2015aextreme](jencova2015aextreme) C^\*-extreme (or $\mathcal A$-extreme) points of UCP maps into matrix
 algebras, not on arxiv!  (<span style='color:red'>unpublished draft</span>)    
 1. [jencova2015comparison](jencova2015comparison) a longer version of [jencova2016isit](jencova2016isit)    

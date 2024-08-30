@@ -38,6 +38,7 @@
 \def\Ce{\mathcal C}
 \def\Ae{\mathcal A}
 \def\Ne{\mathcal N}
+\def\Te{\mathcal T}
 \def\Fe{\mathcal F}
 \def \Tr{\mathrm{Tr}\,}
 \def\Se {\mathcal S}
@@ -67,9 +68,7 @@
 
 \maketitle
 
-
-
-\section{The category of affine subspaces}
+\section{Preliminaries}
 
 \subsection{The category $\FV$} \label{sec:fv}
 
@@ -165,6 +164,193 @@ is the Choi matrix of $f$.
 \end{exm}
 
 
+\subsection{Boolean functions}
+
+
+We will work with certain boolean functions, which are defined as  functions from binary
+strings $\{0,1\}^*$ to $\{0,1\}$. We now list some basic notations used below.
+
+For $s\in \{0,1\}$, we denote $\bar s:=1-s$.
+For binary strings of fixed length $n$, that is, elements of
+$\{0,1\}^n$, we will denote by $0_n$ or just $0$ the string $00\dots0$ and 
+\[
+e^i=\delta_{i,1}\dots\delta_{i,n}.
+\]
+For $m,n\in \mathbb N$, the concatenation of 
+strings $s\in \{0,1\}^m$ and $t\in \{0,1\}^n$ will be denoted by $st$, that is,
+\[
+st=s_1\dots s_mt_1\dots t_n\in \{0,1\}^{m+n}.
+\]
+For a string $x\in \{0,1\}^n$ and any set of indices $\{i_1,\dots,i_k\}\subseteq [n]$, we
+will denote by $x^{i_1\dots i_k}$ the string in $\{0,1\}^{n-k}$ obtained from $x$ by removing
+$x_{i_1},\dots, x_{i_k}$. For any permutation $\sigma\in S_n$, we will denote by the same symbol the obvious action
+on $\{0,1\}^n$, that is
+\[
+\sigma(s_1\dots s_n)=s_{\sigma^{-1}(1)}\dots s_{\sigma^{-1}(n)}.
+\]
+
+
+Let us introduce the subset 
+\[
+\Fe_n:=\{f:\{0,1\}^n\to \{0,1\},\ f(0)=1\}.
+\]
+With the poitwise ordering, $\Fe_n$ is  a (finite) distributive lattice, with top element
+ the constant 1 function and the bottom element $p_n:=\chi_{0}$, the characteristic
+ function of the zero string.  We may also
+define complementation  in $\Fe_n$ as
+\[
+f^*:=1-f+p_n.
+\]
+It can be easily checked that with these structures $\Fe_n$ is a boolean algebra.
+
+We now introduce some more operations in $\Fe_n$. For $f\in \Fe_n$ and any permutation $\sigma\in S_n$, we see that $f\circ \sigma\in \Fe_n$.
+For $f\in \Fe_{m}$ and $g\in \Fe_n$, we define
+the function $f\otimes g\in \Fe_{m+n}$ as
+\[
+(f\otimes g)(st)=f(s)g(t). 
+\]
+As it is, this tensor product is not symmetric, but there is a permutation $\sigma\in S_{m+n}$ such that 
+$(g\otimes f)=(f\otimes g)\circ \sigma$ for any $f\in \Fe_m$ and $g\in \Fe_n$.
+
+\begin{lemma}\label{lemma:fproduct} For $f\in \Fe_m$, $g\in \Fe_n$, we have
+\[
+f\otimes g\le (f^*\otimes g^*)^*.
+\]
+Equality holds if and only if $f$ and $g$ are either both the  top or both the bottom elements in
+$\Fe_m$ resp. $\Fe_n$.
+\end{lemma}
+
+\begin{proof} The inequality is easily  checked, since $(f\otimes g)(st)$ can be 1 only if
+$f(s)=g(t)=1$. If both $s$ and $t$ are the zero strings, then $st=0_{m+n}$ and both sides
+are equal to 1. Otherwise, the condition $f(s)=g(t)=1$ implies that $(f^*\otimes
+g^*)(st)=0$, which implies that the right hand side must be 1. If $f$ and $g$ are both
+constant 1, then $(1\otimes 1)^*=1^*=p_{n+m}=1^*\otimes 1^*$, in the case when both $f$
+and $g$ are the minimal elements equality  follows by
+duality. Finally, asume the equality holds and that $f\ne 1$, so that there is some $s$ such that 
+$f(s)=0$. But then $s\ne 0$ and for any $t$,
+\[
+0=(f\otimes g)(st)=(f^*\otimes g^*)^*(st)=1-f^*(s)g^*(t)+p_{m+n}(st)=1-g^*(t),
+\]
+which implies that $g(t)=0$ for all $t\ne0$, that is, $g=p_n$. By the same argument,
+$f=p_m$ if $g\ne 1$, which implies that either $f=1$ and $g=1$, or $f=p_m$ and $g=p_n$.
+
+
+
+\end{proof}
+
+
+
+We now show an important example. 
+
+
+\begin{exm}\label{ex:ps} Let $S\subseteq [n]$ be any subset. We will denote
+\[
+p_S(s):=\prod_{i\in S}\bar s_i.
+\]
+It is clear that $p_S\in \Fe_n$, $p_{\emptyset}=1$, $p_{[n]}=\chi_0=p_n$. The following
+properies are also easy
+to see for $S,T\subseteq [n]$:
+\begin{enumerate}
+\item[(i)] if $S\subseteq T$, then $p_T\le p_S$,
+\item[(ii)]  $p_S\wedge p_T=p_Sp_T=p_{S\cup T}$,
+\item[(iii)]  $p_S\vee p_T=p_S+p_T-p_{S\cup T}$.
+\item[(iv)] let $S\subseteq [m]$ and $T\subseteq [n]$, then 
+\[
+p_S\otimes p_T=p_{S\cup (m+T)}.
+\]
+\end{enumerate}
+
+
+\end{exm}
+
+
+
+
+We will use the above functions to introduce  a convenient  parametrization to $\Fe_n$.  
+For this, we first include $\Fe_n$ into a larger set
+\[
+\Fe_n\subseteq \{f:\{0,1\}^n\to \mathbb R\}=:\mathcal V,
+\]
+which is a $2^n$-dimensional real vector space. It becomes a Hilbert space with respect to
+the inner product
+\[
+\<f,g\>=\sum_{s\in \{0,1\}^n} f(s)g(s). 
+\]
+
+\begin{lemma}\label{lemma:Vbasis} The set $\{p_S,\ S\subseteq [n]\}$ is a basis of
+$\mathcal V$.
+Any $f\in \mathcal V$ can be uniquely written as
+\[
+f=\sum_{S\subseteq [n]} \hat f_Sp_S,
+\]
+where the coefficients $\hat f_S\in \mathbb R$ are obtained as
+\[
+\hat f_S=\sum_{\substack{x\in \{0,1\}^n\\ x_i=1, \forall  i\in S^c}} (-1)^{\sum_{i\in
+S}x_i}f(x).
+\]
+\end{lemma}
+
+
+
+\begin{proof} For $T\subseteq [n]$, let us define the function $p_T^\perp$ as
+\[
+p_T^\perp(x):= (-1)^{\sum_{i\in T}x_i}\prod_{i\in T^c}x_i. 
+\]
+We prove that for $S,T\subseteq [n]$,
+\[
+\<p_S,p^\perp_T\>=\delta_{S,T},
+\]
+which shows that $\{p_S,\ S\subseteq [n]\}$ is a basis and 
+$\{p_T^\perp, \ T\subseteq [n]\}$  is the dual basis. We compute
+\[
+\<p_S,p^\perp_T\>=\sum_x p_S(x)p^\perp_T(x)=\sum_x (-1)^{\sum_{i\in T} x_i}\prod_{i\in S}
+\bar x_i\prod_{j\in T^c}x_j.
+\]
+This expression can be nonzero only if $S\cap T^c=\emptyset$, that is, $S\subseteq T$. In
+this case, the last sum  is equal to
+\[
+\sum_{\substack{x\in \{0,1\}^n\\ x_i=0,\forall i\in S\\x_i=1,\forall i\in T^c}}
+(-1)^{\sum_{j\in T\setminus S}x_j}=\begin{dcases} 0 & \text{if } S\subsetneq T\\
+  1 &\text{if } S=T
+  \end{dcases}
+\]
+It is now clear that the coefficients
+\[
+\hat f_S=\<f,p^\perp_S\>
+\]
+have the given form.
+
+
+\end{proof}
+
+\begin{remark} This can be also obtained using M\"obius inversion formula, see [Stanley,
+Sec. 3.7].
+
+\end{remark}
+
+
+It may be useful to visualise the lattice $\mathcal L_n=\{S\subseteq [n]\}$ as a
+hypercube, and the coefficients of $f$ as labels for its vertices. The fact that the
+function $f$ has values in $\{0,1\}$ means that for a string $x\in \{0,1\}^n$ such that
+$x_j=1$ if and only if $j\in T$, we must have 
+\[
+f(x)=\sum_{\substack{S\subseteq [n]\\ S\cap T=\emptyset}} \hat f_S\in \{0,1\},
+\]
+that is, the sum of labels $\hat f_S$ over any face of the hypercube $\mathcal L_n$ containing the vertex $\emptyset$ must
+be 0 or 1. In particular, $\hat f_\emptyset=f(11\dots 1)\in \{0,1\}$, which restricts the
+values of $\hat f_{\{i\}}\in
+\{0,1,-1\}$, etc. The fact that $f\in \Fe_n$ means that in addition,
+\[
+f(0)=\sum_{S\subseteq [n]}\hat f_S=1.
+\]
+
+
+
+
+
+\section{The category of affine subspaces}
+
+
 \subsection{The category $\Af$}
 
 We now introduce the category $\Af$, whose objects  are of the form $X=(V_X,A_X)$, where
@@ -172,7 +358,7 @@ $V_X$ is an object in $\FV$  and $A_X\subseteq V_X$ a proper affine subspace, wh
 that $0\notin A_X\ne \emptyset$. Morphisms $X\xrightarrow{f} Y$ in $\Af$ are linear maps $f:V_X\to V_Y$  such that
 $f(A_X)\subseteq A_Y$. For any object $X$, we put
 \begin{align*}
-L_X=\lin(A_X):=\{a-a_X, a\in A_X\}, \qquad S_X:=\Span(A_X).
+L_X=\lin(A_X):=\{a_1-a_2,\ a_1,a_2\in A_X\}=\{a-a_X,\ a\in A_X\}, \qquad S_X:=\Span(A_X).
 \end{align*}
 Here $a_X$ is any element in $A_X$ and $L_X$ does not depend on this choice.
 Then $L_X$ and $S_X$ are linear subspaces such that $d_X:=\dim(L_X)=\dim(S_X)-1$. We will
@@ -470,7 +656,7 @@ matrices
 \end{exm}
 
 
-\section{First order and higher order objects}
+\subsection{First order and higher order objects}
 
 
 We say that an object $X$ in $\Af$ is first order if $d_X=D_X-1$, equivalently, $S_X=V_X$.
@@ -514,57 +700,46 @@ particular, $(X\otimes Y)^*=X^*\otimes Y^*$ for first order objects $X$ and $Y$.
 \subsection{Description of higher order objects}
 
 
-The full subcategory of higher order objects in $\Af$ will be denoted as $\Afh$. If such
-an object  $Y$ is constructed from a set of distinct first order object $X_1,\dots, X_n$,
- we will write $Y\sim\{X_1,\dots,X_n\}$.  By compactness of $\FV$, we may assume
- (relabeling the objects if necessary) that the vector space of $Y$ has the form
-\[
-V_Y=V_{1}\otimes \dots\otimes V_{n},
-\]
-where  $V_i$ is either $V_{X_i}$ or $V_{X_i}^*$, according to whether $X_i$ was subjected
-to taking duals an even or odd number of times. The indices such that the first
-case is true will be called the outputs and the subset of outputs in $[n]$ will be denoted
-by $O$, or $O_Y$, when we need to specify the object. The set $I=I_Y:=[n]\setminus O_Y$ is
-the set of inputs. The reason for this terminology will become clear later.
+We start by noticing that there are certain objects in $\Af$ that can be constructed from
+a set of  first order objects and functions in $\Fe_n$. 
 
-For each $i\in [n]$ we fix some (any) element $a_{X_i}\in A_{X_i}$ and we denote 
+
+Let $X_1,\dots,X_n$ be first order objects in $\Af$, so that $X_i=(V_i, \{\tilde
+a_i\}^\sim)$. For each $i\in [n]$ let us pick some $a_i\in \{\tilde a_i\}^\sim$. 
+Let us define
 \[
-a_i:=\begin{dcases} a_{X_i} & i\in O\\
-\tilde a_{X_i} & i\in I
-\end{dcases}, \qquad \tilde a_i:=\begin{dcases} \tilde a_{X_i} & i\in O\\
- a_{X_i} & i\in I
-\end{dcases}
+L_{i,0}:=\mathbb R \{a_i\},\qquad L_{i,1}:= \{\tilde a_i\}^\perp,\qquad i\in [n].
 \]
-We also  introduce the following notations:
-\begin{equation}\label{eq:subspaces}
-\quad L_{i,0}:=\mathbb R a_i ,\quad L_{i,1}= \{\tilde a_i\}^\perp,\qquad \tilde
-L_{i,0}=\mathbb R \tilde a_i,\quad \tilde L_{i,1}=\{a_i\}^\perp.
-\end{equation}
-Since we have $\<a_i,\tilde a_i\>=1$ for all $i$, we have the direct sum decompositions
-\begin{equation}\label{eq:directsum}
-V_i=L_{i,0}+ L_{i,1},\qquad V^*_i=\tilde L_{i,0}+ \tilde L_{i,1}.
-\end{equation}
+Then $L_{i,0}\cap L_{i,1}=\{0\}$ and $V_i=L_{i,0}\oplus L_{i,1}$. Put
+\[
+L_s:=L_{1,s_1}\otimes\dots \otimes L_{n,s_n},\qquad s\in \{0,1\}^n,
+\]
+then $L_s$, $s\in \{0,1\}^n$ is an independent decomposition of $V:=V_1\otimes \dots
+\otimes V_n$. Similarly, put
+\[
+\tilde L_{i,0}:=\mathbb R \{\tilde a_i\},\qquad \tilde L_{i,1}:= \{a_i\}^\perp,\qquad i\in
+[n],
+\]
+then $V^*_i=\tilde L_{i,0}\oplus \tilde L_{i,1}$ and we obtain an independent
+decomposition of $V^*=V_1^*\otimes\dots \otimes  V^*_n$ as 
+\[
+\tilde L_s:=\tilde L_{1,s_1}\otimes\dots \otimes \tilde L_{n,s_n},\qquad s\in
+\{0,1\}^n.
+\]
 Note also that 
 \begin{equation}\label{eq:complement}
-L_{i,u}^\perp=\tilde L_{i,1-u},\qquad u\in \{0,1\},\ i\in [n].
+L_{i,u}^\perp=\tilde L_{i,\bar u},\qquad u\in \{0,1\},\ i\in [n].
 \end{equation}
- We will also denote for $s\in \{0,1\}^n$,
-\[
-L_s:=L_{1,s_{1}}\otimes\dots\otimes  L_{n,s_{n}},\qquad \tilde L_s:=\tilde
-L_{1,s_{1}}\otimes\dots\otimes  \tilde L_{n,s_{n}}.
-\]
-Notice that the subspaces  $L_s$, $s\in\{0,1\}^n$ form an independent decomposition of the space
-$V_Y$, so that they generate a distributive sublattice in the latice of subspaces of
-$V_Y$. Similarly, $\tilde L_s$, $s\in \{0,1\}^n$ form an independent decomposition of
-$V_Y^*$. 
+
 
 \begin{lemma}\label{lemma:Lperp}   For any $s\in \{0,1\}^n$, we have 
 \[
 L_s^\perp=
-\bigoplus_{\substack{t\in\{0,1\}^n\\ t\ne s}} \tilde L_t,\qquad \tilde L_s^\perp=
-\bigoplus_{\substack{t\in\{0,1\}^n\\ t\ne s}} L_t.
+\bigoplus_{t\in\{0,1\}^n} \bar{\chi}_s(t)\tilde L_t,\qquad \tilde L_s^\perp=
+\bigoplus_{t\in\{0,1\}^n} \bar{\chi}_s(t)L_t.
 \]
-
+Here $\chi_s:\{0,1\}^n\to\{0,1\}$ is the characteristic function of $s$,
+$\bar{\chi}_s=1-\chi_s$. 
 
 \end{lemma}
 
@@ -573,7 +748,7 @@ L_s^\perp=
 \begin{align*}
 \left(L_{1,s_{1}}\otimes \dots\otimes L_{n,s_{n}}\right)^\perp&= \bigvee_j\left(
 V_{1}^*\otimes
-\dots \otimes V_{j-1}^*\otimes \tilde L_{j,1-s_{j}}\otimes V_{j+1}^*\otimes\dots \otimes
+\dots \otimes V_{j-1}^*\otimes \tilde L_{j,\bar s_{j}}\otimes V_{j+1}^*\otimes\dots \otimes
 V_{n}^*\right)\\
 &= \bigvee_j \left( \bigoplus_{\substack{t\in \{0,1\}^n\\ t_{j}\ne s_{j}}} \tilde
 L_{1,t_{1}}\otimes\dots \otimes \tilde
@@ -586,127 +761,220 @@ The proof of the other equality is the same.
 \end{proof}
 
 
-We next describe the affine subspace $A_Y$. To do this, we will fix an element 
-$\tilde a_Y\in \tilde A_Y$ and describe the subspace $S_Y$, so that we may determine $A_Y$ as
+
+\begin{lemma}\label{lemma:Xf} Put $a:= a_1\otimes\dots \otimes  a_n$, $\tilde a:= \tilde
+a_1\otimes\dots\otimes  \tilde a_n$.
+For  $f\in \Fe_n$ define 
 \[
-A_Y=S_Y\cap\{\tilde a_Y\}^\sim.
+S_f:=\bigoplus_{s\in \{0,1\}^n} f(s)L_s,\qquad A_f:=S_f\cap \{\tilde a\}^\sim.
 \]
-
-
-\begin{lemma}\label{lemma:La} We have
+Then $A_f$ is a proper affine subspace in $V$ containing $a$. Moreover,
 \[
-a_Y:=a_{1}\otimes \dots \otimes a_{n}\in A_Y,\quad \tilde a_Y:=\tilde a_{1}\otimes
-\dots \otimes \tilde a_{n}\in \tilde A_Y.
+L_{A_f}=\bigoplus_{s\in\{0,1\}^n\setminus\{0\}} f(s)L_s,\qquad S_{A_f}=S_f
+\]
+and the dual affine subspace  $\tilde A_f$ is determined by 
+\[
+S_{\tilde A_f}= \bigoplus_{s\in \{0,1\}^n} f^*(s)\tilde L_s.
 \]
 
 \end{lemma}
 
-\begin{proof} We will proceed by induction on $n$.  The statement is immediate for $n=1$.
-Assume next that it holds true for any $m<n$. By the construction of higher order maps, 
-there is some $0<m<n$ such that 
-the object $Y$ is either a tensor product
-$Y=Y_1\otimes Y_2$, with $Y_1\sim\{X_{1},\dots,X_{m}\}$ and
-$Y_2\sim\{X_{m+1},\dots,X_{n}\}$, or
-the dual of such a product. In the first case, we have by the induction assumption
+\begin{proof} It is clear from definition that $A_f$ is an affine subspace. Since
+$f(0)=1$, the space $S_f$ always contains the subspace $L_0=L_{1,0}\otimes\dots\otimes
+L_{n,0}=\mathbb R\{a\}$ and it is clear that $L_s\subseteq \{\tilde a\}^\perp$ for any
+$s\ne 0$. It follows that $a\in A_f$, so that $A_f\ne \emptyset$, and since $A_f\subseteq
+\{\tilde a\}^\sim$, we see that $0\ne A_f$. It follows that $A_f$ is proper and $\tilde
+a\in \tilde A_f$.  The expressions for $L_{A_f}$ and $S_{A_f}$ are immediate from the definition and
+$L_{A_f}=S_{A_f}\cap\{\tilde a\}^\sim$. To obtain the dual affine subspace, we compute
+using Lemma \ref{lemma:Lperp} and the fact that the subspaces form an independent
+decomposition,
+\begin{align*}
+S_{\tilde A_f}&=L_{A_f}^\perp=\left(\bigoplus_{s\in\{0,1\}^n\setminus\{0\}}
+f(s)L_s\right)^\perp=
+\bigwedge_{\substack{s\in\{0,1\}^n\\ s\ne 0, f(s)=1}}L_s^\perp=
+\bigwedge_{\substack{s\in\{0,1\}^n\\ s\ne 0,
+f(s)=1}}\left(\bigoplus_{t\in\{0,1\}^n} \bar{\chi}_s(t)\tilde L_t\right)\\
+&=\bigoplus_{t\in\{0,1\}^n} \left(\bigwedge_{\substack{s\in \{0,1\}^n\\ s\ne 0, f(s)=1}}
+\bar{\chi}_s(t)\tilde L_t\right)=\bigoplus_{t\in \{0,1\}^n} f^*(t) \tilde L_t.
+\end{align*}
+To see the last equality, note that
 \[
-a_{Y_1}=a_{1}\otimes\dots\otimes
-a_{m}\in A_{Y_1},  \qquad \tilde a_{Y_1}=\tilde a_{1}\otimes\dots\otimes
-\tilde a_{m}\in \tilde A_{Y_1}
+\bigwedge_{\substack{s\in \{0,1\}^n\\ s\ne 0, f(s)=1}}
+\bar{\chi}_s(t)=\begin{dcases} 1 & \text{if } t=0\\ 1-f(t) & \text{if } t\ne 0
+\end{dcases} \ = f^*(t).
 \]
-and 
-\[
-a_{Y_2}=a_{m+1}\otimes\dots\otimes
-a_{n}\in A_{Y_2},  \qquad \tilde a_{Y_2}=\tilde a_{m+1}\otimes\dots\otimes
-\tilde a_{n}\in \tilde A_{Y_2}.
-\]
-We then have
-\[
-a_Y=a_{Y_1}\otimes a_{Y_2}\in A_{Y_1}\otimes A_{Y_2}\subseteq A_Y,\qquad 
-\tilde a_Y=\tilde a_{Y_1}\otimes \tilde a_{Y_2}\in \tilde A_{Y_1}\otimes \tilde
-A_{Y_2}\subseteq \tilde A_Y.
-\]
-In the second case, we obtain  the statement for the dual object $Y^*$. Note that by taking
-the dual, the sets of inputs and outputs are exchanged, which entails  the exchange of
-$a_i$ and $\tilde a_i$ for each $i$. But then we have
-\[
-\tilde a_Y=a_{Y^*}\in A_{Y^*}=\tilde A_Y,\qquad a_Y=\tilde a_{Y^*}\in \tilde A_{Y^*}=A_Y.
-\]
+
 
 \end{proof}
 
+Since $L_s$, $s\in \{0,1\}$ is an independent decomposition, the map $f\mapsto S_f$, and
+hence also $f\mapsto A_f$, is injective. This map  has the following further properties, which are easily checked:
+\begin{enumerate}
+\item[(i)] For the bottom and top elements in $\Fe_n$ we have
+\[
+A_{p_n}=\{a\},\qquad A_{1_n}=\{\tilde a\}^\sim,
+\]
+\item[(ii)] We have $f\le g$ if and only if $A_f\subseteq A_g$,
+\item[(iii)] $A_{f\wedge g}=A_f\cap A_g$,
+\item[(iv)] $A_{f\vee g}= A_f\vee A_g:=\aff(A_f\cup A_g)$.
+\end{enumerate}
+In particular, the map $f\mapsto A_f$ is injective, this also follows from the fact that
+$f\mapsto S_f$ is injective, since $L_s$ form an independent decomposition. Moreover, the set $\{A_f,\ f\in
+\Fe_n\}$ is a distributive lattice, with respect to the lattice operations $\cap$ and
+$\vee$.
 
+Since all the affince subspaces  $A_f\subseteq V$ are proper, there are objects $X_f:=(V,A_f)$ in $\Af$. The
+above relations can be rephrased as follows:
+\begin{enumerate}
+\item[(i)] $X_{1_n}=(V,\{\tilde a\}^\sim)$ is a first order object,
+$X_{p_n}=(V^*,\{a\}^\sim)^\sim$ is a dual first order object.
+\item[(ii)] We have $f\le g$ if and only if $id_V$ is a morphism $X_f\to X_g$ in $\Af$,
+\item[(iii)] Let $f,g\le h$. The following is a pullback diagram:
+\[
+%\xymatrixcolsep{5pc}\xymatrixrowsep{3pc}
+\xymatrix{
+X_{f\wedge g}\ar[r]^{id_V}
+\ar[d]_{id_V} & X_f\ar[d]^{id_V} \\
+X_{g} \ar[r]_{id_V}& X_{h} 
+}
+\]
+
+\item[(iv)] Let $h\le f,g$. The following is a pushout diagram:
+\[
+\xymatrix{
+X_{h}\ar[r]^{id_V}
+\ar[d]_{id_V} & X_f\ar[d]^{id_V} \\
+X_{g} \ar[r]_{id_V}& X_{f\vee g} 
+}
+\]
+
+
+\end{enumerate}
+In particular, it follows that $\{X_f,\ f\in \Fe_n\}$, is a distributive lattice, with
+pullbacks and pushouts as lattice operations.
+
+We next observe that the higher order objects are of the form $X_f$, for some choice of the
+first order objects $X_1,\dots, X_n$ and a function $f$ that belongs to a special subclass of $\Fe_n$.  
+So assume that  $Y$ is a higher order object constructed from a set of distinct first
+order objects $Y_1,\dots, Y_n$, we will write $Y\sim\{Y_1,\dots,Y_n\}$ in this case. By compactness of $\FV$, we may assume
+ (relabeling the objects if necessary) that the vector space of $Y$ has the form
+\[
+V_Y=V:=V_{1}\otimes \dots\otimes V_{n},
+\]
+where  $V_i$ is either $V_{X_i}$ or $V_{X_i}^*$, according to whether $Y_i$ was subjected
+to taking duals an even or odd number of times. The indices such that the first
+case is true will be called the outputs and the subset of outputs in $[n]$ will be denoted
+by $O$, or $O_Y$, when we need to specify the object. The set $I=I_Y:=[n]\setminus O_Y$ is
+the set of inputs. The reason for this terminology will become clear later. Let now
+$X_1,\dots, X_n$ be objects such that $X_i=Y_i=(V_i,\{\tilde a_i:=\tilde a_{Y_i}\}^\sim)$ if $i\in O$ and $X_i=(V_i, \{\tilde
+a_i\}^\sim)$ for $i\in I$, where in this case $\tilde a_i$ is an arbitrary but fixed element in
+$A_{Y_i}$. (Notice that since $i\in I$, $V_i=V_i^*$.)
+For the set of first order objects $X_1,\dots, X_n$ and $f\in \Fe_n$, let  $A_f$ and $X_f$
+be defined as above. 
 
 \begin{prop}\label{prop:boolean}
-There is a unique function $f:\{0,1\}^n\to \{0,1\}$ such that 
-\[
-S_Y=\bigoplus_{s\in \{0,1\}^n} f(s) L_s.
-\]
+With the above definitions, there is a unique function $f\in \Fe_n$ such that $Y= X_f$.
 
 
 \end{prop}
 
-\begin{proof} Since the subspaces  $L_s, s\in \{0,1\}^n$ form an independent decomposition
-of $V_Y$, if such a function $f$ exists it must be unique. To show existence of this
-function, we will again proceed by induction on $n$. For $n=1$, the assertion is easily seen
+\begin{proof} Since the map $f\mapsto X_f$ is injective, uniqueness is clear.  To show existence of this
+function, we will proceed by induction on $n$. For $n=1$, the assertion is easily seen
 to be true, since in this case, $Y$ is itself first order and
 \[
-S_Y=V_Y=L_{1,0}\oplus L_{1,1}=1(0)L_{1,0}\oplus 1(1)L_{1,1},
+S_Y=V_Y=V_1=L_{1,0}\oplus L_{1,1}=1(0)L_{1,0}\oplus 1(1)L_{1,1},
 \]
 here $1:\{0,1\}\to \{0,1\}$ is the constant 1. Assume now that the assertion is true for
-all $m<n$. By construction,  up to a permutation of the spaces, $Y$ is either the tensor product $Y=Y_1\otimes Y_2$, with
+all $m<n$. By construction,  up to a permutation of the spaces, $Y$ is either the tensor
+product $Y=Z_1\otimes Z_2$, with
 \[
-Y_1\sim \{X_{i_1},\dots, X_{i_m}\},\qquad Y_2\sim\{X_{i_{m+1}},\dots, X_{i_n}\},
+Z_1\sim \{Y_{1},\dots, Y_{m}\},\qquad Z_2\sim\{Y_{{m+1}},\dots, Y_{n}\},
 \]
- or $Y$ is the dual of such a product. Let us assume the first case.  By the induction 
-assumption, there are functions $f_1:\{0,1\}^{m}\to \{0,1\}$ and $f_2:\{0,1\}^{n-m}\to
-\{0,1\}$ such that
+ or $Y$ is the dual of such a product. Let us assume the first case. It is clear that
+ $O_{Z_1}\cup O_{Z_2}=O_Y$, and similarly for $I$, so that the correcponding objects $X_i$
+ remain the same. By the induction 
+assumption, there are functions $f_1\in \Fe_m$ and $f_2\in \Fe_{n-m}$ such that
 \[
-S_Y=S_{Y_1}\otimes S_{Y_2}=\bigoplus_{\substack{s\in\{0,1\}^{m}\\ t\in
+S_Y=S_{Z_1}\otimes S_{Z_2}=\bigoplus_{\substack{s\in\{0,1\}^{m}\\ t\in
 \{0,1\}^{n-m}}}
-f_1(s)f_2(t)L_{i_1,s_{1}}\otimes\dots \otimes L_{i_m,s_{m}}\otimes
-L_{i_{m+1},t_{1}}\otimes\dots\otimes L_{i_n,t_{n-m}}
+f_1(s)f_2(t)L_{1,s_{1}}\otimes\dots \otimes L_{m,s_{m}}\otimes
+L_{{m+1},t_{1}}\otimes\dots\otimes L_{n,t_{n-m}}.
 \]
-Since $\{0,1\}^n\simeq \{0,1\}^m\times \{0,1\}^{n-m}$, we get the assertion, with
-$f=f'\circ \pi$, where $\pi$ is an approriate permutation  and 
-$f'(s,t)=f_1(s)f_2(t)$.
+This implies the assertion, with $f=f_1\otimes f_2$. 
 
 To finish the proof, it is now enough to observe that if the assertion holds for $Y$ then
-it also  holds for $Y^*$. So assume that $Y$ has the required form, that is
+it also  holds for $Y^*$. So assume that $Y=X_f=(V, A_f)$ for some $f\in \Fe_n$.
+Then $Y^*=(V^*,\tilde A_f)$, and by Lemma \ref{lemma:Xf}, we see that $Y^*$ has the
+required form, up to replacing  the spaces $L_s$ by $\tilde L_s$, which corresponds to
+swapping the inputs and outputs. Since this is precisely what happens after taking the
+duals, the statement is proven.
+ 
+\end{proof}
+
+It is plausible (and we will show an example later) that not all objects of the form $X_f$
+are higher order objects.  We will specify  the set of functions that corresponds to such
+objects in the next paragraph.
+
+
+\subsection{Type funtions and higher order objects}
+
+
+Let $\Te_n\subseteq \Fe_n$ be defined as the subset generated from the constant 
+function $1$ on $\{0,1\}$ by taking duals and tensor products. For example, we have
 \[
-S_Y=\bigoplus_{s\in\{0,1\}^n}f(s)L_s
+\Te_1=\Fe_1=\{1,1^*\},\quad
+\Te_2=\{1\otimes 1, (1\otimes 1)^*, 1\otimes 1^*,1^*\otimes 1, (1^*\otimes 1)^*,
+(1\otimes 1^*)^*\},
 \]
-for some function $f:\{0,1\}^n\to \{0,1\}$. 
-Let $a_Y$ and $\tilde a_Y$ be as in  Lemma \ref{lemma:La}. 
-We have, using Lemma \ref{lemma:Lperp} and the definition of the subspaces
+etc.  Elements of $\Te_n$ will be called type functions. Similarly as for the higher order
+objects, the indexes in $[n]$ such that the corresponding
+component was subjected to taking the dual an even number of times will be called the
+outputs (of $f$) and denoted by $O=O_f$, indexes in $I=I_f:=[n]\setminus O_f$ will be
+called inputs. From the proof of Proposition \ref{prop:boolean}, it is easily seen that a
+higher order object is of the form $Y=X_f$ for a function $f\in \Te_n$ with the same outputs (and of
+course also inputs) as $Y$. We next show that the converse is true. 
+
+
+\begin{prop}\label{prop:type_hom} Let $\{X_1,\dots, X_n\}$  be first order objects  and let
+$f\in \Te_n$, $O=O_f$, $I=I_f$. Then $Y=X_f$ is a higher order objects with $O_Y=O$ and  $Y\sim
+\{Y_1,\dots, Y_n\}$, where $Y_i=X_i$ for $i\in O$ and $Y_i=(V_{i}^*, \{a_i\}^\sim)$ for
+$i\in I$.  
+
+\end{prop}
+
+\begin{proof} As before, we will proceed by induction on $n$. For $n=1$, we only have the
+possibilities $f=1$ or $f=1^*$. In the first case, $O=[1]$ and we get
 \[
-\{\tilde a_Y\}^\perp=\tilde L_{0\dots 0}^\perp=\bigoplus_{t\ne 0\dots 0} L_t
+S_f=1L_{1,0}\oplus 1L_{1,1}= V_{1},
 \]
-and hence
+so that $X_f=(V_1,\{\tilde a_1\}^\sim)=X_1$. In the second case, $O=\emptyset$ and 
 \[
-L_Y=S_Y\cap\{\tilde a_Y\}^\perp=\bigoplus_{\substack{s\in \{0,1\}^n\\ s\ne 0\dots 0}} f(s) L_s.
+S_f=1L_{1,0}=\mathbb R\{a_1\},
 \]
-We then have using Lemma \ref{lemma:Lperp} and the fact that $\tilde L_t$, $t\in
-\{0,1\}^n$ form an independent decomposition of $V_Y^*$,
-\begin{align*}
-S_{Y^*}&=L_Y^\perp=\left(\bigoplus_{\substack{s\in \{0,1\}^n\\ s\ne 0}}
-f(s)L_s\right)^\perp=\bigwedge_{\substack{s\in\{0,1\}^n\\ s\ne 0, f(s)=1}}L_s^\perp=
-\bigwedge_{\substack{s\in\{0,1\}^n\\ s\ne 0,
-f(s)=1}}\left(\bigoplus_{\substack{t\in\{0,1\}^n\\t\ne s}} \tilde L_t\right)\\
-&=\bigoplus_{t\in\{0,1\}^n} \left(\bigwedge_{\substack{s\in \{0,1\}^n\\ s\ne 0, f(s)=1}}
-(1-\chi_s(t))\tilde L_t\right)=\bigoplus_{t\in \{0,1\}^n} f^*(t) \tilde L_t.
-\end{align*}
-Here $\chi_s:\{0,1\}^n\to \{0,1\}$ is the characteristic function of $s$ and
-$f^*:\{0,1\}^n\to \{0,1\}$ is given as
+so that $X_f=(V_1,\{a_1\})=(V_1^*,\{a_1\}^\sim)^*=Y_1^*$. Assume next that the statement
+is true for all $m<n$ and assume that $f=f_1\otimes f_2$ for some $f_1\in \Fe_m$, $f_2\in
+\Fe_{n-m}$, then it is easily seen that $Y=Z_1\otimes Z_2$ for $Z_1=X_{f_1}$ and
+$Z_2=X_{f_2}$, constructed from $\{x_1,\dots,X_m\}$ resp. $\{x_{m+1},\dots, X_n\}$. 
+By the induction assumption, $Z_1$ and $Z_2$ are higher order objects, with
+$O_{Z_i}=O_{f_i}$, it follows that $Y$ is a higher order object with $O_Y=O_{Z_1}\cup
+O_{Z_2}=O_{f_1}\cup O_{f_2}=O_f$.
+
+Finally, assume that the statement is true for $f\in \Fe_n$, we will show that it holds
+for $f^*$. Using Lemma \ref{lemma:Xf} and its proof, we can see that $X_{f^*}$ is the dual
+of the object $\tilde X_f$, constructed by replacing $L_{i,u}$ by $\tilde L_{i,u}$, for
+each  $i$ and $u\in \{0,1\}$, which is the same as replacing each $X_i$ by the object
+$\tilde X_i=(V_i^*,\{a_i\}^\sim)$ (and then choosing $\tilde a_i$ as the special fixed
+element of $A_{\tilde X_i}$). Hmmm.
 \[
-f^*(t):=\bigwedge_{\substack{s\in \{0,1\}^n\\ s\ne 0, f(s)=1}}
-(1-\chi_s(t))=\begin{dcases} 1 & \text{if } t=0\\ 1-f(t) & \text{if } t\ne 0.
-\end{dcases}
+S_f^*= (\big
 \]
-Note also that the change $L_s$ to $\tilde L_s$ corresponds precisely to swapping the sets
-of inputs and outputs, which is what happens after taking the dual. This finishes the
-proof.
+
+
 
 \end{proof}
+
+
+
 
 
 The above theorem shows that any element $Y\sim\{X_1,\dots,X_n\}$ is (up to a possible permutation

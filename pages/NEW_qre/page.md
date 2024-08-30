@@ -4,7 +4,7 @@ title: "Renyi relative entropy in von Neumann algebras"
 
 ## 1. $\alpha-z$ - Renyi relative entropies
 
-**With: Fumio Hiai, Shinya Kato, Yoshimichi Ueda**   
+With: Fumio Hiai, <del>Shinya Kato, Yoshimichi Ueda</del>   
 
 
 ### Paper versions

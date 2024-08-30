@@ -7,9 +7,14 @@ title: Gilyen, 2024, grat proposal
 
 **Due:** 5. 9. 2024
 
+**Result:** 9.75/10 points
+
+
 [proposal](REF_gilyen2024/proposal.pdf)
 
+[report](REF_gilyen2024/report.pdf)
 
-**Decision:** 
+
+
 
 
