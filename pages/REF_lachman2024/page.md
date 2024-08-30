@@ -7,13 +7,12 @@ title: Lachman, Tensor products of EA, 2024
 
 **Due:** 20.9.2024
 
-[file](REF_lachamn2024/file.pdf)
+[file](REF_lachman2024/file.pdf)
 
 
 **Decision:** 
 
-[report](REF_lachamn2024/report.pdf)
-
+[report](REF_lachman2024/report.pdf)
 
 
 
