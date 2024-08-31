@@ -667,11 +667,38 @@ A_X=\{\tilde a_X\}^\sim,\qquad \tilde A_X=\{\tilde a_X\}.
 \]
 In the case of first order quantum objects we additionally require that $\tilde a_X\in
 int(M_n^+)$, similarly for classical first order objects.
+Note that first order objects, resp. their duals, are exactly those satisfying
+condition (iii), resp. condition (ii), in Proposition \ref{prop:noncompact}, in
+particular, $(X\otimes Y)^*=X^*\otimes Y^*$ for first order objects $X$ and $Y$.
+
+For a first order object $X=(V_X, \{\tilde a_X\}^\sim)$, let us pick an element $a_X\in
+A_X$, then we have a direct sum decomposition
+\[
+V_X=L_{X,0}\oplus L_{X,1},
+\]
+where $L_{X,0}:= \mathbb R\{a_X\}$, $L_{X,1}:=\{\tilde a_X\}^\perp=L_X$.
+We also define the {\em conjugate object} $\tilde X=(V_X^*,\{a_X\}^\sim)$, note that we always
+have $\tilde a_X\in A_{\tilde X}$ and with the choice $a_{\tilde X}=\tilde a_X$, we have
+$\tilde{\tilde X}=X$ and 
+\begin{equation}\label{eq:complement}
+L_{\tilde X,u}=L_{X,\bar u}^\perp,\qquad u\in \{0,1\}.
+\end{equation}
+
+These  definitions depend on the choice of $a_X$, but we will assume below that this
+choice is fixed and that we choose $a_{\tilde X}=\tilde a_X$. For quantum objects we will
+assume that $a_X\in int(M_n^+)$.
+
+
+\begin{exm} Example: quantum states, multiple of identity...
+
+\end{exm}
+
 
 Higher order objects are those obtained from a finite set $\{X_1,\dots,X_n\}$ of first order objects by
 taking tensor products and duals, and applying any permuations of the spaces. The above is indeed a set, so that all the objects are
 different (though they may be isomorphic) and the ordering is not essential. We will also
-assume that the tensor unit is not contained in this set. Note that we cannot say that
+assume that the tensor unit is not contained in this set. Of course, any first order
+object is also higher order with $n=1$. Note that we cannot say that
 such an object is automatically ''of order $n$'', as the following lemma shows. 
 
 \begin{lemma}\label{lemma:1ordertensor} Let $X$, $Y$ be first order, then $X\otimes Y$ is
@@ -686,13 +713,17 @@ S_{X\otimes Y}=S_X\otimes S_Y=V_X\otimes V_Y=V_{X\otimes Y}.
 
 \end{proof}
 
-Note also that first order objects, resp. their duals, are exactly those satisfying
-condition (iii), resp. condition (ii), in Proposition \ref{prop:noncompact}, in
-particular, $(X\otimes Y)^*=X^*\otimes Y^*$ for first order objects $X$ and $Y$.
+
+
 
 \begin{exm} (states quantum first order, channels,  supermaps - quantum higher order)
 
 \end{exm}
+
+
+
+
+
 
 \begin{exm} replacement $X^*\otimes Y$, quantum
 \end{exm}
@@ -703,33 +734,22 @@ particular, $(X\otimes Y)^*=X^*\otimes Y^*$ for first order objects $X$ and $Y$.
 We start by noticing that there are certain objects in $\Af$ that can be constructed from
 a set of  first order objects and functions in $\Fe_n$. 
 
-
-Let $X_1,\dots,X_n$ be first order objects in $\Af$, so that $X_i=(V_i, \{\tilde
-a_i\}^\sim)$. For each $i\in [n]$ let us pick some $a_i\in \{\tilde a_i\}^\sim$. 
-Let us define
+%{\color{blue} Define $\tilde X_i=(V_i^*, \{a_i\}^\sim)$!  }
+Let $X_1,\dots,X_n$ be first order objects in $\Af$. Let $a_{X_i}\in A_{X_i}$ be fixed and
+let $\tilde X_i$ be the conjugate first order objects. Let us denote $V_i=V_{X_i}$ and 
 \[
-L_{i,0}:=\mathbb R \{a_i\},\qquad L_{i,1}:= \{\tilde a_i\}^\perp,\qquad i\in [n].
+L_{i,u}:= L_{X_i,u},\qquad  \tilde L_{i,u}:= L_{\tilde X_i,u} \qquad u\in \{0,1\},\ i\in [n].
 \]
-Then $L_{i,0}\cap L_{i,1}=\{0\}$ and $V_i=L_{i,0}\oplus L_{i,1}$. Put
+For $s\in \{0,1\}^n$, we define
 \[
-L_s:=L_{1,s_1}\otimes\dots \otimes L_{n,s_n},\qquad s\in \{0,1\}^n,
+L_s:=L_{1,s_1}\otimes\dots \otimes L_{n,s_n}, \qquad \tilde L_s:=\tilde
+L_{1,s_1}\otimes\dots \otimes \tilde L_{n,s_n},
 \]
-then $L_s$, $s\in \{0,1\}^n$ is an independent decomposition of $V:=V_1\otimes \dots
-\otimes V_n$. Similarly, put
+then we have the direct sum decompositions 
 \[
-\tilde L_{i,0}:=\mathbb R \{\tilde a_i\},\qquad \tilde L_{i,1}:= \{a_i\}^\perp,\qquad i\in
-[n],
+V:=V_1\otimes \dots \otimes V_n=\bigoplus_{s\in \{0,1\}^n} L_s,\qquad V^*=V_1^*\otimes
+\dots\otimes V_n^*=\bigoplus_{s\in \{0,1\}^n} \tilde L_s.
 \]
-then $V^*_i=\tilde L_{i,0}\oplus \tilde L_{i,1}$ and we obtain an independent
-decomposition of $V^*=V_1^*\otimes\dots \otimes  V^*_n$ as 
-\[
-\tilde L_s:=\tilde L_{1,s_1}\otimes\dots \otimes \tilde L_{n,s_n},\qquad s\in
-\{0,1\}^n.
-\]
-Note also that 
-\begin{equation}\label{eq:complement}
-L_{i,u}^\perp=\tilde L_{i,\bar u},\qquad u\in \{0,1\},\ i\in [n].
-\end{equation}
 
 
 \begin{lemma}\label{lemma:Lperp}   For any $s\in \{0,1\}^n$, we have 
@@ -743,8 +763,7 @@ $\bar{\chi}_s=1-\chi_s$.
 
 \end{lemma}
 
-\begin{proof} Using
-\eqref{eq:directsum} and \eqref{eq:complement}, we get
+\begin{proof} Using \eqref{eq:complement} and the direct sum decomposition of $V_i^*$, we get
 \begin{align*}
 \left(L_{1,s_{1}}\otimes \dots\otimes L_{n,s_{n}}\right)^\perp&= \bigvee_j\left(
 V_{1}^*\otimes
@@ -766,24 +785,31 @@ The proof of the other equality is the same.
 a_1\otimes\dots\otimes  \tilde a_n$.
 For  $f\in \Fe_n$ define 
 \[
-S_f:=\bigoplus_{s\in \{0,1\}^n} f(s)L_s,\qquad A_f:=S_f\cap \{\tilde a\}^\sim.
+S_f:=\bigoplus_{s\in \{0,1\}^n} f(s)L_s,\qquad A_f=A_f(X_1,\dots,X_n):=S_f\cap \{\tilde a\}^\sim.
 \]
 Then $A_f$ is a proper affine subspace in $V$ containing $a$. Moreover,
 \[
 L_{A_f}=\bigoplus_{s\in\{0,1\}^n\setminus\{0\}} f(s)L_s,\qquad S_{A_f}=S_f
 \]
-and the dual affine subspace  $\tilde A_f$ is determined by 
+and the dual affine subspace satisfies  
 \[
-S_{\tilde A_f}= \bigoplus_{s\in \{0,1\}^n} f^*(s)\tilde L_s.
+\tilde A_f(X_1,\dots,X_n)=A_{f^*}(\tilde X_1,\dots, \tilde X_n)=\bigoplus_{s\in \{0,1\}^n}
+f^*(s)\tilde L_s\cap\{a\}^\sim .
 \]
+ 
+
+%determined by 
+%\[
+%\tilde A_f=S_{\tilde A_f}\cap \{a\}^\sim,\qquad S_{\tilde A_f}= \bigoplus_{s\in \{0,1\}^n} f^*(s)\tilde L_s.
+%\]
 
 \end{lemma}
 
 \begin{proof} It is clear from definition that $A_f$ is an affine subspace. Since
 $f(0)=1$, the space $S_f$ always contains the subspace $L_0=L_{1,0}\otimes\dots\otimes
-L_{n,0}=\mathbb R\{a\}$ and it is clear that $L_s\subseteq \{\tilde a\}^\perp$ for any
+l_{n,0}=\mathbb R\{a\}$ and it is clear that $L_s\subseteq \{\tilde a\}^\perp$ for any
 $s\ne 0$. It follows that $a\in A_f$, so that $A_f\ne \emptyset$, and since $A_f\subseteq
-\{\tilde a\}^\sim$, we see that $0\ne A_f$. It follows that $A_f$ is proper and $\tilde
+\{\tilde a\}^\sim$, we see that  $A_f$ is proper and $\tilde
 a\in \tilde A_f$.  The expressions for $L_{A_f}$ and $S_{A_f}$ are immediate from the definition and
 $L_{A_f}=S_{A_f}\cap\{\tilde a\}^\sim$. To obtain the dual affine subspace, we compute
 using Lemma \ref{lemma:Lperp} and the fact that the subspaces form an independent
@@ -818,8 +844,7 @@ A_{p_n}=\{a\},\qquad A_{1_n}=\{\tilde a\}^\sim,
 \item[(iii)] $A_{f\wedge g}=A_f\cap A_g$,
 \item[(iv)] $A_{f\vee g}= A_f\vee A_g:=\aff(A_f\cup A_g)$.
 \end{enumerate}
-In particular, the map $f\mapsto A_f$ is injective, this also follows from the fact that
-$f\mapsto S_f$ is injective, since $L_s$ form an independent decomposition. Moreover, the set $\{A_f,\ f\in
+It follows that the set $\{A_f,\ f\in
 \Fe_n\}$ is a distributive lattice, with respect to the lattice operations $\cap$ and
 $\vee$.
 
@@ -851,48 +876,67 @@ X_{g} \ar[r]_{id_V}& X_{f\vee g}
 
 \end{enumerate}
 In particular, it follows that $\{X_f,\ f\in \Fe_n\}$, is a distributive lattice, with
-pullbacks and pushouts as lattice operations.
+pullbacks and pushouts as lattice operations. Furthermore, using the conjugate objects, we
+may construct 
+\[
+\tilde X_f:=(V^*, A_f(\tilde X_1,\dots,\tilde X_n))
+\]
+and we see from Lemma
+\ref{lemma:Xf} that 
+\[
+X_f^*=\tilde X_{f^*},\qquad f\in \Fe_n.
+\]
+
 
 We next observe that the higher order objects are of the form $X_f$, for some choice of the
 first order objects $X_1,\dots, X_n$ and a function $f$ that belongs to a special subclass of $\Fe_n$.  
 So assume that  $Y$ is a higher order object constructed from a set of distinct first
-order objects $Y_1,\dots, Y_n$, we will write $Y\sim\{Y_1,\dots,Y_n\}$ in this case. By compactness of $\FV$, we may assume
- (relabeling the objects if necessary) that the vector space of $Y$ has the form
+order objects $Y_1,\dots, Y_n$, $Y_i=(V_{Y_i},\{\tilde a_{Y_i}\}^\sim)$, we will write
+$Y\sim\{Y_1,\dots,Y_n\}$ in this case. Let us fix
+some element $a_{Y_i}\in A_{Y_i}$ and construct the objects $\tilde Y_i$. 
+ 
+ By compactness of $\FV$, we may assume (relabeling the objects if necessary) that the vector space of $Y$ has the form
 \[
 V_Y=V:=V_{1}\otimes \dots\otimes V_{n},
 \]
-where  $V_i$ is either $V_{X_i}$ or $V_{X_i}^*$, according to whether $Y_i$ was subjected
+where  $V_i$ is either $V_{Y_i}$ or $V_{Y_i}^*$, according to whether $Y_i$ was subjected
 to taking duals an even or odd number of times. The indices such that the first
 case is true will be called the outputs and the subset of outputs in $[n]$ will be denoted
 by $O$, or $O_Y$, when we need to specify the object. The set $I=I_Y:=[n]\setminus O_Y$ is
-the set of inputs. The reason for this terminology will become clear later. Let now
-$X_1,\dots, X_n$ be objects such that $X_i=Y_i=(V_i,\{\tilde a_i:=\tilde a_{Y_i}\}^\sim)$ if $i\in O$ and $X_i=(V_i, \{\tilde
-a_i\}^\sim)$ for $i\in I$, where in this case $\tilde a_i$ is an arbitrary but fixed element in
-$A_{Y_i}$. (Notice that since $i\in I$, $V_i=V_i^*$.)
-For the set of first order objects $X_1,\dots, X_n$ and $f\in \Fe_n$, let  $A_f$ and $X_f$
-be defined as above. 
+the set of inputs. The reason for this terminology will become clear later. 
 
-\begin{prop}\label{prop:boolean}
-With the above definitions, there is a unique function $f\in \Fe_n$ such that $Y= X_f$.
-
+\begin{prop}\label{prop:boolean} For $i\in [n]$, let 
+$X_i=Y_i$ if $i\in O_Y$ and $X_i=\tilde Y_i$ for $i\in I_Y$. 
+There is a unique function $f\in \Fe_n$ such that 
+\[
+Y= X_f=(V, A_f(X_1,\dots,X_n)).
+\]
 
 \end{prop}
 
 \begin{proof} Since the map $f\mapsto X_f$ is injective, uniqueness is clear.  To show existence of this
 function, we will proceed by induction on $n$. For $n=1$, the assertion is easily seen
-to be true, since in this case, $Y$ is itself first order and
+to be true, since in this case, we we have either $Y=Y_1$ or $Y=Y_1^*$. In the first case, $O=[1]$,
+$X_1=Y_1$ and 
 \[
 S_Y=V_Y=V_1=L_{1,0}\oplus L_{1,1}=1(0)L_{1,0}\oplus 1(1)L_{1,1},
 \]
-here $1:\{0,1\}\to \{0,1\}$ is the constant 1. Assume now that the assertion is true for
-all $m<n$. By construction,  up to a permutation of the spaces, $Y$ is either the tensor
+so in this case $f$ is the constant 1. If $Y=Y_1^*$, we have $O=\emptyset$, $X_1=\tilde
+Y_1$, and then
+\[
+S_Y=\mathbb R\{\tilde a_{Y_1}\}=L_{1,0}=1^*(0)L_{1,0}\oplus 1^*(1)L_{1,1},
+\]
+so that $f=1^*$. 
+
+Assume now that the assertion is true for
+all $m<n$. By construction, $Y$ is either the tensor
 product $Y=Z_1\otimes Z_2$, with
 \[
 Z_1\sim \{Y_{1},\dots, Y_{m}\},\qquad Z_2\sim\{Y_{{m+1}},\dots, Y_{n}\},
 \]
  or $Y$ is the dual of such a product. Let us assume the first case. It is clear that
- $O_{Z_1}\cup O_{Z_2}=O_Y$, and similarly for $I$, so that the correcponding objects $X_i$
- remain the same. By the induction 
+ $O_{Z_1}\cup O_{Z_2}=O_Y$, and similarly for $I$, so that the corresponding objects
+ $X_1,\dots, X_m$ and $X_{m+1},\dots,X_n$  remain the same. By the induction 
 assumption, there are functions $f_1\in \Fe_m$ and $f_2\in \Fe_{n-m}$ such that
 \[
 S_Y=S_{Z_1}\otimes S_{Z_2}=\bigoplus_{\substack{s\in\{0,1\}^{m}\\ t\in
@@ -903,17 +947,23 @@ L_{{m+1},t_{1}}\otimes\dots\otimes L_{n,t_{n-m}}.
 This implies the assertion, with $f=f_1\otimes f_2$. 
 
 To finish the proof, it is now enough to observe that if the assertion holds for $Y$ then
-it also  holds for $Y^*$. So assume that $Y=X_f=(V, A_f)$ for some $f\in \Fe_n$.
-Then $Y^*=(V^*,\tilde A_f)$, and by Lemma \ref{lemma:Xf}, we see that $Y^*$ has the
-required form, up to replacing  the spaces $L_s$ by $\tilde L_s$, which corresponds to
-swapping the inputs and outputs. Since this is precisely what happens after taking the
-duals, the statement is proven.
- 
+it also  holds for $Y^*$. So assume that $Y=X_f=(V, A_f(X_1,\dots,X_n))$ for some $f\in \Fe_n$,
+then $Y^*=X_f^*=\tilde X_{f^*}=(V^*,A_{f^*}(\tilde X_1,\dots,\tilde X_n)$. 
+In is now enough to notice that $\tilde X_i=\tilde{\tilde Y}_i=Y_i$
+if $i\in I_{Y}$ and $\tilde X_i=\tilde {Y}_i$ if $i\in O_Y$. Since by definition
+$O_{Y^*}=I_Y$, this proves the statement.
+
 \end{proof}
 
-It is plausible (and we will show an example later) that not all objects of the form $X_f$
-are higher order objects.  We will specify  the set of functions that corresponds to such
-objects in the next paragraph.
+Let us stress that in general, the objects $X_f$ depend on the choice of the elements
+$a_{X_i}$. From the above proof, it is clear that  the  description in Proposition
+\ref{prop:boolean} does not depend on the choice of the elements $a_{Y_i}\in A_{Y_i}$.
+
+
+\begin{exm} Quantum higher order objects from state spaces, \cite{bisio2019theoretical}.
+
+\end{exm}
+
 
 
 \subsection{Type funtions and higher order objects}
@@ -926,7 +976,7 @@ function $1$ on $\{0,1\}$ by taking duals and tensor products. For example, we h
 \Te_2=\{1\otimes 1, (1\otimes 1)^*, 1\otimes 1^*,1^*\otimes 1, (1^*\otimes 1)^*,
 (1\otimes 1^*)^*\},
 \]
-etc.  Elements of $\Te_n$ will be called type functions. Similarly as for the higher order
+etc.  Elements of $\Te_n$ will be called {\em type functions}. Similarly as for the higher order
 objects, the indexes in $[n]$ such that the corresponding
 component was subjected to taking the dual an even number of times will be called the
 outputs (of $f$) and denoted by $O=O_f$, indexes in $I=I_f:=[n]\setminus O_f$ will be
@@ -966,7 +1016,7 @@ each  $i$ and $u\in \{0,1\}$, which is the same as replacing each $X_i$ by the o
 $\tilde X_i=(V_i^*,\{a_i\}^\sim)$ (and then choosing $\tilde a_i$ as the special fixed
 element of $A_{\tilde X_i}$). Hmmm.
 \[
-S_f^*= (\big
+S_f^*= 
 \]
 
 
