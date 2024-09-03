@@ -1,5 +1,8 @@
 \documentclass[12pt]{article}
 
+
+\usepackage{showkeys}
+
 \usepackage{hyperref}
 \usepackage{amsmath, amssymb, amsthm, bm}
 \usepackage[sort&compress,numbers]{natbib}
@@ -40,6 +43,7 @@
 \def\Ne{\mathcal N}
 \def\Te{\mathcal T}
 \def\Fe{\mathcal F}
+\def\Pe{\mathcal P}
 \def \Tr{\mathrm{Tr}\,}
 \def\Se {\mathcal S}
 \def\supp{\mathrm{supp}}
@@ -83,6 +87,8 @@ V\simeq
 V, \qquad \rho_V: V\otimes I\simeq V,\\
 \sigma_{U,V}&: U\otimes V\simeq V\otimes U.
 \end{align*}
+
+
 
 
 Let  $(-)^*: V\mapsto V^*$ be the usual vector space dual, with duality denoted by
@@ -186,7 +192,7 @@ will denote by $x^{i_1\dots i_k}$ the string in $\{0,1\}^{n-k}$ obtained from $x
 $x_{i_1},\dots, x_{i_k}$. For any permutation $\sigma\in S_n$, we will denote by the same symbol the obvious action
 on $\{0,1\}^n$, that is
 \[
-\sigma(s_1\dots s_n)=s_{\sigma^{-1}(1)}\dots s_{\sigma^{-1}(n)}.
+\sigma(s_1\dots s_n)=s_{\sigma(1)}\dots s_{\sigma(n)}.
 \]
 
 
@@ -329,17 +335,16 @@ Sec. 3.7].
 \end{remark}
 
 
-It may be useful to visualise the lattice $\mathcal L_n=\{S\subseteq [n]\}$ as a
-hypercube, and the coefficients of $f$ as labels for its vertices. The fact that the
-function $f$ has values in $\{0,1\}$ means that for a string $x\in \{0,1\}^n$ such that
-$x_j=1$ if and only if $j\in T$, we must have 
+Let $\mathcal L_n$ be the lattice of subsets in
+$[n]$. We can  visualise $\mathcal L_n$ as a hypercube, and the coefficients $\hat f_S$ of  $f$ as labels for its vertices.
+Let $s\in\{0,1\}^n$ be a string  such that $s_j=1$ if and only if $j\in T$. Then
+$p_S(s)=1$ if and only if $T\cap S=\emptyset$. 
+The fact that the function $f$ takes  values in $\{0,1\}$ means that we must have 
 \[
-f(x)=\sum_{\substack{S\subseteq [n]\\ S\cap T=\emptyset}} \hat f_S\in \{0,1\},
+f(s)=\sum_{\substack{S\subseteq [n]\\ S\cap T=\emptyset}} \hat f_S\in \{0,1\}.
 \]
-that is, the sum of labels $\hat f_S$ over any face of the hypercube $\mathcal L_n$ containing the vertex $\emptyset$ must
-be 0 or 1. In particular, $\hat f_\emptyset=f(11\dots 1)\in \{0,1\}$, which restricts the
-values of $\hat f_{\{i\}}\in
-\{0,1,-1\}$, etc. The fact that $f\in \Fe_n$ means that in addition,
+It follows that  the sum of labels $\hat f_S$ over any face of the hypercube $\mathcal L_n$ containing the vertex $\emptyset$ must
+be 0 or 1. In particular, $\hat f_\emptyset=f(11\dots 1)\in \{0,1\}$. The fact that $f\in \Fe_n$ means that in addition,
 \[
 f(0)=\sum_{S\subseteq [n]}\hat f_S=1.
 \]
@@ -883,17 +888,17 @@ may construct
 \]
 and we see from Lemma
 \ref{lemma:Xf} that 
-\[
+\begin{equation}\label{eq:dualityXf}
 X_f^*=\tilde X_{f^*},\qquad f\in \Fe_n.
-\]
+\end{equation}
+
 
 
 We next observe that the higher order objects are of the form $X_f$, for some choice of the
 first order objects $X_1,\dots, X_n$ and a function $f$ that belongs to a special subclass of $\Fe_n$.  
 So assume that  $Y$ is a higher order object constructed from a set of distinct first
 order objects $Y_1,\dots, Y_n$, $Y_i=(V_{Y_i},\{\tilde a_{Y_i}\}^\sim)$, we will write
-$Y\sim\{Y_1,\dots,Y_n\}$ in this case. Let us fix
-some element $a_{Y_i}\in A_{Y_i}$ and construct the objects $\tilde Y_i$. 
+$Y\sim\{Y_1,\dots,Y_n\}$ in this case. Let us fix elements $a_{Y_i}\in A_{Y_i}$ and construct the objects $\tilde Y_i$. 
  
  By compactness of $\FV$, we may assume (relabeling the objects if necessary) that the vector space of $Y$ has the form
 \[
@@ -960,11 +965,13 @@ $a_{X_i}$. From the above proof, it is clear that  the  description in Propositi
 \ref{prop:boolean} does not depend on the choice of the elements $a_{Y_i}\in A_{Y_i}$.
 
 
-\begin{exm} Quantum higher order objects from state spaces, \cite{bisio2019theoretical}.
+%\begin{exm} Quantum higher order objects from state spaces, \cite{bisio2019theoretical}.
 
-\end{exm}
+%\end{exm}
 
 
+
+%%
 
 \subsection{Type funtions and higher order objects}
 
@@ -986,9 +993,9 @@ course also inputs) as $Y$. We next show that the converse is true.
 
 
 \begin{prop}\label{prop:type_hom} Let $\{X_1,\dots, X_n\}$  be first order objects  and let
-$f\in \Te_n$, $O=O_f$, $I=I_f$. Then $Y=X_f$ is a higher order objects with $O_Y=O$ and  $Y\sim
-\{Y_1,\dots, Y_n\}$, where $Y_i=X_i$ for $i\in O$ and $Y_i=(V_{i}^*, \{a_i\}^\sim)$ for
-$i\in I$.  
+$f\in \Te_n$. Then $Y=X_f$ is a higher order object with $O_Y=O_f$ and  $Y\sim
+\{Y_1,\dots, Y_n\}$, where $Y_i=X_i$ for $i\in O_f$ and $Y_i=\tilde X_i$ for
+$i\in I_f$.  
 
 \end{prop}
 
@@ -1001,27 +1008,628 @@ so that $X_f=(V_1,\{\tilde a_1\}^\sim)=X_1$. In the second case, $O=\emptyset$ a
 \[
 S_f=1L_{1,0}=\mathbb R\{a_1\},
 \]
-so that $X_f=(V_1,\{a_1\})=(V_1^*,\{a_1\}^\sim)^*=Y_1^*$. Assume next that the statement
+so that $X_f=(V_1,\{a_1\})=\tilde X_1^*$. Assume next that the statement
 is true for all $m<n$ and assume that $f=f_1\otimes f_2$ for some $f_1\in \Fe_m$, $f_2\in
 \Fe_{n-m}$, then it is easily seen that $Y=Z_1\otimes Z_2$ for $Z_1=X_{f_1}$ and
-$Z_2=X_{f_2}$, constructed from $\{x_1,\dots,X_m\}$ resp. $\{x_{m+1},\dots, X_n\}$. 
+$Z_2=X_{f_2}$, constructed from $\{X_1,\dots,X_m\}$ resp. $\{X_{m+1},\dots, X_n\}$. 
 By the induction assumption, $Z_1$ and $Z_2$ are higher order objects, with
 $O_{Z_i}=O_{f_i}$, it follows that $Y$ is a higher order object with $O_Y=O_{Z_1}\cup
 O_{Z_2}=O_{f_1}\cup O_{f_2}=O_f$.
 
 Finally, assume that the statement is true for $f\in \Fe_n$, we will show that it holds
-for $f^*$. Using Lemma \ref{lemma:Xf} and its proof, we can see that $X_{f^*}$ is the dual
-of the object $\tilde X_f$, constructed by replacing $L_{i,u}$ by $\tilde L_{i,u}$, for
-each  $i$ and $u\in \{0,1\}$, which is the same as replacing each $X_i$ by the object
-$\tilde X_i=(V_i^*,\{a_i\}^\sim)$ (and then choosing $\tilde a_i$ as the special fixed
-element of $A_{\tilde X_i}$). Hmmm.
-\[
-S_f^*= 
-\]
+for $f^*$. From \eqref{eq:dualityXf}, we see that $X_{f^*}=\tilde X_f$, which shows that 
+$X_{f^*}\sim\{\tilde Y_1,\dots, \tilde Y_n\}$. Since taking duals will switch inputs and
+outputs, this finishes the proof.
+
 
 
 
 \end{proof}
+
+
+Let $\{Y_1,\dots, Y_n\}$ be first order objects.
+The above results show that any of higher order object  $Y\sim \{Y_1,\dots,Y_n\}$ with
+fixed set of outputs $O_Y=O$ satisfies $Y\simeq X_f$ for a unique type function $f\in
+\Te_n$, $O_f=O$,  and a fixed set of objects $\{X_1,\dots,X_n\}$, where the isomorphism is given
+by the action of some 
+permutation in $S_n$ on the space  $V_1\otimes\dots\otimes  V_n$. Conversely, any object
+of this form has the above properties. A basic example of such a function is (see Section
+\ref{sec:boolean})
+\[
+p_I(s)= \Pi_{i\in I} \bar s_i=\otimes_{i\in I} 1^*(s_i),\qquad s\in \{0,1\}^n,
+\]
+where $I=[n]\setminus O$. Clearly, $p_I\in \Te_n$ and the set of outputs of $p_I$ is $O$. It is easy to see that $X_{p_I}\simeq  Y_I^*\otimes Y_O$,
+where $Y_I=\otimes_{i\in I} Y_i$ and $Y_O= \otimes_{i\in O} Y_i$ are first order objects, so that the corresponding
+higher order object can be identified with the set of replacement channels $Y_I\to Y_O$.
+Similarly, the function $p_O^*\in \Te_n$ has output set $O$ and $X_{p_O^*}\simeq
+(Y_I\otimes Y_O^*)^*=[Y_I,Y_O]$, the set of all channels $Y_I\to Y_O$. 
+
+\begin{lemma}\label{lemma:fh_setting} Let $f\in\Te_n$ and let $O_f=O$,  $I=I_f$. Then
+\[
+p_I\le f\le p_O^*.
+\]
+
+\end{lemma}
+
+\begin{proof} This is obviously true for $n=1$. Indeed, in this case,
+$\Te_1=\Fe_1=\{1=p_\emptyset,1^*=p_{[1]}\}$. If $f=1$, then $O=[1]$, $I=\emptyset$ and 
+\[
+p_I=p_{\emptyset}=1=p_O^*,
+\]
+the case  $f=1^*$ is obtained by taking complements. Assume that the assertion holds for
+$m<n$. Let $f\in \Te_n$ and assume that  $f=g\otimes h$ for some  $g\in
+\Te_m$, $h\in \Te_{n-m}$.  By the assumption,
+\[
+p_{I_g}\otimes p_{I_h}\le g\otimes h\le p^*_{O_g}\otimes p^*_{O_h}\le (p_{O_g}\otimes
+p_{O_f})^*,
+\]
+the last inequality follows from Lemma \ref{lemma:fproduct}. We have  
+$O_f=O_g\cup (m+O_h)$, $I_f=I_g\cup (m+I_h)$, so that $p_{O_f}=p_{O_g}\otimes p_{O_h}$ and
+similarly for $p_{I_f}$. Now notice that any $f\in \Te_n$ is either of the form $(f\otimes
+g)\circ \sigma$ or of the form $(f\otimes g)^*\circ \sigma$, for some permutation
+$\sigma$. Since the inequality is easily seen to be preserved by
+permutations, and reversed by duality which also swiches the input and output sets, the
+assertion is proved.
+
+\end{proof}
+
+
+Combining this with the remarks below Lemma \ref{lemma:Xf}, we get the following result
+(cf. cite). Recall that a bimorphism in a category is a morphism $X\xrightarrow{\varphi} Y$ which is
+both mono and epi, that is, such that
+for any pairs of arrows (with appropriate sources and targets) we have $\psi\circ
+f=\psi\circ g \iff f=g$ and $k\circ\psi=l\circ\psi \iff k=l$.  It can be shown that the
+bimorphisms in $\Af$ are precisely those morphisms that are given by isomorphisms in
+$\FV$.
+
+
+\begin{theorem}\label{thm:setting} Let $Y\sim \{Y_1,\dots, Y_n\}$ be such that $O_Y=O$,
+$I_Y=I$. Then there exist bimorphisms 
+\[
+Y_I^*\otimes Y_O\xrightarrow{\varphi} Y
+\xrightarrow{\psi} [Y_I, Y_O].
+\]
+The bimorphisms are given by permutations. 
+
+
+\end{theorem}
+
+
+We will see below that $\Te_n$ is not a lattice for $n\ge 2$, so that for $f_1,f_2\in
+\Te_n$, neither of $f_1\wedge f_2$ or $f_1\vee f_2$ has to be a type function.
+Nevertheless, we have by the above results that if $O_{f_1}=O_{f_2}$, 
+\[
+Y_I^*\otimes Y_0 \xrightarrow{\varphi} X_{f_1\wedge f_2}\xrightarrow{id_V} X_{f_1\vee f_2}
+\xrightarrow{\psi} [Y_I,Y_O]
+\]
+for some suitable bimorphisms $\varphi$, $\psi$, moreover, the objects $X_{f_1\wedge f_2}$
+and $X_{f_1\vee f_2}$ are obtained as a pullback resp. pushout. It follows that although
+these objects may  not be  higher order objects themselves, they are included in some higher order object (e.g.
+ $[Y_I,Y_O]$) with the same sets of inputs and outputs. 
+
+
+
+We finish this section by showing a simple  way to obtain the output set of a type
+function.
+
+\begin{prop}\label{prop:fh_outputs} For $f\in \Te_n$, $i\in O_f$ if and only if $f(e^i)=1$.
+
+
+\end{prop}
+
+
+\begin{proof} Let $i\in O_f$, then by Lemma \ref{lemma:fh_setting}, $p_{I_f}(e^i)=1\le
+f(e^i)$, so that $f(e^i)=1$. Conversely, if $f(e^i)=1$, then by the other inequality in
+lemma \ref{lemma:fh_setting}, $p_{O_f}(e^i)=0$, whence $i\in O_f$.
+
+
+\end{proof}
+
+
+\section{Characterizations of type  functions}
+
+
+We have the following  description of the sets of type functions.
+
+\begin{prop}\label{prop:type_min} The set $\Te_n$ is the smallest subset in $\Fe_n$ such
+that:
+\begin{enumerate}
+
+\item $\Te_n$  is invariant under permutations: if $f\in \Te_n$, then $f\circ \sigma\in
+\Te_n$ for any permutation $\sigma\in S_n$,
+\item $\Te_n$  is invariant under taking duals: if $f\in \Te_n$ then $f^*\in \Te_n$,
+\item $\Te_m\otimes \Te_n\subseteq \Te_{m+n}$,
+
+\item $\Te_1=\{1,p_1\}=\Fe_1$.
+
+
+\end{enumerate}
+
+\end{prop}
+
+
+\begin{proof} It is clear by construction that any system of subsets $\{\Se_n\}_n$ with
+these properties must contain the type functions and that $\{\Te_n\}_n$ itself has these
+properties.
+
+\end{proof}
+
+Our goal is to find some characterization of the type functions.  We start by looking at some examples and non-examples.
+
+\begin{exm}\label{exm:T2} The type functions for $n=2$ are given as 
+\[
+s\quad \mapsto   \quad 1,\quad \bar s_1\bar s_2,\quad \bar s_1, \quad 1-\bar s_1+\bar
+s_1\bar s_2,
+\]
+and functions  obtained from these by exchanging $s_1\leftrightarrow s_2$, which gives 6
+elements.
+It can be seen that $\Fe_n$ has $2^{2^n-1}$ elements, so that $\Fe_2$ has 8
+elements in total. The two of them that are not type functions are
+\[
+g(s)=1-\bar s_1-\bar s_2+2\bar s_1s_2,\qquad g^*(s)=\bar s_1+\bar s_2-\bar s_1\bar s_2.
+\]
+This can be checked directly from Propositions \ref{lemma:fh_setting} and
+\ref{prop:fh_outputs}. Indeed, if $g\in \Te_2$, we would have $O_g=\emptyset$, so that
+$p_2\le g\le p_\emptyset^*=p_2$, which is obviously not the case. Clearly, also the
+complement $g^*\notin \Te_2$. Notice also that $g^*=p_{\{1\}}\vee p_{\{2\}}$, so that
+$\Te_2$ is not a lattice. Since $\Fe_2$ can be identified as a sublattice in $\Fe_n$ for
+all $n\ge 2$ as $f\mapsto (s \mapsto f(s_1s_2))$, we see that $\Te_n$, $n\ge 2$ is a  subposet in the distributive lattice 
+$\Fe_n$ but itself not a lattice. 
+
+
+\end{exm}
+
+
+\subsection{The poset $\Pe_f$}
+
+
+It will be convenient to use the representation 
+\[
+f=\sum_{S\subseteq [n]} \hat f_Sp_S,
+\]
+obtained in Lemma \ref{lemma:Vbasis}. For $f\in \Te_n$, let $\mathcal P_f$ be the subposet in $\mathcal L_n$ of elements such that
+$\hat f_S\ne 0$. We will show that $f$ is fully determined by $\Pe_f$. %Can we characterize such subposets? (we cannot so far.) Can we extract
+%some information about some 'causal structure' on the indices? 
+ We say that a poset $\Pe$  is graded of rank
+$k$ if every maximal chain in $\Pe$ has the same length equal to $k$ (recall that the length
+of a chain is defined as number of its elements -1). Equivalently,  there is
+a unique rank function $\rho: \Pe\to \{0,1,\dots,k\}$ such that $\rho(S)=0$ if $S$ is a
+minimal element of $\Pe$ and $\rho(T)=\rho(S)+1$ if $T$ covers $S$, that is, $S\le T$ and for any $R$ such that
+$S\le R\le T$ we have $R=T$ or $R=S$. 
+
+\begin{prop}\label{prop:graded} Let $f\in \Te_n$, then $\mathcal P_f$ is a graded poset
+with even rank $k\le n$. If $\rho$ is the rank function, then we have
+\[
+f=\sum_{S\in \mathcal P_f}(-1)^{\rho(S)}p_S.
+\]
+
+\end{prop}
+
+Then rank of $\Pe_f$ will be denoted by $r(f)$ and called the rank of $f$. Note that the
+assertion means that for $f\in \Te_n$, 
+\[
+\hat f_S=\begin{dcases} (-1)^{\rho(S)},& \text{if } S\in \Pe_f\\
+0, & \text{otherwise}.
+\end{dcases}
+\]
+
+
+\begin{proof} 
+We first note that the property in the statement is invariant under permutations and
+complements. Assume  the statement holds for $f$ and let us take any $\sigma\in S_n$.
+It is easily seen from Lemma \ref{lemma:Vbasis} that 
+$\widehat{f\circ \sigma}_S=\hat f_{\sigma(S)}$ so that $S\mapsto \sigma(S)$ is an
+isomprphism  of  
+$\mathcal P_{f\circ \sigma}$ onto $\mathcal P_{f}$. Hence if $\Pe_f$ is graded with rank
+function $\rho$, then $\Pe_{f\circ\sigma}$ is graded with the same rank, and rank function
+$\rho\circ \sigma$. By the assumption we have 
+\[
+f\circ\sigma=\sum_{S\in \Pe_f}(-1)^{\rho(S)}p_S\circ\sigma=\sum_{S\in
+\Pe_f}(-1)^{\rho(S)}p_{\sigma^{-1}(S)}=\sum_{S\in
+\Pe_{f\circ\sigma}}(-1)^{\rho\circ \sigma(S)}p_{S}.
+\]
+
+For the complement we write 
+\begin{equation}\label{eq:dual_rank}
+f^*=1-f+p_n=(1-\hat f_\emptyset)1 -\sum_{\substack{S\in \mathcal P_f\\ \emptyset \ne S,
+[n]\ne S}}
+(-1)^{\rho(S)}p_S+(1- \hat f_{[n]})p_n.
+\end{equation}
+
+If $\emptyset \in \Pe_f$, then $\emptyset$ is the least element of $\Pe_f$, so that 
+$\rho(\emptyset)=0$ and therefore $\hat f_\emptyset =
+(-1)^0=1$. Similarly, if $[n]\in \Pe_f$, then $[n]$ is the largest element in $\Pe_f$,
+hence it is the last element in any maximal chain. It follows that $\rho([n])=k$ and hence
+$\hat f_{[n]}=(-1)^k=1$ (since $k$ is even). 
+Therefore the equality \eqref{eq:dual_rank} implies that $\mathcal P_{f^*}$ differs from $\mathcal P_f$ only in the bottom  and
+top elements:  $\emptyset \in \mathcal P_f$ iff  $\emptyset \notin \mathcal P_{f^*}$
+and $p_n \in \mathcal P_f$ iff  $p_n \notin \mathcal P_{f^*}$. It follows that $\mathcal
+P_{f^*}$ is graded as well, with rank  equal to $k-2$, $k$ or $k+2$, which in any case
+is even. Furthermore, let $\rho^*$ be the rank function of $f^*$, then this also implies 
+that for all $S\in \Pe_f$, $S\notin \{\emptyset, [n]\}$, we
+have  $\rho^*(S)=\rho(S)\pm 1$, according to whether $\emptyset$ was added or removed. The
+statement now follows from \eqref{eq:dual_rank}. 
+
+We now proceed by induction on $n$. For $n=1$, we have $\mathcal L_1=\{\emptyset, [1]\}$ and
+$\Te_1=\{1,1^*\}$. For $f=1$, $\mathcal P_f=\{\emptyset\}$ is a singleton, which 
+is clearly a graded poset, with rank $k=0$ and trivial rank function $\rho$.  We have
+\[
+f = 1=p_\emptyset=(-1)^{\rho(\emptyset)}p_\emptyset.
+\]
+The proof for $f=1^*$ is similar, replacing $\emptyset$ by $[1]$.
+
+To finish the proof, assume that the statement is true for $m<n$ and let $f\in \Te_n$.
+Then $f$ is either a permutation of a product of some $f_1\in \Fe_{m}$ and $f_2\in \Te_{n-m}$, or a
+dual  of such an element. By the first part of the proof,  we only need to prove
+that the statement holds for $f=f_1\otimes f_2$. But in this case, by the induction
+assumption, $\Pe_{f_i}$ is graded with even rank $k_i$ and rank function $\rho_i$. We also
+have
+\[
+f=f_1\otimes f_2=\sum_{S\subseteq [m], T\subseteq [m-n]} (\widehat {f_1})_S(\widehat {f_2})_T p_Sp_T=
+\sum_{S\subseteq [m], T\subseteq [m-n]}(-1)^{\rho_1(S)+\rho_2(T)}p_{S\cup(m+T)}.
+\]
+It follows that $\Pe_f=\Pe_{f_1}\times \Pe_{f_2}$ is the product of the two posets, which
+is a graded poset with rank $k=k_1+k_2$ and rank function $\rho=\rho_1+\rho_2$. This
+proves the statement. 
+
+\end{proof}
+
+
+We next show that the input and output sets of $f\in \Te_n$ can be obtained from $\Pe_f$. For an
+index $i\in [n]$, let  $\Pe_{f,i}:=\{S\in \Pe_f,\ i\in S\}$. Note that $\Pe_{f,i}$ may be
+empty.
+
+\begin{prop}\label{prop:pfinput} Let $f\in \Te_n$ and $i\in [n]$. Then
+\begin{enumerate}
+\item If $\Pe_{f,i}\ne
+\emptyset$, then all minimal elements in $\Pe_{f,i}$ have the same rank, which will be
+denoted by $r_f(i)$. If $\Pe_{f,i}=\emptyset$, we put $r_f(i):=r(f)+1$. 
+\item $i\in O_f$ if and only if $\rho_f(i)$ is odd.
+
+\end{enumerate}
+\end{prop}
+
+
+
+\begin{proof} Since $\Pe_f\simeq \Pe_{f\circ\sigma}$, it is
+quite clear that the two properties are preserved by permutations. We will show that they
+are preserved by complementation. Observe first that $\Pe_{f,i}=\emptyset$ if and only if
+$\Pe_{f^*,i}=\{[n]\}$, since $\Pe_{f^*}$ differs from $\Pe_f$ only up to adding/removing the least and greatest elements
+$\emptyset$ and $[n]$. If $\Pe_{f,i}$ is empty, then $p_S(e^i)=1$ for all $S\in
+\Pe_f$, so that $f(e^i)=f(0)=1$ and $i\in O_f$, we also see that $r_f(i)=r(f)+1$ is odd.
+If $\Pe_{f,i}=[n]$, then $r_f(i)=\rho_f([n])=r(f)$ by definition of the rank, hence
+$r_{f}(i)$ is even. As we have seen, $i\in O_{f^*}=I_f$. 
+
+Let us assume that $\Pe_{f,i}$ is not equal to $\emptyset$ or $\{[n]\}$. Then the same is true
+for $\Pe_{f^*,i}$, in fact, it differs from $\Pe_{f,i}$ only up to adding/removing the
+maximal element $[n]$. Therefore both posets have the same minimal elements, and by the
+proof of Proposition \ref{prop:graded}, we have for any such minimal element $S$ that 
+$\rho_{f^*}(S)=\rho_f(S)\pm 1$, depending only on the fact whether $\emptyset
+\in \Pe_f$. This implies that the properties are preserved by complementation.  
+
+
+We will now proceed by induction on $n$ as before. Both  assertions are quite trivial for $n=1$,
+so assume the statements hold for $m<n$. It is enough to assume that
+$f=g\otimes h$ for some $g\in \Te_m$ and $h\in \Te_{n-m}$. 
+Suppose without loss of generality that $i\in [m]$, then clearly $\Pe_{g,i}\ne \emptyset$
+and the minimal elements in $\Pe_{f,i}$ are of the form  $S\cup T$, with $S$ minimal in
+$\Pe_{g,i}$ and $T$ a minimal in $\Pe_h$. Since $\rho_h(T)=0$ for any minimal element $T$, we have
+by the induction assumption
+\[
+\rho_f(S\cup T)=\rho_g(S)+\rho_h(T)=r_g(i).
+\]
+The statement (ii) follows from the fact that $i\in O_f$ if and only if $i\in O_g$.
+
+
+\end{proof}
+
+
+
+
+Napisat toto dolu lepsie,  definicie do prelim, ako vyzera f?
+
+\begin{prop}\label{prop:isom} Let $\ell :[m]\to [n]$ be a map. Let $f\in \Te_n$ and let
+\[
+g=\sum_{S\subseteq [n]} \hat f_S p_{\ell^{-1}(S)}.
+\]
+Then $g\in \Te_m$.
+
+\end{prop}
+
+Note that $S\mapsto \ell^{-1}(S)$ defines a homomorphism of the Boolean algebras $\mathcal
+L_n$ and $\mathcal L_m$, in particular, it preseves unions and intersections, and
+$\ell^{-1}(\emptyset)=\emptyset$, $\ell^{-1}([m])=[n]$. 
+
+
+\begin{proof} Let us denote $g=\ell(f)$. For any permutation $\sigma\in S_m$, we have
+\[
+g\circ\sigma=\sum_{S\subseteq [n]} \hat f_S p_{\ell^{-1}(S)}\circ\sigma=\sum_{S\subseteq [n]}
+\hat f_S p_{\sigma^{-1}(\ell^{-1}(S))}=(\ell\circ\sigma)(f),
+\]
+so that $\ell(f)\circ \sigma=(\ell\circ\sigma)(f)$. We can similarly show that for any
+$\tau\in S_n$, $\ell(f\circ\tau)=(\tau\circ\ell)(f)$.  We may therefore assume
+that either $f=f_1\otimes f_2$ for some $f_1\in \Te_k$, $f_2\in \Te_{n-k}$ or $f$ is the
+dual of such a product. We then have
+\[
+\ell(f)=\sum_{\substack{S\subseteq [k]\\T\subseteq [n-k]}} (\hat f_1)_S (\hat
+f_2)_Tp_{\ell^{-1}(S\cup (k+T))}=\sum_{\substack{S\subseteq [k]\\ T\subseteq [n-k]}} (\hat f_1)_S (\hat
+f_2)_Tp_{\ell^{-1}(S)\cup \ell^{-1}(k+T)}
+\]
+Composing by a suitable permutation if
+necessary, we may assume that there are some maps $\ell_1:[k_1]\to [k]$ and
+$\ell_2:[k_2]\to [n-k]$ such that $\ell^{-1}(S)=\ell^{-1}_1(S)$
+for $S\subseteq [k]$ and $\ell^{-1}(k+T)=k_1+\ell^{-1}_2(T)$, $T\subseteq [n-k]$. It follows that 
+\[
+\ell(f)=\ell_1(f_1)\otimes \ell_2(f_2).
+\]
+Since $\ell^{-1}(\emptyset)=\emptyset$ and $\ell^{-1}([n])=[m]$, we can infer from
+\eqref{eq:dual_rank} that $\ell(f^*)=\ell(f)^*$. Since clearly $\ell(1)=1$, we can prove
+the statement  by induction on $n$ as before.
+
+
+\end{proof}
+
+
+
+\subsection{Chains and combs}
+
+ Let $\Pe=\{S_1\subsetneq S_2\subsetneq \dots \subsetneq
+S_N\}$ be a chain in $\mathcal L_n$. Then  $\Pe$ is graded with rank $N-1$
+and rank function $\rho(S_i)=i-1$. 
+
+\begin{prop}\label{prop:chains} For a chain   $\Pe=\{S_1\subsetneq S_2\subsetneq \dots \subsetneq
+S_N\}$, the function  
+\[
+f=f_\Pe:=\sum_i (-1)^{i-1} p_{S_i}
+\]
+is a type function if and only if $N$ odd.
+
+\end{prop}
+
+\begin{proof}
+By Proposition \ref{prop:graded}, if $f\in \Te_n$, then the rank of $f$ must be even, so
+that $N$ must be odd. 
+We will show that the converse is true. We proceed by induction on $N$. For $N=1$, we have
+$f=p_{S_1}\in \Te_n$. Assume that the statement holds for all odd numbers $M<N$ and let
+$\Pe$ be a chain as above. Then we have 
+\[
+f=p_{S_1}\otimes g\otimes 1_{[n]\setminus S_N}
+\]
+where $g$ is the function for the chain $\emptyset=S'_1\subsetneq S'_2\subsetneq \dots
+\subsetneq S'_N$, with $S'_i:=S_i\setminus S_1$. Since $f$ is a type function if $g$ is, this shows that we may assume that 
+the chain contains $\emptyset$ and $[n]$.  But then 
+\[
+f=1+\sum_{j=2}^{N-1} (-1)^{j-1}p_{S_j}+ p_n 
+\]
+and
+\[
+f^*=1-f+p_n=\sum_{j=1}^{N-2} (-1)^{j-1}p_{T_j},
+\]
+where $T_j:=S_{j+1}$. By the induction assumption $f^*\in \Te_n$, hence also $f=f^{**}\in
+\Te_n$.
+\end{proof}
+
+
+As we can see from Example \ref{exm:T2}, all elements in $\Te_2$ are chains. This is
+also true for $n=3$. Indeed, up to a permutation that does not change the chain structure, 
+any $f\in \Te_3$ is either a product of two elements $g\in \Te_2$ and $h\in \Te_1$,
+or the dual of such a  product. Since $g$ must be a chain and $|\Pe_h|=1$, their product
+must be a chain as well. Taking the dual of a chain only adds/removes the least/largest
+elements, so the dual of a chain must be a chain as well.
+
+We now show that chains correspond to important higher order objects. Let $k$ be odd and let $\Pe=\{\emptyset\subsetneq S_1\subsetneq \dots
+\subsetneq S_k\subsetneq [n]\}$. Let $f=f_\Pe$, then $f$ is a type function. By
+Proposition \ref{prop:type_hom}, for any first order objects $X_1,\dots,X_n$, $Y=X_f$ is a
+higher order object such that $Y\sim\{Y_1,\dots,Y_n\}$. 
+
+\begin{prop}\label{prop:chains_combs}  Let $T_1=S_1$, $T_i=S_i\setminus S_{i-1}$ for
+$i=1,\dots, k$ and $T_{k+1}=S_k^c$. For $S\subseteq [n]$, we denote  $Y_S:=\otimes_{i\in
+S}Y_i$. Then for  $k=1$, $Y\simeq [Y_{T_2},Y_{T_1}]$ and for any odd $k>1$, 
+ \[
+Y\simeq [Y_{T_{k+1}},[[Y_{T_k},[[....],Y_{T_2}]],Y_{T_1}]].
+ \]
+\end{prop}
+
+Remark (quantum) comb.
+
+\begin{proof} It is easily checked by Proposition \ref{prop:fh_outputs} that $T_i\subseteq
+O_f$ if  $i$ is odd and $T_i\subseteq I_f$ otherwise. We therefore have 
+\[
+Y_{T_i}=\begin{dcases} \otimes_{i\in T_i}X_i,  & \text{ if } i\text{ is odd},\\
+\otimes_{i\in T_i}\tilde X_i,& \text{ if }i\text{ is even}.
+\end{dcases}
+\]
+Let $k=1$, then $f=1-p_{T_1}+p_n$, and $f^*=p_{T_1}=p_{T_1}\otimes 1_{T_2}$. Then
+$X_f=\tilde X_{f^*}^*$, and we see that $\tilde X_{f^*}= X_{T_1}^*\otimes \tilde
+X_{T_2}=Y^*_{T_1}\otimes Y_{T_2}$. It
+follows that $X_f= (Y_{T_1}^*\otimes Y_{T_2})^*\simeq [Y_{T_2}, Y_{T_1}]$, where the
+isomorphism is given by swapping the spaces $V_{T_1}^*$ and $V_{T_2}$. Assume the assertion is
+true for $k-2$. 
+As in the proof of Proposition \ref{prop:chains}, we see that 
+\[
+f^*=\sum_{i=1}^k (-1)^{i-1}p_{S_i}=p_{T_1}\otimes g\otimes 1_{T_{k+1}}
+\]
+where $g=1-\sum_{i=2}^{k-1}(-1)^{i-1}p_{S'_i}+ p_{S_k'}$ is the function for the chain
+$\Pe'=\{\emptyset\subsetneq S_2'\subsetneq \dots\subsetneq S'_k\}$ in $S'_k\simeq [n']$ for
+ $n'=|S'_k|$, $S_i'=S_i\setminus S_1=\cup_{j=2}^i T_j$. We have 
+\[
+X_f=\tilde X^*_{f^*}=(X_{Y_1}^*\otimes \tilde X_g\otimes \tilde X_{T_{k+1}})^*\simeq (\tilde
+X_{T_{k+1}}\otimes [\tilde X_g,X_{T_1}]^*)^*=[\tilde X_{T_{k+1}},[\tilde X_g,
+X_{T_1}]].
+\]
+Here we have used the fact that $\tilde X_{f^*}$ is constructed from $\tilde
+X_1,\dots,\tilde X_n$. By induction assumption, we get
+\[
+[\tilde X_{T_{k+1}},[\tilde X_g,X_{T_1}]]= [\tilde X_{T_{k+1}},[[X_{T_k},[[....],\tilde
+X_{T_2}]],X_{T_1}],
+\]
+which is as required.
+
+
+
+\end{proof}
+
+
+
+
+\subsection{Separating type functions}
+
+
+We say that a function $f\in \Fe_n$ separates $i,j\in [n]$ if $f\neq f^{ij}$, where
+$f^{ij}\in \Fe_n$ is such that for any $s\in \{0,1\}^n$,  $f^{ij}(s)=f(\hat s^{ij})$,
+here $\hat s^{ij}$ is the string obtained from $s$ by replacing both $s_i$ and $s_j$ by
+$s_i\vee s_j$. Equivalently, there exists some $S\in \Pe_f$ such that $S\cap\{i,j\}$ is a
+singleton. 
+
+To see this equivalence, note that 
+$p_S(s)=p_S(\hat s^{ij})$ whenever $\{i,j\}\subseteq S$ or $\{i,j\}\cap S=\emptyset$. 
+Hence, if $f$ separates $i$ and $j$, there must be at least one $S\in \Pe_f$ that contains one of
+the indices but not the other. Conversely, let $S$ be 
+minimal with the property that, say, $i\in S$ and $j\notin S$. Let $s$ be the string such
+that $s_k=0$ if and only if $k\in S$, in particular, $s_i=0$, $s_j=1$ and $s_i\vee s_j=1$. Then
+\[
+f(s)=\sum_{T\subseteq S} \hat f_Tp_T(s)=\sum_{T\subseteq S\setminus\{i\}}\hat
+f_Tp_T(s)+\hat f_Sp_S(s),
+\]
+the second equality follows from the fact that $S$ is minimal set with $\hat f_S\ne 0$
+containing $i$ but not $j$. On the other hand, 
+\[
+f(\hat s^{ij})=\sum_{T\subseteq S\setminus\{i\}} \hat f_T(s),
+\]
+so that $f(s)-f^{ij}(s)=\hat f_S\ne 0$.
+
+
+
+\begin{lemma}\label{lemma:separateij} Let $f\in \Fe_n$ and assume that $f$ does not separate $i$ and $j$. Then
+there is some $g\in \Fe_{n-1}$ such that $f(s)=g(s^{ij}(s_i\vee s_j))$. We have
+$\Pe_f\simeq \Pe_g$ (as posets) and $f\in \Te_n$ if and only if $g\in \Te_{n-1}$.
+
+
+
+
+\end{lemma}
+
+
+\begin{proof} We may assume $i=n-1$, $j=n$. Put $g(s_1\dots s_{n-1}):= f(s_1\dots
+s_{n-1}s_{n-1})$. Then clearly $g\in \Fe_{n-1}$ and for $s\in \{0,1\}^n$, 
+\[
+g(s_1\dots s_{n-2}(s_{n-1}\vee s_n))=f(\hat s^{n(n-1)})=f(s).
+\]
+Since any $S\in \Pe_f$ either contains none of $n-1,n$ or both of them, we have
+\begin{align*}
+g(s_1\dots s_{n-1})&=f(s_1\dots s_{n-1}s_{n-1})=\sum_{S\subseteq [n]} \hat f_S p_S(s_1
+\dots s_{n-1}s_{n-1})\\
+&= \sum_{S\subseteq [n-2]}\hat f_Sp_S(s_1\dots s_{n-1})+\sum_{\substack{S\subseteq [n]\\
+\{n-1,n\}\subseteq S}} \hat f_Sp_S(s_1\dots s_{n-1}s_{n-1})\\
+&= \sum_{S\subseteq [n]} \hat f_Sp_{S\setminus\{n\}}(s_1\dots s_{n-1}).
+\end{align*}
+Note that for $S\subseteq [n]$, we have $S\setminus \{n\}=\ell^{-1}(S)$, where $\ell$ is
+the inclusion map $[n-1]\hookrightarrow [n]$. It follows by Proposition \ref{prop:isom}
+that if $f\in \Te_n$ then $g\in \Te_{n-1}$. Moreover, $\ell^{-1}$ is not injective on
+$\mathcal L_n$, since $\ell$ is not surjective, but its restriction to $\Pe_f$ is, so that 
+$\Pe_f\simeq \Pe_g$. 
+
+Assume $g\in\Te_{n-1}$, then since $\overline {s_{n-1}\vee s_n}=\bar s_{n-1}\bar s_n$, we
+get
+\begin{align*}
+f(s)&=\sum_{T\subseteq [n-1]}\hat g_Tp_T(s_1\dots s_{n-2}(s_{n-1}\vee s_n))\\
+&= \sum_{T\subseteq [n-2]}\hat g_Tp_T(s)+ \sum_{T\subseteq [n-1], n-1\in T}\hat
+g_Tp_{T\cup \{n\}}(s)=\sum_{T\subseteq [n-1]} \hat g_Tp_{\ell_1^{-1}(T)}(s),
+\end{align*}
+were $\ell_1: [n]\to [n-1]$ is the map such that $\ell_1(i)=i$ for $i\ne n$ and
+$\ell_1(n)=n-1$. Again, using Proposition \ref{prop:isom}, this implies that $f\in \Te_n$.
+
+
+
+\end{proof}
+
+We say that $f$ is separating, or separates the poits of $[n]$, if it separates all pairs $i,j\in [n]$.
+Notice that in this case both $\cap \Pe_f$ and $(\cup\Pe_f)^c$ are at most singletons.
+
+
+\begin{theorem}\label{thm:separates} For any $f\in \Te_n$ there is some $g\in \Te_k$ such
+that $g$ is separating, $\Pe_f\simeq \Pe_g$ and there are subsets $S_1,\dots, S_l$ in
+$[n]$ such that $f(s)=g(s^{\cup_j S_j}(\vee_{j\in I_1} s_j)\dots (\vee_{j\in I_l} s_j))$.
+
+\end{theorem}
+
+\begin{proof} We can construct the function $g$ by repeated application of Lemma
+\ref{lemma:separateij}, glueing together nonseparable points until, after a finite number
+of steps, none are left, so that the resulting function $g$ separates the points of $m$.
+
+\end{proof}
+
+Let us remark that  the higher order object constructed from $f$ and a set of first order
+objects $X_1,\dots, X_n$ is isomorphic to the object constructed from $g$ and a sequence
+$Z_1,\dots, Z_k$, which is obtained by removing the first order objects $X_i$, $i\in S_j$
+and replacing them by their tensor product
+$\otimes_{i\in S_j} X_i$, for any set of nonseparable indices $S_j$.
+
+
+\subsubsection{Separating chains}
+
+
+We will describe all separating chains, up to permutations. 
+Clearly, a chain $\Pe=\{S_1\subsetneq \dots \subsetneq
+S_N\}$ in $\mathcal L_n$  is
+separating if and only if  $S_i\setminus S_{i-1}$ is a singleton for $i=2,\dots, N$ and
+both $S_1$ and $S_N^c$ are at most singletons (that is, these might be also empty). 
+We have seen that the correspnding function is in $\Te_n$ if and only if $N=r(\Pe)+1$ is
+odd. By the separating property, we must have $n-1\le N\le n+1$, depending on whether
+$S_1$ or $S_N^C$ are empty or not.
+ Since $N$ must be  odd, we see that the only possibilities are
+\begin{align*}
+N&=n-1 \text{ or } N=n+1  & \text{ if $n$ is even}\\
+N&=n & \text{ if $n$ is odd}.
+\end{align*}
+For even $n$, put
+\[
+\gamma_n(s):=\sum_{l=0}^n (-1)^lp_{[l]}(s)=1-\bar s_1+\bar s_1\bar s_2-\dots +\bar
+s_1\dots \bar s_n.
+\]
+Then $\gamma_n$  is a separating chain in $\Te_n$ and the corresponding sets of input and output
+indices  are
+\[
+I=\{2j, j=1,\dots n/2\},\qquad O=\{2j-1,\ j=1,\dots n/2\}.
+\]
+Up to a permutation, any separating chain in $\Te_n$ is of the form 
+\[
+f=\gamma_n \text{ or }\   f=p_1\otimes\gamma_{n-2}\otimes 1_1.
+\]
+These two chains  are easily seen to be each others complement.
+Similarly, if $n$ is odd, then (up to permutation) any separating chain in $\Te_n$  must either of the two
+comlementary  forms
+\[
+f=p_1\otimes \gamma_{n-1}  \text{ or }\  f=\gamma_{n-1}\otimes 1_1.
+\]
+ From this and Example \ref{ex:chains}, we see
+that there are basically  two separating elements in $\Te_2$:  
+\[
+f=\gamma_2,\qquad f^*=p_1\otimes 1_1.
+\]
+Similarly, there are basically  two complementary forms of  separating elements in $\Te_3$: 
+\[
+f=p_1\otimes \gamma_2,\qquad f^*= \gamma_2\otimes 1_1. 
+\]
+
+
+
+
+
+
+
+
+\end{document}
+\end{document}
+
+
+In other words, the outputs of $f$ are precisely those indices for which the sum of the
+coefficients $\hat f_S$ over the facet $\{S\in \mathcal L_n,\ i\notin S\}$ is 1.
+
+
+
+
+
 
 
 
