@@ -3,7 +3,9 @@ title: To referee
 
     
 * Due [20.9.2024](REF_lachman2024)     
-* Due [22.9.2024](REF_mayumi2024)     
+* Due [22.9.2024](REF_mayumi2024)    
+* Due [24.9.2024](REF_dallarno2024) (revision)    
+* Due [20. 10. 2024](REF_sreekumar2024) (revision)   
 
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??

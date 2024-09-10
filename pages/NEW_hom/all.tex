@@ -9,7 +9,7 @@
 \usepackage{doi}
 \usepackage[margin=0.8in]{geometry}
 \usepackage[all]{xy}
-
+\usepackage{mathrsfs} 
 %\textheight23cm \topmargin-20mm  
 %\textwidth175mm  
 %\oddsidemargin=0mm
@@ -47,6 +47,8 @@
 \def \Tr{\mathrm{Tr}\,}
 \def\Se {\mathcal S}
 \def\supp{\mathrm{supp}}
+\def\permut{\mathscr{S}}
+
 \def\<{\langle\,}
 \def\>{\,\rangle}
 \def \BS{\mathrm{BS}}
@@ -218,15 +220,18 @@ the function $f\otimes g\in \Fe_{m+n}$ as
 As it is, this tensor product is not symmetric, but there is a permutation $\sigma\in S_{m+n}$ such that 
 $(g\otimes f)=(f\otimes g)\circ \sigma$ for any $f\in \Fe_m$ and $g\in \Fe_n$.
 
-\begin{lemma}\label{lemma:fproduct} For $f\in \Fe_m$, $g\in \Fe_n$, we have
-\[
-f\otimes g\le (f^*\otimes g^*)^*.
-\]
-Equality holds if and only if $f$ and $g$ are either both the  top or both the bottom elements in
-$\Fe_m$ resp. $\Fe_n$.
+\begin{lemma}\label{lemma:fproduct} For $f\in \Fe_m$, $g,h\in \Fe_n$, we have
+\begin{enumerate}
+\item[(i)] $f\otimes g\le (f^*\otimes g^*)^*$, with equality if and only if $f$ and $g$ are either 
+both the  top or both the bottom elements in
+$\Fe_m$ resp. $\Fe_n$
+\item[(ii)] $f\otimes (g\vee h)= (f\otimes g)\vee (f\otimes h)$, $f\otimes (g\wedge h)=
+(f\otimes g)\wedge (f\otimes h)$.
+\end{enumerate}
+
 \end{lemma}
 
-\begin{proof} The inequality is easily  checked, since $(f\otimes g)(st)$ can be 1 only if
+\begin{proof} The inequality in (i) is easily  checked, since $(f\otimes g)(st)$ can be 1 only if
 $f(s)=g(t)=1$. If both $s$ and $t$ are the zero strings, then $st=0_{m+n}$ and both sides
 are equal to 1. Otherwise, the condition $f(s)=g(t)=1$ implies that $(f^*\otimes
 g^*)(st)=0$, which implies that the right hand side must be 1. If $f$ and $g$ are both
@@ -240,7 +245,12 @@ $f(s)=0$. But then $s\ne 0$ and for any $t$,
 which implies that $g(t)=0$ for all $t\ne0$, that is, $g=p_n$. By the same argument,
 $f=p_m$ if $g\ne 1$, which implies that either $f=1$ and $g=1$, or $f=p_m$ and $g=p_n$.
 
-
+To prove (ii), notice that for $s\in \{0,1\}^n$ and $t\in \{0,1\}^m$, 
+\[
+f(s)(g(t)\vee h(t))=
+f(s)(g(t)+h(t)-g(t)h(t))=f(s)g(t)+f(s)h(t)-f(s)^2g(t)h(t)=f(s)g(t)\vee f(t)h(t),
+\]
+note that $f(t)^2=f(t)$. The statement for $\wedge$ is clear from $(g\wedge h)(t)=g(t)h(t)$.
 
 \end{proof}
 
@@ -1470,7 +1480,41 @@ which is as required.
 \end{proof}
 
 
+\subsection{Connecting chains: the causal product}
 
+
+Let $\Pe_1=\{S_1\subsetneq \dots\subsetneq S_M\}$ be a chain in  $[m]$ and
+$\Pe_2=\{T_1\subsetneq \dots \subsetneq T_N\}$ a chain in $[n]$. We may append the
+two chains into  a single  chain $\Pe$ in $[m+n]$ in an obvious way, but we wish to do it
+in a way that all the outputs in $\Pe_1$ or $\Pe_2$ will still be outputs in $\Pe$,
+similarly for inputs. 
+
+\begin{lemma} Let  $\Pe_1$ and $\Pe_2$ be chains in $[m]$ and $[n]$ as above, with corresponding type
+functions $f_1$ and $f_2$. Then 
+\[
+f=f_1\otimes 1_n+p_m\otimes (f_2-1_n)
+\]
+is a chain in $[m+n]$ such that $O_f=O_{f_1}\cup (O_{f_2}+m)$, $I_f=I_{f_1}\cup
+(I_{f_2}+m)$. 
+
+\end{lemma}
+
+ROZMYSLIET SI TO PORIADNEJSIE!
+\begin{proof} We have
+\[
+f_1=\sum_{j=1}^M(-1)^{j-1}p_{S_j},\qquad f_2=\sum_{k=1}^N(-1)^{k-1}p_{T_k},
+\]
+so that
+\[
+f=\sum_{j=1}^M(-1)^{j-1}p_{S_j}
+\]
+\end{proof}
+
+
+
+
+
+---
 
 \subsection{Separating type functions}
 
@@ -1594,1319 +1638,284 @@ I=\{2j, j=1,\dots n/2\},\qquad O=\{2j-1,\ j=1,\dots n/2\}.
 \]
 Up to a permutation, any separating chain in $\Te_n$ is of the form 
 \[
-f=\gamma_n \text{ or }\   f=p_1\otimes\gamma_{n-2}\otimes 1_1.
+\gamma_{0,n}:=\gamma_n \text{ or }\   \gamma_{1,n}:=p_1\otimes\gamma_{n-2}\otimes 1_1.
 \]
 These two chains  are easily seen to be each others complement.
 Similarly, if $n$ is odd, then (up to permutation) any separating chain in $\Te_n$  must either of the two
 comlementary  forms
 \[
-f=p_1\otimes \gamma_{n-1}  \text{ or }\  f=\gamma_{n-1}\otimes 1_1.
+\gamma_{0,n}:=p_1\otimes \gamma_{n-1}  \text{ or }\  \gamma_{1,n}=\gamma_{n-1}\otimes 1_1.
 \]
- From this and Example \ref{ex:chains}, we see
-that there are basically  two separating elements in $\Te_2$:  
+ From the remarks below Proposition \ref{prop:chains}, we see that for $n=2$ or 3, all separating type
+ functions (up to permutations)  are of this form.
+
+
+
+Let $\Pe_1=\{S_1\subsetneq \dots\subsetneq S_N\}$ be a chain in  $[n]$ and
+$\Pe_2=\{T_1\subsetneq \dots \subsetneq T_M\}$ a chain in $[m]$. Then we can append the
+two chains into  a single  chain $\Pe$ in $[m+n]$, in an obvious way. Namely,  assuming that
+$T_1=\emptyset$, then we may put $\Pe_2$ after $\Pe_1$ as $\Pe=\{S_1\subsetneq \dots \subsetneq S_N\subsetneq S_N\cup
+T_2\subsetneq \dots \subsetneq S_N\cup T_M\}$. If the corresponding functions are $f_1$
+and $f_2$, then the function related to $\Pe$ is
 \[
-f=\gamma_2,\qquad f^*=p_1\otimes 1_1.
+f=f_1\otimes 1_m+p_{S_N}\otimes (f_2-1_m).
 \]
-Similarly, there are basically  two complementary forms of  separating elements in $\Te_3$: 
+Conversely, any chain can be subdivided into two or more chains, as above. Let now $n$ be
+even and let $n=n_1+\dots+ n_k$ be any subdivision into even numbers $n_i$. Then 
+\begin{equation}\label{eq:gamma_decomp}
+\gamma_n=\gamma_{n_1}+p_{n_1}\otimes (\gamma_{n_2}-1)+p_{n_1}\otimes p_{n_2}\otimes
+(\gamma_{n_3}-1)+\dots+ (\otimes_{i=1}^{k-1}p_{n_i})\otimes (\gamma_{n_k}-1) 
+\end{equation}
+(we skip the obvious tensorings with the constant $1$). We can append the strings
+$\gamma_{n_1},\dots, \gamma_{n_k}$ in any order.  
+
+We introduce the following notations. Let $N_j:=\sum_{i\le j} n_i$, $j=0,1,\dots,k$. 
+Let $\Lambda_1,\dots,\Lambda_k$ be the subdivision of $\{1,\dots, n\}$ corresponding to
+$n=n_1+\dots +n_k$, so that  $\Lambda_i=\{N_{i-1}+1,\dots,
+N_i\}$, $i=1,\dots,k$. Let  $s=s^1\dots s^k$ be the corresponding subdivision of the
+string $s\in \{0,1\}^n$, so $s^j=\Pi_{i\in \Lambda_j}s_i$.
+For $\pi\in \permut_k$, let $\sigma_\pi$ be the permutation of
+$\{1,\dots,n\}$ obtained by permuting the $k$ blocks $\Lambda_1,\dots, \Lambda_k$ by
+$\pi$,  so that 
 \[
-f=p_1\otimes \gamma_2,\qquad f^*= \gamma_2\otimes 1_1. 
+\sigma_\pi(s)=s^{\pi(1)}\dots s^{\pi(k)}.
 \]
 
+\begin{remark} Combs and causal order! Different ordering - composing  with a permutation.
+Also the causal tensor product of...
+
+\end{remark}
 
 
 
+\begin{lemma} 
+We have $\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k}=\bigwedge_{\pi\in \permut_k}
+\gamma_n\circ \sigma_\pi$.
+\end{lemma}
 
-
-
-
-\end{document}
-\end{document}
-
-
-In other words, the outputs of $f$ are precisely those indices for which the sum of the
-coefficients $\hat f_S$ over the facet $\{S\in \mathcal L_n,\ i\notin S\}$ is 1.
-
-
-
-
-
-
-
-
-
-
-The above theorem shows that any element $Y\sim\{X_1,\dots,X_n\}$ is (up to a possible permutation
-of the involved first order objects)
-determined by a unique boolean function $f=f_Y:\{0,1\}^n\to \{0,1\}$. . Functions
-obtained in this way will be called type functions and studied in more detail in
-Section \ref{sec:type}. 
-It is rather obvious that not all boolean functions are type functions, for
-example, for $Y\sim \{X\}$ we only have $Y=X$ and $Y=X^*$, which corresponds to constant
-1 and the negation, respectively. 
-
-In general, one can see from the above proof that we
-necessarily have 
+\begin{proof} For  a  string $s\in \{0,1\}^n$,  let us    denote
+$c_i:=\gamma_{n_i}(s^{i})$. For any $\pi\in \permut_k$,  we get using
+\eqref{eq:gamma_decomp} for $n=n_{\pi(1)}+\dots +n_{\pi(k)}$, 
 \[
-f\in \Fe_n=\{g:\{0,1\}^n\to \{0,1\},\ g(0)=1\}
+\gamma_n\circ\sigma_\pi(s)=c_{\pi(1)}+p_{n_{\pi(1)}}(s^{\pi(1)})(c_{\pi(2)}-1)+\dots
++ \Pi_{i=1}^{k-1}p_{n_{\pi(i)}}(s^{\pi(i)})(c_{\pi(k)}-1),
 \]
-for any type function $f$. Note that the set $\Fe_n$ is a boolean algebra, with smallest
-element $1^*$ and largest element $1$, see Section
-\ref{sec:}. Pick any element $f\in \Fe_n$ and any permutation $\pi\in S_n$ and let
-$\sigma_\pi: X_1\otimes\dots\otimes  X_n\to X_{\sigma^{-1}(1)}\otimes \dots X_{\sigma^{-1}(n)}$ be the
-corresponding symmetry. Keeping the notations in \eqref{eq:subspaces},  let 
+while on  the left hand side of the equality in the lemma, we have
 \[
-S_{\pi,f}:=\bigoplus_{s\in \{0,1\}^n} f(s)\sigma_\pi(L_s),\qquad
-A_{\pi,f}:=S_{\pi,f}\cap\{\sigma_\pi(\tilde a_Y)\}^\sim,\qquad
-V_\pi:=\sigma_\pi(\otimes_{j}V_{j}).
+\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k}(s)=c_1\dots c_k.
 \]
+Since $c_i\in \{0,1\}$, we have $c_i^2=c_i$ so that  $c_i(c_i-1)=0$ and since the infimum
+of two elements in $\Fe_n$ is their product, we get
+\[
+(\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k})\wedge (\gamma_n\circ\sigma_\pi)(s)=
+c_1\dots c_k=(\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k})(s),
+\]
+so that $\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k}\le \gamma_n\circ \sigma_\pi$. 
 
-\begin{prop}\label{prop:xpif} Let $f,f_1,f_2\in \Fe_n$, $\pi,\pi_1,\pi_2
-\in S_n$. Then 
+We now peoceed by induction on $k$. The statement is trivial for $k=1$. Assume that
+it holds for $k$. Let $\pi\in \permut_k$ and let $\pi'\in \permut_{k+1}$ be a permutation
+that fixes $k+1$ and permutes the other elements by $\pi$. We then have
+\[
+\gamma_n=\gamma_{N_{k}}+p_{N_k}\otimes (\gamma_{n_{k+1}}-1),\qquad
+\gamma_n\circ\sigma_{\pi'}=\gamma_{N_k}\circ \sigma_\pi+p_{N_k}\otimes
+(\gamma_{n_{k+1}}-1),
+\]
+since $p_{N_k}$ is invariant under permutations. Let $\pi''\in \permut_{k+1}$ be given by
+postcomposition of $\pi'$ by the right shift permutation $(23\dots1)$, that is,
+$\{1,\dots k+1\} \mapsto \{k+1, \pi(1),\dots, \pi(k)\}$. Then 
+\[
+\gamma_n=\gamma_{n_{k+1}}+p_{n_{k+1}}\otimes (\gamma_{N_k}-1),\qquad
+\gamma_n\circ\sigma_{\pi''}=\gamma_{n_{k+1}}+p_{n_{k+1}}\otimes
+(\gamma_{N_k}\circ\sigma_\pi-1).
+\]
+Applying to any string $s$ and multiplying, we obtain that 
+\[
+\gamma_n\circ\sigma_{\pi'}\wedge
+\gamma_n\circ\sigma_{\pi''}=\gamma_{N_k}\circ\sigma_\pi\otimes \gamma_{n_{k+1}},
+\]
+for this we note that since $p_{n_{k+1}}$ is the least element in $\Fe_{n_k+1}$, we have
+$p_{n_{k+1}}(t)\gamma_{n_{k+1}}(t)=p_{n_{k+1}}(t)$ for any string $t\in
+\{0,1\}^{n_{k+1}}$. Using this and the first part of the proof,
+\begin{align*}
+\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k+1}&\le \bigwedge_{\pi'\in \permut_{k+1}}
+\gamma_n\circ \sigma_{\pi'}\le \bigwedge_{\pi\in
+\permut_k}(\gamma_{N_k}\circ\sigma_\pi\otimes \gamma_{n_{k+1}})=(\bigwedge_{\pi\in
+\permut_k}\gamma_{N_k}\circ\sigma_\pi)\otimes \gamma_{n_{k+1}}\\
+&=\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k+1}.
+\end{align*}
+
+\end{proof}
+
+Let us now describe products of the form 
+\[
+\gamma_{u_1,n_1}\otimes\dots\otimes \gamma_{u_k,n_k},
+\]
+with $u_i\in \{0,1\}$, $n=n_1+\dots+n_k$. Let $U$ be the set of $i$ such that $n_i$ is odd. Notice that such a product 
+is separating if and only if one of the following is true:
 \begin{enumerate}
-\item[(i)]  $X_{\pi,f}:=(V_\pi, A_{\pi,f})$ is an
-object in $\Af$.
-\item[(ii)] For the smallest and the largest element, we have  
-\[
-X_{\pi,1^*}=(V_\pi, \{\sigma_\pi(a_Y)\}),\qquad X_{\pi,1}=(V_\pi,\{\sigma_\pi(\tilde
-a_Y)\}^\sim).
-\]
-\item[(iii)] If $f_1\le f_2$, then 
-$\sigma_{\pi_2}\circ\sigma_{\pi_1}^{-1}$ is a morphism $X_{\pi_1,f_1}\to X_{\pi_2,f_2}$ in
-$\Af$.
-\item[(iv)] The diagram
-\[
-\xymatrixcolsep{5pc}\xymatrixrowsep{3pc}\xymatrix{
-X_{\pi,f_1\wedge
-f_2}\ar[r]^{\sigma_{\pi_1}\circ\sigma^{-1}_\pi}
-\ar[d]_{\sigma_{\pi_2}\circ\sigma^{-1}_\pi} & X_{\pi_1,f_1}\ar[d]^{\sigma_\pi^{-1}} \\
-X_{\pi_2,f_2} \ar[r]_{\sigma_\pi^{-1}}& X_{id,1} 
-}
-\]
-is a pullback.
-\item[(v)] The diagram
-\[
-\xymatrixcolsep{5pc}\xymatrixrowsep{3pc}\xymatrix{
-X_{id,1^*}\ar[r]^{\sigma_{\pi_1}}
-\ar[d]_{\sigma_{\pi_2}} & X_{\pi_1,f_1}\ar[d]^{\sigma_\pi\circ\sigma_{\pi_1}^{-1}} \\
-X_{\pi_2,f_2} \ar[r]_{\sigma_\pi\circ\sigma_{\pi_1}^{-1}}& X_{\pi, f_1\vee f_2} 
-}
-\]
-is a pushout.
+\item $U=\emptyset$ and at most one of the $u_i$ is 1,
+\item $U=\{i\}$ and $u_j=0$ for $j\ne i$,
+\item $U=\{i,j\}$, $u_i\ne u_j$ and $u_k=0$ for $k\notin U$. 
 \end{enumerate}
+In any case, up to a permutation, the above product is of the form
+\begin{align*}
+\gamma_{u_1,n_1}\otimes\dots\otimes \gamma_{u_k,n_k}&=p_{n_0}\otimes (\gamma_{n_1}\otimes
+\dots\otimes \gamma_{n_k})\otimes 1_{n_{n+1}}=p_{n_0}\otimes (\bigwedge_{\pi\in \permut_k}
+\gamma_n\circ \sigma_\pi)\otimes 1_{n_{k+1}}\\ &=\bigwedge_{\pi\in \permut_k}p_{n_0}\otimes
+(\gamma_n\circ \sigma_\pi)\otimes 1_{n_{k+1}}.
+\end{align*}
+In the separating case, $n_0,n_{k+1}\le 1$, so that the
+product is an infimum over separating chains obtained from $\gamma_{n_k,n+n_0+n_k}$ by
+permutations.
 
+Let   $K\subset [n]$ and let $m:=n-|K|$. For $s\in \{0,1\}^m$, we define a
+string $s_K\in \Fe_n$ as follows. Let $K=\{i_1<\dots<i_l\}$ and put $i_0=0$,
+$i_{l+1}=n+1$, then
+\[
+(s_K)_i=\begin{dcases} 0, & \text{if } i=i_j,\ j=1,\dots,l\\
+s_{i-j}, & \text{if } i_j<i<i_{j+1},\ j=0,\dots, l.
+\end{dcases}
+\]
+For example, if $n=5$, $K=\{2,4\}$, then $s_K=s_10s_20s_3$. For a function $f\in \Fe_n$,
+we define a function $f_K\in \Fe_m$ as
+\begin{equation}\label{eq:restricted_chain}
+f_K(s)=f(s_K)=\sum_{S\subseteq [n]} \hat f_Sp_{S\setminus K}(s).
+\end{equation}
+We also have
+\[
+(f_K)^*(s)=1(s)-f_K(s)+p_m(s)=1(s_K)-f(s_K)+p_n(s_K)=f^*(s_K)=f^*_K(s)
+\]
+and
+\[
+f_K\otimes g_L(st)=f\otimes g(s_Kt_L)=f\otimes g((st)_{K\cup n+L}).
+\]
+It is not clear that $f_K\in \Te_m$ if $f\in \Te_n$, but it is easily seen to be true for
+chains. Indeed, one can see from \eqref{eq:restricted_chain} that if $f$ is a chain of odd length, then so is also $f_K$. One can also check that $X_{f_K}$ can be obtained from $X_f$ by replacing the objects
+corresponding to $i\in K$ by the trivial first order object $I$.
+
+\begin{prop}\label{prop:supinf} For any $f\in \Te_m$ there is some $n\ge m$, a separating
+$g\in \Te_n$ and $K\subset [n]$,  such that $f=g_K$ and
+\[
+g=\bigvee_{\sigma\in G}\bigwedge_{\tau\in H} \gamma_n\circ (\tau\circ\sigma)
+\]
+for some sets of permutations $G,H\subseteq \permut_n$. 
+\end{prop}
+
+\begin{proof} The condition is stable under permutations. If it holds for $f$, then 
+$f^*=(g_K)^*=g^*_K$ and
+\[
+g^*=\bigwedge_{\sigma\in G}\bigvee_{\tau\in H}\gamma_n^* \circ (\tau\circ\sigma).
+\]
+Note that we have
+\[
+\gamma^*_n=p_1\otimes \gamma_{n-2}\otimes 1_1=(\gamma_{n+2})_{1,n+2}
+\]
+and for any $\rho\in \permut_n$,
+\[
+\gamma^*_n\circ \rho=(\gamma_{n+2}\circ (id_1\otimes
+\rho\otimes id_1))_{1,n+2}.
+\]
+Since the infima and suprema are pointwise, it is clear that 
+\[
+g^*=\bigwedge_{\sigma\in G}\bigvee_{\tau\in H}\gamma_n^* \circ (\tau\circ\sigma)=
+(\bigwedge_{\sigma\in G}\bigvee_{\tau\in H} \gamma_{n+2}\circ (id_1\otimes
+(\tau\circ\sigma)\otimes id_1))_{1,n+2}.
+\]
+Put
+\[
+g':=\bigwedge_{\sigma\in G}\bigvee_{\tau\in H} \gamma_{n+2}\circ (id_1\otimes
+(\tau\circ\sigma)\otimes id_1),
+\]
+then 
+\[
+f^*=g^*_K=g'_{(K+1)\cup\{1,n+2\}}.
+\]
+Assume that $f_1=(g_1)_{K_1}$, $f_2=(g_2)_{K_2}$, and $g_1\in \Te_{n_1}$, $g_2\in
+\Te_{n_2}$,
+\[
+g_i=\bigvee_{\sigma_i\in G_i} \bigwedge_{\tau_i\in H_i} \gamma_{n_i}\circ
+(\sigma_i\circ\tau_i),\qquad i=1,2,
+\]
+$G_i, H_i \subseteq \permut_{n_i}$. Then 
+\[
+f_1\otimes f_2=(g_1\otimes g_2)_{K_1\cup n_1+K_2}
+\]
+and
+\begin{align*}
+g_1\otimes g_2&=\bigvee_{\sigma_1\in G_1,\sigma_2\in G_2}\bigwedge_{\tau_1\in H_1,\tau_2\in
+H_2} \gamma_{n_1}\otimes\gamma_{n_2}\circ ((\sigma_1\otimes \sigma_2)\circ (\tau_1\otimes
+\tau_2))\\
+&=\bigvee_{\sigma_1\in G_1,\sigma_2\in G_2}\bigwedge_{\tau_1\in H_1,\tau_2\in
+H_2} (\gamma_{n_1+n_2}\wedge \gamma_{n_1+n_2}\circ\pi)\circ ((\sigma_1\otimes \sigma_2)\circ (\tau_1\otimes
+\tau_2)),
+\end{align*}
+where $\pi$ swaps the two blocks of length $n_1$ and $n_2$. Since $\rho$ commutes with
+both $\sigma_1\otimes \sigma_2$ and $\tau_1\otimes \tau_2$, the statement follows, with
+\[
+G=\{\sigma_1\otimes \sigma_2, \sigma_i\in G_i\},\quad H=\{(\tau_1\otimes \tau_2)\circ\rho,
+\tau_i\in H_i, \rho\in \{id, \pi\}\}.
+\]
+
+\end{proof}
+
+
+
+
+
+
+
+\begin{prop}\label{prop:supinf+} Let $f\in \Te_n$ be separating. Then there is some
+separating chain $\gamma\in \Fe_n$  and subgroups $G,H\subseteq \permut_n$, such that $G\subseteq H'$ (all elements
+in $G$ commute with all elements in $H$), such that
+\[
+f=\bigvee_{\sigma\in G} \bigwedge_{\tau\in H} \gamma\circ\sigma\circ\tau.
+\]
 
 \end{prop}
 
 
-Then $A_{\pi,f}$ is a proper affinne subspace in $V_\pi:=\sigma_\pi(\otimes_{j}V_{j})$, this folows from the
-fact that $f(0)=1$, so that $S$ contains the subspace $\mathbb R a$. 
-Then $Y_f:=(\otimes_{j}V_{i_j},A_f)$ defines an object in $\Af$ such that $a\in A_f$ and
-$\tilde a\in \tilde A_f$. Such objects might not belong to $\Afh$ in
-general.
-With the pointwise ordering, $\Fe_n$ is a distributive lattice, with the smallest element
-$\chi_0$ and largest element $1$.  It is easy to see that for  $f,g\in \Fe_n$ and some
-corresponding objects $Y_f$, $Y_g$, we have $f\le g$  if
-and only if there is some permutation $\sigma\in S_n$ such that 
-$Y_f\xrightarrow{\sigma} Y_g$. In particular, since $\chi_0\le f\le 1$ for all $f\in
-\Fe_n$, there is some permutation $\sigma$ such that 
+\begin{proof} Assume the above is true for $f\in \Te_n$, then
 \[
-Y_{\min}\xrightarrow{\sigma} Y_f\xrightarrow{\sigma^{-1}} Y_{\max},
+f^*=\bigwedge_{\sigma\in G} \bigvee_{\tau\in H} \gamma^*\circ\sigma\circ\tau=
+\bigwedge_{\sigma\in G} \bigvee_{\tau\in H} \gamma^*\circ\tau\circ\sigma.
 \]
-where 
+Since $\gamma^*$ is a separating chain if $\gamma$ is, the statement holds also for $f^*$.
+Further, let $\rho\in \permut_n$ be any permutation, then
 \[
-Y_{\min}:=(V_1\otimes\dots\otimes V_n, \{a_1\otimes\dots\otimes a_n\}),\qquad
-Y_{\max}:=(V_1\otimes \dots\otimes V_n,\{\tilde a_1\otimes\dots\otimes \tilde a_n\}^\sim).
+f\circ \rho = \bigvee_{\sigma\in G} \bigwedge_{\tau\in H}
+\gamma\circ\sigma\circ\tau\circ\rho=
+\bigvee_{\sigma'\in \rho^{-1}G\rho} \bigwedge_{\tau'\in \rho^{-1}H\rho} (\gamma\circ\rho)\circ\sigma'\circ\tau'.
 \]
-If $Y_g$ is an object such that 
+Since $\gamma\circ\rho$ is a separating chain, we see that the statement is also invariant
+under permutations. It also follows that we may always assume that $\gamma=\gamma_{u,n}$
+for some $u\in \{0,1\}$.
+
+We now proceed by induction. The assertion is trivial for $n=1$. Assume it holds for all
+$m<n$ and let $f\in \Te_n$. It is enough to prove the statement if $f=f_1\otimes f_2$, for
+$f_1\in \Te_{m}$ and $f_2\in \Te_{n-m}$. By the induction assumption, there are some
+separating chains $\gamma^1\in \Te_{m}$ and $\gamma^2\in \Te_{n-m}$, and subgroups
+$G_1,H_1\subseteq \permut_m$, $G_1\subseteq H_1'$ and $G_2,H_2\subseteq \permut_{n-m}$,
+$G_2\subseteq H_2'$ such that  
 \[
-Y_{\min}\xrightarrow{\rho} Y_g\xrightarrow{\rho^{-1}} Y_{\max},
-\]
-for a permutation $\rho$, then we may define an object corresponding to $f\wedge g$ as the
-pullback of the two arrows $f\xrightarrow{\sigma^{-1}} Y_{\max}$ and
-$g\xrightarrow{\rho^{-1}} Y_{\max}$, similarly, $Y_{f\vee g}$ can be found as a pushout.
-
-
------
-
-
-
-It is also shown that we can introduce a tensor product $\otimes$
-and duality $(-)^*$ such that $\Af$ with these structures becomes a *-autonomous category.
-We will show that we may use this category to describe classical and quantum higher order
-maps. 
-
-
-To this end, we introduce a subcategory in  $\Af$, consisting of objects $X=(V_X,A_X)$, where the vector
-space $V_X$ is restricted to be either $\mathbb R^n$ or $M_n^h$ (see Example \ref{exm:}). 
-Accordingly, let also $V_X^+$ be either $\mathbb R^n_+$ (the cone of elements in $\mathbb R^n$
-with nonnegative coordinates) or  $M_n^+$ (the cone of positive semi-definite matrices).
-We then also require that both $A_X$ and $\tilde A_X$ contain some interior elements in
-$V_X^+$ (note that in this case we identify $V_X=V_X^*$). The morphisms are restricted so
-that we additionaly require that $(V_X,A_X)\xrightarrow{f}(V_Y,A_Y)$ are completely
-positive.
-
-
-
-
-
-and morphisms  $(\mathbb R^n,A)\xrightarrow{f} (\mathbb R^m,B)$  
-in $\Af$ such that we also have $f(\mathbb R^n_+)\subseteq \mathbb R^m_+$. The category
-$\Quant$ consists of objects of the form $X=(M_n,A)$ and morphisms
-$(M_n,A)\xrightarrow{f} (M_m,B)$ in $\Af$ such that $f(M_n^+)\subseteq M_m^+$.
-
-
-
-For any object $X$, we also put 
-\[
-L_X:=\lin(A_X)\qquad S_X:=\Span(A_X),\qquad  d_X:=\dim(L_X),\qquad D_X:=\dim(V_X).
-\]
-Note that $X$ is
-uniquely determined also by the triple $(V_X,L_X,a_X)$ with  an element $a_X\in A_X$, or
-by $(V_X,S_X,\tilde a_X)$ with an element $\tilde a_X\in \tilde A_X$. 
-
-We will consider the following special kind of morphisms in $\Af$. 
-A morphism $X\xrightarrow{f} Y$ is a monomorphism if $f\circ h=f\circ g$ implies $h=g$ for
-any morphisms $g$, $h$, and an epimorphism if $h\circ f=g\circ f$ implies $h=g$. A
-morphism that is both mono and epi is called a bimorphism.
-
-
-\begin{lemma}\label{lemma:epimono} A morphism $X\xrightarrow{f} Y$ is a  monomorphism if and only
-if  it is injective as a map $f:V_X\to V_Y$. Similarly, $f$ is an epimorphism if and only if it is surjective. 
-
-\end{lemma}
-
-Consequently, $f$ is a bimorphism if and only if  it is an isomorphism of $V_X$ and $V_Y$. Note that a
-bimorphism is not necessarily an isomorphism in $\Af$, which would mean that the inverse
-map satisfies $f^{-1}(A_Y)\subseteq A_X$.
-
-\begin{proof} Let $f$ be a monomorphism in $\Af$
-and let $K=Ker(f)$. Let $Z=(V_X\times K, A_X\times \{0\})$, then $Z$ is an object in
-$\Af$. Let $g,h:V_Z\to V_X$ be defined as $g(x,y)=x$, $h(x,y)=x+y$, then
-$g,h:Z\to X$ are morphisms in $\Af$ and we have
-\[
-f\circ g(x,y)=f(x)=f(x)+f(y)=f\circ h(x,y),\qquad \forall (x,y)\in V_Z.
-\]
-Hence $h=g$, so that we must have $K=\{0\}$ and $f$ is injective. The converse is clear.
-
-Similarly, let  $f$ be an epimorphism and let $R=f(V_X)\subseteq V_Y$. Let $Z=(V_Y\times
-V_Y|_R,
-A_Y\times \{[0]\})$ and let $g,h:V_Y\to V_Z$ be given by $g(y)= (y,[0])$, $h(y)=(y, q(y))$,
-where $q:V_Y\to V_Y|_R$ is the quotient map. Since $A_Y\subseteq R$, we have
-$q(A_Y)=\{[0]\}$, so that both $g,h$ are morphisms in $\Af$. Moreover,
-\[
-g\circ f(x)=(f(x),[0])=(f(x),q(f(x)))= h\circ f,
-\]
-so that $g=h$, but this implies that $R=V_Y$ and $f$ is surjective. The converse is clear.
-
-
-\end{proof}
-
-
-Let $X,Y, Z$ be objects in $\Af$ such that there are bimorphisms 
-\[
-Z\xrightarrow{f} X,\qquad Z\xrightarrow{g} Y.
-\]
-Note that in particular $\psi:=f\circ g^{-1}$ is an isomorphism of $V_Y$ onto $V_X$. 
-%Let us also assume that there is some $\tilde a_x\in \tilde A_X$ such that $\psi^*(\tilde
-%a_X)\in \tilde A_Y$. 
-
-Let us define  $X\sqcup_{f,g} Y:=(V_X,A_{X\sqcup_{f,g} Y})$, with 
-\[
-A_{X\sqcup_{f,g} Y}=\{sa+(1-s)\psi(b),\ a\in A_X,\ b\in A_Y,\ s\in \mathbb R\}.
-\]
-Note first that this is a proper object in $\Af$ if and only if 
-\begin{equation}\label{eq:pushout_cond}
-\forall b\in A_Y,\quad t\psi(b)\in A_X \ \implies \ t=1.
-\end{equation}
-Indeed, we only have to check that
-$0\notin A_{X\sqcup_{f,g}Y}$ which is easily seen to be equivalent to
-\eqref{eq:pushout_cond}. 
-
-Assume \eqref{eq:pushout_cond}, then $X\sqcup_{f,g} Y$ together with the morphisms given by the linear maps
-$id:V_X\to V_X$ and $\psi:V_Y\to V_X$,  is the \textbf{pushout} of the above diagram. Indeed, these are clearly bimorphisms $X\to X\sqcup_{f,g} Y$ and $Y\to X\sqcup_{f,g} Y$ in $\Af$, and we have 
-\[
-id\circ f=f=\psi\circ g.
-\]
-Also, if  $W$ is an object in $\Af$ and $X\xrightarrow{i} W$ and $Y\xrightarrow{j} W$ are such that $i\circ f=j\circ
-g$, then $i=i\circ id$, $j=i\circ \psi$, so the map $i$ defines a morphism
-$X\sqcup_{f_0,g_0} Y\to W$,
-obviously unique, with the required properties. We have
-\[
-L_{X\sqcup_{f,g}Y}=L_X\vee \psi(L_Y),\qquad S_{X\sqcup_{f,g}Y}=S_X\vee
-\psi(S_Y).
-\]
-Let us also note that if \eqref{eq:pushout_cond} is not satisfied,  there is some $z\in V_Z$ such
-that for some $t\ne 1$,
-\[
-tf(z)\in A_X,\qquad g(z)\in A_Y.
-\]
-If there are some $X\xrightarrow{i} W$ and $Y\xrightarrow{j} W$ as above, then 
-$ti\circ f(z)\in A_W$, but also $i\circ f(z)=j\circ g(z)\in A_W$, so that $W$ is not a
-proper object, in this case the pushout is the terminal object $0$, with the unique arrows
-$X\xrightarrow{!} 0$, $Y\xrightarrow{!} 0$.
-
-Similarly, let 
-\[
-X\xrightarrow{f} Z,\qquad Y\xrightarrow{g} Z
-\]
-be  bimorphisms and let $\psi=f^{-1}\circ g$. If 
-\begin{equation}\label{eq:pullback_cond}
-\phi(A_Y)\cap A_X\ne \emptyset,
-\end{equation}
- the \textbf{pullback} of $f, g$ is
-$X\sqcap_{f,g}Y=(V_X, A_X\cap \phi(A_Y))$, 
-with  the bimorphisms given by $id_X$ and $\phi^{-1}$. In this case
-\[
-L_{X\sqcap_{f,g}Y}=L_X\cap \phi(L_Y),\qquad S_{X\sqcap_{f,g}Y}=S_X\cap \phi(S_Y).
-\]
-Without  condition \eqref{eq:pullback_cond}, the above is not a proper object and in 
-this case the pulback is the initial object $\emptyset$.
-
-
-
-\appendix
-
-\subsection{Affine subspaces}
-
-A subset $A\subseteq V$ of a finite dimensional vector space $V$ is an affine subspace if 
-$\sum_i\alpha_i a_i\in A$ whenever all $a_i\in A$ and $\sum_i\alpha_i=1$. We say that $A$
-is proper if $0\ne A$ and $A\ne \emptyset$. We will always
-mean  that an affine subspace is proper (if not explicitly stated otherwise).
-
-\subsubsection{Description}
-An affine
-subspace can be determined in two ways:
-\begin{enumerate}
-\item[(i)] Let $L\subseteq V$ be a linear subspace and $a_0\ne L$. Then 
-\[
-A=a_0+L
-\]
-is a proper affine subspace.  Note that $a_0\in A$ and $A\cap L=\emptyset$.
-Conversely, any proper affine subspace $A$ can be given in this way, with $a_0$ an arbitrary element in $A$ and
-\[
-L=\lin(A):=\{a_1-a_2,\ a_1,a_2\in A\}=\{a-a_0,\ a\in A\}.
-\]
-\item[(ii)] Let $S\subseteq V$ be a linear subspace and $a_0^*\in V^*\setminus S^\perp$. Then
-\[
-A=\{a\in S, \<a_0^*,a\>=1\}
-\]
-is a proper affine subspace. Conversely, any proper affine subspace $A$ is given in this way, with
-$S=\Span(A)$ and $a_0^*$ an arbitrary element in the dual 
-\[
-\tilde A=\{a^*\in V^*,\ \<a^*,a\>=1,\ \forall a\in A\}.
-\]
-\end{enumerate}
-
-For an affine subspace $A$, the relation of $L=\lin(A)$ and $S=\Span(A)$ is as follows:
-\[
-S=L+\mathbb R a,\qquad L=S\cap \{\tilde a\}^\perp,
-\]
-here $a\in A$ and $\tilde a\in \tilde A$ are arbitrary elements.
-
-
-\subsubsection{Duality}
-
-For an affine subspace $A$,  $\tilde A$ is an affine subspace as well. If $A$ is proper,
-then $\tilde A$ is proper and we have
-$\tilde{\tilde A}=A$. More generally, if $\emptyset\ne C\subseteq A$ is any  subset of a
-proper  affine
-subspace $A$, then $\tilde C$ is a proper affine subspace 
-and $\tilde{\tilde C}$ is the affine hull of $C$, that is,
-\[
-\tilde{\tilde C}=\aff(C):=\{\sum_i \alpha_i c_i,\ c_i\in C,\ \sum_i\alpha_i=1\}.
-\]
-In this case, we may write $\tilde{\tilde C}$ as
-\[
-\tilde{\tilde C}=c_0+\lin(C)=c_0+\Span(\{c_1-c_2,\ c_1,c_2\in C\})
-\]
-with an arbitrary element $c_0\in C$, or as
-\[
-\tilde{\tilde C}=\{c\in \Span(C),\ \<a_0^*,c\>=1\}
-\]
-for an arbitrary element $a_0^*\in \tilde A$.
-
-\begin{lemma}\label{lemma:duality}
-Let $A$ be a proper affine subspace and let $C\subseteq A$ be any subset. Then
-\begin{align*}
-\lin(C)&=\lin(\tilde{\tilde C})=\tilde
-C^\perp=\Span(\tilde C)^\perp,&  \lin(\tilde C)&=C^\perp=\Span(C)^\perp \\
-\Span(C)&=C^{\perp\perp} =\lin(\tilde C)^\perp,&  \Span(\tilde C)&=\lin(C)^\perp.
-\end{align*}
-
-
-\end{lemma}
-
-
-\subsubsection{The lattice of affine subspaces}
-
-Let $\Ae(V)$ be the set of all affine subspaces in a finite dimensional vector space $V$.
-Then $\Ae(V)$ can be ordered by inclusion and it is a complete lattice, with
-\[
-\wedge \Ae=\cap \Ae,\qquad \vee \Ae = \{\sum_i\alpha_i a_i,\ a_i\in A_i\in \Ae,
-\sum_i\alpha_i=1\}
-\]
-for any subset $\Ae\subseteq \Ae(V)$. Let us choose any nonzero elements $a\in V$,
-$\tilde a\in V^*$ and put
-\[
-\Ae_{a,\tilde a}(V)=\{A\in \Ae(V),\ a\in A,\ \tilde a\in \tilde A\}.
-\]
-Note that any subspace in $\Ae_{a,\tilde a}$ is proper and it is a complete sublattice in
-$\Ae(V)$. Moreover, we have
-\[
-\lin(\wedge\Ae)=\wedge\{\lin(A),\ A\in \Ae\},\qquad \lin(\vee\Ae)=\vee\{\lin(A),\ A\in \Ae\}
-\]
-and similarly for $\Span$. 
-
-We say that $A,B\in \Ae_{a,\tilde a}(V)$ are independent if $A\cap B=\{a\}$, equivalently,
-$\lin(A)\cap\lin(B)=\{0\}$, that is, $\lin(A)$ and $\lin(B)$ are independent linear
-subspaces. A family $\{A_1,\dots,A_n\}\subseteq \Ae_{a,\tilde a}(V)$ is independent if
-$A_i$ and $\vee_{j\in I}A_j$ are independent for any $i\in \{1,\dots,n\}$ and $i\ne
-I\subseteq\{1,\dots,n\}$. Equivalently, $\{\lin(A_1),\dots,\lin(A_n)\}$ is an independent
-family of subspaces in $V$. 
-
-\begin{lemma}\label{lemma:affine_distributive} Let $\{A_1,\dots,A_n\}\subseteq
-\Ae_{a,\tilde a}(V)$ be an independent family. Then the sublattice generated by
-$\{A_1,\dots,A_n\}$ is distributive.
-
-
-
-\end{lemma}
-
-\begin{proof} Clear from a similar property of linear subspaces.   
-
-\end{proof}
-
-
-
-
-\subsubsection{Limits and colimits}
-
-Limits and colimits should be obtained from those in $\FV$, we have to spectify the other
-structures and check  whether the corresponding arrows are in $\Af$. 
-
-\medskip
-
-First, note that $\{0\}$ is both initial and terminal in $\FV$. In $\Af$, it is easily
-seen that $\emptyset$ is {initial} and $0$ is {terminal} in $\Af$. 
-
-Let $\bX$, $\bY$ be two objects in $\Af$. Assume first that both are proper. We define
-their {product} as
-\[
-\bX\times \bY:=(V_\bX\times V_\bY, A_\bX\times A_\bY, (a_X,a_Y), \frac12(\tilde a_X,\tilde
-a_Y)),
-\]
-where 
-\[
-A_\bX\times A_\bY:=\{(x,y)\in V_\bX\times V_\bY,\ x\in A_\bX, y\in A_\bY\}
-\]
-is the direct product of $A_\bX$ and $A_\bY$. It is easily verified that this is indeed an
-affine subspace and the usual projections $\pi_\bX:V_\bX\times V_\bY\to V_\bX$ and $\pi_\bY:V_\bX\times
-V_\bY\to V_\bY$ are in $\Af$. Moreover, for $f:\bZ\to \bX$  and $g:\bZ\to \bY$, the map
-$f\times g(z)=(f(z),g(z))$ is also clearly a morphism $\bZ\to \bX\times\bY$  in $\Af$. 
-We have
-\[
-L_{X\times Y}=L_X\times L_Y,\qquad S_{X\times Y}= (L_X\times L_Y)\vee \mathbb R(a_X,a_Y)=(S_X\times S_Y)\wedge \{(\tilde
-a_X,-\tilde a_Y)\}^\perp
-\]
-for an arbitrary choice $a_X\in A_X$, $a_Y\in A_Y$ and $\tilde a_X\in \tilde A_X$, $\tilde
-a_Y\in \tilde A_Y$.
-
-Next, we put $X\times \emptyset=\emptyset$, with the unique morphisms $\pi_X:\emptyset \to X$
-and $\pi_{\emptyset}:\emptyset \to \emptyset$. If $Y\xrightarrow{f}X$ and
-$Y\xrightarrow{g} \emptyset$, then it is clear that $Y=\emptyset$, this shows that this is
-indeed the product. Further, put  $X\times 0=X$, with $\pi_X=id_X$  and
-$\pi_0: X\xrightarrow{!}0$. It is also readily verified that this is the product.
-
-\medskip
-
-The coproduct for proper objects $X$, $Y$ is defined as 
-\[
-\bX\oplus \bY=(V_\bX\times V_\bY, A_\bX\oplus A_\bY)
-\]
-where 
-\[
-A_\bX\oplus A_\bY:=\{(tx,(1-t)y),\ x\in A_{\bX}, y\in A_\bY,\ t\in \mathbb R\}
-\]
-is the direct sum. To check that this is an affine subspace, let $x_i\in A_\bX$, $y_i\in A_\bY$, $s_i\in
-\mathbb R$ and let $\sum_i\alpha_i=1$, then 
-\[
-\sum_i\alpha_i(s_ix_i,(1-s_i)y_i)=(\sum_is_i\alpha_ix_i,\sum_i(1-s_i)\alpha_iy_i)=(sx,(1-s)y)\in
-A_\bX\oplus A_\bY,
-\]
-where $s=\sum_is_i\alpha_i$, $x=s^{-1}\sum_is_i\alpha_ix_i$ if $s\ne 0$ and is arbitrary
-in $A_\bX$ otherwise, similarly $y=(1-s)^{-1}\sum_i(1-s_i)\alpha_iy_i$ if $s\ne 1$ and is
-arbitrary otherwise. The usual embeddings  $p_\bX:V_\bX\to V_\bX\times V_\bY$ and $p_\bY:
-V_{\bY}\to V_\bX\times V_\bY$ are easily seen to be morphsims in $\Af$.   
-
-Let  $f:\bX\to \bZ$, $g:\bY\to \bZ$ be any morphisms in $\Af$ and consider the map
-$V_\bX\times V_\bY\to V_\bZ$ given as
-$f\oplus g(u,v)=f(u)+g(v)$. We need to show that it preserves the affine subspaces. So let 
-$x\in A_\bX$, $y\in  A_\bY$, then since $f(x),g(y)\in A_\bZ$, we have for any $s\in \mathbb R$,
-\[
-f\oplus g(sx,(1-s)y)=sf(x)+(1-s)g(y)\in A_\bZ.
-\]
-We also have
-\[
-L_{X\oplus Y}= (L_X\times L_Y)\vee \mathbb R\{(a_X,-a_Y)\},\qquad S_{X\oplus Y}=S_X\times
-S_Y
-\]
-for some $a_X\in A_X$, $a_Y\in A_Y$.
-
-Similarly as in the case of products, it is verified that $X\oplus \emptyset=X$ and
-$X\oplus 0=0$. (All the statements for coproducts can be obtained from duality defined
-below).
-
-\medskip
-
-One can also discuss equalizers and coequalizers, here we only note that these may be
-trivial even for proper objects. We will  consider pullbacks and pushouts for some special
-morphisms that will be needed below.
-(We may
-also add
-two special objects: the initial object $\emptyset:=(\{0\}, \emptyset)$ and the terminal
-object $0:=(\{0\},\{0\})$, here the affine subspaces are obviously not proper.)
-
-\subsubsection{Pullbacks and pushouts}
-
-%\subsubsection{Bimorphism ordering and lattices of objects}
-%
-%Let $\Fe=\{X_\alpha\}_{\alpha\in \mathcal A}$ be a family of objects in $\Af$ such that there
-%are objects $X_{in}$, $X_{out}$ and bimorphisms
-%\[
-%X_{in}\xrightarrow{u_\alpha} X_\alpha \xrightarrow{v_\alpha} X_{out},
-%\]
-%$V_{X_{in}}=V_{X_{out}}$ and $v_\alpha\circ u_\alpha=id$ for $\alpha\in \mathcal A$.
-%Moreover, there are some elements $\tilde x_{in}\in \tilde A_{X_{in}}$, $x_{out}\in
-%A_{X_{out}}$ and $x_\alpha\in A_{X_\alpha}$, $\tilde x_\alpha\in \tilde A_{X_\alpha}$ such
-%that $u_\alpha^*(\tilde x_\alpha)=\tilde x_{in}$ and $v_\alpha(x_\alpha)=x_{out}$ for all
-%$\alpha\in \mathcal A$. We have:
-%
-%\begin{enumerate}
-%\item Let $X_\alpha \le X_\beta$ if there is a bimorphism $X_\alpha\xrightarrow{f}
-%X_\beta$ such that $v_\beta\circ f=v_\alpha$ and $f\circ u_\alpha=u_\beta$. Then
-%$\le$ is up to isomorphisms a partial order in $\Fe$. Indeed, $\le$ is obviously a preorder. Assume
-%$X_\alpha\le X_\beta$ with the bimorphism $f$ and   $X_\beta\le X_\alpha$ with the
-%bimorphism $g$. Then 
-%\[
-%f\circ g=f\circ u_\alpha\circ v_\alpha\circ g=u_\beta\circ v_\beta=id,
-%\]
-%so that $X_\alpha$ and $X_\beta$ are isomorphic. 
-%
-%
-%
-%\end{enumerate}
-%
-%
-%
-%
-
-
-
-
-%Let us turn to equalizers. So let $f,g:\bX\to \bY$ and let 
-%\[
-%V_E=\{v\in V_\bX,\ f(v)=g(v)\}. 
-%\]
-%Let $h: \bZ\to \bX$ equalize $f,g$, then $h(V_\bZ)\subseteq V_E$ and $h(A_\bZ)\subseteq
-%A_\bX\cap V_E$, so that $A_\bX\cap V_E$ must be nonempty. In this case, 
-%\[
-%\bE=(V_E, A_E:=V_E\cap A_\bX, a_E,\tilde a_E:=\tilde a_X)
-%\]
-%with the inclusion map $V_E\hookrightarrow V_\bX$ is an
-%equalizer of $f,g$ for any choice of $a_E\in A_E$ (note that choosing another $a_E$ gives
-%us an isomorphic object in $\Af$). If the
-%intersection $V_E\cap A_\bX$ is empty, then the only equalizing arrow 
-%for $f$ and $g$ is $\emptyset\to \bX$, which is
-%then the equalizer.
-%
-%For the coequalizer, let $V_Q$ be the quotient space $V_Q:=V_\bY|_{Im(f-g)}$ and let
-%$q:V_\bY\to V_Q$
-%be the quotient map. If  some $h: \bY\to \bZ$ coequalizes $f$ and $g$, then $h$ maps
-%$Im(f-g)$ to 0, so that $Im(f-g)\cap A_\bY=\emptyset$, unless $\bZ$ is the terminal
-%object. It is easily checked that if $Im(f-g)\cap A_\bY=\emptyset$, then
-%\[
-%Q=(V_Q,A_Q:=q(A_\bY),a_Q:=q(a_Y),\tilde a_Q )
-%\]
-%together with the quotient map  $q$ is the
-%coequalizer of $f$ and $g$ for any choice of $\tilde a_Q\in \tilde A_Q$.
-%If the intersection is nonempty,
-%then the unique coeqalizing arrow is $\bY\to 0$, which is then the coequalizer.
-%
-%Let us mention pullbacks and pushouts. Since pullbacks can be obtained from products and
-%equalizers, we see that we have a similar situation: if a pullback is ''well defined'',
-%then it coincides with the pullback in $\FV$, otherwise it is trivial. More precisely, if 
-%$f:\bX\to \bZ$ and $g:\bY\to \bZ$, then we put 
-%\[
-%V_P:=\{(x,y)\in V_\bX\times V_\bY, f(x)=g(y)\}.
-%\]
-%If $V_P\cap A_\bX\times A_\bY\ne \emptyset$, that is, there are some $x\in A_\bX$ and $y\in
-%A_\bY$ such that $f(x)=g(y)$, then 
-%\[
-%(V_P,A_P:=(A_\bX\times A_\bY)\cap V_P, a_P, \frac 12(\tilde a_X,\tilde a_Y))
-%\]
-%with the two projections
-%is a pullback of $f$ and $g$ for any choice of $a_P\in A_P$, otherwise the pullback is
-%just the initial object $\emptyset$.
-%
-%Similarly, let $f:\bZ\to \bX$, $g:\bZ\to \bY$, then let $V_Q$ be the quotient of
-%$V_\bX\times V_\bY$ by the subspace
-%\[
-%\{(f(z),-g(z)),\ x\in V_\bZ\}.
-%\]
-%If this subspace does not contain any element of $A_\bX\oplus A_\bY$, that is, there is no
-%$z\in V_\bZ$ such that for some $t\in \mathbb R$,
-%\[
-%f(tz)\in A_\bX,\qquad g((t-1)z)\in A_\bY,
-%\]
-%then 
-%\[
-%Q=(V_Q, A_Q:=q(A_\bX\oplus A_\bY), \frac12 q(a_X,a_Y), \tilde a_Q)
-%\]
-%with maps $x\mapsto q(x,0)$ and $y\mapsto q(0,y)$ is the
-%pushout of $f$ and $g$. Otherwise the pushout is just $0$.
-%
-\subsubsection{Monoidal structure}
-
-Let $X$, $Y$ be objects in $\Af$. Let us define
-\[
-A_{X\otimes Y}:=\{x\otimes y, x\in A_X, y\in A_Y\}^{\approx}.
-\]
-In other words, $A_{X\otimes Y}$ is the smallest affine subspace in $V_X\otimes V_Y$ containing
-$A_X\otimes A_Y$. 
-
-
-\subsubsection{Duality}
-
-We define $X^*:=(V_X^*,\tilde A_X)$. Note that we have
-\[
-L_{X^*}=S_X^\perp,\qquad S_{X^*}=L_X^\perp,\qquad d_{X^*}=D_X-d_X-1.
-\]
-It is easily seen  that $(-)^*$ defines a full and faithful functor $\Af^{op}\to \Af$,
-moreover, $X^{**}=X$ (we will use  the canonical identification of  any $V$ in $\FV$ with its second dual). 
-
-
-
-\subsubsection{The dual tensor product}
-
-Let us define the dual tensor product by $\odot$, that is
-\[
-X\odot Y=(X^*\otimes Y^*)^*.
+f_1=\bigvee_{\sigma_1\in G_1}\bigwedge_{\tau_1\in H_1} \gamma^1\circ\sigma_1\circ\tau_1,\qquad 
+f_2=\bigvee_{\sigma_2\in G_2}\bigwedge_{\tau_2\in H_2} \gamma^2\circ\sigma_2\circ\tau_2.
 \]
 We then have
 \begin{align*}
-L_{X\odot Y}&=S^\perp_{X^*\otimes Y^*}=(S_{X^*}\otimes S_{Y^*})^\perp=(L_X^\perp\otimes
-L_Y^\perp)^\perp\\
-S_{X\odot Y}&= L_{X^*\otimes Y^*}^\perp=(\tilde a_X\otimes
-S_Y^\perp)^\perp\wedge(S_X^\perp\otimes \tilde a_Y)^\perp\wedge (S_X^\perp\otimes
-S_Y^\perp)^\perp
+f&=f_1\otimes f_2=
+\bigvee_{\sigma_1\in G_1,\sigma_2\in G_2}\bigwedge_{\tau_1\in H_1,
+\tau_2\in H_2} (\gamma^1\circ\sigma_1\circ\tau_1)\otimes
+(\gamma^2\circ\sigma_2\circ\tau_2)\\
+&=\bigvee_{\sigma_1\in G_1,\sigma_2\in G_2}\bigwedge_{\tau_1\in H_1,\tau_2\in
+H_2}(\gamma^1\otimes \gamma^2)\circ(\sigma_1\otimes\sigma_2)\circ(\tau_1\otimes \tau_2).
 \end{align*}
-In particular,
-\[
-d_{X\odot Y}=D_Xd_Y+d_XD_Y-d_Xd_Y.
-\]
-\begin{lemma}\label{lemma:tensors} Let $X$, $Y$ be nontrivial. Then $X\otimes Y=X\odot Y$
-exactly in one of the following situations:
-\begin{enumerate}
-\item $X\simeq I$ or $Y\simeq I$,
-\item $d_X=d_Y=0$,
-\item $D_X=d_X+1$ and $D_Y=d_Y+1$ (Objects with this property will be called
-first order).
-\end{enumerate}
+As noted above, we may assume that $\gamma^1=\gamma_{u_1,m}$ and
+$\gamma^2=\gamma_{u_2,n-m}$ for some $u_1,u_2\in \{0,1\}$. Since $f$ is separating,
+$\gamma^1\otimes \gamma^2$
 
-\end{lemma}
-
-\begin{proof} It is easy to see that (when identifying $X=X^{**}$), we have $A_X\otimes
-A_Y\subseteq \tilde A_{X^*\otimes  Y^*}$, hence $A_{X\otimes Y}\subseteq A_{X\odot Y}$. We see from the above computatons that
-\[
-d_{X\odot Y}-d_{X\otimes Y}=d_X(D_Y-1)+(D_X-1)d_Y-2d_Xd_Y\ge 0,
-\]
-with equality if and only if the conditions of the lemma hold.
-
-\end{proof}
-
-
-\subsubsection{The no signaling product} 
-
-\begin{lemma}\label{lemma:otimes_odot}
-The space $A_{X\otimes Y}$ is precisely the affine subspace of elements $w\in A_{X\odot Y}$,
-such that $\<w,\cdot \otimes \tilde a_Y\>$ and $\<w,\tilde a_X\otimes \cdot\>$ do not
-depend on the choice of $\tilde a_Y\in \tilde A_Y$ and $\tilde a_X\in \tilde A_X$.
-\end{lemma}
-
-\begin{proof} Any element $w\in A_{X\otimes Y}$ has the form $w=\sum_i\alpha_i x_i\otimes
-y_i$, for $x_i\in A_X$, $y_i\in A_Y$ and $\sum_i\alpha_i=1$. It follows that for any
-$\tilde a_X\in \tilde A_X$ and $\tilde a_Y\in \tilde A_Y$,
-\[
-\<w,\cdot\otimes \tilde a_Y\>=\sum_i\alpha_ix_i,\qquad \<w,\tilde a_X\otimes
-\cdot\>=\sum_i\alpha_iy_i.
-\]
-Conversely, assume that $w\in A_{X\odot Y}$ has this property, then for any $\tilde x\in
-L_{X^*}$ and
-$\tilde y\in L_{Y^*}$, we have
-\[
-\<w,\cdot\otimes \tilde y\>=0,\qquad \<w,\tilde x\otimes \cdot\>=0.
-\]
-It follows that
-\begin{align*}
-w&\in (V_X^*\otimes L_{Y^*})^\perp\cap (L_{X^*}\otimes V_Y^*)^\perp=
-(V_X\otimes S_Y)\cap (S_X\otimes V_Y)=S_X\otimes S_Y
-\end{align*}
-Since $w\in A_{X\odot Y}$, we have $\<w,\tilde a_X\otimes \tilde a_Y\>=1$ for any choice
-of $\tilde a_X\in \tilde A_X$,  $\tilde a_Y\in \tilde A_Y$. Since $\tilde a_X\otimes
-\tilde a_Y\in \tilde A_{X\otimes Y}$ and $S_{X\otimes Y}=S_X\otimes S_Y$, this implies
-$w\in A_{X\otimes Y}$.
-
-\end{proof}
-
-
-We will now define one-sided variants of this property. Namely, let 
-\begin{align*}
-A_{X\prec Y}&:=\{w\in A_{X\odot Y},\ \<w,\cdot \otimes \tilde a_Y\>\text{ does not depend on
-} \tilde a_Y\in \tilde A_Y\}\\
-A_{X\succ Y}&:=\{w\in A_{X\odot Y},\ \<w,\tilde a_X \otimes \cdot\>\text{ does not depend on
-} \tilde a_X\in \tilde A_X\}.
-\end{align*}
-We then put $X\prec Y=(V_X\otimes V_Y, A_{X\prec Y})$ and $X\succ Y=(V_X\otimes V_Y,
-A_{X\succ Y})$.
-
-\begin{lemma}\label{lemma:prec} For any choice of $a_Y\in A_Y$, we have
-\[
-L_{X\prec Y}=V_X\otimes L_Y+L_X\otimes a_Y,\qquad S_{X\prec Y} =V_X\otimes L_Y+S_X\otimes
-a_Y.
-\]
-Similarly, for any $a_X\in A_X$, we have
-\[
-L_{X\succ Y}=L_X\otimes V_Y+a_X\otimes L_Y,\qquad S_{X\succ Y} =L_X\otimes V_Y+a_X\otimes
-S_Y.
-\]
-\end{lemma}
-
-\begin{proof} By the definition, we have
-\[
-L_{X\prec Y}= L_{X\odot Y}\cap (V_X^*\otimes L_{Y^*})^\perp=(S_{X^*}\otimes
-S_{Y^*})^\perp\cap (V_X\otimes S_Y)=V_X\otimes L_Y+L_X\otimes a_Y,
-\]
-for any element $a_Y\in A_Y$.
-The proof for $\succ$ is similar.
-
-\end{proof}
-
-
-
-
-For the rest of this section, we fix some  $a_X\in A_X$ and $\tilde a_X\in \tilde A_X$. We will use the notation
-$X_{\min}:=(V_X,\{a_X\})$ and 
-$X_{\max}=(V_X, \{\tilde a_X\}^\sim)$. 
-
-%We then have the diagram
-%\[
-%\xymatrix{
-% & & X\prec Y \ar[rd] \\
-%X_{\min}\otimes Y_{\min} \ar[r] &X\otimes Y \ar[ru] \ar[rd] &  & X\odot Y
-%\ar[r] & X_{\max}\otimes Y_{\max}\\
-% &  & X\succ Y \ar[ru]
-%}
-%\]
-%where the arrows are given by identity maps.
-%
-We also introduce a decomposition of $V_X$ into an independent family of subspaces
-$L_X^0,L^1_X,L^2_X$ as
-$L_X^0:=\mathbb Ra_X$, $L_X^1:=L_X$ and $L_X^2$ is any complement of $L_X$ in the subspace
-$\{\tilde a_X\}^\perp$. We see that the $L$ or $S$ spaces of any of the objects discussed
-in this paragraph is a union of some of the subspaces $L_X^i\otimes L_Y^j$, $i,j=0,1,2$. 
-We may therefore represent the subspaces in question by $3\times 3$ matrices such that 
-the $i,j$-th element is 1 if the subspace contains $L_X^i\otimes L_Y^j$ and 0 otherwise.
-For example, we have
-\begin{equation}\label{eq:matrices}
-L_{X\otimes Y}\equiv \begin{bmatrix} 0& 1&0\\ 1 &1 &0\\ 0 & 0&0\end{bmatrix}, \ 
-L_{X\odot Y}\equiv \begin{bmatrix} 0& 1&0\\ 1 &1 &1\\ 0 & 1&0\end{bmatrix},\ 
-L_{X\prec Y}\equiv \begin{bmatrix} 0& 1&0\\ 1 &1 &0\\ 0 & 1 &0\end{bmatrix}, \ 
-L_{X\succ Y}\equiv \begin{bmatrix} 0& 1&0\\ 1 &1 &1\\ 0 & 0&0\end{bmatrix}.
-\end{equation}
-The $S$-spaces can be obtained from these by putting the top left  element to 1. Notice
-also that all these objects belong to the set of objects $Z=(V_X\otimes V_Y, A_Z)$ such
-that
-\[
-X_{\min}\otimes Y_{\min}\hookrightarrow  Z \hookrightarrow X_{\max}\otimes
-Y_{\max}(=X_{\max}\odot Y_{\max})
-\]
-and this set forms a lattice under inclusion ordering with $Z_0\wedge Z_1=Z_0\sqcap Z_1$,
-$Z_0\vee Z_1=Z_0\sqcup Z_1$, where $\sqcap$ and $\sqcup$ are the pulback and pushout 
-of the inclusions $X_{\min}\otimes Y_{\min}\hookrightarrow Z_i \hookrightarrow
-X_{\max}\otimes Y_{\max}$. Furthermore, since $\{L_X^i\otimes L_Y^j\}$ is an independent
-decomposition of $V_X\otimes V_Y$, all the objects  in \eqref{eq:matrices} are contained in a
-distributive sublattice of objects such that $A_Z=a_X\otimes a_Y+L$, where $L$ is a subspace
-represented by a  matrix $M_Z$ with the top left element equal to 0.
-For such elements $Z_1$ and $Z_2$, the representing matrices  $M_{Z_1\sqcap Z_2}$ resp.
-$M_{Z_1\sqcup Z_2}$ are given by
-poinwise minimum resp. maximum of $M_{Z_1}$ and $M_{Z_2}$.
-
-
-Some further useful elements of this sublattice are represented as
-\[
-L_{X_{\max}\otimes Y}\equiv\begin{bmatrix}0 & 1 & 0\\ 1 & 1& 0\\ 1& 1&0  \end{bmatrix},\ 
-L_{X\otimes Y_{\max}}\equiv\begin{bmatrix}0 & 1 & 1\\ 1 & 1& 1\\ 0& 0&0  \end{bmatrix},\ 
-L_{X_{\min}\odot Y}\equiv\begin{bmatrix}0 & 1 & 0\\ 0 & 1& 0\\ 0& 1&0  \end{bmatrix},\ 
-L_{X\odot Y_{\min }}\equiv\begin{bmatrix}0 & 0 & 0\\ 1 & 1& 1\\ 0& 0&0  \end{bmatrix}. 
-\]
-From these consideration, the following is immediate.
-
-\begin{lemma}\label{lemma:lattice} We have
-\begin{align*}
-X\prec Y &= (X\otimes Y) \sqcup (X_{\min}\odot Y)=(X\odot Y)\sqcap (X_{\max}\otimes Y)\\
-X\succ Y &= (X\otimes Y) \sqcup (X\odot Y_{\min})=(X\odot Y)\sqcap (X\otimes Y_{\max})\\
-X\otimes Y & = (X\prec Y)\sqcap (X\succ Y)\\
-X\odot Y & = (X\prec Y)\sqcup (X\succ Y).
-\end{align*}
-
-
-\end{lemma}
-
-
-
-
-
-
-
-
-
-We have 
-the inclusions 
-\[
-X_a\to X\to X^{\tilde a}.
-\]
-We also fix $b\in A_Y$, $\tilde b\in \tilde A_Y$. By inclusions, we have the following diagrams
-\[
-X_a\otimes Y_b\to X\otimes Y,\qquad X_a\otimes Y_b\to  X_a\odot Y
-\]
-and
-\[
-X\odot Y\to X^{\tilde a}\odot Y^{\tilde b}=X^{\tilde
-a}\otimes Y^{\tilde b},\qquad X\otimes Y^{\tilde b}\to X^{\tilde a}\otimes Y^{\tilde b}.
-\]
-
-
-\begin{lemma}\label{lemma:minmax}
-$X\prec Y=X\otimes Y\sqcup X\odot Y_b=X\odot Y \sqcap X\otimes Y^{\tilde b}$.
-\end{lemma}
-
-
-We see that  the identity map $id_{V_X\otimes V_Y}$ defines bimorphisms
-\[
-X\otimes Y \to X\prec Y\to X\odot Y,\qquad X\otimes Y\to X\succ Y\to X\odot Y.
-\]
-
-\begin{lemma}\label{lemma:precsucc_pushpul} The  pushout and pullback of the above
-diagram are
-\[
-X\otimes Y=(X\prec Y)\sqcap (X\succ Y),\qquad X\odot Y= (X\prec Y)\sqcup (X\succ Y).
-\]
-
-\end{lemma}
-
-\begin{proof}  We have by Lemma \ref{lemma:otimes_odot} that 
-\[
-A_{X\otimes Y}=A_{X\prec Y}\cap A_{X\succ Y}=A_{(X\prec Y)\sqcap (X\succ Y)},
-\]
-we clearly have the last equality since the intersection $A_{X\prec Y}\cap A_{X\succ Y}$
-is nonempty. For the second part,   
 
 
 \end{proof}
-
-
-
-
-
-To each object $X=(V_X,A_X,a_X,\tilde a_X)$ we may define two object
-\[
-X_{\min}:=(V_X,\{a_X\},a_X,\tilde a_X),\qquad X_{\max}:=(V_X,\{\tilde a_X\}^\sim,a_X,\tilde a_X). 
-\]
-It is easily seen that $X_{\min}=(X^*_{\max})^*$ and $X_{\max}=(X^*_{\min})^*$, moreover,
-$X_{\max}$ and $(X_{\min})^*$ are first order objects. We have the inclusions
-\[
-X_{\min}\xrightarrow{id} X\xrightarrow{id} X_{\max}.
-\]
-We also have the inclusions
-\[
-X\otimes Y\to X\odot Y \to X_{\max}\odot Y_{\max}=X_{\max}\otimes Y_{\max}
-\]
-and
-\[
-X\otimes Y \to X_{\max}\otimes Y\to X_{\max}\otimes Y_{\max}, \quad X\otimes Y \to X\otimes Y_{\max}\to X_{\max}\otimes Y_{\max}.
-\]
-We can therefore define pullbacks and pushouts,  which then becomes
-\[
-(X_{\max}\otimes Y)\sqcap (X\otimes Y_{\max})=X\otimes Y,\qquad (X_{\max}\otimes Y)\sqcup
-(X\otimes Y_{\max})=X_{\max}\otimes Y_{\max}.
-\]
-Hence we may decompose $X\odot Y$ into two parts
-\[
-X\prec Y:= (X\odot Y)\sqcap (X_{\max}\otimes Y),\qquad X\succ Y:=(X\odot Y) \sqcap
-(X\otimes  Y_{\max}).
-\]
-
-
-
-Note that these forms do not depend on the choice of the elements $a_X,a_Y$...!
-
-\begin{lemma}\label{lemma:decomp} We have
-\[
-X\otimes Y=(X\prec Y) \sqcap (X\succ Y),\qquad X\odot Y= (X\prec Y)\sqcup (X\succ Y).
-\]
-
-\end{lemma}
-
-\begin{proof} We have 
-
-\begin{align*}
-(X\prec Y) \sqcap (X\succ Y)&=((X\odot Y)\sqcap (X_{\max}\otimes Y))\sqcap ((X\odot
-Y)\sqcap (X\otimes Y_{\max}))\\
-&= (X\odot Y) \sqcap((X_{\max}\otimes Y)\sqcap (X\otimes Y_{\max}))=(X\odot Y)\sqcap
-(X\otimes Y)=X\otimes Y.
-\end{align*}
-The second equality follows easily from Lemma \ref{lemma:prec}
-\end{proof}
-
-We next show that $-\prec -$ and $-\succ -$ define a functor $\Af\times \Af\to \Af$. Let
-$X_1\xrightarrow{f} Y_1$ and $X_2\xrightarrow{g} Y_2$, we will show that 
-$X_1\prec Y_1\xrightarrow{f\otimes g} X_2\prec Y_2$. For this, we need to prove that 
-$(f\otimes g)(A_{X_1\prec X_2})\subseteq A_{X_2\prec Y_2}$ and $(f\otimes g)(A_{X_1\succ
-X_2})\subseteq A_{X_2\succ Y_2}$. This is clear from Lemma \ref{lemma:prec}. 
-
-
-
-\begin{lemma}\label{lemma:precmonoidal} $(\Af,\prec,I)$ is a monoidal category.  
-
-\end{lemma}
-
-\begin{proof} It is easily checked from Lemma \ref{lemma:prec} that
-$\alpha_{X,Y,X}(L_{(X\prec Y)\prec Z})=L_{X\prec(Y\prec Z)}$ and clearly also
-$\alpha_{X,Y,Z}(a_X\otimes a_Y\otimes a_Z)=a_X\otimes a_Y\otimes a_Z$, so that $\alpha$ is
-the associator. Since $I\otimes X=I\odot X$ and $X\odot I=X\otimes I$, we have 
-$I\prec X=I\otimes X$ and $X\prec I=X\otimes I$, so $\lambda$ and $\rho$ are the
-unitors. But note that $\sigma_{X,Y}(A_{X\prec Y})=A_{Y\succ X}$, so this structure is
-not symmetric. 
-
-\end{proof}
-
-We have $(X\prec Y)^*=X^*\prec Y^*$. Indeed, by duality,
-\begin{align*}
-(X\prec Y)^*&=((X\odot Y)\sqcap (X_{\max}\odot Y))^*=(X\odot Y)^*\sqcup (X_{\max}\otimes
-Y)^*\\
-&= (X^*\otimes Y^*)\sqcup (X_{\max}^*\odot Y^*)
-\end{align*}
-
-
-
-
-\subsubsection{Internal hom}
-
-The internal hom has the form
-\begin{equation}\label{eq:ihom}
-[X,Y]=(X\otimes Y^*)^*=X^*\odot Y.
-\end{equation}
-We then have 
-\begin{align*}
-L_{[X,Y]}&=(S_X\otimes L_Y^\perp)^\perp= (V_X^*\otimes L_Y)\vee (L_{X^*}\otimes V_Y), \\
-S_{[X,Y]}&=(\tilde a_X\otimes
-S_Y^\perp)^\perp\wedge(L_X\otimes \tilde a_Y)^\perp\wedge (L_X\otimes
-S_Y^\perp)^\perp=(V_X^*\otimes L_Y)\vee (L_{X^*}\otimes V_Y)\vee (\tilde a_X\otimes a_Y).
-\end{align*}
-and
-\[
-d_{[X,Y]}=D_XD_Y-(d_X+1)(D_Y-d_Y).
-\]
-
-
-As we have seen in $\FV$, the space $V_{[X,Y]}=V_X^*\otimes V_Y$ is identified with the
-space of all linear maps $V_X\to V_Y$, by \eqref{eq:fvhoms}. We will show that $A_{[X,Y]}$ corresponds to the
-affine subspace of maps mapping $A_X$ into $A_Y$, that is, morphisms in $\Af$. Indeed, we see from \eqref{eq:fvhoms}
-that $f$ is in $\Af$ if and only if 
-\[
-\<f(x),y^*\>=\<w,x\otimes y^*\>=1, \qquad x\in A_X,\ y^*\in \tilde A_Y,
-\]
-which is equivalent to $w\in (A_X\otimes \tilde A_Y)^\sim=\tilde A_{X\otimes Y^*}$. 
-
-\subsubsection{The no signaling product}
-
-For two objects $X$, $Y$ we define 
-\[
-X\prec Y :=(V_X\otimes V_Y, A_{X\prec Y},a_X\otimes a_Y,\tilde a_X\otimes \tilde a_Y),
-\]
-where $A_{X\prec Y}$ is determined by
-\begin{align*}
-S_{X\prec Y}=V_X\otimes S_Y\cap S_{X\odot Y}=(V_X\otimes S_Y)\cap (L_{X\odot Y}\vee
-\{a_X\otimes a_Y\})=(V_X\otimes S_Y)\cap((V_X\otimes L_Y)\vee (L_X\otimes V_Y)\vee
-\{a_X\otimes a_Y\}).
-\end{align*}
-
-
-\begin{lemma}\label{lemma:}
-
-
-\end{lemma}
-
-We may similarly define $X\succ Y$. Setting $f\prec g=f\otimes g$ for $X_1\xrightarrow{f}
-X_2$, $Y_1\xrightarrow{g} Y_2$, we see that $(-\prec -)$ is functorial. Indeed, to show
-that $X_1\prec Y_1\xrightarrow{f\otimes g} X_2\prec Y_2$, we need to
-show that $f\otimes g(A_{X_1\prec Y_1})\subseteq A_{X_2\prec Y_2}$. Assume $w\in
-A_{X_1\prec Y_1}$, that is, $w\in V_{X_1}\otimes S_{Y_1}$ and $\<w,\tilde a_{X_1}\otimes
-\tilde a_{Y_1}\>=1$. 
-
-\subsubsection{Dualizable (nuclear) objects}
-
-An object in $\Af$ is nuclear if the natural map $X^*\otimes X\to [X,X]$ is an isomorphism
-(santocanale). That is, the inclusion $X^*\otimes X\subseteq X^*\odot X$ that comes from the embedding 
-\[
-\tilde A_X\otimes A_X\subseteq (A_X\otimes \tilde A_X)^\sim
-\]
-becomes an equality. As we have seen in Lemma \ref{lemma:tensors}, for proper objects we
-have $X^*\otimes X=X^*\odot X$ if and only if
-\[
-d_X+1=D_X=D_{X^*}=d_{X^*}+1=D_X-d_X.
-\]
-It follows that $d_X=0$ and $D_X=1$, so that $X\simeq I$. Hence the tensor unit is the
-unique dualizable (or nuclear) object in $\Af$.
-
-
-\subsubsection{No signaling}
-
-We say that $X\xrightarrow{f} Y$ is no signaling if
-\[
-y^*\circ f=\tilde a_Y\circ f,\qquad \forall y\in Y^*=[Y,I],
-\]
-in other words
-\[
-y\circ f=0,\qquad \forall y^*\in L_{Y^*}=S_Y^\perp.
-\]
-Taking $w\in A_{[X,Y]}$ be the corresponding elements, this means that
-\[
-\<w,x\otimes y^*\>=0,\qquad \forall x\in V_X,\ y^*\in S_Y^\perp,
-\]
-in other words
-\[
-w\in (V_X\otimes S_Y^\perp)^\perp=V^*_X\otimes S_Y,
-\]
-so that
-\[
-w\in A_{[X,Y]}\cap (V^*_X\otimes S_Y).
-\]
-Since $a_{[X,Y]}=\tilde a_X\otimes a_Y\in V^*_X\otimes S_Y$, we have that
-\[
-a_{[X,Y]}-w\in L_{[X,Y]}\cap V^*_X\otimes S_Y=(S_X\otimes L_Y^\perp)^\perp\cap
-V^*_X\otimes S_Y=(V_X^*\otimes L_Y)+ (L_{X^*}\otimes a_Y).
-\]
-We can also define no signaling in the oposite way, that is,
-\[
-f(x)=f(a_X),\qquad \forall x\in A_X.
-\]
-This is of course the same as 
-\[
-f(x)=0,\qquad \forall x\in L_X,
-\]
-or
-\[
-\<w,x\otimes y^*\>=0,\qquad \forall x\in L_X,\ y^*\in V_Y^*,
-\]
-that is,
-\[
-w\in (L_X\otimes V_Y^*)^\perp=L_X^\perp\otimes V_Y=S_{X^*}\otimes V_Y.
-\]
-It follows that
-\[
-\tilde a_X\otimes a_Y-w\in L_{[X,Y]}\cap S_{X^*}\otimes V_Y=L_{X^*}\otimes V_Y+\tilde
-a_X\otimes L_Y.
-\]
-
-\subsection{Once more on the monoidal structures}
-
-\subsubsection{Tensor product}
-
-We have
-\[
-L_{X\otimes Y}=(a_X\otimes L_Y)+(L_X\otimes a_Y)+(L_X\otimes L_Y)=(S_X\otimes
-L_Y)+(L_X\otimes a_Y)=(L_X\otimes S_Y)+(a_X\otimes L_Y)
-\]
-A closed symmetric monoidal structure. We have 
-\[
-L_{X_{\max} \otimes Y}=V_X\otimes L_Y+\{\tilde a_X\}^\perp\otimes a_Y,\qquad L_{X_{\min}\otimes Y}=a_X\otimes L_Y.
-\]
-\begin{lemma}\label{lemma:maxtensor}
-We have
-\[
-X\otimes Y=(X_{\max}\otimes Y)\sqcap (X\otimes Y_{\max}). 
-\]
-
-\begin{proof} This is easy, since
-\[
-S_{X_{\max}\otimes Y}\cap S_{X\otimes Y_{\max}}=(V_X\otimes S_Y)\cap (S_X\otimes
-V_Y)=S_X\otimes S_Y.
-\]
-
-\end{proof}
-
-\end{lemma}
-
-\subsubsection{Dual product}
-By definition,  $X\odot Y=(X^*\otimes Y^*)^*$. We have
-\[
-L_{X\odot Y}=(L_X^\perp\otimes L_Y^\perp)^\perp=(V_X\otimes L_Y)\vee (L_X\otimes V_Y).
-\]
-We have
-\[
-L_{X_{\max}\odot Y}=(V_X\otimes L_Y)\vee(\{\tilde a_X\}^\perp\otimes V_Y),\qquad
-L_{X_{\min}\odot Y}=V_X\otimes L_Y.
-\]
-\begin{lemma}\label{lemma:maxdual} We have
-\begin{align*}
-X_{\max}\otimes Y_{\max}&=(X_{\max}\odot Y)\sqcup (X\odot Y_{\max})\\
-X\odot Y&=(X_{\min}\odot Y)\sqcup (X\odot Y_{\min})\\
-X\otimes Y&= (X_{\min}\otimes Y)\sqcup (X\otimes Y_{\min})\sqcup (X_{\min}\odot Y \sqcap
-X\odot Y_{\min}) 
-\end{align*}
-
-
-\end{lemma}
-
-\begin{proof} The first is easy, the seconf follows from Lemma \ref{lemma:maxtensor} by
-duality, the third is also easy.
-
-\end{proof}
-
-\subsection{The no signalling product}
-
-Let us define $X\prec Y:= (X\odot Y)\sqcap (X_{\max}\otimes Y)$. We have
-\[
-L_{X\prec Y}=V_X\otimes L_Y+L_X\otimes a_Y=L_{X_{\min}\odot Y}+L_{Y\otimes Y_{\min}}.
-\]
-So that
-\[
-X\prec Y:= (X\odot Y)\sqcap (X_{\max}\otimes Y)=(X_{\min}\odot Y)+(X\otimes Y_{\min})
-\]
-
-\begin{lemma}\label{lemma:nosig}
-We have
-\begin{align*}
-(X\otimes Y)\sqcup (X_{\min}\odot Y)&=(X\odot Y)\sqcap (X_{\max}\otimes Y)\\
-=(X_{\min}\odot Y) + (X\otimes Y_{\min})&=(X_{\max}\otimes Y)\sqcap (X\odot Y_{\max}).
-\end{align*}
-Let us denote the above object by $X\prec Y$. Then $A_{X\prec Y}$ is the set of elements
-in $V_X\otimes V_Y$ such that $\<w,\cdot \otimes y^*\>$ is a fixed element in $A_X$,
-independently of $y^*\in \tilde A_Y$.
-\end{lemma}
-
-Blbe uvedenie, definicia!
-
-\begin{proof} We see that $A_{X\prec Y}\subseteq A_{X\odot Y}$, moreover,
-\[
-A_{X\prec Y}=\{w\in A_{X\odot Y},\ \<w,id_X\otimes y^*\>=0,\ \forall y^*\in L_{Y^*}\}.
-\]
-In other words, since clearly $a_X\otimes a_Y\in A_{X\prec Y}$,
-\begin{align*}
-L_{X\prec Y}&=\{w-a_X\otimes a_Y,\ w\in A_{X\prec Y}\}=L_{X\odot Y}\cap (V^*_X\otimes
-L_Y^*)^\perp=(L_X^\perp\otimes S_{Y^*})^\perp\cap(V_X^*\otimes L_{Y^*})^\perp\\
-&=((L_X^\perp\otimes S_{Y^*})\vee (V_X^*\otimes L_{Y^*}))^\perp=((V_X^*\otimes
-L_{Y^*})+(S_X^*\otimes \tilde a_Y))^\perp=S_{(X\prec Y)^*}^\perp
-\end{align*}
-But also
-\begin{align*}
-L_{X\odot Y}\cap (V^*_X\otimes
-L_Y^*)^\perp&=((V_X\otimes L_Y)\vee L_X\otimes V_Y)\cap (V_X\otimes S_Y)\\
-&=
-((V_X\otimes L_Y)+(L_X\otimes a_Y)+(L_X\otimes S_Y'))\cap ((V_X\otimes L_Y)+(L_X\otimes
-a_Y)+ (L_X'\otimes a_Y))\\
-&=((V_X\otimes L_Y)+(L_X\otimes a_Y). 
-\end{align*}
-
-First note that we have 
-\[
-L_{X_{\min}\odot Y}=V_X\otimes L_Y,\qquad L_{X\otimes Y_{\min}}=L_X\otimes a_Y
-\]
-and therefore
-\[
-L_{X\otimes Y_{\min}}\cap L_{X_{\min}\odot Y}=\{0\}.
-\]
-Further,
-\[
-L_{X\otimes Y}= (S_X\otimes L_Y)+ (L_X\otimes a_Y)=(S_X\otimes L_Y)+L_{X\otimes Y_{\min}}
-\]
-and
-\[
-L_{X\odot Y}=(V_X\otimes L_Y)\vee (L_X\otimes V_Y),\qquad L_{X_{\max}\otimes Y}=(V_X\otimes
-L_Y)+(\{\tilde a_X\}^\perp\otimes a_Y)
-\]
-We have
-\[
-S_{(X\otimes Y)\sqcup (X_{\min}\odot Y)}=S_{X\otimes Y}\vee S_{X_{\min}\odot Y}=
-S_{X\otimes Y}\vee L_{X_{\min}\odot Y}
-\]
-
-\end{proof}
-
-\subsection{The category $\Afh$} 
-
-
-The category $\Afh$ will be constructed as a subcategory in $\Af$. 
-
-\subsubsection{First order objects}
-
-It is easily seen that the following are equivalent:
-\begin{enumerate}
-\item $D_X=d_X+1$;
-\item $S_X=V_X$;
-\item $L_X=\{\tilde a_X\}^\perp$;
-\item $S_{X^*}=\mathbb R \tilde a_X$;
-\item $L_{X^*}=\{0\}$.
-\end{enumerate}
-We say that an object $X$ is first order if any of these conditions is fulfilled. We have
-seen that for proper objects, $X\otimes Y=X\odot Y$ if and only if both $X$ and $Y$ are
-first order. We also have
-
-\begin{lemma}\label{lemma:firstorder} $X$ is first order if and only if  $X\otimes
-X=X\odot X$.
-
-\end{lemma}
-`
-\begin{lemma}\label{lemma:1ordertensor} Let $X$, $Y$ be first order, then $X\otimes Y$ is
-first order.
-
-\end{lemma}
-
-\begin{proof} We have
-\[
-S_{X\otimes Y}=S_X\otimes S_Y=V_X\otimes V_Y=V_{X\otimes Y}.
-\]
-
-\end{proof}
-
-
-\subsubsection{Channels}
-A channel is an object $[X,Y]$ where  $X$ and $Y$ are first order. As we have seen,
-\[
-X^*\otimes Y\subseteq X^*\odot Y=[X,Y].
-\]
-If $X$ is first order, $\tilde A_X=\{\tilde a_X\}$ and the elements of $A_{X^*\otimes
-Y}=\tilde a_X\otimes A_Y$ are identified with channels of the form
-\[
-f(x)=\<\tilde a_X,x\>y,\qquad x\in V_X,
-\]
-for some $y\in A_Y$. Such maps will be called replacement channels.
-
-\begin{lemma}\label{lemma:channels} Let $X$, $Y$ be first order and let  $w\in V_X^*\otimes V_Y$. Then $w
-\in A_{[X,Y]}$ if and only if
-\[
-\circ_Y :w_{X^*Y}\otimes \tilde a_Y\mapsto \tilde a_X.
-\]
-\end{lemma}
-
-\begin{proof} Let $f:V_X\to V_Y$ be the map corresponding to $w$, then 
-\[
-\circ_Y(w\otimes \tilde a_Y)=(V_X^*\otimes e_{V_Y})(w\otimes \tilde a_Y)=\tilde a_Y\circ
-f,
-\]
-where $\tilde a_Y\in V_Y^*$ is seen as a map $V_y\to \mathbb R$. So $\tilde a_Y\circ f:
-V_X\to \mathbb R$ is an element in $V_X^*$. We know that $w\in A_{[X,Y]}$ iff
-$f(A_X)\subseteq A_Y$, which is equivalent to  $\tilde a_Y\circ f(x)=1$ for all $x\in A_X$, so
-that $\tilde a_Y\circ f\in \tilde A_X=\{\tilde a_X\}$, since $X$ is first order.  
-\end{proof}
-
-\begin{lemma}\label{lemma:mapsdual} Let $Y$ be first order and $w\in V_X^*\otimes V_Y$.
-Then $w\in A_{[X,Y]}$ if and only if
-\[
-\circ_Y(w_{X^*Y}\otimes \tilde a_Y)\in \tilde A_X.
-\]
-Moreover, 
-\[
-\tilde A_{[X,Y]}=A_X\otimes \{\tilde a_Y\}.
-\]
-
-
-\end{lemma}
-
-\begin{proof} Since $Y$ is first order, we have $A_{Y^*}=\tilde A_Y=\{\tilde a_Y\}$ and by
-\eqref{eq:ihom}
-\[
-\tilde A_{[X,Y]}=A_{X\otimes Y^*}=A_X\otimes \{\tilde a_Y\}.
-\]
-As in the above proof, let $f:V_X\to V_Y$ be the map corresponding to $w$. Then $\tilde
-a_Y\circ f\in V_X^*$ and $w\in A_{[X,Y]}$ iff $f(A_X)\subseteq A_Y$. This means that
-\[
-\tilde a_Y\circ f(x)=1,\qquad \forall x\in A_X,
-\]
-which means that $\tilde a_Y\circ f\in \tilde A_X$.
-
-\end{proof}
-
-\subsubsection{$\Afh$}
-
-The category $\Afh$ is the full subcategory in $\Af$ created from first order objects by
-taking tensor products and duals. We will add more later. We will use the notation
-$V_{XY^*}$ for $V_X\otimes V^*_Y$, etc. 
-
-Any object $X$ in $\Afh$ is created from first order objects $X_1,\dots, X_k$, so that
-$V_X=\tilde V_{X_1}\otimes\dots\otimes \tilde V_{X_k}$, where $\tilde V_{X_i}$ is either
-$V_{X_i}$ or $V^*_{X_i}$, $i=1,\dots,k$. We will next show that any object is a set of
-channels that contains all replacement channels. 
-
-
-
-\begin{prop}\label{prop:afh} Let $X$ be an object in $\Afh$. Then there are  first order
-objects $Y_I$ and $Y_O$ and inclusions $f$, $g$ such that
-\begin{equation}\label{eq:inclusions}
-Y_I^*\otimes Y_O \xrightarrow{f} X\xrightarrow{g} [Y_I,Y_O].
-\end{equation}
-
-
-\end{prop}
-
-\begin{proof} Let $X$ be first order, then since $I$ is first order,
-\[
-I^*\otimes X=I\otimes X \xrightarrow{\lambda_X} X\xrightarrow{\lambda^{-1}_X} I\otimes
-X=I\odot X=[I,X].
-\]
-Clearly, $f=\lambda_X$ and $g=\lambda^{-1}_X$ are inclusions. Now assume that $Z$
-satisfies \eqref{eq:inclusions} and let $X=Z^*$. Taking duals and composing with
-symmetries, we get
-\[
-Y_O^*\otimes Y_I\xrightarrow{\sigma_{V_{Y,O}^*,V_{Y_I}}} Y_I\otimes Y_0^*=[Y_I\otimes
-Y_O]^*\xrightarrow{g^*} X\xrightarrow{f^*} (Y_I^*\otimes
-Y_O)^*\xrightarrow{\sigma_{V_{Y_I},V_{X_O}^*}} (Y_O\otimes Y_I)^*=[Y_O,Y_I].
-\]
-Since the compositions of $f^*$ and $g^*$ with symmetries are inclusions, we see that $X$
-satisfies \eqref{eq:inclusions}.
-
-Next, let $X_1$ and $X_2$ satisfy \eqref{eq:inclusions}  with some first order objects $Y_I^i$, $Y_O^i$ and
-inclusions $f^i,g^i$, $i=1,2$, and let $X=X_1\otimes X_2$. We then have, using the
-appropriate symmetries
-\[
-Y_I^1Y_I^2\otimes (Y_O^1Y_O^2)^*\xrightarrow{\sigma_{Y_I^2,Y_O^1}} Y_I^1\otimes
-(Y_O^1)^*\otimes Y_I^2\otimes (Y_O^1)^*\xrightarrow{f^1\otimes f^2} X
-\xrightarrow{g^1\otimes g^2} [Y_I^1,Y_O^1]\otimes
-[Y_I^2,Y_O^2]\xrightarrow{\sigma_{Y_O^1,Y_O^2}}[Y_I^1Y_I^2,I_O^1Y_O^2].
-\]
-Perhaps the last arrow needs some checking, so lt us do it properly. We need to show that
-for $w\in A_{[Y_I^1,Y_O^1]\otimes
-[Y_I^2,Y_O^2]}$, we have $\sigma_{Y_O^1,Y_O^2}(w)\in A_{[Y_I^1Y_I^2,I_O^1Y_O^2]}$, but
-this is clear using Lemma \ref{lemma:channels}.
-
-\end{proof}
-
-The pair $(Y_I,Y_O)$ for an object $X$ will be called the $\type$ of $X$. For objects of
-the same $\type$ we may take
-pullbacks and pushouts of the  corresponding inclusions.
-
-
-
-
-Pullbacks are intersections, pushouts the affine mixture.
-
-Channels into (from) products and coproducts
-
-We define $\Afh$ as the full subcategory of $\Af$ containing all first order objects and
-closed under (finite products,) duals and  tensor products . 
-
-
-
+\end{document}
 \end{document}
 

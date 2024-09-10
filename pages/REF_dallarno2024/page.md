@@ -14,7 +14,14 @@ quantum statistical models and measurements
 
 **Decision:** revision
 
-[report](REF_dallarno2024/report.pdf)    
+[report](REF_dallarno2024/report.pdf)   
+
+
+**Revision due:** 24. 9. 2024
+
+[revised](REF_dallarno2024/revision.pdf)   revision and reply     
+
+
 
 
 
