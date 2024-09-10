@@ -41,6 +41,7 @@
 \def\Ce{\mathcal C}
 \def\Ae{\mathcal A}
 \def\Ne{\mathcal N}
+\def\Le{\mathcal L}
 \def\Te{\mathcal T}
 \def\Fe{\mathcal F}
 \def\Pe{\mathcal P}
@@ -184,40 +185,58 @@ $\{0,1\}^n$, we will denote by $0_n$ or just $0$ the string $00\dots0$ and
 \[
 e^i=\delta_{i,1}\dots\delta_{i,n}.
 \]
-For $m,n\in \mathbb N$, the concatenation of 
-strings $s\in \{0,1\}^m$ and $t\in \{0,1\}^n$ will be denoted by $st$, that is,
+For $m,n\in \mathbb N$, we may identify $ \{0,1\}^m\times \{0,1\}^n\simeq \{0,1\}^{m+n}$
+by concatenation: 
 \[
-st=s_1\dots s_mt_1\dots t_n\in \{0,1\}^{m+n}.
+\{0,1\}^m\times \{0,1\}^n\ni(s^1,s^2)\mapsto s^1s^2=s^1_1\dots s^1_ms^2_1\dots s^2_n\in \{0,1\}^{m+n}.
 \]
-For a string $x\in \{0,1\}^n$ and any set of indices $\{i_1,\dots,i_k\}\subseteq [n]$, we
-will denote by $x^{i_1\dots i_k}$ the string in $\{0,1\}^{n-k}$ obtained from $x$ by removing
-$x_{i_1},\dots, x_{i_k}$. For any permutation $\sigma\in S_n$, we will denote by the same symbol the obvious action
-on $\{0,1\}^n$, that is
-\[
-\sigma(s_1\dots s_n)=s_{\sigma(1)}\dots s_{\sigma(n)}.
-\]
+With this identification, we will sometimes use the identification of $[m+n]$ as the
+disjoint union of indices  $[m]\dot{\cup} [n]$, so the index set becomes
+$\{(1,1),\dots, (1,m),(2,1),\dots,(2,n)\}$, where $(1,i)=i$ and $(2,j)=m+j$, $i\in [m]$,
+$j\in [n]$, and for $s\in \{0,1\}^{m+n}$, we put $s_{(l,j)}=s^l_j$. We will use similar
+notations for any $n=n_1+\dots+n_k$. 
 
 
-Let us introduce the subset 
+
+
+
+%For a string $x\in \{0,1\}^n$ and any set of indices $\{i_1,\dots,i_k\}\subseteq [n]$, we
+%will denote by $x^{i_1\dots i_k}$ the string in $\{0,1\}^{n-k}$ obtained from $x$ by removing
+%$x_{i_1},\dots, x_{i_k}$. 
+
+For any permutation $\sigma\in \permut_n$, we will denote by the same symbol the action
+of $\sigma$ on $\{0,1\}^n$ given as 
 \[
-\Fe_n:=\{f:\{0,1\}^n\to \{0,1\},\ f(0)=1\}.
+\sigma(s_1\dots s_n)=s_{\sigma^{-1}(1)}\dots s_{\sigma^{-1}(n)}.
+\]
+Note that then for $\rho,\sigma\in \permut_n$, we have
+$\rho(\sigma(s))=(\rho\circ\sigma)(s)$. 
+
+Let us introduce the subset of boolean functions 
+\[
+\Fe_n:=\{f:\{0,1\}^n\to \{0,1\},\ f(0_n)=1\}.
 \]
 With the poitwise ordering, $\Fe_n$ is  a (finite) distributive lattice, with top element
- the constant 1 function and the bottom element $p_n:=\chi_{0}$, the characteristic
- function of the zero string.  We may also
-define complementation  in $\Fe_n$ as
+ the constant 1 function and the bottom element $p_n:=\chi_{0_n}$, the characteristic
+ function of the zero string. Moreover, we have for $f,g\in \Fe_n$,
+\begin{equation}\label{eq:wedgevee_fun}
+f\vee g= f+g-fg,\qquad f\wedge g=fg
+\end{equation}
+(with pointwise addition and multiplication). We also define complementation  in $\Fe_n$ as
 \[
 f^*:=1-f+p_n.
 \]
 It can be easily checked that with these structures $\Fe_n$ is a boolean algebra.
 
-We now introduce some more operations in $\Fe_n$. For $f\in \Fe_n$ and any permutation $\sigma\in S_n$, we see that $f\circ \sigma\in \Fe_n$.
+We now introduce some more operations in $\Fe_n$. For $f\in \Fe_n$ and any permutation
+$\sigma\in \permut_n$, we see that $f\circ \sigma\in \Fe_n$.
 For $f\in \Fe_{m}$ and $g\in \Fe_n$, we define
 the function $f\otimes g\in \Fe_{m+n}$ as
 \[
-(f\otimes g)(st)=f(s)g(t). 
+(f\otimes g)(s^1s^2)=f(s^1)g(s^2),\qquad s^1\in \{0,1\}^m,\ s^2\in \{0,1\}^n
 \]
-As it is, this tensor product is not symmetric, but there is a permutation $\sigma\in S_{m+n}$ such that 
+As it is, this tensor product is not symmetric, but there is a permutation $\sigma\in
+\permut_{m+n}$  such that $\sigma(s^1s^2)=s^2s^1$ and  
 $(g\otimes f)=(f\otimes g)\circ \sigma$ for any $f\in \Fe_m$ and $g\in \Fe_n$.
 
 \begin{lemma}\label{lemma:fproduct} For $f\in \Fe_m$, $g,h\in \Fe_n$, we have
@@ -231,49 +250,53 @@ $\Fe_m$ resp. $\Fe_n$
 
 \end{lemma}
 
-\begin{proof} The inequality in (i) is easily  checked, since $(f\otimes g)(st)$ can be 1 only if
-$f(s)=g(t)=1$. If both $s$ and $t$ are the zero strings, then $st=0_{m+n}$ and both sides
-are equal to 1. Otherwise, the condition $f(s)=g(t)=1$ implies that $(f^*\otimes
-g^*)(st)=0$, which implies that the right hand side must be 1. If $f$ and $g$ are both
+\begin{proof} The inequality in (i) is easily  checked, since $(f\otimes g)(s^1s^2)$ can be 1 only if
+$f(s^1)=g(s^2)=1$. If both $s^1$ and $s^2$ are the zero strings, then $s^1s^2=0_{m+n}$ and both sides
+are equal to 1. Otherwise, the condition $f(s^1)=g(s^2)=1$ implies that $(f^*\otimes
+g^*)(s^1s^2)=0$, so that the right hand side must be 1. If $f$ and $g$ are both
 constant 1, then $(1\otimes 1)^*=1^*=p_{n+m}=1^*\otimes 1^*$, in the case when both $f$
 and $g$ are the minimal elements equality  follows by
-duality. Finally, asume the equality holds and that $f\ne 1$, so that there is some $s$ such that 
-$f(s)=0$. But then $s\ne 0$ and for any $t$,
+duality. Finally, asume the equality holds and that $f\ne 1$, so that there is some $s^1$ such that 
+$f(s^1)=0$. But then $s^1\ne 0_m$ and for any $s^2$,
 \[
-0=(f\otimes g)(st)=(f^*\otimes g^*)^*(st)=1-f^*(s)g^*(t)+p_{m+n}(st)=1-g^*(t),
+0=(f\otimes g)(s^1s^2)=(f^*\otimes
+g^*)^*(s^1s^2)=1-f^*(s^1)g^*(s^2)+p_{m+n}(s^1s^2)=1-g^*(s^2),
 \]
-which implies that $g(t)=0$ for all $t\ne0$, that is, $g=p_n$. By the same argument,
+which implies that $g(s^2)=0$ for all $s^2\ne0_n$, that is, $g=p_n$. By the same argument,
 $f=p_m$ if $g\ne 1$, which implies that either $f=1$ and $g=1$, or $f=p_m$ and $g=p_n$.
 
-To prove (ii), notice that for $s\in \{0,1\}^n$ and $t\in \{0,1\}^m$, 
-\[
-f(s)(g(t)\vee h(t))=
-f(s)(g(t)+h(t)-g(t)h(t))=f(s)g(t)+f(s)h(t)-f(s)^2g(t)h(t)=f(s)g(t)\vee f(t)h(t),
-\]
-note that $f(t)^2=f(t)$. The statement for $\wedge$ is clear from $(g\wedge h)(t)=g(t)h(t)$.
+To prove (ii), notice that for $s^1\in \{0,1\}^n$ and $s^2\in \{0,1\}^m$,  we have by
+\eqref{eq:wedgevee_fun}
+\begin{align*}
+f(s^1)(g\vee h)(s^2)&=
+f(s^1)\left(g(s^2)+h(s^2)-g(s^2)h(s^2)\right)\\&=f(s^1)g(s^2)+f(s^1)h(s^2)-f(s^1)^2g(s^2)h(s^2)=f(s^1)g(s^2)\vee
+f(s^1)h(s^2),
+\end{align*}
+note that $f(s^1)^2=f(s^1)$. The statement for $\wedge$ is also clear from
+\eqref{eq:wedgevee_fun}.
 
 \end{proof}
 
 
 
-We now show an important example. 
+We now describe  an important example. 
 
 
 \begin{exm}\label{ex:ps} Let $S\subseteq [n]$ be any subset. We will denote
 \[
 p_S(s):=\prod_{i\in S}\bar s_i.
 \]
-It is clear that $p_S\in \Fe_n$, $p_{\emptyset}=1$, $p_{[n]}=\chi_0=p_n$. The following
-properies are also easy
-to see for $S,T\subseteq [n]$:
+It is clear that $p_S\in \Fe_n$ and  $p_{\emptyset}=1$, $p_{[n]}=p_n$. The following
+properties are also easy
+to see:
 \begin{enumerate}
-\item[(i)] if $S\subseteq T$, then $p_T\le p_S$,
-\item[(ii)]  $p_S\wedge p_T=p_Sp_T=p_{S\cup T}$,
-\item[(iii)]  $p_S\vee p_T=p_S+p_T-p_{S\cup T}$.
-\item[(iv)] let $S\subseteq [m]$ and $T\subseteq [n]$, then 
-\[
-p_S\otimes p_T=p_{S\cup (m+T)}.
-\]
+\item[(i)] if $S\subseteq T\subseteq [n]$, then $p_T\le p_S$,
+\item[(ii)]  $p_S\wedge p_T=p_Sp_T=p_{S\cup T}$, for $S,T\subseteq [n]$,
+\item[(iii)]  $p_S\vee p_T=p_S+p_T-p_{S\cup T}$, for $S,T\subseteq [n]$,
+\item[(iv)] $p_S\circ\sigma=p_{\sigma^{-1}(S)}$, $S\subseteq [n]$, $\sigma\in \permut_n$,
+\item[(iv)] $p_S\otimes p_T=p_{S\dot{\cup} T}$, for  $S\subseteq [m]$ and $T\subseteq
+[n]$.
+
 \end{enumerate}
 
 
@@ -282,85 +305,162 @@ p_S\otimes p_T=p_{S\cup (m+T)}.
 
 
 
-We will use the above functions to introduce  a convenient  parametrization to $\Fe_n$.  
-For this, we first include $\Fe_n$ into a larger set
-\[
-\Fe_n\subseteq \{f:\{0,1\}^n\to \mathbb R\}=:\mathcal V,
-\]
-which is a $2^n$-dimensional real vector space. It becomes a Hilbert space with respect to
-the inner product
-\[
-\<f,g\>=\sum_{s\in \{0,1\}^n} f(s)g(s). 
-\]
-
-\begin{lemma}\label{lemma:Vbasis} The set $\{p_S,\ S\subseteq [n]\}$ is a basis of
-$\mathcal V$.
-Any $f\in \mathcal V$ can be uniquely written as
-\[
-f=\sum_{S\subseteq [n]} \hat f_Sp_S,
-\]
-where the coefficients $\hat f_S\in \mathbb R$ are obtained as
-\[
-\hat f_S=\sum_{\substack{x\in \{0,1\}^n\\ x_i=1, \forall  i\in S^c}} (-1)^{\sum_{i\in
-S}x_i}f(x).
-\]
-\end{lemma}
+We will use the above functions to introduce  a convenient  parametrization to $\Fe_n$,
+closely related to the Fourier transform. 
 
 
+\begin{theorem}\label{thm:basis} Any $f:\{0,1\}^n\to \{0,1\}$ can be written in the form 
+\[
+f=\sum_{S\subseteq [n]} \hat f_Sp_S
+\]
+in a unique way, with  $\hat f_S\in \mathbb R$ obtained as
+\[
+\hat f_S=\sum_{\substack{s\in \{0,1\}^n\\ s_i=1, \forall  i\in S^c}} (-1)^{\sum_{i\in
+S}s_i}f(s).
+\]
 
-\begin{proof} For $T\subseteq [n]$, let us define the function $p_T^\perp$ as
-\[
-p_T^\perp(x):= (-1)^{\sum_{i\in T}x_i}\prod_{i\in T^c}x_i. 
-\]
-We prove that for $S,T\subseteq [n]$,
-\[
-\<p_S,p^\perp_T\>=\delta_{S,T},
-\]
-which shows that $\{p_S,\ S\subseteq [n]\}$ is a basis and 
-$\{p_T^\perp, \ T\subseteq [n]\}$  is the dual basis. We compute
-\[
-\<p_S,p^\perp_T\>=\sum_x p_S(x)p^\perp_T(x)=\sum_x (-1)^{\sum_{i\in T} x_i}\prod_{i\in S}
-\bar x_i\prod_{j\in T^c}x_j.
-\]
-This expression can be nonzero only if $S\cap T^c=\emptyset$, that is, $S\subseteq T$. In
-this case, the last sum  is equal to
-\[
-\sum_{\substack{x\in \{0,1\}^n\\ x_i=0,\forall i\in S\\x_i=1,\forall i\in T^c}}
-(-1)^{\sum_{j\in T\setminus S}x_j}=\begin{dcases} 0 & \text{if } S\subsetneq T\\
-  1 &\text{if } S=T
-  \end{dcases}
-\]
-It is now clear that the coefficients
-\[
-\hat f_S=\<f,p^\perp_S\>
-\]
-have the given form.
+\end{theorem}
 
+\begin{proof} Let $\Le_n$ be the boolean algebra of all subsets of $[n]$. We may interpret
+ $f$ as the function $\Le_n\to \mathbb R$, given by
+\[
+\varphi: S\mapsto f(s),\qquad s\in \{0,1\}^n,\ s_i=0 \iff i\in S.
+\]
+By the M\"obius inversion formula (see [Stanley, Sec. 3.7] for details), a  function $g:
+\Le_n\to \mathbb R$ satisfies  
+\[
+f(s)=\varphi(S)=\sum_{T\subseteq S} g(T),\qquad S\in \Le_n
+\]
+if and only if 
+\[
+g(S)=\sum_{T\subseteq S}(-1)^{|S\setminus T|} \varphi(T)=\hat f_S.
+\]
+Plugging this into the first equality, we get for any $s\in \{0,1\}^n$,
+\[
+f(s)=\sum_{T: s_i=0, \forall i\in T} \hat f_T=\sum_{T: p_T(s)=1}\hat f_T=\sum_T \hat
+f_Tp_T(s).
+\]
+To show uniqueness, assume that $f=\sum_{T\subseteq [n]} c_T p_T$ for some
+$c_T\in \mathbb R$, $T\in \Le_n$,  and let $s$ and $S$ be connected as above. Then 
+\[
+\varphi(S)=f(s)= \sum_{T\subseteq [n]} c_Tp_T(s)=\sum_{T\subseteq S} c_T,
+\]
+so that we must have $c_T=\hat f_T$.
 
 \end{proof}
 
-\begin{remark} This can be also obtained using M\"obius inversion formula, see [Stanley,
-Sec. 3.7].
-
-\end{remark}
 
 
-Let $\mathcal L_n$ be the lattice of subsets in
-$[n]$. We can  visualise $\mathcal L_n$ as a hypercube, and the coefficients $\hat f_S$ of  $f$ as labels for its vertices.
-Let $s\in\{0,1\}^n$ be a string  such that $s_j=1$ if and only if $j\in T$. Then
-$p_S(s)=1$ if and only if $T\cap S=\emptyset$. 
+%For this, we first include $\Fe_n$ into a larger set
+%\[
+%\Fe_n\subseteq \{f:\{0,1\}^n\to \mathbb R\}=:\mathcal V,
+%\]
+%which is a $2^n$-dimensional real vector space. It becomes a Hilbert space with respect to
+%the inner product
+%\[
+%\<f,g\>=\sum_{s\in \{0,1\}^n} f(s)g(s). 
+%\]
+%
+%\begin{lemma}\label{lemma:Vbasis} The set $\{p_S,\ S\subseteq [n]\}$ is a basis of
+%$\mathcal V$.
+%Any $f\in \mathcal V$ can be uniquely written as
+%\[
+%f=\sum_{S\subseteq [n]} \hat f_Sp_S,
+%\]
+%where the coefficients $\hat f_S\in \mathbb R$ are obtained as
+%\end{lemma}
+%
+%
+%
+%\begin{proof} For $T\subseteq [n]$, let us define the function $p_T^\perp$ as
+%\[
+%p_T^\perp(x):= (-1)^{\sum_{i\in T}x_i}\prod_{i\in T^c}x_i. 
+%\]
+%We prove that for $S,T\subseteq [n]$,
+%\[
+%\<p_S,p^\perp_T\>=\delta_{S,T},
+%\]
+%which shows that $\{p_S,\ S\subseteq [n]\}$ is a basis and 
+%$\{p_T^\perp, \ T\subseteq [n]\}$  is the dual basis. We compute
+%\[
+%\<p_S,p^\perp_T\>=\sum_x p_S(x)p^\perp_T(x)=\sum_x (-1)^{\sum_{i\in T} x_i}\prod_{i\in S}
+%\bar x_i\prod_{j\in T^c}x_j.
+%\]
+%This expression can be nonzero only if $S\cap T^c=\emptyset$, that is, $S\subseteq T$. In
+%this case, the last sum  is equal to
+%\[
+%\sum_{\substack{x\in \{0,1\}^n\\ x_i=0,\forall i\in S\\x_i=1,\forall i\in T^c}}
+%(-1)^{\sum_{j\in T\setminus S}x_j}=\begin{dcases} 0 & \text{if } S\subsetneq T\\
+%  1 &\text{if } S=T
+%  \end{dcases}
+%\]
+%It is now clear that the coefficients
+%\[
+%\hat f_S=\<f,p^\perp_S\>
+%\]
+%have the given form.
+%
+%
+%\end{proof}
+%
+%\begin{remark} This can be also obtained using M\"obius inversion formula, see [Stanley,
+%Sec. 3.7].
+%
+%\end{remark}
+%
+
+ We can  visualise $\mathcal L_n$ as a hypercube, and the coefficients $\hat f_S$ of  $f$ as labels for its vertices.
 The fact that the function $f$ takes  values in $\{0,1\}$ means that we must have 
 \[
-f(s)=\sum_{\substack{S\subseteq [n]\\ S\cap T=\emptyset}} \hat f_S\in \{0,1\}.
+f(s)=\varphi(S)=\sum_{T\subseteq S} \hat f_T\in \{0,1\},
 \]
-It follows that  the sum of labels $\hat f_S$ over any face of the hypercube $\mathcal L_n$ containing the vertex $\emptyset$ must
-be 0 or 1. In particular, $\hat f_\emptyset=f(11\dots 1)\in \{0,1\}$. The fact that $f\in \Fe_n$ means that in addition,
+so that  the sum of labels $\hat f_S$ over any face of the hypercube $\mathcal L_n$ containing the vertex 
+$\emptyset$ must
+be 0 or 1. In particular, $\hat f_\emptyset=f(11\dots 1)\in \{0,1\}$. Clearly,  $f\in
+\Fe_n$ if and only if,  in addition,
 \[
 f(0)=\sum_{S\subseteq [n]}\hat f_S=1.
 \]
 
 
+\begin{prop}\label{prop:mobius} 
 
+\begin{enumerate}
+\item[(i)] For $f\in \Fe_n$ and  $\sigma\in \permut_n$, 
+\[
+\widehat{(f\circ \sigma)}_S=\hat
+f_{\sigma(S)}, \qquad S\subseteq [n].
+\]
+\item[(ii)] For $f\in \Fe_n$, 
+\[
+\widehat{f^*}_S=\begin{dcases} 1-\hat f_S & S=\emptyset\text{ or } S=[n],\\
+-\hat f_S & \text{otherwise}.
+\end{dcases}
+\]
+\item[(iii)] For $f\in \Fe_m$, $g\in \Fe_n$, we have 
+\[
+\widehat{(f\otimes g)}_{S\dot{\cup}T}=\hat f_S\hat g_T,\qquad S\subseteq [m],\ T\subseteq
+[n].
+\]
+\item[(iv)] For $f,g\in \Fe_n$, we have
+\[
+\widehat{(f\wedge g)}_S=\sum_{T\subseteq S} \hat f_T\hat g_{S\setminus T}.
+\]
+\item[(v)] For $f,g\in \Fe_n$, we have
+\[
+\widehat{(f\vee g)}_S=\hat f_S+\hat g_S-\sum_{T\subseteq S} \hat f_T\hat g_{S\setminus T}.
+\]
+
+\end{enumerate}
+
+
+\end{prop}
+
+\begin{proof} All statements follow easily from the corresponding expressions and the uniqueness part in Theorem
+\ref{thm:basis}. 
+
+
+\end{proof}
 
 
 \section{The category of affine subspaces}
