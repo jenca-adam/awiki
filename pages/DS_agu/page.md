@@ -5,8 +5,7 @@ title: Mgr. Friday Ikechukwu Agu
 * **školiteľ:**  J. Mačutek  
 * **téma:** Recurrent families of discrete probability distributions in collective risk models    
 * **koniec štúdia:**    
-* **poznámky:**
-
+* **poznámky:** (Nigéria)    
      - motivačné štipendium 2023
 
 
@@ -20,8 +19,8 @@ title: Mgr. Friday Ikechukwu Agu
 
 * **oponent:**  doc. RNDr. Eva Fišerová, PhD   
 * **komisia:** [návrh](DS_agu/navrh_komisia.pdf)
-* **dátum:**    
-* **výsledok:**    
+* **dátum:**  13.11. 2023  
+* **výsledok:** prospel       
 
 
 

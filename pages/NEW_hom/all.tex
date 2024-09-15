@@ -52,7 +52,9 @@
 
 \def\<{\langle\,}
 \def\>{\,\rangle}
-\def \BS{\mathrm{BS}}
+%\def \BS{\mathrm{BS}}
+\def\vtl{\vartriangleleft}
+\def\vtr{\vartriangleright}
 \def \Afh{\mathrm{AfH}}
 \def \Af{\mathrm{Af}}
 \def \FV{\mathrm{FinVect}}
@@ -1283,7 +1285,7 @@ This can be checked directly from Propositions \ref{lemma:fh_setting} and
 $p_2\le g\le p_\emptyset^*=p_2$, which is obviously not the case. Clearly, also the
 complement $g^*\notin \Te_2$. Notice also that $g^*=p_{\{1\}}\vee p_{\{2\}}$, so that
 $\Te_2$ is not a lattice. Since $\Fe_2$ can be identified as a sublattice in $\Fe_n$ for
-all $n\ge 2$ as $f\mapsto (s \mapsto f(s_1s_2))$, we see that $\Te_n$, $n\ge 2$ is a  subposet in the distributive lattice 
+all $n\ge 2$ as $\Fe_2\ni f\mapsto f\otimes 1_{n-2}\in \Fe_n$, we see that $\Te_n$, $n\ge 2$ is a  subposet in the distributive lattice 
 $\Fe_n$ but itself not a lattice. 
 
 
@@ -1297,9 +1299,11 @@ It will be convenient to use the representation
 \[
 f=\sum_{S\subseteq [n]} \hat f_Sp_S,
 \]
-obtained in Lemma \ref{lemma:Vbasis}. For $f\in \Te_n$, let $\mathcal P_f$ be the subposet in $\mathcal L_n$ of elements such that
-$\hat f_S\ne 0$. We will show that $f$ is fully determined by $\Pe_f$. %Can we characterize such subposets? (we cannot so far.) Can we extract
+of a boolean function $f$ obtained in  Theorem  \ref{thm:basis}. Let $\mathcal P_f$ be the subposet in $\mathcal L_n$ of elements such that
+$\hat f_S\ne 0$. We will show that if $f$ is a type function, it is fully determined by $\Pe_f$. %Can we characterize such subposets? (we cannot so far.) Can we extract
 %some information about some 'causal structure' on the indices? 
+ 
+
  We say that a poset $\Pe$  is graded of rank
 $k$ if every maximal chain in $\Pe$ has the same length equal to $k$ (recall that the length
 of a chain is defined as number of its elements -1). Equivalently,  there is
@@ -1312,6 +1316,7 @@ with even rank $k\le n$. If $\rho$ is the rank function, then we have
 \[
 f=\sum_{S\in \mathcal P_f}(-1)^{\rho(S)}p_S.
 \]
+See [Stanley] for details.
 
 \end{prop}
 
@@ -1326,26 +1331,24 @@ assertion means that for $f\in \Te_n$,
 
 \begin{proof} 
 We first note that the property in the statement is invariant under permutations and
-complements. Assume  the statement holds for $f$ and let us take any $\sigma\in S_n$.
-It is easily seen from Lemma \ref{lemma:Vbasis} that 
+complements. Assume  the statement holds for $f$ and let us take any $\sigma\in \permut_n$.
+From Proposition \ref{prop:mobius} that 
 $\widehat{f\circ \sigma}_S=\hat f_{\sigma(S)}$ so that $S\mapsto \sigma(S)$ is an
 isomprphism  of  
 $\mathcal P_{f\circ \sigma}$ onto $\mathcal P_{f}$. Hence if $\Pe_f$ is graded with rank
-function $\rho$, then $\Pe_{f\circ\sigma}$ is graded with the same rank, and rank function
+function $\rho$, then $\Pe_{f\circ\sigma}$ is graded with the same rank and has rank function
 $\rho\circ \sigma$. By the assumption we have 
 \[
 f\circ\sigma=\sum_{S\in \Pe_f}(-1)^{\rho(S)}p_S\circ\sigma=\sum_{S\in
 \Pe_f}(-1)^{\rho(S)}p_{\sigma^{-1}(S)}=\sum_{S\in
 \Pe_{f\circ\sigma}}(-1)^{\rho\circ \sigma(S)}p_{S}.
 \]
-
-For the complement we write 
+For the complement, we have from the assumption and Proposition \ref{prop:mobius}(ii) that
 \begin{equation}\label{eq:dual_rank}
-f^*=1-f+p_n=(1-\hat f_\emptyset)1 -\sum_{\substack{S\in \mathcal P_f\\ \emptyset \ne S,
+f^*=(1-\hat f_\emptyset)1 -\sum_{\substack{S\in \mathcal P_f\\ \emptyset \ne S,
 [n]\ne S}}
 (-1)^{\rho(S)}p_S+(1- \hat f_{[n]})p_n.
 \end{equation}
-
 If $\emptyset \in \Pe_f$, then $\emptyset$ is the least element of $\Pe_f$, so that 
 $\rho(\emptyset)=0$ and therefore $\hat f_\emptyset =
 (-1)^0=1$. Similarly, if $[n]\in \Pe_f$, then $[n]$ is the largest element in $\Pe_f$,
@@ -1375,8 +1378,8 @@ that the statement holds for $f=f_1\otimes f_2$. But in this case, by the induct
 assumption, $\Pe_{f_i}$ is graded with even rank $k_i$ and rank function $\rho_i$. We also
 have
 \[
-f=f_1\otimes f_2=\sum_{S\subseteq [m], T\subseteq [m-n]} (\widehat {f_1})_S(\widehat {f_2})_T p_Sp_T=
-\sum_{S\subseteq [m], T\subseteq [m-n]}(-1)^{\rho_1(S)+\rho_2(T)}p_{S\cup(m+T)}.
+f=f_1\otimes f_2=\sum_{S\subseteq [m], T\subseteq [n-m]} (\widehat {f_1})_S(\widehat {f_2})_T p_Sp_T=
+\sum_{S\subseteq [m], T\subseteq [n-m]}(-1)^{\rho_1(S)+\rho_2(T)}p_{S\dot{\cup}T}.
 \]
 It follows that $\Pe_f=\Pe_{f_1}\times \Pe_{f_2}$ is the product of the two posets, which
 is a graded poset with rank $k=k_1+k_2$ and rank function $\rho=\rho_1+\rho_2$. This
@@ -1386,15 +1389,15 @@ proves the statement.
 
 
 We next show that the input and output sets of $f\in \Te_n$ can be obtained from $\Pe_f$. For an
-index $i\in [n]$, let  $\Pe_{f,i}:=\{S\in \Pe_f,\ i\in S\}$. Note that $\Pe_{f,i}$ may be
-empty.
+index $i\in [n]$, let  $M_{f,i}$ be the set of minimal elements of the subposet $\{S\in \Pe_f,\ i\in S\}$.
+Note that $M_{f,i}$ may be empty.
 
 \begin{prop}\label{prop:pfinput} Let $f\in \Te_n$ and $i\in [n]$. Then
 \begin{enumerate}
-\item If $\Pe_{f,i}\ne
-\emptyset$, then all minimal elements in $\Pe_{f,i}$ have the same rank, which will be
-denoted by $r_f(i)$. If $\Pe_{f,i}=\emptyset$, we put $r_f(i):=r(f)+1$. 
-\item $i\in O_f$ if and only if $\rho_f(i)$ is odd.
+\item If $M_{f,i}\ne
+\emptyset$, then all elements in $M_{f,i}$  have the same rank,  which will be
+denoted by $r_f(i)$. If $M_{f,i}=\emptyset$, we put $r_f(i):=r(f)+1$. 
+\item $i\in O_f$ if and only if $r_f(i)$ is odd.
 
 \end{enumerate}
 \end{prop}
@@ -1403,81 +1406,58 @@ denoted by $r_f(i)$. If $\Pe_{f,i}=\emptyset$, we put $r_f(i):=r(f)+1$.
 
 \begin{proof} Since $\Pe_f\simeq \Pe_{f\circ\sigma}$, it is
 quite clear that the two properties are preserved by permutations. We will show that they
-are preserved by complementation. Observe first that $\Pe_{f,i}=\emptyset$ if and only if
-$\Pe_{f^*,i}=\{[n]\}$, since $\Pe_{f^*}$ differs from $\Pe_f$ only up to adding/removing the least and greatest elements
-$\emptyset$ and $[n]$. If $\Pe_{f,i}$ is empty, then $p_S(e^i)=1$ for all $S\in
+are preserved by complementation. Observe first that $M_{f,i}=\emptyset$ if and only if
+$M_{f^*,i}=\{[n]\}$, since $\Pe_{f^*}$ differs from $\Pe_f$ only up to adding/removing the
+least element $\emptyset$ and the greatest element $[n]$. If $M_{f,i}$ is empty, then $p_S(e^i)=1$ for all $S\in
 \Pe_f$, so that $f(e^i)=f(0)=1$ and $i\in O_f$, we also see that $r_f(i)=r(f)+1$ is odd.
 If $\Pe_{f,i}=[n]$, then $r_f(i)=\rho_f([n])=r(f)$ by definition of the rank, hence
 $r_{f}(i)$ is even. As we have seen, $i\in O_{f^*}=I_f$. 
 
-Let us assume that $\Pe_{f,i}$ is not equal to $\emptyset$ or $\{[n]\}$. Then the same is true
-for $\Pe_{f^*,i}$, in fact, it differs from $\Pe_{f,i}$ only up to adding/removing the
-maximal element $[n]$. Therefore both posets have the same minimal elements, and by the
-proof of Proposition \ref{prop:graded}, we have for any such minimal element $S$ that 
-$\rho_{f^*}(S)=\rho_f(S)\pm 1$, depending only on the fact whether $\emptyset
+Let us assume that $M_{f,i}$ is not equal to $\emptyset$ or $\{[n]\}$. Then we must have
+$M_{f,i}=M_{f^*,i}$ and by the
+proof of Proposition \ref{prop:graded} we have  
+$\rho_{f^*}(S)=\rho_f(S)\pm 1$ for any $S$, depending only on the fact whether $\emptyset
 \in \Pe_f$. This implies that the properties are preserved by complementation.  
 
 
 We will now proceed by induction on $n$ as before. Both  assertions are quite trivial for $n=1$,
 so assume the statements hold for $m<n$. It is enough to assume that
 $f=g\otimes h$ for some $g\in \Te_m$ and $h\in \Te_{n-m}$. 
-Suppose without loss of generality that $i\in [m]$, then clearly $\Pe_{g,i}\ne \emptyset$
-and the minimal elements in $\Pe_{f,i}$ are of the form  $S\cup T$, with $S$ minimal in
-$\Pe_{g,i}$ and $T$ a minimal in $\Pe_h$. Since $\rho_h(T)=0$ for any minimal element $T$, we have
+Suppose without loss of generality that $i\in [m]$, then all elements of $M_{f,i}$ have
+the form $S\dot{\cup} T$, with $S\in M_{g,i}$ and  $T$ a minimal element in $\Pe_h$. 
+ Since $\rho_h(T)=0$ for any minimal element $T\in \Pe_h$, we have
 by the induction assumption
 \[
-\rho_f(S\cup T)=\rho_g(S)+\rho_h(T)=r_g(i).
+\rho_f(S\dot{\cup} T)=\rho_g(S)+\rho_h(T)=\rho_g(S)= r_g(i).
 \]
 The statement (ii) follows from the fact that $i\in O_f$ if and only if $i\in O_g$.
 
 
 \end{proof}
 
+\begin{coro}\label{coro:free} We have $\cap{\Pe_f}\in I_f$, $[n]\setminus\cup{\Pe_f}\in O_f$.
 
+\end{coro}
 
-
-Napisat toto dolu lepsie,  definicie do prelim, ako vyzera f?
-
-\begin{prop}\label{prop:isom} Let $\ell :[m]\to [n]$ be a map. Let $f\in \Te_n$ and let
-\[
-g=\sum_{S\subseteq [n]} \hat f_S p_{\ell^{-1}(S)}.
-\]
-Then $g\in \Te_m$.
-
-\end{prop}
-
-Note that $S\mapsto \ell^{-1}(S)$ defines a homomorphism of the Boolean algebras $\mathcal
-L_n$ and $\mathcal L_m$, in particular, it preseves unions and intersections, and
-$\ell^{-1}(\emptyset)=\emptyset$, $\ell^{-1}([m])=[n]$. 
-
-
-\begin{proof} Let us denote $g=\ell(f)$. For any permutation $\sigma\in S_m$, we have
-\[
-g\circ\sigma=\sum_{S\subseteq [n]} \hat f_S p_{\ell^{-1}(S)}\circ\sigma=\sum_{S\subseteq [n]}
-\hat f_S p_{\sigma^{-1}(\ell^{-1}(S))}=(\ell\circ\sigma)(f),
-\]
-so that $\ell(f)\circ \sigma=(\ell\circ\sigma)(f)$. We can similarly show that for any
-$\tau\in S_n$, $\ell(f\circ\tau)=(\tau\circ\ell)(f)$.  We may therefore assume
-that either $f=f_1\otimes f_2$ for some $f_1\in \Te_k$, $f_2\in \Te_{n-k}$ or $f$ is the
-dual of such a product. We then have
-\[
-\ell(f)=\sum_{\substack{S\subseteq [k]\\T\subseteq [n-k]}} (\hat f_1)_S (\hat
-f_2)_Tp_{\ell^{-1}(S\cup (k+T))}=\sum_{\substack{S\subseteq [k]\\ T\subseteq [n-k]}} (\hat f_1)_S (\hat
-f_2)_Tp_{\ell^{-1}(S)\cup \ell^{-1}(k+T)}
-\]
-Composing by a suitable permutation if
-necessary, we may assume that there are some maps $\ell_1:[k_1]\to [k]$ and
-$\ell_2:[k_2]\to [n-k]$ such that $\ell^{-1}(S)=\ell^{-1}_1(S)$
-for $S\subseteq [k]$ and $\ell^{-1}(k+T)=k_1+\ell^{-1}_2(T)$, $T\subseteq [n-k]$. It follows that 
-\[
-\ell(f)=\ell_1(f_1)\otimes \ell_2(f_2).
-\]
-Since $\ell^{-1}(\emptyset)=\emptyset$ and $\ell^{-1}([n])=[m]$, we can infer from
-\eqref{eq:dual_rank} that $\ell(f^*)=\ell(f)^*$. Since clearly $\ell(1)=1$, we can prove
-the statement  by induction on $n$ as before.
-
+\begin{proof} If $i\in \cap\Pe_f$, then clearly $M_{f,i}$ is the set of minimal elements
+in $\Pe_f$, so that $r_f(i)=0$ and $i\in I_f$ by Proposition \ref{prop:pfinput}. If
+$i\notin S$ for any $S\in \Pe_f$, then $M_{f,i}=\emptyset$ and $r_f(i)=r(f)+1$ is odd.
+Hence $i\in O_f$. 
 
 \end{proof}
+
+Let us denote $F_{f,in}:= \cap\Pe_f$, $F_{f,out}:=[n]\setminus\cup{\Pe_f}$.
+Elements of these sets will be called free inputs resp. outputs. It is easily seen that we
+have
+\[
+f=p_{F_{f,in}}\otimes g \otimes 1_{F_{f,out}}
+\]
+for some type function $g$ with no free inputs or outputs.
+
+
+Examples/NOnexamples?
+
+Obrazky?
 
 
 
@@ -1534,13 +1514,14 @@ higher order object such that $Y\sim\{Y_1,\dots,Y_n\}$.
 
 \begin{prop}\label{prop:chains_combs}  Let $T_1=S_1$, $T_i=S_i\setminus S_{i-1}$ for
 $i=1,\dots, k$ and $T_{k+1}=S_k^c$. For $S\subseteq [n]$, we denote  $Y_S:=\otimes_{i\in
-S}Y_i$. Then for  $k=1$, $Y\simeq [Y_{T_2},Y_{T_1}]$ and for any odd $k>1$, 
+S}Y_i$. Then for  $k=1$, $Y\simeq [Y_{T_2},Y_{T_1}]$ and for any odd $
+k>1$, 
  \[
 Y\simeq [Y_{T_{k+1}},[[Y_{T_k},[[....],Y_{T_2}]],Y_{T_1}]].
  \]
 \end{prop}
 
-Remark (quantum) comb.
+Remark (quantum) comb (examples)
 
 \begin{proof} It is easily checked by Proposition \ref{prop:fh_outputs} that $T_i\subseteq
 O_f$ if  $i$ is odd and $T_i\subseteq I_f$ otherwise. We therefore have 
@@ -1579,42 +1560,274 @@ which is as required.
 
 \end{proof}
 
+Combs, picture, without $\emptyset$ or $[n]$? Free inputs and outputs!
+
 
 \subsection{Connecting chains: the causal product}
 
 
-Let $\Pe_1=\{S_1\subsetneq \dots\subsetneq S_M\}$ be a chain in  $[m]$ and
-$\Pe_2=\{T_1\subsetneq \dots \subsetneq T_N\}$ a chain in $[n]$. We may append the
-two chains into  a single  chain $\Pe$ in $[m+n]$ in an obvious way, but we wish to do it
-in a way that all the outputs in $\Pe_1$ or $\Pe_2$ will still be outputs in $\Pe$,
-similarly for inputs. 
 
-\begin{lemma} Let  $\Pe_1$ and $\Pe_2$ be chains in $[m]$ and $[n]$ as above, with corresponding type
-functions $f_1$ and $f_2$. Then 
+
+We will introduce further operations of boolean functions. For
+$f_1:\{0,1\}^m\to \{0,1\}$,
+$f_2:\{0,1\}^n\to \{0,1\}$, we define 
 \[
-f=f_1\otimes 1_n+p_m\otimes (f_2-1_n)
+f_1\vartriangleleft f_2:=f_1\otimes 1_n+p_m\otimes (f_2-1),\qquad  f_1\vartriangleright
+f_2:=1_m\otimes f_2+(f_1-1)\otimes p_n.
 \]
-is a chain in $[m+n]$ such that $O_f=O_{f_1}\cup (O_{f_2}+m)$, $I_f=I_{f_1}\cup
-(I_{f_2}+m)$. 
+
+\begin{lemma}\label{lemma:causal_product}
+Let $f_1\in \Fe_m$, $f_2\in \Fe_n$. Then $f_1\vartriangleleft f_2\in \Fe_{n+m}$ and we
+have
+\begin{enumerate}
+\item[(i)] $f_1\vtl (f_2 \vtl f_3)=(f_1\vtl f_2)\vtl f_3$,
+\item[(ii)] $(f_1\vtl f_2)^*=f_1^*\vtl f_2^*$,
+\item[(iii)] $(f_1\wedge f_2)\vtl f_3=(f_1\vtl f_3)\wedge ( f_2\vtl f_3)$ and  $(f_1\vee
+f_2)\vtl f_3=(f_1\vtl f_3)\vee ( f_2\vtl f_3)$,
+\item[(iv)] $f_1\vtl (f_2\wedge f_3)=(f_1\vtl f_2)\wedge ( f_1\vtl f_3)$ and  $f_1\vtl
+(f_2\vee
+f_3)=(f_1\vtl f_2)\vee ( f_1\vtl f_3)$.
+
+\end{enumerate}
+Similar properties hold for $\vtr$. Moreover,
+\begin{enumerate}
+\item[(v)] $f_1\vtr f_2=(f_2\vtl f_1)\circ \pi$, where $\pi$ is the permutation that
+acts on $\{0,1\}^{m}\times \{0,1\}^n$ as $\pi(s^1s^2)=s^2s^1$.
+\item[(vi)] $f_1\otimes f_2=(f_1\vtl f_2)\wedge (f_1\vtr f_2)=(f_1\vtl f_2)\wedge (f_2\vtl
+f_1)\circ \pi$.
+\end{enumerate}
+
 
 \end{lemma}
 
-ROZMYSLIET SI TO PORIADNEJSIE!
+\begin{proof} The first assertion follows easily from
+\[
+f_1\vtl f_2(s^1s^2)=\begin{dcases} f_1(s^1), & \text{ if } s^1\ne 0_m,\\
+   f_2(s^2), & \text{ if } s^1=0_m,
+   \end{dcases}
+\]
+similarly for $\vtr$. 
+The statements (i)--(v) follow by straightforward calculations and the equality above.  To prove (vi), let
+$s^1\in \{0,1\}^m$, $s^2\in \{0,1\}^n$ and compute
+\begin{align*}
+(f_1\vtl f_2)\wedge (f_1\vtr
+f_2)(s^1s^2)&=\left(f_1(s^1)+p_{m}(s^1)(f_2(s^2)-1)\right)\left(f_2(s^2)+p_{n}(s^2)(f_1(s^1)-1)\right)\\
+=f_1(s^1)f_2(s^2),
+\end{align*}
+the last equality follows from the fact that $f_i(s^i)(1-f_i(s^i))=0$ (since $f_i(s^i)\in
+\{0,1\}$) and the fact that $p_m$ is the least element in $\Fe_m$, so that
+$p_m(s^1)(f_1(s^1)-1)=0$. 
+
+\end{proof}
+
+It is not clear that if $f_1$ and $f_2$ are type functions, then $f_1\vtl f_2$ or $f_1\vtr
+f_2$ are type functions as well. Nevertheless, we next show that this is true for chains.
+
+
+
+\begin{prop}\label{prop:append_chains} Let $\Pe_1=\{S_1\subsetneq \dots\subsetneq S_M\}$ be a chain in  $[m]$ and
+$\Pe_2=\{T_1\subsetneq \dots \subsetneq T_N\}$ a chain in $[n]$, 
+ with corresponding functions $\beta_1$ and $\beta_2$. Assume that both $M$ and $N$ are
+ odd, so that $\beta_1$ and $\beta_2$ are type functions. Then 
+$\beta=\beta_1\vtl \beta_2$ is a type function corresponding to a chain of $M+N\pm 1$
+elements in $[m+n]$, with $O_\beta=O_{\beta_1}\dot{\cup}O_{\beta_2}$,
+$I_\beta=I_{\beta_1}\dot{\cup} I_{\beta_2}$. A similar statement
+holds for $\vtr$.
+
+\end{prop}
+
 \begin{proof} We have
 \[
-f_1=\sum_{j=1}^M(-1)^{j-1}p_{S_j},\qquad f_2=\sum_{k=1}^N(-1)^{k-1}p_{T_k},
+\beta_1=\sum_{j=1}^M(-1)^{j-1}p_{S_j},\qquad \beta_2=\sum_{k=1}^N(-1)^{k-1}p_{T_k},
 \]
 so that
 \[
-f=\sum_{j=1}^M(-1)^{j-1}p_{S_j}
+\beta=\sum_{j=1}^{M-1}(-1)^{j-1}p_{S_j}+(p_{S_M}-p_m+p_{[m]\dot{\cup}
+T_1})+\sum_{k=2}^N(-1)^{k-1}p_{[m]\dot{\cup} T_k}.
 \]
+The resulting funnction depends on whether  $S_M=[m]$ and $T_1=\emptyset$. If at least one
+of the equalities is true, then the expression in brackets is equal to $p_{[m]}$,
+$p_{S_M}$ or $p_{[m]\dot{\cup} T_1}$  and $\beta$ corresponds to
+a chain of $M+N-1$ elements. If both $S_M\ne [m]$ and $T_1\ne \emptyset$, then
+$p_{S_M}\ne p_m\ne p_{[m]\dot{\cup} T_1}$ and $\beta$ corresponds to a chain of
+$M+N+1$ elements.
+
+For any $i\in [m]\dot{\cup} [n]$, we have  $e^i_{m+n}=e^j_m0_n$ or $e^i_{m+n}=0_me^k_n$
+for some $j\in [m]$, $k\in [n]$. Then   
+\[
+\beta(e^i)=\beta_1(e^j_m)\ \text{ or } \beta(e^i)=\beta_2(e^k_n).
+\]
+The statement on input/output indices  follow from Lemma \ref{lemma:fh_setting}. 
+
 \end{proof}
 
 
+\begin{theorem}\label{thm:structure}
+For any $f\in \Te_n$, there are chains $\beta_1\in \Te_{n_1}$,\dots, $\beta_k\in
+\Te_{n_k}$, $n=n_1+\dots+n_k$, such that 
+\[
+f=\bigvee_{a\in A}\bigwedge_{b\in B} (\beta_{\pi^{-1}_{a,b}(1)}\vtl \dots \vtl
+\beta_{\pi^{-1}_{a,b}(k)})\circ {\rho_{a,b}}
+\]
+for some finite index sets $A$ and $B$, where $\pi_{a,b}\in \permut_k$ and $\rho_{a,b}=\rho_{\pi_{a,b}}\circ \sigma$ for some $\sigma\in\permut_n$ and 
+$\rho_{\pi_{a,b}}(s^1\dots
+s^k)=s^{\pi^{-1}_{a,b}(1)}\dots s^{\pi^{-1}_{a,b}(k)}$, $a\in A$, $b\in B$.
+\end{theorem}
 
+
+\begin{proof} It is quite clear that the condition is invariant under permutations. Assume
+$f$ can be written in the given form, then
+\[
+f^*=\bigwedge _{a\in A}\bigvee_{b\in B} (\beta^*_{\pi^{-1}_{a,b}(1)}\vtl \dots \vtl
+\beta^*_{\pi^{-1}_{a,b}(k)})\circ {\rho_{a,b}}.
+\]
+Since $\Fe_n$ is a distributive lattice, this can be rewritten as
+\[
+f^*=\bigvee_{a^*\in B^{|A|}}\bigwedge_{b^*\in A}(\beta^*_{\pi^{-1}_{a^*,b^*}(1)}\vtl \dots \vtl
+\beta^*_{\pi^{-1}_{a^*,b^*}(k)})\circ {\rho_{a^*,b^*}},
+\]
+where for $a^*=(b_a)_{a\in A}$ and $b^*=a$, we have $\pi_{a^*,b^*}=\pi_{a,b_a}$, and
+$\rho_{a^*,b^*}=\rho_{\pi_{a^*,b^*}}\circ\sigma$. Since $\beta^*_j$ are chains in $[n_j]$,
+the assertion is true also for $f$.
+
+Since for $n=1$,  $f\in \Te_n$ is itself a (trivial) chain, the assertion is true in this
+case (note that it is also trivially true for $n=2$ and $n=3$, since all elements in
+$\Te_2$ and $\Te_3$ are chains).  
+Proceeding by induction, it is now enough to show this form for  $f=f_1\otimes f_2$, where 
+$f_1\in \Te_m$, $f_2\in \Te_{n-m}$ satisfy the conditions, so that
+\[
+f_1=\bigvee_{a\in A}\bigwedge_{b\in B} (\beta^1_{\pi^{-1}_{a,b}(1)}\vtl \dots \vtl
+\beta^1_{\pi^{-1}_{a,b}(k_1)})\circ \rho_{\pi_{a,b}}\circ\sigma_1,\qquad f_2=\bigvee_{c\in
+C}\bigwedge_{d\in D} (\beta^2_{\pi^{-1}_{c,d}(1)}\vtl \dots \vtl
+\beta^2_{\pi^{-1}_{c,d}(k_2)})\circ \rho_{\pi_{c,d}}\circ\sigma_2.
+\]
+for some chains $\beta^1_j\in \Te_{m_j}$, $\sum_jm_j=m$, and $\beta^2_j\in \Te_{l_j}$,
+$\sum_jl_j=n-m$ and permutations $\pi_{a,b}\in \permut_{k_1}$, $\pi_{c,d}\in
+\permut_{k_2}$, $\sigma_1\in \permut_m$, $\sigma_2\in \permut_{n-m}$.
+Using  properties of the tensor product, we get
+\begin{align*}
+f_1\otimes f_2=\bigvee_{a\in A,c\in C} \bigwedge_{b\in B,d\in D}(\beta^1_{\pi^{-1}_{a,b}(1)}\vtl \dots \vtl
+\beta^1_{\pi^{-1}_{a,b}(k_1)})\otimes (\beta^2_{\pi^{-1}_{c,d}(1)}\vtl \dots \vtl
+\beta^2_{\pi^{-1}_{c,d}(k_2)}) \circ (\rho_{\pi^1_{a,b}}\otimes \rho_{\pi^2_{c,d}})\circ
+(\sigma_1\otimes \sigma_2).
+\end{align*}
+Let 
+\[
+\beta^{a,b}_1:=\beta^1_{\pi^{-1}_{a,b}(1)}\vtl \dots \vtl
+\beta^1_{\pi^{-1}_{a,b}(k_1)},\qquad \beta^{c,d}_2:= \beta^2_{\pi^{-1}_{c,d}(1)}\vtl \dots \vtl
+\beta^2_{\pi^{-1}_{c,d}(k_2)}.
+\]
+Then $\beta^{a,b}_1\in \Te_{m}$ and $\beta^{c,d}_2\in \Te_{n-m}$ are chains and we have
+\[
+\beta_1^{a,b}\otimes \beta_2^{c,d}=(\beta_1^{a,b}\vtl \beta_2^{c,d}) \wedge
+(\beta_{\xi^{-1}(1)}^{c,d}\vtl \beta_{\xi^{-1}(2)}^{a,b})\circ \rho_{\xi},
+\]
+where $\xi$ is the swap $1\leftrightarrow 2$ and $\rho_\xi$ acts on $[n]=[m]\dot{\cup}
+[n]$ as $\rho_\xi(s^1s^2)=s^2s^1$. Taking into account the decompositions $[m]=\dot{\cup}_j
+[m_j]$ and $[n-m]=\dot{\cup}_j [l_j]$, we see that $\rho_\xi=\rho_\varpi$ for a 
+permutation $\varpi\in \permut_{k_1+k_2}$ that swaps the two blocks $[k_1]$ and
+$[k_2]$. 
+
+Put  $\beta_j:=\beta^1_j$, $j=1,\dots, k_1$ and $\beta_{k_1+j}:=\beta^2_j$, $j=1,\dots
+k_2$. Then $\beta_j$, $j=1,\dots,k:= k_1+k_2$ are chains, $\beta_j\in \Te_{n_j}$, where
+$n_j:= m_j$, $j=1,\dots,k_1$, $n_{k_1+j}:=l_j$, $j=1,\dots,k_2$ and $\sum_{j=1}^k n_j=n$. 
+
+To get the permutation sets, let $A'=A\times C$, $B'=\{0,1\}\times B\times D$. 
+Let $\pi_{(a,c), (0,b,d)}=\pi_{a,b}\dot{\cup} \pi_{c,d}$ and $\pi_{(a,c),
+(1,b,d)}=\varpi\circ (\pi_{a,b}\dot{\cup} \pi_{c,d})$. Put also $\sigma=\sigma_1\otimes
+\sigma_2$. Then   
+\[
+f=\bigvee_{a'\in A'} \bigwedge_{b'\in B'}(\beta_{\pi^{-1}_{a',b'}(1)}\vtl \dots \vtl
+\beta_{\pi^{-1}_{a',b'}(k)}) \circ \rho_{\pi_{a',b'}}\circ
+(\sigma_1\otimes \sigma_2).
+\]
+The proof is complete.
+
+
+
+\end{proof}
+
+Examples??
+
+Let $f$ be a function of the form as in Theorem \ref{thm:structure}. Since all the chains
+$\beta_{a,b}:=\beta_{\pi^{-1}_{a,b}(1)}\vtl \dots \vtl \beta_{\pi^{-1}_{a,b}(k)}\circ
+\rho_{a,b}$ in the
+decomposition have the same input and  output indices, they must satsfy the inequality
+$p_{I}\le \beta_{a,b} \le p_{O}^*$. But then the same is true for $f$.
+It follows that although we do not know whether $f$ is a type function, the corresponding
+object $X_f$ is always included in a set of channels.
+
+In particular, in the quantum case, each $X_{\beta_{a,b}}$ describes quantum combs  obtained by
+connecting combs described by  $X_{\beta_1},\dots, X_{\beta_k}$, in different orders
+according to $\pi_{a,b}$. ... NOT QUITE LIKE THIS!!!
+
+
+
+
+
+
+
+
+
+
+-- Quantum combs
+
+
+
+
+
+
+\end{document}
 
 
 ---
+
+
+
+
+Napisat toto dolu lepsie,  definicie do prelim, ako vyzera f?
+
+\begin{prop}\label{prop:isom} Let $\ell :[m]\to [n]$ be a map. Let $f\in \Te_n$ and let
+\[
+g=\sum_{S\subseteq [n]} \hat f_S p_{\ell^{-1}(S)}.
+\]
+Then $g\in \Te_m$.
+
+\end{prop}
+
+Note that $S\mapsto \ell^{-1}(S)$ defines a homomorphism of the Boolean algebras $\mathcal
+L_n$ and $\mathcal L_m$, in particular, it preseves unions and intersections, and
+$\ell^{-1}(\emptyset)=\emptyset$, $\ell^{-1}([m])=[n]$. 
+
+
+\begin{proof} Let us denote $g=\ell(f)$. For any permutation $\sigma\in S_m$, we have
+\[
+g\circ\sigma=\sum_{S\subseteq [n]} \hat f_S p_{\ell^{-1}(S)}\circ\sigma=\sum_{S\subseteq [n]}
+\hat f_S p_{\sigma^{-1}(\ell^{-1}(S))}=(\ell\circ\sigma)(f),
+\]
+so that $\ell(f)\circ \sigma=(\ell\circ\sigma)(f)$. We can similarly show that for any
+$\tau\in S_n$, $\ell(f\circ\tau)=(\tau\circ\ell)(f)$.  We may therefore assume
+that either $f=f_1\otimes f_2$ for some $f_1\in \Te_k$, $f_2\in \Te_{n-k}$ or $f$ is the
+dual of such a product. We then have
+\[
+\ell(f)=\sum_{\substack{S\subseteq [k]\\T\subseteq [n-k]}} (\hat f_1)_S (\hat
+f_2)_Tp_{\ell^{-1}(S\cup (k+T))}=\sum_{\substack{S\subseteq [k]\\ T\subseteq [n-k]}} (\hat f_1)_S (\hat
+f_2)_Tp_{\ell^{-1}(S)\cup \ell^{-1}(k+T)}
+\]
+Composing by a suitable permutation if
+necessary, we may assume that there are some maps $\ell_1:[k_1]\to [k]$ and
+$\ell_2:[k_2]\to [n-k]$ such that $\ell^{-1}(S)=\ell^{-1}_1(S)$
+for $S\subseteq [k]$ and $\ell^{-1}(k+T)=k_1+\ell^{-1}_2(T)$, $T\subseteq [n-k]$. It follows that 
+\[
+\ell(f)=\ell_1(f_1)\otimes \ell_2(f_2).
+\]
+Since $\ell^{-1}(\emptyset)=\emptyset$ and $\ell^{-1}([n])=[m]$, we can infer from
+\eqref{eq:dual_rank} that $\ell(f^*)=\ell(f)^*$. Since clearly $\ell(1)=1$, we can prove
+the statement  by induction on $n$ as before.
+
+
+\end{proof}
+
 
 \subsection{Separating type functions}
 

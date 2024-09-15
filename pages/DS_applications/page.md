@@ -11,21 +11,26 @@ title: Prihlásení študenti
 1. Peter Zigman  [dokumenty](DS_applications/zigman24_documents.pdf)    
     - školiteľ: B. Brejová     
     - téma: Integrative analysis of genomic data in cancer research          
-    - záver:   
+    - záver:  prijatý 
 
 1. Muhammad Azeem     
     - školiteľ: O. Šuch    
     - téma: Riedke symetrické grafy v strojovom učení     
-    - záver:     
+    - záver: prijatý    
 
 1. Ivan Vlček  (externý)              
     - školiteľ: M. Papčo         
     - téma: Súčasné trendy v agregovaní         
-    - záver:     
+    - záver:  prijatý   
 
 1. Juraj Belohorec          
     - školiteľ: P. Zajac    
     - téma: Aplikácie teórie kódovania v kryptografii    
-    - záver:     
+    - záver:  stiahnuté
+
+1. nnn    
+    - školiteľ: O. Šuch    
+    - téma:     
+    - záver: prijatý
 
 

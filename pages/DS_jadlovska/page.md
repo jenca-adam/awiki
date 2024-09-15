@@ -30,7 +30,6 @@ title: Irena Jadlovská, školiteľ
 ### Študenti   
 
 
-Niekto, kto má dostať víza!
-
+[Ahmed](DS_ahmed)
 
 

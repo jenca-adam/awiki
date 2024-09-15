@@ -28,5 +28,5 @@ title: Martin Papčo, školiteľ
 
 ### Študenti   
 
-
+Ivan [Vlček](DS_vlcek) (externý)
 

@@ -6,29 +6,34 @@ Dokumenty na [gdisc](https://drive.google.com/drive/folders/1ySfbCzjdcpMk7_4W8MO
 
 ## Zoznam školiteľov
 
-[Ing. Michal Hospodár, PhD](DS_hospodar)     
-[Mgr. Natalia Dilna, PhD](DS_dilna)     
-[doc. PaedDr. Martin Papčo, PhD](DS_papco)     
-[Mgr. Ján Karabáš, PhD.](DS_karabas)    
-[RNDr. Jozef Pócs, PhD.](DS_pocs)    
-[doc. Mgr. Ondrej Šuch, PhD.](DS_such)    
-[prof. RNDr. Michal Fečkan, DrSc.](DS_feckan)    
-[RNDr. Martin Kochol, PhD., DSc.](DS_kochol)    
-[Mgr. Andrea Zemánková, PhD.](DS_zemankova)     
-[prof. RNDr. Gejza Wimmer, DrSc.](DS_wimmer)     
-[prof. RNDr. Anatolij Dvurečenskij, DrSc](DS_dvurecenskij)    
-[Mgr. Anna Jenčová, DrSc.](students)    
-[Ing. Irena Jadlovská, PhD.](DS_jadlovska)     
-
+1. [doc. Mgr. Bronislava Brejová, PhD.](DS_brejova)    
+1. [Mgr. Natalia Dilna, PhD](DS_dilna)     
+1. [prof. RNDr. Anatolij Dvurečenskij, DrSc](DS_dvurecenskij)    
+1. [prof. RNDr. Michal Fečkan, DrSc.](DS_feckan)    
+1. [Ing. Michal Hospodár, PhD](DS_hospodar)     
+1. [Ing. Irena Jadlovská, PhD.](DS_jadlovska)    
+1. [Mgr. Anna Jenčová, DrSc.](students)    
+1. [Mgr. Ján Karabáš, PhD.](DS_karabas)    
+1. [RNDr. Martin Kochol, PhD., DSc.](DS_kochol)    
+1. [RNDr. Alžbeta Michalíková, PhD.](DS_michalikova)    
+1. [doc. PaedDr. Martin Papčo, PhD](DS_papco)     
+1. [RNDr. Jozef Pócs, PhD.](DS_pocs)    
+1. [doc. Mgr. Ondrej Šuch, PhD.](DS_such)    
+1. [prof. RNDr. Gejza Wimmer, DrSc.](DS_wimmer)     
+1. [Mgr. Andrea Zemánková, PhD.](DS_zemankova)     
 
 ## Zoznam doktorandov
 
-
-* Mgr. F. I. [Agu](DS_agu)  (2022 - )     
-* Mgr. J. [Valigurská](DS_valigurska)    (2021 - )    
-* Mgr. V. [Olejár](DS_olejar)   (2021 - )    
-* Ing. P. [Sýs](DS_sys)    (2019 - )    
-* Ing. F. [Čapka](DS_capka)  (2019 - )    
+1. [Ali Haidar](DS_haidar)  (2024 - )    
+1. M. [Azeem](DS_azeem)  (2024 - )    
+1. I. [Vlček](DS_vlcek)  (2024 - ) (externý)    
+1. Mgr. P. [Zigman](DS_zigman)  (2024 - )     
+1. [Ahmed](DS_ahmed)  (2023 - )    
+1. Mgr. F. I. [Agu](DS_agu)  (2022 - )     
+1. Mgr. J. [Valigurská](DS_valigurska)    (2021 - )    
+1. Mgr. V. [Olejár](DS_olejar)   (2021 - )    
+1. Ing. P. [Sýs](DS_sys)    (2019 - )    
+1. Ing. F. [Čapka](DS_capka)  (2019 - )    
 
 
 ## Čo a kedy
