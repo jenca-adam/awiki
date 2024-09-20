@@ -2,7 +2,7 @@ title: Mgr. Jana Valigurská
 ---
 
 * **začiatok štúdia:** 2021    
-* **školiteľ:** prof. Ing. Pavol Zajac, PhD. (FEI STU)    
+* **školiteľ:** prof. Ing. Pavol [Zajac](DS_zajac), PhD. (FEI STU)    
 * **téma:**  Coding theory applications in cryptography  
 * **poznámky:**
 

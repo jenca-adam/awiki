@@ -178,25 +178,162 @@ is the Choi matrix of $f$.
 \subsection{Boolean functions}
 
 
-We will work with certain boolean functions, which are defined as  functions from binary
-strings $\{0,1\}^*$ to $\{0,1\}$. We now list some basic notations used below.
+We will work with certain class of boolean functions, which are defined as  functions from binary
+strings $\{0,1\}^*$ to $\{0,1\}$. We now list some basic notations and facts used below.
 
-For $s\in \{0,1\}$, we denote $\bar s:=1-s$.
-For binary strings of fixed length $n$, that is, elements of
-$\{0,1\}^n$, we will denote by $0_n$ or just $0$ the string $00\dots0$ and 
+\subsubsection{Block permutations}
+\label{sec:permut}
+
+The set of all permutations on $[n]$ will be denoted by $\permut_n$.
+For $m\le n\in \mathbb N$, we will denote the corresponding interval by $[m,n]$ (note that
+we use the simplification  $[1,n]=[n]$). For $n_1,n_2\in \mathbb N$, $n_1+n_2=n$, 
+we will denote by $[n]=[n_1]\oplus [n_2]$ the decomposition of $[n]$ as a concatenation of two 
+intervals
 \[
-e^i=\delta_{i,1}\dots\delta_{i,n}.
+[n]=[n_1][n_1+1,n_1+n_2].
 \]
-For $m,n\in \mathbb N$, we may identify $ \{0,1\}^m\times \{0,1\}^n\simeq \{0,1\}^{m+n}$
-by concatenation: 
+Similarly, for $n=\sum_{j=1}^kn_j$, we have the decomposition
 \[
-\{0,1\}^m\times \{0,1\}^n\ni(s^1,s^2)\mapsto s^1s^2=s^1_1\dots s^1_ms^2_1\dots s^2_n\in \{0,1\}^{m+n}.
+[n]=\oplus_{j=1}^k[n_j]=[m_1,m_1+n_1][m_2,m_2+n_2]\dots[m_k,m_k+n_k],
 \]
-With this identification, we will sometimes use the identification of $[m+n]$ as the
-disjoint union of indices  $[m]\dot{\cup} [n]$, so the index set becomes
-$\{(1,1),\dots, (1,m),(2,1),\dots,(2,n)\}$, where $(1,i)=i$ and $(2,j)=m+j$, $i\in [m]$,
-$j\in [n]$, and for $s\in \{0,1\}^{m+n}$, we put $s_{(l,j)}=s^l_j$. We will use similar
-notations for any $n=n_1+\dots+n_k$. 
+where $m_j:=\sum_{l=1}^{j-1} n_j$ (so $m_1=0$). Note that the order of $n_1,\dots, n_k$ is
+fixed. We have two kinds of special permutations related to this decomposition. For
+$\sigma_j\in \permut_{n_j}$, we denote by $\oplus_j \sigma_j\in \permut_n$ the permutation that acts as
+\[
+m_j+l\mapsto m_j+\sigma(l),\qquad l=1,\dots,n_j,\ j=1,\dots, k. 
+\]
+On the other hand, we have for any $\lambda\in \permut_k$ a unique permutation
+$\rho_\lambda\in\permut_n$  such that $\rho_\lambda^{-1}$ acts as
+\[
+[m_1,m_1+n_1][m_2,m_2+n_2]...[m_k,m_k+n_k]\mapsto
+[m_{\lambda(1)}+n_{\lambda(1)}][m_{\lambda(2)}+n_{\lambda(2)}]\dots[m_{\lambda(k)}+n_{\lambda(k)}]
+\]
+Note that we have
+\[
+\rho_\lambda\circ(\oplus_j\sigma_j)=(\oplus_j \sigma_{\lambda(j)})\circ\rho_\lambda.
+\]
+(These permutations  come from the operadic structure on the set of
+all permutations $\permut_*$.)
+
+
+\subsubsection{Binary strings}
+
+A binary string of length $n$ is represented as $s_1\dots s_n$, where $s_i\in
+\{0,1\}$. Note that this can be interpreted as an element $\{0,1\}^n$, but also as a 
+map $[n]\to \{0,1\}$, or a subset in  $[n]:=\{1,\dots,n\}$. 
+Accordingly, we will denote the set of all binary strings of length $n$ by $2^n$ and use
+any of the above interpretations, depending on convenience. We will also denote
+$2:=2^1=\{0,1\}$. 
+
+We may define the coplementation in $2^n$ as the negation
+\[
+\bar s=\mathbf{1}-s=\bar s_1\dots \bar s_n, \qquad \bar s_i=1-s_i.
+\]
+With this complementation and 
+the pointwise ordering, $2^n$ is a boolean algebra. The minimal and maximal elements are the constant zero
+string $\mathbf{0}:=00\dots 0$ and the constant 1 string $\mathbf{1}:=11\dots 1$.
+Further special strings are 
+\[
+e^j=e^j_n:=\delta_{j,1}\dots\delta_{j,n},\qquad j=1,\dots,n,
+\]
+corresponding to the characteristic function of $\{j\}\subseteq [n]$. Here we omit the
+lower index when $n$ is clear. 
+
+The group $\permut_n$ has an obvious action on $2^n$. Indeed,
+if $s\in 2^n$ is interpreted as a map $[n]\to 2$, we may define the action of
+$\sigma\in \permut_n$ by precomposition as
+\[
+\sigma(s):=s\circ\sigma^{-1}=s_{\sigma^{-1}(1)}\dots s_{\sigma^{-1}(n)}.
+\]
+Note that in this way we have $\rho(\sigma(s))=(\rho\circ \sigma)(s)$. For a decomposition
+$[n]=\oplus_{j=1}^k[n_j]$, we have a corresponding decomposition of
+any string $s\in 2^n$ as a concatenation of strings
+\[
+s=s^1\dots s^k,\qquad s^j\in 2^{n_j}.
+\]
+For permutations $\sigma_j\in \permut_{n_j}$ and  $\lambda\in
+\permut_k$, we have
+\[
+\rho_\lambda\circ(\oplus_j\sigma_j)(s^1\dots s^k)=\rho_\lambda(\sigma_1(s^1)\dots
+\sigma_k(s^k))=\sigma_{\lambda(1)}(s^{\lambda(1)})\sigma_{\lambda(2)}(s^{\lambda(2)})\dots
+\sigma_{\lambda(k)}(s^{\lambda(k)}).
+\]
+
+
+\subsubsection{Boolean functions and the  M\"obius transform}
+
+
+A function $f:2^n\to 2$ is called a boolean function. As seen in the previous paragraph,
+the set of boolean functions can be identified with $2^{2^n}$, representing each function
+as the $2^n$-string of its values on each $n$-string. Nevertheless we will view the
+elements primarily as functions on the boolean algebra $2^n$.
+We will
+denote the maximal element (the constant 1 function) by $1_n$. Similarly,
+we denote the constant zero function by $0_n$.  For boolean
+functions $f,g$, the pointwise minima and maxima will be denoted by $f\wedge g$ and $f\vee
+g$. It is easily seen that we have
+\begin{equation}\label{eq:wedgevee_fun}
+f\vee g= f+g-fg,\qquad f\wedge g=fg,
+\end{equation}
+all the operations are pointwise. We now introduce and important example. 
+
+
+\begin{exm}\label{ex:pS}
+For $S\subseteq [n]$, we define
+\[
+p_S(s)=\Pi_{j\in S}(1-s_j).
+\]
+That is, $p_S(s)=1$ if and only if $s_j=0$ for all $j\in S$. In particular,
+$p_\emptyset=1_n$ and $p_{[n]}$ is the characteristic function of the zero string.
+Clearly, for $S,T\subseteq [n]$ we have $p_{S\cup T}=p_Sp_T=p_S\wedge p_T$, in particular,
+$p_S=\Pi_jp_{\{j\}}$. 
+\end{exm}
+
+By the M\"obius transform, all boolean functions can be expressed as combinations of the functions $p_S$, $S\subseteq
+[n]$ from the previous example.
+
+\begin{theorem}\label{thm:basis} Any $f:2^n\to 2$ can be expressed  in the form 
+\[
+f=\sum_{S\subseteq [n]} \hat f_Sp_S
+\]
+in a unique way. The coefficients  $\hat f_S\in \mathbb R$ obtained as
+\[
+\hat f_S=\sum_{\substack{t\in 2^n\\ t_j=1, \forall  j\in S^c}} (-1)^{\sum_{j\in
+S}t_j}f(t).
+\]
+
+\end{theorem}
+
+\begin{proof} We use the identification of binary strings with subsets of $[n]$, given
+explicitly as
+\[
+s\mapsto S:=\{j\in [n],\  s_j=0\}.
+\]
+ By the M\"obius inversion formula (see [Stanley, Sec. 3.7] for details), a  function $g: 2^n\to \mathbb R$ satisfies  
+\[
+f(S)=\sum_{T\subseteq S} g(T),\qquad S\in 2^n
+\]
+if and only if 
+\[
+g(S)=\sum_{T\subseteq S}(-1)^{|S\setminus T|} f(T).
+\]
+We now express this in terms of the corresponding strings $s\mapsto S$ and $t\mapsto T$.
+It is easily seen that $T\subseteq S$ if and only if
+$s_j=0$ for all $j\in T$, equivalently, $t_j=1$ for all $j\in [n]\setminus S$. Moreover,
+in this case we have  $|S\setminus T|=\sum_{j\in S} t_j$. This shows that $g(S)=\hat f_S$.
+The first equality now gives
+\[
+f(s)=f(S)=\sum_{T\subseteq S} g(T)=\sum_{T:s_i=0,\forall i\in T}\hat f_T=\sum_{T:
+p_T(s)=1}\hat f_T=\sum_{T\subseteq [n]} \hat f_Tp_T.
+\]
+For uniqueness, assume that $f=\sum_{T\subseteq [n]} c_Tp_T$ for some coefficients $c_T\in
+\mathbb R$. Then 
+\[
+f(s)=\sum_{T: p_T(s)=1}c_T=\sum_{T\subseteq S}c_T.
+\]
+Uniqueness now follows by  uniqueness in the M\"obius inversion formula.
+
+\end{proof}
 
 
 
@@ -206,46 +343,43 @@ notations for any $n=n_1+\dots+n_k$.
 %will denote by $x^{i_1\dots i_k}$ the string in $\{0,1\}^{n-k}$ obtained from $x$ by removing
 %$x_{i_1},\dots, x_{i_k}$. 
 
-For any permutation $\sigma\in \permut_n$, we will denote by the same symbol the action
-of $\sigma$ on $\{0,1\}^n$ given as 
-\[
-\sigma(s_1\dots s_n)=s_{\sigma^{-1}(1)}\dots s_{\sigma^{-1}(n)}.
-\]
-Note that then for $\rho,\sigma\in \permut_n$, we have
-$\rho(\sigma(s))=(\rho\circ\sigma)(s)$. 
+\subsubsection{The boolean algebra $\Fe_n$}
+
 
 Let us introduce the subset of boolean functions 
 \[
-\Fe_n:=\{f:\{0,1\}^n\to \{0,1\},\ f(0_n)=1\}.
+\Fe_n:=\{f:2^n\to 2,\ f(\mathbf{0})=1\}.
 \]
-With the poitwise ordering, $\Fe_n$ is  a (finite) distributive lattice, with top element
- the constant 1 function and the bottom element $p_n:=\chi_{0_n}$, the characteristic
- function of the zero string. Moreover, we have for $f,g\in \Fe_n$,
-\begin{equation}\label{eq:wedgevee_fun}
-f\vee g= f+g-fg,\qquad f\wedge g=fg
-\end{equation}
-(with pointwise addition and multiplication). We also define complementation  in $\Fe_n$ as
+In other words, $\Fe_n$ is the interval $[p_{[n]},1_n]$ in the boolean algebra $2^{2^n}$. 
+With the poitwise ordering, $\Fe_n$ is a distributive lattice, with top element $1_n$ and 
+ bottom element $p_{[n]}$. We also define complementation  in $\Fe_n$ as
 \[
-f^*:=1-f+p_n.
+f^*:=1_n-f+p_{[n]}.
 \]
-It can be easily checked that with these structures $\Fe_n$ is a boolean algebra.
+It can be easily checked that with these structures $\Fe_n$ is a boolean algebra, though
+it is not a subalgebra in $2^{2^n}$.
 
 We now introduce some more operations in $\Fe_n$. For $f\in \Fe_n$ and any permutation
 $\sigma\in \permut_n$, we see that $f\circ \sigma\in \Fe_n$.
-For $f\in \Fe_{m}$ and $g\in \Fe_n$, we define
-the function $f\otimes g\in \Fe_{m+n}$ as
+Further, let $f\in \Fe_{n_1}$ and $g\in \Fe_{n_2}$. With the decomposition
+$[n_1+n_2]=[n_1]\oplus [n_2]$
+and corresponding concatenation of strings $s=s^1s^2$,  we define
+the function $f\otimes g\in \Fe_{n_1+n_2}$ as
 \[
-(f\otimes g)(s^1s^2)=f(s^1)g(s^2),\qquad s^1\in \{0,1\}^m,\ s^2\in \{0,1\}^n
+(f\otimes g)(s^1s^2)=f(s^1)g(s^2),\qquad s^1\in 2^{n_1},\ s^2\in 2^{n_2}.
 \]
-As it is, this tensor product is not symmetric, but there is a permutation $\sigma\in
-\permut_{m+n}$  such that $\sigma(s^1s^2)=s^2s^1$ and  
-$(g\otimes f)=(f\otimes g)\circ \sigma$ for any $f\in \Fe_m$ and $g\in \Fe_n$.
+Let $\lambda\in \permut_2$ be the transposition, then we have for any $f\in \Fe_{n_1}$ and
+$g\in \Fe_{n_2}$
+\[
+(g\otimes f)=(f\otimes g)\circ \rho_\lambda,
+\]
+(see Section \ref{sec:permut}).
+We now give some important properties of these operations.
 
-\begin{lemma}\label{lemma:fproduct} For $f\in \Fe_m$, $g,h\in \Fe_n$, we have
+\begin{lemma}\label{lemma:fproduct} For $f\in \Fe_{n_1}$, $g,h\in \Fe_{n_2}$, we have
 \begin{enumerate}
-\item[(i)] $f\otimes g\le (f^*\otimes g^*)^*$, with equality if and only if $f$ and $g$ are either 
-both the  top or both the bottom elements in
-$\Fe_m$ resp. $\Fe_n$
+\item[(i)] $f\otimes g\le (f^*\otimes g^*)^*$, with equality if and only if either
+$f=1_{n_1}$ and $g=1_{n_2}$, or $f=p_{[n_1]}$ and $g=p_{[n_2]}$.
 \item[(ii)] $f\otimes (g\vee h)= (f\otimes g)\vee (f\otimes h)$, $f\otimes (g\wedge h)=
 (f\otimes g)\wedge (f\otimes h)$.
 \end{enumerate}
@@ -309,47 +443,6 @@ to see:
 
 We will use the above functions to introduce  a convenient  parametrization to $\Fe_n$,
 closely related to the Fourier transform. 
-
-
-\begin{theorem}\label{thm:basis} Any $f:\{0,1\}^n\to \{0,1\}$ can be written in the form 
-\[
-f=\sum_{S\subseteq [n]} \hat f_Sp_S
-\]
-in a unique way, with  $\hat f_S\in \mathbb R$ obtained as
-\[
-\hat f_S=\sum_{\substack{s\in \{0,1\}^n\\ s_i=1, \forall  i\in S^c}} (-1)^{\sum_{i\in
-S}s_i}f(s).
-\]
-
-\end{theorem}
-
-\begin{proof} Let $\Le_n$ be the boolean algebra of all subsets of $[n]$. We may interpret
- $f$ as the function $\Le_n\to \mathbb R$, given by
-\[
-\varphi: S\mapsto f(s),\qquad s\in \{0,1\}^n,\ s_i=0 \iff i\in S.
-\]
-By the M\"obius inversion formula (see [Stanley, Sec. 3.7] for details), a  function $g:
-\Le_n\to \mathbb R$ satisfies  
-\[
-f(s)=\varphi(S)=\sum_{T\subseteq S} g(T),\qquad S\in \Le_n
-\]
-if and only if 
-\[
-g(S)=\sum_{T\subseteq S}(-1)^{|S\setminus T|} \varphi(T)=\hat f_S.
-\]
-Plugging this into the first equality, we get for any $s\in \{0,1\}^n$,
-\[
-f(s)=\sum_{T: s_i=0, \forall i\in T} \hat f_T=\sum_{T: p_T(s)=1}\hat f_T=\sum_T \hat
-f_Tp_T(s).
-\]
-To show uniqueness, assume that $f=\sum_{T\subseteq [n]} c_T p_T$ for some
-$c_T\in \mathbb R$, $T\in \Le_n$,  and let $s$ and $S$ be connected as above. Then 
-\[
-\varphi(S)=f(s)= \sum_{T\subseteq [n]} c_Tp_T(s)=\sum_{T\subseteq S} c_T,
-\]
-so that we must have $c_T=\hat f_T$.
-
-\end{proof}
 
 
 
@@ -1568,60 +1661,102 @@ Combs, picture, without $\emptyset$ or $[n]$? Free inputs and outputs!
 
 
 
-We will introduce further operations of boolean functions. For
-$f_1:\{0,1\}^m\to \{0,1\}$,
-$f_2:\{0,1\}^n\to \{0,1\}$, we define 
+We will introduce further operations of boolean functions. 
+We will fix a decomposition $\{0,1\}^{m+n}\simeq \{0,1\}^m\times \{0,1\}^n$.
+For $f_1:\{0,1\}^m\to \{0,1\}$, $f_2:\{0,1\}^n\to \{0,1\}$, we define their causal product
+as 
 \[
-f_1\vartriangleleft f_2:=f_1\otimes 1_n+p_m\otimes (f_2-1),\qquad  f_1\vartriangleright
-f_2:=1_m\otimes f_2+(f_1-1)\otimes p_n.
+f_1\vartriangleleft f_2:=f_1\otimes 1_n+p_m\otimes (f_2-1).
 \]
+For any $s^1\in \{0,1\}^m$ and $s^2\in \{0,1\}^n$, this function acts as
+\begin{equation}\label{eq:causal_product}
+(f_1\vtl f_2)(s^1s^2)= f_1(s^1)+p_m(s^1)(f_2(s^2)-1)=\begin{dcases} f_1(s^1), & \text{ if } s^1\ne 0_m,\\
+   f_2(s^2), & \text{ if } s^1=0_m.
+   \end{dcases}
+\end{equation}
+
+\begin{remark} Causal: can be interpreted as ''$f_1$ before $f_2$'' (actually after).
+
+
+\end{remark}
+
+The following properties are immediate from \eqref{eq:causal_product}. 
 
 \begin{lemma}\label{lemma:causal_product}
 Let $f_1\in \Fe_m$, $f_2\in \Fe_n$. Then $f_1\vartriangleleft f_2\in \Fe_{n+m}$ and we
-have
+have for all $f_1,g_1\in \Fe_m$ and $f_2,g_2\in \Fe_n$,
 \begin{enumerate}
-\item[(i)] $f_1\vtl (f_2 \vtl f_3)=(f_1\vtl f_2)\vtl f_3$,
-\item[(ii)] $(f_1\vtl f_2)^*=f_1^*\vtl f_2^*$,
-\item[(iii)] $(f_1\wedge f_2)\vtl f_3=(f_1\vtl f_3)\wedge ( f_2\vtl f_3)$ and  $(f_1\vee
-f_2)\vtl f_3=(f_1\vtl f_3)\vee ( f_2\vtl f_3)$,
-\item[(iv)] $f_1\vtl (f_2\wedge f_3)=(f_1\vtl f_2)\wedge ( f_1\vtl f_3)$ and  $f_1\vtl
-(f_2\vee
-f_3)=(f_1\vtl f_2)\vee ( f_1\vtl f_3)$.
-
+\item[(i)] $(f_1\vtl f_2)^*=f_1^*\vtl f_2^*$,
+\item[(ii)]$(f_1\vee g_1)\vtl (f_2\vee g_2)=(f_1\vtl f_2)\vee ( g_1\vtl g_2)$,
+\item[(iii)] $(f_1\wedge g_1)\vtl (f_2\wedge g_2)=(f_1\vtl f_2)\wedge ( g_1\vtl g_2)$.
 \end{enumerate}
-Similar properties hold for $\vtr$. Moreover,
-\begin{enumerate}
-\item[(v)] $f_1\vtr f_2=(f_2\vtl f_1)\circ \pi$, where $\pi$ is the permutation that
-acts on $\{0,1\}^{m}\times \{0,1\}^n$ as $\pi(s^1s^2)=s^2s^1$.
-\item[(vi)] $f_1\otimes f_2=(f_1\vtl f_2)\wedge (f_1\vtr f_2)=(f_1\vtl f_2)\wedge (f_2\vtl
-f_1)\circ \pi$.
-\end{enumerate}
+Moreover, for any $f_3\in \Fe_k$, and for the decomposition $s=s^1s^2s^3$, we have 
+\[
+(f_1\vtl f_2)\vtl f_3=f_1\vtl (f_2\vtl f_3).
+\]
+\end{lemma}
 
+
+
+We can also combine $f_1$ and $f_2$ in the opposite order:
+\[
+f_2\vtl f_1: =1_m\otimes f_2+(f_1-1_n)\otimes p_n,
+\]
+so that
+\begin{equation}\label{eq:causal_product_op}
+(f_2\vtl f_1)(s^1s^2)=f_2(s^2)+p_n(s^2)(f_1(s^1)-1)=\begin{dcases} f_2(s^2), & \text{ if }
+s^2\ne 0_n,\\
+   f_1(s^1), & \text{ if } s^2=0_n.
+   \end{dcases}
+\end{equation}
+Of course, this product has similar properties as listed in the above lemma.
+To avoid any confusion, we have to bear in mind the fixed concatenation decomposition $s=s^1s^2$ and
+that $f_i$ acts on $s^i$. 
+
+\begin{lemma}\label{lemma:causal_tensor} In the situation as above, we have
+\[
+f_1\otimes f_2 = (f_1\vtr f_2)\wedge (f_2\vtr f_1).
+\]
 
 \end{lemma}
 
-\begin{proof} The first assertion follows easily from
-\[
-f_1\vtl f_2(s^1s^2)=\begin{dcases} f_1(s^1), & \text{ if } s^1\ne 0_m,\\
-   f_2(s^2), & \text{ if } s^1=0_m,
-   \end{dcases}
-\]
-similarly for $\vtr$. 
-The statements (i)--(v) follow by straightforward calculations and the equality above.  To prove (vi), let
+
+\begin{proof} This is again by straightforward computation from \eqref{eq:causal_product}
+and \eqref{eq:causal_product_op}: let
 $s^1\in \{0,1\}^m$, $s^2\in \{0,1\}^n$ and compute
 \begin{align*}
-(f_1\vtl f_2)\wedge (f_1\vtr
-f_2)(s^1s^2)&=\left(f_1(s^1)+p_{m}(s^1)(f_2(s^2)-1)\right)\left(f_2(s^2)+p_{n}(s^2)(f_1(s^1)-1)\right)\\
+(f_1\vtl f_2)\wedge (f_2\vtl
+f_1)(s^1s^2)&=\left(f_1(s^1)+p_{m}(s^1)(f_2(s^2)-1)\right)\left(f_2(s^2)+p_{n}(s^2)(f_1(s^1)-1)\right)\\
 =f_1(s^1)f_2(s^2),
 \end{align*}
 the last equality follows from the fact that $f_i(s^i)(1-f_i(s^i))=0$ (since $f_i(s^i)\in
 \{0,1\}$) and the fact that $p_m$ is the least element in $\Fe_m$, so that
-$p_m(s^1)(f_1(s^1)-1)=0$. 
+$p_m(s^1)(f_1(s^1)-1)=p_m(s^1)-p_m(s^1)=0$. 
 
 \end{proof}
 
-It is not clear that if $f_1$ and $f_2$ are type functions, then $f_1\vtl f_2$ or $f_1\vtr
-f_2$ are type functions as well. Nevertheless, we next show that this is true for chains.
+Using the last part of Lemma \ref{lemma:causal_product},
+for a decomposition $s=s^1\dots s^k$ and $f_i\in \Fe_{n_i}$, $\sum_i n_i=n$,  acting on
+$s^i$, $i=1,\dots,k$, we may define the function $f_1\vtl\dots \vtl f_k\in
+\Fe_{n}$. Note that we have 
+\begin{align*}
+(f_1\vtl \dots\vtl f_k)(s)&=f_1(s^1)+p_{n_1}(s^1)(f_2(s^2)-1)+\dots + p_{n_1}(s^1)\dots
+p_{n_{k-1}}(s^{k-1})(f_k(s^k)-1)\\
+&= \begin{dcases} f_1(s_1) & \text{ if } s^1\ne 0_{n_1}\\
+f_2(s^2) & \text{ if } s^1=0_{n_1}, s^2\ne 0_{n_2}\\
+\dots & \\
+f_k(s^k) & \text{ if } s^1=0_{n_1},\dots,  s^{k-1}=0_{n_{k-1}}.
+\end{dcases}
+\end{align*}
+For any permutation $\pi\in \permut_k$, we define  $f_{\pi^{-1}(1)}\vtl \dots \vtl
+f_{\pi^{-1}(k)}\in \Fe_n$ in an obvious way.
+
+
+
+
+
+It is not clear that if $f_1$ and $f_2$ are type functions, then $f_1\vtl f_2$ or $f_2\vtl
+f_1$ are type functions as well. Nevertheless, we next show that this is true for chains.
 
 
 
@@ -1629,10 +1764,11 @@ f_2$ are type functions as well. Nevertheless, we next show that this is true fo
 $\Pe_2=\{T_1\subsetneq \dots \subsetneq T_N\}$ a chain in $[n]$, 
  with corresponding functions $\beta_1$ and $\beta_2$. Assume that both $M$ and $N$ are
  odd, so that $\beta_1$ and $\beta_2$ are type functions. Then 
-$\beta=\beta_1\vtl \beta_2$ is a type function corresponding to a chain of $M+N\pm 1$
-elements in $[m+n]$, with $O_\beta=O_{\beta_1}\dot{\cup}O_{\beta_2}$,
-$I_\beta=I_{\beta_1}\dot{\cup} I_{\beta_2}$. A similar statement
-holds for $\vtr$.
+$\beta_1\vtl \beta_2$ and $\beta_2\vtl \beta_1$ are  type functions corresponding to
+chains of $M+N\pm 1$
+elements in $[m+n]$, with output and input indices given by
+$O_{\beta_1}\dot{\cup}O_{\beta_2}$ and 
+$I_{\beta_1}\dot{\cup} I_{\beta_2}$.
 
 \end{prop}
 
@@ -1642,14 +1778,14 @@ holds for $\vtr$.
 \]
 so that
 \[
-\beta=\sum_{j=1}^{M-1}(-1)^{j-1}p_{S_j}+(p_{S_M}-p_m+p_{[m]\dot{\cup}
+\beta:=\beta_1\vtl\beta_2=\sum_{j=1}^{M-1}(-1)^{j-1}p_{S_j}+(p_{S_M}-p_{[m]}+p_{[m]\dot{\cup}
 T_1})+\sum_{k=2}^N(-1)^{k-1}p_{[m]\dot{\cup} T_k}.
 \]
 The resulting funnction depends on whether  $S_M=[m]$ and $T_1=\emptyset$. If at least one
 of the equalities is true, then the expression in brackets is equal to $p_{[m]}$,
 $p_{S_M}$ or $p_{[m]\dot{\cup} T_1}$  and $\beta$ corresponds to
 a chain of $M+N-1$ elements. If both $S_M\ne [m]$ and $T_1\ne \emptyset$, then
-$p_{S_M}\ne p_m\ne p_{[m]\dot{\cup} T_1}$ and $\beta$ corresponds to a chain of
+$S_M\subsetneq [m]\subsetneq [m]\dot{\cup} T_1$ and $\beta$ corresponds to a chain of
 $M+N+1$ elements.
 
 For any $i\in [m]\dot{\cup} [n]$, we have  $e^i_{m+n}=e^j_m0_n$ or $e^i_{m+n}=0_me^k_n$
@@ -1657,17 +1793,27 @@ for some $j\in [m]$, $k\in [n]$. Then
 \[
 \beta(e^i)=\beta_1(e^j_m)\ \text{ or } \beta(e^i)=\beta_2(e^k_n).
 \]
-The statement on input/output indices  follow from Lemma \ref{lemma:fh_setting}. 
+The statement on input/output indices  follow from Lemma \ref{lemma:fh_setting}. The proof
+for $\beta_2\vtl\beta_1$ is similar. 
 
 \end{proof}
 
-
 \begin{theorem}\label{thm:structure}
-For any $f\in \Te_n$, there are chains $\beta_1\in \Te_{n_1}$,\dots, $\beta_k\in
-\Te_{n_k}$, $n=n_1+\dots+n_k$, such that 
+Let  $f\in \Te_n$. Then there is a prrmutation $\rho\in \permut_n$, a decomposition
+$[n]=[n_1]\oplus[n_1+1,n_2]\oplus\dots\oplus [n_{k-1}+1,n_k]$, chains 
+$\beta_1\in \Te_{n_1}$,\dots, $\beta_k\in
+\Te_{n_k}$, $n=n_1+\dots+n_k$, finite index sets $A$, $B$ and permutations $\pi_{a,b}\in
+\permut_k$ such that 
 \[
 f=\bigvee_{a\in A}\bigwedge_{b\in B} (\beta_{\pi^{-1}_{a,b}(1)}\vtl \dots \vtl
-\beta_{\pi^{-1}_{a,b}(k)})\circ {\rho_{a,b}}
+\beta_{\pi^{-1}_{a,b}(k)})\circ \rho.
+\]
+Moreover, there is a decomposition $[k]=\oplus_{j=1}^{l} [k_{j-1}+1,k_j]$, permutations $\pi_a^j\in
+\permut_{k_j}$ and $\tau_b\in \permut_l$ such that either $\pi_{a,b}$ or $\pi_{b,a}$
+have the form
+\[
+t_1\dots t_k \mapsto \pi_a^{\tau_b^{-1}(1)}(t_{\tau_b^{-1}}(1))\dots
+\pi_a^{\tau_b^{-1}(l)}(t_{\tau_b^{-1}}(l))
 \]
 for some finite index sets $A$ and $B$, where $\pi_{a,b}\in \permut_k$ and $\rho_{a,b}=\rho_{\pi_{a,b}}\circ \sigma$ for some $\sigma\in\permut_n$ and 
 $\rho_{\pi_{a,b}}(s^1\dots
@@ -1746,6 +1892,180 @@ The proof is complete.
 
 
 \end{proof}
+
+
+
+\subsubsection{Some examples}
+
+
+\begin{exm}[Tensor products] Let $n=n_1+n_2+n_3+n_4$ and let $f_i\in \Te_{n_i}$, $i=1,\dots,4$. 
+Fix the concatenation decompositions $\{0,1\}^n\simeq \Pi_i\{0,1\}^{n_i}$,
+$\{0,1\}^{n_1+n_2}\simeq \{0,1\}^{n_1}\times \{0,1\}^{n_2}$, $\{0,1\}^{n_3+n_4}\simeq
+\{0,1\}^{n_3}\times \{0,1\}^{n_4}$. Using Lemmas \ref{lemma:causal_product} and \ref{lemma:causal_tensor}, we compute
+\[
+f_1\otimes f_2=(f_1\vtl f_2)\wedge (f_2\vtl f_1),\qquad 
+(f_1\otimes f_2)^*=(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1).
+\]
+We then have using Lemmas \ref{lemma:fproduct} and \ref{lemma:causal_tensor},
+\begin{align*}
+(f_1\otimes f_2)\otimes f_3&=[(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\otimes f_3=
+[(f_1\vtl f_2)\otimes f_3]\wedge [(f_2\vtl f_1)\otimes f_3]\\
+&=(f_1\vtl f_2 \vtl f_3)\wedge (f_3\vtl f_1\vtl f_2)\wedge (f_2\vtl f_1\vtl f_3)\wedge
+(f_3\vtl f_2\vtl f_1).
+\end{align*}
+On the other hand, note that we also have
+\begin{align*}
+f_1\otimes (f_2\otimes f_3)&=f_1\otimes [(f_2\vtl f_3)\wedge (f_3\vtl f_2)]\\
+&= (f_1\vtl f_2\vtl f_3)\wedge (f_2\vtl f_3\vtl f_1)\wedge (f_1\vtl f_3\vtl f_2)\wedge
+(f_3\vtl f_2\vtl f_1).
+\end{align*}
+Since the left hand sides are obviously equal, we obtain
+\[
+f_1\otimes f_2\otimes f_3=\bigwedge_{\pi\in \permut_3} (f_{\pi^{-1}(1)}\vtl
+f_{\pi^{-1}(2)}\vtl f_{\pi^{-1}(3)}),
+\]
+but we may restrict to permutations of the two kinds above:
+\[
+\{123,\ 213,\ 312,\ 321\},\quad \{123,\ 231,\ 132,\ 321\}.
+\]
+Similarly, for $f_1,\dots, f_k$ we get 
+\[
+f_1\otimes \dots \otimes f_k=\bigwedge_{\pi\in \permut_k} (f_{\pi^{-1}(1)}\vtl
+\dots \vtl f_{\pi^{-1}(k)}),
+\]
+but we may restrict to some subsets of permutations.
+
+We look at the case $k=4$. Then we have 
+\begin{align*}
+((f_1\otimes f_2)\otimes f_3)\otimes f_4&=(f_1\otimes (f_2\otimes f_3))\otimes f_4=
+f_1\otimes (f_2\otimes (f_3\otimes f_4))=f_1\otimes ((f_2\otimes f_3)\otimes f_4)\\
+&=(f_1\otimes f_2)\otimes (f_3\otimes f_4)
+\end{align*}
+For the first 4 equalities, we get the sets of permutations:
+\begin{align*}
+\{1234,\ 2134,\ 3124,\ 3214,\ 4123,\ 4213,\ 4312,\ 4321\}\\
+\{1234,\ 2314,\ 1324,\ 3214,\ 4123,\ 4231,\ 4132,\ 4321\}\\
+\{1234,\ 1324,\ 1423,\ 1432,\ 2341,\ 3241,\ 4231,\ 4321\}\\
+\{1234,\ 1342,\ 1243,\ 1432,\ 2341,\ 3421,\ 2431,\ 4321\}
+\end{align*}
+For the last one, we compute:
+\begin{align*}
+(f_1\otimes f_2)\otimes (f_3\otimes f_4)&=[(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\otimes
+[(f_3\vtl f_4)\wedge (f_4\vtl f_3)]\\
+&=\biggl([(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\vtl [(f_3\vtl f_4)\wedge (f_4\vtl
+f_3)]\biggr)\\ &\wedge \biggl([(f_3\vtl f_4)\wedge (f_4\vtl
+f_3)]\vtl [(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\biggr)\\
+&=(f_1\vtl f_2\vtl f_3\vtl f_4)\wedge (f_2\vtl f_1\vtl f_4\vtl f_3)\\
+&\wedge (f_3\vtl f_4\vtl f_1\vtl f_2)\wedge (f_4\vtl f_3\vtl f_2\vtl f_1), 
+\end{align*}
+which gives us any of the sets
+\begin{align*}
+\{1234,\ 2143,\ 3412,\ 4321\}\\
+\{1243,\ 2134,\ 3421,\ 4312\},
+\end{align*}
+note these have only four elements!
+
+\end{exm}
+
+\begin{exm}\label{example:tensor3} In the situation of the previous example, we compute $(f_1\otimes
+f_2)^*\otimes f_3$. By the previous example, we have
+\[
+(f_1\otimes
+f_2)^*\otimes f_3= \bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1)\bigr]\otimes f_3.
+\]
+This can be written as
+\begin{align*}
+(f_1\otimes
+f_2)^*\otimes f_3&=\bigl[(f^*_1\vtl f^*_2)\otimes f_3\bigr]\vee\bigl[ (f^*_2\vtl
+f^*_1)\otimes f_3\bigr]\\
+&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl f_3\bigl)\wedge \bigl(f_3\vtl f_1^*\vtl
+f_2^*\bigr)\biggr]\vee \biggl[\bigl(f^*_2\vtl f^*_1\vtl f_3\bigl)\wedge \bigl(f_3\vtl
+f_2^*\vtl f_1^*\bigr)\biggr]
+\end{align*}
+but also as 
+\begin{align*}
+(f_1\otimes
+f_2)^*\otimes f_3&=\biggl[\bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1)\bigr]\vtl
+f_3\biggr]\wedge \biggl[f_3\vtl \bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl
+f^*_1)\bigr]\biggr]\\
+&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl f_3\bigr)\vee \bigl(f^*_2\vtl f^*_1\vtl
+f_3\bigr)\biggr]\wedge \biggl[\bigl(f_3\vtl f^*_1\vtl f^*_2\bigr)\vee \bigl(f_3\vtl f^*_2\vtl
+f^*_1\bigr)\biggr]
+\end{align*}
+
+
+\end{exm}
+
+
+\begin{exm}\label{example:tensor34} Let us next compute $(f_1\otimes f_1)^*\otimes (f_3\otimes f_4)$. 
+There are several possibilities how to get this: either plug $(f_3\otimes f_4)$ instead of
+$f_3$ into the two forms in the above example, or compute as tensoring the two forms with
+$f_4$. That is,
+\begin{align*}
+(f_1\otimes
+f_2)^*\otimes f_3\otimes f_4&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl (f_3\otimes
+f_4)\bigl)\wedge \bigl((f_3\otimes f_4)\vtl f_1^*\vtl
+f_2^*\bigr)\biggr]\\  &\vee \biggl[\bigl(f^*_2\vtl f^*_1\vtl (f_3\otimes f_4)\bigl)\wedge
+\bigl((f_3\otimes f_4)\vtl
+f_2^*\vtl f_1^*\bigr)\biggr]\\
+&= \biggl[(f^*_1\vtl f^*_2\vtl f_3\vtl f_4)\wedge (f^*_1\vtl f^*_2\vtl 
+f_4\vtl f_3)\\&\qquad\wedge (f_3\vtl f_4\vtl f_1^*\vtl f_2^*)\wedge (f_4\vtl f_3\vtl
+f_1^*\vtl f_2^*)\biggr]\\
+&\vee\biggl[(f^*_2\vtl f^*_1\vtl f_3\vtl f_4)\wedge (f^*_2\vtl f^*_1\vtl 
+f_4\vtl f_3)\\&\qquad\wedge (f_3\vtl f_4\vtl f_2^*\vtl f_1^*)\wedge (f_4\vtl f_3\vtl
+f_2^*\vtl f_1^*)\biggr]
+\end{align*}
+or
+\begin{align*}
+(f_1\otimes
+f_2)^*\otimes f_3\otimes f_4&=\biggl[\bigl[(f^*_1\vtl f^*_2\vtl f_3)\vee (f^*_2\vtl f^*_1\vtl
+f_3)\bigr]\wedge \bigl[(f_3\vtl f^*_1\vtl f^*_2)\vee (f_3\vtl f^*_2\vtl
+f^*_1)\bigr]\biggr]\otimes f_4\\
+&=\biggl[\biggl[\bigl[(\dots)\vee (\dots)\bigr]\wedge
+\bigl[(\dots)\vee(\dots)\bigr]\biggr]\vtl f_4 \biggr]\\
+&\qquad \qquad \wedge \biggl[f_4\vtl\biggl[\bigl[(\dots)\vee (\dots)\bigr]\wedge
+\bigl[(\dots)\vee(\dots)\bigr]\biggr]\\
+&=\biggl[(f^*_1\vtl f^*_2\vtl f_3\vtl f_4)\vee (f^*_2\vtl f^*_1\vtl
+f_3\vtl f_4)\biggr]\\
+&\wedge \biggl[(f_3\vtl f^*_1\vtl f^*_2\vtl f_4)\vee (f_3\vtl f^*_2\vtl
+f^*_1\vtl f_4)\biggr]\\
+&\wedge \biggl[(f_4\vtl f^*_1\vtl f^*_2\vtl f_3)\vee (f_4\vtl f^*_2\vtl f^*_1\vtl
+f_3)\biggr]\\
+&\wedge \biggl[(f_4\vtl f_3\vtl f^*_1\vtl f^*_2)\vee (f_4\vtl f_3\vtl f^*_2\vtl
+f^*_1)\biggr]
+\end{align*}
+
+\end{exm}
+
+\begin{exm} Here we compute $(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*$. We have
+\begin{align*}
+(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*&= \bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
+f_1^*\bigr]\otimes \bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
+f_3^*)\bigr]\\
+&= \bigl[(f_1^*\vtl f^*_2)\otimes (f_3^*\vtl f^*_4)\bigr]\vee \bigl[(f_1^*\vtl
+f^*_2)\otimes (f_4^*\vtl f^*_3)\bigr]\\
+&\quad \vee \bigl[(f_2^*\vtl f^*_1)\otimes (f_3^*\vtl
+f^*_4)\bigr]\vee \bigl[(f_2^*\vtl f^*_1)\otimes (f_4^*\vtl f^*_3)\bigr]\\
+&=[1234 \wedge 3412]\vee [1243\wedge 4312] \vee [2134\wedge 3421]\vee [2143\wedge 4321]
+\end{align*}
+but also
+\begin{align*}
+(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*&= \biggl[\bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
+f_1^*)\bigr]\vtl  \bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
+f_3^*)\bigr]\biggr]\\
+&\quad\wedge\biggl[\bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
+f_3^*)\bigr]\vtl  \bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
+f_1^*)\bigr]\biggr] \\
+&= [1234\vee 2143]\wedge [3412\vee 4321]
+\end{align*}
+
+
+
+
+\end{exm}
+
+
+///
 
 Examples??
 

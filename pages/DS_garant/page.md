@@ -20,6 +20,7 @@ Dokumenty na [gdisc](https://drive.google.com/drive/folders/1ySfbCzjdcpMk7_4W8MO
 1. [RNDr. Jozef Pócs, PhD.](DS_pocs)    
 1. [doc. Mgr. Ondrej Šuch, PhD.](DS_such)    
 1. [prof. RNDr. Gejza Wimmer, DrSc.](DS_wimmer)     
+1. [prof. Ing. Pavol Zajac, PhD.](DS_zajac)    
 1. [Mgr. Andrea Zemánková, PhD.](DS_zemankova)     
 
 ## Zoznam doktorandov
