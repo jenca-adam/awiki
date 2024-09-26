@@ -5,6 +5,22 @@ Dokumenty na  [gdisc](https://drive.google.com/drive/folders/1rRYqOioCWSx3km9gGf
  pre DŠ na [gdisc DŠ](https://drive.google.com/drive/folders/1ySfbCzjdcpMk7_4W8MOaR8w9aNUV0DKS?usp=drive_link)
 
 
+### Povinnosti
+
+* (do 27.9.2024) Čunderlíková IIa: 
+    - schválenie VR, napísať vyjadrenie        
+
+* (do 25.9.2024) Voľby Predsedu SAV: 
+    - zasadnutie AO - výber kandidátov, online schôdza 30.9. 2024 - zaslať oznámenie, podklady  
+
+
+
+
+
+
+----
+
+## Vedecká rada
 
 **Členovia:** 
 

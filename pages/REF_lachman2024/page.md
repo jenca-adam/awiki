@@ -10,7 +10,7 @@ title: Lachman, Tensor products of EA, 2024
 [file](REF_lachman2024/file.pdf)
 
 
-**Decision:** 
+**Decision:** accept 
 
 [report](REF_lachman2024/report.pdf)
 

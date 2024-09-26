@@ -77,7 +77,7 @@
 
 \maketitle
 
-\section{Preliminaries}
+\section{Affine subspaces and higher order maps}
 
 \subsection{The category $\FV$} \label{sec:fv}
 
@@ -99,18 +99,19 @@ V, \qquad \rho_V: V\otimes I\simeq V,\\
 Let  $(-)^*: V\mapsto V^*$ be the usual vector space dual, with duality denoted by
 $\<\cdot,\cdot\>: V^*\times V\to \mathbb R$. We will use the canonical identification
 $V^{**}=V$ and $(V_1\otimes V_2)^*=V_1^*\otimes V_2^*$. With this duality, $\FV$ is
-compact closed. This means that for each object $V$, there are maps $\eta_V: I\to V^*\otimes
+compact closed. This means that for each object $V$, there are morphisms $\eta_V: I\to V^*\otimes
 V$ (the ''cup'') and $\epsilon_V: V\otimes V^*\to I$ (the ''cap'') such that the following snake
 identities hold:
 \begin{equation}\label{eq:snake}
 (\epsilon_V\otimes V)\circ (V\otimes \eta_V)=V,\qquad (V^*\otimes \epsilon_V)\circ
 (\eta_V\otimes V^*)=V^*,
 \end{equation}
-here we denote the identity map on the object $V$ by $V$. Indeed, $\eta_V$ can be
-identified with an element $\eta_V(1)\in V^*\otimes V$ and   $\epsilon_V\in (V\otimes
+here we denote the identity map on the object $V$ by $V$. Let us identify these morphisms.
+First, $\eta_V$ is a linear map $\mathbb R\to V^*\otimes V$, which can be
+identified with the element $\eta_V(1)\in V^*\otimes V$ and   $\epsilon_V\in (V\otimes
 V^*)^*=V^*\otimes V$ is again an element of the same space.  Choose a basis
 $\{e_i\}$ of $V$, let $\{e_i^*\}$ be the dual basis of $V^*$, that is,
-$\<e_i^*,e_j\>=\delta_{i,j}$. Let us then define
+$\<e_i^*,e_j\>=\delta_{i,j}$. Let us define
 \[
 \eta_V(1)=\epsilon_V:=\sum_i e_i^*\otimes e_i.
 \]
@@ -123,8 +124,8 @@ It is also easily checked that the snake identities \eqref{eq:snake} hold.
 
 For two objects $V$ and $W$ in $\FV$, we will denote the set of all morphisms (i.e. linear
 maps) $V\to
-W$ $L(V,W)$  by $\FV(V,W)$. Then $\FV(V,W)$ is itself a real linear space and  we have the well-known identification 
-$\FV(V,W)\simeq V^*\otimes W$. This can be given as follows: for each $f\in FV(V,W)$, we have 
+W$ by $\FV(V,W)$. Then $\FV(V,W)$ is itself a real linear space and  we have the well-known identification 
+$\FV(V,W)\simeq V^*\otimes W$. This can be given as follows: for each $f\in \FV(V,W)$, we have 
 $C_f:=(V^*\otimes f)(\epsilon_V)=\sum_i e_i^*\otimes f(e_i)\in V^*\otimes W$. Conversely,
 since $\{e_i^*\}$ is a basis of $V^*$, 
 any element $w\in V^*\otimes W$ can be uniquely written as $w=\sum_i e_i^*\otimes w_i$ for
@@ -140,6 +141,7 @@ Note that by compactness, the internal hom in $\FV$ satisfies $[V,W]\simeq V^*\o
 so that  in the case of $\FV$, the object $[V,W]$ can be identified with the space of linear
 maps $\FV(V,W)$. 
 
+We now present two examples that are most important for us.
 
 \begin{exm}\label{exm:classical} Let $V=\mathbb R^N$. In this case, we fix the canonical basis $\{|i\>,\
 i=1,\dots,N\}$. We will identify $(\mathbb R^N)^*=\mathbb R^N$, with duality
@@ -175,449 +177,34 @@ is the Choi matrix of $f$.
 \end{exm}
 
 
-\subsection{Boolean functions}
 
-
-We will work with certain class of boolean functions, which are defined as  functions from binary
-strings $\{0,1\}^*$ to $\{0,1\}$. We now list some basic notations and facts used below.
-
-\subsubsection{Block permutations}
-\label{sec:permut}
-
-The set of all permutations on $[n]$ will be denoted by $\permut_n$.
-For $m\le n\in \mathbb N$, we will denote the corresponding interval by $[m,n]$ (note that
-we use the simplification  $[1,n]=[n]$). For $n_1,n_2\in \mathbb N$, $n_1+n_2=n$, 
-we will denote by $[n]=[n_1]\oplus [n_2]$ the decomposition of $[n]$ as a concatenation of two 
-intervals
-\[
-[n]=[n_1][n_1+1,n_1+n_2].
-\]
-Similarly, for $n=\sum_{j=1}^kn_j$, we have the decomposition
-\[
-[n]=\oplus_{j=1}^k[n_j]=[m_1,m_1+n_1][m_2,m_2+n_2]\dots[m_k,m_k+n_k],
-\]
-where $m_j:=\sum_{l=1}^{j-1} n_j$ (so $m_1=0$). Note that the order of $n_1,\dots, n_k$ is
-fixed. We have two kinds of special permutations related to this decomposition. For
-$\sigma_j\in \permut_{n_j}$, we denote by $\oplus_j \sigma_j\in \permut_n$ the permutation that acts as
-\[
-m_j+l\mapsto m_j+\sigma(l),\qquad l=1,\dots,n_j,\ j=1,\dots, k. 
-\]
-On the other hand, we have for any $\lambda\in \permut_k$ a unique permutation
-$\rho_\lambda\in\permut_n$  such that $\rho_\lambda^{-1}$ acts as
-\[
-[m_1,m_1+n_1][m_2,m_2+n_2]...[m_k,m_k+n_k]\mapsto
-[m_{\lambda(1)}+n_{\lambda(1)}][m_{\lambda(2)}+n_{\lambda(2)}]\dots[m_{\lambda(k)}+n_{\lambda(k)}]
-\]
-Note that we have
-\[
-\rho_\lambda\circ(\oplus_j\sigma_j)=(\oplus_j \sigma_{\lambda(j)})\circ\rho_\lambda.
-\]
-(These permutations  come from the operadic structure on the set of
-all permutations $\permut_*$.)
-
-
-\subsubsection{Binary strings}
-
-A binary string of length $n$ is represented as $s_1\dots s_n$, where $s_i\in
-\{0,1\}$. Note that this can be interpreted as an element $\{0,1\}^n$, but also as a 
-map $[n]\to \{0,1\}$, or a subset in  $[n]:=\{1,\dots,n\}$. 
-Accordingly, we will denote the set of all binary strings of length $n$ by $2^n$ and use
-any of the above interpretations, depending on convenience. We will also denote
-$2:=2^1=\{0,1\}$. 
-
-We may define the coplementation in $2^n$ as the negation
-\[
-\bar s=\mathbf{1}-s=\bar s_1\dots \bar s_n, \qquad \bar s_i=1-s_i.
-\]
-With this complementation and 
-the pointwise ordering, $2^n$ is a boolean algebra. The minimal and maximal elements are the constant zero
-string $\mathbf{0}:=00\dots 0$ and the constant 1 string $\mathbf{1}:=11\dots 1$.
-Further special strings are 
-\[
-e^j=e^j_n:=\delta_{j,1}\dots\delta_{j,n},\qquad j=1,\dots,n,
-\]
-corresponding to the characteristic function of $\{j\}\subseteq [n]$. Here we omit the
-lower index when $n$ is clear. 
-
-The group $\permut_n$ has an obvious action on $2^n$. Indeed,
-if $s\in 2^n$ is interpreted as a map $[n]\to 2$, we may define the action of
-$\sigma\in \permut_n$ by precomposition as
-\[
-\sigma(s):=s\circ\sigma^{-1}=s_{\sigma^{-1}(1)}\dots s_{\sigma^{-1}(n)}.
-\]
-Note that in this way we have $\rho(\sigma(s))=(\rho\circ \sigma)(s)$. For a decomposition
-$[n]=\oplus_{j=1}^k[n_j]$, we have a corresponding decomposition of
-any string $s\in 2^n$ as a concatenation of strings
-\[
-s=s^1\dots s^k,\qquad s^j\in 2^{n_j}.
-\]
-For permutations $\sigma_j\in \permut_{n_j}$ and  $\lambda\in
-\permut_k$, we have
-\[
-\rho_\lambda\circ(\oplus_j\sigma_j)(s^1\dots s^k)=\rho_\lambda(\sigma_1(s^1)\dots
-\sigma_k(s^k))=\sigma_{\lambda(1)}(s^{\lambda(1)})\sigma_{\lambda(2)}(s^{\lambda(2)})\dots
-\sigma_{\lambda(k)}(s^{\lambda(k)}).
-\]
-
-
-\subsubsection{Boolean functions and the  M\"obius transform}
-
-
-A function $f:2^n\to 2$ is called a boolean function. As seen in the previous paragraph,
-the set of boolean functions can be identified with $2^{2^n}$, representing each function
-as the $2^n$-string of its values on each $n$-string. Nevertheless we will view the
-elements primarily as functions on the boolean algebra $2^n$.
-We will
-denote the maximal element (the constant 1 function) by $1_n$. Similarly,
-we denote the constant zero function by $0_n$.  For boolean
-functions $f,g$, the pointwise minima and maxima will be denoted by $f\wedge g$ and $f\vee
-g$. It is easily seen that we have
-\begin{equation}\label{eq:wedgevee_fun}
-f\vee g= f+g-fg,\qquad f\wedge g=fg,
-\end{equation}
-all the operations are pointwise. We now introduce and important example. 
-
-
-\begin{exm}\label{ex:pS}
-For $S\subseteq [n]$, we define
-\[
-p_S(s)=\Pi_{j\in S}(1-s_j).
-\]
-That is, $p_S(s)=1$ if and only if $s_j=0$ for all $j\in S$. In particular,
-$p_\emptyset=1_n$ and $p_{[n]}$ is the characteristic function of the zero string.
-Clearly, for $S,T\subseteq [n]$ we have $p_{S\cup T}=p_Sp_T=p_S\wedge p_T$, in particular,
-$p_S=\Pi_jp_{\{j\}}$. 
-\end{exm}
-
-By the M\"obius transform, all boolean functions can be expressed as combinations of the functions $p_S$, $S\subseteq
-[n]$ from the previous example.
-
-\begin{theorem}\label{thm:basis} Any $f:2^n\to 2$ can be expressed  in the form 
-\[
-f=\sum_{S\subseteq [n]} \hat f_Sp_S
-\]
-in a unique way. The coefficients  $\hat f_S\in \mathbb R$ obtained as
-\[
-\hat f_S=\sum_{\substack{t\in 2^n\\ t_j=1, \forall  j\in S^c}} (-1)^{\sum_{j\in
-S}t_j}f(t).
-\]
-
-\end{theorem}
-
-\begin{proof} We use the identification of binary strings with subsets of $[n]$, given
-explicitly as
-\[
-s\mapsto S:=\{j\in [n],\  s_j=0\}.
-\]
- By the M\"obius inversion formula (see [Stanley, Sec. 3.7] for details), a  function $g: 2^n\to \mathbb R$ satisfies  
-\[
-f(S)=\sum_{T\subseteq S} g(T),\qquad S\in 2^n
-\]
-if and only if 
-\[
-g(S)=\sum_{T\subseteq S}(-1)^{|S\setminus T|} f(T).
-\]
-We now express this in terms of the corresponding strings $s\mapsto S$ and $t\mapsto T$.
-It is easily seen that $T\subseteq S$ if and only if
-$s_j=0$ for all $j\in T$, equivalently, $t_j=1$ for all $j\in [n]\setminus S$. Moreover,
-in this case we have  $|S\setminus T|=\sum_{j\in S} t_j$. This shows that $g(S)=\hat f_S$.
-The first equality now gives
-\[
-f(s)=f(S)=\sum_{T\subseteq S} g(T)=\sum_{T:s_i=0,\forall i\in T}\hat f_T=\sum_{T:
-p_T(s)=1}\hat f_T=\sum_{T\subseteq [n]} \hat f_Tp_T.
-\]
-For uniqueness, assume that $f=\sum_{T\subseteq [n]} c_Tp_T$ for some coefficients $c_T\in
-\mathbb R$. Then 
-\[
-f(s)=\sum_{T: p_T(s)=1}c_T=\sum_{T\subseteq S}c_T.
-\]
-Uniqueness now follows by  uniqueness in the M\"obius inversion formula.
-
-\end{proof}
-
-
-
-
-
-%For a string $x\in \{0,1\}^n$ and any set of indices $\{i_1,\dots,i_k\}\subseteq [n]$, we
-%will denote by $x^{i_1\dots i_k}$ the string in $\{0,1\}^{n-k}$ obtained from $x$ by removing
-%$x_{i_1},\dots, x_{i_k}$. 
-
-\subsubsection{The boolean algebra $\Fe_n$}
-
-
-Let us introduce the subset of boolean functions 
-\[
-\Fe_n:=\{f:2^n\to 2,\ f(\mathbf{0})=1\}.
-\]
-In other words, $\Fe_n$ is the interval $[p_{[n]},1_n]$ in the boolean algebra $2^{2^n}$. 
-With the poitwise ordering, $\Fe_n$ is a distributive lattice, with top element $1_n$ and 
- bottom element $p_{[n]}$. We also define complementation  in $\Fe_n$ as
-\[
-f^*:=1_n-f+p_{[n]}.
-\]
-It can be easily checked that with these structures $\Fe_n$ is a boolean algebra, though
-it is not a subalgebra in $2^{2^n}$.
-
-We now introduce some more operations in $\Fe_n$. For $f\in \Fe_n$ and any permutation
-$\sigma\in \permut_n$, we see that $f\circ \sigma\in \Fe_n$.
-Further, let $f\in \Fe_{n_1}$ and $g\in \Fe_{n_2}$. With the decomposition
-$[n_1+n_2]=[n_1]\oplus [n_2]$
-and corresponding concatenation of strings $s=s^1s^2$,  we define
-the function $f\otimes g\in \Fe_{n_1+n_2}$ as
-\[
-(f\otimes g)(s^1s^2)=f(s^1)g(s^2),\qquad s^1\in 2^{n_1},\ s^2\in 2^{n_2}.
-\]
-Let $\lambda\in \permut_2$ be the transposition, then we have for any $f\in \Fe_{n_1}$ and
-$g\in \Fe_{n_2}$
-\[
-(g\otimes f)=(f\otimes g)\circ \rho_\lambda,
-\]
-(see Section \ref{sec:permut}).
-We now give some important properties of these operations.
-
-\begin{lemma}\label{lemma:fproduct} For $f\in \Fe_{n_1}$, $g,h\in \Fe_{n_2}$, we have
-\begin{enumerate}
-\item[(i)] $f\otimes g\le (f^*\otimes g^*)^*$, with equality if and only if either
-$f=1_{n_1}$ and $g=1_{n_2}$, or $f=p_{[n_1]}$ and $g=p_{[n_2]}$.
-\item[(ii)] $f\otimes (g\vee h)= (f\otimes g)\vee (f\otimes h)$, $f\otimes (g\wedge h)=
-(f\otimes g)\wedge (f\otimes h)$.
-\end{enumerate}
-
-\end{lemma}
-
-\begin{proof} The inequality in (i) is easily  checked, since $(f\otimes g)(s^1s^2)$ can be 1 only if
-$f(s^1)=g(s^2)=1$. If both $s^1$ and $s^2$ are the zero strings, then $s^1s^2=0_{m+n}$ and both sides
-are equal to 1. Otherwise, the condition $f(s^1)=g(s^2)=1$ implies that $(f^*\otimes
-g^*)(s^1s^2)=0$, so that the right hand side must be 1. If $f$ and $g$ are both
-constant 1, then $(1\otimes 1)^*=1^*=p_{n+m}=1^*\otimes 1^*$, in the case when both $f$
-and $g$ are the minimal elements equality  follows by
-duality. Finally, asume the equality holds and that $f\ne 1$, so that there is some $s^1$ such that 
-$f(s^1)=0$. But then $s^1\ne 0_m$ and for any $s^2$,
-\[
-0=(f\otimes g)(s^1s^2)=(f^*\otimes
-g^*)^*(s^1s^2)=1-f^*(s^1)g^*(s^2)+p_{m+n}(s^1s^2)=1-g^*(s^2),
-\]
-which implies that $g(s^2)=0$ for all $s^2\ne0_n$, that is, $g=p_n$. By the same argument,
-$f=p_m$ if $g\ne 1$, which implies that either $f=1$ and $g=1$, or $f=p_m$ and $g=p_n$.
-
-To prove (ii), notice that for $s^1\in \{0,1\}^n$ and $s^2\in \{0,1\}^m$,  we have by
-\eqref{eq:wedgevee_fun}
-\begin{align*}
-f(s^1)(g\vee h)(s^2)&=
-f(s^1)\left(g(s^2)+h(s^2)-g(s^2)h(s^2)\right)\\&=f(s^1)g(s^2)+f(s^1)h(s^2)-f(s^1)^2g(s^2)h(s^2)=f(s^1)g(s^2)\vee
-f(s^1)h(s^2),
-\end{align*}
-note that $f(s^1)^2=f(s^1)$. The statement for $\wedge$ is also clear from
-\eqref{eq:wedgevee_fun}.
-
-\end{proof}
-
-
-
-We now describe  an important example. 
-
-
-\begin{exm}\label{ex:ps} Let $S\subseteq [n]$ be any subset. We will denote
-\[
-p_S(s):=\prod_{i\in S}\bar s_i.
-\]
-It is clear that $p_S\in \Fe_n$ and  $p_{\emptyset}=1$, $p_{[n]}=p_n$. The following
-properties are also easy
-to see:
-\begin{enumerate}
-\item[(i)] if $S\subseteq T\subseteq [n]$, then $p_T\le p_S$,
-\item[(ii)]  $p_S\wedge p_T=p_Sp_T=p_{S\cup T}$, for $S,T\subseteq [n]$,
-\item[(iii)]  $p_S\vee p_T=p_S+p_T-p_{S\cup T}$, for $S,T\subseteq [n]$,
-\item[(iv)] $p_S\circ\sigma=p_{\sigma^{-1}(S)}$, $S\subseteq [n]$, $\sigma\in \permut_n$,
-\item[(iv)] $p_S\otimes p_T=p_{S\dot{\cup} T}$, for  $S\subseteq [m]$ and $T\subseteq
-[n]$.
-
-\end{enumerate}
-
-
-\end{exm}
-
-
-
-
-We will use the above functions to introduce  a convenient  parametrization to $\Fe_n$,
-closely related to the Fourier transform. 
-
-
-
-%For this, we first include $\Fe_n$ into a larger set
-%\[
-%\Fe_n\subseteq \{f:\{0,1\}^n\to \mathbb R\}=:\mathcal V,
-%\]
-%which is a $2^n$-dimensional real vector space. It becomes a Hilbert space with respect to
-%the inner product
-%\[
-%\<f,g\>=\sum_{s\in \{0,1\}^n} f(s)g(s). 
-%\]
-%
-%\begin{lemma}\label{lemma:Vbasis} The set $\{p_S,\ S\subseteq [n]\}$ is a basis of
-%$\mathcal V$.
-%Any $f\in \mathcal V$ can be uniquely written as
-%\[
-%f=\sum_{S\subseteq [n]} \hat f_Sp_S,
-%\]
-%where the coefficients $\hat f_S\in \mathbb R$ are obtained as
-%\end{lemma}
-%
-%
-%
-%\begin{proof} For $T\subseteq [n]$, let us define the function $p_T^\perp$ as
-%\[
-%p_T^\perp(x):= (-1)^{\sum_{i\in T}x_i}\prod_{i\in T^c}x_i. 
-%\]
-%We prove that for $S,T\subseteq [n]$,
-%\[
-%\<p_S,p^\perp_T\>=\delta_{S,T},
-%\]
-%which shows that $\{p_S,\ S\subseteq [n]\}$ is a basis and 
-%$\{p_T^\perp, \ T\subseteq [n]\}$  is the dual basis. We compute
-%\[
-%\<p_S,p^\perp_T\>=\sum_x p_S(x)p^\perp_T(x)=\sum_x (-1)^{\sum_{i\in T} x_i}\prod_{i\in S}
-%\bar x_i\prod_{j\in T^c}x_j.
-%\]
-%This expression can be nonzero only if $S\cap T^c=\emptyset$, that is, $S\subseteq T$. In
-%this case, the last sum  is equal to
-%\[
-%\sum_{\substack{x\in \{0,1\}^n\\ x_i=0,\forall i\in S\\x_i=1,\forall i\in T^c}}
-%(-1)^{\sum_{j\in T\setminus S}x_j}=\begin{dcases} 0 & \text{if } S\subsetneq T\\
-%  1 &\text{if } S=T
-%  \end{dcases}
-%\]
-%It is now clear that the coefficients
-%\[
-%\hat f_S=\<f,p^\perp_S\>
-%\]
-%have the given form.
-%
-%
-%\end{proof}
-%
-%\begin{remark} This can be also obtained using M\"obius inversion formula, see [Stanley,
-%Sec. 3.7].
-%
-%\end{remark}
-%
-
- We can  visualise $\mathcal L_n$ as a hypercube, and the coefficients $\hat f_S$ of  $f$ as labels for its vertices.
-The fact that the function $f$ takes  values in $\{0,1\}$ means that we must have 
-\[
-f(s)=\varphi(S)=\sum_{T\subseteq S} \hat f_T\in \{0,1\},
-\]
-so that  the sum of labels $\hat f_S$ over any face of the hypercube $\mathcal L_n$ containing the vertex 
-$\emptyset$ must
-be 0 or 1. In particular, $\hat f_\emptyset=f(11\dots 1)\in \{0,1\}$. Clearly,  $f\in
-\Fe_n$ if and only if,  in addition,
-\[
-f(0)=\sum_{S\subseteq [n]}\hat f_S=1.
-\]
-
-
-\begin{prop}\label{prop:mobius} 
-
-\begin{enumerate}
-\item[(i)] For $f\in \Fe_n$ and  $\sigma\in \permut_n$, 
-\[
-\widehat{(f\circ \sigma)}_S=\hat
-f_{\sigma(S)}, \qquad S\subseteq [n].
-\]
-\item[(ii)] For $f\in \Fe_n$, 
-\[
-\widehat{f^*}_S=\begin{dcases} 1-\hat f_S & S=\emptyset\text{ or } S=[n],\\
--\hat f_S & \text{otherwise}.
-\end{dcases}
-\]
-\item[(iii)] For $f\in \Fe_m$, $g\in \Fe_n$, we have 
-\[
-\widehat{(f\otimes g)}_{S\dot{\cup}T}=\hat f_S\hat g_T,\qquad S\subseteq [m],\ T\subseteq
-[n].
-\]
-\item[(iv)] For $f,g\in \Fe_n$, we have
-\[
-\widehat{(f\wedge g)}_S=\sum_{T\subseteq S} \hat f_T\hat g_{S\setminus T}.
-\]
-\item[(v)] For $f,g\in \Fe_n$, we have
-\[
-\widehat{(f\vee g)}_S=\hat f_S+\hat g_S-\sum_{T\subseteq S} \hat f_T\hat g_{S\setminus T}.
-\]
-
-\end{enumerate}
-
-
-\end{prop}
-
-\begin{proof} All statements follow easily from the corresponding expressions and the uniqueness part in Theorem
-\ref{thm:basis}. 
-
-
-\end{proof}
-
-
-\section{The category of affine subspaces}
 
 
 \subsection{The category $\Af$}
 
 We now introduce the category $\Af$, whose objects  are of the form $X=(V_X,A_X)$, where
-$V_X$ is an object in $\FV$  and $A_X\subseteq V_X$ a proper affine subspace, which means
-that $0\notin A_X\ne \emptyset$. Morphisms $X\xrightarrow{f} Y$ in $\Af$ are linear maps $f:V_X\to V_Y$  such that
+$V_X$ is an object in $\FV$  and $A_X\subseteq V_X$ is a proper affine subspace, see Appendix
+\ref{sec:app_affine} for definitions and basic properties. Morphisms $X\xrightarrow{f} Y$ in $\Af$ are linear maps $f:V_X\to V_Y$  such that
 $f(A_X)\subseteq A_Y$. For any object $X$, we put
 \begin{align*}
-L_X=\lin(A_X):=\{a_1-a_2,\ a_1,a_2\in A_X\}=\{a-a_X,\ a\in A_X\}, \qquad S_X:=\Span(A_X).
+L_X:=\lin(A_X), \quad  S_X:=\Span(A_X), \quad D_X=\dim(V_X),\quad d_X=\dim(L_X).
 \end{align*}
-Here $a_X$ is any element in $A_X$ and $L_X$ does not depend on this choice.
-Then $L_X$ and $S_X$ are linear subspaces such that $d_X:=\dim(L_X)=\dim(S_X)-1$. We will
-also denote $D_X=\dim(V_X)$. For
-any element $a_X\in A_X$, the affine subspace is determined as
-\[
-A_X=a_X+L_X.
-\]
-
-Let us now define the duality of affine subspaces as follows. Let $V$ be an object in
-$\FV$ and let $C\subseteq  V$ be any subset. Let
-\[
-\tilde C:=\{v^*\in V^*, \ \<v^*,c\>=1\}.
-\]
-The following lemma collects some properties that are easily proven.
-
-\begin{lemma}\label{lemma:dual}
-\begin{enumerate}
-\item[(i)] $\tilde C$ is an affine subspace.
-\item[(ii)] $0\in \tilde C$ if and only if $C= \emptyset$ and   $\tilde C=\emptyset$ if and only if $0\in \aff(C)$.
-\item[(iii)] Let  $0\notin \aff(C)$, then $\aff(C)=\tilde{\tilde C}$ and we have
-\begin{align*}
-\lin(C)&=\lin(\tilde{\tilde C})=\tilde
-C^\perp=\Span(\tilde C)^\perp,&  \lin(\tilde C)&=C^\perp=\Span(C)^\perp \\
-\Span(C)&=C^{\perp\perp} =\lin(\tilde C)^\perp,&  \Span(\tilde C)&=\lin(C)^\perp.
-\end{align*}
-
-\end{enumerate}
+We have
+\begin{equation}\label{eq:ALS}
+A_X=a+L_X=S_X\cap \{\tilde a\}^{\sim},
+\end{equation}
+for any choice of elements $a\in A_X$ and $\tilde a\in \tilde A_X$.
+We now introduce a tensor product  and duality that endow $\Af$ with the structure of a
+*-autonomous category.
 
 
-\end{lemma}
-
-
-
-For any  $\tilde a_X\in \tilde A_X$, the subspace $A_X$ is determined as
-\[
-A_X=S_X\cap\{\tilde a_X\}^\sim.
-\]
-The relation between the subspaces $L_X$ and $S_X$ is given as
-\[
-S_X=L_X\oplus \mathbb R a_X,\qquad L_X=S_X\cap \{\tilde a_X\}^\perp.
-\]
-By Lemma \ref{lemma:dual} above,  $\tilde A_X$ is a proper affine subspace in $V_X^*$, so that
+By Corollary \ref{coro:dual},  the dual $\tilde A_X$ is a proper affine subspace in $V_X^*$, so that
 $X^*:=(V_X^*,\tilde A_X)$ is an object in $\Af$. We have $X^{**}=X$ and the corresponding subspaces
 are related as
 \begin{equation}\label{eq:duality}
 L_{X^*}=S_X^\perp,\qquad S_{X^*}=L_X^\perp.
 \end{equation}
-Note also that for $X\xrightarrow{f} Y$, the adjoint map satisfies $f^*(\tilde
+It is easily seen that for any  $X\xrightarrow{f} Y$, the adjoint map satisfies $f^*(\tilde
 A_Y)\subseteq \tilde A_X$, so that $Y^*\xrightarrow{f^*} X^*$ and the duality $(-)^*$ is a
 full and faithful functor 
 $\Af^{op}\to \Af$.
@@ -686,7 +273,7 @@ showing that
 \]
 Let $x\in A_{X_1}$, $y\in A_{Y_1}$, then $f(x)\otimes g(y)\in A_{X_2}\otimes
 A_{Y_2}\subseteq A_{X_2\otimes Y_2}$. Since  $A_{X_1\otimes Y_1}$ is the affine subspace
-generated by $A(X_1)\otimes A(Y_1)$, the above inclusion follows by linearity of $f\otimes
+generated by $A_{X_1}\otimes A_{Y_1}$, the above inclusion follows by linearity of $f\otimes
 g$. 
 
 It only remains to prove that the associators, unitors and symmetries from
@@ -709,7 +296,7 @@ that $I^*=I$.
 \end{theorem}
 
 
-\begin{proof} By Lemma \ref{lemma:monoidal}, we have that $(\Af,\otimes I)$ is a symmetric
+\begin{proof} By Lemma \ref{lemma:monoidal}, we have that $(\Af,\otimes, I)$ is a symmetric
 monoidal category. We have also seen that the duality $(-)^*$ is a full and faithful
 contravariant functor. We only need to check the natural isomorphisms 
 \[
@@ -721,21 +308,21 @@ Since $\FV$ is compact, we have the natural isomorphisms
 \]
 determined by the equalities
 \[
-\<f(x\otimes y),z\>=\<h(x),y\otimes z\>,\qquad x\in V_X,\ y\in V_Y,\ z\in V_Z,
+\<f(x\otimes y),z\>=\<\hat f(x),y\otimes z\>,\qquad x\in V_X,\ y\in V_Y,\ z\in V_Z,
 \]
-for $f\in \FV(V_X\otimes V_Y,V_Z^*)$ and $h\in \FV(V_Z,V_Y^*\otimes V_Z^*)$. Since
+for $f\in \FV(V_X\otimes V_Y,V_Z^*)$ and the corresponding morphism  $\hat f\in \FV(V_Z,V_Y^*\otimes V_Z^*)$. Since
 $A_{X\otimes Y}$ is an affine span of $A_X\otimes A_Y$, we see that
 $f$ is in $\Af(X\otimes Y, Z^*)$ if and only if $f(x\otimes y)\in \tilde A_Z$ for all $x\in A_X$, $y\in
 A_Y$, that is, 
 \[
-1=\<f(x\otimes y),z\>=\<h(x),y\otimes z\>\qquad \forall x\in A_X,\
+1=\<f(x\otimes y),z\>=\<\hat f(x),y\otimes z\>\qquad \forall x\in A_X,\
 \forall y\in A_Y,\ \forall z\in A_Z.
 \]
 But this is equivalent to
 \[
-h(x)\in (A_Y\otimes A_Z)^\sim=\tilde A_{Y\otimes Z},\qquad \forall x\in A_X,
+\hat f(x)\in (A_Y\otimes A_Z)^\sim=\tilde A_{Y\otimes Z},\qquad \forall x\in A_X,
 \]
-which means that $h\in \Af(X, (Y\otimes Z)^*)$.
+which means that $\hat f\in \Af(X, (Y\otimes Z)^*)$.
 
 \end{proof}
 A *-autonomous category is compact closed if it satisfies $(X\otimes Y)^*=X^*\otimes
@@ -756,8 +343,10 @@ Y)^*=X^*\otimes Y^*$ exactly in one of the following situations:
 
 \end{prop}
 
-\begin{proof} It is easily seen by definition that $A_{X^*}\otimes A_{Y^*}=\tilde A_X\otimes \tilde
-A_Y\subseteq \tilde A_{X\otimes Y}=A_{(X\otimes Y)^*}$. Hence the equality holds if and
+\begin{proof} Since $\FV$ is compact, we have $V_{(X\otimes Y)^*}=(V_X\otimes
+V_Y)^*=V_X^*\otimes V_Y^*=V_{X^*\otimes Y^*}$. It is also easily seen by definition that $A_{X^*}\otimes A_{Y^*}=\tilde A_X\otimes \tilde
+A_Y\subseteq \tilde A_{X\otimes Y}=A_{(X\otimes Y)^*}$, so that we always have $A_{X^*\otimes
+Y^*}\subseteq A_{(X\otimes Y)^*}$.  Hence the equality holds if and
 only if $d_{X^*\otimes Y^*}=d_{(X\otimes Y)^*}$. From Lemma
 \ref{lemma:tensor_spaces}, we see that
 \[
@@ -792,8 +381,8 @@ of $\Af(X,Y)$ onto $A_{[X,Y]}$.
 
 \end{prop}
 
-\begin{proof} Let $f\in \FV(V_X,V_Y)$. Since by definition $A_{[X,Y]}=\tilde A_{X\otimes Y^*}$ and $A_{X\otimes
-Y^*}$ is an affine span of $A_X\otimes A_Y^*$, we see that $C_f\in A_{[X,Y]}$ if and only
+\begin{proof} Let $f\in \FV(V_X,V_Y)$. Since by definition $A_{[X,Y]}=\tilde A_{X\otimes
+Y^*}=(A_X\otimes A_Y^*)^\sim$, we see that $C_f\in A_{[X,Y]}$ if and only
 if for all $x\in A_X$ and $y^*\in \tilde A_Y$, we have
 \[
 1=\<C_f, x\otimes y^*\>=\<y^*,f(x)\>.
@@ -812,14 +401,17 @@ work with the category $\Af$.
 An object $X$ of $\Af$ will be called quantum if $V_X=M_n^h$ for some $n$ and $A_X$ is an
 affine subspace such that both $A_X$ and $\tilde A_X$ have nonempty intersection with the
 interior of the positive cone 
-$int(M_n^+)$ (recall that we identify $(M_n^h)^*=M_n^h$). 
+$int(M_n^+)$ (recall that we identify $(M_n^h)^*=M_n^h$). A quantum object will be called
+standart if both $A_X$ and $\tilde A_X$ contain a positive multiple of the identity matrix
+$I_n$. 
 
 
 
 
 \begin{prop}\label{prop:ihom_quantum} Let $X$, $Y$ be quantum objects in $\Af$. Then 
 \begin{enumerate}
-\item[(i)] $X^*$ and $X\otimes Y$ are quantum objects as well
+\item[(i)] $X^*$ and $X\otimes Y$ are quantum objects as well. If $X$ and $Y$ are
+standart, then so are $X^*$ and $X\otimes Y$.
 \item[(ii)] Let $V_X=M_n^h$, $V_Y=M_m^h$. Then for any $f\in \FV(M_n^h,M_m^h)$, we have
 $C_f\in A_{[X,Y]}\cap M_{mn}^+$ if and only if $f$ is completely positive and
 \[
@@ -849,13 +441,62 @@ a_X+v=\frac{1+s}{2s}a_++\frac{s-1}{2s}a_-\in \aff(A_X\cap M_n^+).
 
 \end{proof}
 
-We can define classical obejcts in $\Af$ in a similar way, replacing $M_n^h$ by $\mathbb
-R^N$ and the positive cone by $\mathbb R_+^N$. A similar statement holds in this case,
+We can define classical objects in $\Af$ in a similar way, replacing $M_n^h$ by $\mathbb
+R^N$ and the positive cone by $\mathbb R_+^N$. Classical objects are standart if both
+$A_X$ and $\tilde A_X$ contains a positive multiple of the unit vector $(1,\dots,1)\in
+\mathbb R^N$. A similar statement holds in this case,
 with complete positivity replaced by positivity. We can similarly treat
 classical-to-quantum and quantum-to-classical maps as morphisms between these types of
 objects, satisfying appropriate positivity assumptions.
 
-\begin{exm}\label{exm:quantum_maps} States, channels, combs, nonsignaling, etb, dual, process
+\begin{exm}\label{exm:quantum_maps} The basic example of a standart quantum object
+describes the set of quantum states. Let  
+\[
+\mathcal A_n:=\{T\in M_n^h, \ \Tr[T]=1\}.
+\]
+Then $\Se_n:=(M_n^h,\mathcal A_n)$ is an object in $\Af$, and it is a standart quantum object, since we have 
+ $I_n\in \tilde {\mathcal A}_n=\{I_n\}$ and $\frac 1n I_n\in
+\mathcal A_n$. 
+The set $\mathcal A_n\cap M_n^+$ is the set of quantum states. By Proposition
+\ref{prop:ihom_morphisms}, $\Ce_{m,n}:=[\Se_m,\Se_n]$ is a standart quantum object as well, such
+that the corresponding vector space is $M_{mn}^h$ and $A_{\Ce_{m,n}}\cap M_{mn}^+$ is the set
+of Choi matrices of quantum channels $M_m\to M_n$. Note that the dual object
+$\Ce^*_{m,n}=\Se_m\otimes \Se_n^*$ represents the set of Choi matrices of replacement
+channels $\Se_n\to \Se_m$, that is, channels that map any state in $M_n$ to a fixed state
+in $M_m$. 
+
+
+
+Using 
+We will present several well known examples that can
+be represented by quantum objects, such that the distinguished positive definite elements
+in $A_X$ and $\tilde A_X$ are multiples of the identity matrix $I_n$. 
+\begin{enumerate}
+\item Quantum states are represented by density matrices, that is, elements $\rho\in
+M_n^+$ such that $\Tr[\rho]=1$. The set of all density matrices is represented by the
+quantum object 
+\[
+\mathcal S_n=(M_n^h, A_{\mathcal S_n}=\Tr^{-1}(1)).
+\]
+In this case, we choose the distinguished
+elements as $I_n\in \tilde A_{\Se_n}=\{I_n\})$, $\frac1n I_n\in A_{\Se_n}$.
+\item Let us look at the object 
+\[
+\Ce_{m,n}=[\Se_m,\Se_n]=(\Se_m\otimes \Se_n^*)^*.
+\]
+By
+Proposition  \ref{prop:ihom_morphisms}, $\Ce_{m,n}$ is a quantum object with underlying
+vector space $M_m^h\otimes M_n^h=M_{mn}^h$, such that 
+$A_{\Ce_{m,n}}\cap M_{mn}^+$ is the set of Choi matrices of quantum channels $\Se_m\to
+\Se_n$. 
+
+
+The distinguished elements can be chosen as  $\frac1n I_{mn} \in A_{\Ce_{m,n}}$ and 
+$\frac1m I_{mn}\in \tilde {\mathcal C}_{m,n}=\Se_m\otimes I_n$.
+\end{enumerate}
+
+
+States, channels, combs, nonsignaling, etb, dual, process
 matrices
 
 \end{exm}
@@ -2093,9 +1734,366 @@ according to $\pi_{a,b}$. ... NOT QUITE LIKE THIS!!!
 -- Quantum combs
 
 
+\appendix
+
+
+\section{Permutations, binary strings and boolean functions}
+
+For $m\le n\in \mathbb N$, we will denote the corresponding interval $\{m,m+1,\dots,n\}$ by
+$[m,n]$. For $m=1$, we will simplify to  $[n]:=[1,n]$. Let $\permut_n$ denote the set of all permutations of $[n]$.
+
+
+\subsection{Block permutations}
+\label{sec:permut}
+
+
+ For $n_1,n_2\in \mathbb N$, $n_1+n_2=n$, 
+we will denote by $[n]=[n_1]\oplus [n_2]$ the decomposition of $[n]$ as a concatenation of two 
+intervals
+\[
+[n]=[n_1][n_1+1,n_1+n_2].
+\]
+Similarly, for $n=\sum_{j=1}^kn_j$, we have the decomposition
+\[
+[n]=\oplus_{j=1}^k[n_j]=[m_1,m_1+n_1][m_2,m_2+n_2]\dots[m_k,m_k+n_k],
+\]
+where $m_j:=\sum_{l=1}^{j-1} n_j$ (so $m_1=0$). Note that the order of $n_1,\dots, n_k$ in
+this decomposition is
+fixed. 
+
+We have two kinds of special permutations related to the above decomposition. For
+$\sigma_j\in \permut_{n_j}$, we denote by $\oplus_j \sigma_j\in \permut_n$ the permutation that acts as
+\[
+m_j+l\mapsto m_j+\sigma(l),\qquad l=1,\dots,n_j,\ j=1,\dots, k. 
+\]
+On the other hand, we have for any $\lambda\in \permut_k$ a unique permutation
+$\rho_\lambda\in\permut_n$  such that $\rho_\lambda^{-1}$ acts as
+\[
+[m_1,m_1+n_1][m_2,m_2+n_2]...[m_k,m_k+n_k]\mapsto
+[m_{\lambda(1)}+n_{\lambda(1)}][m_{\lambda(2)}+n_{\lambda(2)}]\dots[m_{\lambda(k)}+n_{\lambda(k)}]
+\]
+Note that we have
+\[
+\rho_\lambda\circ(\oplus_j\sigma_j)=(\oplus_j \sigma_{\lambda(j)})\circ\rho_\lambda.
+\]
+(These permutations  come from the operadic structure on the set of
+all permutations $\permut_*$.)
+
+
+\subsection{Binary strings}
+
+A binary string of length $n$ is a sequence  $s=s_1\dots s_n$, where $s_i\in
+\{0,1\}$. Such a string can be interpreted as an element $\{0,1\}^n$, but also as a 
+map $[n]\to \{0,1\}$, or a subset in  $[n]:=\{1,\dots,n\}$. It will be convenient to use
+all these interpretations, but we will distinguish between them. The strings in
+$\{0,1\}^n$ will be denoted by small letters, whereas the corresponding subsets of $[n]$
+will be denoted by the corresponding capital letters. More specifically, for $s\in \{0,1\}^n$ and 
+$T\subseteq [n]$, we denote
+\begin{equation}\label{eq:string_subset}
+S:=\{i\in [n],\ s_i=0\},\qquad t:=t_1\dots t_n,\ t_j=0 \iff j\in T.
+\end{equation}
+As usual, the set of all subsets of $[n]$ will be denoted by $2^n$. 
+%We will also use the notation $2:=2^1=\{0,1\}$. 
+With the inclusion ordering and complementation $S^c:=[n]\setminus S$,
+$2^n$ is a boolean algebra, with the smallest element $\emptyset$ and largest element
+$[n]$.  
+
+The group $\permut_n$ has an obvious action on $\{0,1\}^n$. Indeed,
+ for a string $s$  interpreted as a map $[n]\to 2$, we may define the action of
+$\sigma\in \permut_n$ by precomposition as
+\[
+\sigma(s):=s\circ\sigma^{-1}=s_{\sigma^{-1}(1)}\dots s_{\sigma^{-1}(n)}.
+\]
+Note that in this way we have $\rho(\sigma(s))=(\rho\circ \sigma)(s)$. For a decomposition
+$[n]=\oplus_{j=1}^k[n_j]$, we have a corresponding decomposition of
+any string $s\in \{0,1\}^n$ as a concatenation of strings
+\[
+s=s^1\dots s^k,\qquad s^j\in \{0,1\}^{n_j}.
+\]
+For permutations $\sigma_j\in \permut_{n_j}$ and  $\lambda\in
+\permut_k$, we have
+\[
+\rho_\lambda\circ(\oplus_j\sigma_j)(s^1\dots s^k)=\rho_\lambda(\sigma_1(s^1)\dots
+\sigma_k(s^k))=\sigma_{\lambda(1)}(s^{\lambda(1)})\sigma_{\lambda(2)}(s^{\lambda(2)})\dots
+\sigma_{\lambda(k)}(s^{\lambda(k)}).
+\]
 
 
 
+
+
+\subsection{Boolean functions and the  M\"obius transform}
+
+
+A function $f:\{0,1\}^n\to \{0,1\}$ is called a boolean function. 
+The set of boolean functions, with pointwise ordering and complementation given by the
+negation $\bar f=1-f$,  is a boolean algebra that can be identified with $2^{2^n}$.
+We will denote the maximal element (the constant 1 function) by $1_n$. Similarly,
+we denote the constant zero function by $0_n$.  For boolean
+functions $f,g$, the pointwise minima and maxima will be denoted by $f\wedge g$ and $f\vee
+g$. It is easily seen that we have
+\begin{equation}\label{eq:wedgevee_fun}
+f\vee g= f+g-fg,\qquad f\wedge g=fg,
+\end{equation}
+all the operations are pointwise. We now introduce and important example. 
+
+
+\begin{exm}\label{ex:pS}
+For $S\subseteq [n]$, we define
+\[
+p_S(t)=\Pi_{j\in S}(1-t_j),\qquad t\in \{0,1\}^n.
+\]
+That is, $p_S(t)=1$ if and only if $S\subseteq T$. In particular,
+$p_\emptyset=1_n$ and $p_{[n]}$ is the characteristic function of the zero string.
+Clearly, for $S,T\subseteq [n]$ we have $p_{S\cup T}=p_Sp_T=p_S\wedge p_T$, in particular,
+$p_S=\Pi_jp_{\{j\}}$. 
+\end{exm}
+
+By the M\"obius transform, all boolean functions can be expressed as combinations of the functions $p_S$, $S\subseteq
+[n]$ from the previous example.
+
+\begin{theorem}\label{thm:basis} Any $f:\{0,1\}^n\to 2$ can be expressed  in the form 
+\[
+f=\sum_{S\subseteq [n]} \hat f_Sp_S
+\]
+in a unique way. The coefficients  $\hat f_S\in \mathbb R$ obtained as
+\[
+\hat f_S=\sum_{\substack{t\in \{0,1\}^n\\ t_j=1, \forall  j\in S^c}} (-1)^{\sum_{j\in
+S}t_j}f(t).
+\]
+
+\end{theorem}
+
+\begin{proof}  By the M\"obius inversion formula (see [Stanley, Sec. 3.7] for details),
+functions $f, g: 2^n\to \mathbb R$ satisfy
+\[
+f(S)=\sum_{T\subseteq S} g(T),\qquad S\in 2^n
+\]
+if and only if 
+\[
+g(S)=\sum_{T\subseteq S}(-1)^{|S\setminus T|} f(T).
+\]
+We now express this in terms of the corresponding strings $s$ and $t$.
+It is easily seen that $T\subseteq S$ if and only if
+$s_j=0$ for all $j\in T$, equivalently, $t_j=1$ for all $j\in S^c$. Moreover,
+in this case we have  $|S\setminus T|=\sum_{j\in S} t_j$. This shows that $g(S)=\hat f_S$,
+as defined in the statement. The first equality now gives
+\[
+f(s)=f(S)=\sum_{T\subseteq S} g(T)=\sum_{T:s_i=0,\forall i\in T}\hat f_T=\sum_{T:
+p_T(s)=1}\hat f_T=\sum_{T\subseteq [n]} \hat f_Tp_T.
+\]
+For uniqueness, assume that $f=\sum_{T\subseteq [n]} c_Tp_T$ for some coefficients $c_T\in
+\mathbb R$. Then 
+\[
+f(s)=\sum_{T: p_T(s)=1}c_T=\sum_{T\subseteq S}c_T.
+\]
+Uniqueness now follows by  uniqueness in the M\"obius inversion formula.
+
+\end{proof}
+
+
+
+
+
+%For a string $x\in \{0,1\}^n$ and any set of indices $\{i_1,\dots,i_k\}\subseteq [n]$, we
+%will denote by $x^{i_1\dots i_k}$ the string in $\{0,1\}^{n-k}$ obtained from $x$ by removing
+%$x_{i_1},\dots, x_{i_k}$. 
+
+\subsection{The boolean algebra $\Fe_n$}
+
+
+Let us introduce the subset of boolean functions 
+\[
+\Fe_n:=\{f:\{0,1\}^n\to 2,\ f(\theta_n)=1\},
+\]
+where we use $\theta_n$ to denote the zero string $00\dots 0$. 
+In other words, $\Fe_n$ is the interval of all elements greater than $p_{[n]}$ in the boolean algebra 
+$2^{2^n}$ of all boolean functions. With the pointwise ordering, $\Fe_n$ is a distributive lattice, with top element $1_n$ and 
+ bottom element $p_{[n]}$. We also define complementation  in $\Fe_n$ as
+\[
+f^*:=1_n-f+p_{[n]}.
+\]
+It can be easily checked that with these structures $\Fe_n$ is a boolean algebra, though
+it is not a subalgebra of $2^{2^n}$.
+
+We now introduce some more operations in $\Fe_n$. For $f\in \Fe_n$ and any permutation
+$\sigma\in \permut_n$, we clearly have $f\circ \sigma\in \Fe_n$.
+Further, let $f\in \Fe_{n_1}$ and $g\in \Fe_{n_2}$. With the decomposition
+$[n_1+n_2]=[n_1]\oplus [n_2]$
+and the corresponding concatenation of strings $s=s^1s^2$,  we define
+the function $f\otimes g\in \Fe_{n_1+n_2}$ as
+\[
+(f\otimes g)(s^1s^2)=f(s^1)g(s^2),\qquad s^1\in \{0,1\}^{n_1},\ s^2\in \{0,1\}^{n_2}.
+\]
+Let $\lambda\in \permut_2$ be the transposition, then we have for any $f\in \Fe_{n_1}$ and
+$g\in \Fe_{n_2}$
+\[
+(g\otimes f)=(f\otimes g)\circ \rho_\lambda,
+\]
+where $\rho_\lambda$ is the block permutation defined in  Section \ref{sec:permut}.
+We now show some important properties of these operations.
+
+\begin{lemma}\label{lemma:fproduct} For $f\in \Fe_{n_1}$ and  $g,h\in \Fe_{n_2}$, we have
+\begin{enumerate}
+\item[(i)] $f\otimes g\le (f^*\otimes g^*)^*$, with equality if and only if either
+$f=1_{n_1}$ and $g=1_{n_2}$, or $f=p_{[n_1]}$ and $g=p_{[n_2]}$.
+\item[(ii)] $f\otimes (g\vee h)= (f\otimes g)\vee (f\otimes h)$, $f\otimes (g\wedge h)=
+(f\otimes g)\wedge (f\otimes h)$.
+\end{enumerate}
+
+\end{lemma}
+
+\begin{proof} The inequality in (i) is easily  checked, since $(f\otimes g)(s^1s^2)$ can be 1 only if
+$f(s^1)=g(s^2)=1$. If both $s^1$ and $s^2$ are the zero strings, then $s^1s^2=\theta_{n_1+n_2}$ and both sides
+are equal to 1. Otherwise, the condition $f(s^1)=g(s^2)=1$ implies that $(f^*\otimes
+g^*)(s^1s^2)=0$, so that the right hand side must be 1. If $f$ and $g$ are both
+constant 1, then $(1_{n_1}\otimes 1_{n_2})^*=1_{n_1+n_2}^*=p_{[n_1+n_2]}=p_{[n_1]}\otimes
+p_{[n_2]}=1_{n_1}^*\otimes
+1_{n_2}^*$, in the case when both $f$
+and $g$ are the minimal elements equality  follows by
+duality. Finally, asume the equality holds and that $f\ne 1_{n_1}$, so that there is some $s^1$ such that 
+$f(s^1)=0$. But then $s^1\ne \theta_{n_1}$, so that $f^*(s_1)=1$  and for any $s^2$,
+\[
+0=(f\otimes g)(s^1s^2)=(f^*\otimes
+g^*)^*(s^1s^2)=1-f^*(s^1)g^*(s^2)+p_{[n_1+n_2]}(s^1s^2)=1-g^*(s^2),
+\]
+which implies that $g(s^2)=0$ for all $s^2\ne\theta_{n_2}$, that is, $g=p_{[n_2]}$. By the same argument,
+$f=p_{[n_1]}$ if $g\ne 1_{n_2}$, which implies that either $f=1_{n_1}$ and $g=1_{n_2}$, or
+$f=p_{[n_1]}$ and $g=p_{[n_2]}$.
+
+The statement (ii) is easily proved from \eqref{eq:wedgevee_fun}.
+
+\end{proof}
+
+Consider the decomposition $[n]=[n_1]\oplus [n_2]$ and let $S\subseteq [n_1]$,
+$T\subseteq [n_2]$. We then denote by $S\oplus T$ the disjoint union 
+\[
+S\oplus T:=S\cup (n_1+T)=S\cup\{n_1+j,\ j\in T\}.
+\]
+We summarize some easy properties of the basic functions $p_S$, $S\subseteq [n]$.
+
+\begin{lemma}\label{lemma:PSPT}
+\begin{enumerate}
+\item[(i)] For $S,T\subseteq [n]$, we have $S\subseteq T$ $\iff$ $p_T\le p_S$ $\iff$
+$p_Sp_T=p_S$.
+\item[(ii)] For $S\subseteq [n]$, $\sigma\in \permut_n$,
+$p_S\circ\sigma=p_{\sigma^{-1}(S)}$.
+\item[(iii)] For $S\subseteq [n_1]$ and $T\subseteq [n_2]$, $p_S\otimes p_T=p_{S\oplus T}$.
+
+\end{enumerate}
+\end{lemma}
+
+Let $f\in \Fe_n$ and let $\hat f$ be the M\"obius transform. Note that since $f$ has
+values in $\{0,1\}$, we have by the proof of Theorem \ref{thm:basis}
+\[
+\forall S\in 2^n, \quad \sum_{T\subseteq S} \hat f_T=f(s)\in \{0,1\}; \qquad \sum_{T\in 2^n} \hat
+f_T=f(\theta_n)=1.
+\]
+
+
+
+\begin{prop}\label{prop:mobius} 
+
+\begin{enumerate}
+\item[(i)] For $f\in \Fe_n$ and  $\sigma\in \permut_n$, 
+$\widehat{(f\circ \sigma)}_S=\hat f_{\sigma(S)}, \qquad S\subseteq [n]$.
+\item[(ii)] For $f\in \Fe_n$, $\widehat{f^*}_S=\begin{dcases} 1-\hat f_S & S=\emptyset\text{ or } S=[n],\\
+-\hat f_S & \text{otherwise}.
+\end{dcases}$
+\item[(iii)] For $f\in \Fe_{n_1}$, $g\in \Fe_{n_2}$, we have 
+$\widehat{(f\otimes g)}_{S\oplus T}=\hat f_S\hat g_T$, $S\subseteq [n_1]$, $T\subseteq
+[n_2]$.
+%\item[(iv)] For $f,g\in \Fe_n$, we have
+%\[
+%\widehat{(f\wedge g)}_S=\sum_{T\subseteq S} \hat f_T\hat g_{S\setminus T}.
+%\]
+%\item[(v)] For $f,g\in \Fe_n$, we have
+%\[
+%\widehat{(f\vee g)}_S=\hat f_S+\hat g_S-\sum_{T\subseteq S} \hat f_T\hat g_{S\setminus T}.
+%\]
+%
+\end{enumerate}
+
+
+\end{prop}
+
+\begin{proof} All statements follow easily from Lemma \ref{lemma:PSPT} and the uniqueness part in Theorem
+\ref{thm:basis}. 
+
+
+\end{proof}
+
+\section{Affine subspaces}
+
+Let $V$ be a finite dimensional real vector space. A subset $A\subseteq V$ is an affine
+subspace in $V$ if for any choice of  $a_1,\dots, a_k\in A$ and  $\alpha_1,\dots,\alpha_k\in \mathbb R$
+such that $\sum_i\alpha_i=1$, we have $\sum_i\alpha_i a_i\in A$. It is clear that
+$A=\emptyset$ is trivially an affine subspace.  Moreover, any linear subspace in $V$ is an affine subspace,
+and an
+affine subspace $A$ is linear if and only if $0\in A$. If $A \neq\emptyset$ and also
+$0\notin A$, we say that $A$ is proper. 
+
+A proper  affine subspace $A\subseteq V$ can be determined in two ways. Let 
+\[
+\lin(A):=\{a_1-a_2,\ a_1,a_2\in A\}.
+\]
+It is easily verified that $\lin(A)$ is a linear subspace, moreover, for any $a\in A$, we
+have
+\begin{equation}\label{eq:affine_l}
+\lin(A)=\{a_1-a,\ a_1\in A\},\qquad A=a+\lin(A).
+\end{equation}
+We put $\dim(A):=\dim(\lin(A))$, the dimension of $A$. 
+
+Let $V^*$ be the vector space dual of $V$ and let $\<\cdot,\cdot\>$ be the
+duality. A subset $C\subseteq V$, put
+\[
+\tilde C:=\{v^*\in V^*,\ \<v^*,a\>=1,\ \forall a\in A\}.
+\]
+Let $\tilde a\in \tilde A$ be any element and let $\Span(A)$ be the linear span of $A$ in
+$V$. We then have
+\begin{equation}\label{eq:affine_s}
+A=\Span(A)\cap \{\tilde a\}^\sim,
+\end{equation}
+independently of $\tilde a$. The relation between the two expressions for $A$, given by
+\eqref{eq:affine_l} and \eqref{eq:affine_s} is obtained as
+\[
+\Span(A)=\lin(A)+\mathbb R\{a\},\qquad \lin(A)=\Span(A)\cap \{\tilde a\}^\perp,
+\]
+independently of $a\in A$ or $\tilde a\in \tilde A$. Here $+$ denotes the direct sum of
+the vector spaces and $C^\perp$ denotes the annihilator of a set $C$.
+The following lemma is  easily proven.
+
+\begin{lemma}\label{lemma:dual} Let $C\subseteq V$ be any subset. Then $\tilde C$ is an affine subspace in 
+$V^*$ and we have
+\[
+0\in \tilde C \iff C= \emptyset, \qquad \tilde C=\emptyset\iff 0\in \aff(C).
+\]
+Assume $C\ne \emptyset$ and $0\notin \aff(C)$. Then
+\begin{enumerate}
+\item[(i)] $\tilde C$ is proper and we have $\lin(\tilde C)=C^\perp=\Span(C)^\perp$,
+\item[(ii)] $\aff(C)=\tilde{\tilde C}$ and for any $c_0\in
+C$, we have
+\begin{align*}
+\lin(C):= \Span\{c_1-c_2,\ c_1,c_2\in C\}=\Span\{c-c_0,\ c\in C\}=\lin(\tilde{\tilde C}).
+\end{align*}
+
+\end{enumerate}
+
+
+\end{lemma}
+
+\begin{coro}\label{coro:dual} Let $A\subseteq V$ be a proper affine subspace. Then 
+\begin{enumerate}
+\item[(i)] $\tilde A$ is a proper affine subspace in $V^*$ and $\tilde{\tilde A}=A$.
+\item[(ii)] $\lin(\tilde A)=\Span(A)^\perp$, $\Span(\tilde A)=\lin(A)^\perp$.
+\item[(iii)] $\dim(\tilde A)=\dim(V)-\dim(A)-1$.
+\end{enumerate}
+
+
+\end{coro}
+
+The proper affine subspace $\tilde A$ in the above Corollary will be called the affine dual
+of $A$. Note that the dual depends on the choice of the ambient vector space $V$.
 
 \end{document}
 
