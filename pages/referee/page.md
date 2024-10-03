@@ -2,8 +2,6 @@ title: To referee
 ---
 
     
-* Due [22.9.2024](REF_mayumi2024)    
-* Due [24.9.2024](REF_dallarno2024) (revision)    
 * Due [20. 10. 2024](REF_sreekumar2024) (revision)   
 
 
@@ -32,8 +30,8 @@ title: To referee
 1. <del> Due [15.8.2024](cmmtt) (PhD Thesis Ragini)</del> Done. 
 1. <del> Due [5.9.2024](REF_gilyen2024) (grant proposal)</del>  Done.    
 1. <del>Due [20.9.2024](REF_lachman2024)</del>  Done.    
-
-
+1. <del> Due [24.9.2024](REF_dallarno2024) (revision) </del> Done.   
+1. <del> Due [22.9.2024](REF_mayumi2024)</del> Done.    
 
 
 

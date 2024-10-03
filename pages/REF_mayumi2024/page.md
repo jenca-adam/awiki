@@ -10,9 +10,11 @@ title: Kimura et al, UCR, 2024
 [file](REF_mayumi2024/file.pdf)       
 
 
-**Decision:** 
+**Decision:** reject 
 
 [report](REF_mayumi2024/report.pdf)
+
+[report in system](REF_mayumi2024/report_pra.pdf)
 
 
 

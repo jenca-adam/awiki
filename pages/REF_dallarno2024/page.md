@@ -21,7 +21,7 @@ quantum statistical models and measurements
 
 [revised](REF_dallarno2024/revision.pdf)   revision and reply     
 
-
+**Decision:** Accept
 
 
 
