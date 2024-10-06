@@ -1283,7 +1283,7 @@ f=p_{I^F_{f}}\sum_{T\subseteq I_f^F\cup S_f^F} \hat f_T p_{T\setminus I_{f}^F}
 and there is some $\sigma\in \permut_n$ such that $f=(p_{[n_1]}\otimes f'\otimes 1_{n_3})\circ \sigma$,
 where $n_1=|I^F_f|$, $n_2=|S_f^F|$ and $n_3=|O_f^F|$, 
 $f'=\sum_{T\subseteq I_f^F\cup S_f^F} \hat f_T p_{\sigma^{-1}(T\setminus I_{f}^F)}
-\in \Fe_{n_2}$,  is a function such that  $\Pe_{f'}$ contains both $\emptyset$ and $[n_2]$ and  is
+\in \Fe_{n_2}$,  is a function with no free inputs or outputs and  $\Pe_{f'}$  is
 isomorphic (as a poset) to $\Pe_f$. Using Proposition \ref{prop:Xf_const}, we see that
 \[
 X_f(X_1,\dots,X_n)\simeq \tilde X_{I^F_{f}}^*\otimes X_{f'}(X_j, j\in S_f^F)\otimes
@@ -1623,22 +1623,22 @@ Let
 Using the   properties of the tensor product (Lemma \ref{lemma:fproduct})ii), we get from
 Lemma \ref{lemma:causal_tensor}
 \[
-\biggl(\bigvee_{a\in A}\bigwedge_{b\in B}\beta_1^{a,b}\biggr)\otimes \biggl(\bigvee_{c\in
-C}\bigwedge_{d\in D}\beta_2^{c,d}\biggr)=\bigvee_{a,c}\bigwedge_{b,d}
-\beta_1^{a,b}\otimes \beta_2^{c,d}=\bigvee_{a,c}\bigwedge_{b,d}(\beta_1^{a,b}\vtl
+\bigl(\bigvee_{a\in A}\bigwedge_{b\in B}\beta_1^{a,b}\bigr)\otimes \bigl(\bigvee_{c\in
+C}\bigwedge_{d\in D}\beta_2^{c,d}\bigr)=\bigvee_{a,c}\bigwedge_{b,d}
+(\beta_1^{a,b}\otimes \beta_2^{c,d})=\bigvee_{a,c}\bigwedge_{b,d}(\beta_1^{a,b}\vtl
 \beta_2^{c,d})\wedge (\beta_2^{c,d}\vtl \beta_1^{a,b})
 \]
 On the other hand, using Lemma \ref{lemma:causal_product}, we
 get
 \begin{align*}
-&\biggl(\bigwedge_{b\in B}\bigvee_{a\in A}\beta_1^{a,b}\biggr)\otimes \biggl(\bigwedge_{d\in D}\bigvee_{c\in
-C}\beta_2^{c,d}\biggr)\\
-&\quad =\left[\biggl(\bigwedge_{b\in B}\bigvee_{a\in A}\beta_1^{a,b}\biggr)\vtl \biggl(\bigwedge_{d\in D}\bigvee_{c\in
-C}\beta_2^{c,d}\biggr)\right]\wedge \left[\biggl(\bigwedge_{d\in D}\bigvee_{c\in
-C}\beta_2^{c,d}\biggr)\vtl\biggl(\bigwedge_{b\in B}\bigvee_{a\in A}\beta_1^{a,b}\biggr)
+&\bigl(\bigwedge_{b\in B}\bigvee_{a\in A}\beta_1^{a,b}\bigr)\otimes \bigl(\bigwedge_{d\in D}\bigvee_{c\in
+C}\beta_2^{c,d}\bigr)\\
+&\quad =\left[\bigl(\bigwedge_{b\in B}\bigvee_{a\in A}\beta_1^{a,b}\bigr)\vtl \bigl(\bigwedge_{d\in D}\bigvee_{c\in
+C}\beta_2^{c,d}\bigr)\right]\wedge \left[\bigl(\bigwedge_{d\in D}\bigvee_{c\in
+C}\beta_2^{c,d}\bigr)\vtl\bigl(\bigwedge_{b\in B}\bigvee_{a\in A}\beta_1^{a,b}\bigr)
 \right]\\
-&= \left(\bigwedge_{b,d}\bigvee_{a,c} \beta_1^{a,b}\vtl \beta_2^{c,d}\right) \wedge
-\left(\bigwedge_{b,d}\bigvee_{a,c} \beta_2^{c,d}\vtl \beta_1^{a,b}\right).
+&= \bigl(\bigwedge_{b,d}\bigvee_{a,c} \beta_1^{a,b}\vtl \beta_2^{c,d}\bigr) \wedge
+\bigl(\bigwedge_{b,d}\bigvee_{a,c} \beta_2^{c,d}\vtl \beta_1^{a,b}\bigr).
 \end{align*}
 We have the decomposition $[n]=\oplus_{j=1}^k[n_j]$, with $k=k_1+k_2$ and $n_j=m_j$,
 $j=1,\dots, k_1$,  $n_j=l_{j-k_1}$, $j=k_1+1,\dots,k$, and chain types $\beta_j\in
