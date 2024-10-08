@@ -7,11 +7,12 @@ Dokumenty na  [gdisc](https://drive.google.com/drive/folders/1rRYqOioCWSx3km9gGf
 
 ### Povinnosti
 
-* (do 27.9.2024) Čunderlíková IIa: 
-    - schválenie VR, napísať vyjadrenie        
+* <del>(do 27.9.2024) Čunderlíková IIa: 
+    - schválenie VR, napísať vyjadrenie  </del> vybavene      
 
-* (do 25.9.2024) Voľby Predsedu SAV: 
-    - zasadnutie AO - výber kandidátov, online schôdza 30.9. 2024 - zaslať oznámenie, podklady  
+* <del>(do 25.9.2024) Voľby Predsedu SAV: 
+    - zasadnutie AO - výber kandidátov, online schôdza 30.9. 2024 - zaslať oznámenie, podklady </del> vybavene, [navrh Venhart](https://docs.google.com/document/d/1l_GhLtDEFyhCHHWUlw2L7D5IRKYlQk1J/edit?usp=sharing&ouid=100760893452134072016&rtpof=true&sd=true)
+    
 
 
 

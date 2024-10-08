@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 
 
-\usepackage{showkeys}
+%\usepackage{showkeys}
 
 \usepackage{hyperref}
 \usepackage{amsmath, amssymb, amsthm, bm}
@@ -421,20 +421,21 @@ objects such as states, channels, combs and transformations between them, it is 
 work with the category $\Af$. 
 
 An object $X$ of $\Af$ will be called quantum if $V_X=M_n^h$ for some $n$ and $A_X$ is an
-affine subspace such that both $A_X$ and $\tilde A_X$ have nonempty intersection with the
-interior of the positive cone 
-$int(M_n^+)$ (recall that we identify $(M_n^h)^*=M_n^h$). A quantum object will be called
-standard if both $A_X$ and $\tilde A_X$ contain a positive multiple of the identity matrix
+affine subspace such that both $A_X$ and $\tilde A_X$ contain a positive multiple of the identity matrix
 $E_n$\footnote{We use the notation $E_n$, and not $I_n$, to avoid the slight chance that
-it might be confused with the unit object.}. 
+it might be confused with the monoidal unit.}.
+%have nonempty intersection with the
+%interior of the positive cone $int(M_n^+)$ 
+(recall that we identify $(M_n^h)^*=M_n^h$). 
+%A quantum object will be called standard if both $A_X$ and $\tilde A_X$  
 
 
 
 
 \begin{prop}\label{prop:ihom_quantum} Let $X$, $Y$ be quantum objects in $\Af$. Then 
 \begin{enumerate}
-\item[(i)] $X^*$ and $X\otimes Y$ are quantum objects as well. If $X$ and $Y$ are
-standard, then so are $X^*$ and $X\otimes Y$.
+\item[(i)] $X^*$ and $X\otimes Y$ are quantum objects as well. 
+%If $X$ and $Y$ are standard, then so are $X^*$ and $X\otimes Y$.
 \item[(ii)] Let $V_X=M_n^h$, $V_Y=M_m^h$. Then for any $f\in \FV(M_n^h,M_m^h)$, we have
 $C_f\in A_{[X,Y]}\cap M_{mn}^+$ if and only if $f$ is completely positive and
 \[
@@ -447,41 +448,41 @@ f(A_X\cap M_n^+)\subseteq A_Y\cap M_m^+.
 
 \begin{proof} The statement (i) is easily seen from  $A_X\otimes A_Y
 \subseteq  A_{X\otimes Y}$ and $\tilde A_X\otimes \tilde A_Y\subseteq \tilde A_{X\otimes
-Y}$, together with the fact that $int(M_n^+)\otimes int(M_m^+)\subseteq int(M_{mn}^+)$. 
+Y}$. % together with the fact that $int(M_n^+)\otimes int(M_m^+)\subseteq int(M_{mn}^+)$. 
 To show (ii), let $C_f\in   A_{[X,Y]}\cap M_{mn}^+$. By the properties of the Choi
 isomorphism $f$ is completely positive and by Proposition \ref{prop:ihom_morphisms},
 $f(A_X)\subseteq A_Y$, this proves one implication. For the converse, note that we only
 need to prove that under the given assumptions, $f(A_X)\subseteq A_Y$, for which it is enough
-to show that $A_X\subseteq \aff(A_X\cap M_n^+)$. To see this, pick some  $a_X\in  A_X\cap
-int(M_n^+)$. Any element in $A_X$ can be written in the form $a_X+v$ for some $v\in L_X$.
-Since $a_X\in int(M_n^+)$, there is some $s>0$ such that $a_\pm:=a_X\pm sv\in M_n^+$, and
+to show that $A_X\subseteq \aff(A_X\cap M_n^+)$. To see this, let  $c_XE_n\in  A_X$ for
+$c_X>0$.  Any element in $A_X$ can be written in the form $c_XE_n+v$ for some $v\in L_X$.
+Since $c_XE_n\in int(M_n^+)$, there is some $s>0$ such that $a_\pm:=c_XE_n\pm sv\in M_n^+$, and
 since $\pm sv\in L_X$, we see that $a_\pm \in A_X\cap M_n^+$. It is now easily checked
 that
 \[
-a_X+v=\frac{1+s}{2s}a_++\frac{s-1}{2s}a_-\in \aff(A_X\cap M_n^+). 
+c_XE_n+v=\frac{1+s}{2s}a_++\frac{s-1}{2s}a_-\in \aff(A_X\cap M_n^+). 
 \]
 
 
 \end{proof}
 
 We can define classical objects in $\Af$ in a similar way, replacing $M_n^h$ by $\mathbb
-R^N$ and the positive cone by $\mathbb R_+^N$. Classical objects are standard if both
+R^N$ and the positive cone by $\mathbb R_+^N$, and we require that  both
 $A_X$ and $\tilde A_X$ contains a positive multiple of the unit vector $e_N=(1,\dots,1)\in
 \mathbb R^N$. A similar statement holds in this case,
 with complete positivity replaced by positivity. We can similarly treat
 classical-to-quantum and quantum-to-classical maps as morphisms between these types of
 objects, satisfying appropriate positivity assumptions.
 
-\begin{exm}[Higher order quantum maps] \label{exm:quantum_maps} The basic example of a standard quantum object
-describes the set of quantum states. Let  
+\begin{exm}[Higher order quantum maps] \label{exm:quantum_maps} The basic example of a quantum object
+corresponds to the set of quantum states. Let  
 \[
 \mathcal A_n:=\{T\in M_n^h, \ \Tr[T]=1\}.
 \]
-Then $\Se_n:=(M_n^h,\mathcal A_n)$ is an object in $\Af$, and it is a standard quantum object, since we have 
+Then $\Se_n:=(M_n^h,\mathcal A_n)$ is an object in $\Af$, and it is a quantum object, since we have 
  $E_n\in \tilde {\mathcal A}_n=\{E_n\}$ and $\frac 1n E_n\in
 \mathcal A_n$. 
 The set $\mathcal A_n\cap M_n^+$ is the set of quantum states. By Proposition
-\ref{prop:ihom_morphisms}, $\Ce_{m,n}:=[\Se_m,\Se_n]$ is a standard quantum object as well, such
+\ref{prop:ihom_morphisms}, $\Ce_{m,n}:=[\Se_m,\Se_n]$ is a quantum object as well, such
 that the corresponding vector space is $M_{mn}^h$ and $A_{\Ce_{m,n}}\cap M_{mn}^+$ is the set
 of Choi matrices of quantum channels $M_m\to M_n$. Note that the dual object
 $\Ce^*_{m,n}=\Se_m\otimes \Se_n^*$ represents the set of Choi matrices of replacement
@@ -490,8 +491,8 @@ in $M_m$. We also have $\Se_n=[\Se_n,I]=\Ce_{n,1}$.
 
 The set of higher order quantum maps is constructed inductively from the channel objects $\Ce_{m,n}$ 
 by applying the internal hom $[\cdot,\cdot]$. For example,  $[\Ce_{m,n},\Ce_{k,l}]$ is a
-standard quantum object, corresponding to the set of Choi matrices of quantum
-superchannels, or 2-combs, etc. Note that in this way we always obtain standard quantum
+ quantum object, corresponding to the set of Choi matrices of quantum
+superchannels, or 2-combs, etc. Note that in this way we always obtain quantum
 objects. The corresponding affine subspaces are identified using 
 \eqref{eq:ALS} with $a$ and $\tilde a$ replaced by the appropriate multiple of the
 identity, together with \eqref{eq:duality} and Lemma \ref{lemma:tensor_spaces}.
@@ -500,13 +501,13 @@ identity, together with \eqref{eq:duality} and Lemma \ref{lemma:tensor_spaces}.
 \end{exm}
 
 
-\begin{exm}[Partially classical maps]\label{exm:quantum_classical}  We may similarly define the basic standard
+\begin{exm}[Partially classical maps]\label{exm:quantum_classical}  We may similarly define the basic
 classical object as 
 \[
 \Pe_N:=(\mathbb R^N, \{x,\ \sum_i x_i=1\}).
 \]
 In this case, $\mathcal A_{\Pe_N}\cap \mathbb R^N_+$ is the probability simplex. We then
-obtain further  useful objects by combining with the standard quantum objects. For example, it can be
+obtain further  useful objects by combining with the quantum objects. For example, it can be
 easily seen that $[\Se_n,\Pe_N]$ corresponds to $N$-outcome measurements,
 $[\Se_m,\Se_n\otimes \Pe_N]$ to $N$-outcome quantum instruments, $[\Se_m\otimes
 \Pe_N,\Pe_M]$ to quantum multimeters, etc. 
@@ -579,10 +580,11 @@ $n$-comb is an object of the form $[C_{n-1},[X,Y]]$, where $C_{n-1}$ is an $n-1$
 $X$, $Y$ are first order objects. Using Lemma \ref{lemma:combs}, we see that an $n$-comb
 has the form
 \[
-[X_{2n-1},[X_{2n-3},\dots,[[X_1,X_2],X_4],\dots,X_{2n}]
+[X_{2n-1},[[X_{2n-3},\dots,[[X_1,X_2],X_4]],\dots,X_{2n}]]
 \]
-for first order objects $X_1,X_2,\dots,X_{2n}$. For standard quantum objects, we see that
-an $n$-comb describes the sets of $n$-combs introduced in {}. (We slightly  abuse
+for first order objects $X_1,X_2,\dots,X_{2n}$. For quantum objects, we see that
+an $n$-comb describes the sets of $n$-combs introduced in {}, see Example
+\ref{exm:quantum_maps} (We slightly  abuse
 the terminology here).
 
 Since $[X,Y]\simeq [I,[X,Y]]$, we can determine the affine subspace of the channel object $[X,Y]$
@@ -599,6 +601,9 @@ The subspace $A_{C_n}$ for an $n$-comb $C_n$ can be found inductively.
 
 \section{Combinatorial description of higher order objects}
 
+In this section, we discuss a combinatiorial description of higher order objects similar
+to that of [Pavia]. We will use the definitions and results given in Appendix
+\ref{sec:boolean}.
 
 For a first order object $X=(V_X, \{\tilde a_X\}^\sim)$, let us pick an element $a_X\in
 A_X$. We have a direct sum decomposition
@@ -617,9 +622,7 @@ These  definitions depend on the choice of $a_X$, but we will assume below that 
 choice is fixed and that we choose $a_{\tilde X}=\tilde a_X$. Since we will always work
 with a finite set of objects at a time, this will not create any problems. 
 
-It is clear that for a first order quantum object we necessarily have  $\tilde a_X\in
-int(M_n^+)$, similarly for classical first order objects. In this case, we will also
-assume that $a_X\in int(M_n^+)$. A standard first order quantum
+ A  first order quantum
 or classical object  is the set of states $\Se_n$ or the set of probability distributions
 $\Pe_N$, see Examples \ref{exm:quantum_maps}, \ref{exm:quantum_classical}.
 In these cases, $a_X$ will be chosen as the appropriate multiple of the identity.
@@ -824,7 +827,7 @@ first order objects $X_1,\dots, X_n$ and a function $f$ that belongs to a specia
 called {\em inputs}. The reason for this terminology will become clear later. It is easy to observe that if $f\in \Te_n$, then $O_{f^*}=I_f$ and $I_{f^*}=O_f$. Further,
 for $f_1\in \Te_{n_1}$, $f_2\in \Te_{n_2}$, we have $O_{f_1\otimes f_2}=O_{f_1}\oplus
 O_{f_2}$ and  $I_{f_1\otimes f_2}=I_{f_1}\oplus
-I_{f_2}$.
+I_{f_2}$, see \eqref{eq:disu} for the definition.
 
 We have the following  description of the sets of type functions.
 
@@ -925,6 +928,10 @@ The converse is proved by a similar induction argument, using Proposition
 Let us stress that in general, the objects $X_f$ depend on the choice of the elements
 $a_{X_i}$. From the above proof, it is clear that  the  description in Theorem
 \ref{thm:boolean} does not depend on the choice of the elements $a_{Y_i}\in A_{Y_i}$.
+Furthermore, if all the first order objects are quantum, we have
+$S_f(X_1,\dots,X_n)=S_f(\tilde X_1,\dots,\tilde X_n)$ and both $a$ and $\tilde a$ are 
+some, possibly different,  multiple of the identity. The spaces $A_f(X_1,\dots,X_n)$ and $A_f(\tilde X_1,\dots,\tilde
+X_n)$ differ only by this multiple. 
 
 %\subsection{Type funtions and higher order objects}
 %
@@ -1004,7 +1011,8 @@ we obtain the isomorphisms
 X_{p_T^*}(X_1,\dots,X_n)=X_{p_T}^*(\tilde X_1,\dots,\tilde X_n)\xrightarrow{\sigma} (X_T^*\otimes \tilde
 X_{[n]\setminus T})^*\xrightarrow{\rho}  [\tilde X_{[n]\setminus T},X_T],
 \]
-where $\rho$ denotes the symmetry given by the transposition in $\permut_2$,  so that $p^*_T=1-p_T+p_{[n]}$ corresponds to general channels with output indices $T$.
+where $\rho$ denotes the symmetry given by the transposition in $\permut_2$. It follows
+that $p^*_T=1-p_T+p_{[n]}$ corresponds to general channels with output indices $T$.
 
 \end{exm}
 
@@ -1041,7 +1049,7 @@ assertion is proved.
 \end{proof}
 
 
-Combining this with Proposition \ref{prop:objects_to_f}, we get the following result
+Combining this with Proposition \ref{prop:Xf_const}, we get the following result
 (cf. cite). 
 
 \begin{coro}\label{coro:setting} Let $Y$ be a higher order objects constructed from
@@ -1079,7 +1087,7 @@ lemma \ref{lemma:fh_setting}, $p_{O_f}(e^i)=0$, whence $i\in O_f$.
 
 
 
-Our goal is to find some characterization of the type functions.  We start by looking at some examples and non-examples.
+  We now look at some examples and non-examples.
 
 \begin{exm}\label{exm:T2} The type functions for $n=2$ are given as (writing $\bar u=1-u$
 for $u\in \{0,1\}$)
@@ -1131,7 +1139,11 @@ f=\sum_{T\subseteq [n]} \hat f_Tp_T,
 \]
 where $\hat f$ is the M\"obius transform of $f$. Let $\mathcal P_f$ be the subposet in the
 distributive lattice $2^n$,  of elements such that
-$\hat f_T\ne 0$. We will show that any type function $f\in \Te_n$ is fully determined by $\Pe_f$.  
+$\hat f_T\ne 0$. We will show below that any type function $f\in \Te_n$ is fully determined by $\Pe_f$.  
+
+
+
+
 
  We say that a poset $\Pe$  is graded of rank
 $k$ if every maximal chain in $\Pe$ has the same length equal to $k$ (recall that the length
@@ -1209,12 +1221,32 @@ f=f_1\otimes f_2=\sum_{S\subseteq [m], T\subseteq [n-m]} (\widehat {f_1})_S(\wid
 {f_2})_T p_S\otimes p_T=
 \sum_{S\subseteq [m], T\subseteq [n-m]}(-1)^{\rho_{f_1}(S)+\rho_{f_2}(T)}p_{S\oplus T}.
 \]
-It follows that $\Pe_f=\Pe_{f_1}\times \Pe_{f_2}$ is the product of the two posets, which
+It follows that $\Pe_f\simeq \Pe_{f_1}\times \Pe_{f_2}$, where the direct product of posets $\Pe_f$ and
+$\Pe_g$ is defined as the set of all pairs $(S,T)$, $S\in \Pe_f$, $T\in \Pe_g$, and
+$(S,T)\le (S',T')$ iff $S\le S'$ and $T\le T'$.
+By [Stanley], the direct product of graded posets 
 is a graded poset with rank $r(f)=r(f_1)+r(f_2)$ and rank function
-$\rho_f=\rho_{f_1}+\rho_{f_2}$ ([Stanley]), This
+$\rho_f=\rho_{f_1}+\rho_{f_2}$.  This
 proves the statement. 
 
 \end{proof}
+
+In the above proof, we also proved the following.
+
+\begin{coro}\label{coro:Pf} Let $f\in \Te_n$, $g\in \Te_m$. Then
+\begin{enumerate}
+\item[(i)] For $\sigma\in \permut_n$, $S\mapsto \sigma(S)$ is an
+isomprphism  of  $\mathcal P_{f\circ \sigma}$ onto $\mathcal P_{f}$.
+\item[(ii)] $\Pe_f^*$ is obtained from from $\Pe^f$ by adding/removing the top and bottom
+elements $\emptyset$ and $[n]$.
+%$\emptyset \in \mathcal P_f$ iff  $\emptyset \notin \mathcal P_{f^*}$
+%and $[n] \in \mathcal P_f$ iff  $[n] \notin \mathcal P_{f^*}$.
+\item[(iii)] $\Pe_{f\otimes g}\simeq \Pe_f\times \Pe_g$.
+\end{enumerate}
+
+
+\end{coro}
+
 
 
 We next show that the input and output sets of $f\in \Te_n$ can be easily recognized from $\Pe_f$. For an
@@ -1390,7 +1422,7 @@ Assume the assertion is true for  $N-2$.  As in the proof of Proposition \ref{pr
 f^*=\sum_{i=1}^{N-2}(-1)^{i+1}p_{[n_{i+1}]}=p_{[n_2]}\otimes g\otimes 1_{n-n_{N-1}}
 \]
 where $g$ is the chain type for  a chain of intervals given by $0=m_1<m_2<\dots<m_{N-2}=m$ in $\Te_m$,
-here $m_i=n_{i+1}-n_2$. By Proposition \ref{prop:objects_to_f}, we see that 
+here $m_i=n_{i+1}-n_2$. By Proposition \ref{prop:Xf_const}, we see that 
 \[
 X_f(X_1,\dots,X_n)=X_{f^*}^*(\tilde X_1,\dots, \tilde X_n)\simeq (Y_{T_{N-1}}\otimes
 \tilde X_g\otimes Y^*_{T_1})^*\simeq [Y_{T_{N-1}},[\tilde X_g,Y_{T_1}]]
@@ -1408,6 +1440,57 @@ This implies the result.
 \end{proof}
 
 Combs, picture
+
+Other examples
+
+%\subsection{Further examples}
+%
+%To show further examples, we define the following basic chains. For even $n$, put
+%\[
+%\gamma_n(s):=\sum_{l=0}^n (-1)^lp_{[l]}(s)=1-\bar s_1+\bar s_1\bar s_2-\dots +\bar
+%s_1\dots \bar s_n.
+%\]
+%The  corresponding sets of input and output indices  are
+%\[
+%I=\{2j, j=1,\dots n/2\},\qquad O=\{2j-1,\ j=1,\dots n/2\}.
+%\]
+%It is easily seen that the complement is
+%\[
+%\gamma^*:=p_{[1]}\otimes\gamma_{n-2}\otimes 1_1.
+%\]
+%If  $n$ is odd, we put
+%\[
+%\gamma_{n}:\gamma_{n-1}\otimes 1_1\qquad \gamma_n^*=p_{[1]}\otimes \gamma_{n-1}.
+%\]
+%In this case, the inputs and outputs are $I=\{2j, j=1,\dots (n-1)/2\},\qquad O=\{2j-1,\
+%j=1,\dots (n-1)/2,n\}$, note that $n$ is a free output. 
+%
+%Let $n=4$. The only elements (up to permutations) in $\Te_4$ that are not chain types are
+%the product of chains
+%$f=p_{\{1\}}^*\otimes p_{\{1\}}^*$, $p_{\{1\}}\in \Te_2$:  
+%\[
+%f(s)=1-\bar s_1-\bar s_3+\bar s_1\bar s_2+\bar s_1\bar s_3+\bar s_3\bar s_4-\bar s_1\bar
+%s_2\bar s_3 - \bar s_1\bar s_3\bar s_4+ \bar s_1\bar s_2\bar s_3 \bar s_4
+%\]
+%and its conjugate:
+%\[
+%f^*(s)=\bar s_1 +\bar s_3-\bar s_1\bar s_2-\bar s_1\bar s_3-\bar s_3\bar s_4+\bar s_1\bar
+%s_2\bar s_3 + \bar s_1\bar s_3\bar s_4
+%\]
+%The
+%corresponding posets are:
+%
+%picture
+%
+%As a product of chains, $\Pe_f$ is a distributive lattice, but it is obvious that
+%$\Pe_{f^*}$ is not even a lattice.
+%
+%
+
+
+
+
+
 
 \subsection{Connecting chains: the causal product}
 
@@ -1564,7 +1647,7 @@ We now get to prove the following structure theorem for the type functions.
 Let  $f\in \Te_n$. Then there is a permutation $\rho\in \permut_n$, a decomposition
 $[n]=\oplus_{i=1}^k[n_i]$, chain types 
 $\beta_1\in \Te_{n_1}$,\dots, $\beta_k\in
-\Te_{n_k}$, finite index sets $A$, $B$ and permutations $\pi_{a,b}\in
+\Te_{n_k}$ such that $O_f=\oplus_j O_{\beta_j}$, $I_f=\oplus_j I_{\beta_j}$, finite index sets $A$, $B$ and permutations $\pi_{a,b}\in
 \permut_k$, $a\in A$, $b\in B$ such that 
 \[
 f=\bigvee_{a\in A}\bigwedge_{b\in B} (\beta_{\pi^{-1}_{a,b}(1)}\vtl \dots \vtl
@@ -1655,191 +1738,6 @@ Finally, putting $\rho=\rho_1\otimes\rho_2$ finishes the proof.
 
 
 
-\subsubsection{Some examples}
-
-
-\begin{exm}[Tensor products] Let $n=n_1+n_2+n_3+n_4$ and let $f_i\in \Te_{n_i}$, $i=1,\dots,4$. 
-Fix the concatenation decompositions $\{0,1\}^n\simeq \Pi_i\{0,1\}^{n_i}$,
-$\{0,1\}^{n_1+n_2}\simeq \{0,1\}^{n_1}\times \{0,1\}^{n_2}$, $\{0,1\}^{n_3+n_4}\simeq
-\{0,1\}^{n_3}\times \{0,1\}^{n_4}$. Using Lemmas \ref{lemma:causal_product} and \ref{lemma:causal_tensor}, we compute
-\[
-f_1\otimes f_2=(f_1\vtl f_2)\wedge (f_2\vtl f_1),\qquad 
-(f_1\otimes f_2)^*=(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1).
-\]
-We then have using Lemmas \ref{lemma:fproduct} and \ref{lemma:causal_tensor},
-\begin{align*}
-(f_1\otimes f_2)\otimes f_3&=[(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\otimes f_3=
-[(f_1\vtl f_2)\otimes f_3]\wedge [(f_2\vtl f_1)\otimes f_3]\\
-&=(f_1\vtl f_2 \vtl f_3)\wedge (f_3\vtl f_1\vtl f_2)\wedge (f_2\vtl f_1\vtl f_3)\wedge
-(f_3\vtl f_2\vtl f_1).
-\end{align*}
-On the other hand, note that we also have
-\begin{align*}
-f_1\otimes (f_2\otimes f_3)&=f_1\otimes [(f_2\vtl f_3)\wedge (f_3\vtl f_2)]\\
-&= (f_1\vtl f_2\vtl f_3)\wedge (f_2\vtl f_3\vtl f_1)\wedge (f_1\vtl f_3\vtl f_2)\wedge
-(f_3\vtl f_2\vtl f_1).
-\end{align*}
-Since the left hand sides are obviously equal, we obtain
-\[
-f_1\otimes f_2\otimes f_3=\bigwedge_{\pi\in \permut_3} (f_{\pi^{-1}(1)}\vtl
-f_{\pi^{-1}(2)}\vtl f_{\pi^{-1}(3)}),
-\]
-but we may restrict to permutations of the two kinds above:
-\[
-\{123,\ 213,\ 312,\ 321\},\quad \{123,\ 231,\ 132,\ 321\}.
-\]
-Similarly, for $f_1,\dots, f_k$ we get 
-\[
-f_1\otimes \dots \otimes f_k=\bigwedge_{\pi\in \permut_k} (f_{\pi^{-1}(1)}\vtl
-\dots \vtl f_{\pi^{-1}(k)}),
-\]
-but we may restrict to some subsets of permutations.
-
-We look at the case $k=4$. Then we have 
-\begin{align*}
-((f_1\otimes f_2)\otimes f_3)\otimes f_4&=(f_1\otimes (f_2\otimes f_3))\otimes f_4=
-f_1\otimes (f_2\otimes (f_3\otimes f_4))=f_1\otimes ((f_2\otimes f_3)\otimes f_4)\\
-&=(f_1\otimes f_2)\otimes (f_3\otimes f_4)
-\end{align*}
-For the first 4 equalities, we get the sets of permutations:
-\begin{align*}
-\{1234,\ 2134,\ 3124,\ 3214,\ 4123,\ 4213,\ 4312,\ 4321\}\\
-\{1234,\ 2314,\ 1324,\ 3214,\ 4123,\ 4231,\ 4132,\ 4321\}\\
-\{1234,\ 1324,\ 1423,\ 1432,\ 2341,\ 3241,\ 4231,\ 4321\}\\
-\{1234,\ 1342,\ 1243,\ 1432,\ 2341,\ 3421,\ 2431,\ 4321\}
-\end{align*}
-For the last one, we compute:
-\begin{align*}
-(f_1\otimes f_2)\otimes (f_3\otimes f_4)&=[(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\otimes
-[(f_3\vtl f_4)\wedge (f_4\vtl f_3)]\\
-&=\biggl([(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\vtl [(f_3\vtl f_4)\wedge (f_4\vtl
-f_3)]\biggr)\\ &\wedge \biggl([(f_3\vtl f_4)\wedge (f_4\vtl
-f_3)]\vtl [(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\biggr)\\
-&=(f_1\vtl f_2\vtl f_3\vtl f_4)\wedge (f_2\vtl f_1\vtl f_4\vtl f_3)\\
-&\wedge (f_3\vtl f_4\vtl f_1\vtl f_2)\wedge (f_4\vtl f_3\vtl f_2\vtl f_1), 
-\end{align*}
-which gives us any of the sets
-\begin{align*}
-\{1234,\ 2143,\ 3412,\ 4321\}\\
-\{1243,\ 2134,\ 3421,\ 4312\},
-\end{align*}
-note these have only four elements!
-
-\end{exm}
-
-\begin{exm}\label{example:tensor3} In the situation of the previous example, we compute $(f_1\otimes
-f_2)^*\otimes f_3$. By the previous example, we have
-\[
-(f_1\otimes
-f_2)^*\otimes f_3= \bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1)\bigr]\otimes f_3.
-\]
-This can be written as
-\begin{align*}
-(f_1\otimes
-f_2)^*\otimes f_3&=\bigl[(f^*_1\vtl f^*_2)\otimes f_3\bigr]\vee\bigl[ (f^*_2\vtl
-f^*_1)\otimes f_3\bigr]\\
-&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl f_3\bigl)\wedge \bigl(f_3\vtl f_1^*\vtl
-f_2^*\bigr)\biggr]\vee \biggl[\bigl(f^*_2\vtl f^*_1\vtl f_3\bigl)\wedge \bigl(f_3\vtl
-f_2^*\vtl f_1^*\bigr)\biggr]
-\end{align*}
-but also as 
-\begin{align*}
-(f_1\otimes
-f_2)^*\otimes f_3&=\biggl[\bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1)\bigr]\vtl
-f_3\biggr]\wedge \biggl[f_3\vtl \bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl
-f^*_1)\bigr]\biggr]\\
-&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl f_3\bigr)\vee \bigl(f^*_2\vtl f^*_1\vtl
-f_3\bigr)\biggr]\wedge \biggl[\bigl(f_3\vtl f^*_1\vtl f^*_2\bigr)\vee \bigl(f_3\vtl f^*_2\vtl
-f^*_1\bigr)\biggr]
-\end{align*}
-
-
-\end{exm}
-
-
-\begin{exm}\label{example:tensor34} Let us next compute $(f_1\otimes f_1)^*\otimes (f_3\otimes f_4)$. 
-There are several possibilities how to get this: either plug $(f_3\otimes f_4)$ instead of
-$f_3$ into the two forms in the above example, or compute as tensoring the two forms with
-$f_4$. That is,
-\begin{align*}
-(f_1\otimes
-f_2)^*\otimes f_3\otimes f_4&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl (f_3\otimes
-f_4)\bigl)\wedge \bigl((f_3\otimes f_4)\vtl f_1^*\vtl
-f_2^*\bigr)\biggr]\\  &\vee \biggl[\bigl(f^*_2\vtl f^*_1\vtl (f_3\otimes f_4)\bigl)\wedge
-\bigl((f_3\otimes f_4)\vtl
-f_2^*\vtl f_1^*\bigr)\biggr]\\
-&= \biggl[(f^*_1\vtl f^*_2\vtl f_3\vtl f_4)\wedge (f^*_1\vtl f^*_2\vtl 
-f_4\vtl f_3)\\&\qquad\wedge (f_3\vtl f_4\vtl f_1^*\vtl f_2^*)\wedge (f_4\vtl f_3\vtl
-f_1^*\vtl f_2^*)\biggr]\\
-&\vee\biggl[(f^*_2\vtl f^*_1\vtl f_3\vtl f_4)\wedge (f^*_2\vtl f^*_1\vtl 
-f_4\vtl f_3)\\&\qquad\wedge (f_3\vtl f_4\vtl f_2^*\vtl f_1^*)\wedge (f_4\vtl f_3\vtl
-f_2^*\vtl f_1^*)\biggr]
-\end{align*}
-or
-\begin{align*}
-(f_1\otimes
-f_2)^*\otimes f_3\otimes f_4&=\biggl[\bigl[(f^*_1\vtl f^*_2\vtl f_3)\vee (f^*_2\vtl f^*_1\vtl
-f_3)\bigr]\wedge \bigl[(f_3\vtl f^*_1\vtl f^*_2)\vee (f_3\vtl f^*_2\vtl
-f^*_1)\bigr]\biggr]\otimes f_4\\
-&=\biggl[\biggl[\bigl[(\dots)\vee (\dots)\bigr]\wedge
-\bigl[(\dots)\vee(\dots)\bigr]\biggr]\vtl f_4 \biggr]\\
-&\qquad \qquad \wedge \biggl[f_4\vtl\biggl[\bigl[(\dots)\vee (\dots)\bigr]\wedge
-\bigl[(\dots)\vee(\dots)\bigr]\biggr]\\
-&=\biggl[(f^*_1\vtl f^*_2\vtl f_3\vtl f_4)\vee (f^*_2\vtl f^*_1\vtl
-f_3\vtl f_4)\biggr]\\
-&\wedge \biggl[(f_3\vtl f^*_1\vtl f^*_2\vtl f_4)\vee (f_3\vtl f^*_2\vtl
-f^*_1\vtl f_4)\biggr]\\
-&\wedge \biggl[(f_4\vtl f^*_1\vtl f^*_2\vtl f_3)\vee (f_4\vtl f^*_2\vtl f^*_1\vtl
-f_3)\biggr]\\
-&\wedge \biggl[(f_4\vtl f_3\vtl f^*_1\vtl f^*_2)\vee (f_4\vtl f_3\vtl f^*_2\vtl
-f^*_1)\biggr]
-\end{align*}
-
-\end{exm}
-
-\begin{exm} Here we compute $(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*$. We have
-\begin{align*}
-(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*&= \bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
-f_1^*\bigr]\otimes \bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
-f_3^*)\bigr]\\
-&= \bigl[(f_1^*\vtl f^*_2)\otimes (f_3^*\vtl f^*_4)\bigr]\vee \bigl[(f_1^*\vtl
-f^*_2)\otimes (f_4^*\vtl f^*_3)\bigr]\\
-&\quad \vee \bigl[(f_2^*\vtl f^*_1)\otimes (f_3^*\vtl
-f^*_4)\bigr]\vee \bigl[(f_2^*\vtl f^*_1)\otimes (f_4^*\vtl f^*_3)\bigr]\\
-&=[1234 \wedge 3412]\vee [1243\wedge 4312] \vee [2134\wedge 3421]\vee [2143\wedge 4321]
-\end{align*}
-but also
-\begin{align*}
-(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*&= \biggl[\bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
-f_1^*)\bigr]\vtl  \bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
-f_3^*)\bigr]\biggr]\\
-&\quad\wedge\biggl[\bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
-f_3^*)\bigr]\vtl  \bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
-f_1^*)\bigr]\biggr] \\
-&= [1234\vee 2143]\wedge [3412\vee 4321]
-\end{align*}
-
-
-
-
-\end{exm}
-
-
-///
-
-Examples??
-
-Let $f$ be a function of the form as in Theorem \ref{thm:structure}. Since all the chains
-$\beta_{a,b}:=\beta_{\pi^{-1}_{a,b}(1)}\vtl \dots \vtl \beta_{\pi^{-1}_{a,b}(k)}\circ
-\rho_{a,b}$ in the
-decomposition have the same input and  output indices, they must satsfy the inequality
-$p_{I}\le \beta_{a,b} \le p_{O}^*$. But then the same is true for $f$.
-It follows that although we do not know whether $f$ is a type function, the corresponding
-object $X_f$ is always included in a set of channels.
-
-In particular, in the quantum case, each $X_{\beta_{a,b}}$ describes quantum combs  obtained by
-connecting combs described by  $X_{\beta_1},\dots, X_{\beta_k}$, in different orders
-according to $\pi_{a,b}$. ... NOT QUITE LIKE THIS!!!
 
 
 
@@ -1847,16 +1745,209 @@ according to $\pi_{a,b}$. ... NOT QUITE LIKE THIS!!!
 
 
 
-
-
-
--- Quantum combs
-
+%\subsubsection{Some examples}
+%
+%
+%\begin{exm}[Tensor products] Let $n=n_1+n_2+n_3+n_4$ and let $f_i\in \Te_{n_i}$, $i=1,\dots,4$. 
+%Fix the concatenation decompositions $\{0,1\}^n\simeq \Pi_i\{0,1\}^{n_i}$,
+%$\{0,1\}^{n_1+n_2}\simeq \{0,1\}^{n_1}\times \{0,1\}^{n_2}$, $\{0,1\}^{n_3+n_4}\simeq
+%\{0,1\}^{n_3}\times \{0,1\}^{n_4}$. Using Lemmas \ref{lemma:causal_product} and \ref{lemma:causal_tensor}, we compute
+%\[
+%f_1\otimes f_2=(f_1\vtl f_2)\wedge (f_2\vtl f_1),\qquad 
+%(f_1\otimes f_2)^*=(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1).
+%\]
+%We then have using Lemmas \ref{lemma:fproduct} and \ref{lemma:causal_tensor},
+%\begin{align*}
+%(f_1\otimes f_2)\otimes f_3&=[(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\otimes f_3=
+%[(f_1\vtl f_2)\otimes f_3]\wedge [(f_2\vtl f_1)\otimes f_3]\\
+%&=(f_1\vtl f_2 \vtl f_3)\wedge (f_3\vtl f_1\vtl f_2)\wedge (f_2\vtl f_1\vtl f_3)\wedge
+%(f_3\vtl f_2\vtl f_1).
+%\end{align*}
+%On the other hand, note that we also have
+%\begin{align*}
+%f_1\otimes (f_2\otimes f_3)&=f_1\otimes [(f_2\vtl f_3)\wedge (f_3\vtl f_2)]\\
+%&= (f_1\vtl f_2\vtl f_3)\wedge (f_2\vtl f_3\vtl f_1)\wedge (f_1\vtl f_3\vtl f_2)\wedge
+%(f_3\vtl f_2\vtl f_1).
+%\end{align*}
+%Since the left hand sides are obviously equal, we obtain
+%\[
+%f_1\otimes f_2\otimes f_3=\bigwedge_{\pi\in \permut_3} (f_{\pi^{-1}(1)}\vtl
+%f_{\pi^{-1}(2)}\vtl f_{\pi^{-1}(3)}),
+%\]
+%but we may restrict to permutations of the two kinds above:
+%\[
+%\{123,\ 213,\ 312,\ 321\},\quad \{123,\ 231,\ 132,\ 321\}.
+%\]
+%Similarly, for $f_1,\dots, f_k$ we get 
+%\[
+%f_1\otimes \dots \otimes f_k=\bigwedge_{\pi\in \permut_k} (f_{\pi^{-1}(1)}\vtl
+%\dots \vtl f_{\pi^{-1}(k)}),
+%\]
+%but we may restrict to some subsets of permutations.
+%
+%We look at the case $k=4$. Then we have 
+%\begin{align*}
+%((f_1\otimes f_2)\otimes f_3)\otimes f_4&=(f_1\otimes (f_2\otimes f_3))\otimes f_4=
+%f_1\otimes (f_2\otimes (f_3\otimes f_4))=f_1\otimes ((f_2\otimes f_3)\otimes f_4)\\
+%&=(f_1\otimes f_2)\otimes (f_3\otimes f_4)
+%\end{align*}
+%For the first 4 equalities, we get the sets of permutations:
+%\begin{align*}
+%\{1234,\ 2134,\ 3124,\ 3214,\ 4123,\ 4213,\ 4312,\ 4321\}\\
+%\{1234,\ 2314,\ 1324,\ 3214,\ 4123,\ 4231,\ 4132,\ 4321\}\\
+%\{1234,\ 1324,\ 1423,\ 1432,\ 2341,\ 3241,\ 4231,\ 4321\}\\
+%\{1234,\ 1342,\ 1243,\ 1432,\ 2341,\ 3421,\ 2431,\ 4321\}
+%\end{align*}
+%For the last one, we compute:
+%\begin{align*}
+%(f_1\otimes f_2)\otimes (f_3\otimes f_4)&=[(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\otimes
+%[(f_3\vtl f_4)\wedge (f_4\vtl f_3)]\\
+%&=\biggl([(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\vtl [(f_3\vtl f_4)\wedge (f_4\vtl
+%f_3)]\biggr)\\ &\wedge \biggl([(f_3\vtl f_4)\wedge (f_4\vtl
+%f_3)]\vtl [(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\biggr)\\
+%&=(f_1\vtl f_2\vtl f_3\vtl f_4)\wedge (f_2\vtl f_1\vtl f_4\vtl f_3)\\
+%&\wedge (f_3\vtl f_4\vtl f_1\vtl f_2)\wedge (f_4\vtl f_3\vtl f_2\vtl f_1), 
+%\end{align*}
+%which gives us any of the sets
+%\begin{align*}
+%\{1234,\ 2143,\ 3412,\ 4321\}\\
+%\{1243,\ 2134,\ 3421,\ 4312\},
+%\end{align*}
+%note these have only four elements!
+%
+%\end{exm}
+%
+%\begin{exm}\label{example:tensor3} In the situation of the previous example, we compute $(f_1\otimes
+%f_2)^*\otimes f_3$. By the previous example, we have
+%\[
+%(f_1\otimes
+%f_2)^*\otimes f_3= \bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1)\bigr]\otimes f_3.
+%\]
+%This can be written as
+%\begin{align*}
+%(f_1\otimes
+%f_2)^*\otimes f_3&=\bigl[(f^*_1\vtl f^*_2)\otimes f_3\bigr]\vee\bigl[ (f^*_2\vtl
+%f^*_1)\otimes f_3\bigr]\\
+%&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl f_3\bigl)\wedge \bigl(f_3\vtl f_1^*\vtl
+%f_2^*\bigr)\biggr]\vee \biggl[\bigl(f^*_2\vtl f^*_1\vtl f_3\bigl)\wedge \bigl(f_3\vtl
+%f_2^*\vtl f_1^*\bigr)\biggr]
+%\end{align*}
+%but also as 
+%\begin{align*}
+%(f_1\otimes
+%f_2)^*\otimes f_3&=\biggl[\bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1)\bigr]\vtl
+%f_3\biggr]\wedge \biggl[f_3\vtl \bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl
+%f^*_1)\bigr]\biggr]\\
+%&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl f_3\bigr)\vee \bigl(f^*_2\vtl f^*_1\vtl
+%f_3\bigr)\biggr]\wedge \biggl[\bigl(f_3\vtl f^*_1\vtl f^*_2\bigr)\vee \bigl(f_3\vtl f^*_2\vtl
+%f^*_1\bigr)\biggr]
+%\end{align*}
+%
+%
+%\end{exm}
+%
+%
+%\begin{exm}\label{example:tensor34} Let us next compute $(f_1\otimes f_1)^*\otimes (f_3\otimes f_4)$. 
+%There are several possibilities how to get this: either plug $(f_3\otimes f_4)$ instead of
+%$f_3$ into the two forms in the above example, or compute as tensoring the two forms with
+%$f_4$. That is,
+%\begin{align*}
+%(f_1\otimes
+%f_2)^*\otimes f_3\otimes f_4&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl (f_3\otimes
+%f_4)\bigl)\wedge \bigl((f_3\otimes f_4)\vtl f_1^*\vtl
+%f_2^*\bigr)\biggr]\\  &\vee \biggl[\bigl(f^*_2\vtl f^*_1\vtl (f_3\otimes f_4)\bigl)\wedge
+%\bigl((f_3\otimes f_4)\vtl
+%f_2^*\vtl f_1^*\bigr)\biggr]\\
+%&= \biggl[(f^*_1\vtl f^*_2\vtl f_3\vtl f_4)\wedge (f^*_1\vtl f^*_2\vtl 
+%f_4\vtl f_3)\\&\qquad\wedge (f_3\vtl f_4\vtl f_1^*\vtl f_2^*)\wedge (f_4\vtl f_3\vtl
+%f_1^*\vtl f_2^*)\biggr]\\
+%&\vee\biggl[(f^*_2\vtl f^*_1\vtl f_3\vtl f_4)\wedge (f^*_2\vtl f^*_1\vtl 
+%f_4\vtl f_3)\\&\qquad\wedge (f_3\vtl f_4\vtl f_2^*\vtl f_1^*)\wedge (f_4\vtl f_3\vtl
+%f_2^*\vtl f_1^*)\biggr]
+%\end{align*}
+%or
+%\begin{align*}
+%(f_1\otimes
+%f_2)^*\otimes f_3\otimes f_4&=\biggl[\bigl[(f^*_1\vtl f^*_2\vtl f_3)\vee (f^*_2\vtl f^*_1\vtl
+%f_3)\bigr]\wedge \bigl[(f_3\vtl f^*_1\vtl f^*_2)\vee (f_3\vtl f^*_2\vtl
+%f^*_1)\bigr]\biggr]\otimes f_4\\
+%&=\biggl[\biggl[\bigl[(\dots)\vee (\dots)\bigr]\wedge
+%\bigl[(\dots)\vee(\dots)\bigr]\biggr]\vtl f_4 \biggr]\\
+%&\qquad \qquad \wedge \biggl[f_4\vtl\biggl[\bigl[(\dots)\vee (\dots)\bigr]\wedge
+%\bigl[(\dots)\vee(\dots)\bigr]\biggr]\\
+%&=\biggl[(f^*_1\vtl f^*_2\vtl f_3\vtl f_4)\vee (f^*_2\vtl f^*_1\vtl
+%f_3\vtl f_4)\biggr]\\
+%&\wedge \biggl[(f_3\vtl f^*_1\vtl f^*_2\vtl f_4)\vee (f_3\vtl f^*_2\vtl
+%f^*_1\vtl f_4)\biggr]\\
+%&\wedge \biggl[(f_4\vtl f^*_1\vtl f^*_2\vtl f_3)\vee (f_4\vtl f^*_2\vtl f^*_1\vtl
+%f_3)\biggr]\\
+%&\wedge \biggl[(f_4\vtl f_3\vtl f^*_1\vtl f^*_2)\vee (f_4\vtl f_3\vtl f^*_2\vtl
+%f^*_1)\biggr]
+%\end{align*}
+%
+%\end{exm}
+%
+%\begin{exm} Here we compute $(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*$. We have
+%\begin{align*}
+%(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*&= \bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
+%f_1^*\bigr]\otimes \bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
+%f_3^*)\bigr]\\
+%&= \bigl[(f_1^*\vtl f^*_2)\otimes (f_3^*\vtl f^*_4)\bigr]\vee \bigl[(f_1^*\vtl
+%f^*_2)\otimes (f_4^*\vtl f^*_3)\bigr]\\
+%&\quad \vee \bigl[(f_2^*\vtl f^*_1)\otimes (f_3^*\vtl
+%f^*_4)\bigr]\vee \bigl[(f_2^*\vtl f^*_1)\otimes (f_4^*\vtl f^*_3)\bigr]\\
+%&=[1234 \wedge 3412]\vee [1243\wedge 4312] \vee [2134\wedge 3421]\vee [2143\wedge 4321]
+%\end{align*}
+%but also
+%\begin{align*}
+%(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*&= \biggl[\bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
+%f_1^*)\bigr]\vtl  \bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
+%f_3^*)\bigr]\biggr]\\
+%&\quad\wedge\biggl[\bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
+%f_3^*)\bigr]\vtl  \bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
+%f_1^*)\bigr]\biggr] \\
+%&= [1234\vee 2143]\wedge [3412\vee 4321]
+%\end{align*}
+%
+%
+%
+%
+%\end{exm}
+%
+%
+%///
+%
+%Examples??
+%
+%Let $f$ be a function of the form as in Theorem \ref{thm:structure}. Since all the chains
+%$\beta_{a,b}:=\beta_{\pi^{-1}_{a,b}(1)}\vtl \dots \vtl \beta_{\pi^{-1}_{a,b}(k)}\circ
+%\rho_{a,b}$ in the
+%decomposition have the same input and  output indices, they must satsfy the inequality
+%$p_{I}\le \beta_{a,b} \le p_{O}^*$. But then the same is true for $f$.
+%It follows that although we do not know whether $f$ is a type function, the corresponding
+%object $X_f$ is always included in a set of channels.
+%
+%In particular, in the quantum case, each $X_{\beta_{a,b}}$ describes quantum combs  obtained by
+%connecting combs described by  $X_{\beta_1},\dots, X_{\beta_k}$, in different orders
+%according to $\pi_{a,b}$. ... NOT QUITE LIKE THIS!!!
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%-- Quantum combs
+%
 
 \appendix
 
 
 \section{Permutations, binary strings and boolean functions}
+
 
 For $m\le n\in \mathbb N$, we will denote the corresponding interval $\{m,m+1,\dots,n\}$ by
 $[m,n]$. For $m=1$, we will simplify to  $[n]:=[1,n]$. Let $\permut_n$ denote the set of all permutations of $[n]$.
@@ -1942,7 +2033,7 @@ For permutations $\sigma_j\in \permut_{n_j}$ and  $\lambda\in
 
 
 \subsection{Boolean functions and the  M\"obius transform}
-
+\label{sec:boolean}
 
 A function $f:\{0,1\}^n\to \{0,1\}$ is called a boolean function. 
 The set of boolean functions, with pointwise ordering and complementation given by the
@@ -2086,9 +2177,9 @@ The statement (ii) is easily proved from \eqref{eq:wedgevee_fun}.
 
 Consider the decomposition $[n]=[n_1]\oplus [n_2]$ and let $S\subseteq [n_1]$,
 $T\subseteq [n_2]$. We then denote by $S\oplus T$ the disjoint union 
-\[
+\begin{equation}\label{eq:disu}
 S\oplus T:=S\cup (n_1+T)=S\cup\{n_1+j,\ j\in T\}.
-\]
+\end{equation}
 We summarize some easy properties of the basic functions $p_S$, $S\subseteq [n]$.
 
 \begin{lemma}\label{lemma:PSPT}
@@ -2143,7 +2234,7 @@ $\widehat{(f\otimes g)}_{S\oplus T}=\hat f_S\hat g_T$, $S\subseteq [n_1]$, $T\su
 \end{proof}
 
 \section{Affine subspaces}
-
+\label{sec:app_affine}
 Let $V$ be a finite dimensional real vector space. A subset $A\subseteq V$ is an affine
 subspace in $V$ if for any choice of  $a_1,\dots, a_k\in A$ and  $\alpha_1,\dots,\alpha_k\in \mathbb R$
 such that $\sum_i\alpha_i=1$, we have $\sum_i\alpha_i a_i\in A$. It is clear that
