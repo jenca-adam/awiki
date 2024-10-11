@@ -74,9 +74,10 @@ title: My work
 
 ### New
 
+[Smolenice MUSAV](TALK_2024smolenice) 2024
+[IMAG worshop](TALK_2024imag)    2024
 [Rényi seminar](TALK_2023renyi)   2023     
 [Talk in Nagoya](TALK_2023nagoya)  2023    
-[IMAG worshop](TALK_2024imag)    2024
 
 
 

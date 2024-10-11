@@ -555,7 +555,7 @@ first order as well.
 
 As we have seen, higher order objects are obtained by applying the internal hom
 iteratively. The following properties of such iterations are easily seen from the
-definmition of $[\cdot,\cdot]$. 
+definition of $[\cdot,\cdot]$. 
 
 \begin{lemma}\label{lemma:combs} Let $X,Y,Z$ be any objects in $\Af$. Then we have
 \begin{enumerate}
@@ -1308,20 +1308,7 @@ Hence $i\in O_f$.
 \end{proof}
 
 The elements in $I^F_{f}:=\cap\Pe_f$ resp. $O^F_{f}:=(\cup \Pe_f)^c$ will be called free inputs, resp.
-outputs. Consider the decomposition $[n]=I_f^F\cup S_f^F\cup I_f^F$. It is easy to see that
-\[
-f=p_{I^F_{f}}\sum_{T\subseteq I_f^F\cup S_f^F} \hat f_T p_{T\setminus I_{f}^F}
-\]
-and there is some $\sigma\in \permut_n$ such that $f=(p_{[n_1]}\otimes f'\otimes 1_{n_3})\circ \sigma$,
-where $n_1=|I^F_f|$, $n_2=|S_f^F|$ and $n_3=|O_f^F|$, 
-$f'=\sum_{T\subseteq I_f^F\cup S_f^F} \hat f_T p_{\sigma^{-1}(T\setminus I_{f}^F)}
-\in \Fe_{n_2}$,  is a function with no free inputs or outputs and  $\Pe_{f'}$  is
-isomorphic (as a poset) to $\Pe_f$. Using Proposition \ref{prop:Xf_const}, we see that
-\[
-X_f(X_1,\dots,X_n)\simeq \tilde X_{I^F_{f}}^*\otimes X_{f'}(X_j, j\in S_f^F)\otimes
-X_{O_{f}^F},
-\]
-where the isomorphism is given by the symmetry $\sigma$.
+outputs. 
 
 \subsection{Chains and combs}
 
@@ -1488,6 +1475,143 @@ Other examples
 %
 
 
+\subsection{The structure of $\Pe_f$}
+
+We will visualise the poset $\Pe_f$ by its Hasse diagram, where we only put labels to
+vertices corresponding to elements in $M_{i,f}$ for some $i$. More precisely, for $S\in
+\Pe_f$, the set of labels of $S$ is defined as
+\[
+L_S=\{i\in [n],\ S\in M_{i,f}\},\qquad L_\emptyset=\{0\}.
+\]
+In the Hasse diagram, we label any element  $S\in \Pe_f$ by  $L_S$, with no label if
+$L_S=\emptyset$.  Below, we give examples for $f\in \Te_n$, $n=4$ and
+$n=5$ which are not chain types.
+
+Let $f\in \Te_n$ and let $\Pe=\Pe_f$. Let $\Pe_f^0=\Pe^0\subseteq \Pe$ be the subposed consisting
+of  all  labelled elements, that is
+\[
+\Pe^0=\{S\in \Pe, \ L_S\ne \emptyset \}.
+\]
+For a finite poset $\Pe$, we denote by $\mathrm{Min}(\Pe)$ the set of minimal elements of
+$\Pe$ and $\mathrm{Max}(\Pe)$ the set of maximal elements of $\Pe$.
+
+\begin{lemma}\label{lemma:p0_constr} Let $f\in \Te_{n}$, $g\in \Te_{m}$. 
+\begin{enumerate}
+\item[(i)] $\mathrm{Min}(\Pe_f^0)=\mathrm{Min}(\Pe_f)$.
+\item[(ii)] $\Pe_f^0$ is a chain $\iff$  $\Pe_f$ is a chain $\iff$  $\Pe_f^0=\Pe_f$. 
+\item[(iii)] If $S\in \Pe_f^0$ and $S\ne \emptyset$, $S\ne [n]$, then $S\in \Pe^0_{f^*}$. 
+\item[(iv)] $\emptyset \in \Pe^0_f$ $\iff$ $\emptyset \notin \Pe^0_{f^*}$ and  $[n]\in \Pe^0_f$ $\iff$ $\cup \{L_S, S\in \Pe^0_{f^*}\ne [n]\}$.
+\item[(v)] $\Pe_{f\otimes g}=\{S\oplus T:\ S\in \Pe_f^0,\ T\in \Pe_g^0, \ S\in
+\mathrm{Min}(\Pe_f) \text{ or } T\in \mathrm{Min}(\Pe_g)\}$.
+
+\item[(vi)] If $\Pe^0_f$ has a largest element, then it is the largest element in $\Pe_f$. 
+
+\end{enumerate}
+
+
+\end{lemma}
+
+
+\begin{proof} (i) Obvious. (iii)--(v) Follow from the proof of Proposition \ref{prop:pfinput}. 
+
+(ii) Assume that $\Pe^0_f$ is a chain, so that, in particular,
+any $M_{i,f}$ is a singleton or empty. In the first case, we put $M_{i,f}=\{M_i\}$. Let $S,T$ be two
+elements in $\Pe_f$ and assume that $i\in S\setminus T$. For any $j\in T$, we have either
+$M_i\subseteq M_j$ or $M_j\subseteq M_i$. In the first case, we get $i\in M_i\subseteq
+M_j\subseteq T$, which is not possible. Hence $M_j\subseteq M_i$ for all $j\in T$. It
+follows that $T=\cup_{j\in T} M_j\subseteq M_i\subseteq S$, so that $\Pe_f$ is a chain,
+and it is clear that $\Pe_f=\Pe_f^0$. If $\Pe_f$ is not a chain, then there are some type
+functions
+$f_1$, $f_2$ such that $f=f_1\otimes f_2$ or $f=(f_1\otimes f_2)^*$. Moreover, the ranks
+of $f_1$ and $f_2$ are at least 2. It follows that both $\Pe_{f_1\otimes f_2}$ and
+$\Pe_{(f_1\otimes f_2)^*}$ contain an element $S\oplus T$, where $S\in \Pe_{f_1}$, $T\in
+\Pe_{f_2}$ but none of the two elements is minimal. It follows by part (v) that $S\oplus T\notin
+\Pe_f^0$, so that $\Pe_f\ne \Pe_f^0$. It is quite clear that $\Pe_f^0$ is a chain if
+$\Pe_f$ is.
+
+(vi) The largest element  $T\in P^0_f$ must contain all subsets that are in $M_{i,f}$ for all
+$i\in [n]$, so that  $\cup \Pe_f\subseteq T$. If follows that $T=\cup\Pe_f $ is the largest
+element in $\Pe_f$. 
+
+
+
+
+\end{proof}
+
+
+\begin{lemma}\label{lemma:pf0_chain} Assume that $\Pe_f^0$ has a largest element.  Then
+either $f$ is a chain type, or there is some $h\in \Te_m$ such that $\Pe_h^0$ has  no largest element,
+and a chain type $\beta\in \Te_{n-m}$ such that $f=g\vtl \beta$.
+
+\end{lemma}
+
+\begin{proof} Let $T$ be the largest element in $\Pe_f^0$. If $T=[n]$, then by Lemma
+\ref{lemma:p0_constr}(iv), $f^*$ has some free outputs. Hence, up to a permutation,
+$f^*=h_1\otimes 1_{k_1}$ for some $h_1\in \Te_{n-k_1}$ with no free outputs. It follows that
+$f=(h_1\otimes 1_{k_1})^*=(h_1\vtl 1_{k_1})^*=h_1^*\vtl p_{k_1}$. 
+
+If $T\ne [n]$, then, since $T$
+is also the largest element in $\Pe_f$, we see that $f$ has free outputs, so that (up to a
+permutation)
+$f=h_\otimes 1_{k_1}=h_1\vtl 1_{\k_1}$, where $h_1\in \Te_{n-k_1}$ is a type function with no
+free outputs. Clearly, $\Pe_{h_1}=\Pe_f$ and $\Pe_{h_1}^0=\Pe_f^0$, so that $T$ is the largest
+element in $\Pe^0_{h_1}$, but this time $T=[n-k_1]$, so that we may use the first part of the
+proof. We obtain that there is some $k_2$ and a type function  $h_2\in\Te_{n-k_1-k_2}$
+with no free outputs such that 
+\[
+f=h_1\vtl 1_{k_1}=h_2^*\vtl p_{k_2}\vtl 1_{k_1}
+\]
+So far, we have written $f$ in the form $f=h\vtl \beta$, where $\beta$ is a chain type and
+$h\in \Te_{n-k}$ for $k>0$ is such that $h^*$ has no free outputs. It follows that if
+$\Pe_h^0$ has a largest element, then it cannot be equal to $[n-k]$. Hence $h$ must have
+some free outputs, and we may proceed as above, replacing $f$ by $h$. Since $n$ is decreasing at each step, we
+ either get to $n-k \le 3$, in which case $h$ must be a chain and therefore also $f=h\vtl
+ \beta$ is a chain, or $h$ has no largest element.
+
+
+\end{proof}
+
+
+\begin{lemma}\label{lemma:p0_maximal} Let $T\in \mathrm{Max}(\Pe^0_f)$ and let
+$T^{\downarrow,f}:=\{S\in \Pe_f, S\le T\}$. Put
+\[
+\bar \Pe_{T,f}:=\begin{dcases}  T^{\downarrow,f} & \text{if } \rho_f(T) \text{ is even}\\
+  T^{\downarrow,f}\setminus T & \text{otherwise}.
+  \end{dcases}
+\]
+Then there is some type function $g\in \Te_{|T|}$ and a permutation $\sigma\in \permut{n}$
+such that $\Pe_g=\bar \Pe_{\sigma(T),f}$. 
+\end{lemma}
+
+\begin{proof} %Up to a permutation, we may assume that $T=[m]$ for some $m\le n$. 
+%The assertion is rather trivial if $T$ is the largest element in $\Pe_f^0$, so we will assume
+%that this is not the case. 
+We will proceed by induction on $n$. The assertion is trivial if $f$ is a chain, so it
+holds for $n\le 3$. So assume it holds for all $m<n$ and let $f\in \Te_n$. If
+$f=f_1\otimes f_2$, then $T=T_1\oplus T_2$, where, say, $T_1\in \mathrm{Min}(\Pe_{f_1})$
+and $T_2\in \mathrm{Max}(\Pe_{f_2}^0)$. It follows that 
+\[
+\bar \Pe_{T,f}=T_1\oplus \bar\Pe_{T_2,f_2}.
+\]
+By the induction assumption, $\bar \Pe_{T_2,f_2}=\Pe_h$ for some type function $h\in
+\Te_{|T_2|}$ and hence $\bar\Pe_{T,f}=\Pe_g$ with $g\in \Te_{|T|}$, $g=p_{T_1}\otimes h$.
+
+Assume next that $f=(f_1\otimes f_2)^*$.  We may assume that 
+ $T\ne \emptyset$ and $T\ne [n]$, since otherwise the assertion is rather trivial. We may
+ also assume that $f$ has no free outputs, since otherwise $f=h\otimes 1$ and we may
+ replace $f$ by $h$. Then $T\in \mathrm{Max}(\Pe_{f^*})$. 
+
+Let $\rho_f(T)$ be even, so that the labels of $T$ correspond to inputs. Then
+$\rho_{f^*}(T)$ is odd. Since $f^*$ has the desired property by the first part of the
+proof, there is some $g\in \Te_{|T|}$ such that (up to a permutation)
+\[
+\Pe_g=\bar \Pe_{T,f^*}=T^{\downarrow,f^*}
+\]
+and it is easy to see that  then $\Pe_{g^*}=\bar \Pe_{T,f}$. The case when $\rho_f(T)$ is
+odd is proved similarly.
+
+
+\end{proof}
 
 
 
@@ -1575,6 +1699,33 @@ $p_{[n_1]}(s^1)(f_1(s^1)-1)=p_{[n_1]}(s^1)-p_{[n_1]}(s^1)=0$.
 
 \end{proof}
 
+For the smallest and the largest element in $\Te_n$, the causal product behaves as
+follows.
+\begin{lemma}\label{lemma:onechain_causal}
+For the  $f\in \Te_{n_1}$ and let $1_{n_2}, p_{[n_2]}\in \Te_{n_2}$, we have
+\[
+f\vtl 1_{n_2}= f\otimes 1_{n_2}\le 1_{n_2}\vtl f =1-(1-\hat
+f_\emptyset)p_{[n_2]}+\sum_{\emptyset \ne S\subseteq [n_1]} \hat f_S p_{S\oplus [n_2]}
+\]
+and
+\[
+p_{[n_2]} \vtl f=p_{[n_2]}\otimes f \le f\vtl p_{[n_2]}=\sum_{S\subsetneq [n]} \hat
+f_Sp_S+(\hat f_{[n_1]}-1)p_{[n_1]}+p_{[n_1+n_2]}.
+\]
+In particular,
+\[
+(p_{n_1}\otimes 1_{n_2})^*=1_{n_1}\vtl p_{n_2}=1-p_{[n_1]}+p_{n_1+n_2}
+\]
+is the chain type for $\{\emptyset\subsetneq [n_1]\subsetneq [n_1+n_2]\}$.
+\end{lemma}
+
+
+
+
+
+
+
+
 Using the last part of Lemma \ref{lemma:causal_product},
 for a decomposition $[n]=\oplus_i[n_i]$ and $f_i\in \Fe_{n_i}$,  we may define the function $f_1\vtl\dots \vtl f_k\in
 \Fe_{n}$. Note that we have for $s=s^1\dots s^k$, 
@@ -1600,15 +1751,13 @@ and that the result can be seen as appending the two chains.
 
 
 
-\begin{prop}\label{prop)append_chains} Let $N_1$ and $N_2$ be odd and let 
+\begin{prop}\label{prop:append_chains} Let $N_1$ and $N_2$ be odd and let 
 $\Pe_1=\{S_1\subsetneq \dots\subsetneq S_{N_1}\}$ be a chain in  $2^{n_1}$ and
 $\Pe_2=\{T_1\subsetneq \dots \subsetneq T_{N_2}\}$ a chain in $2^{n_2}$, 
  with corresponding chain type functions $\beta_1$ and $\beta_2$. Then 
 $\beta_1\vtl \beta_2$ and $\beta_2\vtl \beta_1$ are  type functions corresponding to
 chains of $N_1+N_2\pm 1$
-elements in $2^{n_1+n_2}$, with output and input indices given by
-$O_{\beta_1}\oplus O_{\beta_2}$ and 
-$I_{\beta_1}\oplus I_{\beta_2}$.
+elements in $2^{n_1+n_2}$.
 
 \end{prop}
 
@@ -1629,16 +1778,60 @@ $S_{N_1}\subsetneq [n_1]\subsetneq [n_1]\oplus T_1$ and $\beta$ corresponds to a
 $N_1+N_2+1$ elements.
 
 
+
+\end{proof}
+
+
+
+
+\begin{prop}\label{prop:append_chain_f}  Let $f\in \Te_{n_1}$ and let $\beta\in \Te_{n_2}$
+be a chain type. Then both $f\vtl \beta$ and $\beta\vtl f$ are types, with outputs
+$O=O_f\oplus O_\beta$ and inputs $I=I_f\oplus I_\beta$. 
+
+\end{prop}
+
+\begin{proof} Let  $\beta=\sum_{k=1}^{N}(-1)^{k-1}p_{T_k}$
+for some odd $N$. We will proceed by induction on $N$. Suppose $N=1$. If $T_1=\emptyset$,
+then $\beta=1_{n_2}$ and we have by Lemma \ref{lemma:onechain_causal}
+\[
+f\vtl 1_{n_2}=f\otimes 1_{n_2}\in \Te_{n_1+n_2}
+\]
+and
+\[
+1_{n_2}\vtl f=(p_{n_2}\vtl f^*)^*=(f\otimes p_{n_2})^*\in \Te_{n_1+n_2}.
+\]
+Assume that  $T_1=[n_2]$, then $\beta=p_{n_2}$ and the assertion follows by duality. 
+In general,  up to a permutation, we have $\beta=p_{m_1}\otimes
+1_{m_2}=p_{m_1}\vtl 1_{m_2}$ for $m_1=|T_1|$, $m_1+m_2=n_2$. Then 
+\[
+\beta\vtl f=p_{m_1}\vtl (1_{m_2}\vtl f),\quad f\vtl \beta=(f\vtl p_{m_1})\vtl 1_{m_2} \in
+\Te_{n_1+n_2},
+\]
+by the first part of the proof and Lemma \ref{lemma:causal_product}.
+
+Assume next that the assertion holds for all odd numbers $M<N$. As before, up to a
+permutation, we may assume that $T_k=[l_k]$ for some $l_1<\dots<l_{N}$. Let $\beta_1$ be the chain
+type for the chain given by $l_1<\dots<l_{k-2}$ in $[l_{k-1}]$ and put
+$\beta_2:=p_{[l_{k}-l_{k-1}]}$, the 1-element chain type in $\Te_{n_2-l_{k-1}}$. By the proof of Proposition \ref{prop:append_chains}, we see
+that $\beta=\beta_1\vtl\beta_2$, so that 
+\[
+\beta\vtl f=\beta_1\vtl(\beta_2\vtl f),\qquad f\vtl\beta=(f\vtl\beta_1)\vtl\beta_2
+\]
+are type functions, by the induction assumption. 
+
+
 For any $i\in [n_1]\oplus [n_2]$, we have  $e^i_{n_1+n_2}=e^j_{n_1}\theta_{n_2}$ or
 $e^i_{n_1+n_2}=\theta_{n_1}e^k_{n_2}$
 for some $j\in [n_1]$, $k\in [n_2]$. Then   
 \[
-\beta(e^i)=\beta_1(e^j_{n_1})\ \text{ or } \beta(e^i)=\beta_2(e^k_{n_2}).
+f\vtl\beta(e^i)=f(e^j_{n_1})\ \text{ or } f\vtl \beta(e^i)=\beta(e^k_{n_2}).
 \]
 The statement on input/output indices  follow from Lemma \ref{lemma:fh_setting}. The proof
-for $\beta_2\vtl\beta_1$ is similar. 
+for $\beta\vtl f$ is similar. 
 
 \end{proof}
+
+
 
 We now get to prove the following structure theorem for the type functions.
 
@@ -1736,8 +1929,21 @@ Finally, putting $\rho=\rho_1\otimes\rho_2$ finishes the proof.
 
 \end{proof}
 
+////
 
 
+Let $f\in \Te_n$ and let $\Pe=\Pe_f$. Let $\Pe_f^0=\Pe^0\subseteq \Pe$ be the subposet of
+elements $S\in \Pe_f$ such that either $S=\emptyset$ or $S\in M_{i,f}$ (so the set of all
+elements in $\Pe$ with labels). Let $T$ be a maximal element in $\Pe^0$ and consider the
+downset of $T$ in $\Pe$, that is,  $\Pe_T=\{S\in \Pe, S\subseteq T\}$. If $T$ is labeled by an
+output index, that is, if the rank $\rho_f(T)$ is odd, then $\bar\Pe_T=\Pe_T\setminus
+\{T\}$, otherwise we put $\bar \Pe_T=\Pe_T$. 
+
+
+Assume that $T=[n_T]$ (we may always do that).
+Then there is some $f_T\in \Te_{n_T}$ such that $\bar \Pe_T=\Pe_{f_T}$. 
+
+We first show that $\bar \Pe_T$ is a graded poset with even rank. 
 
 
 
@@ -1974,7 +2180,7 @@ fixed.
 We have two kinds of special permutations related to the above decomposition. For
 $\sigma_j\in \permut_{n_j}$, we denote by $\oplus_j \sigma_j\in \permut_n$ the permutation that acts as
 \[
-m_j+l\mapsto m_j+\sigma(l),\qquad l=1,\dots,n_j,\ j=1,\dots, k. 
+m_j+l\mapsto m_j+\sigma_j(l),\qquad l=1,\dots,n_j,\ j=1,\dots, k. 
 \]
 On the other hand, we have for any $\lambda\in \permut_k$ a unique permutation
 $\rho_\lambda\in\permut_n$  such that $\rho_\lambda^{-1}$ acts as
@@ -2255,7 +2461,7 @@ have
 We put $\dim(A):=\dim(\lin(A))$, the dimension of $A$. 
 
 Let $V^*$ be the vector space dual of $V$ and let $\<\cdot,\cdot\>$ be the
-duality. A subset $C\subseteq V$, put
+duality. For a subset $C\subseteq V$, put
 \[
 \tilde C:=\{v^*\in V^*,\ \<v^*,a\>=1,\ \forall a\in A\}.
 \]
@@ -2306,457 +2512,3 @@ The proper affine subspace $\tilde A$ in the above Corollary will be called the 
 of $A$. Note that the dual depends on the choice of the ambient vector space $V$.
 
 \end{document}
-
-
----
-
-
-
-
-Napisat toto dolu lepsie,  definicie do prelim, ako vyzera f?
-
-\begin{prop}\label{prop:isom} Let $\ell :[m]\to [n]$ be a map. Let $f\in \Te_n$ and let
-\[
-g=\sum_{S\subseteq [n]} \hat f_S p_{\ell^{-1}(S)}.
-\]
-Then $g\in \Te_m$.
-
-\end{prop}
-
-Note that $S\mapsto \ell^{-1}(S)$ defines a homomorphism of the Boolean algebras $\mathcal
-L_n$ and $\mathcal L_m$, in particular, it preseves unions and intersections, and
-$\ell^{-1}(\emptyset)=\emptyset$, $\ell^{-1}([m])=[n]$. 
-
-
-\begin{proof} Let us denote $g=\ell(f)$. For any permutation $\sigma\in S_m$, we have
-\[
-g\circ\sigma=\sum_{S\subseteq [n]} \hat f_S p_{\ell^{-1}(S)}\circ\sigma=\sum_{S\subseteq [n]}
-\hat f_S p_{\sigma^{-1}(\ell^{-1}(S))}=(\ell\circ\sigma)(f),
-\]
-so that $\ell(f)\circ \sigma=(\ell\circ\sigma)(f)$. We can similarly show that for any
-$\tau\in S_n$, $\ell(f\circ\tau)=(\tau\circ\ell)(f)$.  We may therefore assume
-that either $f=f_1\otimes f_2$ for some $f_1\in \Te_k$, $f_2\in \Te_{n-k}$ or $f$ is the
-dual of such a product. We then have
-\[
-\ell(f)=\sum_{\substack{S\subseteq [k]\\T\subseteq [n-k]}} (\hat f_1)_S (\hat
-f_2)_Tp_{\ell^{-1}(S\cup (k+T))}=\sum_{\substack{S\subseteq [k]\\ T\subseteq [n-k]}} (\hat f_1)_S (\hat
-f_2)_Tp_{\ell^{-1}(S)\cup \ell^{-1}(k+T)}
-\]
-Composing by a suitable permutation if
-necessary, we may assume that there are some maps $\ell_1:[k_1]\to [k]$ and
-$\ell_2:[k_2]\to [n-k]$ such that $\ell^{-1}(S)=\ell^{-1}_1(S)$
-for $S\subseteq [k]$ and $\ell^{-1}(k+T)=k_1+\ell^{-1}_2(T)$, $T\subseteq [n-k]$. It follows that 
-\[
-\ell(f)=\ell_1(f_1)\otimes \ell_2(f_2).
-\]
-Since $\ell^{-1}(\emptyset)=\emptyset$ and $\ell^{-1}([n])=[m]$, we can infer from
-\eqref{eq:dual_rank} that $\ell(f^*)=\ell(f)^*$. Since clearly $\ell(1)=1$, we can prove
-the statement  by induction on $n$ as before.
-
-
-\end{proof}
-
-
-\subsection{Separating type functions}
-
-
-We say that a function $f\in \Fe_n$ separates $i,j\in [n]$ if $f\neq f^{ij}$, where
-$f^{ij}\in \Fe_n$ is such that for any $s\in \{0,1\}^n$,  $f^{ij}(s)=f(\hat s^{ij})$,
-here $\hat s^{ij}$ is the string obtained from $s$ by replacing both $s_i$ and $s_j$ by
-$s_i\vee s_j$. Equivalently, there exists some $S\in \Pe_f$ such that $S\cap\{i,j\}$ is a
-singleton. 
-
-To see this equivalence, note that 
-$p_S(s)=p_S(\hat s^{ij})$ whenever $\{i,j\}\subseteq S$ or $\{i,j\}\cap S=\emptyset$. 
-Hence, if $f$ separates $i$ and $j$, there must be at least one $S\in \Pe_f$ that contains one of
-the indices but not the other. Conversely, let $S$ be 
-minimal with the property that, say, $i\in S$ and $j\notin S$. Let $s$ be the string such
-that $s_k=0$ if and only if $k\in S$, in particular, $s_i=0$, $s_j=1$ and $s_i\vee s_j=1$. Then
-\[
-f(s)=\sum_{T\subseteq S} \hat f_Tp_T(s)=\sum_{T\subseteq S\setminus\{i\}}\hat
-f_Tp_T(s)+\hat f_Sp_S(s),
-\]
-the second equality follows from the fact that $S$ is minimal set with $\hat f_S\ne 0$
-containing $i$ but not $j$. On the other hand, 
-\[
-f(\hat s^{ij})=\sum_{T\subseteq S\setminus\{i\}} \hat f_T(s),
-\]
-so that $f(s)-f^{ij}(s)=\hat f_S\ne 0$.
-
-
-
-\begin{lemma}\label{lemma:separateij} Let $f\in \Fe_n$ and assume that $f$ does not separate $i$ and $j$. Then
-there is some $g\in \Fe_{n-1}$ such that $f(s)=g(s^{ij}(s_i\vee s_j))$. We have
-$\Pe_f\simeq \Pe_g$ (as posets) and $f\in \Te_n$ if and only if $g\in \Te_{n-1}$.
-
-
-
-
-\end{lemma}
-
-
-\begin{proof} We may assume $i=n-1$, $j=n$. Put $g(s_1\dots s_{n-1}):= f(s_1\dots
-s_{n-1}s_{n-1})$. Then clearly $g\in \Fe_{n-1}$ and for $s\in \{0,1\}^n$, 
-\[
-g(s_1\dots s_{n-2}(s_{n-1}\vee s_n))=f(\hat s^{n(n-1)})=f(s).
-\]
-Since any $S\in \Pe_f$ either contains none of $n-1,n$ or both of them, we have
-\begin{align*}
-g(s_1\dots s_{n-1})&=f(s_1\dots s_{n-1}s_{n-1})=\sum_{S\subseteq [n]} \hat f_S p_S(s_1
-\dots s_{n-1}s_{n-1})\\
-&= \sum_{S\subseteq [n-2]}\hat f_Sp_S(s_1\dots s_{n-1})+\sum_{\substack{S\subseteq [n]\\
-\{n-1,n\}\subseteq S}} \hat f_Sp_S(s_1\dots s_{n-1}s_{n-1})\\
-&= \sum_{S\subseteq [n]} \hat f_Sp_{S\setminus\{n\}}(s_1\dots s_{n-1}).
-\end{align*}
-Note that for $S\subseteq [n]$, we have $S\setminus \{n\}=\ell^{-1}(S)$, where $\ell$ is
-the inclusion map $[n-1]\hookrightarrow [n]$. It follows by Proposition \ref{prop:isom}
-that if $f\in \Te_n$ then $g\in \Te_{n-1}$. Moreover, $\ell^{-1}$ is not injective on
-$\mathcal L_n$, since $\ell$ is not surjective, but its restriction to $\Pe_f$ is, so that 
-$\Pe_f\simeq \Pe_g$. 
-
-Assume $g\in\Te_{n-1}$, then since $\overline {s_{n-1}\vee s_n}=\bar s_{n-1}\bar s_n$, we
-get
-\begin{align*}
-f(s)&=\sum_{T\subseteq [n-1]}\hat g_Tp_T(s_1\dots s_{n-2}(s_{n-1}\vee s_n))\\
-&= \sum_{T\subseteq [n-2]}\hat g_Tp_T(s)+ \sum_{T\subseteq [n-1], n-1\in T}\hat
-g_Tp_{T\cup \{n\}}(s)=\sum_{T\subseteq [n-1]} \hat g_Tp_{\ell_1^{-1}(T)}(s),
-\end{align*}
-were $\ell_1: [n]\to [n-1]$ is the map such that $\ell_1(i)=i$ for $i\ne n$ and
-$\ell_1(n)=n-1$. Again, using Proposition \ref{prop:isom}, this implies that $f\in \Te_n$.
-
-
-
-\end{proof}
-
-We say that $f$ is separating, or separates the poits of $[n]$, if it separates all pairs $i,j\in [n]$.
-Notice that in this case both $\cap \Pe_f$ and $(\cup\Pe_f)^c$ are at most singletons.
-
-
-\begin{theorem}\label{thm:separates} For any $f\in \Te_n$ there is some $g\in \Te_k$ such
-that $g$ is separating, $\Pe_f\simeq \Pe_g$ and there are subsets $S_1,\dots, S_l$ in
-$[n]$ such that $f(s)=g(s^{\cup_j S_j}(\vee_{j\in I_1} s_j)\dots (\vee_{j\in I_l} s_j))$.
-
-\end{theorem}
-
-\begin{proof} We can construct the function $g$ by repeated application of Lemma
-\ref{lemma:separateij}, glueing together nonseparable points until, after a finite number
-of steps, none are left, so that the resulting function $g$ separates the points of $m$.
-
-\end{proof}
-
-Let us remark that  the higher order object constructed from $f$ and a set of first order
-objects $X_1,\dots, X_n$ is isomorphic to the object constructed from $g$ and a sequence
-$Z_1,\dots, Z_k$, which is obtained by removing the first order objects $X_i$, $i\in S_j$
-and replacing them by their tensor product
-$\otimes_{i\in S_j} X_i$, for any set of nonseparable indices $S_j$.
-
-
-\subsubsection{Separating chains}
-
-
-We will describe all separating chains, up to permutations. 
-Clearly, a chain $\Pe=\{S_1\subsetneq \dots \subsetneq
-S_N\}$ in $\mathcal L_n$  is
-separating if and only if  $S_i\setminus S_{i-1}$ is a singleton for $i=2,\dots, N$ and
-both $S_1$ and $S_N^c$ are at most singletons (that is, these might be also empty). 
-We have seen that the correspnding function is in $\Te_n$ if and only if $N=r(\Pe)+1$ is
-odd. By the separating property, we must have $n-1\le N\le n+1$, depending on whether
-$S_1$ or $S_N^C$ are empty or not.
- Since $N$ must be  odd, we see that the only possibilities are
-\begin{align*}
-N&=n-1 \text{ or } N=n+1  & \text{ if $n$ is even}\\
-N&=n & \text{ if $n$ is odd}.
-\end{align*}
-For even $n$, put
-\[
-\gamma_n(s):=\sum_{l=0}^n (-1)^lp_{[l]}(s)=1-\bar s_1+\bar s_1\bar s_2-\dots +\bar
-s_1\dots \bar s_n.
-\]
-Then $\gamma_n$  is a separating chain in $\Te_n$ and the corresponding sets of input and output
-indices  are
-\[
-I=\{2j, j=1,\dots n/2\},\qquad O=\{2j-1,\ j=1,\dots n/2\}.
-\]
-Up to a permutation, any separating chain in $\Te_n$ is of the form 
-\[
-\gamma_{0,n}:=\gamma_n \text{ or }\   \gamma_{1,n}:=p_1\otimes\gamma_{n-2}\otimes 1_1.
-\]
-These two chains  are easily seen to be each others complement.
-Similarly, if $n$ is odd, then (up to permutation) any separating chain in $\Te_n$  must either of the two
-comlementary  forms
-\[
-\gamma_{0,n}:=p_1\otimes \gamma_{n-1}  \text{ or }\  \gamma_{1,n}=\gamma_{n-1}\otimes 1_1.
-\]
- From the remarks below Proposition \ref{prop:chains}, we see that for $n=2$ or 3, all separating type
- functions (up to permutations)  are of this form.
-
-
-
-Let $\Pe_1=\{S_1\subsetneq \dots\subsetneq S_N\}$ be a chain in  $[n]$ and
-$\Pe_2=\{T_1\subsetneq \dots \subsetneq T_M\}$ a chain in $[m]$. Then we can append the
-two chains into  a single  chain $\Pe$ in $[m+n]$, in an obvious way. Namely,  assuming that
-$T_1=\emptyset$, then we may put $\Pe_2$ after $\Pe_1$ as $\Pe=\{S_1\subsetneq \dots \subsetneq S_N\subsetneq S_N\cup
-T_2\subsetneq \dots \subsetneq S_N\cup T_M\}$. If the corresponding functions are $f_1$
-and $f_2$, then the function related to $\Pe$ is
-\[
-f=f_1\otimes 1_m+p_{S_N}\otimes (f_2-1_m).
-\]
-Conversely, any chain can be subdivided into two or more chains, as above. Let now $n$ be
-even and let $n=n_1+\dots+ n_k$ be any subdivision into even numbers $n_i$. Then 
-\begin{equation}\label{eq:gamma_decomp}
-\gamma_n=\gamma_{n_1}+p_{n_1}\otimes (\gamma_{n_2}-1)+p_{n_1}\otimes p_{n_2}\otimes
-(\gamma_{n_3}-1)+\dots+ (\otimes_{i=1}^{k-1}p_{n_i})\otimes (\gamma_{n_k}-1) 
-\end{equation}
-(we skip the obvious tensorings with the constant $1$). We can append the strings
-$\gamma_{n_1},\dots, \gamma_{n_k}$ in any order.  
-
-We introduce the following notations. Let $N_j:=\sum_{i\le j} n_i$, $j=0,1,\dots,k$. 
-Let $\Lambda_1,\dots,\Lambda_k$ be the subdivision of $\{1,\dots, n\}$ corresponding to
-$n=n_1+\dots +n_k$, so that  $\Lambda_i=\{N_{i-1}+1,\dots,
-N_i\}$, $i=1,\dots,k$. Let  $s=s^1\dots s^k$ be the corresponding subdivision of the
-string $s\in \{0,1\}^n$, so $s^j=\Pi_{i\in \Lambda_j}s_i$.
-For $\pi\in \permut_k$, let $\sigma_\pi$ be the permutation of
-$\{1,\dots,n\}$ obtained by permuting the $k$ blocks $\Lambda_1,\dots, \Lambda_k$ by
-$\pi$,  so that 
-\[
-\sigma_\pi(s)=s^{\pi(1)}\dots s^{\pi(k)}.
-\]
-
-\begin{remark} Combs and causal order! Different ordering - composing  with a permutation.
-Also the causal tensor product of...
-
-\end{remark}
-
-
-
-\begin{lemma} 
-We have $\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k}=\bigwedge_{\pi\in \permut_k}
-\gamma_n\circ \sigma_\pi$.
-\end{lemma}
-
-\begin{proof} For  a  string $s\in \{0,1\}^n$,  let us    denote
-$c_i:=\gamma_{n_i}(s^{i})$. For any $\pi\in \permut_k$,  we get using
-\eqref{eq:gamma_decomp} for $n=n_{\pi(1)}+\dots +n_{\pi(k)}$, 
-\[
-\gamma_n\circ\sigma_\pi(s)=c_{\pi(1)}+p_{n_{\pi(1)}}(s^{\pi(1)})(c_{\pi(2)}-1)+\dots
-+ \Pi_{i=1}^{k-1}p_{n_{\pi(i)}}(s^{\pi(i)})(c_{\pi(k)}-1),
-\]
-while on  the left hand side of the equality in the lemma, we have
-\[
-\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k}(s)=c_1\dots c_k.
-\]
-Since $c_i\in \{0,1\}$, we have $c_i^2=c_i$ so that  $c_i(c_i-1)=0$ and since the infimum
-of two elements in $\Fe_n$ is their product, we get
-\[
-(\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k})\wedge (\gamma_n\circ\sigma_\pi)(s)=
-c_1\dots c_k=(\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k})(s),
-\]
-so that $\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k}\le \gamma_n\circ \sigma_\pi$. 
-
-We now peoceed by induction on $k$. The statement is trivial for $k=1$. Assume that
-it holds for $k$. Let $\pi\in \permut_k$ and let $\pi'\in \permut_{k+1}$ be a permutation
-that fixes $k+1$ and permutes the other elements by $\pi$. We then have
-\[
-\gamma_n=\gamma_{N_{k}}+p_{N_k}\otimes (\gamma_{n_{k+1}}-1),\qquad
-\gamma_n\circ\sigma_{\pi'}=\gamma_{N_k}\circ \sigma_\pi+p_{N_k}\otimes
-(\gamma_{n_{k+1}}-1),
-\]
-since $p_{N_k}$ is invariant under permutations. Let $\pi''\in \permut_{k+1}$ be given by
-postcomposition of $\pi'$ by the right shift permutation $(23\dots1)$, that is,
-$\{1,\dots k+1\} \mapsto \{k+1, \pi(1),\dots, \pi(k)\}$. Then 
-\[
-\gamma_n=\gamma_{n_{k+1}}+p_{n_{k+1}}\otimes (\gamma_{N_k}-1),\qquad
-\gamma_n\circ\sigma_{\pi''}=\gamma_{n_{k+1}}+p_{n_{k+1}}\otimes
-(\gamma_{N_k}\circ\sigma_\pi-1).
-\]
-Applying to any string $s$ and multiplying, we obtain that 
-\[
-\gamma_n\circ\sigma_{\pi'}\wedge
-\gamma_n\circ\sigma_{\pi''}=\gamma_{N_k}\circ\sigma_\pi\otimes \gamma_{n_{k+1}},
-\]
-for this we note that since $p_{n_{k+1}}$ is the least element in $\Fe_{n_k+1}$, we have
-$p_{n_{k+1}}(t)\gamma_{n_{k+1}}(t)=p_{n_{k+1}}(t)$ for any string $t\in
-\{0,1\}^{n_{k+1}}$. Using this and the first part of the proof,
-\begin{align*}
-\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k+1}&\le \bigwedge_{\pi'\in \permut_{k+1}}
-\gamma_n\circ \sigma_{\pi'}\le \bigwedge_{\pi\in
-\permut_k}(\gamma_{N_k}\circ\sigma_\pi\otimes \gamma_{n_{k+1}})=(\bigwedge_{\pi\in
-\permut_k}\gamma_{N_k}\circ\sigma_\pi)\otimes \gamma_{n_{k+1}}\\
-&=\gamma_{n_1}\otimes \dots\otimes \gamma_{n_k+1}.
-\end{align*}
-
-\end{proof}
-
-Let us now describe products of the form 
-\[
-\gamma_{u_1,n_1}\otimes\dots\otimes \gamma_{u_k,n_k},
-\]
-with $u_i\in \{0,1\}$, $n=n_1+\dots+n_k$. Let $U$ be the set of $i$ such that $n_i$ is odd. Notice that such a product 
-is separating if and only if one of the following is true:
-\begin{enumerate}
-\item $U=\emptyset$ and at most one of the $u_i$ is 1,
-\item $U=\{i\}$ and $u_j=0$ for $j\ne i$,
-\item $U=\{i,j\}$, $u_i\ne u_j$ and $u_k=0$ for $k\notin U$. 
-\end{enumerate}
-In any case, up to a permutation, the above product is of the form
-\begin{align*}
-\gamma_{u_1,n_1}\otimes\dots\otimes \gamma_{u_k,n_k}&=p_{n_0}\otimes (\gamma_{n_1}\otimes
-\dots\otimes \gamma_{n_k})\otimes 1_{n_{n+1}}=p_{n_0}\otimes (\bigwedge_{\pi\in \permut_k}
-\gamma_n\circ \sigma_\pi)\otimes 1_{n_{k+1}}\\ &=\bigwedge_{\pi\in \permut_k}p_{n_0}\otimes
-(\gamma_n\circ \sigma_\pi)\otimes 1_{n_{k+1}}.
-\end{align*}
-In the separating case, $n_0,n_{k+1}\le 1$, so that the
-product is an infimum over separating chains obtained from $\gamma_{n_k,n+n_0+n_k}$ by
-permutations.
-
-Let   $K\subset [n]$ and let $m:=n-|K|$. For $s\in \{0,1\}^m$, we define a
-string $s_K\in \Fe_n$ as follows. Let $K=\{i_1<\dots<i_l\}$ and put $i_0=0$,
-$i_{l+1}=n+1$, then
-\[
-(s_K)_i=\begin{dcases} 0, & \text{if } i=i_j,\ j=1,\dots,l\\
-s_{i-j}, & \text{if } i_j<i<i_{j+1},\ j=0,\dots, l.
-\end{dcases}
-\]
-For example, if $n=5$, $K=\{2,4\}$, then $s_K=s_10s_20s_3$. For a function $f\in \Fe_n$,
-we define a function $f_K\in \Fe_m$ as
-\begin{equation}\label{eq:restricted_chain}
-f_K(s)=f(s_K)=\sum_{S\subseteq [n]} \hat f_Sp_{S\setminus K}(s).
-\end{equation}
-We also have
-\[
-(f_K)^*(s)=1(s)-f_K(s)+p_m(s)=1(s_K)-f(s_K)+p_n(s_K)=f^*(s_K)=f^*_K(s)
-\]
-and
-\[
-f_K\otimes g_L(st)=f\otimes g(s_Kt_L)=f\otimes g((st)_{K\cup n+L}).
-\]
-It is not clear that $f_K\in \Te_m$ if $f\in \Te_n$, but it is easily seen to be true for
-chains. Indeed, one can see from \eqref{eq:restricted_chain} that if $f$ is a chain of odd length, then so is also $f_K$. One can also check that $X_{f_K}$ can be obtained from $X_f$ by replacing the objects
-corresponding to $i\in K$ by the trivial first order object $I$.
-
-\begin{prop}\label{prop:supinf} For any $f\in \Te_m$ there is some $n\ge m$, a separating
-$g\in \Te_n$ and $K\subset [n]$,  such that $f=g_K$ and
-\[
-g=\bigvee_{\sigma\in G}\bigwedge_{\tau\in H} \gamma_n\circ (\tau\circ\sigma)
-\]
-for some sets of permutations $G,H\subseteq \permut_n$. 
-\end{prop}
-
-\begin{proof} The condition is stable under permutations. If it holds for $f$, then 
-$f^*=(g_K)^*=g^*_K$ and
-\[
-g^*=\bigwedge_{\sigma\in G}\bigvee_{\tau\in H}\gamma_n^* \circ (\tau\circ\sigma).
-\]
-Note that we have
-\[
-\gamma^*_n=p_1\otimes \gamma_{n-2}\otimes 1_1=(\gamma_{n+2})_{1,n+2}
-\]
-and for any $\rho\in \permut_n$,
-\[
-\gamma^*_n\circ \rho=(\gamma_{n+2}\circ (id_1\otimes
-\rho\otimes id_1))_{1,n+2}.
-\]
-Since the infima and suprema are pointwise, it is clear that 
-\[
-g^*=\bigwedge_{\sigma\in G}\bigvee_{\tau\in H}\gamma_n^* \circ (\tau\circ\sigma)=
-(\bigwedge_{\sigma\in G}\bigvee_{\tau\in H} \gamma_{n+2}\circ (id_1\otimes
-(\tau\circ\sigma)\otimes id_1))_{1,n+2}.
-\]
-Put
-\[
-g':=\bigwedge_{\sigma\in G}\bigvee_{\tau\in H} \gamma_{n+2}\circ (id_1\otimes
-(\tau\circ\sigma)\otimes id_1),
-\]
-then 
-\[
-f^*=g^*_K=g'_{(K+1)\cup\{1,n+2\}}.
-\]
-Assume that $f_1=(g_1)_{K_1}$, $f_2=(g_2)_{K_2}$, and $g_1\in \Te_{n_1}$, $g_2\in
-\Te_{n_2}$,
-\[
-g_i=\bigvee_{\sigma_i\in G_i} \bigwedge_{\tau_i\in H_i} \gamma_{n_i}\circ
-(\sigma_i\circ\tau_i),\qquad i=1,2,
-\]
-$G_i, H_i \subseteq \permut_{n_i}$. Then 
-\[
-f_1\otimes f_2=(g_1\otimes g_2)_{K_1\cup n_1+K_2}
-\]
-and
-\begin{align*}
-g_1\otimes g_2&=\bigvee_{\sigma_1\in G_1,\sigma_2\in G_2}\bigwedge_{\tau_1\in H_1,\tau_2\in
-H_2} \gamma_{n_1}\otimes\gamma_{n_2}\circ ((\sigma_1\otimes \sigma_2)\circ (\tau_1\otimes
-\tau_2))\\
-&=\bigvee_{\sigma_1\in G_1,\sigma_2\in G_2}\bigwedge_{\tau_1\in H_1,\tau_2\in
-H_2} (\gamma_{n_1+n_2}\wedge \gamma_{n_1+n_2}\circ\pi)\circ ((\sigma_1\otimes \sigma_2)\circ (\tau_1\otimes
-\tau_2)),
-\end{align*}
-where $\pi$ swaps the two blocks of length $n_1$ and $n_2$. Since $\rho$ commutes with
-both $\sigma_1\otimes \sigma_2$ and $\tau_1\otimes \tau_2$, the statement follows, with
-\[
-G=\{\sigma_1\otimes \sigma_2, \sigma_i\in G_i\},\quad H=\{(\tau_1\otimes \tau_2)\circ\rho,
-\tau_i\in H_i, \rho\in \{id, \pi\}\}.
-\]
-
-\end{proof}
-
-
-
-
-
-
-
-\begin{prop}\label{prop:supinf+} Let $f\in \Te_n$ be separating. Then there is some
-separating chain $\gamma\in \Fe_n$  and subgroups $G,H\subseteq \permut_n$, such that $G\subseteq H'$ (all elements
-in $G$ commute with all elements in $H$), such that
-\[
-f=\bigvee_{\sigma\in G} \bigwedge_{\tau\in H} \gamma\circ\sigma\circ\tau.
-\]
-
-\end{prop}
-
-
-\begin{proof} Assume the above is true for $f\in \Te_n$, then
-\[
-f^*=\bigwedge_{\sigma\in G} \bigvee_{\tau\in H} \gamma^*\circ\sigma\circ\tau=
-\bigwedge_{\sigma\in G} \bigvee_{\tau\in H} \gamma^*\circ\tau\circ\sigma.
-\]
-Since $\gamma^*$ is a separating chain if $\gamma$ is, the statement holds also for $f^*$.
-Further, let $\rho\in \permut_n$ be any permutation, then
-\[
-f\circ \rho = \bigvee_{\sigma\in G} \bigwedge_{\tau\in H}
-\gamma\circ\sigma\circ\tau\circ\rho=
-\bigvee_{\sigma'\in \rho^{-1}G\rho} \bigwedge_{\tau'\in \rho^{-1}H\rho} (\gamma\circ\rho)\circ\sigma'\circ\tau'.
-\]
-Since $\gamma\circ\rho$ is a separating chain, we see that the statement is also invariant
-under permutations. It also follows that we may always assume that $\gamma=\gamma_{u,n}$
-for some $u\in \{0,1\}$.
-
-We now proceed by induction. The assertion is trivial for $n=1$. Assume it holds for all
-$m<n$ and let $f\in \Te_n$. It is enough to prove the statement if $f=f_1\otimes f_2$, for
-$f_1\in \Te_{m}$ and $f_2\in \Te_{n-m}$. By the induction assumption, there are some
-separating chains $\gamma^1\in \Te_{m}$ and $\gamma^2\in \Te_{n-m}$, and subgroups
-$G_1,H_1\subseteq \permut_m$, $G_1\subseteq H_1'$ and $G_2,H_2\subseteq \permut_{n-m}$,
-$G_2\subseteq H_2'$ such that  
-\[
-f_1=\bigvee_{\sigma_1\in G_1}\bigwedge_{\tau_1\in H_1} \gamma^1\circ\sigma_1\circ\tau_1,\qquad 
-f_2=\bigvee_{\sigma_2\in G_2}\bigwedge_{\tau_2\in H_2} \gamma^2\circ\sigma_2\circ\tau_2.
-\]
-We then have
-\begin{align*}
-f&=f_1\otimes f_2=
-\bigvee_{\sigma_1\in G_1,\sigma_2\in G_2}\bigwedge_{\tau_1\in H_1,
-\tau_2\in H_2} (\gamma^1\circ\sigma_1\circ\tau_1)\otimes
-(\gamma^2\circ\sigma_2\circ\tau_2)\\
-&=\bigvee_{\sigma_1\in G_1,\sigma_2\in G_2}\bigwedge_{\tau_1\in H_1,\tau_2\in
-H_2}(\gamma^1\otimes \gamma^2)\circ(\sigma_1\otimes\sigma_2)\circ(\tau_1\otimes \tau_2).
-\end{align*}
-As noted above, we may assume that $\gamma^1=\gamma_{u_1,m}$ and
-$\gamma^2=\gamma_{u_2,n-m}$ for some $u_1,u_2\in \{0,1\}$. Since $f$ is separating,
-$\gamma^1\otimes \gamma^2$
-
-
-
-\end{proof}
-\end{document}
-\end{document}
-

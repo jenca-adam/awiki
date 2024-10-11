@@ -18,7 +18,10 @@ title: Sreekumar, Berta, limit distributions, 2024
 
 [revision](REF_sreekumar2024/revision.pdf)
 
-[authors' response](REF_sreekumar2024/response.pdf)
+[authors' response](REF_sreekumar2024/response.pdf)    
+
+
+**Decision:** accept
 
 
 
