@@ -102,7 +102,7 @@ D(p\|q)\ge 0,\qquad D(p\|q)=0 \iff p=q.
 
 \begin{frame}{R\'enyi divergences}
 
-Axiomatic approach (A. R\'enyi, 1961): 
+Axiomatic approach: {\small (A. R\'enyi, 1961)}
 
 \medskip
 
@@ -192,7 +192,7 @@ Quantum information theory:
 \begin{frame}{Postulates for quantum divergences?}
 
 \begin{itemize}
-\item Postulates similar to R\'enyi (M\"uller-Lennert et al, 2013)
+\item Postulates similar to R\'enyi {\small (M\"uller-Lennert et al, 2013)}
 \vskip 5mm
 
 \item In the  \structure{classical case} (commuting density matrices) we get 
@@ -241,13 +241,13 @@ for any quantum channel $\Phi$ and any pair of states $\rho$, $\sigma$.
 
 \begin{frame}{An important quantum divergence}
 
- \structure{Quantum relative entropy} (Umegaki, 1962)
+ \structure{Quantum relative entropy} {\small (Umegaki, 1962)}
 \[
 S(\rho\| \sigma)=\Tr\bigl[\rho\left(\log(\rho)-\log(\sigma)\right)\bigr]
 \]
 
 \begin{itemize}
-\item satisfies postulates, DPI (Lindblad, 1975)
+\item satisfies postulates, DPI {\small (Lindblad, 1975)}
 \vskip 2mm
 \item fundamental in quantum information theory
 \vskip 2mm
@@ -263,7 +263,7 @@ hypothesis testing
 
 \begin{frame}{Quantum R\'enyi divergences}
 
-\structure{Petz-type (standard) quantum R\'enyi divergence}: (Petz, 1985,1986)
+\structure{Petz-type (standard) quantum R\'enyi divergence}: {\small (Petz, 1985,1986)}
 \[
 D_\alpha(\rho\|\sigma)=\frac1{\alpha-1}\log\Tr\left[\rho^\alpha\sigma^{1-\alpha}\right], \qquad 1\ne
 \alpha>0
@@ -273,7 +273,8 @@ D_\alpha(\rho\|\sigma)=\frac1{\alpha-1}\log\Tr\left[\rho^\alpha\sigma^{1-\alpha}
 \vskip 3mm
 \item $\lim_{\alpha\to 1} D_\alpha(\rho\|\sigma)=S(\rho\|\sigma)$
 \vskip 3mm
-\item \structure{operational interpretation} for $\alpha\in (0,1)$: (Audenaert et al., 2008, Nagaoka, 2006)
+\item \structure{operational interpretation} for $\alpha\in (0,1)$: {\small (Audenaert et
+al., 2008, Nagaoka, 2006)}
 \vskip 2mm
 asymptotic hypothesis testing (error
 exponents, direct part) 
@@ -285,20 +286,22 @@ exponents, direct part)
 
 \begin{frame}{Quantum R\'enyi divergences}
 
-\structure{Minimal (sandwiched) quantum R\'enyi divergence}: (M\"uller-Lennert et al,
-2013, Wilde et al, 2014) 
+\structure{Minimal (sandwiched) quantum R\'enyi divergence}: {\small (M\"uller-Lennert et al,
+2013, Wilde et al, 2014)} 
 \[
 \tilde
 D_\alpha(\rho\|\sigma)=\frac1{\alpha-1}\log\Tr\left[\left(\sigma^{\frac{1-\alpha}{2\alpha}}\rho\sigma^{\frac{1-\alpha}{2\alpha}}\right)^\alpha\right],\qquad
 1\ne \alpha>0
 \]
 \begin{itemize}
-\item satisfies postulates, DPI for $\alpha\in [1/2,\infty)$ (Frank and Lieb, 2013)
+\item satisfies postulates, DPI for $\alpha\in [1/2,\infty)$ {\small (Frank \& Lieb,
+2013)}
 
 \vskip 3mm
 \item $\lim_{\alpha\to 1} \tilde D_\alpha(\rho\|\sigma)=S(\rho\|\sigma)$
 \vskip 3mm
-\item \structure{operational interpretation} for $\alpha>1$: (Mosonyi and Ogawa, 2015)
+\item \structure{operational interpretation} for $\alpha>1$: {\small (Mosonyi \& Ogawa,
+2015)}
 \vskip 2mm
 asymptotic hypothesis testing (error
 exponents, converse part) 
@@ -310,49 +313,123 @@ exponents, converse part)
 
 \begin{frame}{Quantum R\'enyi divergences}
 
-\structure{$\alpha-z$-R\'enyi divergence}: (Jaksic et al, 2011, Audenaert and Datta, 2015)
+\structure{$\alpha-z$-R\'enyi divergence}: {\small (Jaksic et al, 2011, Audenaert \&
+Datta, 2015)}
 \[
 D_{\alpha,z}(\rho\|\sigma)
 =\frac1{\alpha-1}\log\Tr\left[\left(\sigma^{\frac{1-\alpha}{2z}}\rho^{\frac{\alpha}{z}}\sigma^{\frac{1-\alpha}{2z}}\right)^z
 \right],\qquad 1\ne \alpha>0, z>0
 \]
 \begin{itemize}
-\item satisfies postulates, DPI for (Zhang, 2020)
-\[
-\alpha\in (0,1),\ \max\{\alpha,1-\alpha\}\le z\ \text{ or }\ \alpha>1,\
-\max\{\frac{\alpha}2,\alpha-1\}\le z\le \alpha
-\]
+\item satisfies postulates, DPI if: {\small (Zhang, 2020)}
+
+\medskip
+\qquad - $\alpha\in (0,1),\ \max\{\alpha,1-\alpha\}\le z$
+
+\medskip 
+\qquad - $\alpha>1,\
+\max\{\frac{\alpha}2,\alpha-1\}\le z\le \alpha$
+\vskip 3mm
 \item $\lim_{\alpha\to 1} D_{\alpha,z}(\rho\|\sigma)=S(\rho\|\sigma)$, $z>1$
-
+\vskip 3mm
+\item Petz type: $D_{\alpha,1}(\rho\|\sigma)=D_\alpha(\rho\|\sigma)$
+\vskip 3mm
+\item Minimal: $D_{\alpha,\alpha}(\rho\|\sigma)=\tilde D_\alpha(\rho\|\sigma)$
 \end{itemize}
 
 
 
 \end{frame}
 
-\end{document}
+
+\begin{frame}{Quantum R\'enyi divergences}
+
+\structure{Maximal R\'enyi divergence}: {\small (Matsumoto, 2018)}
+\[
+D_\alpha^{max}(\rho\|\sigma)=\frac{1}{\alpha-1}\log
+\Tr\left[\sigma\left(\sigma^{-1/2}\rho\sigma^{-1/2}\right)^\alpha\right],\qquad 1\ne
+\alpha>0
+\]
+\begin{itemize}
+\item satisfies postulates, DPI if $\alpha\in (0,2]$
+\vskip 3mm
+\item Belawkin-Staszewski relative entropy as limit
+\[
+\lim_{\alpha\to 1}D_\alpha^{max}(\rho\|\sigma)=\Tr\left[\rho
+\log\left(\rho^{1/2}\sigma^{-1}\rho^{1/2}\right)\right]
+\]
 
 
+\end{itemize}
 
-\medskip
-For a quantum divergence $D$ and states $\rho$, $\sigma$:
+\end{frame}
+
+
+\begin{frame}{Extensions to von Neumann algebras}
+
 
 \begin{itemize}
-\item 
-\structure{Data processing inequality}: for any \structure{quantum channel} $\Phi$
-\[
-D(\Phi(\rho)\|\Phi(\sigma))\le D(\rho\|\sigma)
-\]
 
+\item In some infinite dimensional situations the previous definitions do not work.
+
+\vskip 3mm
+
+\item Useful also in e.g. QFT
+
+\vskip 3mm
+\item Technical problems: no density matrices (operators) in general, no matrix analysis
+tools...
+
+\vskip 3mm
+
+\item Other tools: modular theory, non-commutative $L_p$-spaces, complex interpolation
+
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}{Extensions to von Neumann algebras}
+
+
+
+
+
+\begin{itemize}
+
+\item \structure{Relative entropy} {\small (Araki, 1976)}
 
 \vskip 2mm
+\hskip 3cm - relative modular operator
+\vskip 2mm
 
-\item\structure{Additivity}:
-\[
-D(\rho_1\otimes \rho_2\|\sigma_1\otimes \sigma_2)=D(\rho_1\|\sigma_1)+D(\rho_2\|\sigma_2)
-\]
+\item \structure{Petz-type R\'enyi divergences} {\small (Petz, 1985)}
 
-\item + some further properties
+\vskip 2mm
+\hskip 1cm - relative modular operator, operator convex functions
+\vskip 2mm
+
+\item \structure{Minimal R\'enyi divergences} {\small (Berta et al, 2018, AJ 2018, 2021)}
+\vskip 2mm
+\hskip 3cm - weighted $L_p$-norms, interpolation
+\vskip 2mm
+
+\item \structure{$\alpha-z$-R\'enyi divergences} {\small (Hiai \& AJ, 2024)}
+\vskip 2mm
+\hskip 3cm - weighted $L_p$-norms, variational formulas
+\vskip 2mm
+\vskip 3mm
+
+\item \structure{Maximal R\'enyi divergences} {\small (Hiai, 2019)}
+\vskip 2mm
+\hskip 3cm - operator means, generalized connections
+\vskip 2mm
+
+
+
+
+
 \end{itemize}
 
 
@@ -360,782 +437,177 @@ D(\rho_1\otimes \rho_2\|\sigma_1\otimes \sigma_2)=D(\rho_1\|\sigma_1)+D(\rho_2\|
 
 \end{frame}
 
+\begin{frame}{Quantum R\'enyi divergences and $L_p$-spaces}
 
-\end{document}
-
-
-
-
-
-
-\begin{frame}{The $\alpha$-$z$-R\'enyi divergences}
-
-
-For density operators $\rho$, $\sigma$ on a finite dimensional Hilbert space:
-\[
-D_{\alpha,z}(\rho\|\sigma)=\frac{1}{\alpha-1}\log
-\frac{\mathrm{Tr}\bigl(\rho^{\frac{\alpha}{2z}}\sigma^{\frac{1-\alpha}{z}}
-\rho^{\frac{\alpha}{2z}}\bigr)^z}{\mathrm{Tr}\,\rho},
-\]
-where $0<\alpha\ne 1$ and $z>0$.\myfootnote{Jaksi\'c, Ogata, Pautrat and  Pillet, 2011}
-\myfootnote{Audenaert and Datta, 2015}
+R\'enyi divergence: $D_\alpha(\rho\|\sigma)=\frac1{\alpha-1}\log Q_{\alpha}(\rho\|\sigma)$
 
 \bigskip
 
-\medskip
-
-For each $z>0$, $D_{\alpha,z}$ is a quantum extension of classical R\'enyi $\alpha$-divergences for
-probability vectors $p,q$:
-\[
-D_\alpha(p\|q)=\frac{1}{\alpha-1}\log(\sum_i p_i^\alpha q_i^{1-\alpha}).
-\]
-
-
-
-
-
-\end{frame}
-
-\begin{frame}{The $\alpha$-$z$-R\'enyi divergences}
-
-Important special cases:
-
-\medskip 
-
 \begin{itemize}
-\item \structure{Relative entropy}:
+\item \structure{Classical case}: $Q$-weighted $L_p$-norm 
 \[
-\lim_{\alpha\to 1}D_{\alpha,z}(\rho\|\sigma)=D_1(\rho\|\sigma)=\frac{\mathrm{Tr}\bigl(\rho(\log \rho-\log \sigma)\bigr)}{\mathrm{Tr}\,\rho}
+Q_\alpha(P\|Q)=\int \left(dP/dQ\right)^\alpha
+dQ=\|dP/dQ\|_{\alpha,Q}^\alpha
 \]
-
-\item \structure{Petz-type (standard) R\'enyi divergence}: $z=1$, $0<\alpha\ne 1$
+\item \structure{Quantum sandwiched case}: $\sigma$-weighted $L_p$-norm
 \[
-D_\alpha(\rho\|\sigma)=\frac{1}{\alpha-1}\log\frac{\mathrm{Tr}\bigl(\rho^{\alpha}\sigma^{1-\alpha}\bigr)}{\mathrm{Tr}\,\rho}
+Q_\alpha(\rho\|\sigma)=\Tr\left[\left(
+\sigma^{\frac{1-\alpha}{2\alpha}}\rho\sigma^{\frac{1-\alpha}{2\alpha}}\right)^\alpha\right]=\|\rho\|^\alpha_{\alpha,\sigma},\quad
 \]
-\item \structure{Sandwiched R\'enyi divergence}:  $0<z=\alpha\ne 1$
-\[
-\tilde
-D_\alpha(\rho\|\sigma)=\frac{1}{\alpha-1}\log\frac{\mathrm{Tr}\bigl(\sigma^{\frac{1-\alpha}{2\alpha}}\rho\sigma^{\frac{1-\alpha}{2\alpha}}\bigr)}{\mathrm{Tr}\,\rho}
-\]
+\item For $\alpha>1$: complex interpolation norm {\small (Kosaki, 1984)}
+\vskip 3mm
+ $\|\sigma^{-1/2}\rho\sigma^{-1/2}\|$ (operator norm),  $\|\rho\|_1$ (trace norm)
 
-
-\end{itemize}
-
-
-
-
-\end{frame}
-
-\begin{frame}{Data processing inequality (DPI)}
-
-For a quantum channel (CPTP map) $\Phi$ and any $\rho$, $\sigma$:
-\[
-D_{\alpha,z}(\Phi(\rho)\|\Phi(\sigma))\le D_{\alpha,z}(\rho\|\sigma)
-\]
-- not true for all values of $\alpha$, $z$:
-
-\medskip
-
-
-\begin{itemize}
-\item Petz-type:\footnote{Ando's convexity theorem, 1979}  $\alpha\in (0,1)\cup (1,2]$;
-\item sandwiched:\footnote{S. Beigi,
-2013; Frank and Lieb, 2013}
- $\alpha\in [1/2,1)\cup (1,\infty]$;\item general case:\footnote{Carlen, Frank and Lieb,
- 2018; Zhang, 2020}
-\[
-0 < \alpha < 1,\quad  \max\{\alpha, 1 - \alpha\} \le  z 
-\]
-or
-\[
-\alpha > 1,\quad  \max\{\alpha/2, \alpha - 1\} \le  z \le \alpha.
-\]
+\item works in general von Neumann algebras
 \end{itemize}
 
 
 \end{frame}
 
-\begin{frame}{Outline of this talk}
+\begin{frame}{$\alpha-z$-R\'enyi divergences and $L_p$-spaces}
+
+\structure{Variational formula}: {\small (Kato, 2024, Hiai \& AJ, 2024)}
+
+\bigskip
 
 \begin{itemize}
-\item extension of $D_{\alpha,z}$ to the setting of \structure{von Neumann
-algebras}
+\item For $\alpha>1$, $p=\frac{z}{\alpha}$, $r=\frac{z}{1-\alpha}$:
+\begin{multline*}
+Q_{\alpha,z}(\rho\|\sigma)=\inf_{a
+\text{ p.d.}}\left\{\alpha\|\rho^{\frac 12}a\rho^{\frac
+12}\|^p_{p,\rho}+(1-\alpha)\|\sigma^{\frac 12}a^{-1}\sigma^{\frac 12}\|^r_{r,\sigma}\right\}
+\end{multline*}
 
-\item  DPI with respect to
-\structure{positive} trace preserving maps (within the same bounds on parameters as in
-finite dimensions)
-
-\item equality in DPI implies \structure{sufficiency (reversibility)} for 2-positive
-trace preserving maps
+\item For $\alpha>1$, $p=\frac{z}{\alpha}$, $q=\frac{z}{\alpha-1}$:
+\begin{multline*}
+Q_{\alpha,z}(\rho\|\sigma)=\sup_{a\ge 0} \left\{\alpha\|\rho^{\frac 12}a\rho^{\frac
+12}\|^p_{p,\rho}- (\alpha-1)\|\sigma^{\frac 12}a\sigma^{\frac 12}\|^q_{q,\sigma}
+ \right\}
+\end{multline*}
 
 \end{itemize}
 
 \medskip
 
-Our tools
-\medskip
+- Connects to the weighted $L_p$-norms for all $\alpha, z$, DPI holds whenever $p,q,r\ge 1$
+\vskip 3mm
+- Extends many results to von Neumann algebras
+
+\end{frame}
+
+
+\begin{frame}{Quantum sufficient statistics?}
 
 \begin{itemize}
-\item  variational formula for $D_{\alpha,z}$
-\item known results in the sandwiched case
-\item properties of conditional expectations
+
+\item Quantum statistics - quantum channels
+\vskip 3mm
+\item When is a channel $\Phi$ \structure{sufficient} w. r. to a set of states
+$\mathcal S$?
+\vskip 3mm
+\item \structure{Conditional expectations} do not exist in most situations
+
 
 \end{itemize}
-
-
-\end{frame}
-
-\begin{frame}{von Neumann algebra extensions}
-
-The R\'enyi divergences were defined for normal positive functionals $\psi,\varphi$ on a
-von Neumann algebra, using some technical tools:
-
-\medskip
-
-\begin{itemize}
-\item \structure{Araki relative entropy}\footnote{Araki, 1976}:  relative modular operator
-$\Delta_{\psi,\varphi}$
-\item Petz-type (\structure{Petz quasi divergence})\footnote{Petz, 1985}:
-$\Delta_{\psi,\varphi}$
-\item sandwiched R\'enyi divergence:\footnote{Berta, Scholz and Tomamichel,
-2018; AJ, 2018; 2021}
- Araki-Masuda or Kosaki $L^p$-spaces
-\item general $\alpha$-$z$ R\'enyi divergences:\footnote{Kato and Ueda, 2023; Kato, 2024}
-Haagerup $L^p$-spaces
-
- \end{itemize}
-
-
-\end{frame}
-
-\begin{frame}{von Neumann algebras and Haagerup $L^p$-spaces}
-
-
-Let $\Me$ be a  von Neumann algebra $\Me$, with predual $\Me_*$.
 
 \bigskip 
 
-\begin{itemize}
-
-
-\item Haagerup $L^p$-space $L^p(\Me)$, $0<p\le \infty$
-
-\medskip
-
-\item $\Me=L^\infty(\Me)$, $\Me_*\simeq L^1(\Me)$, $\varphi\mapsto h_\varphi$,
-$\Tr(h_\varphi)=\varphi(1)$
-
-\medskip
-
-\item order isomorphism: $\Me_*^+\ni \varphi\mapsto h_\varphi \in L^1(\Me)^+$
-
-
-\medskip
-
-\item polar decomposition: for $0<p<\infty$,  $k\in L^p(\Me)$, $k=u|k|$:
-\[
-u\in \Me \text{ partial isometry},\  |k|=h_\varphi^{1/p}\in L^p(\Me)^+,\ \varphi\in
-\Me_*^+
-\]
-
-\end{itemize}
-\end{frame}
-
-\begin{frame}{von Neumann algebras and Haagerup $L^p$-spaces}
-
-
-For $0<p<\infty$, $k\in L^p(\Me)$,  put $\|k\|_p=(\Tr|k|^p)^{1/p}$.
-
-\bigskip
-
-\begin{itemize}
-
-
-\item For $1<p<\infty$,  $\|k\|_p$ is a norm in $L^p(\Me)$, which  is a reflexive Banach space, 
-with dual $L^p(\Me)^*\simeq L^q(\Me)$,
-$1/p+1/q=1$ 
-
-\medskip
-
-\item $\|k\|_p$ is a quasi norm for $0<p<1$
+\structure{Sufficient quantum channels}: {\small (Petz, 1986)}
 
 \medskip 
-\item H\"older inequality: for $1/p+1/q=1/r$, $0<p,q,r\le \infty$, $h\in L^p(\Me)$, $k\in
-L^q(\Me)$:
+A channel $\Phi$ is sufficent with respect to $\mathcal S$ if there is another channel
+$\Psi$ such that 
 \[
-hk\in L^r(\Me) \ \text{ and }\ \|hk\|_r\le \|h\|_p\|k\|_q
+\Psi\circ\Phi(\rho)=\rho,\qquad \rho\in \Se.
 \]
 
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}{$D_{\alpha,z}$ for von Neumann algebras}
-
-Let $0<\alpha\ne1$, $0<z$. 
-For $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$,  we define\myfootnote{Kato and Ueda, 2023; Kato 2024}
-\[
-D_{\alpha,z}(\psi\|\varphi)=\frac{1}{\alpha-1}\log
-\frac{Q_{\alpha,z}(\psi\|\varphi)}{\psi(1)}
-\]
-where
-\[
-Q_{\alpha,z}(\psi\|\varphi):=\begin{dcases} \Tr
-\left(h_\varphi^{\frac{1-\alpha}{2z}}h_\psi^{\frac{\alpha}{z}}h_\varphi^{\frac{1-\alpha}{2z}}\right)^z, &
-\text{if } 0<\alpha<1,\\[0.5em]
-\|x\|_z^z, & \text{if } \alpha>1 \text{ and }
-h_\psi^{\frac{\alpha}{z}}=h_\varphi^{\frac{\alpha-1}{2z}}xh_\varphi^{\frac{\alpha-1}{2z}}
-\\[-0.1em] & \text{with } x\in s(\varphi)L^z(\Me)s(\varphi),\\[1em]
-\infty,& \text{otherwise}.
-\end{dcases}
-\]
-
-
-\end{frame}
-
-\begin{frame}{Positive maps and the Petz dual}
-
-
-Let $\Me,\Ne$ be von Neumann algebras, $\gamma:\Ne \to \Me$ positive unital normal map.
-
-\medskip
-\begin{itemize}
-\item The \structure{predual map}: $\gamma_*: L^1(\Me)\to L^1(\Ne)$,
-\[
- \gamma_*(h_\omega):=h_{\omega\circ\gamma},\quad \text{positive, trace
-preserving}
-\]
-\item Let $\rho\in \Me_*^+$, $e:=s(\rho)$, $e_0:= s(\rho\circ \gamma)$.
-The \structure{Petz dual} $\gamma^*_\rho:e\Me e\to e_0\Ne e_0$ is determined by
-%\[
-%h_{\rho\circ\gamma}^{1/2}\gamma_\rho^*(a)h_{\rho\circ\gamma}^{1/2}
-%=\gamma_*\bigl(h_\rho^{1/2}ah_\rho^{1/2}\bigr),
-%\qquad a\in e\Me e,
-%\]
-%equivalently,
-\[
-(\gamma^*_\rho)_*\bigl(h_{\rho\circ\gamma}^{1/2}bh_{\rho\circ\gamma}^{1/2}\bigr)
-=h_\rho^{1/2}\gamma(b)h_\rho^{1/2},\qquad b\in\Ne^+.
-\]
- - positive, unital and normal,
-
- - $n$-positive whenever $\gamma$ is.
-
-
-\end{itemize}
-
-
-\end{frame}
-
-\begin{frame}{DPI in von Neumann algebra setting}
-
-For any $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$, and a positive unital normal map
-$\gamma:\Ne\to \Me$:
-\[
-D_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)\le D_{\alpha,z}(\psi\|\varphi).
-\]
-
-This was already proved for:
-
-\medskip
-
-\begin{itemize}
-\item Petz type: $\alpha\in (0,1)\cup(1,2]$, $\gamma$ a Schwarz map\footnote{Petz, 1985},
-\item sandwiched: $\alpha\in [1/2,1)\cup (1,\infty]$, $\gamma$ completely
-positive\footnote{Berta, Scholz and Tomamichel, 2018}, $\gamma$ positive\footnote{AJ,
-2018, 2021}
-\item $D_{\alpha,z}$ with $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$, $\gamma$
-positive\footnote{Kato, 2024}
-\end{itemize}
-
-
-
-\end{frame}
-
-\begin{frame}{DPI for sandwiched R\'enyi divergences, $\alpha>1$}
-
-Let $\tilde D_\alpha(\psi\|\varphi)=D_{\alpha,\alpha}(\psi\|\varphi)<\infty$. Then
-$h_\psi=h_\varphi^{\frac{\alpha-1}{2\alpha}}xh_\varphi^{\frac{\alpha-1}{2\alpha}}$ for
-some $x\in
-L^\alpha(\Me)^+$ and 
-\[
-\tilde
-Q_\alpha(\psi\|\varphi)=Q_{\alpha,\alpha}(\psi\|\varphi)={\|x\|_\alpha^\alpha}
-=\structure{\|h_\psi\|_{\alpha,\varphi}^\alpha}
-\]
-\structure{Kosaki $L^p$-norm}: complex interpolation between 
-\[
-\|h\|_1 \text{ and }
-\|h_\varphi^{\frac12}ah_\varphi^{\frac12}\|_{\infty,\varphi}=\|a\|.
-\]
-
-Since $\|\gamma_*(h)\|_1\le \|h\|_1$ and
-$\|\gamma_*(h_\varphi^{\frac12}ah_\varphi^{\frac12})\|_{\infty,\varphi\circ\gamma}=\|\gamma^*_\varphi(a)\|\le
-\|a\|$,
-\medskip
-\[
-\tilde
-Q_\alpha(\psi\circ\gamma\|\varphi\circ\gamma)=\|\gamma_*(h_\psi)\|_{\alpha,\varphi\circ\gamma}^\alpha\le 
-\|h_\psi\|_{\alpha,\varphi}=\tilde Q_\alpha(\psi\|\varphi),\quad \alpha>1
-\]
-by interpolation.\myfootnote{Beigi, 2013; AJ, 2018}
-\end{frame}
-
-
-
-\begin{frame}{Variational expressions}
-
-Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$.\myfootnote{Finite dimensions: Zhang, 2020}
-\begin{enumerate}
-\item[(i)] Let $0<\alpha<1$. Then
-\begin{multline*}
-Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me^{++}}\left\{\alpha
-\Tr\left(\left(h_\psi^{\frac{\alpha}{2z}}ah_\psi^{\frac{\alpha}{2z}}\right)^{\frac{z}{\alpha}}\right)\right. \\
-\left.+(1-\alpha)
-\Tr\left(\left(h_\varphi^{\frac{1-\alpha}{2z}}a^{-1}h_\varphi^{\frac{1-\alpha}{2z}}\right)^{\frac{z}{1-\alpha}}\right) \right\}.
-\end{multline*}
-
-\item[(ii)] Let $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z$. Then
-\begin{multline*}
-Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me^+} \left\{\alpha
-\Tr\left(\left(h_\psi^{\frac{\alpha}{2z}}ah_\psi^{\frac{\alpha}{2z}}\right)^{\frac{z}{\alpha}}\right)\right.
-\\ \left. -(\alpha-1)
-\Tr\left(\left(h_\varphi^{\frac{\alpha-1}{2z}}ah_\varphi^{\frac{\alpha-1}{2z}}\right)^{\frac{z}{\alpha-1}}\right) \right\}.
-\end{multline*}
-\end{enumerate}
-
-
-\end{frame}
-
-\begin{frame}{A useful inequality}
-
- $\gamma:\Ne\to \Me$  a normal positive unital map,  $\rho\in \Me_*^+$,  $b\in \Ne^+$. 
-
-\bigskip
-\begin{enumerate}
-\item[(1)] If $p\in [1,\infty]$, then 
-\[
-\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|_p\ge
-\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|_p.
-\]
-\end{enumerate}
-
-\begin{proof} Let $\omega\in \Ne_*^+$,
-$h_\omega=h_{\rho\circ\gamma}^{\frac12}bh_{\rho\circ\gamma}^{\frac12}$.
-\begin{align*}
-\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|^p_p&=Q_{p,p}(\omega\circ
-\gamma^*_\rho\|\rho)=Q_{p,p}(\omega\circ
-\gamma^*_\rho\|\rho\circ\gamma\circ\gamma_\rho^*)\\
-&\le 
-Q_{p,p}(\omega\|\rho\circ\gamma)=\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|^p_p
-\end{align*}
-
-
-
-\end{proof}
-
-\end{frame}
-
-\begin{frame}{DPI in the von Neumann algebra setting}
-
-Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$.  We have
-
-\medskip 
-
-\[
-Q_{\alpha,z}(\psi\|\varphi)=\inf_{a\in \Me^{++}}\left\{\alpha
-\Big\|h_\psi^{\frac{1}{2p}}ah_\psi^{\frac{1}{2p}}\Big\|_p^{p}
-+(1-\alpha) \Big\|h_\varphi^{\frac{1}{2r}}a^{-1}h_\varphi^{\frac{1}{2r}}\Big\|_r^{r}
-\right\},
-\]
-with $p:=\frac{z}{\alpha}$, $r:=\frac{z}{1-\alpha}$. In the above bounds, $p,r\ge 1$.
-
-\bigskip
-
-By the inequality \structure{(1)} and the Choi inequality:
-\[
-\gamma(b)^{-1}\le \gamma(b^{-1}),
-\]
-we get
-\[
-Q_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)\ge Q_{\alpha,z}(\psi\|\varphi).
-\]
-
-
-\end{frame}
-
-
-\begin{frame}{A useful inequality}
-
- $\gamma:\Ne\to \Me$  a normal positive unital map,  $\rho\in \Me_*^+$,  $b\in \Ne^+$. 
-
-\bigskip
-\begin{enumerate}
-\item[(2)] If $p\in [1/2,1)$, then 
-\[
-\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|^p_p\le
-\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|^p_p.
-\]
-\end{enumerate}
-
-\begin{proof} Let $\omega\in \Ne_*^+$,
-$h_\omega=h_{\rho\circ\gamma}^{\frac12}bh_{\rho\circ\gamma}^{\frac12}$.
-\begin{align*}
-\Big\|h_{\rho}^{\frac{1}{2p}}\gamma(b)h_{\rho}^{\frac{1}{2p}}\Big\|^p_p&=Q_{p,p}(\omega\circ
-\gamma^*_\rho\|\rho)=Q_{p,p}(\omega\circ
-\gamma^*_\rho\|\rho\circ\gamma\circ\gamma_\rho^*)\\
-&\ge\footnotemark 
-Q_{p,p}(\omega\|\rho\circ\gamma)=\Big\|h_{\rho\circ\gamma}^{\frac{1}{2p}}bh_{\rho\circ\gamma}^{\frac{1}{2p}}\Big\|^p_p
-\end{align*}\footnotetext{Sandwiched case: AJ, 2021}
-
-
-
-\end{proof}
-
-
-
-
-\end{frame}
-
-\begin{frame}{DPI in the von Neumann algebra setting}
-
-
-
-Let $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le \alpha$.  We have
-
-\medskip 
-
-\[
-Q_{\alpha,z}(\psi\|\varphi)=\sup_{a\in \Me^{+}}\left\{\alpha
-\Big\|h_\psi^{\frac{1}{2p}}ah_\psi^{\frac{1}{2p}}\Big\|_p^{p}
--(\alpha-1) \Big\|h_\varphi^{\frac{1}{2q}}ah_\varphi^{\frac{1}{2q}}\Big\|_q^{q}
-\right\},
-\]
-with $p:=\frac{z}{\alpha}$, $q:=\frac{z}{\alpha-1}$. In the above bounds, $p\in [1/2,1)$,
-$q\ge 1$.
-
-\bigskip
-
-By the inequalities \structure{(1)} and  \structure{(2)}
-we get
-\[
-Q_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)\le Q_{\alpha,z}(\psi\|\varphi).
-\]
-
-\end{frame}
-
-
-\begin{frame}{DPI in the von Neumann algebra setting}
-
-\begin{mybox}[title=Theorem]
-Let $\psi,\varphi\in \Me_*^+$, $\psi\ne 0$ and let $\gamma:\Ne\to \Me$ be a normal positive
-unital map. 
-
-\bigskip 
-
-Assume either of the following conditions:
-\medskip
-
-\begin{enumerate}
-\item[(i)] $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$,
-\item[(ii)] $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le \alpha$.
-\end{enumerate}
-
-\bigskip
-
-Then we have
-\[
-D_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)\le D_{\alpha,z}(\psi\|\varphi).
-\]
-\end{mybox}
-
-\end{frame}
-
-
-
-
-\begin{frame}{Sufficient channels and equality in DPI}
-
-A \structure{channel} is a 2-positive unital normal map $\gamma:\Ne\to \Me$.
-
-\bigskip
-
-Let $\psi,\varphi\in \Me_*^+$. We say that $\gamma$ is \structure{sufficient} with respect to
-$\{\psi,\varphi\}$ if there exists a \structure{recovery channel} $\beta:\Me\to \Ne$ such that\myfootnote{Petz, 1986, 1988}
-\[
-\psi\circ \gamma\circ \beta=\psi,\qquad \varphi\circ \gamma\circ \beta=\varphi.
-\]
-
-\bigskip
-
-\structure{Petz theorem}: Assume that $D_1(\psi\|\varphi)<\infty$. Then $\gamma$ is
-sufficient with respect to $\{\psi,\varphi\}$ if and only if
-\[
-D_1(\psi\circ\gamma\|\varphi\circ\gamma)=D_1(\psi\|\varphi).
-\]
-A similar result holds for the transition probability ($D_{\frac12,1}$).
-
-
-
-
-
-
-\end{frame}
-
-
-
-\begin{frame}{Known results on equality in DPI}
-
-Characterization of sufficient channels:
-
-\bigskip
-
-\begin{itemize}
-\item Petz-type: $D_{\alpha,1}$, $\alpha\in (0,1)\cup (1,2)$\footnote{AJ and Petz, 2006;
-Hiai et al, 2011; 
-Hiai and Mosonyi 2017; Hiai, 2018}
-
-
-\medskip
-
-\item sandwiched: $D_{\alpha,\alpha}$, $\alpha\in (1/2,1)\cup\structure{(1,\infty)}$\footnote{AJ,
-2018, 2021}
-
-\end{itemize}
-
-\bigskip
-
-Other equality conditions for $D_{\alpha,z}$ were found in finite dimensions\footnote{Leditzky, Rouz\'e and
-Datta, 2017; Zhang 2020}
-\medskip
-
-- no clear relation to sufficiency of channels (apart from some special
-cases)\footnote{Hiai and Mosonyi, 2017}
-
-
-\end{frame}
-
-
-
-\begin{frame}{Universal recovery channel}
-
-
-The Petz dual $\gamma_\varphi^*$ is a \structure{universal recovery
-channel}:\myfootnote{Petz, 1986, 1988}
-\medskip
-
-\begin{itemize}
-\item $\varphi\circ \gamma\circ\gamma_\varphi^*=\varphi$
-
-\medskip
-
-\item Let $\psi\in \Me_*^+$ be such that  $s(\psi)\le s(\varphi)$. Then  $\gamma$ is
-sufficient with respect to $\{\psi,\varphi\}$ if and only if 
-\[
-\psi\circ \gamma\circ \gamma_\varphi^*=\psi.
-\]
-
-\item Equivalently, 
-$\psi\circ \Ee=\psi$ 
-for the \structure{conditional expectation} $\Ee:\Me\to \Me$ onto the fixed points of $\gamma\circ
-\gamma_\varphi^*$.
-\end{itemize}
-
-
-
-
-
-\end{frame}
-
-
-
-
-\begin{frame}{Sufficient channels and equality in DPI for $D_{\alpha,z}$}
-\begin{mybox}[title=Theorem]
-Let $0<\alpha<1$, $\max\{\alpha,1-\alpha\}\le z$.
-
-\bigskip
-
- Let $\psi,\varphi\in \Me_*^+$ and let $\gamma:\Ne\to\Me$ be a channel. Assume that
- \[
-\alpha<z\text{ and } s(\varphi)\le s(\psi)\quad\text{ or }\quad 1-\alpha<z\text{ and }
-s(\psi)\le s(\varphi).
- \]
-Then $\gamma$ is sufficient with respect to $\{\psi,\varphi\}$ if and only if 
-\[
-D_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)=D_{\alpha,z}(\psi\|\varphi).
-\]
-
-\end{mybox}
-
-\end{frame}
-
-\begin{frame}{Sufficient channels and equality in DPI for $D_{\alpha,z}$}
-
-\begin{mybox}[title=Theorem]
-
-Let $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le \alpha\structure{<z+1}$.
-
-\bigskip
-
-Let $\psi,\varphi\in \Me_*^+$ be such that $D_{\alpha,z}(\psi\|\varphi)<\infty$. A channel
-$\gamma: \Ne\to \Me$ is sufficient with respect to $\{\psi,\varphi\}$ if and only if
-\[
-D_{\alpha,z}(\psi\circ\gamma\|\varphi\circ\gamma)=D_{\alpha,z}(\psi\|\varphi).
-\]
-\end{mybox}
-
-\end{frame}
-
-
-\begin{frame}{A sketch of proof for $\alpha>1$}
-
-Put $\psi_0:=\psi\circ\gamma$, $\varphi_0:=\varphi\circ\gamma$, $p=\frac{z}{\alpha}$,
-$q=\frac{z}{\alpha-1}>1$.
-\medskip
-
-\begin{itemize}
-\item By the assumptions, $D_{\alpha,z}(\psi_0\|\varphi_0)\le
-D_{\alpha,z}(\psi\|\varphi)<\infty$.
-\item In this case, for some $x\in L^{z}(\Me)^+$, $x_0\in L^{z}(\Ne)^+$: 
-\[
-h_\psi^{\frac1{p}}=h_\varphi^{\frac1{2q}}xh_\varphi^{\frac1{2q}},\qquad
-h_{\psi_0}^{\frac1{p}}=h_{\varphi_0}^{\frac1{2q}}x_0h_{\varphi_0}^{\frac1{2q}}
-\]
-\item Variational expression:
-\[
-Q_{\alpha,z}(\psi\|\varphi)=\sup_{w\in
-L^q(\Me)^+}\bigl\{\alpha\Tr\bigl((x^{\frac12}wx^{\frac12})^p\bigr)-(\alpha-1)\Tr\bigl(w^q\bigr)\bigr\},
-\]
- \structure{uniquely} attained at $\bar w:=x^{\alpha-1}\in L^q(\Me)^+$.
-\medskip 
-
-\item Similarly for $\psi_0$, $\varphi_0$, $\bar w_0:=x_0^{\alpha-1}\in
-L^q(\Ne)^+$.
-\end{itemize}
-
-
-\end{frame}
-
-
-\begin{frame}{A sketch of proof for $\alpha>1$}
-
-
-\begin{itemize}
-\item Let $\omega\in \Me_*^+$, $\omega_0\in \Ne_*^+$ be such that
-\[
-h_\omega=h_\varphi^{\frac{q-1}{2q}}\bar wh_\varphi^{\frac{q-1}{2q}},\qquad
-h_{\omega_0}=h_{\varphi_0}^{\frac{q-1}{2q}}\bar w_0h_{\varphi_0}^{\frac{q-1}{2q}}.
-\]
-
-\item Then
-\[
-D_{q,q}(\omega_0\|\varphi_0)=D_{\alpha,z}(\psi_0\|\varphi_0)=D_{\alpha,z}(\psi\|\varphi)=D_{q,q}(\omega\|\varphi).
-\]
-\item By the variational formula and uniqueness, we get $\omega_0=\omega\circ\gamma$.
-\item By known properties of $D_{q,q}$, $q>1$, $\gamma$ is sufficient with respect to
-$\{\omega,\varphi\}$, so that 
-\[
-\omega\circ\Ee=\omega
-\]
-for the conditional expectation $\Ee$ onto the fixed points of
-$\gamma\circ\gamma^*_\varphi$.
-\end{itemize}
-
-
-\end{frame}
-
-
-\begin{frame}{A sketch of proof for $\alpha>1$}
-
-
-\begin{itemize}
-
-\item  $\Ee$ extends to $L^p(\Me)$: projection onto $L^p(\Ee(\Me))\subseteq L^p(\Me)$\footnote{Junge and Xu,
-2003} 
-
-\item bimodule property: for $\frac1p+\frac1q+\frac1r\le 1$
-\[
-\Ee(xyz)=x\Ee(y)z,\quad x\in L^p(\Ee(\Me)),\ y\in L^q(\Me),\ z\in L^r(\Ee(\Me))
-\]
-
-\item since both $\varphi\circ\Ee=\varphi$, $\omega\circ\Ee=\omega$, we get
-$\psi\circ\Ee=\psi$.
-
-\end{itemize}
-
-\bigskip
-
-Finite dimensional case: $\Me=B(\mathcal H)$
-\begin{align*}
-\Ee(B(\mathcal H))&=\oplus_n B(\mathcal H^L_n)\otimes I_{\mathcal H^R_n}\\
-\Ee_*(B(\mathcal H))&=\left\{\oplus_n\rho_n\otimes \sigma_n,\ \rho_n\in B(\mathcal
-H^L_n)\right\}
-\end{align*}
-for some fixed states $\sigma_n\in B(\mathcal H_n^R)$. We have
-\[
-h_\psi=h_\varphi^{\frac1{2q}}\left(h_\varphi^{\frac{1-q}{2q}}h_\omega
-h_\varphi^{\frac{1-q}{2q}}\right)^{\frac1{\alpha-1}}h_\varphi^{\frac1{2q}}.
-\]
-
-
-\end{frame}
-
-
-\begin{frame}{Further results on $D_{\alpha,z}$}
-
-\begin{itemize}
-\item Monotonicity in $z$: $z\mapsto D_{\alpha,z}(\psi\|\varphi)$ is
-\medskip
-
-- increasing on $(0,\infty)$ for $0<\alpha<1$,
-
-%\vskip 2mm
-- decreasing on $[\alpha/2,\infty)$ for $\alpha>1$.
-\medskip
-
-\item Monotonicity in $\alpha$: $\alpha\mapsto D_{\alpha,z}(\psi\|\varphi)$ is
-\medskip
-
-- increasing on $(0,1)$ for all $z>0$,
-
-- increasing on $(1,2z]$ for $z>1/2$.
-
-\medskip
-\item The limits $\alpha\to1$: 
-\medskip
-
-- $\lim_{\alpha\nearrow 1} D_{\alpha,z}(\psi\|\varphi)= D_1(\psi\|\varphi)$ for $z>0$,
-
-\medskip
-- $\lim_{\alpha\searrow 1} D_{\alpha,z}(\psi\|\varphi)= D_1(\psi\|\varphi)$ for $z>1/2$ if
+- $\Phi$ is \structure{reversible} on $\Se$, $\Psi$ - \structure{recovery map}
 \vskip 2mm
-$D_{\alpha,z}(\psi\|\varphi)<\infty$ for some $\alpha\in (1,2z]$.
+- sufficient statistics in classical case
 
+\end{frame}
 
+\begin{frame}{Sufficient quantum channels}
+
+Characterizations of sufficient quantum channels: {\small (Petz, 1986, 1988)}
+
+\bigskip
+\begin{itemize}
+\item \structure{Petz theorem}: if $\supp \rho\le \supp \sigma$ for all $\rho\in \Se$
+\[
+S(\Phi(\rho)\|\Phi(\sigma))=S(\rho\|\sigma),\qquad \rho\in \Se
+\]
+\item There is a \structure{universal recovery map}:  $\Phi_\sigma$ (Petz recovery map)
+\[
+\Phi_\sigma\circ \Phi(\rho)=\rho,\qquad \rho\in  \Se
+\]
+\item structure of the states $\rho\in \Se$, strong conditions.
+\vskip 3mm
+
+\item For classical statistics: $E_q[\cdot|T]=E_p[\cdot|T]$ is the Petz recovery.
 
 
 \end{itemize}
 
 
-\end{frame}
-
-
-\begin{frame}{}
-
-
-
-
-\structure{Thank you for your attention.}
-
-
-
-
 
 \end{frame}
 
+\begin{frame}{Quantum R\'enyi divergences and sufficient channels}
+
+Assume that $\alpha,z$ satisfy some of the following
+\begin{itemize}
+\item $\alpha\in (0,1)$, $\max\{\alpha,1-\alpha\}\le z$, $\alpha<z$ or $1-\alpha<z$
+
+\item $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le \alpha<z+1$
+
+\end{itemize}
+
+\vskip 4cm
+Then $\Phi$ is sufficient w.r. to $\{\rho,\sigma\}$ if and only if  {\small (Hiai \&
+AJ,2024)}
+\[
+D_{\alpha,z}(\Phi(\rho)\|\Phi(\sigma))=D_{\alpha,z}(\rho\|\sigma).
+\]
+
+
+- holds in general von Neumann algebras
+
+\end{frame}
+
+\begin{frame}{Classical to quantum and in between}
+\begin{center}
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+\structure{Classical} & \structure{Classical/quantum} & \structure{Quantum} \\
+\hline
+discrete probability measures $p$, $q$ & commuting  density matrices $\rho$, $\sigma$& density
+matrices $\rho$, $\sigma$ in $M_n(\mathbb C)$\\
+\hline
+$(X,\Omega,\mu)$ measure space,
+probabilities 
+$P,Q\ll \mu$ 
+& $L_\infty(X,\Omega,\mu)$, densities $p,q\in L_1(X,\Omega,\mu)$ & normal states $\rho$,
+$\sigma$ in a von Neumann algebra,
+\\ \hline
+$T:X\to Y$ statistic,
+Markov kernel  $X\times Y\to [0,1]$& Positive trace preserving map & Quantum channel $M_n(\mathbb C)\to M_m(\mathbb
+C)$\\ \hline
+Transformation of probability measures & A Markov map $L_\infty(X,\Omega,\mu)\to
+L_\infty(Y,\Sigma,\nu)$ & Unital normal cp map $\Me\to \Ne$\\ \hline 
+Conditional expectation 
+$E_p[\cdot|T]$ & unital projection with norm 1 preserving $p$ & Petz recovery map
+$\Phi_\sigma$\\\hline
+
+\end{tabular}
+\end{center}
+
+
+
+
+
+\end{frame}
 
 
 \end{document}
-
 
