@@ -515,7 +515,7 @@ $\mathcal S$?
 \structure{Sufficient quantum channels}: {\small (Petz, 1986)}
 
 \medskip 
-A channel $\Phi$ is sufficient with respect to $\mathcal S$ if there is another channel
+A channel $\Phi$ is sufficent with respect to $\mathcal S$ if there is another channel
 $\Psi$ such that 
 \[
 \Psi\circ\Phi(\rho)=\rho,\qquad \rho\in \Se.
@@ -595,7 +595,7 @@ Markov kernel  $X\times Y\to [0,1]$}& {\small  Positive trace preserving map} & 
 C)$}\\ \hline
 {\small Transformation of probability measures} & {\small A Markov map $L_\infty(X,\Omega,\mu)\to
 L_\infty(Y,\Sigma,\nu)$} & {\small Unital normal cp map $\Me\to \Ne$}\\ \hline 
-C{\small conditional expectation 
+C{\small onditional expectation 
 $E_p[\cdot|T]$ }&{\small unital projection with norm 1 preserving $p$} & {\small Petz recovery map
 $\Phi_\sigma$}\\\hline
 
