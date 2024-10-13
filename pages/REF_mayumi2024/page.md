@@ -17,5 +17,10 @@ title: Kimura et al, UCR, 2024
 [report in system](REF_mayumi2024/report_pra.pdf)
 
 
+**Revision due:** 28.10.2024
+
+[revised](REF_mayumi2024/revised.pdf)
+
+
 
 

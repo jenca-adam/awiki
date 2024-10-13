@@ -55,8 +55,8 @@
 %\newcommand{\vun}{\rotatebox[origin=c]{90}{$\subseteq$}}
 
 
-%\titlegraphic{\includegraphics[width=1.5cm]{logomu.pdf}\hspace*{4.75cm}~%
-%   \includegraphics[width=1.5cm]{logosav}}
+\titlegraphic{\includegraphics[width=1.5cm]{logomu.pdf}\hspace*{4.75cm}~%
+   \includegraphics[width=1.5cm]{logosav}}
 
 
 \title{R\'enyi divergences in quantum information theory}
@@ -100,14 +100,45 @@ D(p\|q)\ge 0,\qquad D(p\|q)=0 \iff p=q.
 \end{frame}
 
 
+\begin{frame}{Axiomatic approach {\small (A. R\'enyi, 1961)}
+}
+
+
+Let $p=(p_1,\dots, p_m)$, $q=(q_1,\dots,q_m)$, $p_i\ge 0$, $q_i>0$
+
+\vskip 3mm
+
+A divergence $D$ should satisfy the \structure{postulates}:
+\vskip 3mm
+\begin{itemize}
+\item \structure{invariance} under permutations: $D(\pi(p)\|\pi(q))=D(p\|q)$
+\item \structure{continuity}
+\item \structure{additivity}: $D(p_1\otimes p_1\|q_1\otimes q_2)=D(p_1\|q_1)+D(p_2\|q_2)$
+\item \structure{generalized mean}: for a continuous, strictly
+increasing real function $g$ %:\mathbb R\to \mathbb R$
+\[
+D(p_1\oplus p_2\|q_1\oplus
+q_2)=g^{-1}\left(\frac{g(D(p_1\|q_1)+g(D(p_2\|q_2))}{2}\right)
+\]
+\item \structure{order}: if $p$ is not normalized
+\[
+p_i\le q_i, \ \forall i \implies D(p\|q)\ge 0,\qquad p_i\ge q_i,\ \forall i\implies
+D(p\|q)\le 0
+\]
+\item \structure{normalization}: $D(\{1\}\|\{1/2\})=1$
+\end{itemize}
+
+
+
+
+
+\end{frame}
+
 \begin{frame}{R\'enyi divergences}
 
-Axiomatic approach: {\small (A. R\'enyi, 1961)}
-
-\medskip
-
 There is a \structure{unique} family of divergences $\{D_\alpha\}_{\alpha>0}$,
-satisfying certain \structure{postulates}
+satisfying the \structure{R\'enyi postulates}:
+
 \begin{align*}
 D_\alpha(p\|q)&=\frac1{\alpha-1}\log\left(\sum_k p_k^\alpha q_k^{1-\alpha}\right), \qquad 1\ne
 \alpha>0\\
@@ -121,9 +152,68 @@ D_1(p\|q)&=\lim_{\alpha\to 1} D_\alpha(p\|q)=\sum_k p_k\log\left(\frac{p_k}{q_k}
 
 \item Fundamental quantities in information theory
 
-\item For $\alpha=1$ - \structure{Kullback-Leibler divergence} (relative entropy,
+\item For $\alpha=1$, we get the  \structure{Kullback-Leibler divergence} (relative entropy,
 $I$-divergence)
 
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}{Application: Asymptotic hypothesis testing}
+
+Testing simple hypothesis $H_0=p$ against simple alternative $H_1=q$:
+
+\bigskip
+
+\begin{itemize}
+\item A \structure{test statistic}: $T$
+\vskip 3mm
+\item Two kinds of \structure{error probabilities}:
+\[
+\alpha(T) \text{ - rejecting true} \qquad \beta(T)\text{ - accepting false}
+\]
+\item Cannot minimize both errors simultaneously
+\vskip 3mm
+\item i.i.d. repetitions: a sequence of tests $\{T_n\}$
+\vskip 3mm
+\item We can obtain $\alpha(T_n)\to 0$, $\beta(T_n)\to 0$ exponentially
+\vskip 3mm
+\item Rate of the convergence?
+\end{itemize}
+
+
+
+
+\end{frame}
+
+\begin{frame}[t]{Stein's lemma and error exponents}
+
+{\small
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{tabular}{p{5cm} p{5cm}}
+\structure{Direct domain} & \structure{Converse domain} \\
+%<F8>\ & \ \\
+$\exists$ $\{T_n\}$: $\beta(T_n)\approx e^{-Rn}$ & $\forall \{T_n\}$, $\beta(T_n)\approx e^{-Rn}$\\
+\hskip 2cm  and &\hskip 2cm  $\Downarrow$\\
+\hskip 1.3cm $\alpha(T_n)\to 0$ & \hskip 1.2cm $\alpha(T_n)\to 1$\\
+optimal exponent (largest): & optimal exponent (smallest):\\
+\hskip 1.3cm $\alpha(T_n)\approx e^{-R'n}$ & \hskip 1.2cm $\alpha(T_n)\approx
+1-e^{-R'n}$\\
+%\hline
+\end{tabular}
+\end{center}}
+\centerline{\small $D(p\|q)$}
+
+\bigskip
+\structure{Tradeoff} between $R$ and $R'$:
+
+\medskip
+\begin{itemize}
+\item Direct domain - $D_\alpha(p\| q)$, $\alpha\in (0,1)$
+\item Converse domain - $D_\alpha(p\|q)$, $\alpha>1$
 \end{itemize}
 
 \end{frame}
@@ -132,8 +222,8 @@ $I$-divergence)
 
 \structure{Data processing inequality:} For a transformation 
 \vskip 2mm
-$T:\{1,\dots,n\}\to
-\{1,\dots,m\}$, with $p^T$, $q^T$ induced distributions
+$T:\{1,\dots,m\}\to
+\{1,\dots,k\}$, with $p^T$, $q^T$ induced distributions
 \[
 D_\alpha(p^T\|q^T)\le D_\alpha(p\|q)
 \]
@@ -555,15 +645,19 @@ S(\Phi(\rho)\|\Phi(\sigma))=S(\rho\|\sigma),\qquad \rho\in \Se
 
 \begin{frame}{Quantum R\'enyi divergences and sufficient channels}
 
-Assume that $\alpha,z$ satisfy some of the following
-\begin{itemize}
-\item $\alpha\in (0,1)$, $\max\{\alpha,1-\alpha\}\le z$, $\alpha<z$ or $1-\alpha<z$
+Assume that $\alpha,z$ belong to the folllowing set: 
 
-\item $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le \alpha<z+1$
+\includegraphics[scale=0.9]{obr_anna.pdf}
 
-\end{itemize}
-
-\vskip 4cm
+%satisfy some of the following
+%\begin{itemize}
+%\item $\alpha\in (0,1)$, $\max\{\alpha,1-\alpha\}\le z$, $\alpha<z$ or $1-\alpha<z$
+%
+%\item $\alpha>1$, $\max\{\alpha/2,\alpha-1\}\le z\le \alpha<z+1$
+%
+%\end{itemize}
+%
+%\vskip 4cm
 Then $\Phi$ is sufficient w.r. to $\{\rho,\sigma\}$ if and only if  {\small (Hiai \&
 AJ,2024)}
 \[
@@ -593,9 +687,9 @@ $\sigma$ of a von Neumann algebra}
 {\small $T:X\to Y$ statistic,
 Markov kernel  $X\times Y\to [0,1]$}& {\small  Positive trace preserving map} & {\small Quantum channel $M_n(\mathbb C)\to M_m(\mathbb
 C)$}\\ \hline
-{\small Transformation of probability measures} & {\small A Markov map $L_\infty(X,\Omega,\mu)\to
+{\small transformation of probability measures} & {\small A Markov map $L_\infty(X,\Omega,\mu)\to
 L_\infty(Y,\Sigma,\nu)$} & {\small Unital normal cp map $\Me\to \Ne$}\\ \hline 
-C{\small conditional expectation 
+{\small conditional expectation 
 $E_p[\cdot|T]$ }&{\small unital projection with norm 1 preserving $p$} & {\small Petz recovery map
 $\Phi_\sigma$}\\\hline
 
