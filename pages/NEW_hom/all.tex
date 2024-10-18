@@ -2,7 +2,6 @@
 
 
 %\usepackage{showkeys}
-
 \usepackage{hyperref}
 \usepackage{amsmath, amssymb, amsthm, bm}
 \usepackage[sort&compress,numbers]{natbib}
@@ -16,7 +15,7 @@
 %\evensidemargin=0mm
 %
 
-\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{amsmath, amsthm, mathtools}
 
 \newtheorem{lemma}{Lemma}
 \newtheorem{theorem}{Theorem}
@@ -1604,78 +1603,60 @@ For any permutation $\pi\in \permut_k$, we define  $f_{\pi^{-1}(1)}\vtl \dots \v
 f_{\pi^{-1}(k)}\in \Fe_n$ in an obvious way.
 
 
-
-
-
-It is not clear that if $f_1$ and $f_2$ are type functions, then $f_1\vtl f_2$ or $f_2\vtl
-f_1$ are type functions as well. Nevertheless, we will see that this is true if one of
-the type functions is a chain type.
-For this, we first show that $\vtl$ can be used to append chains.
-
-
-
-\begin{prop}\label{prop:append_chains} Let  
-$\Pe_1=\{S_1\subsetneq \dots\subsetneq S_{N_1}\}$ be a chain in  $2^{n_1}$ and
-$\Pe_2=\{T_1\subsetneq \dots \subsetneq T_{N_2}\}$ a chain in $2^{n_2}$, and let
-  $\beta_1=f_{\Pe_1}$ and $\beta_2=f_{\Pe_2}$ be the corresponding functions. Then 
-$\beta_1\vtl \beta_2$ and $\beta_2\vtl \beta_1$ are functions corresponding to
-chains $\Pe_{12}$ and $\Pe_{21}$ of $N_1+N_2\pm 1$ elements in $2^{n_1+n_2}$, given as:
-\begin{enumerate}
-\item[(a)] If $T_1=\emptyset$, then 
-\begin{align*}
-\Pe_{12}=\{S_1\subsetneq\dots\subsetneq S_{N_1}\subsetneq [n_1]\oplus T_2\subsetneq \dots
-\subsetneq [n_1]\oplus T_{N_2}\}.
-\end{align*}
-Similarly, if $S_1=\emptyset$, then
+\begin{prop}\label{prop:vtl_ordinal} Let $f\in \Te_{n}$, $g\in \Te_{m}$ and
+consider the decomposition $[n+m]=[n]\oplus[m]$. Then  
 \[
-\Pe_{21}=\{n_1+T_1\subsetneq \dots \subsetneq n_1+T_{N_2}\subsetneq S_2\oplus
-[n_2]\subsetneq \dots \subsetneq  S_{N_1}\oplus[n_2]\}
+\Pe_{f\vtl g}=\begin{dcases}\bigl(\Pe_{f}\setminus \{[n]\}\bigr) \cup  \{[n]\} \cup \bigl([n]\oplus
+(\Pe_{g}\setminus \{\emptyset\})\bigr)& \text{if } ([n]\in \Pe_{f})\, \&\, (\emptyset\in
+\Pe_{g})\\  \ & \qquad \text{or } ([n]\notin \Pe_{f})\, \&\, (\emptyset\notin
+\Pe_{g})\\[5pt]
+\bigl(\Pe_{f}\setminus \{[n]\}\bigr) \cup \bigl([n]\oplus
+(\Pe_{g}\setminus \{\emptyset\})\bigr) & \text{otherwise}.
+\end{dcases}
 \]
-\item[(b)] If $T_1\ne\emptyset$ and $S_{N_1}= [n_1]$, then 
-\begin{align*}
-\Pe_{12}=\{S_1\subsetneq\dots\subsetneq S_{N_1-1}\subsetneq [n_1]\oplus T_1\subsetneq \dots
-\subsetneq T_{N_2}\}.
-\end{align*}
-Similarly, if $S_1\ne \emptyset$ and $T_{N_2}=[n_2]$, then
+Similarly,
 \[
-\Pe_{21}=\{n_1+T_1\subsetneq \dots \subsetneq n_1+T_{N_2-1}\subsetneq S_1\oplus
-[n_2]\subsetneq \dots \subsetneq  S_{N_1}\oplus[n_2]\}
+\Pe_{g\vtl f}=\begin{dcases}\bigl(\emptyset \oplus (\Pe_{g})\setminus
+\{[m]\})\bigr) \cup  \{\emptyset\oplus [m]\} \cup \bigl((\Pe_{f}\setminus
+\{\emptyset\})\oplus [m]\bigr)& \text{if } ([m]\in \Pe_{g})\, \&\, (\emptyset\in
+\Pe_{f})\\  \ & \quad \text{or } ([m]\notin \Pe_{g})\, \&\, (\emptyset\notin
+\Pe_{f})\\[5pt]
+\bigl(\emptyset\oplus (\Pe_{g}\setminus \{[m]\})\bigr) \cup \bigl((\Pe_{f}\setminus
+\{\emptyset\})\oplus[m]\bigr) & \text{otherwise}.
+\end{dcases}
 \]
-\item[(c)] If $T_1\ne\emptyset$ and $S_{N_1}\ne [n_1]$, then 
-\begin{align*}
-\Pe_{12}=\{S_1\subsetneq\dots\subsetneq S_{N_1}\subsetneq [n_1]\subsetneq [n_1]\oplus T_1\subsetneq \dots
-\subsetneq T_{N_2}\}.
-\end{align*}
-Similarly, if $S_1\ne \emptyset$ and $T_{N_2}\ne [n_2]$, then
-\[
-\Pe_{21}=\{n_1+T_1\subsetneq \dots \subsetneq n_1+T_{N_2}\subsetneq n_1+[n_2]\subsetneq S_1\oplus
-[n_2]\subsetneq \dots \subsetneq  S_{N_1}\oplus[n_2]\}
-\]
-
-\end{enumerate}
-
 
 \end{prop}
 
-\begin{proof} We have
-\[
-\beta_1=\sum_{j=1}^{N_1}(-1)^{j-1}p_{S_j},\qquad \beta_2=\sum_{k=1}^{N_2}(-1)^{k-1}p_{T_k},
-\]
-so that
-\[
-\beta_1\vtl\beta_2=\sum_{j=1}^{N_1-1}(-1)^{j-1}p_{S_j}+(p_{S_{N_1}}-p_{[n_1]}+p_{[n_1]\oplus
-T_1})+\sum_{k=2}^{N_2}(-1)^{k-1}p_{[n_1]\oplus T_k}.
-\]
-The resulting funnction depends on whether  $S_{N_1}=[n_1]$ and $T_1=\emptyset$. If at least one
-of the equalities is true, then the expression in brackets is equal to $p_{[n_1]}$,
-$p_{S_{N_1}}$ or $p_{[n_1]\oplus T_1}$,  and $\beta$ corresponds to
-a chain of $N_1+N_2-1$ elements. If both $S_{N_1}\ne [n_1]$ and $T_1\ne \emptyset$, then
-$S_{N_1}\subsetneq [n_1]\subsetneq [n_1]\oplus T_1$ and $\beta$ corresponds to a chain of
-$N_1+N_2+1$ elements. The proof for $\beta_2\vtl\beta_1$ is similar.
 
+\begin{proof} By definition of the causal product, we have  
+\[
+f\vtl g=\sum_{S\in \Pe_f\setminus\{[n]\}} \hat f_Sp_S+ (\hat f_{[n]}-1 + \hat
+g_\emptyset)p_{[n]}+\sum_{T\in \Pe_g\setminus \{\emptyset\}} \hat g_T p_{[n]\oplus T}
+\]
+and 
+\[
+g\vtl f=\sum_{T\in \Pe_g\setminus\{[m]\}} \hat g_Tp_{\emptyset\oplus T}+ (\hat g_{[m]}-1 + \hat
+f_\emptyset)p_{[m]}+\sum_{S\in \Pe_f\setminus \{\emptyset\}} \hat f_S p_{S\oplus [m]}.
+\]
+The terms in brackets can be equal to 1, -1, or 0, depending on whether $[n]\in \Pe_f$ and
+$\emptyset\in \Pe_g$, resp. $[m]\in \Pe_g$ and $\emptyset 
+\in \Pe_f$. The statement is now immediate.
 
 
 \end{proof}
+
+
+
+It is not clear that if $f$ and $g$ are type functions, then $f\vtl g$ or $g\vtl
+f$ are type functions as well. Nevertheless, it can be seen from the above proposition
+that if both $f$ and $g$ are chain types with chains of $N$ and $M$ elements,
+respectively, then $f\vtl g$ is a chain type for a chain with $M+N\pm 1$
+elements, similarly for $g\vtl f$. Note also that that this construction can be
+interpreted as appending the two chain in the respective order. 
+Our next result shows that if $f$ or $g$ is a chain type, we always obtain a type
+function.
+
 
 
 
@@ -1886,19 +1867,26 @@ Finally, putting $\rho=\rho_1\otimes\rho_2$ finishes the proof.
 It is clear that the chains in Theorem \ref{thm:structure} are not given uniquely, in
 particular, some chains can be decomposed as a  concatenation of chains.
 We will show that some choice of the chains $\beta_1,\dots,\beta_k$  can be found from the subposet
-$\Pe_f^0\subseteq \Pe_f$ of labelled elements in $\Pe_f$.
+ of labelled elements in $\Pe_f$.
 
 
 
 
 
-For  $f\in \Te_n$, let $\Pe_f^0=\Pe^0\subseteq \Pe$ be the subposet consisting
+So let  $f\in \Te_n$ and let $\Pe_f^0\subseteq \Pe_f$ be the subposet consisting
 of  all  labelled elements, that is
 \[
-\Pe^0=\{S\in \Pe, \ L_S\ne \emptyset \}.
+\Pe_f^0=\{S\in \Pe_f, \ L_{S,f}\ne \emptyset \}.
 \]
-
-
+We will regard $\Pe_f^0$ as an abstract poset whose elements are labelled, forgetting that it is actually a subposet in $2^n$.  
+In this sense, the elements of $\Pe_f^0$ will be denoted by $\mathsf{s}$, $\mathsf{t}$,
+etc, with labels $L_{\mathsf{s}}\subseteq \{0\}\cup [n]$. The subset in $\Pe_f$ corresponding to
+$\mathsf{s}\in \Pe_f^0$ will be denoted by the corresponding capital letter $S$ and is obtained as 
+\[
+S=\cup_{\mathsf{t}\le \mathsf{s}} L_{\mathsf{t}}.
+\]
+If $S=\emptyset$, the corresponding element will be denoted by $\mathsf{0}$ and in $[n]\in
+\Pe_f^0$, the corresponding element will be denoted by $\mathsf{n}$.
 
 
 ****
@@ -1911,11 +1899,11 @@ The following lemma collects some basic properties of $\Pe_f^0$.
 
 \begin{lemma}\label{lemma:p0_basic} Let $f\in \Te_n$.
 \begin{enumerate}
-\item[(i)] $\mathrm{Min}(\Pe_f^0)=\mathrm{Min}(\Pe_f)$.
-\item[(ii)] $\Pe_f^0$ is a chain $\iff$  $\Pe_f$ is a chain $\iff$  $\Pe_f^0=\Pe_f$.
+\item[(i)] $\mathsf{s}\in \mathrm{Min}(\Pe_f^0)$ $\iff$ $S\in \mathrm{Min}(\Pe_f)$.
+\item[(ii)] $\Pe_f^0$ is a chain $\iff$  $\Pe_f$ is a chain $\iff$  $\Pe_f^0\simeq \Pe_f$.
 
 \item[(iii)] $\Pe^0_f$ has a largest element if and only if $f$ or $f^*$ has a free
-output. In this case  it is the largest element in $\Pe_f$. 
+output. In this case  the corresponding set is the largest element in $\Pe_f$. 
 
 \end{enumerate}
 \end{lemma}
@@ -2160,8 +2148,8 @@ functions $h_1\in \Te_{m_1}$, $h_2\in \Te_{m_2}$  and permutations $\sigma_1,\si
 \begin{itemize}
 \item $\bar \Pe_{S,f}\cap \bar \Pe_{T,f}=\{U_1,\dots, U_K\}$,
 \item $\sigma^{-1}_1|_{U_K}=\sigma^{-1}_2|_{U_K}$,
-\item $\Pe_{\beta\vtl h_1}=\sigma^{-1}(\bar \Pe_{S,f})$, $\Pe_{\beta\vtl
-h_2}=\sigma^{-1}(\bar \Pe_{T,f})$, where $|S|-m_1=|T|-m_2=: k=|U_K|$ and
+\item $\Pe_{\beta\vtl h_1}=\sigma_1^{-1}(\bar \Pe_{S,f})$, $\Pe_{\beta\vtl
+h_2}=\sigma_2^{-1}(\bar \Pe_{T,f})$, where $|S|-m_1=|T|-m_2=: k=|U_K|$ and
 $\beta\in \Te_k$ is a chain type, with the corresponding chain $\sigma_1^{-1}(U_1)\subsetneq \dots
 \subsetneq \sigma_1^{-1}(U_K)$ if $K$ is odd and $\sigma_1^{-1}(U_1)\subsetneq \dots
 \subsetneq \sigma_1^{-1}(U_{K-1})$
@@ -2268,8 +2256,8 @@ $\sigma_2\in \permut_n$ such that $\sigma_2^{-1}(T_1\oplus S_2)=[k]$ and
  Since $1_k$ is a chain type
 for the chain $U_1=\emptyset$, the statement follows. 
 
-In the case 2, , we have $U_1\subseteq T_1,
-S_1$ and $U_2\subseteq S_2,T_2$, so that $U_2=S_2=T_2$. 
+In the case 2,  we have $U_1\subseteq T_1,
+S_1$ and $U_2\subseteq S_2,T_2$, so that  $U_2=S_2=T_2$. 
 It follows that $\bar \Pe_{S,f^*}=\bar \Pe_{S_1,f_1}\oplus U_2$ and $\bar \Pe_{T,f^*}=\bar
 \Pe_{T_1,f_1}\oplus U_2$, so that in this case,
 \[
@@ -2277,30 +2265,47 @@ It follows that $\bar \Pe_{S,f^*}=\bar \Pe_{S_1,f_1}\oplus U_2$ and $\bar \Pe_{T
 \Pe_{T_1,f_1}\right)\oplus U_2.
 \]
 Since $f_1$ satisfies the induction assumption, there is a chain $V_1\subsetneq \dots
-\subsetneq V_K$ such that 
+\subsetneq V_K$ such that
+\[
+\bar\Pe_{S_1,f_1}\cap \bar\Pe_{T_1,f_1}=\{V_1\subsetneq\dots\subsetneq V_L\}
+\]
+Moreover, there are functions $h_i\in \Te_{m_i}$, permutations $\tau_1,\tau_2\in
+\permut_{l_1}$ and  a chain type
+$\gamma \in \Te_{k'}$ with $k'=|V_K|=|S_1|-m_1=|T_1|-m_2$ such that
+\[
+\tau^{-1}_1(\bar \Pe_{S_1,f_1})=\Pe_{\gamma\vtl h_1},\qquad \tau_2^{-1}(\Pe_{\bar
+T_1,f_1})=\Pe_{\gamma\vtl h_2}.
+\]
+It follows that
 \[
 \bar\Pe_{S,f}\cap \bar\Pe_{T,f}=\{\emptyset\subsetneq V_1\oplus U_2\subsetneq \dots
 \subsetneq V_K\oplus U_2\}
 \]
-(note that we cannot have both $V_1$ and $U_2$ empty). Moreover, there is a chain type
-$\gamma \in \Te_{k'}$, $k'=|V_K|$ and functions $r_i\in \Te_{n_i'}$, $q_i\in \Te_{m_i'}$
-such that $n_1'-m_1'=n_2'-m_2'=k'$ such that
+(note that we cannot have both $V_1$ and $U_2$ empty). Moreover, let $l=|U_2|$, let
+$\rho\in \permut_{l_2}$ be such that $\rho^{-1}(U_2)=[l]$ and put
+$\sigma_1:=\tau_1\oplus\rho$. We then have 
 \[
-\bar \Pe_{S_1,f_1}=\Pe_{r_1},\quad \bar \Pe_{T_1,f_1}=\Pe_{r_2},\quad r_1=\gamma\vtl
-q_1,\quad r_2=\gamma \vtl q_2
+\sigma^{-1}(\bar \Pe_{S,f^*})=\Pe_{\gamma\vtl h_1}\oplus [l]=\Pe_{(\gamma\vtl
+h_1)\otimes p_l}=\Pe_{(p_l\vtl \gamma)\vtl h_1}
 \]
-With $l=|U_2|$, we have up to permutations that $g^*_1=p_l\otimes r_1=p_l\vtl \gamma \vtl
-q_1$ and $g_2^*=p_l\otimes r_2=p_l\vtl \gamma \vtl q_2$, so that 
+and as in the proof of Lemma \ref{lemma:p0_maximal}, we obtain
 \[
-g_1=1_l\vtl \gamma^*\vtl q^*_1,\qquad g_1=1_l\vtl \gamma^*\vtl q_2^*.
+\sigma_1^{-1}(\bar \Pe_{S,f})=\Pe_{((p_1\vtl \gamma)\vtl h_1)^*}=\Pe_{(1_l\vtl
+\gamma^*)\vtl h_1}.
 \]
-Assume that $K$ is odd, then the chain corresponding to $\gamma$ is $V_1\subsetneq
-\dots\subsetneq V_K$, and the chain corresponding to $1_l\vtl \gamma^*$ is 
+Similarly, with $\sigma_2=\tau_2\oplus \rho$, we get
 \[
-\emptyset \subsetneq V_1\oplus U_2\subsetneq \dots
-\subsetneq V_{K-1}\oplus U_2
+\sigma_2^{-1}(\bar \Pe_{T,f})=\Pe_{(1_l\vtl \gamma^*)\vtl h_2}.
 \]
-since up to permutation, $V_K\oplus U_K=[l+k']$. The case $K$ is even is obtained
+Assume that $L$ is odd, then the chain corresponding to $\gamma$ is $\tau_1^{-1}(V_1)\subsetneq
+\dots\subsetneq \tau_1^{-1}(V_L)$, and the chain corresponding to $\beta=1_l\vtl \gamma^*$ is 
+\[
+\emptyset \subsetneq \tau_1^{-1}(V_1)\oplus [l]\subsetneq \dots
+\subsetneq \tau_1^{-1}(V_{L-1})\oplus [l]=\emptyset \subsetneq \sigma_1^{-1}(V_1\oplus
+U_2)\subsetneq \dots
+\subsetneq \sigma_1^{-1}(V_{L-1}\oplus U_2),
+\]
+here we have used the fact that $\tau_1^{-1}(V_L)=[k']$. The case $L$ is even is obtained
 similarly.
 
 
