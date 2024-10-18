@@ -40,7 +40,7 @@
 \def\tt{\bm{0}}
 \def\Ce{\mathcal C}
 \def\Ae{\mathcal A}
-\def\Ne{\mathcal N}
+\def\Me{\mathcal M}
 \def\Le{\mathcal L}
 \def\Te{\mathcal T}
 \def\Fe{\mathcal F}
@@ -1133,24 +1133,30 @@ and $f_2$.
 \subsection{The poset $\Pe_f$}
 
 
+
+Here we introduce the basic tools for describing and visualising the structure of type
+functions. We will need the notions and results of Appendix \ref{app:functions, posets}.
+
+
 By Theorem \ref{thm:basis}, any boolean function has a unique expression of the form
 \[
 f=\sum_{T\subseteq [n]} \hat f_Tp_T,
 \]
 where $\hat f$ is the M\"obius transform of $f$. Let $\mathcal P_f$ be the subposet in the
 distributive lattice $2^n$,  of elements such that
-$\hat f_T\ne 0$. We will show below that any type function $f\in \Te_n$ is fully determined by $\Pe_f$.  
+$\hat f_T\ne 0$. We show that any type function $f\in \Te_n$ is fully determined by $\Pe_f$.  
 
 
 
 
-
+****
  We say that a poset $\Pe$  is graded of rank
 $k$ if every maximal chain in $\Pe$ has the same length equal to $k$ (recall that the length
 of a chain is defined as the number of its elements -1). Equivalently,  there is
 a unique rank function $\rho: \Pe\to \{0,1,\dots,k\}$ such that $\rho(S)=0$ if $S$ is a
 minimal element of $\Pe$ and $\rho(T)=\rho(S)+1$ if $T$ covers $S$, that is, $S\le T$ and for any $R$ such that
 $S\le R\le T$ we have $R=T$ or $R=S$. See [Stanley] for details.
+****
 
 \begin{prop}\label{prop:graded} Let $f\in \Te_n$, then $\mathcal P_f$ is a graded poset
 with even rank $k\le n$ and rank function $\rho_f$. Moreover, we have
@@ -1161,7 +1167,7 @@ f=\sum_{S\in \mathcal P_f}(-1)^{\rho_f(S)}p_S.
 
 \end{prop}
 
-Then rank of $\Pe_f$ will be denoted by $r(f)$ and called the rank of $f$. Note that the
+Then rank of $\Pe_f$ will be denoted by $r(f)$ and called the {\em rank} of $f$. Note that the
 assertion means that for $f\in \Te_n$, 
 \[
 \hat f_S=\begin{dcases} (-1)^{\rho_f(S)},& \text{if } S\in \Pe_f\\
@@ -1237,7 +1243,7 @@ In the above proof, we also proved the following.
 \begin{enumerate}
 \item[(i)] For $\sigma\in \permut_n$, $S\mapsto \sigma(S)$ is an
 isomprphism  of  $\mathcal P_{f\circ \sigma}$ onto $\mathcal P_{f}$.
-\item[(ii)] $\Pe_f^*$ is obtained from from $\Pe^f$ by adding/removing the top and bottom
+\item[(ii)] $\Pe_{f^*}$ is obtained from from $\Pe_f$ by adding/removing the top and bottom
 elements $\emptyset$ and $[n]$.
 %$\emptyset \in \mathcal P_f$ iff  $\emptyset \notin \mathcal P_{f^*}$
 %and $[n] \in \mathcal P_f$ iff  $[n] \notin \mathcal P_{f^*}$.
@@ -1248,16 +1254,50 @@ elements $\emptyset$ and $[n]$.
 \end{coro}
 
 
+We will visualise the poset $\Pe_f$  by its Hasse diagram, see Section \ref{sec:}. For simplification, we 
+introduce {\em labels} for the elements of $\Pe_f$ in the following way. 
+Let $f\in \Te_n$. For  $S\in \Pe_f$, put
+\[
+L_S:=\{i\in [n]\ : \ i\in S,\ \forall S'\subsetneq S, i\notin S'\},\qquad
+L_\emptyset:=\{0\}\text{ (if $\emptyset\in \Pe_f$).}
+\]
+In other words, $i$ is a label for $S$ if $S$ is a minimal element in the subposet of
+elements containing $i$ in  $\Pe_f$. We also put
+\[
+\Me_i:=\{S,\ i\in L_S\}.
+\]
+We also use the notation $L_{S,f}$ and $\Me_{i,f}$ if the function $f$ has to be
+specified. It is clear from this definition that $\Me_i=\emptyset$ if and only if $i$ is
+not contained in any label and  if $\Me_i$ is nonempty, it is an antichain in
+$\Pe_f$.   Note also that we have
+\[
+\forall S\in \Pe_f,\quad S=\cup_{S'\subseteq S} L_{S'}\quad \text{ and }\cup\{L_S, \ S\in \Pe_f\}=\cup \Pe_f.
+\]
 
-We next show that the input and output sets of $f\in \Te_n$ can be easily recognized from $\Pe_f$. For an
-index $i\in [n]$, let  $M_{f,i}$ be the set of minimal elements of the subposet $\{S\in \Pe_f,\ i\in S\}$.
-Note that  $M_{f,i}$ is empty if and only if for any $S\in \Pe_f$, $i\notin S$.
+
+In the Hasse diagram, we label any element  $S\in \Pe_f$ by  $L_S$, with no label if
+$L_S=\emptyset$.
+
+Examples (n=2,3,4).
+\begin{exm}[$\Te_3$]
+As we can see from Example \ref{exm:T2}, all elements in $\Te_2$ are chains. This is
+also true for $n=3$. Indeed, up to a permutation that does not change the chain structure, 
+any $f\in \Te_3$ is either a product of two elements $g\in \Te_2$ and $h\in \Te_1$,
+or the dual of such a  product. Since $g$ must be a chain and $|\Pe_h|=1$, their product
+must be a chain as well. Taking the dual of a chain only adds/removes the least/largest
+elements, so the dual of a chain must be a chain as well.
+\end{exm}
+
+
+
+We next show that the input and output sets of $f\in \Te_n$ can be easily recognized from
+the labels in $\Pe_f$. 
 
 \begin{prop}\label{prop:pfinput} Let $f\in \Te_n$ and $i\in [n]$. Then
 \begin{enumerate}
-\item If $M_{f,i}\ne
-\emptyset$, then all elements in $M_{f,i}$  have the same rank,  which will be
-denoted by $r_f(i)$. If $M_{f,i}=\emptyset$, we put $r_f(i):=r(f)+1$. 
+\item If $\Me_{i,f}\ne
+\emptyset$, then all elements in $\Me_{i,f}$  have the same rank,  which will be
+denoted by $r_f(i)$. If $\Me_{i,f}=\emptyset$, we put $r_f(i):=r(f)+1$. 
 \item $i\in O_f$ if and only if $r_f(i)$ is odd.
 
 \end{enumerate}
@@ -1265,17 +1305,19 @@ denoted by $r_f(i)$. If $M_{f,i}=\emptyset$, we put $r_f(i):=r(f)+1$.
 
 
 
-\begin{proof} Since $\Pe_f\simeq \Pe_{f\circ\sigma}$, it is
+\begin{proof} By Corollary \ref{coro:Pf}(i),  it is
 quite clear that the two properties are preserved by permutations. We will show that they
-are preserved by complementation. Observe first that $M_{f,i}=\emptyset$ if and only if
-$M_{f^*,i}=\{[n]\}$, since $\Pe_{f^*}$ differs from $\Pe_f$ only up to adding/removing the
-least element $\emptyset$ and the greatest element $[n]$. If $M_{f,i}$ is empty, then $p_S(e^i)=1$ for all $S\in
-\Pe_f$, so that $f(e^i)=f(\theta_n)=1$ and $i\in O_f$, we also see that $r_f(i)=r(f)+1$ is odd.
-If $M_{f,i}=\{[n]\}$, then $r_f(i)=\rho_f([n])=r(f)$ by definition of the rank, hence
-$r_{f}(i)$ is even. As we have seen, $i\in O_{f^*}=I_f$. 
+are preserved by complementation. Observe first that $\Me_{i,f}=\emptyset$ if and only if
+$\Me_{i,f^*}=\{[n]\}$, since $\Pe_{f^*}$ differs from $\Pe_f$ only up to adding/removing the
+least element $\emptyset$ and the greatest element $[n]$. If $\Me_{i,f}$ is empty, then
+$i\ne \cup\Pe_f$ and hence $p_S(e^i)=1$ for all $S\in
+\Pe_f$. It follows that $f(e^i)=f(\theta_n)=1$, so that  $i\in O_f$  by Proposition
+\ref{prop:pfinput}. We also see that $r_f(i)=r(f)+1$ is odd.
+If $\Me_{i,f}=\{[n]\}$, then $r_f(i)=\rho_f([n])=r(f)$ by definition of the rank, hence
+$r_{f}(i)$ is even. As we have seen in the first part of the proof, $i\in O_{f^*}=I_f$. 
 
-Let us assume that $M_{f,i}$ is not equal to $\emptyset$ or $\{[n]\}$. Then we must have
-$M_{f,i}=M_{f^*,i}$ and by the
+Let us assume that $\Me_{i,f}$ is not equal to $\emptyset$ or $\{[n]\}$. Then we must have
+$\Me_{i,f}=\Me_{i,f^*}$ and by the
 proof of Proposition \ref{prop:graded} we have  
 $\rho_{f^*}(S)=\rho_f(S)\pm 1$ for any $S$, depending only on the fact whether $\emptyset
 \in \Pe_f$. This implies that the properties are preserved by complementation.  
@@ -1284,8 +1326,8 @@ $\rho_{f^*}(S)=\rho_f(S)\pm 1$ for any $S$, depending only on the fact whether $
 We will now proceed by induction on $n$ as before. Both  assertions are quite trivial for $n=1$,
 so assume the statements hold for $m<n$. It is enough to assume that
 $f=g\otimes h$ for some $g\in \Te_m$ and $h\in \Te_{n-m}$. 
-Suppose without loss of generality that $i\in [m]$, then all elements of $M_{f,i}$ have
-the form $S\oplus T$, with $S\in M_{g,i}$ and  $T$ a minimal element in $\Pe_h$. 
+Suppose without loss of generality that $i\in [m]$, then all elements of $\Me_{i,f}$ have
+the form $S\oplus T$, with $S\in \Me_{i,g}$ and  $T$ a minimal element in $\Pe_h$. 
  Since $\rho_h(T)=0$ for any minimal element $T\in \Pe_h$, we have
 by the induction assumption
 \[
@@ -1307,13 +1349,23 @@ Hence $i\in O_f$.
 
 \end{proof}
 
-The elements in $I^F_{f}:=\cap\Pe_f$ resp. $O^F_{f}:=(\cup \Pe_f)^c$ will be called free inputs, resp.
-outputs. 
+The elements in $I^F_{f}:=\cap\Pe_f$ resp. $O^F_{f}:=(\cup \Pe_f)^c$ will be called {\em
+free inputs}  resp.
+{\em free outputs}. It is easy to see that for any $f\in \Te_n$, there is some permutation
+$\sigma\in \permut_n$ such that
+\[
+f\circ \sigma=p_{n_I}\otimes g\otimes 1_{n_O},
+\]
+where $\sigma([n_I])=I^F_f$, $\sigma([n-n_O+1,n])=O^F_f$ and $g\in \Te_{n-n_I-n_O}$ has no
+free inputs or outputs.
 
-\subsection{Chains and combs}
 
- A basic example of a graded poset is a chain  $\Pe=\{S_1\subsetneq S_2\subsetneq \dots \subsetneq
-S_N\}$. It is clear that  $\Pe$ is graded with rank $N-1$
+\subsubsection{Chains and combs}
+
+ We have seen that for some type functions the poset $\Pe_f$ is a chain, which is also a
+ basic example of a graded poset. A chain in $2^n$ has the form  $\Pe=\{S_1\subsetneq S_2\subsetneq \dots \subsetneq
+S_N\}$, $S_i\subseteq [n]$. Note that the length of the chain $\Pe$ is $N-1$.
+It is clear that  $\Pe$ is graded with rank $N-1$
 and rank function $\rho(S_i)=i-1$. 
 
 \begin{prop}\label{prop:chains} For a chain   $\Pe=\{S_1\subsetneq S_2\subsetneq \dots \subsetneq
@@ -1333,31 +1385,23 @@ $f=p_{S_1}\in \Te_n$. Assume that the statement holds for all odd numbers $M<N$ 
 $\Pe$ be a chain as above. Up to a permutation $\sigma\in \permut_n$, we may assume that
 $S_j=[n_j]$ for some $0\le n_1<\dots <n_N\le n$. Then we have 
 \[
-f=p_{[n_1]}\sum_{i=1}^N (-1)^{i-1}p_{[n_1+1,n_i]}= p_{[n_1]}\otimes g\otimes 1_{[n-n_N]},
+f=p_{[n_1]}\sum_{i=1}^N (-1)^{i-1}p_{[n_1+1,n_i]}= p_{n_1}\otimes g\otimes 1_{n-n_N},
 \]
-where  $g\in
-\Fe_{n_N-n_1}$ is the function for the chain $\emptyset\subsetneq [n_2-n_1]\subsetneq \dots
-\subsetneq [n_N-n_1]$. Since $f$ is a type function if $g$ is, this shows that we may assume that 
+where  $g=f_{\Pe'}\in
+\Fe_{n_N-n_1}$ is the function for the chain $\Pe':=\{\emptyset\subsetneq [n_2-n_1]\subsetneq \dots
+\subsetneq [n_N-n_1]\}$. Since $f$ is a type function if $g$ is, this shows that we may assume that 
 the chain contains $\emptyset$ and $[n]$.  But then 
 \[
-f=1+\sum_{j=2}^{N-1} (-1)^{j-1}p_{S_j}+ p_{[n]} 
+f=1+\sum_{j=2}^{N-1} (-1)^{j-1}p_{S_j}+ p_{n} 
 \]
 and
 \[
-f^*=1-f+p_{[n]}=\sum_{j=1}^{N-2} (-1)^{j-1}p_{S_{j+1}}.
+f^*=1-f+p_{n}=\sum_{j=1}^{N-2} (-1)^{j-1}p_{S_{j+1}},
 \]
 By the induction assumption $f^*\in \Te_n$, hence also $f=f^{**}\in
 \Te_n$.
 \end{proof}
 
-\begin{exm}[$\Te_3$]
-As we can see from Example \ref{exm:T2}, all elements in $\Te_2$ are chains. This is
-also true for $n=3$. Indeed, up to a permutation that does not change the chain structure, 
-any $f\in \Te_3$ is either a product of two elements $g\in \Te_2$ and $h\in \Te_1$,
-or the dual of such a  product. Since $g$ must be a chain and $|\Pe_h|=1$, their product
-must be a chain as well. Taking the dual of a chain only adds/removes the least/largest
-elements, so the dual of a chain must be a chain as well.
-\end{exm}
 
 Let $f\in \Te_n$ be a chain type and let $\Pe=\Pe_f=\{S_1\subsetneq \dots \subsetneq
 S_N\}$ be the corresponding chain. Put $T_0:=S_1$ and $T_j:=S_{j+1}\setminus S_{j}$,
@@ -1365,12 +1409,12 @@ $j=1,\dots, N-1$, $T_{N}:=[n]\setminus S_N$.  It can be easily seen from Proposi
 \begin{equation}\label{eq:chain_io}
 I_f=\bigcup_{l=0}^{(N-1)/2}{T_{2j}}, \qquad O_f=\bigcup_{l=0}^{(N-1)/2}{T_{2j+1}}
 \end{equation}
-(note that $N$ must be odd). Clearly, $T_0=I_f^F$, $T_{N}=O_f^F$ are the free inputs resp.
+(note that $N$ must be odd). Clearly, $T_0=I_f^F$, $T_{N}=O_f^F$ are the sets of free inputs resp.
 outputs. As before, up to a permutation, we may assume that  there are some $0\le
 n_1<n_2<\dots<n_{N}\le n$ such that $S_j=[n_j]$, $j=1,\dots,N$, and $T_0=[n_1]$,
 $T_j=[n_j+1, n_{j+1}]$, $j=1,\dots, N-1$ and $T_N=[n_N+1,n]$. We have  
 \[
-f=p_{[n_1]}\otimes g\otimes 1_{n-n_N}
+f=p_{n_1}\otimes g\otimes 1_{n-n_N}
 \]
 where $g\in \Te_{n_N-n_1}$ is a chain type with no free inputs or outputs. We will assume below that
 $T_0=T_N=\emptyset$ and  show that such chains correspond to important higher order objects. 
@@ -1402,11 +1446,11 @@ As before, up to a permutation we may assume that $S_i=[n_i]$, $i=1,\dots, N$, w
 the assumptions
 $0=n_1<n_2<\dots<n_N=n$, so that $T_1=[n_2]$ and $T_j=[n_j+1,n_{j+1}]$, $j=1,\dots, N-1$. 
 
-Let $N=3$, then $f=1-p_{[n_2]}+p_{[n]}$, and we see from Example \ref{exm:type_channels}
+Let $N=3$, then $f=1-p_{[n_2]}+p_{n}$, and we see from Example \ref{exm:type_channels}
 that  $Y\simeq [Y_{T_2}, Y_{T_1}]$, where the isomorphism is a symmetry. 
 Assume the assertion is true for  $N-2$.  As in the proof of Proposition \ref{prop:chains}, we see that 
 \[
-f^*=\sum_{i=1}^{N-2}(-1)^{i+1}p_{[n_{i+1}]}=p_{[n_2]}\otimes g\otimes 1_{n-n_{N-1}}
+f^*=\sum_{i=1}^{N-2}(-1)^{i+1}p_{[n_{i+1}]}=p_{n_2}\otimes g\otimes 1_{n-n_{N-1}}
 \]
 where $g$ is the chain type for  a chain of intervals given by $0=m_1<m_2<\dots<m_{N-2}=m$ in $\Te_m$,
 here $m_i=n_{i+1}-n_2$. By Proposition \ref{prop:Xf_const}, we see that 
@@ -1430,207 +1474,21 @@ Combs, picture
 
 Other examples
 
-%\subsection{Further examples}
-%
-%To show further examples, we define the following basic chains. For even $n$, put
-%\[
-%\gamma_n(s):=\sum_{l=0}^n (-1)^lp_{[l]}(s)=1-\bar s_1+\bar s_1\bar s_2-\dots +\bar
-%s_1\dots \bar s_n.
-%\]
-%The  corresponding sets of input and output indices  are
-%\[
-%I=\{2j, j=1,\dots n/2\},\qquad O=\{2j-1,\ j=1,\dots n/2\}.
-%\]
-%It is easily seen that the complement is
-%\[
-%\gamma^*:=p_{[1]}\otimes\gamma_{n-2}\otimes 1_1.
-%\]
-%If  $n$ is odd, we put
-%\[
-%\gamma_{n}:\gamma_{n-1}\otimes 1_1\qquad \gamma_n^*=p_{[1]}\otimes \gamma_{n-1}.
-%\]
-%In this case, the inputs and outputs are $I=\{2j, j=1,\dots (n-1)/2\},\qquad O=\{2j-1,\
-%j=1,\dots (n-1)/2,n\}$, note that $n$ is a free output. 
-%
-%Let $n=4$. The only elements (up to permutations) in $\Te_4$ that are not chain types are
-%the product of chains
-%$f=p_{\{1\}}^*\otimes p_{\{1\}}^*$, $p_{\{1\}}\in \Te_2$:  
-%\[
-%f(s)=1-\bar s_1-\bar s_3+\bar s_1\bar s_2+\bar s_1\bar s_3+\bar s_3\bar s_4-\bar s_1\bar
-%s_2\bar s_3 - \bar s_1\bar s_3\bar s_4+ \bar s_1\bar s_2\bar s_3 \bar s_4
-%\]
-%and its conjugate:
-%\[
-%f^*(s)=\bar s_1 +\bar s_3-\bar s_1\bar s_2-\bar s_1\bar s_3-\bar s_3\bar s_4+\bar s_1\bar
-%s_2\bar s_3 + \bar s_1\bar s_3\bar s_4
-%\]
-%The
-%corresponding posets are:
-%
-%picture
-%
-%As a product of chains, $\Pe_f$ is a distributive lattice, but it is obvious that
-%$\Pe_{f^*}$ is not even a lattice.
-%
-%
-
-
-\subsection{The structure of $\Pe_f$}
-
-We will visualise the poset $\Pe_f$ by its Hasse diagram, where we only put labels to
-vertices corresponding to elements in $M_{i,f}$ for some $i$. More precisely, for $S\in
-\Pe_f$, the set of labels of $S$ is defined as
-\[
-L_S=\{i\in [n],\ S\in M_{i,f}\},\qquad L_\emptyset=\{0\}.
-\]
-In the Hasse diagram, we label any element  $S\in \Pe_f$ by  $L_S$, with no label if
-$L_S=\emptyset$.  Below, we give examples for $f\in \Te_n$, $n=4$ and
-$n=5$ which are not chain types.
-
-Let $f\in \Te_n$ and let $\Pe=\Pe_f$. Let $\Pe_f^0=\Pe^0\subseteq \Pe$ be the subposed consisting
-of  all  labelled elements, that is
-\[
-\Pe^0=\{S\in \Pe, \ L_S\ne \emptyset \}.
-\]
-For a finite poset $\Pe$, we denote by $\mathrm{Min}(\Pe)$ the set of minimal elements of
-$\Pe$ and $\mathrm{Max}(\Pe)$ the set of maximal elements of $\Pe$.
-
-\begin{lemma}\label{lemma:p0_constr} Let $f\in \Te_{n}$, $g\in \Te_{m}$. 
-\begin{enumerate}
-\item[(i)] $\mathrm{Min}(\Pe_f^0)=\mathrm{Min}(\Pe_f)$.
-\item[(ii)] $\Pe_f^0$ is a chain $\iff$  $\Pe_f$ is a chain $\iff$  $\Pe_f^0=\Pe_f$. 
-\item[(iii)] If $S\in \Pe_f^0$ and $S\ne \emptyset$, $S\ne [n]$, then $S\in \Pe^0_{f^*}$. 
-\item[(iv)] $\emptyset \in \Pe^0_f$ $\iff$ $\emptyset \notin \Pe^0_{f^*}$ and  $[n]\in \Pe^0_f$ $\iff$ $\cup \{L_S, S\in \Pe^0_{f^*}\ne [n]\}$.
-\item[(v)] $\Pe_{f\otimes g}=\{S\oplus T:\ S\in \Pe_f^0,\ T\in \Pe_g^0, \ S\in
-\mathrm{Min}(\Pe_f) \text{ or } T\in \mathrm{Min}(\Pe_g)\}$.
-
-\item[(vi)] If $\Pe^0_f$ has a largest element, then it is the largest element in $\Pe_f$. 
-
-\end{enumerate}
-
-
-\end{lemma}
-
-
-\begin{proof} (i) Obvious. (iii)--(v) Follow from the proof of Proposition \ref{prop:pfinput}. 
-
-(ii) Assume that $\Pe^0_f$ is a chain, so that, in particular,
-any $M_{i,f}$ is a singleton or empty. In the first case, we put $M_{i,f}=\{M_i\}$. Let $S,T$ be two
-elements in $\Pe_f$ and assume that $i\in S\setminus T$. For any $j\in T$, we have either
-$M_i\subseteq M_j$ or $M_j\subseteq M_i$. In the first case, we get $i\in M_i\subseteq
-M_j\subseteq T$, which is not possible. Hence $M_j\subseteq M_i$ for all $j\in T$. It
-follows that $T=\cup_{j\in T} M_j\subseteq M_i\subseteq S$, so that $\Pe_f$ is a chain,
-and it is clear that $\Pe_f=\Pe_f^0$. If $\Pe_f$ is not a chain, then there are some type
-functions
-$f_1$, $f_2$ such that $f=f_1\otimes f_2$ or $f=(f_1\otimes f_2)^*$. Moreover, the ranks
-of $f_1$ and $f_2$ are at least 2. It follows that both $\Pe_{f_1\otimes f_2}$ and
-$\Pe_{(f_1\otimes f_2)^*}$ contain an element $S\oplus T$, where $S\in \Pe_{f_1}$, $T\in
-\Pe_{f_2}$ but none of the two elements is minimal. It follows by part (v) that $S\oplus T\notin
-\Pe_f^0$, so that $\Pe_f\ne \Pe_f^0$. It is quite clear that $\Pe_f^0$ is a chain if
-$\Pe_f$ is.
-
-(vi) The largest element  $T\in P^0_f$ must contain all subsets that are in $M_{i,f}$ for all
-$i\in [n]$, so that  $\cup \Pe_f\subseteq T$. If follows that $T=\cup\Pe_f $ is the largest
-element in $\Pe_f$. 
-
-
-
-
-\end{proof}
-
-
-\begin{lemma}\label{lemma:pf0_chain} Assume that $\Pe_f^0$ has a largest element.  Then
-either $f$ is a chain type, or there is some $h\in \Te_m$ such that $\Pe_h^0$ has  no largest element,
-and a chain type $\beta\in \Te_{n-m}$ such that $f=g\vtl \beta$.
-
-\end{lemma}
-
-\begin{proof} Let $T$ be the largest element in $\Pe_f^0$. If $T=[n]$, then by Lemma
-\ref{lemma:p0_constr}(iv), $f^*$ has some free outputs. Hence, up to a permutation,
-$f^*=h_1\otimes 1_{k_1}$ for some $h_1\in \Te_{n-k_1}$ with no free outputs. It follows that
-$f=(h_1\otimes 1_{k_1})^*=(h_1\vtl 1_{k_1})^*=h_1^*\vtl p_{k_1}$. 
-
-If $T\ne [n]$, then, since $T$
-is also the largest element in $\Pe_f$, we see that $f$ has free outputs, so that (up to a
-permutation)
-$f=h_\otimes 1_{k_1}=h_1\vtl 1_{\k_1}$, where $h_1\in \Te_{n-k_1}$ is a type function with no
-free outputs. Clearly, $\Pe_{h_1}=\Pe_f$ and $\Pe_{h_1}^0=\Pe_f^0$, so that $T$ is the largest
-element in $\Pe^0_{h_1}$, but this time $T=[n-k_1]$, so that we may use the first part of the
-proof. We obtain that there is some $k_2$ and a type function  $h_2\in\Te_{n-k_1-k_2}$
-with no free outputs such that 
-\[
-f=h_1\vtl 1_{k_1}=h_2^*\vtl p_{k_2}\vtl 1_{k_1}
-\]
-So far, we have written $f$ in the form $f=h\vtl \beta$, where $\beta$ is a chain type and
-$h\in \Te_{n-k}$ for $k>0$ is such that $h^*$ has no free outputs. It follows that if
-$\Pe_h^0$ has a largest element, then it cannot be equal to $[n-k]$. Hence $h$ must have
-some free outputs, and we may proceed as above, replacing $f$ by $h$. Since $n$ is decreasing at each step, we
- either get to $n-k \le 3$, in which case $h$ must be a chain and therefore also $f=h\vtl
- \beta$ is a chain, or $h$ has no largest element.
-
-
-\end{proof}
-
-
-\begin{lemma}\label{lemma:p0_maximal} Let $T\in \mathrm{Max}(\Pe^0_f)$ and let
-$T^{\downarrow,f}:=\{S\in \Pe_f, S\le T\}$. Put
-\[
-\bar \Pe_{T,f}:=\begin{dcases}  T^{\downarrow,f} & \text{if } \rho_f(T) \text{ is even}\\
-  T^{\downarrow,f}\setminus T & \text{otherwise}.
-  \end{dcases}
-\]
-Then there is some type function $g\in \Te_{|T|}$ and a permutation $\sigma\in \permut{n}$
-such that $\Pe_g=\bar \Pe_{\sigma(T),f}$. 
-\end{lemma}
-
-\begin{proof} %Up to a permutation, we may assume that $T=[m]$ for some $m\le n$. 
-%The assertion is rather trivial if $T$ is the largest element in $\Pe_f^0$, so we will assume
-%that this is not the case. 
-We will proceed by induction on $n$. The assertion is trivial if $f$ is a chain, so it
-holds for $n\le 3$. So assume it holds for all $m<n$ and let $f\in \Te_n$. If
-$f=f_1\otimes f_2$, then $T=T_1\oplus T_2$, where, say, $T_1\in \mathrm{Min}(\Pe_{f_1})$
-and $T_2\in \mathrm{Max}(\Pe_{f_2}^0)$. It follows that 
-\[
-\bar \Pe_{T,f}=T_1\oplus \bar\Pe_{T_2,f_2}.
-\]
-By the induction assumption, $\bar \Pe_{T_2,f_2}=\Pe_h$ for some type function $h\in
-\Te_{|T_2|}$ and hence $\bar\Pe_{T,f}=\Pe_g$ with $g\in \Te_{|T|}$, $g=p_{T_1}\otimes h$.
-
-Assume next that $f=(f_1\otimes f_2)^*$.  We may assume that 
- $T\ne \emptyset$ and $T\ne [n]$, since otherwise the assertion is rather trivial. We may
- also assume that $f$ has no free outputs, since otherwise $f=h\otimes 1$ and we may
- replace $f$ by $h$. Then $T\in \mathrm{Max}(\Pe_{f^*})$. 
-
-Let $\rho_f(T)$ be even, so that the labels of $T$ correspond to inputs. Then
-$\rho_{f^*}(T)$ is odd. Since $f^*$ has the desired property by the first part of the
-proof, there is some $g\in \Te_{|T|}$ such that (up to a permutation)
-\[
-\Pe_g=\bar \Pe_{T,f^*}=T^{\downarrow,f^*}
-\]
-and it is easy to see that  then $\Pe_{g^*}=\bar \Pe_{T,f}$. The case when $\rho_f(T)$ is
-odd is proved similarly.
-
-
-\end{proof}
-
-
 
 
 \subsection{Connecting chains: the causal product}
 
 
-
-
-We will introduce further operations of boolean functions. 
+We now  introduce further operations of boolean functions. 
 For a fixed decomposition $[n]=[n_1]\oplus[n_2]$ and functions
-$f_1:\{0,1\}^{n_1}\to \{0,1\}$, $f_2:\{0,1\}^{n_2}\to \{0,1\}$, we define their causal product
-as 
+$f_1:\{0,1\}^{n_1}\to \{0,1\}$, $f_2:\{0,1\}^{n_2}\to \{0,1\}$, we define their {\em
+causal product} as 
 \[
-f_1\vartriangleleft f_2:=f_1\otimes 1_{n_2}+p_{[n_2]}\otimes (f_2-1_{n_2}).
+f_1\vartriangleleft f_2:=f_1\otimes 1_{n_2}+p_{n_1}\otimes (f_2-1_{n_2}).
 \]
 For  $s^1\in \{0,1\}^{n_1}$ and $s^2\in \{0,1\}^{n_2}$, this function acts as
 \begin{equation}\label{eq:causal_product}
-(f_1\vtl f_2)(s^1s^2)= f_1(s^1)+p_{[n_1]}(s^1)(f_2(s^2)-1)=\begin{dcases} f_1(s^1), &
+(f_1\vtl f_2)(s^1s^2)= f_1(s^1)+p_{n_1}(s^1)(f_2(s^2)-1)=\begin{dcases} f_1(s^1), &
 \text{ if } s^1\ne \theta_{n_1},\\
    f_2(s^2), & \text{ if } s^1=\theta_{n_1}.
    \end{dcases}
@@ -1664,11 +1522,11 @@ Moreover, for any $f_3\in \Fe_{n_3}$, and for the decomposition $[n]=[n_1]\oplus
 
 We can also combine $f_1$ and $f_2$ in the opposite order:
 \[
-f_2\vtl f_1: =1_{n_1}\otimes f_2+(f_1-1_n)\otimes p_{[n_2]},
+f_2\vtl f_1: =1_{n_1}\otimes f_2+(f_1-1_n)\otimes p_{n_2},
 \]
 so that
 \begin{equation}\label{eq:causal_product_op}
-(f_2\vtl f_1)(s^1s^2)=f_2(s^2)+p_{[n_2]}(s^2)(f_1(s^1)-1_{n_1})=\begin{dcases} f_2(s^2), & \text{ if }
+(f_2\vtl f_1)(s^1s^2)=f_2(s^2)+p_{n_2}(s^2)(f_1(s^1)-1_{n_1})=\begin{dcases} f_2(s^2), & \text{ if }
 s^2\ne \theta_{n_2},\\
    f_1(s^1), & \text{ if } s^2=\theta_{n_2}.
    \end{dcases}
@@ -1690,27 +1548,27 @@ and \eqref{eq:causal_product_op}: let
 $s^1\in \{0,1\}^{n_1}$, $s^2\in \{0,1\}^{n_2}$ and compute
 \begin{align*}
 (f_1\vtl f_2)\wedge (f_2\vtl
-f_1)(s^1s^2)&=\left(f_1(s^1)+p_{[n_1]}(s^1)(f_2(s^2)-1)\right)\left(f_2(s^2)+p_{[n_2]}(s^2)(f_1(s^1)-1)\right)\\
+f_1)(s^1s^2)&=\left(f_1(s^1)+p_{n_1}(s^1)(f_2(s^2)-1)\right)\left(f_2(s^2)+p_{n_2}(s^2)(f_1(s^1)-1)\right)\\
 =f_1(s^1)f_2(s^2),
 \end{align*}
 the last equality follows from the fact that $f_i(s^i)(1-f_i(s^i))=0$ (since $f_i(s^i)\in
-\{0,1\}$) and the fact that $p_{[n_1]}$ is the least element in $\Fe_{[n_1]}$, so that
-$p_{[n_1]}(s^1)(f_1(s^1)-1)=p_{[n_1]}(s^1)-p_{[n_1]}(s^1)=0$. 
+\{0,1\}$) and the fact that $p_{n_1}$ is the least element in $\Fe_{n_1}$, so that
+$p_{n_1}(s^1)(f_1(s^1)-1)=p_{n_1}(s^1)-p_{n_1}(s^1)=0$. 
 
 \end{proof}
 
-For the smallest and the largest element in $\Te_n$, the causal product behaves as
+For the smallest and the largest element in $\Fe_n$, the causal product behaves as
 follows.
 \begin{lemma}\label{lemma:onechain_causal}
-For the  $f\in \Te_{n_1}$ and let $1_{n_2}, p_{[n_2]}\in \Te_{n_2}$, we have
+Let  $f\in \Fe_{n_1}$ and let $1_{n_2}, p_{n_2}\in \Fe_{n_2}$, we have
 \[
 f\vtl 1_{n_2}= f\otimes 1_{n_2}\le 1_{n_2}\vtl f =1-(1-\hat
 f_\emptyset)p_{[n_2]}+\sum_{\emptyset \ne S\subseteq [n_1]} \hat f_S p_{S\oplus [n_2]}
 \]
 and
 \[
-p_{[n_2]} \vtl f=p_{[n_2]}\otimes f \le f\vtl p_{[n_2]}=\sum_{S\subsetneq [n]} \hat
-f_Sp_S+(\hat f_{[n_1]}-1)p_{[n_1]}+p_{[n_1+n_2]}.
+p_{n_2} \vtl f=p_{n_2}\otimes f \le f\vtl p_{n_2}=\sum_{S\subsetneq [n]} \hat
+f_Sp_S+(\hat f_{[n_1]}-1)p_{[n_1]}+p_{n_1+n_2}.
 \]
 In particular,
 \[
@@ -1719,6 +1577,10 @@ In particular,
 is the chain type for $\{\emptyset\subsetneq [n_1]\subsetneq [n_1+n_2]\}$.
 \end{lemma}
 
+\begin{proof}
+Immediate from the definition of the causal product and Lemma \ref{lemma:causal_tensor}.
+
+\end{proof}
 
 
 
@@ -1746,18 +1608,52 @@ f_{\pi^{-1}(k)}\in \Fe_n$ in an obvious way.
 
 
 It is not clear that if $f_1$ and $f_2$ are type functions, then $f_1\vtl f_2$ or $f_2\vtl
-f_1$ are type functions as well. Nevertheless, we next show that this is true for chains,
-and that the result can be seen as appending the two chains.
+f_1$ are type functions as well. Nevertheless, we will see that this is true if one of
+the type functions is a chain type.
+For this, we first show that $\vtl$ can be used to append chains.
 
 
 
-\begin{prop}\label{prop:append_chains} Let $N_1$ and $N_2$ be odd and let 
+\begin{prop}\label{prop:append_chains} Let  
 $\Pe_1=\{S_1\subsetneq \dots\subsetneq S_{N_1}\}$ be a chain in  $2^{n_1}$ and
-$\Pe_2=\{T_1\subsetneq \dots \subsetneq T_{N_2}\}$ a chain in $2^{n_2}$, 
- with corresponding chain type functions $\beta_1$ and $\beta_2$. Then 
-$\beta_1\vtl \beta_2$ and $\beta_2\vtl \beta_1$ are  type functions corresponding to
-chains of $N_1+N_2\pm 1$
-elements in $2^{n_1+n_2}$.
+$\Pe_2=\{T_1\subsetneq \dots \subsetneq T_{N_2}\}$ a chain in $2^{n_2}$, and let
+  $\beta_1=f_{\Pe_1}$ and $\beta_2=f_{\Pe_2}$ be the corresponding functions. Then 
+$\beta_1\vtl \beta_2$ and $\beta_2\vtl \beta_1$ are functions corresponding to
+chains $\Pe_{12}$ and $\Pe_{21}$ of $N_1+N_2\pm 1$ elements in $2^{n_1+n_2}$, given as:
+\begin{enumerate}
+\item[(a)] If $T_1=\emptyset$, then 
+\begin{align*}
+\Pe_{12}=\{S_1\subsetneq\dots\subsetneq S_{N_1}\subsetneq [n_1]\oplus T_2\subsetneq \dots
+\subsetneq [n_1]\oplus T_{N_2}\}.
+\end{align*}
+Similarly, if $S_1=\emptyset$, then
+\[
+\Pe_{21}=\{n_1+T_1\subsetneq \dots \subsetneq n_1+T_{N_2}\subsetneq S_2\oplus
+[n_2]\subsetneq \dots \subsetneq  S_{N_1}\oplus[n_2]\}
+\]
+\item[(b)] If $T_1\ne\emptyset$ and $S_{N_1}= [n_1]$, then 
+\begin{align*}
+\Pe_{12}=\{S_1\subsetneq\dots\subsetneq S_{N_1-1}\subsetneq [n_1]\oplus T_1\subsetneq \dots
+\subsetneq T_{N_2}\}.
+\end{align*}
+Similarly, if $S_1\ne \emptyset$ and $T_{N_2}=[n_2]$, then
+\[
+\Pe_{21}=\{n_1+T_1\subsetneq \dots \subsetneq n_1+T_{N_2-1}\subsetneq S_1\oplus
+[n_2]\subsetneq \dots \subsetneq  S_{N_1}\oplus[n_2]\}
+\]
+\item[(c)] If $T_1\ne\emptyset$ and $S_{N_1}\ne [n_1]$, then 
+\begin{align*}
+\Pe_{12}=\{S_1\subsetneq\dots\subsetneq S_{N_1}\subsetneq [n_1]\subsetneq [n_1]\oplus T_1\subsetneq \dots
+\subsetneq T_{N_2}\}.
+\end{align*}
+Similarly, if $S_1\ne \emptyset$ and $T_{N_2}\ne [n_2]$, then
+\[
+\Pe_{21}=\{n_1+T_1\subsetneq \dots \subsetneq n_1+T_{N_2}\subsetneq n_1+[n_2]\subsetneq S_1\oplus
+[n_2]\subsetneq \dots \subsetneq  S_{N_1}\oplus[n_2]\}
+\]
+
+\end{enumerate}
+
 
 \end{prop}
 
@@ -1767,7 +1663,7 @@ elements in $2^{n_1+n_2}$.
 \]
 so that
 \[
-\beta:=\beta_1\vtl\beta_2=\sum_{j=1}^{N_1-1}(-1)^{j-1}p_{S_j}+(p_{S_{N_1}}-p_{[n_1]}+p_{[n_1]\oplus
+\beta_1\vtl\beta_2=\sum_{j=1}^{N_1-1}(-1)^{j-1}p_{S_j}+(p_{S_{N_1}}-p_{[n_1]}+p_{[n_1]\oplus
 T_1})+\sum_{k=2}^{N_2}(-1)^{k-1}p_{[n_1]\oplus T_k}.
 \]
 The resulting funnction depends on whether  $S_{N_1}=[n_1]$ and $T_1=\emptyset$. If at least one
@@ -1775,12 +1671,11 @@ of the equalities is true, then the expression in brackets is equal to $p_{[n_1]
 $p_{S_{N_1}}$ or $p_{[n_1]\oplus T_1}$,  and $\beta$ corresponds to
 a chain of $N_1+N_2-1$ elements. If both $S_{N_1}\ne [n_1]$ and $T_1\ne \emptyset$, then
 $S_{N_1}\subsetneq [n_1]\subsetneq [n_1]\oplus T_1$ and $\beta$ corresponds to a chain of
-$N_1+N_2+1$ elements.
+$N_1+N_2+1$ elements. The proof for $\beta_2\vtl\beta_1$ is similar.
 
 
 
 \end{proof}
-
 
 
 
@@ -1791,7 +1686,7 @@ $O=O_f\oplus O_\beta$ and inputs $I=I_f\oplus I_\beta$.
 \end{prop}
 
 \begin{proof} Let  $\beta=\sum_{k=1}^{N}(-1)^{k-1}p_{T_k}$
-for some odd $N$. We will proceed by induction on $N$. Suppose $N=1$. If $T_1=\emptyset$,
+for some odd $N$ and $T_1\subsetneq \dots \subsetneq T_N\subseteq [n_2]$. We will proceed by induction on $N$. Suppose $N=1$. If $T_1=\emptyset$,
 then $\beta=1_{n_2}$ and we have by Lemma \ref{lemma:onechain_causal}
 \[
 f\vtl 1_{n_2}=f\otimes 1_{n_2}\in \Te_{n_1+n_2}
@@ -1811,8 +1706,9 @@ by the first part of the proof and Lemma \ref{lemma:causal_product}.
 
 Assume next that the assertion holds for all odd numbers $M<N$. As before, up to a
 permutation, we may assume that $T_k=[l_k]$ for some $l_1<\dots<l_{N}$. Let $\beta_1$ be the chain
-type for the chain given by $l_1<\dots<l_{k-2}$ in $[l_{k-1}]$ and put
-$\beta_2:=p_{[l_{k}-l_{k-1}]}$, the 1-element chain type in $\Te_{n_2-l_{k-1}}$. By the proof of Proposition \ref{prop:append_chains}, we see
+type for the chain given by $l_1<\dots<l_{N-2}$ in $[l_{N-1}]$ and put
+$\beta_2:=p_{[l_{N}-l_{N-1}]}$, the 1-element chain type in $\Te_{n_2-l_{N-1}}$. By
+Proposition \ref{prop:append_chains}(c), we see
 that $\beta=\beta_1\vtl\beta_2$, so that 
 \[
 \beta\vtl f=\beta_1\vtl(\beta_2\vtl f),\qquad f\vtl\beta=(f\vtl\beta_1)\vtl\beta_2
@@ -1820,7 +1716,7 @@ that $\beta=\beta_1\vtl\beta_2$, so that
 are type functions, by the induction assumption. 
 
 
-For any $i\in [n_1]\oplus [n_2]$, we have  $e^i_{n_1+n_2}=e^j_{n_1}\theta_{n_2}$ or
+To prove the statement on the output and input indices, note that for any $i\in [n_1]\oplus [n_2]$, we have  $e^i_{n_1+n_2}=e^j_{n_1}\theta_{n_2}$ or
 $e^i_{n_1+n_2}=\theta_{n_1}e^k_{n_2}$
 for some $j\in [n_1]$, $k\in [n_2]$. Then   
 \[
@@ -1832,8 +1728,9 @@ for $\beta\vtl f$ is similar.
 \end{proof}
 
 
+\subsection{The structure of type functions}
 
-We now get to prove the following structure theorem for the type functions.
+Our main result here is the  following structure theorem for the type functions.
 
 
 \begin{theorem}\label{thm:structure}
@@ -1928,6 +1825,491 @@ decomposition $[k]=[k_1]\oplus[k_2]$ (see Appendix \ref{sec:permut})
 Finally, putting $\rho=\rho_1\otimes\rho_2$ finishes the proof.
 
 \end{proof}
+
+
+\begin{remark} Not always types, but subtypes.
+
+\end{remark}
+
+
+
+
+
+
+%\subsection{Further examples}
+%
+%To show further examples, we define the following basic chains. For even $n$, put
+%\[
+%\gamma_n(s):=\sum_{l=0}^n (-1)^lp_{[l]}(s)=1-\bar s_1+\bar s_1\bar s_2-\dots +\bar
+%s_1\dots \bar s_n.
+%\]
+%The  corresponding sets of input and output indices  are
+%\[
+%I=\{2j, j=1,\dots n/2\},\qquad O=\{2j-1,\ j=1,\dots n/2\}.
+%\]
+%It is easily seen that the complement is
+%\[
+%\gamma^*:=p_{[1]}\otimes\gamma_{n-2}\otimes 1_1.
+%\]
+%If  $n$ is odd, we put
+%\[
+%\gamma_{n}:\gamma_{n-1}\otimes 1_1\qquad \gamma_n^*=p_{[1]}\otimes \gamma_{n-1}.
+%\]
+%In this case, the inputs and outputs are $I=\{2j, j=1,\dots (n-1)/2\},\qquad O=\{2j-1,\
+%j=1,\dots (n-1)/2,n\}$, note that $n$ is a free output. 
+%
+%Let $n=4$. The only elements (up to permutations) in $\Te_4$ that are not chain types are
+%the product of chains
+%$f=p_{\{1\}}^*\otimes p_{\{1\}}^*$, $p_{\{1\}}\in \Te_2$:  
+%\[
+%f(s)=1-\bar s_1-\bar s_3+\bar s_1\bar s_2+\bar s_1\bar s_3+\bar s_3\bar s_4-\bar s_1\bar
+%s_2\bar s_3 - \bar s_1\bar s_3\bar s_4+ \bar s_1\bar s_2\bar s_3 \bar s_4
+%\]
+%and its conjugate:
+%\[
+%f^*(s)=\bar s_1 +\bar s_3-\bar s_1\bar s_2-\bar s_1\bar s_3-\bar s_3\bar s_4+\bar s_1\bar
+%s_2\bar s_3 + \bar s_1\bar s_3\bar s_4
+%\]
+%The
+%corresponding posets are:
+%
+%picture
+%
+%As a product of chains, $\Pe_f$ is a distributive lattice, but it is obvious that
+%$\Pe_{f^*}$ is not even a lattice.
+%
+%
+
+
+%\subsubsection{The structure of $\Pe_f$ and $\Pe_f^0$}
+
+It is clear that the chains in Theorem \ref{thm:structure} are not given uniquely, in
+particular, some chains can be decomposed as a  concatenation of chains.
+We will show that some choice of the chains $\beta_1,\dots,\beta_k$  can be found from the subposet
+$\Pe_f^0\subseteq \Pe_f$ of labelled elements in $\Pe_f$.
+
+
+
+
+
+For  $f\in \Te_n$, let $\Pe_f^0=\Pe^0\subseteq \Pe$ be the subposet consisting
+of  all  labelled elements, that is
+\[
+\Pe^0=\{S\in \Pe, \ L_S\ne \emptyset \}.
+\]
+
+
+
+
+****
+For a finite poset $\Pe$, we denote by $\mathrm{Min}(\Pe)$ the set of minimal elements of
+$\Pe$ and $\mathrm{Max}(\Pe)$ the set of maximal elements of $\Pe$.
+****
+
+The following lemma collects some basic properties of $\Pe_f^0$.
+
+
+\begin{lemma}\label{lemma:p0_basic} Let $f\in \Te_n$.
+\begin{enumerate}
+\item[(i)] $\mathrm{Min}(\Pe_f^0)=\mathrm{Min}(\Pe_f)$.
+\item[(ii)] $\Pe_f^0$ is a chain $\iff$  $\Pe_f$ is a chain $\iff$  $\Pe_f^0=\Pe_f$.
+
+\item[(iii)] $\Pe^0_f$ has a largest element if and only if $f$ or $f^*$ has a free
+output. In this case  it is the largest element in $\Pe_f$. 
+
+\end{enumerate}
+\end{lemma}
+
+
+\begin{proof} 
+(i) Obvious. 
+
+(ii) Assume that $\Pe^0_f$ is a chain, so that, in particular,
+ $\Me_{i,f}$ is a singleton or empty for any $i\in [n]$. In the first case, we put
+ $\Me_{i,f}=\{M_i\}$, by defintion of $\Me_{i,f}$, $M_i$ is contained in any $S\in \Pe_f$ containing $i$.
+Since
+$\Pe^0_f$ is a chain, we have $M_{i_1}\subseteq M_{i_2}\subseteq\dots\subseteq M_{i_k}$,
+where $\{i_1,\dots,i_k\}=\cup \Pe_f$.  Let $S,T$ be two
+elements in $\Pe_f$ and assume that $i\in S\setminus T$. For any $j\in T$, we have either
+$M_i\subseteq M_j$ or $M_j\subseteq M_i$. In the first case, we get $i\in M_i\subseteq
+M_j\subseteq T$, which is not possible. Hence $M_j\subseteq M_i$ for all $j\in T$. It
+follows that $T=\cup_{j\in T} M_j\subseteq M_i\subseteq S$, so that $\Pe_f$ is a chain,
+and it is clear that then $\Pe_f=\Pe_f^0$. 
+
+If $\Pe_f$ is not a chain, then there are some type
+functions
+$f_1$, $f_2$ such that $f=f_1\otimes f_2$ or $f=(f_1\otimes f_2)^*$. Moreover, the ranks
+of $f_1$ and $f_2$ are at least 2. It follows that both $\Pe_{f_1\otimes f_2}$ and
+$\Pe_{(f_1\otimes f_2)^*}$ contain an element $S\oplus T$, where $S\in \Pe_{f_1}$, $T\in
+\Pe_{f_2}$ but none of the two elements is minimal. Then there is some $S'\in \Pe_{f_1}$
+and $T'\in \Pe_{f_2}$ such that $S'\oplus T$, $S\oplus T'\subsetneq S\oplus T$, so that no
+element of $S\oplus T$ is a label. Hence
+$S\oplus T\notin
+\Pe_f^0$, so that $\Pe_f\ne \Pe_f^0$. 
+
+(iii) The largest element  $T\in P^0_f$ must satisfy 
+\[
+\cup\Pe_f=\cup L_S \subseteq T\subseteq \cup \Pe_f.
+\]
+ If follows that $T=\cup\Pe_f $ is the largest element in $\Pe_f$. If $T\ne [n]$, then
+ clearly, $f$ has some free outputs. If $T=[n]$, then for any index $i\in L_T$, we have by
+ the proof of Proposition \ref{prop:pfinput} that
+ $M_{i,f^*}=\emptyset$, so that $i$ is a free output. 
+
+
+
+
+\end{proof}
+
+We next describe the basic constructions on type functions in terms of $\Pe_f^0$.
+
+
+\begin{lemma}\label{lemma:p0_constr} Let $f\in \Te_{n}$, $g\in \Te_{m}$. 
+\begin{enumerate}
+\item[(i)] If $S\in \Pe_f^0$ and $S\ne \emptyset$, $S\ne [n]$, then $S\in \Pe^0_{f^*}$. 
+ $\emptyset \in \Pe^0_f$ $\iff$ $\emptyset \notin \Pe^0_{f^*}$ and  $[n]\in
+\Pe^0_f$ $\iff$ $f^*$ has  free outputs.
+\item[(ii)] $\Pe^0_{f\otimes g}=\{S\oplus T:\ S\in \Pe_f^0,\ T\in \Pe_g^0, \ S\in
+\mathrm{Min}(\Pe_f) \text{ or } T\in \mathrm{Min}(\Pe_g)\}=: \Pe_f^0\oplus_{\min} \Pe_g^0$.
+
+\item[(iii)] The causal product $f\vtl g$ is connected with the ordinal sum $\oplus_\le$ of
+posets as follows:
+\begin{enumerate}
+\item[(a)] If $\Pe_f^0$ has no largest element, then
+\[
+\Pe^0_{f\vtl \beta}=\Pe_f^0\oplus_\le (\Pe_{\beta}^0\setminus \{\emptyset\})
+\]
+with same sets of labels.
+\item[(b)] If $[n]\in \Pe_f^0$, then 
+\[
+\Pe^0_{f\vtl \beta}=(\Pe_{f}^0\setminus \{[n]\})\oplus_\le \Pe_g^0
+\]
+and for the minimal elements $S\in \mathrm{Min}(\Pe_g^0)$ the labels are
+replaced by $L_{S,g}\cup L_{[n],f}$.
+\item[(c)] If $\Pe_f^0$ has a largest element other than $[n]$ and $\emptyset \in \Pe_g$,
+then 
+\[
+\Pe^0_{f\vtl \beta}=\Pe_f^0\oplus_\le (\Pe_{\beta}^0\setminus \{\emptyset\})
+\]
+and the free outputs of $f$ are added to the labels of elements in
+$\mathrm{Min}(\Pe_g^0\setminus\{\emptyset\})$.
+\item[(d)] If $\Pe_f^0$ has a largest element other than $[n]$ and $\emptyset \notin 
+\Pe_g$, then 
+\[
+\Pe^0_{\beta\vtl f} =\Pe_f^0\oplus_\le \{[n]\}\oplus_\le \Pe_g^0
+\]
+where the label set $L_{[n]}$ consists of free outputs of $f$, all other labels remain the
+same.
+
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+
+\end{lemma}
+
+
+\begin{proof} (i) First two assertions are clear, the last equivalence was proved in the
+proof of Lemma \ref{lemma:p0_basic}(iii).
+The statement (ii) follows from the proof of Proposition \ref{prop:pfinput}. 
+
+For (iii), we have by definition
+\[
+f\vtl g=\sum_{S\in \Pe_f\setminus\{[n]\}} \hat f_Sp_S+ (\hat f_{[n]}-1 + \hat
+g_\emptyset)p_{[n]}+\sum_{T\in \Pe_g\setminus \{\emptyset\}} \hat g_T p_{[n]\oplus T}.
+\]
+It follows that $\Pe^0_{f\vtl g}$ is in any case a subposet in the ordinal sum 
+\[
+(\Pe_f^0\setminus \{[n]\})\oplus_\le\{[n]\}\oplus_\le (\Pe_{g}^0\setminus\{\emptyset\})
+\]
+and the only question is whether it contains $[n]$ or not. 
+Under the assumption in (a), $[n]\notin \Pe_f^0$ and $f$ has no free outputs, so that even
+if $[n]\in \Pe_{f\vtl g}$, it certaily has an empty label set, so that $[n]\notin
+\Pe_{f\vtl g}^0$. Under the assumption in [(b)], $\Pe_{f\le g}$ contains $[n]$ only if
+$\emptyset\in \Pe_g$, in any case, the labels of $[n]$ have to be added to the minimal
+elements in $S$. Under the assumption in (c), $[n]\notin \Pe_{f\vtl g}$, but $f$ has some
+free outputs that appear for the first time in $[n]\oplus S$, $S\in
+\mathrm{Min}(\Pe_g^0\setminus \{\emptyset\})$. Finally, under the assumptions in (d)
+$[n]\in \Pe_{f\vtl g}$ is labelled by the free outputs of $f$.
+
+\end{proof}
+
+We now strat to identify certain chains in $\Pe_f^0$.
+
+\begin{lemma}\label{lemma:pf0_largest} Assume that $\Pe_f^0$ has a largest element.  Then
+either $f$ is a chain type, or there is some $h\in \Te_m$ such that $\Pe_h^0$ has  no largest element,
+and a chain type $\beta\in \Te_{n-m}$ such that up to a permutation, $f=h\vtl \beta$.
+
+\end{lemma}
+
+
+
+\begin{proof} Let $T$ be the largest element in $\Pe_f^0$. If $T=[n]$, then by Lemma
+\ref{lemma:p0_constr}(i), $f^*$ has some free outputs. Hence, up to a permutation,
+$f^*=h_1\otimes 1_{k_1}$ for some $h_1\in \Te_{n-k_1}$ with no free outputs. It follows that
+$f=(h_1\otimes 1_{k_1})^*=(h_1\vtl 1_{k_1})^*=h_1^*\vtl p_{k_1}$. 
+
+If $T\ne [n]$, then, since $T$
+is also the largest element in $\Pe_f$, we see that $f$ has free outputs, so that (up to a
+permutation)
+$f=h_1\otimes 1_{k_1}=h_1\vtl 1_{\k_1}$, where $h_1\in \Te_{n-k_1}$ is a type function with no
+free outputs. Clearly, $\Pe_{h_1}=\Pe_f$ and $\Pe_{h_1}^0=\Pe_f^0$, so that $T$ is the largest
+element in $\Pe^0_{h_1}$, but this time $T=[n-k_1]$, so that we may use the first part of the
+proof. We obtain that there is some $k_2$ and a type function  $h_2\in\Te_{n-k_1-k_2}$
+with no free outputs such that 
+\[
+f=h_1\vtl 1_{k_1}=h_2^*\vtl p_{k_2}\vtl 1_{k_1}
+\]
+So far, we have written $f$ in the form $f=h\vtl \beta$, where $\beta$ is a chain type and
+$h\in \Te_{n-k}$ for $k>0$ is such that $h^*$ has no free outputs. It follows that if
+$\Pe_h^0$ has a largest element, then it cannot be equal to $[n-k]$. Hence $h$ must have
+some free outputs, and we may proceed as above, replacing $f$ by $h$. Since $n$ is decreasing at each step, we
+ either get to $n-k \le 3$, in which case $h$ must be a chain and therefore also $f=h\vtl
+ \beta$ is a chain, or $\Pe^0_h$ has no largest element.
+
+
+\end{proof}
+
+%\begin{lemma}\label{lemma:pf0_smallest} Let $f\in \Te_n$ be such that either $f$ or $f^*$
+%have a free input. Then either $f$ is a chain type, or there is some chain type $\beta\in
+%\Te_k$ and some $h\in \Te_{n-k}$ such that $h$ nor $h^*$ has free inputs and $f=\beta\vtl
+%h$. Equivalently, $\Pe_h^0$ and $\Pe_{h^*}^0$ have no smallest element other than,
+%possibly,
+%$\emptyset$.
+%
+%\end{lemma}
+%
+%
+%\begin{proof} Assume  $\{S\}=\mathrm{Min}(\Pe_f^0)=\mathrm{Min}(P_f)$, then $S=\cap\Pe_f$ is the set
+%of free inputs of $f$. If $S\ne \emptyset$, then up to a permutation, $f=p_k\otimes
+%h=p_k\vtl h$,
+%where $k=|S|$ and $h\in \Pe_{n-k}$ has no free inputs. On the other hand, if $f^*$ has a
+%free input, then, similarly, $f^*=p_k\vtl g$ for some $g\in \Te_{n-k}$ with no free
+%inputs, hence $f=(p_k\vtl g)^*=1_k\vtl g^*$. Repeating the process, we get the result
+%after finitely many steps.
+%
+%
+%\end{proof}
+%
+
+
+\begin{lemma}\label{lemma:p0_maximal} Let $T\in \mathrm{Max}(\Pe^0_f)$ and let
+$T^{\downarrow,f}:=\{S\in \Pe_f, S\le T\}$. Put
+\[
+\bar \Pe_{T,f}:=\begin{dcases}  T^{\downarrow,f} & \text{if } \rho_f(T) \text{ is even}\\
+  T^{\downarrow,f}\setminus T & \text{otherwise}.
+  \end{dcases}
+\]
+Then there is some type function $g\in \Te_{|T|}$ and a permutation $\sigma\in \permut_{n}$
+such that $\Pe_g=\sigma^{-1}(\bar \Pe_{T,f})$. 
+\end{lemma}
+
+\begin{proof} %Up to a permutation, we may assume that $T=[m]$ for some $m\le n$. 
+%The assertion is rather trivial if $T$ is the largest element in $\Pe_f^0$, so we will assume
+%that this is not the case.
+%Let $m=|T|$ and let $\sigma\in \permut_n$ be a permutation such that $\sigma^{-1}(T)=[m]$. 
+%We have $\Pe_{f\circ \sigma}=\sigma^{-1}(\Pe_f)$, and since $S\mapsto \sigma^{-1}(S)$ is
+%an isomorphism of posets, we see that $[m]$ is a maximal element in $\Pe_{f\circ
+%\sigma}^0$. We also clearly have $\bar \Pe_{[m],f\circ\sigma}=\sigma^{-1}(\bar
+%\Pe_{T,f})$. By replacing $f$ be $f\circ \sigma$, we may assume that $T=[m]$, for some
+%$m<n$.
+%
+We will proceed by induction on $n$. The assertion is trivial if $f$ is a chain type, so it
+holds for $n\le 3$. So assume it holds for all $m<n$ and let $f\in \Te_n$. If
+$f=f_1\otimes f_2$, then $T=T_1\oplus T_2$, where, say, $T_1\in \mathrm{Min}(\Pe_{f_1})$
+and $T_2\in \mathrm{Max}(\Pe_{f_2}^0)$. It follows that 
+\[
+\bar \Pe_{T,f}=T_1\oplus \bar\Pe_{T_2,f_2}.
+\]
+By the induction assumption, there is some $\rho\in \permut_{n_2}$ such that
+$\rho^{-1}(\bar \Pe_{T_2,f_2})=\Pe_h$ for some type function $h\in
+\Te_{|T_2|}$. Put $\sigma= id_{n_1}\oplus \rho$, then
+$\sigma^{-1}(\bar\Pe_{T,f})=T_1\oplus\Pe_h=\Pe_g$ with $g\in \Te_{|T|}$, $g=p_{T_1}\otimes h$.
+
+Assume next that $f=(f_1\otimes f_2)^*$.  We may assume that 
+ $T\ne \emptyset$ and $T\ne [n]$, since otherwise the assertion is rather trivial. We may
+ also assume that $f$ has no free outputs, since otherwise $f=h\otimes 1$ and we may
+ replace $f$ by $h$. Then $T\in \mathrm{Max}(\Pe^0_{f^*})$. 
+
+Let $\rho_f(T)$ be even, so that the labels of $T$ correspond to inputs. Then
+$\rho_{f^*}(T)$ is odd. Since $f^*$ has the desired property by the first part of the
+proof, there is some $g\in \Te_{|T|}$ and $\sigma\in \permut_n$ such that
+\[
+\Pe_g=\sigma^{-1}(\bar \Pe_{T,f^*})=\sigma^{-1}(T^{\downarrow,f^*}).
+\]
+Since $g\in \Te_{|T|}$ and $\sigma^{-1}(T)\in \Pe_g$, we must have $\sigma^{-1}(T)=[|T|]$, 
+so $\sigma^{-1}(T)\notin \Pe_{g^*}$ and $\emptyset \in \Pe_{g^*}$ if and only if
+$\emptyset \notin \Pe_g$. It is now easy to see that $\Pe_{g^*}=\sigma^{-1}(\bar
+\Pe_{T,f})$. The case when $\rho_f(T)$ is
+odd is proved similarly.
+
+
+\end{proof}
+
+
+\begin{lemma}\label{lemma:struct} 
+Assume that $f\in \Te_n$ and let  $S,T\in \mathrm{Max}(\Pe_f^0)$, $S\ne T$.  Then we have the following possibilities:
+\begin{enumerate}
+\item $\bar \Pe_{T,f}\cap \bar \Pe_{S,f}=\emptyset$,
+\item $\bar \Pe_{T,f}\cap \bar \Pe_{S,f}=\{\emptyset\}$,
+\item there is a chain $U_1\subsetneq \dots \subsetneq U_K\subseteq [n]$, type
+functions $h_1\in \Te_{m_1}$, $h_2\in \Te_{m_2}$  and permutations $\sigma_1,\sigma_2\in
+\permut_n$ such that
+\begin{itemize}
+\item $\bar \Pe_{S,f}\cap \bar \Pe_{T,f}=\{U_1,\dots, U_K\}$,
+\item $\sigma^{-1}_1|_{U_K}=\sigma^{-1}_2|_{U_K}$,
+\item $\Pe_{\beta\vtl h_1}=\sigma^{-1}(\bar \Pe_{S,f})$, $\Pe_{\beta\vtl
+h_2}=\sigma^{-1}(\bar \Pe_{T,f})$, where $|S|-m_1=|T|-m_2=: k=|U_K|$ and
+$\beta\in \Te_k$ is a chain type, with the corresponding chain $\sigma_1^{-1}(U_1)\subsetneq \dots
+\subsetneq \sigma_1^{-1}(U_K)$ if $K$ is odd and $\sigma_1^{-1}(U_1)\subsetneq \dots
+\subsetneq \sigma_1^{-1}(U_{K-1})$
+if $K$ is even.
+\end{itemize}
+
+\end{enumerate}
+
+
+
+
+
+\end{lemma}
+
+
+
+\begin{proof} Note that $\Pe_f^0$ has no largest element, so that by Lemmas
+\ref{lemma:p0_basic}(iii) and  \ref{lemma:p0_constr}(i), $[n]$ is not contained in
+$\Pe_f^0$ nor $\Pe_{f^*}^0$. We will assume that $\emptyset \in \Pe_{f}$, in which case 
+$\Pe_{f^*}^0=\Pe_f^0\setminus \{\emptyset\}$ and hence
+$\mathrm{Max}(\Pe^0_f)=\mathrm{Max}(\Pe^0_{f^*})$. The sets $\bar \Pe_{T,f}$ and $\bar
+\Pe_{T,f^*}$ differ only by addition/removal of the least element
+$\emptyset$ and the largest element $T$, similarly for $S$. Hence 
+$\bar\Pe_{T,f^*}\cap \bar \Pe_{S,f^*}=\left(\bar\Pe_{T,f}\cap \bar
+\Pe_{S,f}\right)\setminus \{\emptyset\}$. The case  $\emptyset \in \Pe_{f^*}$
+follows easily by duality. 
+
+
+We will  proceed by induction on $n$. The smallest $n$ for which there is a function $f\in 
+\Te_n$ such that $\Pe_f^0$ has no largest element is $n=4$, where the only possibilities,
+up to permutations, 
+are the functions $f=\gamma_2\otimes \gamma_2$ and its conjugate $f^*$, see Example
+\ref{exm:motyl}.
+Here the two maximal points in $\Pe_f^0$ and $\Pe_{f^*}^0$ are $S=\{1,2\}$
+and $T=\{3,4\}$, and $\bar \Pe_{S,f}\cap \bar \Pe_{T,f}=\{\emptyset\}$, $\bar
+\Pe_{S,f^*}\cap \bar \Pe_{T,f^*}=\emptyset$. 
+
+
+Now assume that the statement holds for all $m<n$ and let $f\in \Te_n$. 
+Let $U\in \bar \Pe_{S,f}\cap \bar \Pe_{T,f}$. 
+By construction, we have either $f=f_1\otimes f_2$ or $f^*=(f_1\otimes f_2)$, for some
+type functions $f_1\in \Te_{l_1}$ and $f_2\in \Te_{l_2}$. So assume that $f=f_1\otimes
+f_2$, then $\Pe_f=\Pe_{f_1}\times \Pe_{f_2}$
+and since $\emptyset \in \Pe_f$, we see
+that both $\Pe_{f_1}$ and $\Pe_{f_2}$ must contain $\emptyset$. Since
+\[
+\Pe_f^0=\Pe_{f_1}^0\oplus_{\min} \Pe_{f_2}^0=\Pe_{f_1}^0 \cup \left(n_1+
+\Pe_{f_2}^0\right)
+\]
+It follows that $T$ is
+either a maximal element in $\Pe_{f_1}^0$ or $T=n_1+T'$ for some $T'$ in $\Pe_{f_2}^0$, similarly for $S$. Assume
+that $T\in \mathrm{Max}(\Pe_{f_1}^0)$ and $S=n_1+S'$ for $S'\in \mathrm{Max}(\Pe_{f_2}^0)$, then the only
+possibility is that $U=\emptyset$, so that
+\[
+\bar\Pe_{T,f}\cap \bar\Pe_{S,f}=\{\emptyset\}.
+\]
+If both $S,T\in \mathrm{Max}(\Pe_{f_1}^0)$, then necessarily $\bar \Pe_{T,f},\bar \Pe_{S,f}\subseteq
+\Pe_{f_1}$, so that $\bar \Pe_{T,f}=\bar \Pe_{T,f_1}$ and $\bar \Pe_{S,f}=\bar
+\Pe_{S,f_1}$.
+This reduces the problem to a type function  with smaller $n$ and the assertion follows by
+the induction assumption. The case $S,T\in n_1+\mathrm{Max}(\Pe_{f_2})$ is treated
+similarly.
+
+Next, assume that $f^*=f_1\otimes f_2$, so that $\Pe_{f^*}^0=\Pe_{f_1}^0\oplus_{\min}
+\Pe_{f_2}^0$. Since $S,T\in \mathrm{Max}(\Pe_{f}^0)=\mathrm{Max}(\Pe_{f^*}^0)$, we see
+that $S=S_1\oplus S_2$, $T=T_1\oplus T_2$, where we may assume some of the following cases:
+\begin{enumerate}
+\item $S_1\in \mathrm{Max}(\Pe_{f_1}^0)$, $S_2\in \mathrm{Min}(\Pe_{f_2})$ and $T_1\in
+\mathrm{Min}(\Pe_{f_1})$, $T_2\in \mathrm{Max}(\Pe_{f_2}^0)$,
+\item $S_1,T_1\in  \mathrm{Max}(\Pe_{f_1}^0)$, $S_2,T_2\in \mathrm{Min}(\Pe_{f_2})$,
+\item $S_1,T_2\in \mathrm{Min}(\Pe_{f_1})$, $S_2,T_2\in  \mathrm{Max}(\Pe_{f_2}^0)$,
+\end{enumerate}
+note that we have $\emptyset \notin \Pe_{f^*}$, so that at least one of
+$\mathrm{Min}(\Pe_{f_1})$ or $\mathrm{Min}(\Pe_{f_2})$ is different from $\{\emptyset\}$.
+Since $U\in \Pe_f$, $U\subseteq S\cap T\subsetneq [n]$,  we have either $U=\emptyset$ or $U\in
+\Pe_{f^*}$, in which case $U=U_1\oplus U_2$ for $U_1\in \Pe_{f_1}$, $U_2\in \Pe_{f_2}$. Assume $U\ne \emptyset$. 
+In the case 1 above, we necessarily have 
+$U=T_1\oplus S_2\in \mathrm{Min}(\Pe_{f^*})$. This gives us
+\[
+\bar\Pe_{T,f}\cap \bar\Pe_{S,f}=\{\emptyset, T_1\oplus S_2\},
+\]
+which is a two-element chain. It is easy to see that any element  $\bar \Pe_{S,f^*}$ must
+contain $T_1\oplus S_2$. By Lemma \ref{lemma:p0_maximal} and its proof, there are $g_1\in
+\Te_{|S|}$,
+and $\tau_1\in \permut_n$ such that $\tau_1^{-1}(\bar
+\Pe_{S,f})=\Pe_{g_1}$, and 
+we have
+$\tau_1^{-1}(\bar
+\Pe_{S,f^*})=\Pe_{g_1^*}$. It follows that $\tau1^{-1}(T_1\oplus S_2)$ are free inputs of $g_1^*$.
+Hence with $k:=|T_1|+ |S_2|$
+there is some type function $h_1\in \Te_{|S|-k}$ and a permutation $\rho_1$ such that
+$\rho_1^{-1}(\tau_1^{-1}(T_1\oplus S_2))=[k]$ and 
+ $g_1^*\circ\rho_1=p_k\otimes h_1=p_k\vtl h_1$. It follows that $g_1\circ\rho_1=1_k\vtl
+ h^*_1$ and 
+ \[
+\Pe_{1_k\vtl h_1^*}=\rho_1^{-1}(\Pe_{g_1})=(\tau_1\circ \rho_1)^{-1}(\bar \Pe_{S,f}).
+ \]
+Putting $\sigma_1=\tau_1\circ\rho_1$, we get $\sigma_1^{-1}(T_1\oplus S_2)=[k]$. In a
+similar manner, we obtain a type function $h_2\in \Te_{|T|-k}$ and a permutation
+$\sigma_2\in \permut_n$ such that $\sigma_2^{-1}(T_1\oplus S_2)=[k]$ and 
+\[
+\Pe_{1_k\vtl h_2^*}=\sigma_2^{-1}(\bar \Pe_{T,f}).
+\]
+ Since $1_k$ is a chain type
+for the chain $U_1=\emptyset$, the statement follows. 
+
+In the case 2, , we have $U_1\subseteq T_1,
+S_1$ and $U_2\subseteq S_2,T_2$, so that $U_2=S_2=T_2$. 
+It follows that $\bar \Pe_{S,f^*}=\bar \Pe_{S_1,f_1}\oplus U_2$ and $\bar \Pe_{T,f^*}=\bar
+\Pe_{T_1,f_1}\oplus U_2$, so that in this case,
+\[
+\bar\Pe_{S,f}\cap \bar\Pe_{T,f}=\{\emptyset\}\cup \left(\bar \Pe_{S_1,f_1}\cap \bar
+\Pe_{T_1,f_1}\right)\oplus U_2.
+\]
+Since $f_1$ satisfies the induction assumption, there is a chain $V_1\subsetneq \dots
+\subsetneq V_K$ such that 
+\[
+\bar\Pe_{S,f}\cap \bar\Pe_{T,f}=\{\emptyset\subsetneq V_1\oplus U_2\subsetneq \dots
+\subsetneq V_K\oplus U_2\}
+\]
+(note that we cannot have both $V_1$ and $U_2$ empty). Moreover, there is a chain type
+$\gamma \in \Te_{k'}$, $k'=|V_K|$ and functions $r_i\in \Te_{n_i'}$, $q_i\in \Te_{m_i'}$
+such that $n_1'-m_1'=n_2'-m_2'=k'$ such that
+\[
+\bar \Pe_{S_1,f_1}=\Pe_{r_1},\quad \bar \Pe_{T_1,f_1}=\Pe_{r_2},\quad r_1=\gamma\vtl
+q_1,\quad r_2=\gamma \vtl q_2
+\]
+With $l=|U_2|$, we have up to permutations that $g^*_1=p_l\otimes r_1=p_l\vtl \gamma \vtl
+q_1$ and $g_2^*=p_l\otimes r_2=p_l\vtl \gamma \vtl q_2$, so that 
+\[
+g_1=1_l\vtl \gamma^*\vtl q^*_1,\qquad g_1=1_l\vtl \gamma^*\vtl q_2^*.
+\]
+Assume that $K$ is odd, then the chain corresponding to $\gamma$ is $V_1\subsetneq
+\dots\subsetneq V_K$, and the chain corresponding to $1_l\vtl \gamma^*$ is 
+\[
+\emptyset \subsetneq V_1\oplus U_2\subsetneq \dots
+\subsetneq V_{K-1}\oplus U_2
+\]
+since up to permutation, $V_K\oplus U_K=[l+k']$. The case $K$ is even is obtained
+similarly.
+
+
+\end{proof}
+
+
+%\end{lemma}
+
+
 
 ////
 
