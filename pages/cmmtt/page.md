@@ -46,6 +46,20 @@ title: Committees - defences, exams, etc.
 
 ## Dizertačná skúška
 
+* **Yuri Chernyak**     
+
+     - date, time: 26.9.2024, 11:00    
+     - place: FU SAV    
+     - supervisor: M. Plesch, FU SAV    
+     - thesis: Resource Efficient Non-Gradient Optimization Methods for Variational Quantum Eigensolvers    
+
+
+
+    [menovaci dekret](cmmtt/chernyak.pdf)    
+    [minimovka](cmmtt/chernyak_min_thesis.pdf)    
+    [report](cmmtt/chernyak_minreport.pdt)    
+
+
 
 * **Soham Sau**
 

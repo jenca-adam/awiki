@@ -1257,23 +1257,26 @@ We will visualise the poset $\Pe_f$  by its Hasse diagram, see Section \ref{sec:
 introduce {\em labels} for the elements of $\Pe_f$ in the following way. 
 Let $f\in \Te_n$. For  $S\in \Pe_f$, put
 \[
-L_S:=\{i\in [n]\ : \ i\in S,\ \forall S'\subsetneq S, i\notin S'\},\qquad
-L_\emptyset:=\{0\}\text{ (if $\emptyset\in \Pe_f$).}
+L_S:=\{i\in [n]\ : \ i\in S,\ \forall S'\subsetneq S, i\notin S'\}.
 \]
 In other words, $i$ is a label for $S$ if $S$ is a minimal element in the subposet of
-elements containing $i$ in  $\Pe_f$. We also put
+elements containing $i$ in  $\Pe_f$. 
+Note that we have
+\[
+\forall S\in \Pe_f,\quad S=\cup_{S'\subseteq S} L_{S'}\quad \text{ and }\cup\{L_S, \ S\in
+\Pe_f\}=\cup \Pe_f.
+\]
+It follows that $f\in \Te_n$ is fully determined by the order relation on $\Pe_f$ and the
+label sets. 
+
+We also put
 \[
 \Me_i:=\{S,\ i\in L_S\}.
 \]
-We also use the notation $L_{S,f}$ and $\Me_{i,f}$ if the function $f$ has to be
+We will use the notation $L_{S,f}$ and $\Me_{i,f}$ if the function $f$ has to be
 specified. It is clear from this definition that $\Me_i=\emptyset$ if and only if $i$ is
 not contained in any label and  if $\Me_i$ is nonempty, it is an antichain in
-$\Pe_f$.   Note also that we have
-\[
-\forall S\in \Pe_f,\quad S=\cup_{S'\subseteq S} L_{S'}\quad \text{ and }\cup\{L_S, \ S\in \Pe_f\}=\cup \Pe_f.
-\]
-
-
+$\Pe_f$.   
 In the Hasse diagram, we label any element  $S\in \Pe_f$ by  $L_S$, with no label if
 $L_S=\emptyset$.
 
@@ -1566,14 +1569,15 @@ f_\emptyset)p_{[n_2]}+\sum_{\emptyset \ne S\subseteq [n_1]} \hat f_S p_{S\oplus 
 \]
 and
 \[
-p_{n_2} \vtl f=p_{n_2}\otimes f \le f\vtl p_{n_2}=\sum_{S\subsetneq [n]} \hat
+p_{n_2} \vtl f= f \otimes p_{n_2}\le f\vtl p_{n_2}=\sum_{S\subsetneq [n_1]} \hat
 f_Sp_S+(\hat f_{[n_1]}-1)p_{[n_1]}+p_{n_1+n_2}.
 \]
 In particular,
 \[
 (p_{n_1}\otimes 1_{n_2})^*=1_{n_1}\vtl p_{n_2}=1-p_{[n_1]}+p_{n_1+n_2}
 \]
-is the chain type for $\{\emptyset\subsetneq [n_1]\subsetneq [n_1+n_2]\}$.
+is the chain type for $\{\emptyset\subsetneq [n_1]\subsetneq [n_1+n_2]\}$. Similar
+properties hold for $p_{n_1}$, $1_{n_1}$ and $f\in \Te_{n_2}$.
 \end{lemma}
 
 \begin{proof}
@@ -1628,6 +1632,11 @@ Similarly,
 
 \end{prop}
 
+Note that this shows that as posets, $\Pe_{f\vtl g}$ is isomorphic to the ordinal sum
+$(\Pe_f\setminus\{[n]\}) \star \{\bullet\}\star (\Pe_g\setminus\{\emptyset\})$ 
+resp. $(\Pe_f\setminus\{[n]\})\star (\Pe_g\setminus\{\emptyset\})$, 
+here $\{\bullet\}$ denotes the one-element poset. Similarly for $\Pe_{g\vtl f}$.
+
 
 \begin{proof} By definition of the causal product, we have  
 \[
@@ -1677,7 +1686,7 @@ and
 1_{n_2}\vtl f=(p_{n_2}\vtl f^*)^*=(f\otimes p_{n_2})^*\in \Te_{n_1+n_2}.
 \]
 Assume that  $T_1=[n_2]$, then $\beta=p_{n_2}$ and the assertion follows by duality. 
-In general,  up to a permutation, we have $\beta=p_{m_1}\otimes
+If $\emptyset\ne T_1\subsetneq [n_2]$, then up to a permutation, we have $\beta=p_{m_1}\otimes
 1_{m_2}=p_{m_1}\vtl 1_{m_2}$ for $m_1=|T_1|$, $m_1+m_2=n_2$. Then 
 \[
 \beta\vtl f=p_{m_1}\vtl (1_{m_2}\vtl f),\quad f\vtl \beta=(f\vtl p_{m_1})\vtl 1_{m_2} \in
