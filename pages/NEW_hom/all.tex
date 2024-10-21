@@ -1922,21 +1922,14 @@ Finally, putting $\rho=\rho_1\otimes\rho_2$ finishes the proof.
 
 %\subsubsection{The structure of $\Pe_f$ and $\Pe_f^0$}
 
-It is clear that the chains in Theorem \ref{thm:structure} are not given uniquely, in
-particular, some chains can be decomposed as a  concatenation of chains.
+It is clear that the chains in Theorem \ref{thm:structure} are not given uniquely, for
+example, some chains can be decomposed as a  concatenation of chains.
 We will show that some choice of the chains $\beta_1,\dots,\beta_k$  can be found from the
-labelled poset  $\Pe_f$.
-
-
-
-
-
-So let  $f\in \Te_n$ and let $\Pe_f^0\subseteq \Pe_f$ be the subposet consisting
+labelled poset  $\Pe_f$. For this, let $\Pe_f^0\subseteq \Pe_f$ be the subposet consisting
 of  all  labelled elements and possibly $\emptyset$, that is
 \[
 \Pe_f^0=\{S\in \Pe_f, \ L_{S,f}\ne \emptyset \text{ or } S=\emptyset\}.
 \]
-As for $\Pe_f$, $\Pe_f^0$ is fully determined by its order structure and the label sets.
 
 ****
 For a finite poset $\Pe$, we denote by $\mathrm{Min}(\Pe)$ the set of minimal elements of
@@ -1948,10 +1941,9 @@ The following lemma collects some basic properties of $\Pe_f^0$.
 
 \begin{lemma}\label{lemma:p0_basic} Let $f\in \Te_n$.
 \begin{enumerate}
-\item[(i)] $\mathsf{s}\in \mathrm{Min}(\Pe_f^0)$ $\iff$ $S\in \mathrm{Min}(\Pe_f)$.
-\item[(ii)] $\Pe_f^0$ is a chain $\iff$  $\Pe_f$ is a chain $\iff$  $\Pe_f^0= \Pe_f$.
+\item[(i)] $\Pe_f^0$ is a chain $\iff$  $\Pe_f$ is a chain $\iff$  $\Pe_f^0= \Pe_f$.
 
-\item[(iii)] $\Pe^0_f$ has a largest element if and only if $f$ or $f^*$ has a free
+\item[(ii)] $\Pe^0_f$ has a largest element if and only if $f$ or $f^*$ has a free
 output. In this case  the corresponding set is the largest element in $\Pe_f$. 
 
 \end{enumerate}
@@ -1959,9 +1951,7 @@ output. In this case  the corresponding set is the largest element in $\Pe_f$.
 
 
 \begin{proof} 
-(i) Obvious. 
-
-(ii) Assume that $\Pe^0_f$ is a chain, so that, in particular,
+(i) Assume that $\Pe^0_f$ is a chain, so that, in particular,
  $\Me_{i,f}$ is a singleton or empty for any $i\in [n]$. In the first case, we put
  $\Me_{i,f}=\{M_i\}$, by defintion of $\Me_{i,f}$, $M_i$ is contained in any $S\in \Pe_f$ containing $i$.
 Since
@@ -1984,7 +1974,7 @@ element of $S\oplus T$ is a label. Hence
 $S\oplus T\notin
 \Pe_f^0$, so that $\Pe_f\ne \Pe_f^0$. 
 
-(iii) The largest element  $T\in P^0_f$ must satisfy 
+(ii) The largest element  $T\in P^0_f$ must satisfy 
 \[
 \cup\Pe_f=\cup L_S \subseteq T\subseteq \cup \Pe_f.
 \]
@@ -1998,71 +1988,71 @@ $S\oplus T\notin
 
 \end{proof}
 
-We next describe the basic constructions on type functions in terms of $\Pe_f^0$.
-
-
-\begin{lemma}\label{lemma:p0_constr} Let $f\in \Te_{n}$, $g\in \Te_{m}$. 
-\begin{enumerate}
-\item[(i)] If $S\in \Pe_f^0$ and $S\ne \emptyset$, $S\ne [n]$, then $S\in \Pe^0_{f^*}$. 
- $\emptyset \in \Pe^0_f$ $\iff$ $\emptyset \notin \Pe^0_{f^*}$ and  $[n]\in
-\Pe^0_f$ $\iff$ $f^*$ has  free outputs.
-\item[(ii)] $\Pe^0_{f\otimes g}=\{S\oplus T:\ S\in \Pe_f^0,\ T\in \Pe_g^0, \ S\in
-\mathrm{Min}(\Pe_f) \text{ or } T\in \mathrm{Min}(\Pe_g)\}=: \Pe_f^0\oplus_{\min} \Pe_g^0$.
-
-\item[(iii)] The causal product $f\vtl g$ is connected with the ordinal sum $\star$ of
-posets as follows:
-\begin{enumerate}
-\item[(a)] If $\Pe_f^0$ has no largest element, then
-\[
-\Pe^0_{f\vtl g}=\Pe_f^0\star (\Pe_{g}^0\setminus \{\emptyset\})
-\]
-with same sets of labels.
-\item[(b)] If $[n]\in \Pe_f^0$, then 
-\[
-\Pe^0_{f\vtl g}=(\Pe_{f}^0\setminus \{[n]\})\star \Pe_g^0
-\]
-and for the minimal elements $S\in \mathrm{Min}(\Pe_g^0)$ the labels are
-replaced by $L_{S,g}\cup L_{[n],f}$.
-\item[(c)] If $\Pe_f^0$ has a largest element other than $[n]$ and $\emptyset \in \Pe_g$,
-then 
-\[
-\Pe^0_{f\vtl g}=\Pe_f^0\star(\Pe_{g}^0\setminus \{\emptyset\})
-\]
-and the free outputs of $f$ are added to the labels of elements in
-$\mathrm{Min}(\Pe_g^0\setminus\{\emptyset\})$.
-\item[(d)] If $\Pe_f^0$ has a largest element other than $[n]$ and $\emptyset \notin 
-\Pe_g$, then 
-\[
-\Pe^0_{f\vtl g} =\Pe_f^0\star \{[n]\}\star\Pe_g^0
-\]
-where the label set $L_{[n]}$ consists of free outputs of $f$, all other labels remain the
-same.
-
-\end{enumerate}
-
-
-
-\end{enumerate}
-
-
-\end{lemma}
-
-
-\begin{proof} (i) First two assertions are clear, the last equivalence was proved in the
-proof of Lemma \ref{lemma:p0_basic}(iii).
-The statement (ii) follows from the proof of Proposition \ref{prop:pfinput}. 
-
-For (iii) we use Proposition \ref{prop:vtl_ordinal}.
-Under the assumption in (a), $[n]\notin \Pe_f^0$ and $f$ has no free outputs, so that even
-if $[n]\in \Pe_{f\vtl g}$, it certaily has an empty label set, so that $[n]\notin
-\Pe_{f\vtl g}^0$. Under the assumption in [(b)], $\Pe_{f\le g}$ contains $[n]$ only if
-$\emptyset\in \Pe_g$, in any case, the labels of $[n]$ have to be added to the minimal
-elements in $\Pe_g^0$. Under the assumption in (c), $[n]\notin \Pe_{f\vtl g}$, but $f$ has some
-free outputs that appear for the first time in $[n]\oplus S$, $S\in
-\mathrm{Min}(\Pe_g^0\setminus \{\emptyset\})$. Finally, under the assumptions in (d)
-$[n]\in \Pe_{f\vtl g}$ is labelled by the free outputs of $f$.
-
-\end{proof}
+%We next describe the basic constructions on type functions in terms of $\Pe_f^0$.
+%
+%
+%\begin{lemma}\label{lemma:p0_constr} Let $f\in \Te_{n}$, $g\in \Te_{m}$. 
+%\begin{enumerate}
+%\item[(i)] If $S\in \Pe_f^0$ and $S\ne \emptyset$, $S\ne [n]$, then $S\in \Pe^0_{f^*}$. 
+% $\emptyset \in \Pe^0_f$ $\iff$ $\emptyset \notin \Pe^0_{f^*}$ and  $[n]\in
+%\Pe^0_f$ $\iff$ $f^*$ has  free outputs.
+%\item[(ii)] $\Pe^0_{f\otimes g}=\{S\oplus T:\ S\in \Pe_f^0,\ T\in \Pe_g^0, \ S\in
+%\mathrm{Min}(\Pe_f) \text{ or } T\in \mathrm{Min}(\Pe_g)\}=: \Pe_f^0\oplus_{\min} \Pe_g^0$.
+%
+%\item[(iii)] The causal product $f\vtl g$ is connected with the ordinal sum $\star$ of
+%posets as follows:
+%\begin{enumerate}
+%\item[(a)] If $\Pe_f^0$ has no largest element, then
+%\[
+%\Pe^0_{f\vtl g}=\Pe_f^0\star (\Pe_{g}^0\setminus \{\emptyset\})
+%\]
+%with same sets of labels.
+%\item[(b)] If $[n]\in \Pe_f^0$, then 
+%\[
+%\Pe^0_{f\vtl g}=(\Pe_{f}^0\setminus \{[n]\})\star \Pe_g^0
+%\]
+%and for the minimal elements $S\in \mathrm{Min}(\Pe_g^0)$ the labels are
+%replaced by $L_{S,g}\cup L_{[n],f}$.
+%\item[(c)] If $\Pe_f^0$ has a largest element other than $[n]$ and $\emptyset \in \Pe_g$,
+%then 
+%\[
+%\Pe^0_{f\vtl g}=\Pe_f^0\star(\Pe_{g}^0\setminus \{\emptyset\})
+%\]
+%and the free outputs of $f$ are added to the labels of elements in
+%$\mathrm{Min}(\Pe_g^0\setminus\{\emptyset\})$.
+%\item[(d)] If $\Pe_f^0$ has a largest element other than $[n]$ and $\emptyset \notin 
+%\Pe_g$, then 
+%\[
+%\Pe^0_{f\vtl g} =\Pe_f^0\star \{[n]\}\star\Pe_g^0
+%\]
+%where the label set $L_{[n]}$ consists of free outputs of $f$, all other labels remain the
+%same.
+%
+%\end{enumerate}
+%
+%
+%
+%\end{enumerate}
+%
+%
+%\end{lemma}
+%
+%
+%\begin{proof} (i) First two assertions are clear, the last equivalence was proved in the
+%proof of Lemma \ref{lemma:p0_basic}(iii).
+%The statement (ii) follows from the proof of Proposition \ref{prop:pfinput}. 
+%
+%For (iii) we use Proposition \ref{prop:vtl_ordinal}.
+%Under the assumption in (a), $[n]\notin \Pe_f^0$ and $f$ has no free outputs, so that even
+%if $[n]\in \Pe_{f\vtl g}$, it certaily has an empty label set, so that $[n]\notin
+%\Pe_{f\vtl g}^0$. Under the assumption in [(b)], $\Pe_{f\le g}$ contains $[n]$ only if
+%$\emptyset\in \Pe_g$, in any case, the labels of $[n]$ have to be added to the minimal
+%elements in $\Pe_g^0$. Under the assumption in (c), $[n]\notin \Pe_{f\vtl g}$, but $f$ has some
+%free outputs that appear for the first time in $[n]\oplus S$, $S\in
+%\mathrm{Min}(\Pe_g^0\setminus \{\emptyset\})$. Finally, under the assumptions in (d)
+%$[n]\in \Pe_{f\vtl g}$ is labelled by the free outputs of $f$.
+%
+%\end{proof}
 
 We now  identify certain chains in $\Pe_f^0$.
 
@@ -2075,7 +2065,7 @@ and a chain type $\beta\in \Te_{n-m}$ such that up to a permutation, $f=h\vtl \b
 
 
 \begin{proof} Let $T$ be the largest element in $\Pe_f^0$. If $T=[n]$, then by Lemma
-\ref{lemma:p0_constr}(i), $f^*$ has some free outputs. Hence, up to a permutation,
+\ref{lemma:p0_basic}(ii) and its proof, $f^*$ has some free outputs. Hence, up to a permutation,
 $f^*=h_1\otimes 1_{k_1}$ for some $h_1\in \Te_{n-k_1}$ with no free outputs. It follows that
 $f=(h_1\otimes 1_{k_1})^*=(h_1\vtl 1_{k_1})^*=h_1^*\vtl p_{k_1}$. 
 
@@ -2100,27 +2090,27 @@ some free outputs, and we may proceed as above, replacing $f$ by $h$. Since $n$ 
 
 \end{proof}
 
-%\begin{lemma}\label{lemma:pf0_smallest} Let $f\in \Te_n$ be such that either $f$ or $f^*$
-%have a free input. Then either $f$ is a chain type, or there is some chain type $\beta\in
-%\Te_k$ and some $h\in \Te_{n-k}$ such that $h$ nor $h^*$ has free inputs and $f=\beta\vtl
-%h$. Equivalently, $\Pe_h^0$ and $\Pe_{h^*}^0$ have no smallest element other than,
-%possibly,
-%$\emptyset$.
-%
-%\end{lemma}
-%
-%
-%\begin{proof} Assume  $\{S\}=\mathrm{Min}(\Pe_f^0)=\mathrm{Min}(P_f)$, then $S=\cap\Pe_f$ is the set
-%of free inputs of $f$. If $S\ne \emptyset$, then up to a permutation, $f=p_k\otimes
-%h=p_k\vtl h$,
-%where $k=|S|$ and $h\in \Pe_{n-k}$ has no free inputs. On the other hand, if $f^*$ has a
-%free input, then, similarly, $f^*=p_k\vtl g$ for some $g\in \Te_{n-k}$ with no free
-%inputs, hence $f=(p_k\vtl g)^*=1_k\vtl g^*$. Repeating the process, we get the result
-%after finitely many steps.
-%
-%
-%\end{proof}
-%
+\begin{lemma}\label{lemma:pf0_smallest} Let $f\in \Te_n$ be such that either $\Pe_f$ or
+$\Pe_{f^*}$ has a smallest element with a nonempty label set. 
+Then either $f$ is a chain type, or there is some chain type $\beta\in
+\Te_k$ and some $h\in \Te_{n-k}$ such that $h$ nor $h^*$ has a smallest element with
+nonempty label set and $f=\beta\vtl
+h$. 
+
+\end{lemma}
+
+
+\begin{proof} Assume  $\{S\}=\mathrm{Min}(\Pe_f^0)=\mathrm{Min}(P_f)$, then
+$S=L_S=\cap\Pe_f=I^F_f$.  If $S\ne \emptyset$, then up to a permutation, $f=p_k\otimes
+h=p_k\vtl h$,
+where $k=|S|$ and $h\in \Pe_{n-k}$ has no free inputs. On the other hand, if $f^*$ has a
+free input, then, similarly, $f^*=p_k\vtl g$ for some $g\in \Te_{n-k}$ with no free
+inputs, hence $f=(p_k\vtl g)^*=1_k\vtl g^*$. Repeating the process, we get the result
+after finitely many steps.
+
+
+\end{proof}
+
 
 
 \begin{lemma}\label{lemma:p0_maximal} Let $T\in \mathrm{Max}(\Pe^0_f)$ and let
