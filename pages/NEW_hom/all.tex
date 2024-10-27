@@ -31,6 +31,7 @@
 \newtheorem{remark}{Remark}
 \newtheorem{exm}{Example}
 
+\def\cover{\ll}
 \def\aff{\operatorname{Aff}}
 \def\lin{\operatorname{Lin}}
 \def\Span{\operatorname{Span}}
@@ -1148,15 +1149,6 @@ $\hat f_T\ne 0$. We show that any type function $f\in \Te_n$ is fully determined
 
 
 
-****
- We say that a poset $\Pe$  is graded of rank
-$k$ if every maximal chain in $\Pe$ has the same length equal to $k$ (recall that the length
-of a chain is defined as the number of its elements -1). Equivalently,  there is
-a unique rank function $\rho: \Pe\to \{0,1,\dots,k\}$ such that $\rho(S)=0$ if $S$ is a
-minimal element of $\Pe$ and $\rho(T)=\rho(S)+1$ if $T$ covers $S$, that is, $S\le T$ and for any $R$ such that
-$S\le R\le T$ we have $R=T$ or $R=S$. See [Stanley] for details.
-****
-
 \begin{prop}\label{prop:graded} Let $f\in \Te_n$, then $\mathcal P_f$ is a graded poset
 with even rank $k\le n$ and rank function $\rho_f$. Moreover, we have
 \[
@@ -1278,7 +1270,7 @@ only if it is the largest element and $\cup_{S\in \Pe_f}L_S=[n]$.
 Let us denote
 \[
 O_f^F:=[n]\setminus
-\cup_{S\in \Pe_f}L_S, \qquad I_f^F:=\cap_{S\in \Pe_f} L_S.
+\cup_{S\in \Pe_f}L_S, \qquad I_f^F:=\cap_{S\in \mathrm{Min}(\Pe_f)} L_S.
 \]
 It is easily checked by Proposition \ref{prop:fh_outputs} that any  $i\in O_f^F$ is an
 output index, since in this case  we have
@@ -1946,6 +1938,8 @@ The following lemma collects some basic properties of $\Pe_f^0$.
 \item[(ii)] $\Pe^0_f$ has a largest element if and only if $f$ or $f^*$ has a free
 output. In this case  the corresponding set is the largest element in $\Pe_f$. 
 
+\item[(iii)] If $\Pe_f^0$ is an antichain, then $\Pe_f^0=\{\bullet\}$. 
+
 \end{enumerate}
 \end{lemma}
 
@@ -1982,6 +1976,20 @@ $S\oplus T\notin
  clearly, $f$ has some free outputs. If $T=[n]$, then for any index $i\in L_T$, we have by
  the proof of Proposition \ref{prop:pfinput} that
  $M_{i,f^*}=\emptyset$, so that $i$ is a free output. 
+
+
+(iii) Assume that $\Pe_f^0$ is an antichain with $k>1$ elements. Since then $f$ is
+not a chain, up to a permutation we either have $f=f_1\otimes f_2$ or $f^*=f_1\otimes f_2$
+for some type functions $f_1$ and $f_2$. Since $\emptyset \notin \Pe_f$ and by (ii), $f$
+nor $f^*$ have any free outputs, we have $\Pe_{f^*}^0=\{\emptyset\}\star \Pe_f^0$. 
+Assume that $f^*=f_1\otimes f_2$, then it follows by Corollary \ref{coro:Pf}(iii)
+that both $\Pe_{f_1}^0$ and $\Pe_{f_2}^0$ have the same form as $\Pe_{f^*}$.
+Hence both $\Pe_{f^*_i}^0$ are antichains with $k_i$ elements, $k_1+k_2=k$.
+If $f=f_1\otimes f_2$, then again using Corollary \ref{coro:Pf}(iii) we see that 
+both $\Pe_{f_i}$ are antichains with $k_i$ elements, $k=k_1k_2$. Disregarding the trivial
+case $k_i=1$ for some $i$, we see that we can reduce to the case when $k=2$. Then we must
+have $f^*=f_1\otimes f_2$, where each $\Pe_{f_i}$ is a 2-element chain, which is not
+possible.
 
 
 
@@ -2069,7 +2077,7 @@ and a chain type $\beta\in \Te_{n-m}$ such that up to a permutation, $f=h\vtl \b
 $f^*=h_1\otimes 1_{k_1}$ for some $h_1\in \Te_{n-k_1}$ with no free outputs. It follows that
 $f=(h_1\otimes 1_{k_1})^*=(h_1\vtl 1_{k_1})^*=h_1^*\vtl p_{k_1}$. 
 
-If $T\ne [n]$, then, since $T$
+If $T\ne [n]$, then, since $T$  
 is also the largest element in $\Pe_f$, we see that $f$ has free outputs, so that (up to a
 permutation)
 $f=h_1\otimes 1_{k_1}=h_1\vtl 1_{\k_1}$, where $h_1\in \Te_{n-k_1}$ is a type function with no
@@ -2090,18 +2098,30 @@ some free outputs, and we may proceed as above, replacing $f$ by $h$. Since $n$ 
 
 \end{proof}
 
-\begin{lemma}\label{lemma:pf0_smallest} Let $f\in \Te_n$ be such that either $\Pe_f$ or
-$\Pe_{f^*}$ has a smallest element with a nonempty label set. 
+In the situation of the above lemma, if $f$ is not a chain, $\Pe_h^0$ and  $\beta$ can be found as follows. 
+Since $h$ has no free outputs and does not contain
+$[m]$, we obtain from Proposition \ref{prop:vtl_ordinal} that $\Pe_f^0=\Pe_h^0\star
+(\Pe_\beta\setminus\{\emptyset\})$, with the same sets of labels.
+It follows that there exists a largest element in $\Pe_f^0$ with the property that
+it covers more than one element. Let this element be $S$ and let $T_1,\dots, T_k$ be the
+elements covered by $S$. There is a chain $S=S_1\lneq \dots \lneq S_K$, where $S_K$ is
+the largest element in $\Pe_f^0$. If $K$ is even, add an element $S_0$ with empty
+label at the bottom of the chain. Let $\sigma\in \permut_n$ be such that
+$\sigma^{-1}(\cup_j L_{S_j})=[m+1,n]$ and apply $\sigma^{-1}$ to the label sets. 
+Then we have $f\circ\sigma=h\vtl \beta$, where $\Pe_h^0$ is obtained as $\cup_j T_j^{\downarrow}=\cup_j\{T\in
+\Pe_f^0,\ T\le T_j\}$ and $\beta$ is the chain type for the obtained labelled chain.
+
+
+\begin{lemma}\label{lemma:pf0_smallest} Let $f\in \Te_n$ be such that either $f$ or
+$f^*$ has a free input. 
 Then either $f$ is a chain type, or there is some chain type $\beta\in
-\Te_k$ and some $h\in \Te_{n-k}$ such that $h$ nor $h^*$ has a smallest element with
-nonempty label set and $f=\beta\vtl
+\Te_k$ and some $h\in \Te_{n-k}$ such that $h$ nor $h^*$ has a free input and up to a permutation, $f=\beta\vtl
 h$. 
 
 \end{lemma}
 
 
-\begin{proof} Assume  $\{S\}=\mathrm{Min}(\Pe_f^0)=\mathrm{Min}(P_f)$, then
-$S=L_S=\cap\Pe_f=I^F_f$.  If $S\ne \emptyset$, then up to a permutation, $f=p_k\otimes
+\begin{proof} Assume $f$ has a free input, then up to  a permutation, $f=p_k\otimes
 h=p_k\vtl h$,
 where $k=|S|$ and $h\in \Pe_{n-k}$ has no free inputs. On the other hand, if $f^*$ has a
 free input, then, similarly, $f^*=p_k\vtl g$ for some $g\in \Te_{n-k}$ with no free
@@ -2111,465 +2131,603 @@ after finitely many steps.
 
 \end{proof}
 
+Under the assumptions of the lemma, assume that $f$ is not a chain type. 
+Suppose that $\Pe_f^0$ has a least element $S_1$ and let $S$ be the smallest elemet in
+$\Pe_f^0$ with the property that it is covered by more than one element. Let these
+elements be $T_1,\dots, T_l$ and let  $S_1\le \dots \le S_K$ be a chain such that $S_K=S$.
+Put $L:=\cap_j L_{T_j}$. 
+Using
+Proposition \ref{prop:vtl_ordinal} as before, we have the following situations. Assume
+that  $L=\emptyset$, then put  $k=|S_K|$. If $K$ is odd, then the chain corresponds to a chain type
+$\beta\in \Te_{k}$ and $\Pe_g^0=\cup_j T_j^{\uparrow}\cup\{\emptyset\}$. If $K$ is even, then $\Pe_g^0=\cup_j T_j^{\uparrow}$ and $\beta$
+is the chain type for the chain $S_1\subsetneq \dots\subsetneq S_{K-1}$ (with free outputs
+in $L_{S_K}$). If $L\ne \emptyset$, then add an element $S_{K+1}$ at the end of the chain, with label
+$L_{S_{K+1}}=L$ and put $k=|S_{K+1}|$. If $K$ is odd, then $\beta\in \Te_k$ is the chain type for the chain
+$S_1\lneq \dots \lneq S_K$ (with free outputs in $L$) and $\Pe_g^0=\cup_j
+T_j^{\uparrow}\cup \{\emptyset\}$, with labels of $T_j$ replaced by $L_{T_j}\setminus L$.  If
+$K$ is even, then $\Pe_g^0=\cup_j T_j^{\uparrow}$ and $\beta$ is the chain type  for
+$S_1\subsetneq\dots\subsetneq S_{K+1}$.
+
+If $\Pe_f^0$ has no least element, then by the assumptions $f$ must have free inputs (since $\Pe_{f^*}^0$
+has least element $\emptyset$). Hence there is a symmetry $\sigma$ such that  $f\circ
+\sigma=p_k\vtl g$, where  $[k]=\sigma^{-1}(I_f^F)$. Note also that we have  $\emptyset
+\notin \Pe_g$, so that $g^*$ has no free input as well. 
 
 
-\begin{lemma}\label{lemma:p0_maximal} Let $T\in \mathrm{Max}(\Pe^0_f)$ and let
-$T^{\downarrow,f}:=\{S\in \Pe_f, S\le T\}$. Put
-\[
-\bar \Pe_{T,f}:=\begin{dcases}  T^{\downarrow,f} & \text{if } \rho_f(T) \text{ is even}\\
-  T^{\downarrow,f}\setminus T & \text{otherwise}.
-  \end{dcases}
-\]
-Then there is some type function $g\in \Te_{|T|}$ and a permutation $\sigma\in \permut_{n}$
-such that $\Pe_g=\sigma^{-1}(\bar \Pe_{T,f})$. 
+\begin{lemma}\label{lemma:pf0_covermin} Any element $T\in \Pe_f^0$ can cover at most one
+minimal element. 
+
 \end{lemma}
 
-\begin{proof} %Up to a permutation, we may assume that $T=[m]$ for some $m\le n$. 
-%The assertion is rather trivial if $T$ is the largest element in $\Pe_f^0$, so we will assume
-%that this is not the case.
-%Let $m=|T|$ and let $\sigma\in \permut_n$ be a permutation such that $\sigma^{-1}(T)=[m]$. 
-%We have $\Pe_{f\circ \sigma}=\sigma^{-1}(\Pe_f)$, and since $S\mapsto \sigma^{-1}(S)$ is
-%an isomorphism of posets, we see that $[m]$ is a maximal element in $\Pe_{f\circ
-%\sigma}^0$. We also clearly have $\bar \Pe_{[m],f\circ\sigma}=\sigma^{-1}(\bar
-%\Pe_{T,f})$. By replacing $f$ be $f\circ \sigma$, we may assume that $T=[m]$, for some
-%$m<n$.
-%
-We will proceed by induction on $n$. The assertion is trivial if $f$ is a chain type, so it
-holds for $n\le 3$. So assume it holds for all $m<n$ and let $f\in \Te_n$. If
-$f=f_1\otimes f_2$, then $T=T_1\oplus T_2$, where, say, $T_1\in \mathrm{Min}(\Pe_{f_1})$
-and $T_2\in \mathrm{Max}(\Pe_{f_2}^0)$. It follows that 
-\[
-\bar \Pe_{T,f}=T_1\oplus \bar\Pe_{T_2,f_2}.
-\]
-By the induction assumption, there is some $\rho\in \permut_{n_2}$ such that
-$\rho^{-1}(\bar \Pe_{T_2,f_2})=\Pe_h$ for some type function $h\in
-\Te_{|T_2|}$. Put $\sigma= id_{n_1}\oplus \rho$, then
-$\sigma^{-1}(\bar\Pe_{T,f})=T_1\oplus\Pe_h=\Pe_g$ with $g\in \Te_{|T|}$, $g=p_{T_1}\otimes h$.
+\begin{proof} We will proceed by induction on $n$. Since the assertion is trivial for
+chain types, it holds for $n\le 3$. Assume it is true for $m<n$ and let $f\in \Te_n$. Let
+$T$ be an element that covers $T_1,\dots, T_k\in \mathrm{Min}(\Pe_f)$, $k>1$, so that we must have  $\emptyset \notin \Pe_f$. 
+ We may
+assume that $T$ is not the largest element, since then by Lemma \ref{lemma:pf0_largest}
+and the remarks below it, up to a permutation, $f=h\vtl \beta$ and $\Pe_h^0=\cup_j
+T_j^{\downarrow}=\{T_1,\dots, T_k\}$. This means that $\Pe_h^0$ is an antichain,
+which is impossible by Lemma \ref{lemma:p0_basic}. It follows that $T\ne
+[n]$, therefore $T$  and $T_1,\dots,
+T_k$ are all contained also
+in $\Pe_{f^*}^0$. 
 
-Assume next that $f=(f_1\otimes f_2)^*$.  We may assume that 
- $T\ne \emptyset$ and $T\ne [n]$, since otherwise the assertion is rather trivial. We may
- also assume that $f$ has no free outputs, since otherwise $f=h\otimes 1$ and we may
- replace $f$ by $h$. Then $T\in \mathrm{Max}(\Pe^0_{f^*})$. 
+As usual, we have either $f^*=f_1\otimes f_2$ or $f=f_1\otimes f_2$, for some type
+functions $f_1$ and $f_2$.  In the first case, any element in $\Pe_{f^*}$ is of the form
+$(S,\emptyset)$ for $S\in \Pe_{f_1}^0$ or $(\emptyset, S')$ for $S'\in \Pe_{f_2}^0$. Since 
+$T_i\le T$ for all $i$, they all must have one of these forms. Hence we may assume that there are
+$S, S_1,\dots,S_k\in \Pe_{f_1}^0$ such that $\emptyset \cover S_i \cover S$. As before, $S$
+cannot be the largest element in $\Pe_{f_1}^0$, so that $S_1,\dots,S_k\in
+\mathrm{Min}(\Pe_{f_1^*})$ are all covered by $S\in \Pe_{f_1^*}^0$. By induction
+assumption, this is not possible.
 
-Let $\rho_f(T)$ be even, so that the labels of $T$ correspond to inputs. Then
-$\rho_{f^*}(T)$ is odd. Since $f^*$ has the desired property by the first part of the
-proof, there is some $g\in \Te_{|T|}$ and $\sigma\in \permut_n$ such that
-\[
-\Pe_g=\sigma^{-1}(\bar \Pe_{T,f^*})=\sigma^{-1}(T^{\downarrow,f^*}).
-\]
-Since $g\in \Te_{|T|}$ and $\sigma^{-1}(T)\in \Pe_g$, we must have $\sigma^{-1}(T)=[|T|]$, 
-so $\sigma^{-1}(T)\notin \Pe_{g^*}$ and $\emptyset \in \Pe_{g^*}$ if and only if
-$\emptyset \notin \Pe_g$. It is now easy to see that $\Pe_{g^*}=\sigma^{-1}(\bar
-\Pe_{T,f})$. The case when $\rho_f(T)$ is
-odd is proved similarly.
+If $f=f_1\otimes f_2$, then we can similarly use Corollary \ref{coro:Pf} to obtain the
+same situation for $f_1$ or $f_2$.
 
+\end{proof}
+
+\begin{lemma}\label{lemma:pf0_mincover} If $\Pe_f\neq \{\bullet\}$, then any minimal element is covered by at least one $T\in \Pe_f^0$.
+
+\end{lemma}
+
+\begin{proof} We will proceed by induction on $n$. The assertion is clearly true for
+chains, so for $n\le 3$. Assume it holds for all $m<n$ and let $f\in \Te_n$. 
+If $\Pe_f\neq \{\bullet\}$ and $\Pe_f$ has a smallest element, the assertion is
+clearly true. Assume that $S\in \mathrm{Min}(\Pe_f)$ is not covered by any element. Then,
+in particular, 
+$\Pe_f^0$ has no largest element and also does not contain $\emptyset$. Similarly as
+before, if $f^*=f_1\otimes f_2$, then we may assume that, say, $\Pe^0_{f_1}$ contains an
+element $S$ that covers $\emptyset$ but is not covered by any element. Since then
+$\Pe_{f_1}^0$ has no largest element, we have that $\Pe_{f_1^*}^0=\Pe_{f_1}^0\setminus
+\{\emptyset\}$ and $S\in \mathrm{Min}(\Pe_{f_1^*})$ is not covered by any element. By the 
+induction assumption, $f^*_1=p_{S}$, but then $\Pe_{f_1}$ is a 3-element chain, which is not
+possible. If $f=f_1\otimes f_2$, then it similarly follows that both $\Pe_{f_1}$ and
+$\Pe_{f_2}$ must be 1-element chains, which is not possible.  
 
 \end{proof}
 
 
-\begin{lemma}\label{lemma:struct} 
-Assume that $f\in \Te_n$ and let  $S,T\in \mathrm{Max}(\Pe_f^0)$, $S\ne T$.  Then we have the following possibilities:
+
+
+Let $\Pe$ be a poset with labels in $[n]$ and let $\Pe_,\Pe_2\subseteq \Pe$. We will say that $\Pe_1$ and $\Pe_2$ are {\em independent
+components} of $\Pe$ if $\Pe=\Pe_1+\Pe_2$ (direct sum of posets) and $L_S\cap L_T=\emptyset$ for 
+any $S\in \Pe_1$ and $T\in \Pe_2$. In this case, we will write
+\[
+\Pe=\Pe_1+^L\Pe_2.
+\]
+The independent components are nontrivial if they are nonemty or not equal to $\Pe$.
+
+
+\begin{lemma}\label{lemma:nofree} Let $f\in \Te_n$ be such that $f$ nor $f^*$ have any
+free inputs or outputs and assume that $\emptyset \notin \Pe_{f}$. 
 \begin{enumerate}
-\item $\bar \Pe_{T,f}\cap \bar \Pe_{S,f}=\emptyset$,
-\item $\bar \Pe_{T,f}\cap \bar \Pe_{S,f}=\{\emptyset\}$,
-\item there is a chain $U_1\subsetneq \dots \subsetneq U_K\subseteq [n]$, type
-functions $h_1\in \Te_{m_1}$, $h_2\in \Te_{m_2}$  and permutations $\sigma_1,\sigma_2\in
-\permut_n$ such that
-\begin{itemize}
-\item $\bar \Pe_{S,f}\cap \bar \Pe_{T,f}=\{U_1,\dots, U_K\}$,
-\item $\sigma^{-1}_1|_{U_K}=\sigma^{-1}_2|_{U_K}$,
-\item $\Pe_{\beta\vtl h_1}=\sigma_1^{-1}(\bar \Pe_{S,f})$, $\Pe_{\beta\vtl
-h_2}=\sigma_2^{-1}(\bar \Pe_{T,f})$, where $|S|-m_1=|T|-m_2=: k=|U_K|$ and
-$\beta\in \Te_k$ is a chain type, with the corresponding chain $\sigma_1^{-1}(U_1)\subsetneq \dots
-\subsetneq \sigma_1^{-1}(U_K)$ if $K$ is odd and $\sigma_1^{-1}(U_1)\subsetneq \dots
-\subsetneq \sigma_1^{-1}(U_{K-1})$
-if $K$ is even.
-\end{itemize}
+\item[(i)] If (up to a permutation) $f^*=f_1\otimes f_2$ for some type functions $f_1$ and
+$f_2$, then $\Pe_f^0=(\Pe_{f_1}^0\setminus \emptyset) +^L (\Pe_{f_2}^0\setminus
+\emptyset)$.
+\item[(ii)] If $\Pe_f^0=\Pe_1+^L\Pe_2$ for some nontrivial labelled subposets $\Pe_1$ and $\Pe_2$, 
+then there are some type functions $f_1$ and $f_2$ such that $\Pe_1=(\Pe_{f_1}^0\setminus
+\emptyset)$, $\Pe_2=(\Pe_{f_2}^0\setminus \emptyset)$ and (up to a permutation)
+$f^*=f_1\otimes f_2$.
+\item[(iii)] If (up to a permutation) $f=f_1\otimes f_2$ for type functions $f_1$ and
+$f_2$, then no nontrivial
+decomposition of $\Pe_f^0$ into independent components exists.
 
 \end{enumerate}
-
-
-
-
 
 \end{lemma}
 
+\begin{proof} Note that under the assumptions, $\emptyset\in \Pe_{f^*}$ and we have
+$\Pe_f^0=\Pe_{f^*}^0\setminus \{\emptyset\}$. Further, $\Pe_f^0$ has no least element. 
+Note that applying a permutation does  not change the structure of $\Pe_f^0$ or the
+decomposition into independend components, so we may skip ''up to a permutation'' from the
+statements.
+
+Assume that $f_1\in \Te_{n_1}$ and $f_2\in \Te_{n_2}$ are such that $f^*=f_1\otimes f_2$
+for the decomposition $[n]=[n_1]\oplus [n_2]$. Since $\emptyset \in
+\Pe_{f^*}=\Pe_{f_1}\times \Pe_{f_2}$, we see that both $\Pe_{f_1}$ and $\Pe_{f_2}$ must
+contain $\emptyset$. By Corollary \ref{coro:Pf}(iii), we see that $\Pe_{f^*}^0$ consists
+of $\Pe_{f_1}^0$ and $\Pe_{f_2}^0$ glued at $\emptyset$, with labels of $\Pe_{f_2}^0$
+translated by $n_1$. Since $\Pe_f^0=\Pe^0_{f^*}\setminus \{\emptyset\}$, the assertion (i) 
+follows.  
+
+For (iii), assume that $f=f_1\otimes f_2$ and $\Pe_f^0=\Pe_1+^L\Pe_2$. Note that none of
+the functions can be a 1-element chain, since then $f$ would have free inputs or outputs. Let
+$\mathrm{Min}(\Pe_{f_1})=\{U_1,\dots,U_k\}$,  $\mathrm{Min}(\Pe_{f_2})=\{V_1,\dots,V_l\}$.
+By Corollary \ref{coro:Pf}(iii), we have  $\mathrm{Min}(\Pe_{f})=\mathrm{Min}(\Pe_{f_1})\times \mathrm{Min}(\Pe_{f_2})$. 
+For some $i$ and $j$, let $(U_i,V_j)\in \Pe_1$. Since $(U_i,V_j)$ and $(T,V_j)$ are
+comparable for any $T\in \Pe_{f_1}$, $U_i\le T$, we must have $(T,V_j)\in \Pe_1$ for all
+such $T$. By Lemma \ref{lemma:pf0_mincover}, there is some $T$ that covers $U_i$. 
+But then $L_{(T,V_j)}=L_{T,V_{j'}}=L_T$ for all $j'$, so that $(T,V_{j'})\in \Pe_1$
+for all $j'$. Since $(U_i,V_{j'})\le (T,V_{j'})$ for all $j'$, this implies that $(U_i,
+V_{j'})\in \Pe_1$ for all $j'$. By the same reasoning with $V_j$, we get that all $(U_i,
+V_j)\in \Pe_1$, so that $\Pe_2=\emptyset$. 
 
 
-\begin{proof} Note that $\Pe_f^0$ has no largest element, so that by Lemmas
-\ref{lemma:p0_basic}(iii) and  \ref{lemma:p0_constr}(i), $[n]$ is not contained in
-$\Pe_f^0$ nor $\Pe_{f^*}^0$. We will assume that $\emptyset \in \Pe_{f}$, in which case 
-$\Pe_{f^*}^0=\Pe_f^0\setminus \{\emptyset\}$ and hence
-$\mathrm{Max}(\Pe^0_f)=\mathrm{Max}(\Pe^0_{f^*})$. The sets $\bar \Pe_{T,f}$ and $\bar
-\Pe_{T,f^*}$ differ only by addition/removal of the least element
-$\emptyset$ and the largest element $T$, similarly for $S$. Hence 
-$\bar\Pe_{T,f^*}\cap \bar \Pe_{S,f^*}=\left(\bar\Pe_{T,f}\cap \bar
-\Pe_{S,f}\right)\setminus \{\emptyset\}$. The case  $\emptyset \in \Pe_{f^*}$
-follows easily by duality. 
-
-
-We will  proceed by induction on $n$. The smallest $n$ for which there is a function $f\in 
-\Te_n$ such that $\Pe_f^0$ has no largest element is $n=4$, where the only possibilities,
-up to permutations, 
-are the functions $f=\gamma_2\otimes \gamma_2$ and its conjugate $f^*$, see Example
-\ref{exm:motyl}.
-Here the two maximal points in $\Pe_f^0$ and $\Pe_{f^*}^0$ are $S=\{1,2\}$
-and $T=\{3,4\}$, and $\bar \Pe_{S,f}\cap \bar \Pe_{T,f}=\{\emptyset\}$, $\bar
-\Pe_{S,f^*}\cap \bar \Pe_{T,f^*}=\emptyset$. 
-
-
-Now assume that the statement holds for all $m<n$ and let $f\in \Te_n$. 
-Let $U\in \bar \Pe_{S,f}\cap \bar \Pe_{T,f}$. 
-By construction, we have either $f=f_1\otimes f_2$ or $f^*=(f_1\otimes f_2)$, for some
-type functions $f_1\in \Te_{l_1}$ and $f_2\in \Te_{l_2}$. So assume that $f=f_1\otimes
-f_2$, then $\Pe_f=\Pe_{f_1}\times \Pe_{f_2}$
-and since $\emptyset \in \Pe_f$, we see
-that both $\Pe_{f_1}$ and $\Pe_{f_2}$ must contain $\emptyset$. Since
+For (ii), assume that $\Pe_f^0=\Pe_1+^L\Pe_2$. Since either $f$ or $f^*$ is a tensor
+product of type functions and we cannot have $f=f_1\otimes f_2$ by (iii), 
+ it must hold that $f^*=f_1\otimes f_2$. But then by (i) $\Pe_f^0=\Pe'_1+^L\Pe'_2$, with 
+$\Pe_i'=\Pe_{f_i}\setminus \{\emptyset\}$. Let 
 \[
-\Pe_f^0=\Pe_{f_1}^0\oplus_{\min} \Pe_{f_2}^0=\Pe_{f_1}^0 \cup \left(n_1+
-\Pe_{f_2}^0\right)
+\Pe_f^0=\mathcal Q_1+^L\dots +^L \mathcal Q_M
 \]
-It follows that $T$ is
-either a maximal element in $\Pe_{f_1}^0$ or $T=n_1+T'$ for some $T'$ in $\Pe_{f_2}^0$, similarly for $S$. Assume
-that $T\in \mathrm{Max}(\Pe_{f_1}^0)$ and $S=n_1+S'$ for $S'\in \mathrm{Max}(\Pe_{f_2}^0)$, then the only
-possibility is that $U=\emptyset$, so that
+be the finest decomposition into nontrivial independent components. Then there are some $C,D\subset [M]$
+such that 
 \[
-\bar\Pe_{T,f}\cap \bar\Pe_{S,f}=\{\emptyset\}.
+\Pe_1=+^L_{i\in C} \mathcal Q_i,\quad  \Pe_2=+^L_{i\in [M]\setminus C} \mathcal
+Q_i, \quad \Pe'_1=+^L_{i\in D} \mathcal Q_i,\quad  \Pe'_2=+^L_{i\in [M]\setminus D}
+\mathcal Q_i.
 \]
-If both $S,T\in \mathrm{Max}(\Pe_{f_1}^0)$, then necessarily $\bar \Pe_{T,f},\bar \Pe_{S,f}\subseteq
-\Pe_{f_1}$, so that $\bar \Pe_{T,f}=\bar \Pe_{T,f_1}$ and $\bar \Pe_{S,f}=\bar
-\Pe_{S,f_1}$.
-This reduces the problem to a type function  with smaller $n$ and the assertion follows by
-the induction assumption. The case $S,T\in n_1+\mathrm{Max}(\Pe_{f_2})$ is treated
-similarly.
-
-Next, assume that $f^*=f_1\otimes f_2$, so that $\Pe_{f^*}^0=\Pe_{f_1}^0\oplus_{\min}
-\Pe_{f_2}^0$. Since $S,T\in \mathrm{Max}(\Pe_{f}^0)=\mathrm{Max}(\Pe_{f^*}^0)$, we see
-that $S=S_1\oplus S_2$, $T=T_1\oplus T_2$, where we may assume some of the following cases:
-\begin{enumerate}
-\item $S_1\in \mathrm{Max}(\Pe_{f_1}^0)$, $S_2\in \mathrm{Min}(\Pe_{f_2})$ and $T_1\in
-\mathrm{Min}(\Pe_{f_1})$, $T_2\in \mathrm{Max}(\Pe_{f_2}^0)$,
-\item $S_1,T_1\in  \mathrm{Max}(\Pe_{f_1}^0)$, $S_2,T_2\in \mathrm{Min}(\Pe_{f_2})$,
-\item $S_1,T_2\in \mathrm{Min}(\Pe_{f_1})$, $S_2,T_2\in  \mathrm{Max}(\Pe_{f_2}^0)$,
-\end{enumerate}
-note that we have $\emptyset \notin \Pe_{f^*}$, so that at least one of
-$\mathrm{Min}(\Pe_{f_1})$ or $\mathrm{Min}(\Pe_{f_2})$ is different from $\{\emptyset\}$.
-Since $U\in \Pe_f$, $U\subseteq S\cap T\subsetneq [n]$,  we have either $U=\emptyset$ or $U\in
-\Pe_{f^*}$, in which case $U=U_1\oplus U_2$ for $U_1\in \Pe_{f_1}$, $U_2\in \Pe_{f_2}$. Assume $U\ne \emptyset$. 
-In the case 1 above, we necessarily have 
-$U=T_1\oplus S_2\in \mathrm{Min}(\Pe_{f^*})$. This gives us
-\[
-\bar\Pe_{T,f}\cap \bar\Pe_{S,f}=\{\emptyset, T_1\oplus S_2\},
-\]
-which is a two-element chain. It is easy to see that any element  $\bar \Pe_{S,f^*}$ must
-contain $T_1\oplus S_2$. By Lemma \ref{lemma:p0_maximal} and its proof, there are $g_1\in
-\Te_{|S|}$,
-and $\tau_1\in \permut_n$ such that $\tau_1^{-1}(\bar
-\Pe_{S,f})=\Pe_{g_1}$, and 
-we have
-$\tau_1^{-1}(\bar
-\Pe_{S,f^*})=\Pe_{g_1^*}$. It follows that $\tau1^{-1}(T_1\oplus S_2)$ are free inputs of $g_1^*$.
-Hence with $k:=|T_1|+ |S_2|$
-there is some type function $h_1\in \Te_{|S|-k}$ and a permutation $\rho_1$ such that
-$\rho_1^{-1}(\tau_1^{-1}(T_1\oplus S_2))=[k]$ and 
- $g_1^*\circ\rho_1=p_k\otimes h_1=p_k\vtl h_1$. It follows that $g_1\circ\rho_1=1_k\vtl
- h^*_1$ and 
+Assume that $M\ge 3$, otherwise each $\Pe_i$ is one of $\Pe'_j$ and we are done. 
+Then $D$ or $[M]\setminus D$ has at least two elements. So assume $|D|\ge 2$. Then $\Pe'_1$ has no largest
+ element, which implies that $\Pe_1'=\Pe_{f_1^*}^0$ and $f_1^*$ satisfies the assumptions
+ in (iii). Hence $f_1=g_1\otimes g_2$ for some type functions $g_1$ and $g_2$ and we
+ obtain that 
  \[
-\Pe_{1_k\vtl h_1^*}=\rho_1^{-1}(\Pe_{g_1})=(\tau_1\circ \rho_1)^{-1}(\bar \Pe_{S,f}).
+\Pe_{g_1}^0\setminus \{\emptyset\} = +_{i\in D'}^L \mathcal Q_i,\quad \Pe_{g_2}^0\setminus
+\{\emptyset\} = +_{i\in D\setminus D'}^L
  \]
-Putting $\sigma_1=\tau_1\circ\rho_1$, we get $\sigma_1^{-1}(T_1\oplus S_2)=[k]$. In a
-similar manner, we obtain a type function $h_2\in \Te_{|T|-k}$ and a permutation
-$\sigma_2\in \permut_n$ such that $\sigma_2^{-1}(T_1\oplus S_2)=[k]$ and 
+for some $D'\subset D$. Continuing in this way, we obtain that for any $i\in [M]$ there is
+some type function $g_i$ such that $\emptyset \in \Pe_{g_i}^0$ and $\mathcal
+Q_i=\Pe_{g_i}^0\setminus \{\emptyset\}$. It follows that 
 \[
-\Pe_{1_k\vtl h_2^*}=\sigma_2^{-1}(\bar \Pe_{T,f}).
+\Pe_1=+^L_{i\in C}(\Pe_{g_i}^0\setminus \{\emptyset\})=\Pe^0_{\otimes_{i\in
+D}g_i}\setminus\{\emptyset\},
 \]
- Since $1_k$ is a chain type
-for the chain $U_1=\emptyset$, the statement follows. 
-
-In the case 2,  we have $U_1\subseteq T_1,
-S_1$ and $U_2\subseteq S_2,T_2$, so that  $U_2=S_2=T_2$. 
-It follows that $\bar \Pe_{S,f^*}=\bar \Pe_{S_1,f_1}\oplus U_2$ and $\bar \Pe_{T,f^*}=\bar
-\Pe_{T_1,f_1}\oplus U_2$, so that in this case,
-\[
-\bar\Pe_{S,f}\cap \bar\Pe_{T,f}=\{\emptyset\}\cup \left(\bar \Pe_{S_1,f_1}\cap \bar
-\Pe_{T_1,f_1}\right)\oplus U_2.
-\]
-Since $f_1$ satisfies the induction assumption, there is a chain $V_1\subsetneq \dots
-\subsetneq V_K$ such that
-\[
-\bar\Pe_{S_1,f_1}\cap \bar\Pe_{T_1,f_1}=\{V_1\subsetneq\dots\subsetneq V_L\}
-\]
-Moreover, there are functions $h_i\in \Te_{m_i}$, permutations $\tau_1,\tau_2\in
-\permut_{l_1}$ and  a chain type
-$\gamma \in \Te_{k'}$ with $k'=|V_K|=|S_1|-m_1=|T_1|-m_2$ such that
-\[
-\tau^{-1}_1(\bar \Pe_{S_1,f_1})=\Pe_{\gamma\vtl h_1},\qquad \tau_2^{-1}(\Pe_{\bar
-T_1,f_1})=\Pe_{\gamma\vtl h_2}.
-\]
-It follows that
-\[
-\bar\Pe_{S,f}\cap \bar\Pe_{T,f}=\{\emptyset\subsetneq V_1\oplus U_2\subsetneq \dots
-\subsetneq V_K\oplus U_2\}
-\]
-(note that we cannot have both $V_1$ and $U_2$ empty). Moreover, let $l=|U_2|$, let
-$\rho\in \permut_{l_2}$ be such that $\rho^{-1}(U_2)=[l]$ and put
-$\sigma_1:=\tau_1\oplus\rho$. We then have 
-\[
-\sigma^{-1}(\bar \Pe_{S,f^*})=\Pe_{\gamma\vtl h_1}\oplus [l]=\Pe_{(\gamma\vtl
-h_1)\otimes p_l}=\Pe_{(p_l\vtl \gamma)\vtl h_1}
-\]
-and as in the proof of Lemma \ref{lemma:p0_maximal}, we obtain
-\[
-\sigma_1^{-1}(\bar \Pe_{S,f})=\Pe_{((p_1\vtl \gamma)\vtl h_1)^*}=\Pe_{(1_l\vtl
-\gamma^*)\vtl h_1}.
-\]
-Similarly, with $\sigma_2=\tau_2\oplus \rho$, we get
-\[
-\sigma_2^{-1}(\bar \Pe_{T,f})=\Pe_{(1_l\vtl \gamma^*)\vtl h_2}.
-\]
-Assume that $L$ is odd, then the chain corresponding to $\gamma$ is $\tau_1^{-1}(V_1)\subsetneq
-\dots\subsetneq \tau_1^{-1}(V_L)$, and the chain corresponding to $\beta=1_l\vtl \gamma^*$ is 
-\[
-\emptyset \subsetneq \tau_1^{-1}(V_1)\oplus [l]\subsetneq \dots
-\subsetneq \tau_1^{-1}(V_{L-1})\oplus [l]=\emptyset \subsetneq \sigma_1^{-1}(V_1\oplus
-U_2)\subsetneq \dots
-\subsetneq \sigma_1^{-1}(V_{L-1}\oplus U_2),
-\]
-here we have used the fact that $\tau_1^{-1}(V_L)=[k']$. The case $L$ is even is obtained
-similarly.
+similarly, $\Pe_2=\Pe^0_{\otimes_{i\in
+[M]\setminus D}g_i}\setminus\{\emptyset\}$.
 
 
 \end{proof}
 
 
+Assume now that $f\in \Te_n$ has no free indices and $\emptyset\notin \Pe_f$. Assume that
+$\Pe_f^0$ has no independent component, so that $f=f_1\otimes \dots \otimes f_k$ for some
+type functions $f_1,\dots,f_k$. We will now show how to extract $\Pe_{f_i}^0$ for the finest decomposition
+of this form from $\Pe_f^0$. Note that $f_i$ cannot have any free inputs or outputs.
+
+Since $f$ has no free outputs, any element of $[n]$ is contained in some label set. 
+Further, any element has the form $T=(T_1,\dots,T_k)$ with all $T_l\in
+\mathrm{Min}(\Pe_{f_l}^0)$ except possibly one index $l_0$, in which case there is a
+bijection of $L_{T_{l_0}}$ onto $L_T$. To ease the subsequent notations, we will identify
+the labels in $\Pe_{f_{l_0}}^0$ with the corresponding label of $L_T$ in this case. 
+It follows that there is a decomposition $C_1,\dots, C_k$ of $[n]$ such that $C_l$ consists of all
+labels of elements in $\Pe_{f_i}^0$. We will refer to the inclusion of an index $i$ in $C_l$ as
+coloring $i$ by a color $l\in\{1,\dots,k\}$. 
+
+We first note that it is enough to know the coloring of label indices of minimal elements and all
+elements that cover them (we will say that $T\in \Pe_f^0$ is {\em minimal covering} if it
+covers some minimal element). Indeed, assume this is known and let $U\in
+\mathrm{Min}(\Pe_f^0)$. Then $U=(Z_1,\dots, Z_k)$, with
+  $Z_l\in \mathrm{Min}(\Pe_{f_l})$, so that $Z_l\subseteq C_l$. In this way, we get all
+minimal  elements in $\Pe_{f_l}$. (Note that we can identify minimal elements with their
+labels as  $L_{(Z_1,\dots,Z_k)}=\cup_l Z_l$).
+
+To obtain $\Pe_{f_1}^0$,
+fix $Z_l\in C_l$, $l=2,\dots,k$ and consider the subposet 
+\[
+\Pe:=\{(Z,Z_2,\dots,Z_k),\ Z\in \mathrm{Min}(\Pe_{f_1}^0)\}^\uparrow.
+\]
+From Corollary
+\ref{coro:Pf}(iii), we see that after removing the minimal elements of $\Pe$, the poset
+decomposes into independent components, one of which corresponds to $\Pe_{f_1}^0$ with
+removed minimal elements. This component can be recognized by the labels of minimal
+covering elements, colored by $l=1$. We then add all $Z\in \mathrm{Min}(\Pe_{f_1})$,
+and for $T\in \Pe_{f_i}^0$, $Z\le T$ in $\Pe_{f_1}^0$ iff
+$(Z,Z_2,\dots,Z_k)\le T$ in $\Pe_f^0$.
+Other $\Pe_{f_l}^0$ are obtained similarly.
+
+
+We now show how to obtain the coloring of labels of minimal and minimal covering elements. 
+So let $L_1,\dots, L_M$ be all the different label sets for minimal covering elements. Let
+$U_1,\dots, U_N$ be the minimal elements of $\Pe_f^0$. Let $\mathcal U:=\cup_j U_j$.
+For any label set $L$, define
+\[
+\mathcal V_L^f:=\cap \{U\cover_f L,\ U\in \mathrm{Min}(\Pe_f)\},\qquad \mathcal
+W_L^f:=(\cup \{U, U\in \mathrm{Min}(\Pe_f)\})\setminus (\cup\{U\cover_f L,\ U\in
+\mathrm{Min}(\Pe_f) \}).
+\]
+where we write $U\cover_f L$ if $U\cover T$ in $\mathcal P_f^0$ with $L_T=L$.  Put $\mathcal V_i:=\mathcal
+W^f_{L_i}$ and $\mathcal W_i:=\mathcal W_{L_i}^f$. Then  there is some $l$
+such that  $\mathcal V_i, \mathcal W_i,  L_i\subseteq C_l$. Indeed,  let $T$ be a minimal
+covering element such that
+$L_T=L_i$. Then $T=(T_1,\dots,T_k)$, where all $T_{l'}$ are minimal in $\Pe_{f_{l'}}$ except a
+single index $l$, for which $T_{l}$ is minimal covering in $\Pe_{f_{l}}^0$. We then
+have $L_i=L_T=L_{T_{l}}\subseteq C_{l}$. If
+$U_j=(V^j_1,\dots,V^j_k)\cover T$, then necessarily $V^j_{l'}=T_{l'}$ for $l'\ne l$ and $V^j_{l}\cover
+T_{l}$, so that $V^j_{l}\cover_{f_l} L_i$. We obtain 
+\[
+\mathcal V_i=\cap\{ (S_1,\dots,S_k),\ S_{l'}\in \mathrm{Min}(\Pe_{f_{l'}}),\
+S_{l}\cover_{f_l}
+L_i\}.
+\]
+The above intersection is a disjoint union of elements of the form
+$\cap\mathrm{Min}(\Pe_{f_{l'}})$ for $l'\ne l$ and $\mathcal
+V_{L_i}^{f_l}$. Since no $f_{l'}$ can have free inputs, the above
+intersections are empty and we obtain
+$\mathcal V_i=\mathcal V_{L_i}^{f_{l}}$.
+Similarly, we obtain that 
+$\mathcal W_i=\mathcal W_{L_i}^{f_{l}}$.
+ It is clear from this that $\mathcal
+V_i,\mathcal W_i,L_i$ must all be colored by the same color. For all $i$, let
+$C'_i=\mathcal V_i\cup \mathcal W_i\cup L_i$ and define $i\sim j$ if  there are some
+$T,S$ that have a common upper bound in $\Pe_f^0$ and $L_T=L_i$, $L_S=L_j$, or if $C_i'\cap C_j'\ne
+\emptyset$. Color the elements in  $\cup_{j\in [i]_\sim} C'_j$ by the same color.
+We next prove several claims:
+
+
+Claim 1. For  any $p\in \mathcal U$, there is some $i\in [M]$ such that $p\in \mathcal
+V_i$, so that all labels of mi nimal elements are colored. For this, 
+let $p\in U_j=(V^j_1,\dots, V_l^j)$, then $p\in V^j_l$ for exactly one
+$l$. By Lemma \ref{lemma:pf0_mincover}, $V^j_j$ is
+covered by at least one $S\in \Pe_{f_l}^0$, so that $U_j\cover L_{T}$ for
+$T=(T_1,\dots, T_k)$, with $T_{l'}=V^j_{l'}$ for $l'\ne l$ and $T_l=S$. Hence $L_S=L_i$  for some $i\in [M]$
+and in this case, $\mathcal V_i=\mathcal V_{L_S}^{f_l}$.
+ Hence it is enough
+to show that $p\in \mathcal V_L^{f_l}$ for some label set  $L$ of a  minimal covering element
+in $\Pe_{f_l}^0$.  
+
+By the assumptions $f_l$ cannot have free inputs, and since $\emptyset\ne V_l^j\in
+\mathrm{Min}(\Pe_{f_l})$, we see that $\emptyset \in \Pe_{f_l^*}$, so that $f_l^*$
+has no free inputs as well. If $\Pe_{f_l}^0$ has a largest element,
+then it is the largest element in $\Pe_{f_l}$ by Lemma \ref{lemma:p0_basic}, so it cannot be a
+minimal covering element, since then the rank of $\Pe_{f_l}$ would be 1 which is not
+possible. Hence removing a chain on top of $\Pe_{f_l}^0$ does not touch the minimal
+covering or minimal elements, so using Lemma \ref{lemma:pf0_largest}, we  may assume that 
+$f_l=h\vtl \beta$ for a type function $h$ with no free indices, with a minimal element
+$V^j_l$ and the same minimal covering label sets as $f_l$. Then $\mathcal
+V^{f_l}_L=\mathcal V^h_L$ for all minimal covering label set $L$.
+
+If $h$ is again a product, we
+continue this process, until we get to a situation such that $\Pe_h^0$ has independent
+components. In this case,  the minimal set containing $p$ and all label sets that cover it  are contained in one
+component. If this component has a least element,  we are done. If not, let $g$ be a type function such that this
+component is equal to $\Pe_g^0\setminus \{\emptyset\}$. Arguing as above about the top
+elements, we obtain that all minimal and minimal covering elements in the component are
+contained in $\Pe_{g^*}^0$. Therefore, we have $\mathcal V^h_L=\mathcal V^{g^*}_L$. 
+If $p$ is a free input of $g^*$, then $p\in \mathcal
+V^{g^*}_L$ for any minimal covering label $L$. Otherwise, let $q$ be a type function with
+no free indices such that $g^*=p_r\vtl q$, then $\Pe_{g^*}^0$ and  $\Pe_q^0$ are the
+same as posets, with the same label sets except that the free indices of $g^*$ are added
+to the labels of minimal elements in $\Pe_q$. We may therefore continue the same process
+with $\Pe_q^0$. Since the number of minimal elements is decreasing, we get to a situation 
+when all components have a least element. Hence $p\in \mathcal V_i$ for some $i$. 
+
+
+Claim 2. If $\emptyset \notin \Pe_f$ and  $L_i,L_j\subseteq C_l$,  then $i\sim j$. 
+Since $\mathcal V_i$ and $\mathcal W_i$ have the same color as $L_i$, it then
+follows using Claim 1. that all indices in label sets of minimal and minimal covering elements in $C_l$
+will have the same color. If  $\Pe_{f_l}^0$ has a largest element, then its label
+is an upper bound of both  $L_i$  and $L_j$, so that $i\sim j$. Assmue that $\Pe_{f_l}$
+has no largest element, then $f_l$ has no free indices. Since the decomposition
+$f=f_1\otimes \dots\otimes f_k$ is the  finest decomposition of $f$ as a product, $f_l$
+cannot be a product. By Lemma \ref{lemma:nofree}, we obtain that $\Pe_{f_l}^0$ must have
+independent components $\Pe_{f_l}^0=\Pe_1+^L \Pe_2$. Assume that  $L_i\in \Pe_1$, then any
+minimal element it covers must be in $\Pe_1$ too. Hence $\{V\cover_{f_l} L_i,\ V\in
+\mathrm{Min}(\Pe_{f_l})\}\subseteq \Pe_1$, so that $\mathcal W_i$ contains all indices of
+minimal elements in $\Pe_2$. In particular, $\mathcal V_{i'}\subseteq \mathcal W_i$ for
+all $L_{i'}$ in $\Pe_2$, so that $i\sim i'$ for all such $i'$. It is easily concluded that
+this proves the claim. 
+
+Claim 3. If $i\sim j$, then $L_i,L_j\in C_l$ for some $l$. Similarly as before, this
+implies that if the indices in $\mathcal U \cup (\cup_iL_i)$ have the same color, then
+they belong to the same function $f_l$. It is quite clear that if $L_i\in C_l$ and $L_j\in C_{l'}$
+with $l\ne l'$, then they cannot have a common upper bound. In this situation, we have
+seen that the sets $C'_i$ and $C'_j$ are contained in separated  sets of labels, so we
+cannot have $C'_i\cap C'_j\ne \emptyset$. Hence $i\not\sim j$. 
+
+The only question left is the case when $\emptyset \in \Pe_{f_l}$. In this case we have
+$\mathcal V_i=\mathcal W_i=\emptyset$. If $L_i,L_j
+\subseteq  C_l$ and $\Pe_{f_l}$ has a largest element, then $i\sim j$ and we are done. But
+otherwise $C'_i\cap C'_j=L_i\cap L_j$ which may be empty, so then $i\not\sim j$. We have
+to use a different procedure to obtain $\Pe_{f_l}^0$. Note that in this case, all posets o
+the form 
+$U_j^\uparrow\setminus \{U_j\}$  contain
+$\Pe_{f_l}^0\setminus\{\emptyset\}$ as one of its components, so we may look for such
+repeating components with label sets that have no common colors with the minimal elements. 
+If $\Pe_{f_l}^0$ has a largest element, then $\Pe_{f_l}^0\setminus\{\emptyset\}$ cannot
+have independent components. Otherwise we have $\Pe_{f_l}^0\setminus\{\emptyset\}=\Pe_{f_l^*}^0$ and since $f_l$ is not a product,
+$\Pe_{f_l^*}^0$ cannot have any independent components as well, by Lemma \ref{lemma:nofree}. Hence
+every  component of $U_j^\uparrow\setminus \{U_j\}$ such that its  minimal covering labels
+have no common colors with any minimal elements must correspond to a function $f_l$, with
+$\emptyset \in \Pe_{f_l}$.
+
+
+
+\begin{theorem}\label{thm:pf0} Every type function $f\in \Te_n$ is fully determined by the
+labelled poset $\Pe_f^0$.  
+
+\end{theorem}
+
+\begin{proof}  We will proceed by induction on
+$n$. If $f$ is a chain type, the assertion follows from Lemma
+\ref{lemma:p0_basic} and Proposition \ref{prop:graded}, so that the assertion holds for
+$n\le 3$. Assume it is true for all $m<n$ and let $f\in \Te_n$. By Lemmas
+\ref{lemma:pf0_largest} and \ref{lemma:pf0_smallest} and remarks below them, if $f$ or
+$f^*$ has
+some free indices, then we have $f=\beta_1\vtl h \vtl \beta_2$, where $\beta_1,\beta_2$
+are chain types and $h$ nor $h^*$ do not have any free indices, moreover,  the chain types and $\Pe_h^0$ 
+ can be obtained from $\Pe_f^0$. In this case, $h\in \Te_m$ for $m<n$, so  $h$ is
+ determined by $\Pe_h^0$ by the induction assumtions, so we are done.
+
+
+If both $f$ and $f^*$ have no free indices, we may assume that $\emptyset \notin \Pe_f$, otherwise we 
+replace $f$ by $f^*$. Then if $\Pe_f^0$ has independent components, we have
+$f^*=f_1\otimes f_2$ for some type functions $f_i\in \Te_{n_i}$, $i=1,2$ and $n=n_1+n_2$,
+such that the components have the form $\Pe_{f_i}^0\setminus \{\emptyset\}$. Since
+$n_1,n_2<n$, we are done. If $\Pe_f^0$ has no independent components, then
+$f=f_1\otimes\dots \otimes f_k$ for some $f_i\in \Te_{m_i}$, $i=1,\dots,k$, $m_1+\dots
++m_k=n$, and we may recognize  $\Pe_{f_l}^0$ for all $l=1,\dots,k$ by the procedure
+described above. Again, the assertion follows by induction assumption.
+
+
+\end{proof}
+
+
+It also folows that we can obtain a choice of set of chain types  appearing in the decomposition
+of Theorem \ref{thm:structure} from $\Pe_f^0$.	If $f=\beta_1\vtl h\vtl \beta_2$ for chain
+types $\beta_1$ and $\beta_2$ and a type function $h$, then we can construct such a set
+by adding $\beta_1,\beta_2$ to a collection of chains for $h$. If $h$ and $h^*$ 
+have no free indices, then if $\Pe_h^0$ has independent components, then $h^*=h_1\otimes\dots \otimes h_k$, so the set of chain types of $h$ is obtained by putting
+together the complements of all chain types for the functions $h_i$. Similarly, if
+$h=g_1\otimes \dots\otimes g_k$, we collect all chain types for all the components $g_j$ (without taking 
+complements this time). Each $h_i$ or $g_j$ can be decomposed as above, until we
+necessarily get to the situation when all the components are chain types themselves.
+
+
+\section{Conclusions}
+
+
+
+%\item[(ii)]  $f=f_1\otimes f_2$ for some type functions
+%$f_1$ and $f_2$ if and only if the condition in (i) is not fulfilled. In that case, define
+%a relation $\sim$ on elements of $\Pe_f^0$ as $S\sim T$ if $L_S=L_T$ and order the
+%equivalence classes as $[S]_\sim \le [T]_\sim$ if $S'\le T'$ for some $S'\sim S$ and
+%$T'\sim T$. Then $\Pe=\Pe_f^0|_\sim$ becomes a labelled poset, with labels
+%$L_{[S]_\sim}=L_S$ and $\mathrm{Min}(\Pe)=\mathrm{Min}(\Pe_f^0)$
+%
+%\end{enumerate}
+%
+%
 %\end{lemma}
+%
+
+----
+\begin{lemma} Let $S,T\in \Pe_f^0$ be such that $S\le T$, then $L_S\cap L_T=\emptyset$.
+
+\end{lemma}
+
+\begin{proof} Obvious from the definition of the labels.
+
+\end{proof}
+
+
+\begin{lemma}\label{lemma:labels_cover} Let $S,T\in \Pe_f^0$, $S\ne T$ both cover the same minimal
+element. Then $L_S\ne L_T$.
+
+\end{lemma}
+
+
+\begin{proof} Let $U$ be the minimal element covered by both $S$ and $T$. By Lemma \ref{lemma:pf0_covermin}, 
+$TS$ and $T$ cannot cover any other minimal element and since $\Pe_f$ is graded, there can
+be no other element under $S$ or $T$. It follows that $S=L_S\cup L_U$ and $T=L_T\cup L_U$.
+This proves the statement.
+
+
+\end{proof}
+
+
+ 
+Let us introduce the following relation in $\Pe_f^0$. Denote $\Pe'= \Pe_f^0\setminus \mathrm{Min}(\Pe_f^0)$ and
+for $S\in \Pe'$, let $S^\downarrow$ be the downset of $S$ in $\Pe'$.
+For $S,T\in \Pe'$, we define $S\sim T$ if
+$S^\downarrow\simeq T^\downarrow$ (as posets), with equal labels. The minimal elements are
+unrelated with any other element. It is easy to see that $\sim $ is  an equivalence. 
+
+
+\begin{lemma}\label{lemma:sim_least} Assume that $\Pe_f$ has a smallest element. Then
+$S\sim T$ implies $S=T$.
+
+\end{lemma}
+
+\begin{proof} Let $S_0$ be the least element in $\Pe_f$ and let $\varphi$ be the isomorphism $S^\downarrow$ onto $T^\downarrow$ such
+that $L_{\varphi(U)}=L_U$, $U\in S^\downarrow$. We then have
+\[
+T=\bigcup_{U\in\Pe_0^f, U\le T} L_U=L_{S_0}\cup \bigcup_{U'\in S^\downarrow, U'\le S} L_{\varphi(U')}=
+\bigcup_{U'\in \Pe_0^f, U'\le S}L_{U'}=S.
+\]
+
+\end{proof}
 
 
 
-////
-
-
-Let $f\in \Te_n$ and let $\Pe=\Pe_f$. Let $\Pe_f^0=\Pe^0\subseteq \Pe$ be the subposet of
-elements $S\in \Pe_f$ such that either $S=\emptyset$ or $S\in M_{i,f}$ (so the set of all
-elements in $\Pe$ with labels). Let $T$ be a maximal element in $\Pe^0$ and consider the
-downset of $T$ in $\Pe$, that is,  $\Pe_T=\{S\in \Pe, S\subseteq T\}$. If $T$ is labeled by an
-output index, that is, if the rank $\rho_f(T)$ is odd, then $\bar\Pe_T=\Pe_T\setminus
-\{T\}$, otherwise we put $\bar \Pe_T=\Pe_T$. 
-
-
-Assume that $T=[n_T]$ (we may always do that).
-Then there is some $f_T\in \Te_{n_T}$ such that $\bar \Pe_T=\Pe_{f_T}$. 
-
-We first show that $\bar \Pe_T$ is a graded poset with even rank. 
 
 
 
+\begin{lemma}\label{lemma:equiv}  Let $f\in \Te_n$ and let $T,T'\in \Pe_f^0$,  $T\sim T'$. Then if $T\le
+R$, then there is some $R'\sim R$ such that $T'\le R'$. 
+
+\end{lemma}
+
+\begin{proof} We will proceed by induction on $n$. The property is trivial for chains,
+hence for $n\le 3$. Assume the property holds for all $m<n$.  If $\Pe_f^0$ has a smallest element, then $T=T'$ by Lemma \ref{lemma:sim_least}.
+Also, the desired property is unchanged by adding/removing a chain at the  top of
+$\Pe_f^0$.  We may therefore assume that $\Pe_f^0$ has no smallest or largest
+element. 
+
+If $T$ is minimal, then $T=T'$ so the assertion is trivial. Assume that  $T$ is
+not minimal and  $T\sim T'$. If  $\Pe_f^0= \Pe_1+^L \Pe_2$, then since $T^\downarrow$ and $(T')^\downarrow$ have
+the same labels, they  must be contained in the same component, say  $\Pe_1$. If $T\le R$,
+then also $R\in \Pe_1$.  By Lemma
+\ref{lemma:nofree} there is a type function $h\in \Te_m$ such that $\Pe_1=\Pe_h^0\setminus
+\{\emptyset\}$, so that  all $T^\downarrow$, $(T')^\downarrow$ and $R$ are contained in
+$\Pe_h^0$. Then $T\sim T'$ also in $\Pe_h^0$ and since $m<n$, the assertion holds by induction assumption.
+
+If $\Pe_f^0$ has no independent components, then by Lemma \ref{lemma:nofree} we see that
+ $f=f_1\otimes f_2$ for some $f\in \Te_m$, $f_1\in \Te_{n-m}$ and decomposition
+ $n=[m]\oplus [n-m]$ . 
+ In this case, we have by Corollary \ref{coro:Pf} that $T=(T_1,T_2)$,  $T'=(T'_1,T'_2)$ for some
+$T_i, T_i'\in \Pe_{f_i}^0$, 
+and we may assume that $T_2$ is minimal (the case when $T_1$ is minimal is treated
+similarly). Since $T$ is not minimal, $T_1$ is not minimal as well. We have
+$L_{T'}=L_{T}=L_{(T_1,T_2)}=L_{T_1}\subseteq [m]$, so that also $T_2'$ is minimal, since
+$L_{(T'_1,T'_2)}=L_{T'_2}\subseteq [m+1,n]$ in the other case. It follows that
+$T^\downarrow = (T_1^\downarrow,T_2)$ and $(T')^\downarrow=((T'_1)^\downarrow,T'_2)$, so
+that $T_1\sim T_1'$. If $T\le R$, then $R=(R_1,T_2)$ for some $R_1\in \Pe_{f_1}^0$,
+$T_1\le R_1$  and by
+the induction assumption, there is some $R_1'\in \Pe_{f_1}^0$ such that $R_1'\sim R_1$ and
+$T_1'\le R_1'$. It is now easy to see that $R'=(R_1',T_2')$ satisies $T'\le R'$ and $R\sim
+R'$.
+
+
+
+\end{proof}
+
+
+Let us denote $\Pe:=\Pe_f^0|_\sim$ and let us introduce a relation $\le$ in $
+\Pe$ as $[S]_\sim\le [T]_\sim$ if $S\le T'$ for some $T'\in [T]_\sim$.  Then $\le$ is an
+order relation in $\Pe$. Indeed, $\le$ is obviously reflexive. To see that it is
+antisymmetric, let  $T\le S$ and $S'\le T'$ for $T\sim T'$ and $S\sim S'$. By Lemma
+\ref{lemma:equiv}, there is some $T''\sim T'$ such that $T\le S\le T''$. Since $T\sim
+T''$, they have the same label, so that $T=T''=S$. The proof of transitivity is similar.
+We also define a label set of each $[T]_\sim \in \Pe$ as $L_{[T]_\sim}=L_T$. In this way,
+$\Pe$ becomes a labelled poset, with minimal elements $[U]_\sim=\{U\}$, $U\in
+\mathrm{Min}(\Pe_f^0)$. 
+
+We now ''disentangle'' the minimal elements. For any  $[T]_\sim\in \Pe$ that covers  a
+minimal element of $\Pe$ put 
+\[
+C_{[T]_\sim}:=\{U\in \mathrm{Min}(\Pe_f^0), [U]_\sim\le [T]_\sim\},\qquad \hat
+L_{[T]_\sim}:= \bigcap_{U\in C_{[T]\sim}} L_U.
+\]
+Let $\hat L_1,\dots, \hat L_t$ be such that $\hat L_{[T]_\sim}=\hat L_j$ for some $j$ and $\hat
+L_i\ne \hat L_j$ for $i\ne j$. We construct a new labelled poset $\hat \Pe$ as follows. Remove the minimal points of
+$\Pe$ and add elements $\mathbf{U}_1,\dots,\mathbf{U}_t$ with labels
+$L_{\mathbf{U}_j}=\hat L_j$ and such that $\mathbf{U}_j\le [S]_\sim$ if and only if there
+is some $[T]_\sim$ covering a minimal element in $\Pe$, such that $[T]_\sim\le [S]_\sim$ and $\hat L_{[T]_\sim}=\hat L_j$.
+
+
+\begin{lemma}\label{lemma:nofree_connected} Let $f\in \Te_n$ be such that $f$ nor
+$f^*$ have any free inputs or outputs and let $\emptyset \notin \Pe_f^0$. Assume that
+$\Pe_f^0$ has no independent components. Then there is some $\sigma\permut_n$ such that by
+replacing $f$ by $f\circ \sigma$, we get  $\hat \Pe= +^L_j \Pe_j$, where each
+labelled component has the form $\Pe_j= \Pe_{f_j}^0$  for
+some $f_j\in \Te_{n_j}$ such that  $f=\otimes_j f_j$.
+
+
+\end{lemma}
+
+
+\begin{proof} By the assumptions and Lemma \ref{lemma:nofree}, we must have $f=f_1\otimes
+f_2$ up to a permutation $\sigma\in \permut_n$. Let $T_1\in \Pe_{f_1}^0$ and $T_2\in
+\Pe_{f_2}^0$ be not minimal elements, then for any $U_1\in \mathrm{Min}(\Pe_{f_1})$ and
+$U_2\in \mathrm{Min}(\Pe_{f_2})$, $(T_1,U_2)$ and $(U_1,T_2)$ are elements in $\Pe_f^0$,
+with label sets $L_{(T_1,U_2)}=L_{T_1}\subseteq [n_1]$ and $L_{(U_1,T_2)}=n_1+L_{T_2}\subseteq
+[n_1+1,n]$. Such elements are incomaprable in $\Pe_{f}^0$ and it follows from the
+separation of the label sets that we have $(T_1,U_2)\not\sim(U_1,T_2)$ for
+such elements. It follows that $[(T_1,U_2)]_\sim$ and $[(U_1,T_2)]_\sim$ are incomparable
+in $\Pe$ and hence also in $\hat \Pe$. 
+
+Let $[(T_1,U_2)]_\sim$ be an element that covers a minimal element $[U]=\{U\}$ in $\Pe$.
+Let $U=(V_1,V_2)$ for some $V_i\in \mathrm{Min}(\Pe_{f_i}^0)$, then there must be some
+$T\in [(T_1,U_2)]_\sim$ such that $U\cover T$. As we have seen above, all elements in
+$[(T_1,U_2)]_\sim$ must be of the form $[(S_1,W_2)]_\sim$ for $S_1\in \Pe_{f_1}^0$ and $W_2\in
+\mathrm{Min}(\Pe_{f_2})$. It follows that we must have $W_2=V_2$ and $V_1\cover S_1$. 
+
+
+Then all
+$T\in [(T_1,U_2)]\in \Pe_f^0$ must cover $U=(V_1,V_2)$ for some $V_i\in
+\mathrm{Min}(\Pe_{f_i}^0)$. It follows that $V_2=U_2$ and $V_1\cover T_1$. Since all $T\in [(T_1,U_2)]_\sim$
+must be of the form $(S_1,W_2)$ for $S_1\in \Pe_{f_1}^0$ and $W_2\in
+\mathrm{Min}(\Pe_{f_2})$, we see that $V_1\cover S_1$ and $W_2=U_2$. 
+
+and consequently such elements are incomparable
+
+Therefore any $T\in \Pe_f^0$ has the form
+$(T_1,T_2)$ such that $T_i\in \Pe_{f_i}^0$ and at least one of $T_1$, $T_2$ is minimal. 
 
 
 
 
-%\subsubsection{Some examples}
-%
-%
-%\begin{exm}[Tensor products] Let $n=n_1+n_2+n_3+n_4$ and let $f_i\in \Te_{n_i}$, $i=1,\dots,4$. 
-%Fix the concatenation decompositions $\{0,1\}^n\simeq \Pi_i\{0,1\}^{n_i}$,
-%$\{0,1\}^{n_1+n_2}\simeq \{0,1\}^{n_1}\times \{0,1\}^{n_2}$, $\{0,1\}^{n_3+n_4}\simeq
-%\{0,1\}^{n_3}\times \{0,1\}^{n_4}$. Using Lemmas \ref{lemma:causal_product} and \ref{lemma:causal_tensor}, we compute
-%\[
-%f_1\otimes f_2=(f_1\vtl f_2)\wedge (f_2\vtl f_1),\qquad 
-%(f_1\otimes f_2)^*=(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1).
-%\]
-%We then have using Lemmas \ref{lemma:fproduct} and \ref{lemma:causal_tensor},
-%\begin{align*}
-%(f_1\otimes f_2)\otimes f_3&=[(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\otimes f_3=
-%[(f_1\vtl f_2)\otimes f_3]\wedge [(f_2\vtl f_1)\otimes f_3]\\
-%&=(f_1\vtl f_2 \vtl f_3)\wedge (f_3\vtl f_1\vtl f_2)\wedge (f_2\vtl f_1\vtl f_3)\wedge
-%(f_3\vtl f_2\vtl f_1).
-%\end{align*}
-%On the other hand, note that we also have
-%\begin{align*}
-%f_1\otimes (f_2\otimes f_3)&=f_1\otimes [(f_2\vtl f_3)\wedge (f_3\vtl f_2)]\\
-%&= (f_1\vtl f_2\vtl f_3)\wedge (f_2\vtl f_3\vtl f_1)\wedge (f_1\vtl f_3\vtl f_2)\wedge
-%(f_3\vtl f_2\vtl f_1).
-%\end{align*}
-%Since the left hand sides are obviously equal, we obtain
-%\[
-%f_1\otimes f_2\otimes f_3=\bigwedge_{\pi\in \permut_3} (f_{\pi^{-1}(1)}\vtl
-%f_{\pi^{-1}(2)}\vtl f_{\pi^{-1}(3)}),
-%\]
-%but we may restrict to permutations of the two kinds above:
-%\[
-%\{123,\ 213,\ 312,\ 321\},\quad \{123,\ 231,\ 132,\ 321\}.
-%\]
-%Similarly, for $f_1,\dots, f_k$ we get 
-%\[
-%f_1\otimes \dots \otimes f_k=\bigwedge_{\pi\in \permut_k} (f_{\pi^{-1}(1)}\vtl
-%\dots \vtl f_{\pi^{-1}(k)}),
-%\]
-%but we may restrict to some subsets of permutations.
-%
-%We look at the case $k=4$. Then we have 
-%\begin{align*}
-%((f_1\otimes f_2)\otimes f_3)\otimes f_4&=(f_1\otimes (f_2\otimes f_3))\otimes f_4=
-%f_1\otimes (f_2\otimes (f_3\otimes f_4))=f_1\otimes ((f_2\otimes f_3)\otimes f_4)\\
-%&=(f_1\otimes f_2)\otimes (f_3\otimes f_4)
-%\end{align*}
-%For the first 4 equalities, we get the sets of permutations:
-%\begin{align*}
-%\{1234,\ 2134,\ 3124,\ 3214,\ 4123,\ 4213,\ 4312,\ 4321\}\\
-%\{1234,\ 2314,\ 1324,\ 3214,\ 4123,\ 4231,\ 4132,\ 4321\}\\
-%\{1234,\ 1324,\ 1423,\ 1432,\ 2341,\ 3241,\ 4231,\ 4321\}\\
-%\{1234,\ 1342,\ 1243,\ 1432,\ 2341,\ 3421,\ 2431,\ 4321\}
-%\end{align*}
-%For the last one, we compute:
-%\begin{align*}
-%(f_1\otimes f_2)\otimes (f_3\otimes f_4)&=[(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\otimes
-%[(f_3\vtl f_4)\wedge (f_4\vtl f_3)]\\
-%&=\biggl([(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\vtl [(f_3\vtl f_4)\wedge (f_4\vtl
-%f_3)]\biggr)\\ &\wedge \biggl([(f_3\vtl f_4)\wedge (f_4\vtl
-%f_3)]\vtl [(f_1\vtl f_2)\wedge (f_2\vtl f_1)]\biggr)\\
-%&=(f_1\vtl f_2\vtl f_3\vtl f_4)\wedge (f_2\vtl f_1\vtl f_4\vtl f_3)\\
-%&\wedge (f_3\vtl f_4\vtl f_1\vtl f_2)\wedge (f_4\vtl f_3\vtl f_2\vtl f_1), 
-%\end{align*}
-%which gives us any of the sets
-%\begin{align*}
-%\{1234,\ 2143,\ 3412,\ 4321\}\\
-%\{1243,\ 2134,\ 3421,\ 4312\},
-%\end{align*}
-%note these have only four elements!
-%
-%\end{exm}
-%
-%\begin{exm}\label{example:tensor3} In the situation of the previous example, we compute $(f_1\otimes
-%f_2)^*\otimes f_3$. By the previous example, we have
-%\[
-%(f_1\otimes
-%f_2)^*\otimes f_3= \bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1)\bigr]\otimes f_3.
-%\]
-%This can be written as
-%\begin{align*}
-%(f_1\otimes
-%f_2)^*\otimes f_3&=\bigl[(f^*_1\vtl f^*_2)\otimes f_3\bigr]\vee\bigl[ (f^*_2\vtl
-%f^*_1)\otimes f_3\bigr]\\
-%&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl f_3\bigl)\wedge \bigl(f_3\vtl f_1^*\vtl
-%f_2^*\bigr)\biggr]\vee \biggl[\bigl(f^*_2\vtl f^*_1\vtl f_3\bigl)\wedge \bigl(f_3\vtl
-%f_2^*\vtl f_1^*\bigr)\biggr]
-%\end{align*}
-%but also as 
-%\begin{align*}
-%(f_1\otimes
-%f_2)^*\otimes f_3&=\biggl[\bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl f^*_1)\bigr]\vtl
-%f_3\biggr]\wedge \biggl[f_3\vtl \bigl[(f^*_1\vtl f^*_2)\vee (f^*_2\vtl
-%f^*_1)\bigr]\biggr]\\
-%&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl f_3\bigr)\vee \bigl(f^*_2\vtl f^*_1\vtl
-%f_3\bigr)\biggr]\wedge \biggl[\bigl(f_3\vtl f^*_1\vtl f^*_2\bigr)\vee \bigl(f_3\vtl f^*_2\vtl
-%f^*_1\bigr)\biggr]
-%\end{align*}
-%
-%
-%\end{exm}
-%
-%
-%\begin{exm}\label{example:tensor34} Let us next compute $(f_1\otimes f_1)^*\otimes (f_3\otimes f_4)$. 
-%There are several possibilities how to get this: either plug $(f_3\otimes f_4)$ instead of
-%$f_3$ into the two forms in the above example, or compute as tensoring the two forms with
-%$f_4$. That is,
-%\begin{align*}
-%(f_1\otimes
-%f_2)^*\otimes f_3\otimes f_4&=\biggl[\bigl(f^*_1\vtl f^*_2\vtl (f_3\otimes
-%f_4)\bigl)\wedge \bigl((f_3\otimes f_4)\vtl f_1^*\vtl
-%f_2^*\bigr)\biggr]\\  &\vee \biggl[\bigl(f^*_2\vtl f^*_1\vtl (f_3\otimes f_4)\bigl)\wedge
-%\bigl((f_3\otimes f_4)\vtl
-%f_2^*\vtl f_1^*\bigr)\biggr]\\
-%&= \biggl[(f^*_1\vtl f^*_2\vtl f_3\vtl f_4)\wedge (f^*_1\vtl f^*_2\vtl 
-%f_4\vtl f_3)\\&\qquad\wedge (f_3\vtl f_4\vtl f_1^*\vtl f_2^*)\wedge (f_4\vtl f_3\vtl
-%f_1^*\vtl f_2^*)\biggr]\\
-%&\vee\biggl[(f^*_2\vtl f^*_1\vtl f_3\vtl f_4)\wedge (f^*_2\vtl f^*_1\vtl 
-%f_4\vtl f_3)\\&\qquad\wedge (f_3\vtl f_4\vtl f_2^*\vtl f_1^*)\wedge (f_4\vtl f_3\vtl
-%f_2^*\vtl f_1^*)\biggr]
-%\end{align*}
-%or
-%\begin{align*}
-%(f_1\otimes
-%f_2)^*\otimes f_3\otimes f_4&=\biggl[\bigl[(f^*_1\vtl f^*_2\vtl f_3)\vee (f^*_2\vtl f^*_1\vtl
-%f_3)\bigr]\wedge \bigl[(f_3\vtl f^*_1\vtl f^*_2)\vee (f_3\vtl f^*_2\vtl
-%f^*_1)\bigr]\biggr]\otimes f_4\\
-%&=\biggl[\biggl[\bigl[(\dots)\vee (\dots)\bigr]\wedge
-%\bigl[(\dots)\vee(\dots)\bigr]\biggr]\vtl f_4 \biggr]\\
-%&\qquad \qquad \wedge \biggl[f_4\vtl\biggl[\bigl[(\dots)\vee (\dots)\bigr]\wedge
-%\bigl[(\dots)\vee(\dots)\bigr]\biggr]\\
-%&=\biggl[(f^*_1\vtl f^*_2\vtl f_3\vtl f_4)\vee (f^*_2\vtl f^*_1\vtl
-%f_3\vtl f_4)\biggr]\\
-%&\wedge \biggl[(f_3\vtl f^*_1\vtl f^*_2\vtl f_4)\vee (f_3\vtl f^*_2\vtl
-%f^*_1\vtl f_4)\biggr]\\
-%&\wedge \biggl[(f_4\vtl f^*_1\vtl f^*_2\vtl f_3)\vee (f_4\vtl f^*_2\vtl f^*_1\vtl
-%f_3)\biggr]\\
-%&\wedge \biggl[(f_4\vtl f_3\vtl f^*_1\vtl f^*_2)\vee (f_4\vtl f_3\vtl f^*_2\vtl
-%f^*_1)\biggr]
-%\end{align*}
-%
-%\end{exm}
-%
-%\begin{exm} Here we compute $(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*$. We have
-%\begin{align*}
-%(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*&= \bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
-%f_1^*\bigr]\otimes \bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
-%f_3^*)\bigr]\\
-%&= \bigl[(f_1^*\vtl f^*_2)\otimes (f_3^*\vtl f^*_4)\bigr]\vee \bigl[(f_1^*\vtl
-%f^*_2)\otimes (f_4^*\vtl f^*_3)\bigr]\\
-%&\quad \vee \bigl[(f_2^*\vtl f^*_1)\otimes (f_3^*\vtl
-%f^*_4)\bigr]\vee \bigl[(f_2^*\vtl f^*_1)\otimes (f_4^*\vtl f^*_3)\bigr]\\
-%&=[1234 \wedge 3412]\vee [1243\wedge 4312] \vee [2134\wedge 3421]\vee [2143\wedge 4321]
-%\end{align*}
-%but also
-%\begin{align*}
-%(f_1\otimes f_2)^*\otimes (f_3\otimes f_4)^*&= \biggl[\bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
-%f_1^*)\bigr]\vtl  \bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
-%f_3^*)\bigr]\biggr]\\
-%&\quad\wedge\biggl[\bigl[(f_3^*\vtl f^*_4)\vee (f_4^*\vtl
-%f_3^*)\bigr]\vtl  \bigl[(f_1^*\vtl f^*_2)\vee (f_2^*\vtl
-%f_1^*)\bigr]\biggr] \\
-%&= [1234\vee 2143]\wedge [3412\vee 4321]
-%\end{align*}
-%
-%
-%
-%
-%\end{exm}
-%
-%
-%///
-%
-%Examples??
-%
-%Let $f$ be a function of the form as in Theorem \ref{thm:structure}. Since all the chains
-%$\beta_{a,b}:=\beta_{\pi^{-1}_{a,b}(1)}\vtl \dots \vtl \beta_{\pi^{-1}_{a,b}(k)}\circ
-%\rho_{a,b}$ in the
-%decomposition have the same input and  output indices, they must satsfy the inequality
-%$p_{I}\le \beta_{a,b} \le p_{O}^*$. But then the same is true for $f$.
-%It follows that although we do not know whether $f$ is a type function, the corresponding
-%object $X_f$ is always included in a set of channels.
-%
-%In particular, in the quantum case, each $X_{\beta_{a,b}}$ describes quantum combs  obtained by
-%connecting combs described by  $X_{\beta_1},\dots, X_{\beta_k}$, in different orders
-%according to $\pi_{a,b}$. ... NOT QUITE LIKE THIS!!!
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%-- Quantum combs
-%
+
+\end{proof}
+
+
+
+
+
+In this way, using the above two lemmas, if $f$ is not a chain type, we obtain a decomposition $f=\beta_1\vtl h\vtl
+\beta_2$, with chains $\beta_1$ and $\beta_2$ and a type function $h$ such that
+$I_h^F=I_{h^*}^F=O_h^F=O_{h^*}^F=\emptyset$. It is clear that $f$ can be composed as in
+Theorem \ref{thm:structure}, using some  set of chains for $h$, together
+with $\beta_1$ and $\beta_2$.  
+
+
+Let now $f\in \Te_n$ be such that $f$ nor $f^*$ have any free inputs or outputs. Then
+$\Pe_f^0$ and $\Pe_{f^*}^0$ have no largest element, moreover, exactly one of them, say
+$\Pe_f^0$, contains a least element that then must be $\emptyset$ and  we have 
+$\Pe_{f^*}=\Pe_f^0\setminus \{\emptyset\}$, with the same sets of labels. The case that $\emptyset \in \Pe_{f^*}^0$ is
+obtained by duality.
+
+
+By construction, up to a permutation, we have either $f=f_1\otimes f_2$ or $f^*=f_1\otimes f_2$ for some
+$f_1\in \Te_{n_1}$ and $f_2\in \Te_{n_2}$ and a decomposition $[n]=[n_1]\oplus[n_2]$. Then both $\Pe_{f_1}$ and $\Pe_{f_2}$ must
+contain $\emptyset$. By Corollary \ref{coro:Pf}, we see that  $\Pe_f^0$ consits of
+$\Pe_{f_1}^0$ and $\Pe_{f_2}^0$ glued at the least element $\emptyset$, with labels of
+$f_2$ translated by $n_1$. In other words, $\Pe_{f^*}^0$ is the direct sum 
+\[
+\Pe_{f^*}^0=(\Pe_{f_1}^0\setminus
+\{\emptyset\}) + (\Pe^0_{f_2}\setminus \{\emptyset\})
+\]
+(with translated labels for $\Pe_{f_2}$). 
+If $f^*=f_1\otimes f_2$, then $\Pe_{f^*}^0$ is obtained by taking copies of $\Pe^0_{f_1}$
+indexed by minimal elements in $\Pe_{f_2}$, copies of $\Pe^0_{f_2}$ indexed by minimal
+elements in $\Pe_{f_1}$, and glueing them at the respective minimal elements. 
+
+These
+considerations suggest that if $\Pe_{f^*}^0$ is a direct sum of posets with independent
+sets of labels, then $f$ is a product of some $f_1$ and $f_2$, such that $\Pe_{f_i}^0$ can
+be obtained by adding $\emptyset$ to each of the two parts. If we can obtain some sets of
+chains for $f_1$ and $f_2$, then their union is a set of chains for $f$, as can be seen from the proof of Theorem
+\ref{thm:structure}. 
+ On the other
+hand, if $\Pe_{f^*}^0$ is a direct set of posets but the labels are repeating, then
+$f^*=f_1\otimes f_2$ and the posets $\Pe_{f_i}^0$ are recognizable from the structure of
+$\Pe_{f^*}^0$. We then can obtain a set of chains for $f^*$ from those for $f_1$ and $f_2$
+as before. Taking duals, we obtain a set of chains for $f$. 
+
+Repeating the process with $f_1$ and $f_2$, we get to type functions for $n_1,n_2<n$, so
+after a finite number of steps, we get to the situation when $f$ is itself a chain.
+
+
+Examples
+/////
+
+
 
 \appendix
 
 
-\section{Permutations, binary strings and boolean functions}
+\section{Some basic definitions}
+%Permutations, binary strings and boolean functions}
 
 
 For $m\le n\in \mathbb N$, we will denote the corresponding interval $\{m,m+1,\dots,n\}$ by
@@ -2611,6 +2769,47 @@ Note that we have
 \]
 (These permutations  come from the operadic structure on the set of
 all permutations $\permut_*$.)
+
+
+\subsection{Partially ordered sets}
+
+A partially ordered set, or a poset, is a set $\Pe$ endowed with a reflexive, antisymmetric and
+transitive relation $\le$, called the partial order. We will only encounter  the situation
+when $\Pe$ is finite. A basic example of a poset is the set $\Pe(X)$ of all subsets of a
+finite set $X$, ordered by inclusion. If $X=[n]$, we will denote $\Pe(X)$ by $2^n$. 
+
+
+The set of minimal elements in $\Pe$ will be denoted by $\mathrm{Min}(\Pe)$. 
+For elements $p,q\in \Pe$, we say that $q$ covers $p$, in notation $p\cover q$,  if $p\le q$
+and for any $r$ such that $p\le r\le q$ we have $r=p$ or $r=q$. If $p$ covers a minimal
+element, we will say that $p$ is a minimal covering element.
+
+
+A totally ordered subposet $\Ce\subseteq \Pe$ is called a chain in $\Pe$. Such a chain  is
+maximal if it is not contained in any other chain in $\Pe$.
+The length of a chain $\Ce$ is defined as $|\Ce|-1$. 
+
+We say that a poset $\Pe$  is graded of rank
+$k$ if every maximal chain in $\Pe$ has the same length equal to $k$. Equivalently,  there is
+a unique rank function $\rho: \Pe\to \{0,1,\dots,k\}$ such that $\rho(p)=0$ if $p$ is a
+minimal element of $\Pe$ and $\rho(q)=\rho(p)+1$ if $p\cover q$. Basic examples of graded
+posets are chains, antichains and $2^n$.
+
+
+If $\Pe$ and $\mathcal Q$ are posets with disjoint sets, their direct sum $\Pe+\mathcal Q$ is a poset defined as 
+the disjoint union $\Pe\cup \mathcal Q$, such that the order is preserved in each
+component and elements in different components are incomparable. 
+ Another way to compose
+$\Pe$ and $\mathcal Q$ is the ordinal sum $\Pe\star \mathcal Q$, where the underlying set
+is again the union $\Pe\cup \mathcal Q$ and the order in each component is preserved, but
+for $p\in \Pe$ and $q\in \mathcal Q$ we have $p\le q$. A third way to compose posets that
+we will use is the direct product $\Pe\times \mathcal Q$, where the underlying set is the
+cartesian product $\Pe\times \mathcal Q$, with $(p_1,q_1)\le (p_2,q_2)$ if $p_1\le p_2$ in
+$\Pe$  and $q_1\le q_2$ in $\mathcal Q$. 
+
+The Hasse diagram of a finite poset $\Pe$ is a graph whose vertices are elements of $\Pe$
+and there is an edge between $p$ and $q$ if $p\cover q$, and if $p\lneq r$, then $r$ is drawn above
+$p$. 
 
 
 \subsection{Binary strings}
@@ -2927,5 +3126,10 @@ C$, we have
 
 The proper affine subspace $\tilde A$ in the above Corollary will be called the affine dual
 of $A$. Note that the dual depends on the choice of the ambient vector space $V$.
+
+
+\section{Properties of $\Pe_f^0$}
+
+
 
 \end{document}
