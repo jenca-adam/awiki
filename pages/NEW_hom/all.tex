@@ -105,6 +105,14 @@
 
 \subsection{The category $\FV$} \label{sec:fv}
 
+
+The category $\FV$ is a basic  example of a compact closed category, whose structure
+underlies all the results in this paper. For basics on category theory and symmetric
+monoidal categories, see [MacLane]. For compact closed categories and the use of categories in quantum theory, see
+[book]. [Kelly compact closed] 
+
+
+
 Let  $\FV$ be the category of finite dimensional real vector spaces with linear maps. 
 We will denote the usual tensor product by $\otimes$, then  $(\FV,\otimes, I=\mathbb R)$
 is a symmetric monoidal category, with the associators, unitors and symmetries given by
@@ -119,7 +127,6 @@ V, \qquad \rho_V: V\otimes I\simeq V,\\
 
 
 
-
 Let  $(-)^*: V\mapsto V^*$ be the usual vector space dual, with duality denoted by
 $\<\cdot,\cdot\>: V^*\times V\to \mathbb R$. We will use the canonical identification
 $V^{**}=V$ and $(V_1\otimes V_2)^*=V_1^*\otimes V_2^*$. With this duality, $\FV$ is
@@ -130,7 +137,11 @@ identities hold:
 (\epsilon_V\otimes V)\circ (V\otimes \eta_V)=V,\qquad (V^*\otimes \epsilon_V)\circ
 (\eta_V\otimes V^*)=V^*,
 \end{equation}
-here we denote the identity map on the object $V$ by $V$. Let us identify these morphisms.
+here we denote the identity map on the object $V$ by $V$. 
+
+
+
+Let us identify these morphisms.
 First, $\eta_V$ is a linear map $\mathbb R\to V^*\otimes V$, which can be
 identified with the element $\eta_V(1)\in V^*\otimes V$ and   $\epsilon_V\in (V\otimes
 V^*)^*=V^*\otimes V$ is again an element of the same space.  Choose a basis
@@ -161,11 +172,11 @@ be also written as
 V,\ y^*\in W^*,
 \]
 here $f^*:W^*\to V^*$ is the adjoint of $f$.
-Note that by compactness, the internal hom in $\FV$ satisfies $[V,W]\simeq V^*\otimes W$,
-so that  in the case of $\FV$, the object $[V,W]$ can be identified with the space of linear
+Note that by compactness, the {\em internal hom} in $\FV$ satisfies $V\multimap W\simeq V^*\otimes W$,
+so that  in the case of $\FV$, the object $V\multimap W$ can be identified with the space of linear
 maps $\FV(V,W)$. 
 
-We now present two examples that are most important for us.
+The following two examples  are most important for us.
 
 \begin{exm}\label{exm:classical} Let $V=\mathbb R^N$. In this case, we fix the canonical basis $\{|i\>,\
 i=1,\dots,N\}$. We will identify $(\mathbb R^N)^*=\mathbb R^N$, with duality
@@ -209,7 +220,13 @@ is the Choi matrix of $f$.
 We now introduce the category $\Af$, whose objects  are of the form $X=(V_X,A_X)$, where
 $V_X$ is an object in $\FV$  and $A_X\subseteq V_X$ is a proper affine subspace, see Appendix
 \ref{sec:app_affine} for definitions and basic properties. Morphisms $X\xrightarrow{f} Y$ in $\Af$ are linear maps $f:V_X\to V_Y$  such that
-$f(A_X)\subseteq A_Y$. For any object $X$, we put
+$f(A_X)\subseteq A_Y$. For two objects $X$ and $Y$ and a  linear map $f:V_X\to V_Y$, we write $X\xrightarrow{f} Y$ with
+the meaning that $f$ is a morphism in $\Af$. In particular, if $V_X=V_Y=V$, then  $X\xrightarrow{id_V} Y$ means
+that  $A_X\subseteq A_Y$. The set of all morphisms $X\xrightarrow{f} Y$ in $\Af$ will be
+denoted by $\Af(X,Y)$.
+
+
+For any object $X$, we put
 \begin{align*}
 L_X:=\lin(A_X), \quad  S_X:=\Span(A_X), \quad D_X=\dim(V_X),\quad d_X=\dim(L_X).
 \end{align*}
@@ -217,21 +234,8 @@ We have
 \begin{equation}\label{eq:ALS}
 A_X=a+L_X=S_X\cap \{\tilde a\}^{\sim},
 \end{equation}
-for any choice of elements $a\in A_X$ and $\tilde a\in \tilde A_X$.
-We now introduce a tensor product  and duality that endow $\Af$ with the structure of a
-*-autonomous category.
-[Barr, kniha *autonomous, Kelly compact closed].
+for any choice of elements $a\in A_X$ and $\tilde a\in A^*_X$.
 
-By Corollary \ref{coro:dual},  the dual $\tilde A_X$ is a proper affine subspace in $V_X^*$, so that
-$X^*:=(V_X^*,\tilde A_X)$ is an object in $\Af$. We have $X^{**}=X$ and the corresponding subspaces
-are related as
-\begin{equation}\label{eq:duality}
-L_{X^*}=S_X^\perp,\qquad S_{X^*}=L_X^\perp.
-\end{equation}
-It is easily seen that for any  $X\xrightarrow{f} Y$, the adjoint map satisfies $f^*(\tilde
-A_Y)\subseteq \tilde A_X$, so that $Y^*\xrightarrow{f^*} X^*$ and the duality $(-)^*$ is a
-full and faithful functor 
-$\Af^{op}\to \Af$.
 
 We will next introduce a monoidal structure $\otimes$ as follows. For two objects $X$ and
 $Y$, we put  $V_{X\otimes Y}=V_X\otimes V_Y$ and construct the affine subspace
@@ -239,11 +243,11 @@ $A_{X\otimes Y}$ as the affine span of
 \[
 A_X\otimes A_Y=\{a\otimes b,\ a\in A_X,\ b\in A_Y\}.
 \]
-Fix any $\tilde a_X\in \tilde A_X$ and $\tilde a_Y\in \tilde A_Y$. 
-Since $A_X\otimes A_Y\subseteq \{\tilde a_X\otimes \tilde a_Y\}^\sim$, the affine span of
+Fix any $\tilde a_X\in A^*_X$ and $\tilde a_Y\in A^*_Y$. 
+Since $A_X\otimes A_Y\subseteq \{\tilde a_X\otimes \tilde a_Y\}^*$, the affine span of
 $A_X\otimes A_Y$ is a proper affine subspace and we have by Lemma \ref{lemma:dual}
 \[
-A_{X\otimes Y}:=\aff(A_X\otimes A_Y)=\{A_X\otimes A_Y\}^{\approx}.
+A_{X\otimes Y}:=\aff(A_X\otimes A_Y)=\{A_X\otimes A_Y\}^{**}.
 \]
 \begin{lemma}\label{lemma:tensor_spaces}
 For any $a_X\in A_X$, $a_Y\in A_Y$, we  have
@@ -314,6 +318,20 @@ for all such elements. The desired inclusion follows by linearity.
 \end{proof}
 
 
+By Corollary \ref{coro:dual},  the dual affine subspace $A^*_X$ is a proper affine subspace in $V_X^*$, so that
+$X^*:=(V_X^*,A^*_X)$ is an object in $\Af$. We have $X^{**}=X$ and the corresponding subspaces
+are related as
+\begin{equation}\label{eq:duality}
+L_{X^*}=S_X^\perp,\qquad S_{X^*}=L_X^\perp.
+\end{equation}
+It is easily seen that for any  $X\xrightarrow{f} Y$, the adjoint map satisfies $f^*(
+A_Y^*)\subseteq A^*_X$, so that $Y^*\xrightarrow{f^*} X^*$ and the duality $(-)^*$ is a
+full and faithful functor 
+$\Af^{op}\to \Af$. However, as we will see below, $\Af$ with this monoidal structure and
+duality is not compact closed. Nevertheless, we next show that it is *-autonomous, which
+will be crucial for the structure of higher order objects studied further. For details on *-autonomous
+categories, see [Barr kniha,...].
+
 \begin{theorem} $(\Af,\otimes,I)$ is a *-autonomous category, with duality $(-)^*$, such
 that $I^*=I$.
 
@@ -336,7 +354,7 @@ determined by the equalities
 \]
 for $f\in \FV(V_X\otimes V_Y,V_Z^*)$ and the corresponding morphism  $\hat f\in \FV(V_Z,V_Y^*\otimes V_Z^*)$. Since
 $A_{X\otimes Y}$ is an affine span of $A_X\otimes A_Y$, we see that
-$f$ is in $\Af(X\otimes Y, Z^*)$ if and only if $f(x\otimes y)\in \tilde A_Z$ for all $x\in A_X$, $y\in
+$f$ is in $\Af(X\otimes Y, Z^*)$ if and only if $f(x\otimes y)\in A^*_Z$ for all $x\in A_X$, $y\in
 A_Y$, that is, 
 \[
 1=\<f(x\otimes y),z\>=\<\hat f(x),y\otimes z\>\qquad \forall x\in A_X,\
@@ -344,7 +362,7 @@ A_Y$, that is,
 \]
 But this is equivalent to
 \[
-\hat f(x)\in (A_Y\otimes A_Z)^\sim=\tilde A_{Y\otimes Z},\qquad \forall x\in A_X,
+\hat f(x)\in (A_Y\otimes A_Z)^*=A^*_{Y\otimes Z},\qquad \forall x\in A_X,
 \]
 which means that $\hat f\in \Af(X, (Y\otimes Z)^*)$.
 
@@ -353,7 +371,7 @@ A *-autonomous category is compact closed if it satisfies $(X\otimes Y)^*=X^*\ot
 Y^*$. 
 In general, $X\odot Y=(X^*\otimes Y^*)^*$ defines a dual symmetric monoidal
 structure that is different from $\otimes$. 
-We next show that $\Af$ is not compact.
+We next show that $\Af$ is not compact closed.
 
 \begin{prop}\label{prop:noncompact} For objects in $\Af$, we have $(X\otimes
 Y)^*=X^*\otimes Y^*$ exactly in one of the following situations:
@@ -368,8 +386,8 @@ Y)^*=X^*\otimes Y^*$ exactly in one of the following situations:
 \end{prop}
 
 \begin{proof} Since $\FV$ is compact, we have $V_{(X\otimes Y)^*}=(V_X\otimes
-V_Y)^*=V_X^*\otimes V_Y^*=V_{X^*\otimes Y^*}$. It is also easily seen by definition that $A_{X^*}\otimes A_{Y^*}=\tilde A_X\otimes \tilde
-A_Y\subseteq \tilde A_{X\otimes Y}=A_{(X\otimes Y)^*}$, so that we always have $A_{X^*\otimes
+V_Y)^*=V_X^*\otimes V_Y^*=V_{X^*\otimes Y^*}$. It is also easily seen by definition that
+$A_{X^*}\otimes A_{Y^*}=A^*_X\otimes A^*_Y\subseteq A^*_{X\otimes Y}=A_{(X\otimes Y)^*}$, so that we always have $A_{X^*\otimes
 Y^*}\subseteq A_{(X\otimes Y)^*}$.  Hence the equality holds if and
 only if $d_{X^*\otimes Y^*}=d_{(X\otimes Y)^*}$. From Lemma
 \ref{lemma:tensor_spaces}, we see that
@@ -394,38 +412,40 @@ lemma.
 
 
 
-In a *-autonomous category, the internal hom can be identified as $[X,Y]=(X\otimes
-Y^*)^*$. The underlying vector space is $V_{[X,Y]}=(V_X\otimes V_Y^*)^*=V_X^*\otimes V_Y$
+In a *-autonomous category, the internal hom can be identified as $X\multimap Y=(X\otimes
+Y^*)^*$. The underlying vector space is $V_{X\multimap Y}=(V_X\otimes V_Y^*)^*=V_X^*\otimes V_Y$
 and we have seen in Section \ref{sec:fv} that we may identify this space with
 $\FV(V_X,V_Y)$, by $f \leftrightarrow C_f$. This property is extended to $\Af$, in the
 following sense.
 
 \begin{prop}\label{prop:ihom_morphisms} For any objects $X,Y$ in $\Af$, the map $f\mapsto C_f$ is a bijection
-of $\Af(X,Y)$ onto $A_{[X,Y]}$. In particular,  $\tilde A_X$ can be identified with
+of $\Af(X,Y)$ onto $A_{X\multimap Y}$. In particular,  $A^*_X$ can be identified with
 $\Af(X,I)$.
 
 \end{prop}
 
-\begin{proof} Let $f\in \FV(V_X,V_Y)$. Since by definition $A_{[X,Y]}=\tilde A_{X\otimes
-Y^*}=(A_X\otimes A_Y^*)^\sim$, we see that $C_f\in A_{[X,Y]}$ if and only
-if for all $x\in A_X$ and $y^*\in \tilde A_Y$, we have
+\begin{proof} Let $f\in \FV(V_X,V_Y)$. Since by definition $A_{X\multimap Y}=A^*_{X\otimes
+Y^*}=(A_X\otimes A_Y^*)^*$, we see that $C_f\in A_{X\multimap Y}$ if and only
+if for all $x\in A_X$ and $\tilde y\in A^*_Y$, we have
 \[
-1=\<C_f, x\otimes y^*\>=\<y^*,f(x)\>.
+1=\<C_f, x\otimes \tilde y\>=\<\tilde y,f(x)\>.
 \]
 This latter statement is clearly equivalent to $f(A_X)\subseteq A_Y$, so that $f\in
 \Af(X,Y)$. 
 
 \end{proof}
 
-In the next result, we restrict the objects to spaces of hermitian matrices, as in Example
-\ref{exm:quantum} and morphisms to completely positive maps. We show that this restriction
-amounts to taking an intersection of $A_{[X,Y]}$ with the cone of positive semidefinite
-matrices. This, and subsequent examples,  shows that for characterization of sets  of quantum
+We now show a property that will be  crucial for the use of  $\Af$ for  description of  higher order maps in quantum
+theory. For this, we restrict to objects such that the underlying vector spaces are spaces
+of hermitian matrices, as in Example
+\ref{exm:quantum}. We also restrict morphisms between such spaces to completely positive maps. We show that this restriction
+amounts to taking an intersection of $A_{X\multimap Y}$ with the cone of positive semidefinite
+matrices. {This, and subsequent examples,  shows that for characterization of sets  of quantum
 objects such as states, channels, combs and transformations between them, it is enough to
-work with the category $\Af$. 
+work with the category $\Af$.} 
 
-An object $X$ of $\Af$ will be called quantum if $V_X=M_n^h$ for some $n$ and $A_X$ is an
-affine subspace such that both $A_X$ and $\tilde A_X$ contain a positive multiple of the identity matrix
+An object $X$ of $\Af$ will be called {\em quantum} if $V_X=M_n^h$ for some $n$ and $A_X$ is an
+affine subspace such that both $A_X$ and $A^*_X$ contain a positive multiple of the identity matrix
 $E_n$\footnote{We use the notation $E_n$, and not $I_n$, to avoid the slight chance that
 it might be confused with the monoidal unit.}.
 %have nonempty intersection with the
@@ -441,7 +461,7 @@ it might be confused with the monoidal unit.}.
 \item[(i)] $X^*$ and $X\otimes Y$ are quantum objects as well. 
 %If $X$ and $Y$ are standard, then so are $X^*$ and $X\otimes Y$.
 \item[(ii)] Let $V_X=M_n^h$, $V_Y=M_m^h$. Then for any $f\in \FV(M_n^h,M_m^h)$, we have
-$C_f\in A_{[X,Y]}\cap M_{mn}^+$ if and only if $f$ is completely positive and
+$C_f\in A_{X\multimap Y}\cap M_{mn}^+$ if and only if $f$ is completely positive and
 \[
 f(A_X\cap M_n^+)\subseteq A_Y\cap M_m^+.
 \]
@@ -451,9 +471,9 @@ f(A_X\cap M_n^+)\subseteq A_Y\cap M_m^+.
 \end{prop}
 
 \begin{proof} The statement (i) is easily seen from  $A_X\otimes A_Y
-\subseteq  A_{X\otimes Y}$ and $\tilde A_X\otimes \tilde A_Y\subseteq \tilde A_{X\otimes
+\subseteq  A_{X\otimes Y}$ and $A^*_X\otimes A^*_Y\subseteq A^*_{X\otimes
 Y}$. % together with the fact that $int(M_n^+)\otimes int(M_m^+)\subseteq int(M_{mn}^+)$. 
-To show (ii), let $C_f\in   A_{[X,Y]}\cap M_{mn}^+$. By the properties of the Choi
+To show (ii), let $C_f\in   A_{X\multimap Y}\cap M_{mn}^+$. By the properties of the Choi
 isomorphism $f$ is completely positive and by Proposition \ref{prop:ihom_morphisms},
 $f(A_X)\subseteq A_Y$, this proves one implication. For the converse, note that we only
 need to prove that under the given assumptions, $f(A_X)\subseteq A_Y$, for which it is enough
@@ -471,35 +491,55 @@ c_XE_n+v=\frac{1+s}{2s}a_++\frac{s-1}{2s}a_-\in \aff(A_X\cap M_n^+).
 
 We can define classical objects in $\Af$ in a similar way, replacing $M_n^h$ by $\mathbb
 R^N$ and the positive cone by $\mathbb R_+^N$, and we require that  both
-$A_X$ and $\tilde A_X$ contains a positive multiple of the unit vector $e_N=(1,\dots,1)\in
+$A_X$ and $A^*_X$ contains a positive multiple of the unit vector $e_N=(1,\dots,1)\in
 \mathbb R^N$. A similar statement holds in this case,
 with complete positivity replaced by positivity. We can similarly treat
 classical-to-quantum and quantum-to-classical maps as morphisms between these types of
 objects, satisfying appropriate positivity assumptions.
 
-\begin{exm}[Higher order quantum maps] \label{exm:quantum_maps} The basic example of a quantum object
+\begin{exm}[States, channels and combs] \label{exm:quantum_maps} The basic example of a quantum object
 corresponds to the set of quantum states. Let  
 \[
 \mathcal A_n:=\{T\in M_n^h, \ \Tr[T]=1\}.
 \]
 Then $\Se_n:=(M_n^h,\mathcal A_n)$ is an object in $\Af$, and it is a quantum object, since we have 
- $E_n\in \tilde {\mathcal A}_n=\{E_n\}$ and $\frac 1n E_n\in
+ $E_n\in {\mathcal A}^*_n=\{E_n\}$ and $\frac 1n E_n\in
 \mathcal A_n$. 
-The set $\mathcal A_n\cap M_n^+$ is the set of quantum states. By Proposition
-\ref{prop:ihom_morphisms}, $\Ce_{m,n}:=[\Se_m,\Se_n]$ is a quantum object as well, such
-that the corresponding vector space is $M_{mn}^h$ and $A_{\Ce_{m,n}}\cap M_{mn}^+$ is the set
-of Choi matrices of quantum channels $M_m\to M_n$. Note that the dual object
+The set $\mathcal A_n\cap M_n^+$ is the set of {\em quantum states}. By Proposition
+\ref{prop:ihom_morphisms}, $\Ce_{m,n}:=\Se_m\multimap \Se_n$ is a quantum object as well, with
+underlying vector space $M_{mn}^h$, and
+Proposition \ref{prop:ihom_quantum} shows that  $A_{\Ce_{m,n}}\cap M_{mn}^+$ is the set
+of Choi matrices of completely positive maps $f:M_m\to M_n$ mapping states to states, 
+i. e. {\em quantum channels}. Note that the dual object
 $\Ce^*_{m,n}=\Se_m\otimes \Se_n^*$ represents the set of Choi matrices of replacement
-channels $\Se_n\to \Se_m$, that is, channels that map any state in $M_n$ to a fixed state
-in $M_m$. We also have $\Se_n=[\Se_n,I]=\Ce_{n,1}$.
+channels $M_n\to M_m$, that is, channels that map any state in $M_n$ to a fixed state
+in $M_m$. We also have $\Se^*_n=\Se_n\multimap I=\Ce_{n,1}$ and $\Se_n=I\multimap \Se_n=\Ce_{n,1}$. 
 
-The set of higher order quantum maps is constructed inductively from the channel objects $\Ce_{m,n}$ 
-by applying the internal hom $[\cdot,\cdot]$. For example,  $[\Ce_{m,n},\Ce_{k,l}]$ is a
- quantum object, corresponding to the set of Choi matrices of quantum
-superchannels, or 2-combs, etc. Note that in this way we always obtain quantum
-objects. The corresponding affine subspaces are identified using 
-\eqref{eq:ALS} with $a$ and $\tilde a$ replaced by the appropriate multiple of the
-identity, together with \eqref{eq:duality} and Lemma \ref{lemma:tensor_spaces}.
+We can proceed inductively as follows. Put 
+\[
+\Ce^2_{m,n,k,l}=\Ce_{m,n}\multimap \Ce_{k,l}=(\Se_m\multimap \Se_n)\multimap (\Se_k\multimap
+\Se_l),
+\]
+then
+$A_{\Ce^2_{m,n,k,l}}\cap M_{mnkl}^+$
+is the set of Choi matrices of completely positive maps $M_{mn}\to M_{kl}$, mapping Choi matrices of channels
+to Choi matrices of channels, or {\em quantum 2-combs}, see [paviani]. The 1-combs
+coincide with quantum channels. The {\em quantum
+$(N+1)$-combs} for any $N$ is  the set of Choi matrices of
+compeletely positive maps mapping $N$-combs to 1-combs. The corresponding objects in
+$\Af$ are then given as
+$\Ce^N_{n_1,\dots,n_{2N}}=\Ce^{N-1}_{n_2,\dots,n_{2N-2}}\multimap \Ce_{n_1,n_{2N}}$. By
+Proposition 
+\ref{prop:ihom_quantum}, these are all quantum objects. It was proved in [paviani] that
+the completely positive maps corresponding to $N$-combs have the form 
+
+\begin{center}
+\includegraphics{general_comb.t1.pdf}
+\end{center}
+
+
+for some channels $\Phi_1,\dots, \Phi_N$.
+{\color{red} Paviani, networks, etc}
 
 
 \end{exm}
@@ -508,13 +548,15 @@ identity, together with \eqref{eq:duality} and Lemma \ref{lemma:tensor_spaces}.
 \begin{exm}[Partially classical maps]\label{exm:quantum_classical}  We may similarly define the basic
 classical object as 
 \[
-\Pe_N:=(\mathbb R^N, \{x,\ \sum_i x_i=1\}).
+\Pe_k:=(\mathbb R^k, \{x\in \mathbb R^k,\ \sum_i x_i=1\}).
 \]
-In this case, $\mathcal A_{\Pe_N}\cap \mathbb R^N_+$ is the probability simplex. We then
+In this case, $\mathcal A_{\Pe_k}\cap \mathbb R^k_+$ is the probability simplex. We then
 obtain further  useful objects by combining with the quantum objects. For example, it can be
-easily seen that $[\Se_n,\Pe_N]$ corresponds to $N$-outcome measurements,
-$[\Se_m,\Se_n\otimes \Pe_N]$ to $N$-outcome quantum instruments, $[\Se_m\otimes
-\Pe_N,\Pe_M]$ to quantum multimeters, etc. 
+easily seen that $\Se_n\multimap \Pe_k$ intersected with the cone $M_n^+\otimes \mathbb R^n_+$
+corresponds to $k$-outcome {\em measurements}. Similarly, we obtain $k$-outcome {\em quantum instruments}
+ from $\Se_m\multimap (\Se_n\otimes \Pe_k)$, {\em quantum multimeters} from $(\Se_m\otimes
+\Pe_k)\multimap \Pe_l$, {\em quantum testers} from  $\Ce^N_{n_1,\dots,n_{2N}}\multimap
+\Pe_k$, etc. 
 
 \end{exm}
 
@@ -524,11 +566,11 @@ $[\Se_m,\Se_n\otimes \Pe_N]$ to $N$-outcome quantum instruments, $[\Se_m\otimes
 \subsection{First order and higher order objects}
 
 
-We say that an object $X$ in $\Af$ is first order if $d_X=D_X-1$, equivalently, $S_X=V_X$.
+We say that an object $X$ in $\Af$ is {\em first order} if $d_X=D_X-1$, equivalently, $S_X=V_X$.
 Another equivalent condition is $d_{X^*}=0$, which means that $A_X$ is determined by a
 single element $\tilde a_X\in V_X^*$ as 
 \[
-A_X=\{\tilde a_X\}^\sim,\qquad \tilde A_X=\{\tilde a_X\}.
+A_X=\{\tilde a_X\}^*,\qquad A^*_X=\{\tilde a_X\}.
 \]
 Note that first order objects, resp. their duals, are exactly those satisfying
 condition (iii), resp. condition (ii), in Proposition \ref{prop:noncompact}, in
@@ -538,9 +580,12 @@ particular, $(X\otimes Y)^*=X^*\otimes Y^*$ for first order objects $X$ and $Y$.
 {\em Higher order objects} in $\Af$ are objects  obtained from a finite set $\{X_1,\dots,X_n\}$ of first order objects by
 taking tensor products and duals. The above is indeed a set, so that all the objects are
 different (though they may be isomorphic) and the ordering is not essential. We will also
-assume that the monoidal  unit $I$ is not contained in this set. By definition of $[X,Y]$, and since we may dentify $[X,I]$ with $X^*$, we see that higher order objects are
+assume that the monoidal  unit $I$ is not contained in this set. By definition of
+$X\multimap Y$,
+and since we may identify $X\multimap I$ with $X^*$, we see that higher order objects are
 also generated by applying the internal hom inductively on $\{X_1,\dots, X_n\}$ if we allow $X_i=I$ for some  
-$i$. It follows that the ''higher order quantum maps'' in Example \ref{exm:quantum_maps}
+$i$. It follows that the objects introduced  in Examples \ref{exm:quantum_maps} and
+\ref{exm:quantum_classical}
 are indeed higher order objects in $\Af$  according to the above definition.
 
 
@@ -559,15 +604,16 @@ first order as well.
 
 As we have seen, higher order objects are obtained by applying the internal hom
 iteratively. The following properties of such iterations are easily seen from the
-definition of $[\cdot,\cdot]$. 
+definition and properties of $\multimap$. 
 
 \begin{lemma}\label{lemma:combs} Let $X,Y,Z$ be any objects in $\Af$. Then we have
 \begin{enumerate}
-\item[(i)] $[Z,[X,Y]]\simeq [X,[Z,Y]]$.
-\item[(ii)] If $X=(V_X,\{\tilde a_X\}^\sim)$ and $Y=(V_Y, \{\tilde a_Y\}^\sim)$ are first order, 
-then $[Z,[X,Y]]$ is determined as
+\item[(i)] $Z\multimap (X\multimap Y)\simeq (Z\otimes X)\multimap Y\simeq X\multimap
+(Z\multimap Y)$.
+\item[(ii)] If $X=(V_X,\{\tilde a_X\}^*)$ and $Y=(V_Y, \{\tilde a_Y\}^*)$ are first order, 
+then $Z\multimap (X\multimap Y)$ is determined as
 \[
-A_{[Z,[X,Y]]}=\{w\in V_{Z}^*\otimes V_X^*\otimes V_Y, (id\otimes \tilde a_Y)(w)\in
+A_{Z\multimap (X\multimap Y)}=\{w\in V_{Z}^*\otimes V_X^*\otimes V_Y, (id\otimes \tilde a_Y)(w)\in
 A_Z^*\otimes \tilde a_X\}.
 \]
 
@@ -576,27 +622,30 @@ A_Z^*\otimes \tilde a_X\}.
 
 \end{lemma}
 
+Note also that since we identify $X^{**}=X$ for any object $X$, the isomorphisms in (i)
+above are given by the symmetries in $\FV$, that is, by permutations of the components in
+the tensor products of the underlying vector spaces. To save some parentheses, we also
+assume that the internal homs associate to the right, so we write
+$X\multimap Y\multimap Z$ instead of $X\multimap (Y\multimap Z)$. 
+
+\begin{exm}[Channels and Combs] Let  $X$ and $Y$ be first order objects in $\Af$. As we
+have seen, $C_1(X,Y):= X\multimap Y$ is then a higher order object, called a {\em channel} or {\em
+1-comb} (We slightly  abuse
+the terminology here).  We will inductively construct higher order objects in $\Af$,
+similarly as in Example \ref{exm:quantum_maps}. An
+{\em $N$-comb} over first order objects $X_1,\dots,X_{2N}$ is an object
+\begin{align*}
+C_N(X_1,\dots,X_{2N})&:=C_{N-1}(X_2,\dots,X_{2N-2})\multimap (X_1\multimap X_{2N})\\
+&\simeq X_{1}\multimap C_{N-1}(X_2,\dots,X_{2N-2}\multimap X_{2N}\\
+&\simeq X_1\multimap(X_2\multimap\dots \multimap (X_{N}\multimap
+X_{N+1})\multimap \dots \multimap X_{2N-1})  \multimap X_{2N}
+\end{align*}
+where the isomorphisms follow by Lemma \ref{lemma:combs}. The subspace $A_{C_N}$ for an
+$N$-comb $C_N$ can be found inductively, using Lemma \ref{lemma:combs} (ii).
+If $X_1,\dots, X_{2N}$ are quantum objects, then $\tilde a_{X_i}$ is always a multiple of
+the identity, so we obtain the characterization of quantum combs  in [paviani].
 
 
-\begin{exm}[Combs] The higher order objects called $n$-combs are constructed inductively as follows. 
-1-combs, or channels, are objects of the form $[X,Y]$, with  first order objects $X$ and $Y$. An
-$n$-comb is an object of the form $[C_{n-1},[X,Y]]$, where $C_{n-1}$ is an $n-1$-comb and
-$X$, $Y$ are first order objects. Using Lemma \ref{lemma:combs}, we see that an $n$-comb
-has the form
-\[
-[X_{2n-1},[[X_{2n-3},\dots,[[X_1,X_2],X_4]],\dots,X_{2n}]]
-\]
-for first order objects $X_1,X_2,\dots,X_{2n}$. For quantum objects, we see that
-an $n$-comb describes the sets of $n$-combs introduced in {}, see Example
-\ref{exm:quantum_maps} (We slightly  abuse
-the terminology here).
-
-Since $[X,Y]\simeq [I,[X,Y]]$, we can determine the affine subspace of the channel object $[X,Y]$
-using Lemma \ref{lemma:combs}(ii) as
-\[
-A_{[X,Y]}=\{w\in V_X^*\otimes V_Y,\ (id\otimes \tilde a_Y)(w)=\tilde a_X\}.
-\]
-The subspace $A_{C_n}$ for an $n$-comb $C_n$ can be found inductively. 
 
 \end{exm}
 
@@ -2625,13 +2674,13 @@ $\widehat{(f\otimes g)}_{S\oplus T}=\hat f_S\hat g_T$, $S\subseteq [n_1]$, $T\su
 
 \section{Affine subspaces}
 \label{sec:app_affine}
-Let $V$ be a finite dimensional real vector space. A subset $A\subseteq V$ is an affine
-subspace in $V$ if for any choice of  $a_1,\dots, a_k\in A$ and  $\alpha_1,\dots,\alpha_k\in \mathbb R$
+Let $V$ be a finite dimensional real vector space. A subset $A\subseteq V$ is an {\em affine
+subspace} in $V$ if for any choice of  $a_1,\dots, a_k\in A$ and  $\alpha_1,\dots,\alpha_k\in \mathbb R$
 such that $\sum_i\alpha_i=1$, we have $\sum_i\alpha_i a_i\in A$. It is clear that
 $A=\emptyset$ is trivially an affine subspace.  Moreover, any linear subspace in $V$ is an affine subspace,
 and an
 affine subspace $A$ is linear if and only if $0\in A$. If $A \neq\emptyset$ and also
-$0\notin A$, we say that $A$ is proper. 
+$0\notin A$, we say that $A$ is {\em proper}. 
 
 A proper  affine subspace $A\subseteq V$ can be determined in two ways. Let 
 \[
@@ -2647,34 +2696,34 @@ We put $\dim(A):=\dim(\lin(A))$, the dimension of $A$.
 Let $V^*$ be the vector space dual of $V$ and let $\<\cdot,\cdot\>$ be the
 duality. For a subset $C\subseteq V$, put
 \[
-\tilde C:=\{v^*\in V^*,\ \<v^*,a\>=1,\ \forall a\in A\}.
+C^*:=\{v^*\in V^*,\ \<v^*,a\>=1,\ \forall a\in A\}.
 \]
-Let $\tilde a\in \tilde A$ be any element and let $\Span(A)$ be the linear span of $A$ in
+Let $\tilde a\in A^*$ be any element and let $\Span(A)$ be the linear span of $A$ in
 $V$. We then have
 \begin{equation}\label{eq:affine_s}
-A=\Span(A)\cap \{\tilde a\}^\sim,
+A=\Span(A)\cap \{\tilde a\}^*,
 \end{equation}
 independently of $\tilde a$. The relation between the two expressions for $A$, given by
 \eqref{eq:affine_l} and \eqref{eq:affine_s} is obtained as
 \begin{equation}\label{eq:LandS}
 \Span(A)=\lin(A)+\mathbb R\{a\},\qquad \lin(A)=\Span(A)\cap \{\tilde a\}^\perp,
 \end{equation}
-independently of $a\in A$ or $\tilde a\in \tilde A$. Here $+$ denotes the direct sum of
+independently of $a\in A$ or $\tilde a\in A^*$. Here $+$ denotes the direct sum of
 the vector spaces and $C^\perp$ denotes the annihilator of a set $C$.
 The following lemma is  easily proven.
 
-\begin{lemma}\label{lemma:dual} Let $C\subseteq V$ be any subset. Then $\tilde C$ is an affine subspace in 
+\begin{lemma}\label{lemma:dual} Let $C\subseteq V$ be any subset. Then $C^*$ is an affine subspace in 
 $V^*$ and we have
 \[
-0\in \tilde C \iff C= \emptyset, \qquad \tilde C=\emptyset\iff 0\in \aff(C).
+0\in C^* \iff C= \emptyset, \qquad C^*=\emptyset\iff 0\in \aff(C).
 \]
 Assume $C\ne \emptyset$ and $0\notin \aff(C)$. Then
 \begin{enumerate}
-\item[(i)] $\tilde C$ is proper and we have $\lin(\tilde C)=C^\perp=\Span(C)^\perp$,
-\item[(ii)] $\aff(C)=\tilde{\tilde C}$ and for any $c_0\in
+\item[(i)] $C^*$ is proper and we have $\lin(C^*)=C^\perp=\Span(C)^\perp$,
+\item[(ii)] $\aff(C)=C^{**}$ and for any $c_0\in
 C$, we have
 \begin{align*}
-\lin(C):= \Span\{c_1-c_2,\ c_1,c_2\in C\}=\Span\{c-c_0,\ c\in C\}=\lin(\tilde{\tilde C}).
+\lin(C):= \Span\{c_1-c_2,\ c_1,c_2\in C\}=\Span\{c-c_0,\ c\in C\}=\lin(C^{**}).
 \end{align*}
 
 \end{enumerate}
@@ -2684,15 +2733,16 @@ C$, we have
 
 \begin{coro}\label{coro:dual} Let $A\subseteq V$ be a proper affine subspace. Then 
 \begin{enumerate}
-\item[(i)] $\tilde A$ is a proper affine subspace in $V^*$ and $\tilde{\tilde A}=A$.
-\item[(ii)] $\lin(\tilde A)=\Span(A)^\perp$, $\Span(\tilde A)=\lin(A)^\perp$.
-\item[(iii)] $\dim(\tilde A)=\dim(V)-\dim(A)-1$.
+\item[(i)] $A^*$ is a proper affine subspace in $V^*$ and $A^{**}=A$.
+\item[(ii)] $\lin(A^*)=\Span(A)^\perp$, $\Span(A^*)=\lin(A)^\perp$.
+\item[(iii)] $\dim(A^*)=\dim(V)-\dim(A)-1$.
 \end{enumerate}
 
 
 \end{coro}
 
-The proper affine subspace $\tilde A$ in the above Corollary will be called the affine dual
+The proper affine subspace $A^*$ in the above Corollary will be called the {\em affine
+dual}
 of $A$. Note that the dual depends on the choice of the ambient vector space $V$.
 
 

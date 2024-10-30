@@ -10,6 +10,11 @@ title: Name(s), title, year
 [file](REF_scandi2024/file.pdf)
 
 
-**Decision:** 
+**Decision:** reject??
+
+
+[report](REF_scandi2024/report.pdf)
+
+[report scores](REF_scandi2024/report_njp.pdf)
 
 

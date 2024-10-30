@@ -8,7 +8,7 @@ title: Rényi divergences in quantum information theory
 
 
 
-[talk](TALK_2024smolenice/molenice_talk.pdf)
+[talk](TALK_2024smolenice/smolenice_talk.pdf)
 
 
 ### References

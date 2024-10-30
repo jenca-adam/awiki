@@ -1,9 +1,8 @@
 title: To referee
 ---
 
-* Due [21.10.2024](REF_scandi2024)       
 * Due [28.10.2024](REF_mayumi2024) (revision)     
-
+* Due [15.12.2024](REF_berta2024)    
 
 <del>Due [24.8.2020](REF_khrennikov2020)</del> cancelled??
 
@@ -33,7 +32,7 @@ title: To referee
 1. <del> Due [24.9.2024](REF_dallarno2024) (revision) </del> Done.   
 1. <del> Due [22.9.2024](REF_mayumi2024)</del> Done.    
 1. <del> Due [20. 10. 2024](REF_sreekumar2024) (revision)</del> Done. 
-
+1. <del> Due [21.10.2024](REF_scandi2024)</del> Done.      
 
 
 
