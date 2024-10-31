@@ -21,7 +21,7 @@ title: Equality in DPI for BS relative entropy
 
 ## Basic references
 
-
+* [sutter2018approximate]  Approximate quantum Markov chains     
 
 
 ---

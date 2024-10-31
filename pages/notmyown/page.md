@@ -263,6 +263,7 @@ title: Not my own papers
 [regula2020fundamental](regula2020fundamental), [renyi1961onmeasures](renyi1961onmeasures), [BOOK_rao1991theory](BOOK_rao1991theory), 
 
 ### S
+[sutter2018approximate](sutter2018approximate),
 
 [stormer1979positive](stormer1979positive),    
 [seal2013tensors](seal2012tensors),

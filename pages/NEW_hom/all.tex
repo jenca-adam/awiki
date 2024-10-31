@@ -636,7 +636,7 @@ similarly as in Example \ref{exm:quantum_maps}. An
 {\em $N$-comb} over first order objects $X_1,\dots,X_{2N}$ is an object
 \begin{align*}
 C_N(X_1,\dots,X_{2N})&:=C_{N-1}(X_2,\dots,X_{2N-2})\multimap (X_1\multimap X_{2N})\\
-&\simeq X_{1}\multimap C_{N-1}(X_2,\dots,X_{2N-2}\multimap X_{2N}\\
+&\simeq X_{1}\multimap C_{N-1}(X_2,\dots,X_{2N-2})\multimap X_{2N}\\
 &\simeq X_1\multimap(X_2\multimap\dots \multimap (X_{N}\multimap
 X_{N+1})\multimap \dots \multimap X_{2N-1})  \multimap X_{2N}
 \end{align*}
@@ -654,37 +654,46 @@ the identity, so we obtain the characterization of quantum combs  in [paviani].
 
 \section{Combinatorial description of higher order objects}
 
-In this section, we discuss a combinatiorial description of higher order objects similar
-to that of [Pavia]. We will use the definitions and results given in Appendix
+
+{\em Types} of higher order quantum maps were introduced in [paviani],{\color{red}
+something more here} who gave a combinatorial
+description of the corresponding affine subspaces. More precisely, they show that the
+affine subspace for the corresponding type of higher order objects can be combined from
+some mutually independent {\color{red} linear subspaces}, and any such combination can be
+labelled by a binary string.
+
+In this section we show that we can have a similar description of higher order objects in
+$\Af$, though the construction is slightly more complicated, because there is in general
+no distinguished element in $A_X$ for a first order object $X$. We also use boolean
+functions to characterize the  subsets of binary strings corresponding to the type, which will turn out useful for further description of
+ types.  We will use the definitions, notations and results given in Appendix
 \ref{sec:boolean}.
 
-For a first order object $X=(V_X, \{\tilde a_X\}^\sim)$, let us pick an element $a_X\in
+For a first order object $X=(V_X, \{\tilde a_X\}^*)$, let us pick an element $a_X\in
 A_X$. We have a direct sum decomposition
-\[
+\begin{equation}\label{eq:direct}
 V_X=L_{X,0}\oplus L_{X,1},
-\]
+\end{equation}
 where $L_{X,0}:= \mathbb R\{a_X\}$, $L_{X,1}:=\{\tilde a_X\}^\perp=L_X$.
-We define the {\em conjugate object}  as $\tilde X=(V_X^*,\{a_X\}^\sim)$. Note that we always
+We define the {\em conjugate object}  as $\tilde X=(V_X^*,\{a_X\}^*)$. Note that we always
 have $\tilde a_X\in A_{\tilde X}$ and with the choice $a_{\tilde X}=\tilde a_X$, we obtain 
 $\tilde{\tilde X}=X$ and 
 \begin{equation}\label{eq:complement}
 L_{\tilde X,u}=L_{X,1-u}^\perp,\qquad u\in \{0,1\}.
 \end{equation}
-
 These  definitions depend on the choice of $a_X$, but we will assume below that this
 choice is fixed and that we choose $a_{\tilde X}=\tilde a_X$. Since we will always work
 with a finite set of objects at a time, this will not create any problems. 
 
  A  first order quantum
 or classical object  is the set of states $\Se_n$ or the set of probability distributions
-$\Pe_N$, see Examples \ref{exm:quantum_maps}, \ref{exm:quantum_classical}.
+$\Pe_k$, see Examples \ref{exm:quantum_maps}, \ref{exm:quantum_classical}.
 In these cases, $a_X$ will be chosen as the appropriate multiple of the identity.
- Note that then
+ Note that for quantum objects we have
  \[
-L_{X,0}=L_{\tilde X,0}= \mathbb R\{E_n\},\qquad  L_{X,1}=L_{\tilde X,1}= \Te_n:=\{T\in
-M_n^h, \Tr[T]=0\}
+L_{X,0}=L_{\tilde X,0}= \mathbb R\{E_n\},\qquad  L_{X,1}=L_{\tilde X,1}= \{E_n\}^\perp
  \]
-(similarly for $\Pe_N$). 
+(similarly for classical objects). 
 
 
 Let $X_1,\dots,X_n$ be first order objects in $\Af$. Let $a_{X_i}\in A_{X_i}$ be fixed and
@@ -697,7 +706,7 @@ For a string $s\in \{0,1\}^n$, we define
 L_s:=L_{1,s_1}\otimes\dots \otimes L_{n,s_n}, \qquad \tilde L_s:=\tilde
 L_{1,s_1}\otimes\dots \otimes \tilde L_{n,s_n},
 \]
-then we have the direct sum decompositions 
+then by \eqref{eq:direct} we have the direct sum decompositions 
 \[
 V:=V_1\otimes \dots \otimes V_n=\sum_{s\in \{0,1\}^n} L_s,\qquad V^*=V_1^*\otimes
 \dots\otimes V_n^*=\sum_{s\in \{0,1\}^n} \tilde L_s
@@ -731,58 +740,73 @@ The proof of the other equality is the same.
 
 \end{proof}
 
-
-
-\begin{lemma}\label{lemma:Xf} Put $a:= a_1\otimes\dots \otimes  a_n$, $\tilde a:= \tilde
+For the fixed first order objects  $X_1,\dots,X_n$ and their conjugate objects $\tilde
+X_1,\dots,\tilde X_n$, we introduce the following definitions. Put $a:= a_1\otimes\dots \otimes  a_n$, $\tilde a:= \tilde
 a_1\otimes\dots\otimes  \tilde a_n$.
-For  $f\in \Fe_n$ define 
-\[
-S_f=S_f(X_1,\dots,X_n):=\sum_{s\in \{0,1\}^n} f(s)L_s,\qquad A_f=A_f(X_1,\dots,X_n):=S_f\cap \{\tilde a\}^\sim.
-\]
-Then $A_f$ is a proper affine subspace in $V$ containing $a$. Moreover,
-\[
-\lin(A_f)=\sum_{s\in\{0,1\}^n\setminus\{\theta_n\}} f(s)L_s,\qquad \Span(A_f)=S_f.
-\]
-The map $f\mapsto A_f $ is injective and has  the following further properties.
-\begin{enumerate}
-\item[(i)] The dual affine subspace satisfies  
-\[
-\tilde A_f(X_1,\dots,X_n)=A_{f^*}(\tilde X_1,\dots, \tilde X_n).
-\]
-\item[(ii)] Let $\sigma\in \permut_n$ and let the corresponding symmetry $\otimes_i V_i\to
-\otimes_i V_{\sigma^{-1}(i)}$ be also denoted by $\sigma$. Then we have
-\[
-A_f(X_{\sigma(1)},\dots,X_{\sigma(n)})=\sigma^{-1}(A_{f\circ\sigma}(X_1,\dots,X_n)).
-\]
-\item[(iii)] Let $f_1\in \Fe_{n_1}$, $f_2\in \Fe_{n_2}$, $n_1+n_2=n$. Then
-\[
-S_{f_1\otimes f_2}(X_1,\dots,X_n)=S_{f_1}(X_1,\dots,X_{n_1})\otimes
-S_{f_2}(X_{n_1+1},\dots, X_n)
-\]
-\end{enumerate}
-
-
-%determined by 
-%\[
-%\tilde A_f=S_{\tilde A_f}\cap \{a\}^\sim,\qquad S_{\tilde A_f}= \bigoplus_{s\in \{0,1\}^n} f^*(s)\tilde L_s.
-%\]
-
-\end{lemma}
-
-\begin{proof} It is clear from definition that $A_f$ is an affine subspace. Since
+For  $f\in \Fe_n$ (see Appendix \ref{app:functions}) define 
+\begin{equation}\label{eq:SfAf}
+S_f=S_f(X_1,\dots,X_n):=\sum_{s\in \{0,1\}^n} f(s)L_s,\qquad
+A_f=A_f(X_1,\dots,X_n):=S_f\cap \{\tilde a\}^*.
+\end{equation}
+It is clear from definition that $A_f$ is an affine subspace. Since
 $f(\theta_n)=1$, the space $S_f$ always contains the subspace $L_0=L_{1,0}\otimes\dots\otimes
 L_{n,0}=\mathbb R\{a\}$ and it is clear that $L_s\subseteq \{\tilde a\}^\perp$ for any
 $s\ne \theta_n$. It follows that $a\in A_f$, so that $A_f\ne \emptyset$, and since $A_f\subseteq
-\{\tilde a\}^\sim$, we see that  $A_f$ is proper and $\tilde
-a\in \tilde A_f$.  The expressions for $\lin(A_f)$ and $\Span(A_f)$ are immediate from the definition and
-\eqref{eq:LandS}. 
+\{\tilde a\}^*$, we see that  $A_f$ is proper and $\tilde
+a\in A^*_f$.  It is easy to see that we have
+\[
+\lin(A_f)=\sum_{s\in\{0,1\}^n\setminus\{\theta_n\}} f(s)L_s,\qquad \Span(A_f)=S_f.
+\]
+We may now define the objects
+\[
+X_f=X_f(X_1,\dots, X_n):=(V,A_f(X_1,\dots,X_n))
+\]
+in $\Af$.
 
-Injectivity of the map $f\mapsto A_f$ is clear from the fact that $L_s$, $s\in \{0,1\}$ is
-an independent decomposition. To prove (i), we compute
+\begin{prop}\label{prop:Xf_const} Let $X_1,\dots,X_n$ be first order objects and $\tilde
+X_1,\dots,\tilde X_n$ the conjugate objects. 
+The map $\Fe_n\ni f\mapsto X_f(X_1,\dots,X_n)\in \Af$ is injective and we have the
+following properties. 
+\begin{enumerate}
+\item[(i)] For the least and the largest element in $\Fe_n$, 
+\[
+X_{p_{n}}=\tilde X_1^*\otimes \dots\otimes \tilde X_n^*=(\tilde X_1\otimes \dots\otimes
+\tilde X_n)^*,\qquad
+X_{1_n}=X_1\otimes\dots\otimes X_n.
+\]
+
+\item[(ii)] The dual object satisfies
+\[
+X_f^*(X_1,\dots,X_n)=X_{f^*}(\tilde X_1,\dots,\tilde X_n).
+\]
+\item[(iii)] Let $f_1\in \Fe_{n_1}$, $f_2\in \Fe_{n_2}$. For the decomposition
+$[n]=[n_1]\oplus[n_2]$,
+\[
+X_{f_1\otimes f_2}(X_1,\dots,X_n)=X_{f_1}(X_1,\dots, X_{n_1})\otimes
+X_{f_2}(X_{n_1+1},\dots,X_n).
+\]
+\item[(iv)]  {\color{red} the symmetry $\sigma\in \permut_n$ defines an isomorphism} 
+\[
+X_f(X_{\sigma(1)},\dots,
+X_{\sigma(n)})\xrightarrow{\sigma} X_{f\circ\sigma}(X_1,\dots,X_n).
+\]
+\end{enumerate}
+\end{prop}
+
+\begin{proof} Since  $L_s$, $s\in \{0,1\}$ is an independent decomposition of $V$, the
+subspace $S_f$ has a unique decomposition in terms of $L_s$. It follows 
+ that the map $f\mapsto A_f$, and hence also $f\mapsto X_f$ is injective. 
+We have 
+\[
+S_{p_n}=L_{\theta_n}=\mathbb R\{a\}\qquad S_{1_n}=\sum_{s\in \{0,1\}^n}L_s=V,
+\]
+Since $X_1\otimes\dots\otimes X_n=(V,\{\tilde a\}^*)$ and $\tilde X_1\otimes \dots\otimes
+\tilde X_n=(V^*,\{a\}^*)$, this proves (i). For (ii), it is enough to prove that 
+$A^*_f(X_1,\dots,X_n)=A_{f^*}(\tilde X_1,\dots, \tilde X_n)$. To see this, we compute
 using Lemma \ref{lemma:Lperp} and the fact that the subspaces form an independent
 decomposition,
 \begin{align*}
-\Span(\tilde A_f)&=\lin(A_f)^\perp=\left(\sum_{s\in\{0,1\}^n\setminus\{0\}}
+\Span( A^*_f)&=\lin(A_f)^\perp=\left(\sum_{s\in\{0,1\}^n\setminus\{0\}}
 f(s)L_s\right)^\perp=
 \bigwedge_{\substack{s\in\{0,1\}^n\\ s\ne 0, f(s)=1}}L_s^\perp=
 \bigwedge_{\substack{s\in\{0,1\}^n\\ s\ne 0,
@@ -796,7 +820,7 @@ To see the last equality, note that
 (1-{\chi}_s(t))=\begin{dcases} 1 & \text{if } t=\theta_n\\ 1-f(t) & \text{if } t\ne \theta_n
 \end{dcases} \ = f^*(t).
 \]
-To show (ii), compute
+The statement (iii) is easily seen from the definitions. To show (iv), compute
 \begin{align*}
 \sigma(S_f(X_{\sigma(1)},\dots,X_{\sigma(n)}))&=\sigma(\sum_{s} f(s)L_{\sigma(1),s_1}\otimes\dots \otimes
 L_{\sigma(n),s_n})\\
@@ -806,68 +830,48 @@ L_{n,s_{\sigma^{-1}(n)}}=S_{f\circ\sigma}(X_1,\dots,X_n).
 It folows that
 \[
 A_f(X_{\sigma(1)},\dots, X_{\sigma(n)})=S_f(X_{\sigma(1)},\dots, X_{\sigma(n)})\cap
-\{\sigma^{-1}(\tilde a)\}^\sim=
+\{\sigma^{-1}(\tilde a)\}^*=
 \sigma^{-1}(A_{f\circ\sigma}(X_1,\dots,X_n)).
 \]
-The statement (iii) is easily seen from the definitions.
+
+
+
+
 \end{proof}
 
-Since all the affince subspaces  $A_f\subseteq V$ are proper, we may form the objects
-\[
-X_f=X_f(X_1,\dots, X_n):=(V,A_f(X_1,\dots,X_n))
-\]
-in $\Af$. The following properties follow easily from the above Lemma.
-
-\begin{prop}\label{prop:Xf_const} Let $X_1,\dots,X_n$ be first order objects. 
-The map $\Fe_n\ni f\mapsto X_f(X_1,\dots,X_n)$ is injective and we have 
-\begin{enumerate}
-\item[(i)] For the least and the largest element in $\Fe_n$, 
-\[
-X_{p_{[n]}}=\tilde X_1^*\otimes \dots\otimes \tilde X_n^*,\qquad
-X_{1_n}=X_1\otimes\dots\otimes X_n,
-\]
-
-\item[(ii)] $X_f^*(X_1,\dots,X_n)=X_{f^*}(\tilde X_1,\dots,\tilde X_n)$,
-\item[(iii)] $X_{f_1\otimes f_2}(X_1,\dots,X_n)=X_{f_1}(X_1,\dots, X_{n_1})\otimes
-X_{f_2}(X_{n_1+1},\dots,X_n)$,
-\item[(iv)]  the symmetry $\sigma\in \permut_n$ is an isomorphism $X_f(X_{\sigma(1)},\dots,
-X_{\sigma(n)})\xrightarrow{\sigma} X_{f\circ\sigma}(X_1,\dots,X_n)$. 
-\end{enumerate}
-\end{prop}
 
 It follows from the independence of $L_s$, $s\in \{0,1\}^n$, that  the subspaces $S_f$ form a
 distributive sublatice in the lattice of subspaces of $V$ and we clearly have 
-$f\le g$ if and only if $S_f\subseteq S_g$ and $S_{f\wedge g}=S_f\cap S_g$, $S_{f\vee
-g}=S_f\vee S_g$. 
-The following proposition shows the corresponding properties of $X_f$, in categorical
-terms. We skip the easy proof.
-
-\begin{prop} Let $f,g,h\in \Fe_n$. 
-\begin{enumerate} 
-\item[(i)] $f\le g$ if and only if $X_f\xrightarrow{id_V} X_g$ in $\Af$. 
-\item[(ii)] Let $k\le f,g\le h$ then the following diagram is a pullback resp. pushout: 
+$f\le g$ if and only if $S_f\subseteq S_g$, and $S_{f\wedge g}=S_f\cap S_g$, $S_{f\vee
+g}=S_f\vee S_g$. For the affine subspaces, we get that similarly $f\le g$ iff
+$A_f\subseteq A_g$ and  $A_{f\wedge g}=A_f\cap A_g$, $A_{f\vee g}=A_f\vee
+A_g:=\aff(A_f\cup A_g)$. 
+In terms of the objects in the category $\Af$, we get that $f\le g$ if and only if $X_f\xrightarrow{id_V} X_g$
+(note that the identity of $V$ in $\FV$ is not necessarily a morphism in $\Af$). We also
+remark that if $k\le f,g\le h$, then the following diagrams are  a pullback resp.  pushout:
 \[
-%\xymatrixcolsep{5pc}\xymatrixrowsep{3pc}
 \xymatrix{
 X_{f\wedge g}\ar[r]^{id_V}
 \ar[d]_{id_V} & X_f\ar[d]^{id_V} \\
 X_g \ar[r]_{id_V}& X_h
 } \qquad 
 \xymatrix{
-X_{h}\ar[r]^{id_V}
+X_{k}\ar[r]^{id_V}
 \ar[d]_{id_V} & X_f\ar[d]^{id_V} \\
 X_g \ar[r]_{id_V}& X_{f\vee g}
 }
 \]
 
-\end{enumerate}
+We have also seen that $S_{f\otimes g}=S_f\otimes S_g$. It follows that the lattice structure of
+$\Fe_n$, together with the operation $\otimes$, is reflected in the corresponding
+subspaces of $V$. If all the objects are quantum (or classical), we have an identification
+$V=V^*$, so that we have also the conjugation captured as $S_{f^*}=S_f^\perp + S_{p_n}$. 
+In this way, $S_f$, $f\in \Fe_n$ becomes a boolean algebra endowed with a product
+$\otimes$ {\color{red} see [hoffreumon]}. All these structures are inherited from $\Fe_n$.
 
-\end{prop}
 
 
-
-
-Our goal is to show that the higher order objects are precisely those of the form
+Our main goal in this paragraph  is to show that the higher order objects are precisely those of the form
 $Y=X_f(X_1,\dots,X_n)$ for some choice of the
 first order objects $X_1,\dots, X_n$ and a function $f$ that belongs to a special subclass
  $\Te_n\subseteq \Fe_n$. The elements of this subclass will be called the {\em type
@@ -908,7 +912,7 @@ properties.
   
 
 Assume that  $Y$ is a higher order object constructed from a set of distinct first
-order objects $Y_1,\dots, Y_n$, $Y_i=(V_{Y_i},\{\tilde a_{Y_i}\}^\sim)$.
+order objects $Y_1,\dots, Y_n$, $Y_i=(V_{Y_i},\{\tilde a_{Y_i}\}^*)$.
 %, we will write$Y\sim\{Y_1,\dots,Y_n\}$ in this case. 
 Let us fix elements $a_{Y_i}\in A_{Y_i}$ and construct the conjugate objects $\tilde Y_i$. 
 By compactness of $\FV$, we may assume (relabeling the objects if necessary) that the vector space of $Y$ has the form
@@ -919,7 +923,9 @@ where  $V_i$ is either $V_{Y_i}$ or $V_{Y_i}^*$, according to whether $Y_i$ was 
 to taking duals an even or odd number of times. Similarly as for the type functions, the indices such that the first
 case is true will be called the  outputs and the subset of outputs in $[n]$ will be denoted
 by $O$, or $O_Y$, when we need to specify the object. The set $I=I_Y:=[n]\setminus O_Y$ is
-the set of  inputs. 
+the set of  inputs. Note that although we cannot yet exclude that $Y$ was constructed from
+$Y_i$ in several different ways, the input and output spaces are always the same, fixed in 
+the structure of $V$.
 
 \begin{theorem}\label{thm:boolean} Let $Y$ be a higher order object, constructed from first
 order objects $Y_1,\dots,Y_n$. For $i\in [n]$, let 
@@ -937,17 +943,19 @@ $i\in I_f$.
 
 \begin{proof} Since the map $f\mapsto X_f$ is injective, uniqueness is clear.  To show existence of this
 function, we will proceed by induction on $n$. For $n=1$, the assertion is easily seen
-to be true, since in this case, we we have either $Y=Y_1$ or $Y=Y_1^*$. In the first case, $O=[1]$,
+to be true, since in this case, we we have either $Y=Y_1$ or $Y=Y_1^*$. In the first case,
+$O=\{1\}$, $I=\emptyset$, 
 $X_1=Y_1$ and 
 \[
-S_Y=V_Y=V_1=L_{1,0}\oplus L_{1,1}=1(0)L_{1,0}\oplus 1(1)L_{1,1},
+S_Y=V_Y=V_1=L_{1,0}\oplus L_{1,1}=1(0)L_{1,0}\oplus 1(1)L_{1,1}=S_1(X_1),
 \]
-so in this case $f\in \Te_1$ is the constant 1. If $Y=Y_1^*$, we have $O=\emptyset$, $X_1=\tilde
+so in this case $f\in \Te_1$ is the constant 1. If $Y=Y_1^*$, we have $O=\emptyset$,
+$I=\{1\}$, $X_1=\tilde
 Y_1$, and then
 \[
-S_Y=\mathbb R\{\tilde a_{Y_1}\}=L_{1,0}=1^*(0)L_{1,0}\oplus 1^*(1)L_{1,1},
+S_Y=\mathbb R\{\tilde a_{Y_1}\}=L_{1,0}=p_1(0)L_{1,0}\oplus p_1(1)L_{1,1}=S_{p_1}(X_1),
 \]
-so that $f=1^*=p_{[1]}\in \Te_1$. It is clear that $_f=O_Y$ in both cases. 
+so that $f=1^*=p_{1}\in \Te_1$. It is clear that $O_f=O_Y$ in both cases. 
 
 Assume now that the assertion is true for
 all $m<n$. By construction, $Y$ is either the tensor
@@ -983,7 +991,7 @@ $a_{X_i}$. From the above proof, it is clear that  the  description in Theorem
 \ref{thm:boolean} does not depend on the choice of the elements $a_{Y_i}\in A_{Y_i}$.
 Furthermore, if all the first order objects are quantum, we have
 $S_f(X_1,\dots,X_n)=S_f(\tilde X_1,\dots,\tilde X_n)$ and both $a$ and $\tilde a$ are 
-some, possibly different,  multiple of the identity. The spaces $A_f(X_1,\dots,X_n)$ and $A_f(\tilde X_1,\dots,\tilde
+some, possibly different,  multiples of the identity. The spaces $A_f(X_1,\dots,X_n)$ and $A_f(\tilde X_1,\dots,\tilde
 X_n)$ differ only by this multiple. 
 
 %\subsection{Type funtions and higher order objects}
@@ -1048,11 +1056,11 @@ in Appendix \ref{sec:boolean}) is a type function, since we have
 \[
 p_T(s)=\Pi_{j\in T}(1-s_j)=\Pi_{j\in T} 1^*(s_j)=(\otimes_{j\in T}1^*)(s).
 \]
-By definition, $T$ is the set of inputs for $p_T$. Let $\Se=\{X_1,\dots, X_n\}$ be a set
-of first order objects. Let $k=|T|$ and let $\sigma\in \permut_n$ be such that
+By definition, $T$ is the set of inputs for $p_T$. Let $X_1,\dots, X_n$ be 
+ first order objects. Let $k=|T|$ and let $\sigma\in \permut_n$ be such that
 $\sigma^{-1}(T)=[k]$. Then 
 $p_T\circ \sigma=p_{k}\otimes 1_{n-k}$. By Proposition \ref{prop:Xf_const}, it follows that
-we have the isomorphism  
+we have the {\color{red} isomorphism}  
 \[
 X_{p_T}(X_1,\dots,X_n)\overset{\sigma}{\simeq}X_{p_{k}\otimes 1_{n-k}}(X_{\sigma^{-1}(1)},\dots, X_{\sigma^{-1}(n)})=\tilde
 X_T^*\otimes X_{[n]\setminus T},
@@ -1063,7 +1071,7 @@ It follows that $p_T$ describes replacement channels with set of input indices  
 we obtain the isomorphisms
 \[
 X_{p_T^*}(X_1,\dots,X_n)=X_{p_T}^*(\tilde X_1,\dots,\tilde X_n)\overset{\sigma}{\simeq} (X_T^*\otimes \tilde
-X_{[n]\setminus T})^*\overset{\rho}{\simeq}  [\tilde X_{[n]\setminus T},X_T],
+X_{[n]\setminus T})^*\simeq  \tilde X_{[n]\setminus T}\multimap X_T,
 \]
 where $\rho$ is the transposition in $\permut_2$. It follows
 that $p^*_T=1-p_T+p_{n}$ corresponds to all channels with output indices $T$.
@@ -1079,11 +1087,11 @@ p_I\le f\le p_O^*.
 \end{lemma}
 
 \begin{proof} This is obviously true for $n=1$. Indeed, in this case,
-$\Te_1=\Fe_1=\{1=p_\emptyset,1^*=p_{1}\}$. If $f=1$, then $O=[1]$, $I=\emptyset$ and 
+$\Te_1=\Fe_1=\{1_1=p_\emptyset,1_1^*=p_{1}\}$. If $f=1_1$, then $O=[1]$, $I=\emptyset$ and 
 \[
-p_I=p_{\emptyset}=1=p_O^*,
+p_I=p_{\emptyset}=1_1=p_O^*,
 \]
-the case  $f=1^*$ is obtained by taking complements. Assume that the assertion holds for
+the case  $f=p_1$ is obtained by taking complements. Assume that the assertion holds for
 $m<n$. Let $f\in \Te_n$ and assume that  $f=g\otimes h$ for some  $g\in
 \Te_m$, $h\in \Te_{n-m}$.  By the assumption,
 \[
@@ -1094,9 +1102,8 @@ the last inequality follows from Lemma \ref{lemma:fproduct}. With the decomposit
 $[n]=[m][m+1,n]$, we have   
 $O_f=O_g\oplus O_h$, $I_f=I_g\oplus I_h$, so that by Lemma \ref{lemma:PSPT}, 
 $p_{O_f}=p_{O_g}\otimes p_{O_h}$ and
-similarly for $p_{I_f}$. Now notice that any $f\in \Te_n$ is either of the form $(f\otimes
-g)\circ \sigma$ or of the form $(f\otimes g)^*\circ \sigma$, for some permutation
-$\sigma$. Since the inequality is easily seen to be preserved by
+similarly for $p_{I_f}$. Now notice that for any $f\in \Te_n$ we have either $f\approx g\otimes
+h$ or $f\approx (g\otimes h)^*$. Since the inequality is easily seen to be preserved by
 permutations, and reversed by duality which also swiches the input and output sets, the
 assertion is proved.
 
@@ -1147,7 +1154,7 @@ p_{[1]}^*(s)= 1-\bar s_1+\bar
 s_1\bar s_2,
 \]
 and functions  obtained from these by permutation, which gives 6 different elements.
-We have seen that  $\Fe_n$ has $2^{2^n-1}$ elements, so that $\Fe_2$ has 8
+We have seen in Appendix \ref{app:functions} that  $\Fe_n$ has $2^{2^n-1}$ elements, so that $\Fe_2$ has 8
 elements in total. The two remaining functions  are
 \[
 g(s)=1-\bar s_1-\bar s_2+2\bar s_1s_2,\qquad g^*(s)=\bar s_1+\bar s_2-\bar s_1\bar s_2.
@@ -1174,7 +1181,7 @@ for $n=3$ which is not in $\Te_3$. The objects corresponding to
 subtypes are not necessarily
 higher order objects, but are embedded in  $[Y_I,Y_O]$ and contain the replacement
 channels. If $f_1$ and $f_2$ have the same output set, then  $f_1\vee f_2$ and $f_1\wedge
-f_2$ are subtypes. {\color{red}By Proposition \ref{prop:Xf_lattice}, the corresponding objects can be
+f_2$ are subtypes. {By the remarks below Proposition \ref{prop:Xf_const}, the corresponding objects can be
 obtained by pushouts resp. pullbacks of the higher order objects corresponding to $f_1$
 and $f_2$.}
 
@@ -1249,18 +1256,18 @@ with even rank $r(f):=r(\Pe_f)\le n$.  Moreover, we have
 \[
 f=\sum_{S\in \mathcal P_f}(-1)^{\rho_f(S)}p_S,
 \]
-where $\rho_f$ is the rank function of $f$.
+where $\rho_f$ is the rank function of $\Pe_f$.
 
 \end{theorem}
 
 
 \begin{proof} We will proceed by induction on $n$. Assume that  $n=1$. Then  $2^n=\{\emptyset, [1]\}$ and
-$\Te_1=\{1,1^*\}$. For both type functions, $\mathcal P_f$ is a singleton, which 
+$\Te_1=\{1_1,p_1\}$. For both type functions, $\mathcal P_f$ is a singleton, which 
 is clearly a graded poset, with rank $k=0$ and trivial rank function $\rho_f\equiv 0$.  We have
 \[
-f = 1=p_\emptyset=(-1)^{\rho(\emptyset)}p_\emptyset.
+1_1=p_\emptyset=(-1)^{\rho(\emptyset)}p_\emptyset.
 \]
-The statement for $f=1^*$ follows by duality.  
+The statement for $f=p_1$ follows by duality.  
 
 Assume next that the statement holds for all $m<n$ and let $f\in \Te_n$. By construction,
 it is enough to show that the property is invariant under permutations and complement and
@@ -1275,7 +1282,7 @@ $\rho_{f\circ\sigma}=\rho_f\circ \sigma$. Then
 f\circ \sigma=\sum_{S\subseteq [n]} (-1)^{\rho_f(S)}p_S\circ\sigma=\sum_{S\subseteq [n]}
 (-1)^{\rho_f\circ \sigma(S)}p_S.
 \]
-Further, we have
+Further, assume that we have
 \begin{align}
 f^*&=1-f+p_n=(1-\hat f_\emptyset)p_\emptyset -
 \sum_{\emptyset, [n]\ne S\subseteq [n]} \hat f_Sp_S+(1-\hat f_{[n]})p_n\notag\\
@@ -1286,12 +1293,12 @@ f^*&=1-f+p_n=(1-\hat f_\emptyset)p_\emptyset -
 If $\emptyset \in \Pe_f$, then $\emptyset$ is the least element of $\Pe_f$, so that 
 $\rho_f(\emptyset)=0$ and therefore $\hat f_\emptyset =
 (-1)^0=1$. Similarly, if $[n]\in \Pe_f$, then $[n]$ is the largest element in $\Pe_f$,
-hence it is the last element in any maximal chain. It follows that $\rho_f([n])=k$ and hence
-$\hat f_{[n]}=(-1)^k=1$ (since $k$ is even). 
+hence it is the last element in any maximal chain. It follows that $\rho_f([n])=r(f)$ and hence
+$\hat f_{[n]}=(-1)^{r(f)}=1$ (since the rank $r(f)$  is even). 
 Therefore the equality \eqref{eq:dual_rank} implies that $\mathcal P_{f^*}$ differs from $\mathcal P_f$ only in the bottom  and
 top elements:  $\emptyset \in \mathcal P_f$ iff  $\emptyset \notin \mathcal P_{f^*}$
 and $[n] \in \mathcal P_f$ iff  $[n] \notin \mathcal P_{f^*}$. It follows that $\mathcal
-P_{f^*}$ is graded as well, with rank  equal to $k-2$, $k$ or $k+2$, which in any case
+P_{f^*}$ is graded as well, with rank  equal to $r(f)-2$, $r(f)$ or $r(f)+2$, which in any case
 is even. Furthermore,  this also implies 
 that for all $S\in \Pe_f$, $S\notin \{\emptyset, [n]\}$, we
 have  $\rho_{f^*}(S)=\rho_f(S)\pm 1$, according to whether $\emptyset$ was added or removed. The
@@ -1328,7 +1335,7 @@ The same holds for $[n]$.
 
 \end{coro}
 
-
+\subsection{Labelled Hasse diagrams}
 
 We  introduce {\em labels} for the elements of $\Pe_f$ in the following way. 
  For  $S\in \Pe_f$, put
@@ -1344,14 +1351,40 @@ It follows that $f\in \Te_n$ (with known $n$) is fully determined by the order r
 label sets. All the information about $f$ can be therefore obtained from the {\em labelled
 Hasse diagram} of $\Pe_f$. 
 
+We next give some examples of simple type functions and their corresponding Hasse
+diagrams. For this, we introduce the following notations: for $n\in \mathbb N$, put
+\begin{equation}\label{eq:gammas}
+\gamma_n:= \begin{dcases} \sum_{j=0}^n (-1)^jp_{[j]}, & \text{if $n$ is even}\\
+\sum_{j=1}^n (-1)^{j-1}p_{[j]} & \text{if $n$ is odd}
+\end{dcases}
+\end{equation}
+{\color{red} (recall that $[0]=\emptyset$)}. For each $n$, the poset $\Pe_{\gamma_n}$ is a chain of even
+length and we will see in Section  \ref{sec:chains} below that $\gamma_n\in \Te_n$. 
+
+\begin{exm} \label{exm:T2hasse} The labelled Hasse diagrams of elements in $\Te_2$ are as
+follows:
+
+
+see Example \ref{exm:T2}, 
+
+\end{exm}
+
 Examples (n=2,3,4). Hasse diagrams
 \begin{exm}[$\Te_3$]
-As we can see from Example \ref{exm:T2}, all elements in $\Te_2$ are chains. This is
+As we can see from Example \ref{exm:T2}, for all elements in $\Te_2$, the corresponding
+posets are chains. This is
 also true for $n=3$. Indeed, up to a permutation that does not change the chain structure, 
 any $f\in \Te_3$ is either a product of two elements $g\in \Te_2$ and $h\in \Te_1$,
 or the dual of such a  product. Since $g$ must be a chain and $|\Pe_h|=1$, their product
 must be a chain as well. Taking the dual of a chain only adds/removes the least/largest
-elements, so the dual of a chain must be a chain as well.
+elements, so the dual of a chain must be a chain as well. The only elements in $\Te_3$
+that are not of the form $f\otimes 1_1$ for $f\in \Te_2$ (up to permutations) are depicted
+in the following labelled Hasse diagrams.
+\end{exm}
+
+
+\begin{exm}\label{exm:T4} 
+
 \end{exm}
 
 Let us denote
@@ -1367,7 +1400,7 @@ the {\em free outputs} of $f$. If $f$ has some free outputs, then necessarily $[
 contained in any $T\in \Pe_f$, so that $p_T(e^j)=0$ for all $T\in \Pe_f$ and consequently
 $f(e^j)=0$. Such elements will be called {\em free
 inputs} of $f$. The elements of $I_f^F\cup O_f^F$ will be called {\em free indices} of
-$f$.  It is clear that up to a permutation, $f=p_k\otimes g\otimes
+$f$.  It is clear that $f\approx p_k\otimes g\otimes
 1_l$, where
 $k=|I_f^F|$, $l=|O_f^F|$  and $g\in \Te_{n-k-l}$ has no free indices. As posets,
 $\Pe_f\simeq \Pe_g$,  with labels
@@ -1537,13 +1570,14 @@ important kind of higher order objects.
 
 \begin{prop}\label{prop:chains_combs}  Let $f\in \Te_n$ be a chain type with
 $\Pe_f=\{\emptyset=S_1\subsetneq\dots \subsetneq S_N=[n]\}$, with
-label sets  $T_i=L_{S_{i-1}}$,  $i=1,\dots,n$.  Let $Y=X_f(X_1,\dots,X_n)$ for some first order objects $X_1,\dots, X_n$. 
+label sets  $T_i=L_{S_{i+1}}$,  $i=1,\dots,n$.  Let $Y=X_f(X_1,\dots,X_n)$ for some first order objects $X_1,\dots, X_n$. 
 Then for $N\ge 3$, $Y$ is an $(N-1)/2$-comb. 
 More precisely, let $Y_1,\dots, Y_n$ be such that $Y_i=X_i$ for $i\in O_f$ and $Y_i=\tilde X_i$ for $i\in I_f$.
 Then
 \[
-Y\overset{\sigma}{\simeq}
-[Y_{T_{N-1}},[[Y_{T_{N-2}},[[\dots,[[Y_{T_{\frac{N+1}2}},Y_{T_{\frac{N-1}2}}],Y_{T_{\frac{N-3}2}}]],\dots,Y_{T_2}]],Y_{T_1}]] 
+Y{\color{red}\overset{\sigma}{\simeq}}
+Y_{T_{N-1}}\multimap (Y_{T_{N-2}}\multimap\dots \multimap (Y_{T_{\frac{N+1}2}}\multimap
+Y_{T_{\frac{N-1}2}})\multimap\dots\multimap Y_{T_2})\multimap Y_{T_1} 
  \]
  where we put $Y_T=\otimes_{j\in T} Y_j$ and $\sigma\in \permut_n$.
 
@@ -1559,7 +1593,7 @@ Y_{T_i}=\begin{dcases} \otimes_{j\in T_i}X_j,  & \text{ if } i\text{ is odd},\\
 \]
 We will proceed by induction on $N$.
 Let $N=3$, then $f=1-p_{S_2}+p_{n}$, and we see from Example \ref{exm:type_channels}
-that  $Y\overset{\sigma}{\simeq} [Y_{T_2}, Y_{T_1}]$. 
+that  $Y\overset{\sigma}{\simeq} Y_{T_2}\multimap  Y_{T_1}$. 
 Assume the assertion is true for  $N-2$.  As in the proof of Proposition \ref{prop:chains}, we see that 
 \[
 f^*=\sum_{i=1}^{N-2}(-1)^{i-1}p_{S_{i+1}}\approx p_{n_2}\otimes g\otimes 1_{n-n_{N-1}}
@@ -1568,22 +1602,28 @@ where $g\in \Te_{n_{N-1}-n_2}$ is the chain type for  a chain $\{\emptyset\subse
 \sigma(S_3\setminus S_2)\subsetneq \dots\subsetneq \sigma(S_{N-1}\setminus
 S_{2})=[n_{N-1}-n_2]\}$, for some $\sigma\in \permut_n$ such that $\sigma(S_2)=[n_2]$
 and $\sigma(T_{N-1})=\sigma([n]\setminus S_{N-1})=[n-n_{N-1}]$. 
- By Proposition \ref{prop:Xf_const}, we see that 
+ By Proposition \ref{prop:Xf_const} and Lemma \ref{lemma:combs}, we see that 
 \[
 X_f(X_1,\dots,X_n)=X_{f^*}^*(\tilde X_1,\dots, \tilde X_n)\overset{\sigma}\simeq (Y_{T_{N-1}}\otimes
-\tilde X_g\otimes Y^*_{T_1})^*\overset{\pi}{\simeq} [Y_{T_{N-1}},[\tilde X_g,Y_{T_1}]]
+\tilde X_g\otimes Y^*_{T_1})^*\overset{\pi}{\simeq} Y_{T_{N-1}},\multimap \tilde
+X_g\multimap Y_{T_1}
 \]
 where $\tilde X_g=X_g(\tilde X_{\sigma^{-1}(1)},\dots, \tilde X_{\sigma^{-1}(n_{N-1})})$
 and $\rho\in \permut_3$. Since $g$ satisfies the induction assumption, and $\tilde {\tilde
 X}_i=X_i$, we obtain 
 \[
 \tilde X_g\overset{\sigma'}{\simeq}
-[Y_{T_{N-2}},[[\dots,[[Y_{T_{\frac{N+1}2}},Y_{T_{\frac{N-1}2}}],Y_{T_{\frac{N-3}2}}]],\dots,Y_{T_2}]],
+Y_{T_{N-2}}\multimap \dots\multimap (Y_{T_{\frac{N+1}2}}\multimap
+Y_{T_{\frac{N-1}2}})\multimap \dots \multimap Y_{T_2},
 \]
 for some permutaton $\sigma'$. This proves the result.
 
 
 \end{proof}
+
+\begin{center}
+\includegraphics[scale=0.9]{general_comb_T.t1.pdf}
+\end{center}
 
 
 Combs, picture

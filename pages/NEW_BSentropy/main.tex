@@ -100,7 +100,6 @@
 \DeclareMathOperator{\alphaQ}{\widetilde Q_\alpha}
 \DeclareMathOperator{\alphaI}{\widetilde I_\alpha}
 \DeclareMathOperator{\supp}{supp}
-
 \newcommand{\twoline}[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
 
 
@@ -245,9 +244,10 @@ The starting point for the comparison between BS recovery states and quantum Mar
     \rho_{ABC} = \underset{n }{\bigoplus} p_n \rho_{AB_n^L} \otimes  \rho_{B_n^R C} \, .
 \end{equation}
 
-%Something similar, but more complicated, can be proven for BS recovery states. The following is the main result extracted from Anna Jen{\v c}ová's notes:
 
-{\color{magenta} 
+
+Something similar, but more complicated, can be proven for BS recovery states. %The following is the main result extracted from Anna Jen{\v c}ová's %notes:
+{
 For finding the structure of BS recovery states, it will be useful to use the following equivalent  condition for
 saturation of the DPI, proved in  \cite[Thm. 3.34(h)]{HiaiMosonyi-f-divergences-2017}: For a positive
 trace preserving map $\mathcal {T}$, the equality
@@ -266,7 +266,7 @@ $(\mathcal {R}_{\mathcal T}^\sigma)^*$ is  positive
 and unital and the equality condition means that $R$ is in its multiplicative domain. If
 $\mathcal {T}$ is completely positive, then $(\mathcal {R}_{\mathcal T}^\sigma)^*$ is a
 completely positive unital map and we have a convenient description of its multiplicative
-domain. The proof of the following fact can be found e.g. in \cite[Proposition 2]{carbone2020}.
+domain. The proof of the following fact can be found e.g. in \cite[Proposition 2]{carbone2020onperiod}.
 
 \begin{lemma}\label{lemma:multiplicative} Let $\Phi:B(\mathcal {H})\to B(\mathcal {K})$ be a completely positive unital map with Kraus
 representation $\Phi(\cdot)=\sum_i K_i^* (\cdot) K_i$. Then the multiplicative domain of
@@ -460,6 +460,13 @@ $S_B=\rho^{1/2}_BU^*_B$.
 \end{proof}
 
 }
+
+
+
+
+
+
+
 \begin{remark} \label{rem:from-decomposition-to-map}
 From the proof of 
 \Cref{theo:StructureBSDPI}
@@ -481,7 +488,7 @@ which are the two equivalent conditions for the saturation of the BS-DPI stated 
 
 
 \section{BS recovery states and quantum Markov chains}
-
+\subsection{BSRS which are not QMC}
 In the previous sections, we have discussed the fact that the set of points that saturate the DPI for the relative entropy is contained in that of the BS-entropy, but the converse is not true \cite{HiaiMosonyi-f-divergences-2017,Jencova2009}. This can be translated to the simplified tripartite case of the conditional mutual information and the analogous BS quantities. In this case, we say that every quantum Markov chain is a BS recovery state, but there are BSRS which are not QMC. An example of this is presented below.
 
 \begin{example}
@@ -526,42 +533,36 @@ but it is not a QMC since
     
 \end{example}
 
-A natural question is then  how much larger the set of BSRS is. In order to settle this question, we will first characterize quantum Markov chains in terms of the matrix $S_B$ in the decomposition \eqref{AnnaStates}.
+A natural question is then  how much larger the set of BSRS is with respect to the set of QMC. In order to explore this question, we will first characterize quantum Markov chains in terms of the matrix $S_B$ in the decomposition \eqref{AnnaStates}.
 
 \begin{proposition}\label{prop:StructureQMC}
-    A quantum state  $\rho_{ABC}$ is a QMC if, and only if,  it can be written as \eqref{AnnaStates} satisfying that for every  sector $n \in \mathbb{N}$, $S_{B_n}=S_{B_n^L}\otimes S_{B_n^R}$.
+    A quantum state  $\rho_{ABC}$ is a QMC if, and only if,  there exists a unitary \PCR{matrix $V_B:\mathcal {H}_B\to \oplus_n \mathcal {H}_{B^L_n}\otimes \mathcal{H}_{B^R_n}$ such that 
+    \begin{equation}
+        S_B=V_B^*\bigoplus_{n=1}^N\left(\sqrt{p_n}\rho_{B_L^n}^{\frac{1}{2}}\otimes\rho_{B_R^n}^{\frac{1}{2}} \right).
+    \end{equation} }
 \end{proposition}
 \begin{proof}
-    Suppose that $\rho_{ABC}$ is a QMC, that is, there exists a unitary matrix $U_B$ such that
+    Suppose that $\rho_{ABC}$ is a QMC, that is, there exists a unitary \PCR{matrix $V_B:\mathcal {H}_B\to \oplus_n \mathcal {H}_{B^L_n}\otimes \mathcal{H}_{B^R_n}$} such that
     \begin{equation}
-        \rho_{ABC}=U_B \left(\bigoplus_{n=1}^N p_n \rho_{AB_{n}^L}\otimes \rho_{B_{n}^RC} \right) U_B^*,
+        \rho_{ABC}=V_B^* \left(\bigoplus_{n=1}^N p_n \rho_{AB_{n}^L}\otimes \rho_{B_{n}^RC} \right) V_B,
     \end{equation}
-    where $(p_n)_{n \in \mathbb{N}}$ is a probability distribution. For every fixed $n \in \{1, \hdots,N\}$ write $ \rho_{B_n^L}=S_{B_n^L}S_{B_n^L}^*$, $S_B=\rho_B^{\frac{1}{2}}U_B$,
-    and (analogously to the proof of Theorem \ref{theo:StructureBSDPI}) define 
+    where $(p_n)_{n \in \mathbb{N}}$ is a probability distribution. For every fixed $n \in \{1, \hdots,N\}$ define
     \begin{equation}
-        M_{AB_n^L}=(I_A \otimes S_{B_n^L})^{-1}\rho_{AB_n^L}(I_A \otimes S_{B_n^L}^*)^{-1},
+        M_{AB_n^L}=\rho_{B_n^L}^{-\frac{1}{2}}\rho_{AB_n^L}\rho_{B_n^R}^{-\frac{1}{2}}, \quad  N_{AB_n^R}=\rho_{B_n^L}^{-\frac{1}{2}}\rho_{B_n^RC}\rho_{B_n^R}^{-\frac{1}{2}},
     \end{equation}
-which is well-defined since $S_{B_n^L}$ is invertible and satisfies
+which satisfy
 \begin{equation}
-    \tr_A M_{AB_n^L}=S_{B_n^L}^{-1}\rho_{B_n^L}(S_{B_n^L}^*)^{-1}=I_{B_n^L}.
-\end{equation}
-As a consequence, we obtain
-\begin{equation}
-    \rho_{AB_n^L}=(I_A \otimes S_{B_n^L})M_{AB_n^L}(I_A \otimes S_{B_n^L})^*.
-\end{equation}
-    Similarly, we can also write
-\begin{equation}
-    \rho_{B_n^RC}=(S_{B_n^R} \otimes I_C) N_{B_n^RC}(S_{B_n^R} \otimes I_C)^*.
+    \tr_A M_{AB_n^L}=I_{B_n^L}, \quad   \tr_C M_{B_n^R C}=I_{B_n^R}.
 \end{equation}
 Then,
 \begin{subequations}
 \begin{align}
-        \rho_{ABC}&=U_B\left(\bigoplus_{n=1}^N p_n \rho_{A B_{n}^L}\otimes \rho_{B_{n}^R C}\right)U_B^*\\
-        &=U_B \left(\bigoplus_{n=1}^N p_n (I_A \otimes S_{B_n^L}\otimes S_{B_n^R} \otimes I_C)(M_{AB_n^L} \otimes N_{B_n^R C})(I_A \otimes S_{B_n^L}\otimes S_{B_n^R} \otimes I_C)^* \right)U_B^*\\
-        &=U_B(I_A \otimes S_B \otimes I_C)\left(\bigoplus_{n=1}^N M_{AB_n^L} \otimes N_{B_n^R C} \right)(I_A\otimes S_B^*\otimes I_C)U_B^*,
+        \rho_{ABC}&=V_B^*\left(\bigoplus_{n=1}^N p_n \rho_{A B_{n}^L}\otimes \rho_{B_{n}^R C}\right)V_B\\
+        &=V_B^* \left(\bigoplus_{n=1}^N p_n (I_A \otimes \rho_{B_n^L}^{\frac{1}{2}}\otimes \rho_{B_n^R}^{\frac{1}{2}} \otimes I_C)(M_{AB_n^L} \otimes N_{B_n^R C})(I_A \otimes \rho_{B_n^L}^{\frac{1}{2}}\otimes \rho_{B_n^R}^{\frac{1}{2}}  \otimes I_C)^* \right)V_B\\
+        &=(I_A \otimes S_B \otimes I_C)\left(\bigoplus_{n=1}^N M_{AB_n^L} \otimes N_{B_n^R C} \right)(I_A\otimes S_B^*\otimes I_C),
 \end{align}
 \end{subequations}
-where $S_B=\displaystyle \bigoplus_{n=1}^N \sqrt{p_n} S_{B_n^L}\otimes S_{B_n^R}$. Finally,
+where $S_B=\displaystyle V_B^*\left( \bigoplus_{n=1}^N \sqrt{p_n} \rho_{B_n^L}^{\frac{1}{2}}\otimes \rho_{B_n^R}^{\frac{1}{2}}\right)$. Finally,
 \begin{equation}
     \Vert S_B \Vert_2^2=\sum_{n=1}^N p_n \tr(\rho_{B_n^L}\otimes \rho_{B_n^R})=1.
 \end{equation}
@@ -569,34 +570,60 @@ The proof of the  converse is analogous using the same constructions.
 
 \end{proof}
 
+\PCR{
+\begin{remark}
+    The previous result shows us how to generate BSRS which are not QMC when  both $\mathcal{H}_{B_n^L}$ and $\mathcal{H}_{B_n^R}$ are non-trivial for some $n \in \mathbb{N}$. For this purpose, it suffices to consider an invertible $S_B$ such that $S_BS_B^*$ cannot be decomposed as direct sum of product matrices. This is always possible for non-trivial $\mathcal{H}_{B_n^L}$ and $\mathcal{H}_{B_n^R}$, since then the  manifold
+    \begin{equation}
+        \mathcal{G}_n=\left\{ V_n (X_{B_n^L} \otimes Y_{B_n^R}) V_n^* \hspace{3pt}:  \hspace{3pt} X_{B_n^L}, Y_{B_n^R}>0 \text{ and } V_n \text{ is unitary in } B(\mathcal{H}_{B_n^L} \otimes \mathcal{H}_{B_n^R})\right\},
+    \end{equation}
+    has strictly lower dimension ( dimension here understood as manifold dimension) than the positive cone in $B(\mathcal{H}_{B_n^L}\otimes \mathcal{H}_{B_n^R})$.
+\end{remark}
+}
 
-
+\begin{comment}
 \begin{theorem}\label{rem:measure}
     The set of quantum Markov chains has measure  zero on the  set of  BS recovery states, understanding the volume as the measure.
 \end{theorem}
-\begin{proof}
-\PCR{First, we separate the set of QMC in two disjoint sets
+We turn now on the structure of the manifold of QMC and compare it with the structure of BSRS. Separate the set of QMC in two disjoint sets
+\begin{equation}
+    QMC=\mathcal{F}_1\cup \mathcal{F}_2,
+\end{equation}
+where
+\begin{multline}
+    \mathcal{F}_1=\Biggl\{ \rho_{ABC}: \text{ there exists a unitary }U_B \text{ and } m\in \mathbb{N} \text{ such that } d_{B_m^L}\neq 1 \text{ and } d_{B_m^RC}\neq 1  \\ \left. \text{ satisfying }  \rho_{ABC}=U_B\left(\bigoplus_{n=1}^N p_n \rho_{AB_n^L}\otimes \rho_{B_n^RC}\right)U_B^*  \right\}. 
+\end{multline}
+and $\mathcal{F}_2=QMC\setminus \mathcal{F}_1$. If we let $T_{AC}=\tr_{AC}$, the elements of $T_{AC}(\mathcal{F}_1)$ will satisfy
+\begin{equation}
+    \rho_B=U_B\left(\bigoplus_{n=1}^N p_n \rho_{B_n^L}\otimes \rho_{B_n^R}\right)U_B^* =U_B\left(\bigoplus_{n=1}^N p_n S_{B_n^L}S_{B_n^L}^*\otimes S_{B_n^R}S_{B_n^R}^*\right)U_B^*, 
+\end{equation}
+Now, for the sector $m$, $S_{B_m}S_{B_m}^*$ is unitarily equivalent to a product matrix, which has strictly lower dimension ( dimension here understood as manifold dimension) than the positive cone in $L(\mathcal{H}_{B_m^L}\otimes \mathcal{H}_{B_m^R})$. As a consequence, 
+\end{comment}
+
+\begin{comment}
+\begin{remark}
+We turn now on the structure of the manifold of QMC and compare it with the structure of BSRS. Separate the set of QMC in two disjoint sets
 \begin{equation}
     QMC=\mathcal{F}_1\cup \mathcal{F}_2,
 \end{equation}
 where
 \begin{equation}
-    \mathcal{F}_1=\left\{ \rho_{ABC} =\bigoplus_{n=1}^N p_b \rho_{AB_n^L}\otimes \rho_{B_n^R}: \text{  there exists } m \text{ with } d_{B_m^L}\neq 1 \text{ and } d_{B_m^RC}\neq 1\right\}.
+    \mathcal{F}_1=\left\{ \rho_{ABC} =\bigoplus_{n=1}^N p_n \rho_{AB_n^L}\otimes \rho_{B_n^R}: \text{  there exists } m \text{ with } d_{B_m^L}\neq 1 \text{ and } d_{B_m^RC}\neq 1\right\}.
 \end{equation}
-and $\mathcal{F}_2=QMC\setminus \mathcal{F}_1$. To prove that $\mathcal{F}_1$ }has measure zero in BSRS, consider the   map 
+and $\mathcal{F}_2=QMC\setminus \mathcal{F}_1$. We are going to prove that  $\mathcal{F}_1$  has measure zero in QMC. To do so, consider the   map 
     \begin{equation}
     \begin{array}{cccc}
-        T_{AC}:& \{\rho_{ABC}: \rho_{ABC} \in BSRS\} &\to &  S(\HH_B)\\
+        T_{AC}:& QMC &\to &  S(\HH_B)\\
     \end{array}
     \end{equation}
-    given by $T_{AC}=\tr_{AC}$. The partial trace is a linear map when embedding  the manifold of BSRS in  $\mathbb{R}^k$ such that they cannot be embedded in $\mathbb{R}^{k-1}$. Therefore the Jacobian is a constant function which has no critical points, so the measure of QMC in BSRS is zero if the measure of $T_{AC}(QMC)$ is zero in $S(\HH_B)$.  By Proposition \ref{prop:StructureQMC}, $\rho_{ABC}$ is a QMC if there exists a unitary $V_B$  such that $S_B=\left(\oplus_n S_{B_n^L}\otimes S_{B_n^R}\right)V_B$. Hence, for a QMC $\rho_{ABC}$,
+    given by $T_{AC}=\tr_{AC}$. The partial trace is a linear map when embedding  the manifold of QMC in  $\mathbb{R}^k$ for some $k>0$. Therefore the Jacobian is a constant function which has no critical points, so the measure of %QMC in BSRS is zero 
+    $\mathcal{F}_1$ in $QMC$ is zero if the measure of $T_{AC}(\mathcal{F}_1)$ is zero in $S(\HH_B)$. \PCR{\sout{ By Proposition \ref{prop:StructureQMC}, $\rho_{ABC}$ is a QMC if there exists a unitary $V_B$  such that $S_B=\left(\oplus_n S_{B_n^L}\otimes S_{B_n^R}\right)V_B$} $\rho_{B_n}=\rho_{B_n^L}\otimes \rho_{B_n^R}$}. Hence, for a QMC $\rho_{ABC}$,
     \begin{equation}
         T_{AC}(\rho_{ABC})=\rho_B=S_BS_B^*=V_B\left(\bigoplus_{n=1}^N S_{B_n^L}S_{B_n^L}^*\otimes S_{B_n^R}S_{B_n^R}^*\right)V_B^*
     \end{equation}
     and
-    \begin{equation}
-        T_{AC}(QMC)\subseteq \left\{V_B\left(\bigoplus_{n=1}^N S_{B_n^L}S_{B_n^L}^*\otimes S_{B_n^R}S_{B_n^R}^*\right)V_B^* : V_B \text{ is unitary and } \Vert S_B \Vert_2=1 \right\} =:\mathcal{G}.
-    \end{equation}
+    \begin{multline}
+        T_{AC}(\mathcal{F}_1)\subseteq \Biggl\{V_B\left(\bigoplus_{n=1}^N S_{B_n^L}S_{B_n^L}^*\otimes S_{B_n^R}S_{B_n^R}^*\right)V_B^* : V_B \text{ is unitary}, \Vert S_B \Vert_2=1  \text{ and}\\  \text{  there exists } m \text{ with } d_{B_m^L}\neq 1 \text{ and } d_{B_m^RC}\neq 1\Biggr\} =:\mathcal{G}.
+    \end{multline}
    Notice that 
 \begin{equation}
     \mathcal{G}_0:=\{ \rho_B \in \mathcal{G}: 0 \in \sigma(\rho_B)\}
@@ -611,8 +638,8 @@ Take $\rho_B=V_B(\oplus_n A_n \otimes B_n)V_B^* \in \mathcal{G}_1$, $A_n,B_n >0$
 \end{equation}
 for some  $i>1$. These are constrains proving that $\dim \mathcal{G}_1 < \dim S(\HH_B)$. 
 \textcolor{red}{It is still open the case  $\mathcal{F}_2$  for example, states of the form $\rho_{AB}\otimes \rho_C$ have measure zero in BSRS?}
-\end{proof}
-
+\end{remark}
+\end{comment}
 \begin{comment}
  \textcolor{red}{
  Now, the manifold $T_{AC}(BSRS)$ has the same dimension that the sphere of positive semidefinte matrices
@@ -632,7 +659,7 @@ for some  $i>1$. These are constrains proving that $\dim \mathcal{G}_1 < \dim S(
 \end{comment}
 
 
-
+\subsection{QMC related to BSRS}
 The fact that every QMC is a BSRS, but the converse is not true, can be also understood in terms of vanishing conditional mutual informations. In particular, we have 
 \begin{equation}
     I_{\rho}(A:C|B) = 0 \; \begin{array}{c}
@@ -642,19 +669,19 @@ The fact that every QMC is a BSRS, but the converse is not true, can be also und
 \end{equation}
 for $x \in \{ \text{os}, \text{ts}, \text{rev}\} $. Nevertheless, by virtue of the results from the previous sections, we can construct another state so that we can have equivalence between vanishing conditional mutual informations. This is the content of the next result, where we show that for every BSRS there is an associated  QMC. 
     \begin{theorem}\label{thm:equiv_BSCMIzero_CMIzero}
-    A state $\rho_{ABC}$ is a BS recovery state if, and only if, $\eta_{ABC}=\frac{1}{d_B} \rho_B^{-\frac{1}{2}}\rho_{ABC}\rho_B^{-\frac{1}{2}}$ is a QMC. In particular, $\widehat{I}_{\rho}(A:C\vert B)=0$ if, and only if, $I_{\eta}(A:C\vert B)=0$.
+    A state $\rho_{ABC}$ is a BSRS if, and only if, $\eta_{ABC}=\frac{1}{d_B} \rho_B^{-\frac{1}{2}}\rho_{ABC}\rho_B^{-\frac{1}{2}}$ is a QMC. In particular, $\widehat{I}_{\rho}(A:C\vert B)=0$ if, and only if, $I_{\eta}(A:C\vert B)=0$.
 \end{theorem}
 \begin{proof}
-    The structural decomposition of BSRS  \eqref{AnnaStates}  can be rewritten as 
+    The structural decomposition of BSRS  \eqref{AnnaStates}  can be rewritten  \PCR{for $S_B=\rho_B^{\frac{1}{2}}U_B^*$} as 
     \begin{equation}
-        \rho_B^{-\frac{1}{2}}\rho_{ABC}\rho_B^{-\frac{1}{2}}=U_B\left(  \bigoplus_{n=1}^N M_n \otimes N_n \right) U_B^*.
+        \rho_B^{-\frac{1}{2}}\rho_{ABC}\rho_B^{-\frac{1}{2}}=U_B^*\left(  \bigoplus_{n=1}^N M_n \otimes N_n \right) U_B.
     \end{equation}
    for some unitary $U_B$. Renormalising the positive matrices $M_n$, $N_n$, for every $1 \leq n\leq N$,  we convert them to the states
     \begin{equation}
         \eta_{AB_n^L}=\frac{1}{\tr M_n}M_n, \quad \eta_{B_n^RC}=\frac{1}{\tr N_n}N_n, \quad p_n=\tr M_n\tr N_n, 
     \end{equation}  with $\sum_n p_n=d_B$. We can then define a new state
     \begin{equation}\label{EtaState}
-          \eta_{ABC}:=\frac{1}{d_B} \rho_B^{-\frac{1}{2}}\rho_{ABC}\rho_B^{-\frac{1}{2}}=U_B \left(\bigoplus_{n=1}^N \frac{p_n}{d_B}  \eta_{AB_n^L} \otimes \eta_{B_n^RC}\right)U_B^*,
+          \eta_{ABC}:=\frac{1}{d_B} \rho_B^{-\frac{1}{2}}\rho_{ABC}\rho_B^{-\frac{1}{2}}=U_B^* \left(\bigoplus_{n=1}^N \frac{p_n}{d_B}  \eta_{AB_n^L} \otimes \eta_{B_n^RC}\right)U_B,
     \end{equation}
     which is a QMC.   Conversely, assume that $\eta_{ABC}$ is a QMC, i.e. equation \eqref{EtaState} holds. We need to check that the conditions \ref{theo:Condition2}  and \ref{theo:Condition3} in Theorem \ref{theo:StructureBSDPI} hold. If we take partial traces on the systems $A$ and $C$ in \eqref{EtaState}, we obtain the identity
     \begin{equation}
@@ -675,27 +702,159 @@ If we trace now on $B$, we obtain that $p_n=d_{B_n}=d_{B_n^L}d_{B_n^R}$, which l
 for $\lambda \in \mathbb{R}\setminus \{0\}$, but since $\eta_{AB_n^R}$ and $\eta_{AB_n^L}$ are quantum states $\lambda=1$.
 \end{proof}
 
-\begin{remark}
-Theorem \ref{thm:equiv_BSCMIzero_CMIzero} shows that we can map any BSRS $\rho_{ABC}$ to a QMC $\eta_{ABC}$ satisfying $\eta_B=\tau_B$, but the converse is also true, i.e from any QMC with marginal $\tau_B$ we can also generate BSRS:  Let $\eta_{ABC}$ be a QMC with $\eta_B=\tau_B$, i.e. there exists a unitary $U_B$ such that
+\begin{remark}\label{remark:ConverseEta}
+Theorem \ref{thm:equiv_BSCMIzero_CMIzero} shows that we can map any BSRS $\rho_{ABC}$ to a QMC $\eta_{ABC}$ satisfying $\eta_B=\tau_B$, but the converse is also true, i.e from any QMC with marginal $\tau_B$ we can also generate BSRS \PCR{or QMC}:  Let $\eta_{ABC}$ be a QMC with $\eta_B=\tau_B$, i.e. there exists a unitary $U_B$ such that
      \begin{equation}
-         \eta_{ABC}=U_B \left( \bigoplus_{n=1}^N p_n \eta_{AB_L^n}\otimes\eta_{AB_R^n}   \right)U_B^*.
+         \eta_{ABC}=U_B^* \left( \bigoplus_{n=1}^N p_n \eta_{AB_L^n}\otimes\eta_{AB_R^n}   \right)U_B.
      \end{equation}
      In particular, tracing in $AC$,
      \begin{equation}
          d_B \eta_B=\bigoplus_{n=1}^N \left(\sqrt{p_n}d_{L^n}\eta_{B_L^n}\right)\otimes \left(\sqrt{p_n}d_{R^n}\eta_{B_R^n}\right)=\bigoplus_{n=1}^N I_{L^n} \otimes I_{R^n}.
      \end{equation}
-     Now let $\rho_B$ be any state and define
+     Now, \PCR{on the one hand by} letting $\rho_B$ be any state, if we define
      \begin{equation}
-         \rho_{ABC}:=d_B \rho_B^{\frac{1}{2}}\eta_{ABC}\rho_B^{\frac{1}{2}}=\underbrace{\rho_B^{\frac{1}{2}}U_B}_{S_B}\left[  \bigoplus_{n=1}^N \underbrace{\left(\sqrt{p_n}d_{L^n}\eta_{AB_L^n}\right)}_{M_n}\otimes \underbrace{\left(\sqrt{p_n}d_{R^n}\eta_{B_R^nC}\right)}_{N_n}  \right]\underbrace{U_B^*\rho_B^{\frac{1}{2}}}_{S_B^*},
+         \rho_{ABC}:=d_B \rho_B^{\frac{1}{2}}\eta_{ABC}\rho_B^{\frac{1}{2}}=\underbrace{\rho_B^{\frac{1}{2}}U_B^*}_{S_B}\left[  \bigoplus_{n=1}^N \underbrace{\left(\sqrt{p_n}d_{L^n}\eta_{AB_L^n}\right)}_{M_n}\otimes \underbrace{\left(\sqrt{p_n}d_{R^n}\eta_{B_R^nC}\right)}_{N_n}  \right]\underbrace{U_B\rho_B^{\frac{1}{2}}}_{S_B^*},
      \end{equation}
-     which satisfiy the conditions of Theorem \ref{theo:StructureBSDPI}
+     $\eta_{ABC}$ satisfies the conditions of Theorem \ref{theo:StructureBSDPI}, so $\rho_{ABC}$ is a BSRS. \PCR{On the other hand, if we take $\rho_B$ of the form
+     \begin{equation}
+         \rho_B:=U_B^*\left( \bigoplus_{n=1}^N \frac{1}{d_{B_n}}\rho_{B_L^n}\otimes\rho_{B_R^n}  \right)U_B,
+     \end{equation}
+     then $\rho_{ABC}:=d_B \rho_B^{\frac{1}{2}}\eta_{ABC}\rho_B^{\frac{1}{2}}$ is a QMC. }
 \end{remark}
-
 \begin{remark}
-   \Cref{thm:equiv_BSCMIzero_CMIzero} provides a way to generate a QMC from any BSRS. However, the QMC obtained from two different BSRS could coincide, and hence this is not a contradiction with \Cref{rem:measure}.
+     \Cref{thm:equiv_BSCMIzero_CMIzero} provides a way to generate a QMC from any BSRS. However, the QMC obtained from two different BSRS could coincide\PCR{. \sout{, and hence this is not a contradiction with \Cref{rem:measure}.}}
 \end{remark}
 
-The latter result gives an exact identification between quantum Markov chains and BS recovery states. A natural question is then whether an equivalence between approximate versions of these notions holds as well. We say that $\rho_{ABC}$ is an $\varepsilon$-approximate quantum Markov chain if
+\PCR{
+    From now on, we will denote by $\eta_{ABC}$ the associated QMC for a BSRS $\rho_{ABC}$ given by Theorem \ref{thm:equiv_BSCMIzero_CMIzero}. We will see in the rest of this work how the relation between $\rho_{ABC}$ and $\eta_{ABC}$ allow us to get many interesting properties. The first one is the commutative of the marginals of $\eta_{ABC}$, $[\eta_{AB},\eta_{BC}]=0$:
+    \begin{equation}
+        d_B^2 \eta_{AB}\eta_{BC}=\rho_B^{-\frac{1}{2}}\rho_{AB}\rho_B^{-1}\rho_{BC}\rho_B^{-\frac{1}{2}}=\rho_B^{-\frac{1}{2}}\rho_{ABC}\rho_B^{-\frac{1}{2}}=\rho_B^{-\frac{1}{2}}\rho_{ABC}^*\rho_B^{-\frac{1}{2}}=\rho_B^{-\frac{1}{2}}\rho_{BC}\rho_B^{-1}\rho_{AB}\rho_B^{-\frac{1}{2}}=d_B^2 \eta_{BC}\eta_{AB},
+    \end{equation}
+    where we have used \eqref{eq:BSCMIZero}. This fact allow us to generate many equivalent recovery conditions of different maps which satisfy different properties for the case $\sigma=\rho_{AB}$ and $\mathcal{T}=\tr_A$. The recovery condition obtained by using  the map $\mathcal{B}^\sigma_{\tr_A}$ is trace preserving but not positive.  $\mathcal{B}^{\rho_{AB}}_{\tr_A}$ acting on $\rho_{BC}$ can also be rewritten as follows:
+    \begin{equation}
+    \begin{split}
+        \mathcal{B}^{\rho_{AB}}_{\tr_A}(\rho_{BC})&=\rho_{AB}\rho_B^{-1}\rho_{BC}\\
+        &=\rho_{B}^{\frac{1}{2}}(\rho_B^{-\frac{1}{2}}\rho_{AB}\rho_B^{-\frac{1}{2}})(\rho_B^{-\frac{
+1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}})\rho_B^{\frac{1}{2}}\\
+&=\rho_B^{\frac{1}{2}}(\rho_B^{-\frac{1}{2}}\rho_{AB}\rho_B^{-\frac{1}{2}})^{\frac{1}{2}}\rho_B^{-\frac{
+1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}}(\rho_B^{-\frac{1}{2}}\rho_{AB}\rho_B^{-\frac{1}{2}})^{\frac{1}{2}}\rho_B^{\frac{1}{2}}\\
+&=:\Phi(\rho_{BC}),
+    \end{split}
+    \end{equation}
+    since $[\rho_B^{-\frac{1}{2}}\rho_{AB}\rho_B^{-\frac{1}{2}},\rho_B^{-\frac{1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}}]=0$. The map $\Phi$ now is completely positive but not trace preserving. A very interesting recovery condition appears when we write the recovery condition for the map $\Phi$ in terms of the polar decomposition of $\rho_{AB}^{\frac{1}{2}}\rho_B^{-\frac{1}{2}}$, i.e. 
+    \begin{equation}\label{eq:PolarDecompositionW}
+        \eta_{AB}^{\frac{1}{2}}=\frac{1}{\sqrt{d_B}}W_{AB}\rho_{AB}^{\frac{1}{2}}\rho_{B}^{-\frac{1}{2}}=\frac{1}{\sqrt{d_B}}\rho_B^{-\frac{1}{2}}\rho_{AB}^{\frac{1}{2}}W_{AB}^*.
+    \end{equation}
+    then the condition   is given by
+\begin{equation}
+    \Phi(\rho_{BC})=\rho_{AB}^{\frac{1}{2}}W_{AB}^*\rho_B^{-\frac{1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}}W_{AB}\rho_{AB}^{\frac{1}{2}},
+\end{equation}
+which looks similarly to the Petz recovery map, but with the unitary matrix $W_{AB}$ in between. Moreover, $\Phi$ satisfies the following trace inequality
+\begin{equation}
+    \tr \Phi(X_{BC}) \leq d_A \Vert \rho_B^{-1}\Vert_{\infty}\tr X_{BC}.
+\end{equation}
+\begin{corollary}
+    Let $\rho_{ABC}$ be a BSRS, the following are equivalent:
+\end{corollary}
+\begin{itemize}
+    \item[1.] $\rho_{ABC}$ is a QMC.
+    \item[2.] $W_{AB}^*\eta_{BC}W_{AB}=\eta_{BC}$.
+    \item[3.] $\rho_{AB}^{-\frac{1}{2}}\rho_{ABC}\rho_{AB}^{-\frac{1}{2}}=\eta_{AB}^{-\frac{1}{2}}\eta_{ABC}\eta_{AB}^{-\frac{1}{2}}$. 
+\end{itemize}
+\begin{proof}
+    The equivalence between 1. and 2. follows from the Petz recovery condition \eqref{eq:PetzCondition} and the fact that $\rho_{ABC}=\Phi(\rho_{BC})$.  Now, condition 2. is equivalent to
+    \begin{equation}
+        \rho_{AB}^{-\frac{1}{2}}\rho_{ABC}\rho_{AB}^{-\frac{1}{2}}=W_{AB}\rho_{AB}^{-\frac{1}{2}}\rho_{ABC}\rho_{AB}^{-\frac{1}{2}}W_{AB}^*
+    \end{equation}
+    and using the relations \eqref{eq:PolarDecompositionW}, we can write the RHS as
+    \begin{equation}
+        W_{AB}\rho_{AB}^{-\frac{1}{2}}\rho_{ABC}\rho_{AB}^{-\frac{1}{2}}W_{AB}^*=\frac{1}{d_B}\eta_{AB}^{-\frac{1}{2}}\rho_B^{-\frac{1}{2}}\rho_{ABC}\rho_B^{-\frac{1}{2}}\eta_{AB}^{-\frac{1}{2}}=\eta_{AB}^{-\frac{1}{2}}\eta_{ABC}\eta_{AB}^{-\frac{1}{2}}
+    \end{equation}
+\end{proof}
+\begin{proposition}
+    Let $\rho_{ABC}$ be a BSRS and define $\xi_{ABC}=\frac{1}{d_B}\rho_{AB}^{-\frac{1}{2}}\rho_{ABC}\rho_{AB}^{-\frac{1}{2}}$. Then there exists a unitary $V_{AB}$ such that $V_{AB}\xi_{ABC}V_{AB}^*$ is a QMC. Moreover, a BSRS is a QMC if, and only if, the respecive $\xi_{ABC}$ generated by $\rho_{ABC}$ and $\eta_{ABC}$ coincide.
+\end{proposition}
+\begin{proof}
+    Let $\rho_{ABC}$ be a BSRS. Then, there exists a decomposition
+    \begin{equation}
+        \rho_{ABC}=\rho_B^{-\frac{1}{2}}U_B \left( \bigoplus_{n=1}^N M_{AB_L^n}\otimes N_{B_R^nC} \right)U_B^* \rho_B^{-\frac{1}{2}}
+    \end{equation}
+satisfying the conditions of Theorem \ref{theo:StructureBSDPI}, and we can write the marginal $\rho_{AB}^{-\frac{1}{2}}$ using the polar decomposition,
+\begin{equation}
+    \rho_{AB}^{-\frac{1}{2}}=\rho_B^{\frac{1}{2}}U_B\left( \bigoplus_{n=1}^N M_{AB_L^n}^{-\frac{1}{2}}\otimes N_{B_R^nC}^{-\frac{1}{2}} \right)U_B^*V_{AB}
+\end{equation}
+for some unitary operator $V_{AB} \in B(\mathcal{H}_{AB})$. We can write then $\xi_{ABC}$ using the block decomposition 
+\begin{equation}
+    \xi_{ABC}=\frac{1}{d_B}V_{AB}^*U_B\left( \bigoplus_{n=1}^N M_{AB_L^n}^{-\frac{1}{2}}M_{AB_L^n}M_{AB_L^n}^{-\frac{1}{2}}\otimes N_{B_R^nC}^{-\frac{1}{2}}N_{B_R^nC} N_{B_R^nC}^{-\frac{1}{2}}\right)U_B^*V_{AB},
+\end{equation}
+i.e.
+\begin{equation}
+    V_{AB}\xi_{ABC}V_{AB}^*=\frac{1}{d_B}U_B\left( \bigoplus_{n=1}^N M_{AB_L^n}^{-\frac{1}{2}}M_{AB_L^n}M_{AB_L^n}^{-\frac{1}{2}}\otimes N_{B_R^nC}^{-\frac{1}{2}}N_{B_R^nC} N_{B_R^nC}^{-\frac{1}{2}}\right)U_B^*,
+\end{equation}
+and renormalizing similarly as we did in the proof of Theorem \ref{thm:equiv_BSCMIzero_CMIzero}, the result holds. The last claim follows from previous Corollary.
+\end{proof}
+}
+
+
+
+
+\begin{comment}
+\PCR{
+The identification between QMC and BSRS allow us to introduce a new recovery map defined as
+\begin{equation}
+    \mathcal{R}_W(X_{BC})=\rho_{AB}^{\frac{1}{2}}W_{AB}^*\rho_B^{-\frac{1}{2}}X_{BC}\rho_B^{-\frac{1}{2}}W_{AB}\rho_{AB}^{\frac{1}{2}},
+\end{equation}
+where $W_{AB}^*$ is the  unitary associated to the polar decomposition of $\frac{1}{\sqrt{d_B}}\rho_B^{-\frac{1}{2}}\rho_{AB}^{\frac{1}{2}}$. This map  is completely positive but not trace preserving in general. However, it  satisfies the following bound for the trace
+\begin{equation}
+    \tr \mathcal{R}_W(X_{BC}) \leq d_A \Vert \rho_B^{-1}\Vert_{\infty}\tr X_{BC}.
+\end{equation}
+Next result shows that this map is actually a recovery map and also it coincides with the Petz recovery map in the case that $\rho_{ABC}$ is a  QMC.
+
+\begin{corollary}\label{coro:RecoveryMapW}
+  Let $W_{AB}$ be the unitary associated to the polar decomposition of $\frac{1}{\sqrt{d_B}}\rho_B^{-\frac{1}{2}}\rho_{AB}^{\frac{1}{2}}$. Then, $\rho_{ABC}$ is a BSRS, if and only if  $\rho_{ABC}=\mathcal{R}_W(\rho_{BC})$. 
+Moreover, 
+\begin{itemize}
+    \item[1.] $\rho_{ABC}$ is a QMC if and only if $\displaystyle [W_{AB},\eta_{BC}]= [W_{AB},\frac{1}{d_B}\rho_B^{-\frac{1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}}]=0$.
+    \item[2.] For any quantum state $\rho_{ABC}$ such that $[\eta_{AB},\eta_{BC}]=0$, then $\mathcal{R}_W(\rho_{BC})=\mathcal{B}_{\tr A}^{\rho_{AB}}(\rho_{BC})$.
+\end{itemize}
+
+
+\end{corollary}
+\begin{proof}
+    Let $\rho_{ABC}$ be a BSRS, so $\eta_{ABC}=\frac{1}{d_B}\rho_B^{-\frac{1}{2}}\rho_{ABC}\rho_B^{-\frac{1}{2}}$ is a QMC. By the polar decomposition, there exists a unitary matrix $W_{AB}$ such that 
+    \begin{equation}
+        \eta_{AB}^{\frac{1}{2}}=\frac{1}{\sqrt{d_B}}W_{AB}\rho_{AB}^{\frac{1}{2}}\rho_{B}^{-\frac{1}{2}}=\frac{1}{\sqrt{d_B}}\rho_B^{-\frac{1}{2}}\rho_{AB}^{\frac{1}{2}}W_{AB}^*.
+    \end{equation}
+    Now, by Theorem \ref{thm:equiv_BSCMIzero_CMIzero}, $\eta_{ABC}$ satisfies the QMC condition
+    \begin{equation}\label{QMCEta}
+\eta_{ABC}=\eta_{AB}^{\frac{1}{2}}\eta_{B}^{-\frac{1}{2}}\eta_{BC}\eta_{B}^{-\frac{1}{2}}\eta_{AB}^{\frac{1}{2}},
+    \end{equation}
+    which translates into
+    \begin{equation}
+        \underbrace{\rho_B^{-\frac{1}{2}}\rho_{ABC}\rho_{B}^{-\frac{1}{2}}}_{d_B \eta_{ABC}}=\underbrace{\rho_B^{-\frac{1}{2}}\rho_{AB}^{\frac{1}{2}}W_{AB}^*}_{\sqrt{d_B}\eta_{AB}^{\frac{1}{2}}} \underbrace{\rho_B^{-\frac{1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}}}_{d_B \eta_{BC}}\underbrace{W_{AB}\rho_{AB}^{\frac{1}{2}}\rho_{B}^{-\frac{1}{2}}}_{\sqrt{d_B}\eta_{AB}^{\frac{1}{2}}}.
+    \end{equation}
+    Multiplying both sides by $\rho_{B}^{\frac{1}{2}}$, the first direction follows. Conversely, suppose that $\rho_{ABC}=\mathcal{R}_W(\rho_{BC})$ holds, then
+    \begin{equation}
+        \frac{1}{\sqrt{d_B}}\rho_{B}^{-\frac{1}{2}} \rho_{AB}^{\frac{1}{2}}W_{AB}^*=\frac{1}{\sqrt{d_B}}\left\vert\rho_{B}^{-\frac{1}{2}}  \rho_{AB}^{\frac{1}{2}}\right\vert = \frac{1}{\sqrt{d_B}} \left( \rho_B^{-\frac{1}{2}} \rho_{AB} \rho_B^{-\frac{1}{2}} \right)^{\frac{1}{2}}=\eta_{AB}^{\frac{1}{2}}
+    \end{equation}
+    and $\eta_{BC}=\frac{1}{d_B}\rho_B^{-\frac{1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}}$, so $\eta_{ABC}$ satisfies the condition \eqref{QMCEta} and by Theorem \ref{thm:equiv_BSCMIzero_CMIzero}, $\rho_{ABC}$ is a BSRS.
+
+    Property 1 is clear. For 2,
+    \begin{equation}
+            \mathcal{R}_W(\rho_{BC})=\rho_{AB}^{\frac{1}{2}}W_{AB}^*\underbrace{\rho_B^{-\frac{1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}}}_{d_B \eta_{BC}}\underbrace{W_{AB}\rho_{AB}^{\frac{1}{2}}}_{\eta_{AB}^{\frac{1}{2}}\rho_{B}^{\frac{1}{2}}}=\rho_{AB}^{\frac{1}{2}}\underbrace{W_{AB}^*\eta_{AB}^{\frac{1}{2}}}_{\rho_{AB}^{\frac{1}{2}}\rho_B^{-\frac{1}{2}}}\rho_B^{-\frac{1}{2}}\rho_{BC}=\mathcal{B}_{\tr A}^{\rho_{AB}}(\rho_{BC}).
+    \end{equation}
+    
+\end{proof}
+}
+\end{comment}
+
+
+  
+
+
+\subsection{Approximate BSRS and QMC}
+
+\PCR{\sout{The latter result gives} Theorem \ref{thm:equiv_BSCMIzero_CMIzero} provides } an exact identification between quantum Markov chains and BS recovery states. A natural question is then whether an equivalence between approximate versions of these notions holds as well. We say that $\rho_{ABC}$ is an $\varepsilon$-approximate quantum Markov chain if
 \begin{equation}
     I_\rho(A:C|B) \leq \varepsilon \, ,
 \end{equation}
@@ -705,12 +864,17 @@ and analogously $\rho_{ABC}$ is an $\varepsilon$-approximate BS recovery state i
 \end{equation}
 
 {
-To explore the connection between approximate quantum Markov chains and approximate BS recovery states, we first provide a lower bound for the reversed BS-CMI of $\rho_{ABC}$ in terms of the CMI of $\eta_{ABC}$.
+To explore the connection between approximate quantum Markov chains and approximate BS recovery states, we first provide a general lower bound for the reversed BS-CMI of $\rho_{ABC}$ in terms of the CMI of $\eta_{ABC}$, \PCR{and conversely under some constraints.}
 \begin{proposition}\label{prop:relation_Irev_I}
-Let $\rho_{ABC}$ be a quantum state such that $\rho_{BC}$ and $\rho_B$ are invertible and let $\eta_{ABC}= \frac{1}{d_B} \rho_B^{-1/2} \rho_{ABC}\rho_B^{-1/2} $. Then,
+Let $\rho_{ABC}$ be a quantum state such that $\rho_{BC}$ and $\rho_B$ are invertible and with associated QMC $\eta_{ABC}$. Then,
 \begin{equation}
     \widehat{I}^{rev}_{\rho}(A:C | B)\geq  2 (\log\min\{d_A,d_C\}+1)^{-8}\left( \frac{d_B \pi}{8\Vert \rho_B^{-1}\Vert_{\infty}} \right)^4 \|\rho_{BC}^{-1/2}\rho_{ABC}\rho_{BC}^{-1/2} \|_\infty^{-2}I_{\eta}(A:C\vert B)^8 \, .
 \end{equation}
+\PCR{Conversely, if $[\eta_{AB},\eta_{BC}]=0$, then  there exists a positive function $f$ such that
+\begin{equation}
+    \widehat{I}^{rev}_{\rho}(A:C | B)\leq f(\rho,d_A,d_B, d_C)I_{\eta}(A:C\vert B)^4
+\end{equation}
+}
 \begin{comment}
     \begin{equation}
     \begin{split}
@@ -719,7 +883,6 @@ Let $\rho_{ABC}$ be a quantum state such that $\rho_{BC}$ and $\rho_B$ are inver
         \end{split}
     \end{equation}
 \end{comment}
-\textcolor{red}{The converse is still open.}
 \end{proposition}
 \begin{proof}
 The trace norm between $\eta_{ABC}$ and its recovery channel can be expressed in therms of $\rho_{ABC}$ and $\Phi$ as follows:
@@ -739,8 +902,8 @@ The trace norm between $\eta_{ABC}$ and its recovery channel can be expressed in
         I_{\eta}(A:C\vert B)\leq 2 (\log\min\{d_A,d_C\}+1)\Vert \eta_{ABC}-\mathcal{P}_{B\rightarrow AB}(\eta_{BC})\Vert_1^{1/2} \, ,
     \end{equation}
     which can be found in \cite{bluhm2023general}.  
-    
-    Conversely, since $\rho_B$ is invertible,  $\ker \mathcal{N}_{\rho}\neq 0$. Consider the operator matrix norm
+   
+\PCR{ Conversely, since $\rho_B$ is invertible,  $\ker \mathcal{N}_{\rho}\neq 0$. Consider the operator matrix norm
     \begin{equation}
         \Vert \mathcal{N}_{\rho}\Vert=\sup_{\Vert Y \Vert_2 \leq 1}\Vert \mathcal{N}_{\rho} Y\Vert_2
     \end{equation}
@@ -750,22 +913,35 @@ The trace norm between $\eta_{ABC}$ and its recovery channel can be expressed in
     \end{equation} 
 and by letting $Y=\rho_{ABC}-\Phi(\rho_{BC})$
 \begin{equation}
-    \Vert \eta_{ABC}-\mathcal{P}_{B\rightarrow AB}(\eta_{BC})\Vert_1 \geq \frac{\Vert \rho_B^{-1} \Vert_{\infty}}{d_B (d_Ad_Bd_C)^2}\Vert \mathcal{N}_{\rho}^{-1}\Vert \Vert \rho_{ABC}-\Phi(\rho_{BC})\Vert_1
+    \Vert \eta_{ABC}-\mathcal{P}_{B\rightarrow AB}(\eta_{BC})\Vert_1 \geq \frac{\Vert \mathcal{N}_{\rho}^{-1}\Vert}{d_B (d_Ad_Bd_C)^2} \Vert \rho_{ABC}-\Phi(\rho_{BC})\Vert_1
 \end{equation}
 We obtain
 \begin{equation}
     \begin{split}
         I_{\eta}(A:C\vert B)&\geq \left(\frac{\pi}{8}\right)^4\Vert \eta_{ABC}^{-1}\Vert_{\infty}^{-2} \Vert \eta_{B}^{-1}\Vert_{\infty}^{-2}\Vert \eta_{ABC}-\mathcal{P}_{B\rightarrow AB}(\eta_{BC})\Vert_1^4\\
-        &\geq \left(\frac{\pi}{8}\right)^4\Vert \eta_{ABC}^{-1}\Vert_{\infty}^{-2} \Vert \eta_{B}^{-1}\Vert_{\infty}^{-2}\left(\frac{\Vert \rho_B^{-1} \Vert_{\infty}}{d_B (d_Ad_Bd_C)^2}\Vert \mathcal{N}_{\rho}^{-1}\Vert \right)^4\Vert  \rho_{ABC}-\Phi(\rho_{BC})\Vert_1^4
+        &\geq \left(\frac{\pi}{8}\right)^4\Vert \eta_{ABC}^{-1}\Vert_{\infty}^{-2} \Vert \eta_{B}^{-1}\Vert_{\infty}^{-2}\left(\frac{\Vert \mathcal{N}_{\rho}^{-1}\Vert}{d_B (d_Ad_Bd_C)^2}\right)^4\Vert  \rho_{ABC}-\Phi(\rho_{BC})\Vert_1^4\\
+        &= \left(\frac{\pi}{8}\right)^4\Vert \eta_{ABC}^{-1}\Vert_{\infty}^{-2} \Vert \eta_{B}^{-1}\Vert_{\infty}^{-2}\left(\frac{\Vert \mathcal{N}_{\rho}^{-1}\Vert}{d_B (d_Ad_Bd_C)^2} \right)^4\Vert  \rho_{ABC}-\mathcal{B}_{\tr A}^{\rho_{AB}}(\rho_{BC})\Vert_1^4
     \end{split}
 \end{equation}
-   \textcolor{red}{ Open Question: How to bound $\widehat{I}^{rev}_{\rho}(A:C | B)\leq f(\Vert  \rho_{ABC}-\Phi(\rho_{BC})\Vert_1)?$
+since $[\eta_{AB},\eta_{BC}]=0$. Finally, we use Theorem 3.6 of \cite{gondolf2024conditional} and obtain
+\begin{equation}
+    \begin{split}
+        \widehat{I}^{rev}_{\rho}(A:C | B) & \leq \Vert \rho_{BC}^{-\frac{1}{2}}\rho_{ABC}\rho_{BC}^{-\frac{1}{2}}\Vert_{\infty}(\Vert \rho_B^{-1}\Vert_{\infty} \Vert \rho_B \Vert_{\infty})^{\frac{1}{2}}\Vert \rho_{ABC}^{-1}\rho_{BC}\Vert_{\infty}\Vert \rho_{ABC}\rho_{BC}^{-1}\rho_B \rho_{AB}^{-1}- \1 \Vert_{\infty}\\
+        &= \Vert \rho_{BC}^{-\frac{1}{2}}\rho_{ABC}\rho_{BC}^{-\frac{1}{2}}\Vert_{\infty}(\Vert \rho_B^{-1}\Vert_{\infty} \Vert \rho_B \Vert_{\infty})^{\frac{1}{2}}\Vert \rho_{ABC}^{-1}\rho_{BC}\Vert_{\infty}\Vert \rho_{ABC}\mathcal{B}_{\tr A}^{\rho_{AB}}(\rho_{BC})^{-1}- \1 \Vert_{\infty}\\
+        & \leq \Vert \rho_{BC}^{-\frac{1}{2}}\rho_{ABC}\rho_{BC}^{-\frac{1}{2}}\Vert_{\infty}(\Vert \rho_B^{-1}\Vert_{\infty} \Vert \rho_B \Vert_{\infty})^{\frac{1}{2}}\Vert \rho_{ABC}^{-1}\rho_{BC}\Vert_{\infty} \Vert\mathcal{B}_{\tr A}^{\rho_{AB}}(\rho_{BC})^{-1} \Vert_{\infty}   \Vert \rho_{ABC}-\mathcal{B}_{\tr A}^{\rho_{AB}}(\rho_{BC})\Vert_{\infty}\\
+         & \leq \Vert \rho_{BC}^{-\frac{1}{2}}\rho_{ABC}\rho_{BC}^{-\frac{1}{2}}\Vert_{\infty}(\Vert \rho_B^{-1}\Vert_{\infty} \Vert \rho_B \Vert_{\infty})^{\frac{1}{2}}\Vert \rho_{ABC}^{-1}\rho_{BC}\Vert_{\infty} \Vert\mathcal{B}_{\tr A}^{\rho_{AB}}(\rho_{BC})^{-1} \Vert_{\infty}   \Vert \rho_{ABC}-\mathcal{B}_{\tr A}^{\rho_{AB}}(\rho_{BC})\Vert_{1}\\
+    \end{split}
+\end{equation}
+and the result holds.
+}
+
+ \end{proof}
+   
+\textcolor{red}{Open Question: How to bound $\widehat{I}^{rev}_{\rho}(A:C | B)\leq f(\Vert  \rho_{ABC}-\Phi(\rho_{BC})\Vert_1)$ without the constraint?
     }
 
-\end{proof}
 
-
-Next, we can prove an inequality in the converse direction. For that, we need to introduce the rotated version of $\Phi$, namely
+Next, we can \PCR{ also } prove an inequality in the converse direction \PCR{without assuming any commutative condition on  $\eta_{ABC}$}. For that, we need to introduce the rotated version of $\Phi$, namely
 \begin{equation}
     \Phi^{\text{rot}} (X) = \int_{-\infty}^{+\infty} dt \beta_0(t) \rho_B^{\frac{1-it}{2}}(\rho_B^{-1/2}\rho_{AB}\rho_B^{-1/2})^{\frac{1-it}{2}}\rho_B^{\frac{-1+it}{2}}X\rho_B^{\frac{-1-it}{2}}(\rho_B^{-1/2}\rho_{AB}\rho_B^{-1/2})^{\frac{1+it}{2}}\rho_B^{\frac{1+it}{2}} \, , 
 \end{equation}
@@ -812,9 +988,6 @@ where we have used Hölder's inequality and $\log(x+1)\leq x$.
 \end{corollary}
 
 
-\section{BS recovery conditions}
-
-This section is devoted to showing several equivalent conditions for recoverability of states whenever there is saturation on the data-processing inequality for the Belavkin-Staszewski relative entropy. 
 
 %Let us define in general \AC{This needs to be rewritten once we know the form for sure.}
 %\begin{align}
@@ -826,6 +999,47 @@ This section is devoted to showing several equivalent conditions for recoverabil
 %Comment: Now it is not clear to me any more that we can make sense of this map and connect it properly with $\Phi$.  Maybe we could just give the the charaterization 1,2 and 3 for the moment and in the particular case of the next corollary give the characterization with the map $\Phi$ too. What do you think?
 %}
 
+
+\section{Superexponential decay}
+
+\PCR{An interesting application of the previous results is the study of the CMI decay associated to Gibbs states in a tripartite  system ABC. In \cite{BluhmCapelPerezHernandez-ExpDecayMI-2021} it was proved that the CMI decays exponentially with the size of B while for the case of the BS-CMI, in \cite{gondolf2024conditional} it was proved that the decay is superexponential. However, due to the connection established in Theorem \ref{thm:equiv_BSCMIzero_CMIzero} and together with the continuity bound of the previous results, we can prove superexponential decay for QMC  $\eta_{ABC}$ such that $\eta_B=\tau_B$.
+
+\begin{theorem}[Superexponential decay of CMI for $\eta_{ABC}$]\label{thm:superexponential_decay}
+    Let quantum spin system on $\mathbb{Z}$ with local, finite-range, translation-invariant interactions and $\rho_{ABC}$ the associated Gibbs state. Then there exists a positive function $l \mapsto \varepsilon(l)$ with  superexponential decay such that for every finite interval $I \subseteq \mathbb{Z}$ split into three subintervals $I = ABC$ and $\eta_{ABC}=\frac{1}{d_B}\rho_B^{-\frac{1}{2}}\rho_{ABC}\rho_B^{-\frac{1}{2}}$, 
+\begin{equation}
+    I_{\eta}(A:C\vert B)\leq \mathcal{C} r(d_A,d_B,d_C)^{\frac{1}{2}}e^{\alpha (\vert A \vert+ \vert B \vert)}\varepsilon(\vert B\vert),
+\end{equation}
+where $r$ is a rational function,  $\mathcal{C}$ and $\alpha$ are constants only depending on inverse temperature $\beta$, strength $J$ and range $R$ of the pontential (see \cite[Section 2.4]{gondolf2024conditional}). 
+\end{theorem}
+\begin{proof}
+    From Proposition  \ref{prop:relation_Irev_I}, we can upper bound $I_{\eta}(A:C\vert B)$ as follows
+    \begin{equation}
+        I_{\eta}(A:C\vert B)\leq \sqrt{\frac{8(d_A+ d_c+1)^2}{d_B\pi \sqrt[4]{2}}}\left\Vert  \rho_B^{-1} \right\Vert_{\infty}^{\frac{1}{2}} \left\Vert \rho_{BC}^{-\frac{1}{2}}\rho_{ABC}\rho_{BC}^{-\frac{1}{2}}\right\Vert_{\infty}^{\frac{1}{4}}\widehat{I}^{rev}_{\rho}(A:C | B)^{\frac{1}{8}}
+    \end{equation}
+    On the one hand, by Lemma 3.5 of \cite{gondolf2024conditional}, 
+    \begin{equation}
+    \left\Vert  \rho_B^{-1} \right\Vert_{\infty}^{\frac{1}{2}} \leq \mathcal{C}_1 e^{\alpha_1 \vert B \vert}
+    \end{equation}
+    and on the other hand, by Theorem 3.6 of \cite{gondolf2024conditional}
+    \begin{equation}
+        \widehat{I}^{rev}_{\rho}(A:C | B)^{\frac{1}{8}}\leq \mathcal{C}_2e^{\alpha_1(\vert A\vert+\vert B\vert)}\varepsilon(\vert B \vert),
+    \end{equation}
+    with $\varepsilon(\hspace{2pt}\cdot \hspace{2pt})$ a positive function with superexponential decay. Now to bound the last term, we use Theorem IX.2.1 of \cite{bhatia-2013} and obtain first
+    \begin{equation}
+        \left\Vert \rho_{BC}^{-\frac{1}{2}}\rho_{ABC}\rho_{BC}^{-\frac{1}{2}}\right\Vert_{\infty}=\left\Vert \rho_{BC}^{-\frac{1}{2}}\rho_{ABC}^{\frac{1}{2}}\right\Vert_{\infty}^2\leq \left\Vert \rho_{BC}^{-1}\rho_{ABC}\right\Vert_{\infty}
+    \end{equation}
+    \textcolor{red}{This should also be bounded similar as Lemma 3.5 of \cite{gondolf2024conditional}}
+\end{proof}
+
+\begin{remark}
+    Since QMC are Gibbs states of local commuting Hamiltonians in 1D \cite{brown-2012} , by Remark \ref{remark:ConverseEta} for any QMC $\eta_{ABC}$ with $\eta_B=\tau_B$, it is possible to find the QMC (Gibbs state) $\rho_{ABC}$ satisfying  Theorem \ref{thm:superexponential_decay} under the due assumptions on the quantum spin system.
+\end{remark}
+
+}
+
+\section{BS recovery conditions}
+
+This section is devoted to showing several equivalent conditions for recoverability of states whenever there is saturation on the data-processing inequality for the Belavkin-Staszewski relative entropy. 
 
 \begin{theorem}\label{thm:equivalence_recovery_conditions}
     Let $\rho, \sigma$ be two quantum states, with $\sigma$ invertible, and let $\mathcal{T}$ be a quantum channel. The following are equivalent:
@@ -877,11 +1091,13 @@ This section is devoted to showing several equivalent conditions for recoverabil
 At this point, we are ready to prove the last question left in the introduction: the reverse condition for the map $\Phi$ introduced in \eqref{MapPhi}. Given now $\rho_{ABC}$ a BSRS, we know from the previous discussion that $\eta_{ABC}$ is a QMC, so it satisfies \eqref{eq:PetzCondition}, which  gives the recoverability condition 
 \begin{subequations}
 \begin{align}
-    \rho_{ABC}&=\rho_B^{\frac{1}{2}}\left( \rho_B^{-\frac{1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}}   \right)^{\frac{1}{2}}\rho_B^{-\frac{1}{2}}\rho_{AC}\rho_B^{-\frac{1}{2}}\left( \rho_B^{-\frac{1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}}   \right)^{\frac{1}{2}}\rho_B^{\frac{1}{2}}\\
+    \rho_{ABC}&=\rho_B^{\frac{1}{2}}\left( \rho_B^{-\frac{1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}}   \right)^{\frac{1}{2}}\rho_B^{-\frac{1}{2}}\PCR{ \rho_{AB}}\rho_B^{-\frac{1}{2}}\left( \rho_B^{-\frac{1}{2}}\rho_{BC}\rho_B^{-\frac{1}{2}}   \right)^{\frac{1}{2}}\rho_B^{\frac{1}{2}}\\
     &=\Phi(\rho_{AB}).
 \end{align}
 \end{subequations}
 We can now combine the results obtained to characterise BSRS in terms of fixed points of three different maps.
+
+\textcolor{red}{We might suppress the following corollary}
 
 \begin{corollary}\label{cor:equiv_conditions_BSRS}
     Let $\rho_{ABC}$ be a quantum state such that $\rho_{AB}$ is invertible, $\sigma=\rho_{AB}\otimes \tau_C$ and $\mathcal{T}=\tr_A$. The following are equivalent:
@@ -890,6 +1106,7 @@ We can now combine the results obtained to characterise BSRS in terms of fixed p
         \item $\rho_{ABC}=\mathcal{B}(\rho_{BC})$.
         \item $\rho_{ABC}=\mathcal{B}^{sym}(\rho_{BC})$.
         \item $\rho_{ABC}=\Phi(\rho_{AB})$.
+        \item \PCR{$\rho_{ABC}=\mathcal{R}_W(\rho_{BC})$}
     \end{enumerate}
 \end{corollary}
 
@@ -926,14 +1143,19 @@ We can now combine the results obtained to characterise BSRS in terms of fixed p
      
 \noindent \underline{$4. \Rightarrow 1. $} By $\rho_{ABC}= \Phi(\rho_{AB}) $, we have 
 \begin{equation}
-    \underbrace{\rho_B^{-1/2} \rho_{ABC} \rho_B^{-1/2}}_{d_B \eta_{ABC}}   = \Big( \underbrace{ \rho_B^{-1/2}\rho_{BC}\rho_B^{-1/2}   }_{d_B \eta_{BC}}\Big)^{1/2} \underbrace{\rho_B^{-1/2}\rho_{AC}\rho_B^{-1/2} }_{d_B \eta_{AC}}\Big( \underbrace{ \rho_B^{-1/2}\rho_{BC}\rho_B^{-1/2} }_{d_B \eta_{BC}}  \Big)^{1/2} \, ,
+    \underbrace{\rho_B^{-1/2} \rho_{ABC} \rho_B^{-1/2}}_{d_B \eta_{ABC}}   = \Big( \underbrace{ \rho_B^{-1/2}\rho_{BC}\rho_B^{-1/2}   }_{d_B \eta_{BC}}\Big)^{1/2} \underbrace{\rho_B^{-1/2}\rho_{AB}\rho_B^{-1/2} }_{d_B \eta_{AB}}\Big( \underbrace{ \rho_B^{-1/2}\rho_{BC}\rho_B^{-1/2} }_{d_B \eta_{BC}}  \Big)^{1/2} \, ,
 \end{equation}
 for $\eta_{ABC} = \frac{1}{d_B} \rho_B^{-1/2} \rho_{ABC} \rho_B^{-1/2}$. This is equivalent to
 \begin{equation}
     \eta_{ABC} = \eta_{BC}^{1/2} \eta_{B}^{-1/2}  \eta_{AB} \eta_{B}^{-1/2} \eta_{BC}^{1/2} \, , 
 \end{equation}
 and subsequently, to $I_\eta (A:C | B) = 0$. By \Cref{thm:equiv_BSCMIzero_CMIzero}, we this is equivalent to $\widehat{I}_\rho (A:C |B)= 0$, and thus to $\rho_{ABC}$ being a BSRS.
-    
+
+     \vspace{0.2cm}
+
+\PCR{
+\noindent  \underline{$1. \Leftrightarrow 5. $} Follows from Corollary \ref{coro:RecoveryMapW}.
+    }
 \end{proof}
 
 \section{Further questions we could to try answer}
