@@ -1361,32 +1361,47 @@ diagrams. For this, we introduce the following notations: for $n\in \mathbb N$, 
 {\color{red} (recall that $[0]=\emptyset$)}. For each $n$, the poset $\Pe_{\gamma_n}$ is a chain of even
 length and we will see in Section  \ref{sec:chains} below that $\gamma_n\in \Te_n$. 
 
-\begin{exm} \label{exm:T2hasse} The labelled Hasse diagrams of elements in $\Te_2$ are as
+\begin{exm} \label{exm:T2hasse} The labelled Hasse diagrams of elements in $\Te_2$
+described in Example \ref{exm:T2} are up
+to permuations as
 follows:
+\begin{center}
+\includegraphics[scale=0.8]{t2_hasse.pdf}
+\end{center}
 
+Note that the diagram in (d) corresponds to the function $\gamma_2$.
 
-see Example \ref{exm:T2}, 
 
 \end{exm}
 
-Examples (n=2,3,4). Hasse diagrams
-\begin{exm}[$\Te_3$]
-As we can see from Example \ref{exm:T2}, for all elements in $\Te_2$, the corresponding
-posets are chains. This is
-also true for $n=3$. Indeed, up to a permutation that does not change the chain structure, 
+\begin{exm}\label{exm:T3}
+As we can see above, for all elements in $\Te_2$, the corresponding
+posets are chains. This is also true for $n=3$. Indeed, up to a permutation that does not change the chain structure, 
 any $f\in \Te_3$ is either a product of two elements $g\in \Te_2$ and $h\in \Te_1$,
 or the dual of such a  product. Since $g$ must be a chain and $|\Pe_h|=1$, their product
 must be a chain as well. Taking the dual of a chain only adds/removes the least/largest
-elements, so the dual of a chain must be a chain as well. The only elements in $\Te_3$
-that are not of the form $f\otimes 1_1$ for $f\in \Te_2$ (up to permutations) are depicted
-in the following labelled Hasse diagrams.
+elements, so the dual of a chain must be a chain as well. All the functions depicted in
+(a)-(d) above  are also contained in $\Te_3$. The only other
+elements are (up to permutations):
+\begin{center}
+\includegraphics[scale=0.8]{t3_hasse.pdf}
+\end{center}
+Notice that in $\Te_3$, the function with diagram in (a*) is the conjugate of  the
+function with diagram in  (a), etc. The diagram in (d*) correpsonds to $\gamma_3$.
+
+
+
 \end{exm}
 
 
-\begin{exm}\label{exm:T4} 
-
+\begin{exm}\label{exm:T4} The only elements in $\Te_4$ such that the posets are not
+isomorphic to any of the above have the diagrams:
+\begin{center}
+\includegraphics[scale=0.8]{t4_hasse.pdf}
+\end{center}
 \end{exm}
 
+\medskip
 Let us denote
 \[
 I_f^F:=\cap_{S\in \mathrm{Min}(\Pe_f)} L_S, \qquad O_f^F:=[n]\setminus
@@ -1414,10 +1429,10 @@ for some $\sigma\in \permut_n$. Clearly, $n-k-l$ has to be specified for $g$.
 
 
 The  two distinguished elements $\emptyset$ and $[n]$, if present in $\Pe_f$, can be easily recognized
-from its structure as a labelled poset. Indeed, $\emptyset\in \Pe_f$ if and only if it is
-the smallest element in $\Pe_f$ and has an empty label. 
+from its structure as a labelled poset. Indeed, $\emptyset\in \Pe_f$ if and only if
+$\Pe_f$ has the  smallest element and it  has an empty label. 
 Similarly, $[n]\in \Pe_f$ if and
-only if it is the largest element and $\cup_{S\in \Pe_f}L_S=[n]$. The basic operations on
+only if $\Pe_f$ has  the largest element and $\cup_{S\in \Pe_f}L_S=[n]$. The basic operations on
 type functions are obtained as follows. 
 
 \begin{coro}\label{coro:Pf} Let $f\in \Te_n$, $g\in \Te_m$. Then
@@ -1579,7 +1594,7 @@ Y{\color{red}\overset{\sigma}{\simeq}}
 Y_{T_{N-1}}\multimap (Y_{T_{N-2}}\multimap\dots \multimap (Y_{T_{\frac{N+1}2}}\multimap
 Y_{T_{\frac{N-1}2}})\multimap\dots\multimap Y_{T_2})\multimap Y_{T_1} 
  \]
- where we put $Y_T=\otimes_{j\in T} Y_j$ and $\sigma\in \permut_n$.
+ where we put $Y_T=\otimes_{j\in T} Y_j$.
 
 \end{prop}
 
