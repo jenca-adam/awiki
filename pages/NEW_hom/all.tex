@@ -2025,7 +2025,7 @@ combs.
 \subsection{The labelled poset $\Pe_f^0$}
 
 Let $\Pe_f^0$ be the subposet in $\Pe_f$, consisting of the elements with nonempty labels
-and possibly $\emptyset$. We will show that any $f\in \Te_n$ is fully determined by $\Pe_f^0$ (and
+and $\emptyset$ if it is contained in $\Pe_f$. We will show that any $f\in \Te_n$ is fully determined by $\Pe_f^0$ (and
 $n$). This is convenient, because $\Pe_f^0$ is much smaller and easier to visualise that $\Pe_f$. More
 importantly, from $\Pe_f^0$, one can find a  decomposition of $f$ as products and complements
 of other functions. In particular, it is possible to obtain from $\Pe_f^0$ some choice of
@@ -2036,7 +2036,8 @@ in the decomposition in Theorem \ref{thm:structure}.
 We will start by some basic properties of $\Pe_f^0$. Some further properties, and more
 technical parts of the proofs, can be found in Appendix \ref{app:pf0}. 
 
-Recall that for all $T\in \Pe_f$, we have $T=\cup_{T'\in \Pe_f^0, T'\subseteq T} L_{T'}$.
+Recall that for all $T\in \Pe_f$, we have $T=\cup\{L_{T'},\ T'\in \Pe_f^0, T'\subseteq
+T\}$.
 
 
 \begin{lemma}\label{lemma:p0_basic} Let $f\in \Te_n$.
@@ -2044,7 +2045,7 @@ Recall that for all $T\in \Pe_f$, we have $T=\cup_{T'\in \Pe_f^0, T'\subseteq T}
 \item[(i)] $\mathrm{Min}(\Pe_f^0)=\mathrm{Min}(\Pe_f)$.
 \item[(ii)] $\Pe_f^0$ is a chain $\iff$  $\Pe_f$ is a chain $\iff$  $\Pe_f^0= \Pe_f$.
 
-\item[(iii)] $\Pe^0_f$ has a largest element if and only if $f$ or $f^*$ has a free
+\item[(iii)] If $\Pe^0_f$ has a largest element,  then $f$ or $f^*$ has a free
 output. In this case  the corresponding set is the largest element in $\Pe_f$. 
 
 \end{enumerate}
@@ -2055,7 +2056,7 @@ output. In this case  the corresponding set is the largest element in $\Pe_f$.
 (i) Obvious. For (ii), assume that $\Pe^0_f$ is a chain and let $S,T\in \Pe_f$. Let $i\in
 S\setminus T$ and $j\in T$, and let $S'\subseteq  S$ and $T'\subseteq  T$ be such that $S',T'\in
 \Pe_f^0$ and $i\in L_{S'}$, 
-$j\in L_{T'}$. Since $\Pe_f^0$ is a chain, $S'$ and $T'$ are comparable. If $S'\le T'$,
+$j\in L_{T'}$. Since $\Pe_f^0$ is a chain, $S'$ and $T'$ are comparable. If $S'\subseteq T'$,
 then $S'\subseteq  T'\subseteq  T$, so that $i\in T$, which is not possible. Hence
 $T'\subseteq S' \subseteq S$, for all $T'\in \Pe_f^0$, $T'\subseteq T$. Hence $T\subseteq
 S$, and $\Pe_f$ is a chain. It is clear that then $\Pe_f^0=\Pe_f$.  
@@ -2151,23 +2152,29 @@ To prove (iii) let $T$ be the largest element in $P^0_f$. Then
 
 
 
-\begin{prop}\label{prop:pf0_largest} Assume that $\Pe_f^0$ has a largest element.  Then
-either $f$ is a chain type, or there is some $h\in \Te_m$ such that $\Pe_h^0$ has  no largest element,
-and a chain type $\beta\in \Te_{n-m}$ such that $f\approx h\vtl \beta$.
+\begin{prop}\label{prop:pf0_largest} Assume that $f\in \Te_n$ is such that $f$ or $f^*$
+has a free output.   Then
+either $f$ is a chain type, or there is some $h\in \Te_m$ such that both a$h$ and $h^*$
+have no free outputs, and  a chain type $\beta\in \Te_{n-m}$ such that $f\approx h\vtl \beta$.
 
 \end{prop}
 
 
 
-\begin{proof} Let $T$ be the largest element in $\Pe_f^0$. If $T=[n]$, then by Lemma
-\ref{lemma:p0_basic}(iii) and its proof, $f^*$ has some free outputs. Hence
+\begin{proof} Assume that $\Pe_f^0$ has no largest element, then $[n]\notin \Pe_f^0$ and by Lemma
+\ref{lemma:p0_basic}(iii) and its proof,  $f^*$ has no free outputs, so that we must have $O_f^F\ne \emptyset$. But
+then $f\approx h\otimes 1_k=h\vtl 1_k$ with $k=|O_f^F|$, where $h\in \Te_{n-k}$ has no
+free outputs. Since $\Pe_h^0\simeq \Pe_f^0$, $\Pe_h^0$ has no largest element, so that
+$h^*$ has no free outputs as well. 
+
+Assume that $\Pe_f^0$ has a largest element $T$. If $T=[n]$, then $f^*$ has some free outputs. Hence
 $f^*\approx h_1\otimes 1_{k_1}$ for some $h_1\in \Te_{n-k_1}$ with no free outputs. It follows that
 $f\approx (h_1\otimes 1_{k_1})^*=(h_1\vtl 1_{k_1})^*=h_1^*\vtl p_{k_1}$. 
 
 If $T\ne [n]$, then, since $T$  
 is also the largest element in $\Pe_f$, we see that $f$ has free outputs, so that
 $f\approx h_1\otimes 1_{k_1}=h_1\vtl 1_{\k_1}$, where $h_1\in \Te_{n-k_1}$ is a type function with no
-free outputs. Since clearly $\Pe_{h_1}^0=\Pe_f^0$,  $T$ is the largest
+free outputs. Since $\Pe_{h_1}^0=\Pe_f^0$,  $T$ is the largest
 element in $\Pe^0_{h_1}$, but this time $T=[n-k_1]$, so that we may use the first part of the
 proof. We obtain that there is some $k_2$ and a type function  $h_2\in\Te_{n-k_1-k_2}$
 with no free outputs such that 
@@ -2175,11 +2182,11 @@ with no free outputs such that
 f\approx h_1\vtl 1_{k_1}=h_2^*\vtl p_{k_2}\vtl 1_{k_1}
 \]
 So far, we have written $f$ in the form $f=h\vtl \beta$, where $\beta$ is a chain type and
-$h\in \Te_{n-k}$ for $k>0$ is such that $h^*$ has no free outputs. It follows that if
-$\Pe_h^0$ has a largest element, then it cannot be equal to $[n-k]$. Hence $h$ must have
-some free outputs, and we may proceed as above, replacing $f$ by $h$. Since $n$ is decreasing at each step, we
+$h\in \Te_{n-k}$ for $k>0$ is such that $h^*$ has no free outputs. If $h$ has free
+outputs, we  may proceed as above, replacing $f$ by $h$. Since $n$ is decreasing at each step, we
  either get to $n-k \le 3$, in which case $h$ must be a chain and therefore also $f=h\vtl
- \beta$ is a chain, or $\Pe^0_h$ has no largest element.
+ \beta$ is a chain, or $\Pe^0_h$ has no largest element, in which case we finish  by the
+ first paragraph of the proof.
 
 
 \end{proof}
@@ -2199,27 +2206,23 @@ to the chain type.  Some examples are given below.
 
 
 \begin{center}
-\begin{minipage}[c]{0.2\textwidth}
+\begin{minipage}[c]{0.3\textwidth}
 \centering
 \includegraphics[scale=0.7]{fri_aa.pdf}
 \end{minipage}
-\begin{minipage}[c]{0.2\textwidth}
+\begin{minipage}[c]{0.3\textwidth}
 \centering
 \includegraphics[scale=0.7]{fri_b.pdf}
 \end{minipage}
-\begin{minipage}[c]{0.2\textwidth}
+\begin{minipage}[c]{0.3\textwidth}
 \centering
-\includegraphics[scale=0.7]{fri_c.pdf}
-\end{minipage}
-\begin{minipage}[c]{0.2\textwidth}
-\centering
-\includegraphics[scale=0.7]{fri_d.pdf}
+\includegraphics[scale=0.7]{fri_ccc.pdf}
 \end{minipage}
 \end{center}
 
 
 
-\begin{prop}\label{prop:pf0_smallest} Let $f\in \Te_n$ be such that either $f$ or
+\begin{prop}\label{prop:pf0_smallest} Let $f\in \Te_n$ be such that $f$ or
 $f^*$ has a free input. 
 Then either $f$ is a chain type, or there is some chain type $\beta\in
 \Te_k$ and some $h\in \Te_{n-k}$ such that $h$ and $h^*$ have no free inputs and
@@ -2360,8 +2363,43 @@ D}g_i$.
 
 It follows that in the situation of the above Proposition, if $f^*\approx g_1\otimes
 \dots\otimes g_k$, we can identify $\Pe_{g_l}^0$  by looking at the independent
-components of $\Pe_f^0$. The case when $\Pe_f^0$ has no independent components is somewhat more complicated.
- By the lemma above, this
+components of $\Pe_f^0$.
+\begin{exm}\label{exm:components} The next diagram shows $\Pe_f^0$ for a type function
+$f\in \Te_{16}$:
+
+\begin{center}
+\includegraphics[scale=0.8]{components.pdf}
+\end{center}
+
+Note that $\Pe_f^0$ has no largest or smallest element, and also no free indices, so the
+assumptions of Proposition \ref{prop:nofree_components} are satisfied. As a poset, $\Pe_f^0$  is a direct sum of 6 posets, but there are only two independent
+components: one with labels $\le 10$, and one with labels  $>10$. It follows that
+$f^*\approx
+g_1\otimes g_2$. We can obtain
+$\Pe_{g_1}^0$ and $\Pe_{g_2}^0$ by adding $\emptyset$, that is, an unlabelled minimal
+element to each component, and relabelling if necessary:
+\begin{center}
+\begin{minipage}[c]{0.6\textwidth}
+\centering
+\includegraphics[scale=0.8]{component1.pdf}
+\end{minipage}
+\begin{minipage}[c]{0.35\textwidth}
+\centering
+\includegraphics[scale=0.8]{component2.pdf}
+\end{minipage}
+\end{center}
+We can also see that both $g_1^*$ and $g_2^*$ are products. Using the procedure described
+in Appendix \ref{app:pf0}, we obtain that $g_1\approx ((\gamma_2\otimes \gamma_2)^*\otimes (\gamma_2\otimes
+\gamma_4)^*)^*$ and $g_2\approx ((\gamma_2\otimes\gamma_2)^*\otimes \gamma_2)^*$.
+
+
+
+
+\end{exm}
+
+
+ The case when $\Pe_f^0$ has no independent components is somewhat more complicated.
+ By the proposition  above, this
 is the case when $f\approx f_1\otimes\dots\otimes f_k$. The proof of the following result is in Appendix \ref{app:pf0}.
 
 \begin{prop}\label{prop:nofree_product}  Let $f\in \Te_n$ be such that $f$ and $f^*$ have
@@ -2385,7 +2423,7 @@ $n$. If $f$ is a chain type, the assertion follows from Lemma
 $n\le 3$. Assume it is true for all $m<n$ and let $f\in \Te_n$. By Propositions
 \ref{prop:pf0_largest} and \ref{prop:pf0_smallest} and remarks below them, if $f$ or
 $f^*$ has
-some free indices, then we have $f=\beta_1\vtl h \vtl \beta_2$, where $\beta_1,\beta_2$
+some free indices, then we have $f\approx \beta_1\vtl h \vtl \beta_2$, where $\beta_1,\beta_2$
 are chain types and $h\in \Te_m$ is such that $h$ and $h^*$ do not have any free indices.
 Moreover,  the chain types and $\Pe_h^0$ 
  can be obtained from $\Pe_f^0$. Since $m<n$,  $h$ is
@@ -2394,10 +2432,10 @@ Moreover,  the chain types and $\Pe_h^0$
 
 If both $f$ and $f^*$ have no free indices, we may assume that $\emptyset \notin \Pe_f$, otherwise we 
 replace $f$ by $f^*$. Then if $\Pe_f^0$ has independent components, we have
-$f^*=f_1\otimes f_2$ for some type functions $f_i\in \Te_{n_i}$, $i=1,2$ and $n=n_1+n_2$,
+$f^*\approx f_1\otimes f_2$ for some type functions $f_i\in \Te_{n_i}$, $i=1,2$ and $n=n_1+n_2$,
 such that the components have the form $\Pe_{f_i}^0\setminus \{\emptyset\}$. Since
 $n_1,n_2<n$, we are done. If $\Pe_f^0$ has no independent components, then
-$f=f_1\otimes\dots \otimes f_k$ for some $f_i\in \Te_{m_i}$, $i=1,\dots,k$, $m_1+\dots
+$f\approx f_1\otimes\dots \otimes f_k$ for some $f_i\in \Te_{m_i}$, $i=1,\dots,k$, $m_1+\dots
 +m_k=n$, and we obtin   $\Pe_{f_l}^0$ for all $l=1,\dots,k$ from $\Pe_f^0$ by Proposition
 \ref{prop:nofree_product}. Again, the assertion follows by applying induction assumption
 on each $f_l$.
@@ -2405,16 +2443,14 @@ on each $f_l$.
 
 \end{proof}
 
+Using repeatedly the prodecure described in the above proof, we get to the situation when
+all the obtained components are necessarily chains. In this way, we get a decomposition of $f$ into
+chain types, together with a recipe how to construct $f$ from these chain types by using
+tensor products, complements  and causal products. It is then clear, using also the proof
+of Theorem \ref{thm:structure}, that these chain types give us a choice of
+$\beta_1,\dots,\beta_k$ in the structure theorem \ref{thm:structure}.
 
-It also folows that we can obtain a choice of set of chain types  appearing in the decomposition
-of Theorem \ref{thm:structure} from $\Pe_f^0$.	If $f=\beta_1\vtl h\vtl \beta_2$ for chain
-types $\beta_1$ and $\beta_2$ and a type function $h$, then we can construct such a set
-by adding $\beta_1,\beta_2$ to a collection of chains for $h$. If $h$ and $h^*$ 
-have no free indices, then if $\Pe_h^0$ has independent components, then $h^*=h_1\otimes\dots \otimes h_k$, so the set of chain types of $h$ is obtained by putting
-together the complements of all chain types for the functions $h_i$. Similarly, if
-$h=g_1\otimes \dots\otimes g_k$, we collect all chain types for all the components $g_j$ (without taking 
-complements this time). Each $h_i$ or $g_j$ can be decomposed as above, until we
-necessarily get to the situation when all the components are chain types themselves.
+
 
 
 \section{Conclusions}
