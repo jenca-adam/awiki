@@ -1,6 +1,7 @@
 from pagetools.utils.name import maketitle,makename
 from pagetools.utils.warn import warn
 def bibmake(dc,name=None,tp='article'):
+    print("bibmake")
     if name is None:
         if 'name' in dc:
             name=dc['name']

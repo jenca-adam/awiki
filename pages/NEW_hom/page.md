@@ -22,6 +22,9 @@ title: Higher order maps
       - ...
       - indefinite causal order, quantum switch, witnesses
 
+* read [simmons2022higher](simmons2022higher)  Simmons and Kissinger, signalling product (sequence operator)     
+
+
 * read [santocanale2022frobenius](santocanale2022frobenius), check the "nuclear" objects in interesting \*-autonomous categories
     - this does not seem to give anything interesting
 
@@ -30,10 +33,11 @@ title: Higher order maps
      - Afhom: category of fd vector spaces with an affine subspace     
      - we then add OVS to it: category of fd vect, but this time with a positive cone, star-autonomous subcategories here?? but with different tensor product?     
      - check references    
+      
 
 * read [milz2024characterising](milz2024characterising) quantum HOMs, projections, affine duals...
 
-
+* read [milz2022resource](milz2022resource)  resource theory of causality    
 
 
 

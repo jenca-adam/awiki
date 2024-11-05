@@ -46,6 +46,7 @@ def steal_old_bib(arxivid):
     title=ArXivPage(arxivid).title
     return export_bib(title)
 def steal_bib(arxivid,**kwargs):
+    return "", "", ""
     if 'arxiv_id' not in kwargs:
         kwargs['arxiv_id']=arxivid #TODO???
     results,uri=scholar_search(**kwargs)

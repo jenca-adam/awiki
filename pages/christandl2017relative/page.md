@@ -4,7 +4,7 @@ title: christandl2017relative
 
 ## Reference
 
-Matthias Christandl, Alexander Müller-Hermes,Relative Entropy Bounds on Quantum, Private and Repeater Capacities, Commun. Math. Phys. (2017) 353: 821-852
+Matthias Christandl, Alexander Müller-Hermes, Relative Entropy Bounds on Quantum, Private and Repeater Capacities, Commun. Math. Phys. (2017) 353: 821-852
 
 ## Abstract 
   We find a strong-converse bound on the private capacity of a quantum channel

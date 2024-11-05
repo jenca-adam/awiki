@@ -1,4 +1,4 @@
-default: t2_hasse.pdf component2.pdf component1.pdf
+default: product3.pdf 
 
 .PRECIOUS: %.eps
 

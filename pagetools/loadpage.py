@@ -75,12 +75,10 @@ def loadpage(id,download=True,rewrite=False,name=None):
         additional=''
 
     name=get_name(bibtex)
+    print(f"{name=}")
     if name is None:
         name=makename(authorname,page.year,thingname)
-
     
-        
-
     print(f'{YELLOW}Directory name:{name}{RESET}')
     page.year=int(page.year)
     if download:

@@ -1834,19 +1834,19 @@ By  Proposition
 \ref{prop:append_chain_f} below, all the results are type functions. 
 
 \begin{center}
-\begin{minipage}[c]{0.2\textwidth}
+\begin{minipage}[c]{0.23\textwidth}
 \centering
 \includegraphics[scale=0.7]{vtl_a.pdf}
 \end{minipage}
-\begin{minipage}[c]{0.2\textwidth}
+\begin{minipage}[c]{0.23\textwidth}
 \centering
 \includegraphics[scale=0.7]{vtl_b.pdf}
 \end{minipage}
-\begin{minipage}[c]{0.2\textwidth}
+\begin{minipage}[c]{0.23\textwidth}
 \centering
 \includegraphics[scale=0.7]{vtl_c.pdf}
 \end{minipage}
-\begin{minipage}[c]{0.2\textwidth}
+\begin{minipage}[c]{0.23\textwidth}
 \centering
 \includegraphics[scale=0.7]{vtl_d.pdf}
 \end{minipage}
@@ -2208,15 +2208,15 @@ to the chain type.  Some examples are given below.
 \begin{center}
 \begin{minipage}[c]{0.3\textwidth}
 \centering
-\includegraphics[scale=0.7]{fri_aa.pdf}
+\includegraphics[scale=0.9]{fri_aa.pdf}
 \end{minipage}
 \begin{minipage}[c]{0.3\textwidth}
 \centering
-\includegraphics[scale=0.7]{fri_b.pdf}
+\includegraphics[scale=0.9]{fri_b.pdf}
 \end{minipage}
 \begin{minipage}[c]{0.3\textwidth}
 \centering
-\includegraphics[scale=0.7]{fri_ccc.pdf}
+\includegraphics[scale=0.9]{fri_ccc.pdf}
 \end{minipage}
 \end{center}
 
@@ -2264,6 +2264,55 @@ has least element $\emptyset$). Hence  $f\approx p_k\vtl g$, for $g\in \Te_{n-k}
 free inputs. Note also that we have  $\emptyset
 \notin \Pe_g$, so that $g^*$ has no free inputs as well. See the diagrams in Example \ref{exm:causal} (and the corresponding
 subposets $\Pe_f^0$ of labelled elements) for some examples.
+
+\begin{exm}[Comb to comb]\label{exm:comb_to_comb} The diagram on the left below depicts the function
+$g=(\gamma_2\otimes \gamma_4^*)^*\in \Te_6$. By Propositions \ref{prop:chains_combs} and
+\ref{prop:Xf_const}, the corresponding higher order objects represent maps from channels
+to 2-combs. 
+\begin{center}
+\begin{minipage}[c]{0.45\textwidth}
+\centering
+\includegraphics[scale=0.8]{c_to_c12.pdf}
+\end{minipage}
+\begin{minipage}[c]{0.45\textwidth}
+\centering
+\includegraphics[scale=0.8]{c_to_cMN.pdf}
+\end{minipage}
+\end{center}
+Applying Propositions \ref{prop:pf0_largest} and \ref{prop:pf0_smallest}, together with
+the remarks below them, we obtain that $g\approx 1_1\vtl h\vtl p_1$, as indicated on thed
+iagram. It is easily checked that
+$h=(\gamma_2\otimes\gamma_2)^*$ (see Example \ref{exm:T4}). In this way, we decomposed $g$
+into chain types, with respect to the decomposition of $[6]$ into four intervals $[6]=[1][2,3][4,5][6]$. Let
+$s=s^1\dots s^4$ be the corresponding concatenation. We indicate the component on which
+any of the chain types is acting by an upper index, so that 
+ $g\approx p_1^1\vtl (\gamma_2^2\otimes \gamma_2^3)^*\vtl 1_1^4$. By Lemmas \ref{lemma:causal_product} and \ref{lemma:causal_tensor}, we have
+\begin{align*}
+g&\approx 1^1_1\vtl((\gamma_2^2\vtl \gamma_2^3)\wedge (\gamma_2^3\vtl \gamma_2^2))^*\vtl
+p^4_1=
+1^1_1\vtl((\gamma_2^2\vtl \gamma_2^3)^*\vee(\gamma_2^3\vtl\gamma_2^2)^*)\vtl p^4_1\\
+&=(1_1\vtl (\gamma^2_2)^*\vtl (\gamma_2^3)^*\vtl p_1^4)\vee (1_1\vtl (\gamma^3_2)^*\vtl
+(\gamma_2^2)^*\vtl p_1^4).
+\end{align*}
+It can be checked that the last expression is equal to $\gamma_6\vee (\gamma_6\circ
+\rho_\lambda)$, where $\lambda\in \permut_4$  acts as $(1234)\mapsto (1324)$ and
+$\rho_\lambda$ is the block permutation corresponding to $\lambda$ and the above
+decomposition of $[6]$, see Appendix \ref{app:permut}. Similarly, for any $M,N$, the type
+describing higher order objects corresponding to mappings of $M$-combs into $N$-combs (see
+the diagram on the right) is
+an element of $\Te{2(M+N)}$, and  with respect to the decomposition
+$[2(M+N)]=[1][M][N-2][1]$,  it can be decomposed as
+\begin{align*}
+1_1\vtl(\gamma_{2M}\otimes \gamma_{2N-2})^*\vtl p_1&=(1_1\vtl \gamma^*_{2M}\vtl
+\gamma_{2N-2}^*\vtl p_1)\vee (1_1\vtl \gamma^*_{2N-2}\vtl
+\gamma_{2M}^*\vtl p_1)\\
+&=\gamma_{2(M+N)}\vee (\gamma_{2(M+N)}
+\circ\rho_\lambda).
+\end{align*}
+In the case of quantum objects, this should be compared to [perinotti].
+
+\end{exm}
+
 
 
 
@@ -3069,7 +3118,7 @@ as in $\Pe_f^0$ but with labels $L_{U'}\setminus \tilde L_U^l$.
 We now show how to obtain the coloring of labels of minimal and minimal covering elements.
 For any type function $g$ and any label set $L$ for $g$, we introduce the following sets:
 \begin{align*}
-\mathcal U^g&:=\{L_U,\ U\in \mathrm{Min}(\Pe_g^0)\}\\
+\mathcal U^g&:=\cup\{L_U,\ U\in \mathrm{Min}(\Pe_g^0)\}\\
 \mathcal V_L^g&:=\cap \{L_U, U\cover_g L,\ U\in \mathrm{Min}(\Pe_g^0)\}\\
 \mathcal W_L^g&:=\mathcal U^g\setminus (\cup\{L_U, U\cover_g L,\ U\in
 \mathrm{Min}(\Pe_g^0) \}).
@@ -3175,11 +3224,12 @@ connected to the same function $f_l$, so that $L_{i'}\in C_l$.  Hence $i\not\sim
 
 \medskip 
 \noindent
-\textbf{Claim 4.} We have $L_i\subseteq C_l$
-with $\emptyset \in \Pe_{f_l}^0$ if and only if  $\mathcal V_i=\mathcal W_i=\emptyset$. If
+\textbf{Claim 4.} If  $L_i\subseteq C_l$ is such that
+ $\emptyset \in \Pe_{f_l}^0$, then  $\mathcal V_i=\mathcal W_i=\emptyset$. If
 $U$ is any minimal element in $\Pe_f^0$, then two
 such label sets $L_i$ and $L_j$ are connected with different functions  if and only if they appear
-in different  independent components of the labelled poset $U^\uparrow\setminus \{U\}$.
+in different  independent components of the labelled poset $U^\uparrow\setminus \{U\}$,
+for any $U\in \mathrm{Min}(\Pe_f^0)$.
 Indeed, the first statement is clear from the definition of $\mathcal V_i$ and $\mathcal
 W_i$, and Claim 1. For the second statement, note that $U^\uparrow\setminus \{U\}$
 contains $\Pe_{f_l}^0\setminus\{\emptyset\}$ for any $\Pe_{f_l}$ containing $\emptyset$  as one of its independent
@@ -3192,7 +3242,8 @@ $\Pe_{f_l^*}^0$ cannot have any independent components as well, by Proposition
 as described above. Assume that the equivalence relation $\sim$ has $k'$ equivalence
 classes, then pick some of the colors $1,\dots, k'$ for each equivalence class $[i]_\sim$ and use it
 for all indices  in  $\cup_{j\in [i]_\sim} C'_j$. Take all $L_i$ such that  $\mathcal
-V_i=\mathcal W_i=\emptyset$ and use the procedure described in Claim 4 to merge some of the equivalence
+V_i=\mathcal W_i=\emptyset$ that are not related to any $j$ with nonempty $\mathcal V_j$ or
+$\mathcal W_j$,  and use the procedure described in Claim 4 to merge some of the equivalence
 classes if necessary. Claims 1-4 show that for all label indices for minimal and minimal
 covering elements, we obtain a coloring that matches the decomposition of $f$ as a tensor
 product $f\approx f_1\otimes\dots\otimes f_k$. Using Lemma \ref{lemma:color_min}, we get
@@ -3202,6 +3253,63 @@ $\Pe_{f_l}^0$ up to apermutation of the labels.
 
 \end{proof}
 
+\begin{exm} The following example shows the diagram of $\Pe_f^0$ for a function $f\in
+\Te_{18}$:
+\begin{center}
+\includegraphics[scale=0.9]{product.pdf}
+\end{center}
+It is clear that $f$ has no free outputs, since all indices in $[18]$ are cintained in the
+label sets. Also $f^*$ has no free output, since $\Pe_f^0$ has no largest element. It is
+also clear that $f$ and $f^*$ have no free iputs, and $\emptyset\notin \Pe_f^0$.
+The poset consists of two direct summands, but the labels are repeating, so there are no
+independent components. Hence $f\approx f_1\otimes\dots\otimes f_k$ and the
+assumptions of Proposition \ref{prop:nofree_product} are satisfied. We will now show how
+to find the functions using the procedure described in the proof of Proposition
+\ref{prop:nofree_product}. There are 6 different  labels of the minimal covering elements.
+The label sets $L_i$ and the sets
+$\mathcal V_i$ and $\mathcal W_i$ are shown in the following table:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$i$& 1 & 2& 3&4 &5 &6\\
+\hline
+$L_i$ & $\{2\}$ & $\{4\} $& $\{5\}$ & $\{9\}$ & $\{16\}$ & $\{18\}$\\
+\hline
+$\mathcal V_i$ & $\{1\}$& $\{3\} $& $\emptyset$ & $ \emptyset$ & $\{15\}$ & $\{17\}$\\
+\hline
+$\mathcal W_i$& $\{ 3\}$& $\{ 1\} $& $\emptyset$ & $ \emptyset$ & $\{ 17\}$ & $\{15\}$\\
+\hline
+\end{tabular}
+
+\end{center}
+It is immediately clear that $1\sim 2$ and $5\sim 6$, since $C'_1\cap C'_2\ne \emptyset$
+and $C'_5\cap C'_6\ne \emptyset$. We also have $1\sim 2\sim 3$, since vertices labeled by $L_1=\{2\}$,
+$L_2=\{4\}$ and $L_3=\{5\}$ have a common upper bound (labelled by $\{7\}$). It follows
+that we have three color classes: $C_1=\{1,2,3,4,5\}$ (colored red in the diagram),
+$C_2=\{15,16,17,18\}$ (colored cyan) and $C_3=\{9\}$ (colored green). Since $C_3$ does not
+contain any labels of minimal elements, the corresponding function $f_3$ satisfies
+$\emptyset \in \Pe_{f_3}^0$. We now apply Lemma \ref{lemma:color_min} to obtain
+$\Pe_{f_1}^0$. Let $U=\{1,15\}$, then $\tilde L^1_U=\{15\}$ and $\Pe_1=\{U'\in
+\mathrm{Min}(\Pe_f^0), 15\in L_{U'}\}^\uparrow$ is then the left half of the diagram. 
+Continuing similarly for $C_2$ and $C_3$, we obtain the following three factors of
+$\Pe_f^0$:
+\begin{center}
+\begin{minipage}[b]{0.3\textwidth}
+\centering
+\includegraphics[scale=0.9]{product1.pdf}
+\end{minipage}
+\begin{minipage}[b]{0.3\textwidth}
+\centering
+\includegraphics[scale=0.9]{product2.pdf}
+\end{minipage}
+\begin{minipage}[b]{0.3\textwidth}
+\centering
+\includegraphics[scale=0.9]{product3.pdf}
+\end{minipage}
+\end{center}
+
+
+\end{exm}
 
 
 \end{document}
