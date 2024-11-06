@@ -24,6 +24,9 @@ title: Equality in DPI for BS relative entropy
 * [sutter2018approximate](sutter2018approximate)  Approximate quantum Markov chains    
 * [hayden2004structure](hayden2004structure)  Quantum Markov chains    
 
+* [hiai2017different](hiai2017different)  Hiai and Mosonyis paper on various equality conditions    
+* [hiai2023equality](hiai2023equality)  equality cases by Hiai     
+
 
 ---
 

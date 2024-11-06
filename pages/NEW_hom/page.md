@@ -60,7 +60,12 @@ title: Higher order maps
 * [santocanale2022frobenius](santocanale2022frobenius) frobenius structures in \*-autonomous categories
 
 
+Paviani
 
+
+* [oreshkov2012quantum](oreshkov2012quantum) Process matrices 
+
+* [oreshkov2016causal](oreshkov2016causal)
 
 
 

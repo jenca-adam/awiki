@@ -233,6 +233,8 @@ iitle: Not my own papers
 [nguyen2018quantum](nguyen2018quantum), [nagaoka1995differential](nagaoka1995differential), 
 
 ### O
+[oreshkov2016causal](oreshkov2016causal),
+[oreshkov2012quantum](oreshkov2012quantum),
 [ogawa2000strong](ogawa2000strong),
 
 [ohya1993quantum](ohya1993quantum)
