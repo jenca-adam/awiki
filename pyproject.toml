@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name="awiki"
+version="0.0"
+dependencies=[
+	"flask",
+	"pyaml",
+	"WTForms",
+	"markdown",
+	"colorama",
+	"lxml",
+	"requests",
+	"beautifulsoup4",
+	"pybtex",
+	"parse",
+	"unidecode"
+]
+[project.scripts]
+awiki = "awiki:main"
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.data-files]
+# Static JavaScript files
+"share/awiki/static/js" = [
+    "awiki_data/static/js/jquery.js",
+    "awiki_data/static/js/clup.js",
+    "awiki_data/static/js/cite.js",
+    "awiki_data/static/js/results.js",
+    "awiki_data/static/js/popup.js",
+]
+
+# Static CSS files
+"share/awiki/static/css" = [
+    "awiki_data/static/css/codemirror.css",
+    "awiki_data/static/css/font-awesome.min.css",
+    "awiki_data/static/css/style.css",
+    "awiki_data/static/css/pocketgrid.min.css",
+]
+
+# Static CodeMirror related files
+"share/awiki/static/codemirror" = [
+    "awiki_data/static/codemirror/codemirror.css",
+    "awiki_data/static/codemirror/vim.js",
+    "awiki_data/static/codemirror/dialog.css",
+    "awiki_data/static/codemirror/dialog.js",
+    "awiki_data/static/codemirror/searchcursor.js",
+    "awiki_data/static/codemirror/codemirror.js",
+    "awiki_data/static/codemirror/darcula.css",
+]
+
+# CodeMirror Markdown mode directory (subdirectory)
+"share/awiki/static/codemirror/mode/markdown" = [
+    "awiki_data/static/codemirror/mode/markdown/index.html",
+    "awiki_data/static/codemirror/mode/markdown/markdown.js",
+    "awiki_data/static/codemirror/mode/markdown/test.js",
+]
+
+# Favicon file
+"share/awiki/static/favicon" = [
+    "awiki_data/static/favicon/favicon.ico",
+]
+
+# Template files
+"share/awiki/templates" = [
+    "awiki_data/templates/page.html",
+    "awiki_data/templates/file_exists.html",
+    "awiki_data/templates/pwd_add.html",
+    "awiki_data/templates/pwd_remove.html",
+    "awiki_data/templates/stripbase.html",
+    "awiki_data/templates/edit_page.html",
+    "awiki_data/templates/add.html",
+    "awiki_data/templates/search.html",
+    "awiki_data/templates/base.html",
+    "awiki_data/templates/results.html",
+]
+

@@ -1,0 +1,2 @@
+class AwikiError(Exception):
+    pass
