@@ -6,27 +6,27 @@ import mimetypes
 from .page import Page
 from bs4 import BeautifulSoup
 from stat import S_ISREG, ST_CTIME, ST_MODE
-
-from flask import Flask, request, url_for, redirect, Response, abort
+from werkzeug.utils import safe_join
+from flask import Flask, request, url_for, redirect, Response, abort, send_from_directory
 from wtforms import Form, validators, TextAreaField, StringField
 import yaml
 import markdown
 from jinja2 import Template, FileSystemLoader, Environment
 
 # import pagetools,pagetools.search_works
-app = Flask(__name__)
-
-
-
-
+app = Flask(__name__, static_folder=None)
+AWIKI_CONFIG = None
+def get_template(template_name):
+    env = Environment(loader=FileSystemLoader(os.path.join(AWIKI_CONFIG.awiki_dir,"templates")))
+    return env.get_template(template_name)
 @app.route("/view/<string:pagename>")
 def view_page(pagename):
-    page = Page(pagename)
+    print(pagename)
+    page = Page(pagename, AWIKI_CONFIG)
     if not page.exists:
         return redirect(f"/edit/{pagename}")
-    meta, html = page.load()
-    env = Environment(loader=FileSystemLoader("templates"))
-    t = env.get_template("page.html")
+    meta, html, md = page.load()
+    t = get_template("page.html")
     return t.render(
         meta=meta,
         content=html,
@@ -38,12 +38,12 @@ def view_page(pagename):
 @app.route("/makebib/<string:pagename>.bib")
 def get_bib(pagename):
 
-    mdf = MarkdownFile(pagename)
+    page = Page(pagename)
     try:
-        mdf.load()
+        meta, html, md =mdf.load()
     except FileNotFoundError:
         abort(404)
-    soup = BeautifulSoup(mdf.html, "lxml")
+    soup = BeautifulSoup(html, "lxml")
     bibfiles = []
     for anchor in set(soup.find_all("a")):
         href = anchor["href"]
@@ -70,40 +70,38 @@ class EditForm(Form):
 @app.route("/edit/<string:pagename>", methods=["GET", "POST"])
 def edit_page(pagename):
 
-    mdf = MarkdownFile(pagename)
+    mdf = Page(pagename)
     try:
-        mdf.load()
+        meta, html, md = mdf.load()
     except FileNotFoundError:
-        pass
-    env = Environment(loader=FileSystemLoader("templates"))
+        meta,html,md={"title":""},"",""
     if request.method == "POST":
         form = EditForm(request.form)
         if form.validate():
-            mdf.meta["title"] = form["title"].data
-            mdf.markdown = "\n".join(form["markdown"].data.splitlines())
-            mdf.save()
-            os.system('hg add "%s"' % mdf.filename)
+            meta["title"] = form["title"].data
+            md = "\n".join(form["markdown"].data.splitlines())
+            mdf.save(meta, md)
+            os.system('hg add "%s"' % mdf.md_path)
             os.system(
-                'hg commit "%s" -m "%s"' % (mdf.filename, form["commit_message"].data)
+                'hg commit "%s" -m "%s"' % (mdf.page_name, form["commit_message"].data)
             )
             return redirect("/view/" + pagename)
     else:
         form = EditForm()
-        form["title"].process_data(mdf.meta["title"])
-        form["markdown"].process_data(mdf.markdown)
-    t = env.get_template("edit_page.html")
-    return t.render(meta=mdf.meta, content=mdf.html, form=form)
+        form["title"].process_data(meta["title"])
+        form["markdown"].process_data(md)
+    t = get_template("edit_page.html")
+    return t.render(meta=meta, content=html, form=form)
 
 
 @app.route("/addpage/<path:id>")
 def auth(id):
     global addpageform
     id = id.split("?")[0]
-    env = Environment(loader=FileSystemLoader("templates"))
     beh = pagetools.add(id, **request.args)
     print(beh)
     if beh and beh["status"] == "error":
-        return env.get_template("file_exists.html").render(
+        return get_template("file_exists.html").render(
             msg=beh["response"]["message"],
             type=beh["response"]["type"],
             cleanup=beh["cleanup"],
@@ -116,8 +114,7 @@ def auth(id):
 def remove(pagename):
     if pagename in ["myown", "notmyown", "index"]:
         return redirect("/")
-    env = Environment(loader=FileSystemLoader("templates"))
-    pwd_rm_t = env.get_template("pwd_remove.html")
+    pwd_rm_t = get_template("pwd_remove.html")
     if request.method == "POST":
         pwdform = request.form
         if pwdform["pwd"] == "alanko":
@@ -131,8 +128,7 @@ def remove(pagename):
 
 @app.route("/search/", methods=["GET", "POST"])
 def search():
-    env = Environment(loader=FileSystemLoader("templates"))
-    search_t = env.get_template("search.html")
+    search_t =get_template("search.html")
     if request.method == "POST":
         form = request.form
     else:
@@ -155,8 +151,7 @@ def arxivview(id):
 
 @app.route("/my_search/", methods=["GET", "POST"])
 def ms():
-    env = Environment(loader=FileSystemLoader("templates"))
-    search_t = env.get_template("results.html")
+    search_t =get_template("results.html")
 
     if request.method == "POST":
         f = request.form
@@ -174,11 +169,16 @@ def cite(page):
         abort(404)
     return Response(bibcite, mimetype="text/plain")
 
-
+@app.route("/static/<path:static_path>")
+def static_get(static_path):
+    static_dir = os.path.abspath(safe_join(".",AWIKI_CONFIG.awiki_dir, "static"))
+    file_path = safe_join(static_dir, static_path)
+    if not os.path.isfile(file_path):
+        return send_from_directory(os.path.abspath(safe_join(".",AWIKI_CONFIG.static_dir)),static_path)
+    return send_from_directory(static_dir, static_path)
 @app.route("/")
 def index():
     return redirect("/view/index")
-
 
 def run_app(awiki_config, *args, **kwargs):
     global AWIKI_CONFIG

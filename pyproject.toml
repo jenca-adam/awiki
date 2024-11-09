@@ -17,13 +17,13 @@ dependencies=[
 	"beautifulsoup4",
 	"pybtex",
 	"parse",
-	"unidecode"
+	"unidecode",
+	"python-magic"
 ]
 [project.scripts]
 awiki = "awiki:main"
 [tool.setuptools.packages.find]
-where = ["."]
-
+where = ["src"]
 [tool.setuptools.data-files]
 # Static JavaScript files
 "share/awiki/static/js" = [

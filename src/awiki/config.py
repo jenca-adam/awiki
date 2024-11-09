@@ -5,7 +5,7 @@ from .err import AwikiError
 
 DEFAULT_CONFIG = {
     "port": 8000,
-    "awiki_dir": ".awiki",
+    "awiki_dir": "awiki",
     "static_dir": "static",
 }
 

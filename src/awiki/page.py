@@ -35,9 +35,9 @@ class Page:
                     break
                 meta_lines.append(line)
             md = f.read()
-        meta = yaml.safe_parse("".join(meta_lines))
+        meta = yaml.safe_load("".join(meta_lines))
         html = markdown.markdown(md)
-        return meta, html
+        return meta, html, md
 
     def save(self, meta, md):
         """
