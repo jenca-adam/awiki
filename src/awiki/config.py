@@ -7,6 +7,7 @@ DEFAULT_CONFIG = {
     "port": 8000,
     "awiki_dir": "awiki",
     "static_dir": "static",
+    "max_title_chars": 18
 }
 
 

@@ -1,0 +1,78 @@
+{%extends "stripbase.html" %}
+{%block meta%}
+<title>
+ {{page.title}} on arXiv - awiki
+</title>
+{%endblock%}
+{%block head%}
+<p id="dateline">
+ [Published {{page.published.ctime()}}]
+</p>
+<div id="buttons">
+ <div id="buttons-left">
+  <a href="https://arxiv.org/abs/{{page.arxiv_id}}" id="arxiv-link">
+   View in arXiv
+  </a>
+  {%if page.existing_page is not none%}
+<a href="#" id="addpage-link" class="button-disabled" disabled>
+  Already added
+  </a>
+
+
+   {%else%}
+   <a href="/addpage/{page.arxiv_id}" id="addpage-link">
+   Add this page
+  </a>
+
+  {%endif%}
+ </div>
+ <div id="buttons-right">
+ </div>
+</div>
+<h1>
+ {{page.title}}
+</h1>
+{%endblock%}
+{%block content %}
+<div id="authors">
+ Authors:
+{%for author in page.authors%}
+ <a href="/search?query={{author}}&amp;fields=au" title="View everything by {{author}}">
+  {{author}}
+ </a>
+ <span>
+  ,
+ </span>
+ {%endfor%}
+</div>
+<hr/>
+<div id="abstract">
+ <h2>
+  Abstract
+ </h2>
+ <div id="abstract-inner" style="font-size:14pt;">
+  {{page.abstract}}
+ </div>
+</div>
+<hr>
+{%if page.existing_page is not none %}
+<div id="already-added" class="red">Already added <a href="/view/{{page.existing_page.page_name}}">(view)</a></div>
+{%else%}
+<div id="already-added" class="green">Not yet added</div>
+{%endif%}
+{%if page.myown%}
+<div id="myown" class="green">Your own paper</div>
+{%else%}
+<div id="myown" class="blue">Not your own paper</div>
+{%endif%}
+<div id="pageid">Page identifier: {{page.page_id}}</div>
+{%if page.doi is not none%}
+<div id="doi">DOI: <a href="https://doi.org/{{page.doi}}">{{page.doi}}</a></div>
+{%endif%}
+{% if page.jref is not none%}
+<div id="jref">JREF: {{page.jref}}</div>
+{%endif%}
+{% if page.comment is not none%}
+<div id="comment">({{page.comment}})</div>
+{%endif%}
+{%endblock%}

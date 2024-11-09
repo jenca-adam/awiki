@@ -73,9 +73,9 @@ where = ["src"]
     "awiki_data/templates/pwd_remove.html",
     "awiki_data/templates/stripbase.html",
     "awiki_data/templates/edit_page.html",
-    "awiki_data/templates/add.html",
     "awiki_data/templates/search.html",
     "awiki_data/templates/base.html",
     "awiki_data/templates/results.html",
+    "awiki_data/templates/arxiv_page.html",
 ]
 

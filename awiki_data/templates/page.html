@@ -6,25 +6,25 @@
     <form action="/my_search/" method="POST" id="form">
   <p>
     <input type="text"name="q" placeholder="Search"/>
-  <button onclick="postForm()" id="search-btn">Search!</button></input></p>
+  <input type="submit" id="search-btn"value="Search"></button></input></p>
   </form>
   </div>
   
   <div class="content block" id="content">
-
-  <a size=2 href="/add/">Add a page</a>
+  <div id="buttons">
+  <div id="buttons-left">
+  <a  href="/add/">Add a page</a>
   {%if current not in prohibited%}
-  <a size=2 href="/remove/{{current}}">Remove this page</a>
-  {%else%}
-  <p>You cannot remove this page.</p>
+  <a  href="/remove/{{current}}">Remove this page</a>
   {%endif%}
   <button id="cite">Cite!</button>
-  <a size=2 href="/search/">Search ArXiv</a>
-  <div id="buttons">
-  
+  <a  href="/search/">Search ArXiv</a>
+  </div>
+  <div id="buttons-right">
   <a href="/edit/{{current}}">Edit</a>
   <a href="/makebib/{{current}}.bib">BibTeX</a>
   <a href="/">&#8962;</a>
+  </div>
   </div>
     {{content}}
   </div>

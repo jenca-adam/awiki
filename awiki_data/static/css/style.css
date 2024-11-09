@@ -82,10 +82,14 @@ div #error_traceback_details{
 
 #buttons {
 	margin:0.5em;
-	width:12em;
-	float:right;
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+	flex-direction:row;
 }
-
+#buttons>div{
+	display:flex;
+	}
 #buttons ul {
 	text-align:right;
 	margin:0;
@@ -97,16 +101,19 @@ div #error_traceback_details{
 	display:inline;
 }
 
-#buttons a {
+#buttons a, #buttons button{
 	border: 1px solid blue;
 	color:blue;
 	background-color:#ccf;
 	text-decoration:none;
 	padding:0.5em;
+	font-size:12pt;
+	margin:0.2em;
 }
 
-#buttons a:hover {
+#buttons a:hover, #buttons button:hover{
 	background-color:#eef;
+	cursor: pointer;
 }
 	
 
@@ -117,7 +124,21 @@ div #error_traceback_details{
 	width:100%;
 	height:20em;
 }
-
+.button-disabled{
+	background-color:#ddf!important;
+	color:#a00!important;
+	border-color:#a00!important;
+	pointer-events:none;
+}
+.red{
+	color:#a00;
+}
+.green{
+	color:#0a0;
+}
+.blue{
+	color:#00a;
+}
 .formlabel {
 	text-align:right;
 }
@@ -127,9 +148,13 @@ div #error_traceback_details{
 }
 #search-btn {
 	color:blue;
-	background-color:#abcdef;
-	border:2px solid blue;
-	padding:1.5em;
+	background-color:#ccf;
+	border:1px solid blue;
+	padding:.5em;
+}
+#search-btn:hover{
+	background-color:#eef;
+	cursor:pointer;
 }
 table {
   border-collapse: collapse;
@@ -159,5 +184,6 @@ table, th, td {
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);  
   }
 }
+
 
 

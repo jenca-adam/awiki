@@ -12,7 +12,7 @@ from wtforms import Form, validators, TextAreaField, StringField
 import yaml
 import markdown
 from jinja2 import Template, FileSystemLoader, Environment
-
+from . import pagetools
 # import pagetools,pagetools.search_works
 app = Flask(__name__, static_folder=None)
 AWIKI_CONFIG = None
@@ -40,7 +40,7 @@ def get_bib(pagename):
 
     page = Page(pagename)
     try:
-        meta, html, md =mdf.load()
+        meta, html, md =page.load()
     except FileNotFoundError:
         abort(404)
     soup = BeautifulSoup(html, "lxml")
@@ -135,7 +135,7 @@ def search():
         form = request.args
     try:
         print(form["query"])
-        results = pagetools.search_arxiv(form["query"], form.get("fields", "all"))
+        results = pagetools.arxiv_search(form["query"], form.get("fields", "all"), int(form.get("mr",100)), AWIKI_CONFIG)
         # print(results[0][2])
         return search_t.render(results=results, query=form["query"])
     except KeyError:
@@ -145,8 +145,11 @@ def search():
 
 @app.route("/arxiv/<path:id>")
 def arxivview(id):
-    page = pagetools.arxiv.ArXivPage(id)
-    return page.html()
+    try:
+        page = next(pagetools.arxiv.arxiv_search(id, "id", 1, AWIKI_CONFIG))
+    except StopIteration:
+        abort(404)
+    return get_template("arxiv_page.html").render(page=page)
 
 
 @app.route("/my_search/", methods=["GET", "POST"])
@@ -156,8 +159,8 @@ def ms():
     if request.method == "POST":
         f = request.form
         q = f["q"]
-        return search_t.render(results=pagetools.search_works.search(q), q=q)
-
+        return search_t.render(results=list(pagetools.search_pages.search_pages(q, AWIKI_CONFIG)), q=q)
+    return abort(405)
 
 @app.route("/cite/<string:page>")
 def cite(page):
@@ -171,10 +174,10 @@ def cite(page):
 
 @app.route("/static/<path:static_path>")
 def static_get(static_path):
-    static_dir = os.path.abspath(safe_join(".",AWIKI_CONFIG.awiki_dir, "static"))
+    static_dir = safe_join(AWIKI_CONFIG.project_root, AWIKI_CONFIG.awiki_dir, "static")
     file_path = safe_join(static_dir, static_path)
     if not os.path.isfile(file_path):
-        return send_from_directory(os.path.abspath(safe_join(".",AWIKI_CONFIG.static_dir)),static_path)
+        return send_from_directory(safe_join(AWIKI_CONFIG.project_root,AWIKI_CONFIG.static_dir),static_path)
     return send_from_directory(static_dir, static_path)
 @app.route("/")
 def index():

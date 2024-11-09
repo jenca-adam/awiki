@@ -25,7 +25,7 @@ class Page:
         returns metadata and page content
         """
         if not self.exists:
-            raise AwikiError(f"can't read {page_name}: no such page")
+            raise FileNotFoundError(f"can't read {self.page_name}: no such page")
         # metadata up to ---
         meta_lines = []
         md = ""
@@ -35,7 +35,9 @@ class Page:
                     break
                 meta_lines.append(line)
             md = f.read()
-        meta = yaml.safe_load("".join(meta_lines))
+        meta_yaml = "".join(meta_lines).replace(":",": ")
+        print(meta_yaml)
+        meta = yaml.safe_load(meta_yaml)
         html = markdown.markdown(md)
         return meta, html, md
 

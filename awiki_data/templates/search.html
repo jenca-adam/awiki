@@ -30,8 +30,11 @@
 <ol>
 {%for result in results%}
 <li>
-<p><a href="/arxiv/{{result[2]}}">{{result[0]}}</a></p>
-<p>{{result[1]}}</p>
+	<p><a href="/arxiv/{{result.arxiv_id}}">{{result.title}}</a></p>
+<p>{{", ".join(result.authors)}}</p>
+{% if result.doi is not none %}
+<p>DOI: <a href="https://doi.org/{{result.doi}}">{{result.doi}}</a></p>
+{%endif%}
 </li>
 {%endfor%}
 </ol>
