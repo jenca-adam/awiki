@@ -62,11 +62,32 @@ title: Higher order maps
 
 Paviani
 
+* [chiribella2008quantum](chiribella2008quantum)  quantum circuits, combs    
+* [chiribella2008transforming](chiribella2008transforming)  quantum supermaps    
+* [chiribella2008memory](chiribella2008memory) quantum testers       
+* [chiribella2009theoretical](chiribella2009theoretical) quantum combs    
+* [chiribella2013quantum](chiribella2013quantum) (Valiron) indefinite causal order     
+* [perinotti2016causal](perinotti2016causal) combs to combs    
+
+Process matrices, Oreshkov   
+
 
 * [oreshkov2012quantum](oreshkov2012quantum) Process matrices 
+* [oreshkov2019time](oreshkov2019time)    processes with indefinite causal order    
+* [oreshkov2016causal](oreshkov2016causal)    
 
-* [oreshkov2016causal](oreshkov2016causal)
+Other    
 
+* [ziman2008process](ziman2008process)  process POVMs     
+* [gutoski2007toward](gutoski2007toward)  
+* [vanrietvelde2022consistent](vanrietvelde2022consistent)  routed circuits    
+* [vanrietvelde2020routed](vanrietvelde2020routed)  routed circuits     
+
+
+Myown
+
+* [jencova2012generalized](jencova2012generalized)     
+* [jencova2021ageneral](jencova2021ageneral)    
 
 
 ---

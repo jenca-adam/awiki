@@ -31,7 +31,7 @@
 \def\Fe{\mathcal F}
 \def\Te{\mathcal T}
 \def\Rr{\mathcal R}
-\def\Ha{\mathcal H}
+%\def\Ha{\mathcal H}
 \def\Ka{\mathcal K}
 \def\Ne{\mathcal N}
 \def \Tr{\mathrm{Tr}\,}
@@ -76,131 +76,107 @@ $\sigma^{it-1/2}\rho\sigma^{-it-1/2}\in \Me_{\Te^*_\sigma}$, $\forall t\in \math
 
 
 
-\begin{prop}\label{prop:BS_QMS} Assume that $\rho_{ABC}$ is such that $\rho_{AB}$ is
-invertible. Put $\eta_{AB}=\rho_B^{-1/2}\rho_{AB}\rho_B^{-1}$,
-$\eta_{BC}=\rho_B^{-1/2}\rho_{BC}\rho_B^{-1/2}$. The following are equivalent.
+\begin{theorem}\label{theo:StructureBSDPI} Assume that $\rho_{ABC}$ is such that $\rho_{AB}$ is
+invertible. Define the state
+\[
+\eta_{ABC}:=\frac1{d_B}\rho_B^{-1/2}\rho_{ABC}\rho_B^{-1/2}.
+\]
+The following are equivalent.
 
 \begin{enumerate}
 \item[(i)] $\rho_{ABC}$ is a BS-QMC.
 \item[(ii)] $\rho_{ABC}=\rho_{AB}\rho_B^{-1}\rho_{BC}$.
-\item[(iii)] $\eta_{AB}$ and $\eta_{BC}$ commute, and
-$\rho_{ABC}=\rho_B^{1/2}\eta_{AB}\eta_{BC}\rho_{B}^{1/2}$.
-\item[(iv)] There is a decomposition and a unitary $U_B:\Ha_B\to \oplus_n
-\Ha_{B_L^n}\otimes \Ha_{B_R^N}$ such that 
+\item[(iii)] The marginals $\eta_{AB}$ and $\eta_{BC}$ commute, and we have
+$\rho_{ABC}=d_B^2\rho_B^{1/2}\eta_{AB}\eta_{BC}\rho_{B}^{1/2}$.
+\item[(iv)] $\eta_{ABC}$ is a QMC.
+\item[(v)] There are Hilbert spaces  $\mathcal{H}_{B_n^L}$, $\mathcal{H}_{B_n^R}$ and a
+unitary  $\displaystyle U_B:\mathcal{H}_B \to \oplus_{n=1}^N\left( \mathcal{H}_{B_n^L} \otimes \mathcal{H}_{B_n^R}\right)$,
+ such that 
 \[
-\rho_{ABC}=\rho_B^{1/2}U^*_B\left(\oplus_n \eta_{AB_{L}^n}\otimes
+\rho_{ABC}=\rho_B^{1/2}U^*_B\left(\oplus_n d_Bp_n \eta_{AB_{L}^n}\otimes
 \eta_{B_R^nC}\right)U_B\rho_B^{1/2}
 \]
-for some $\eta_{AB_L^n}\in B(\Ha_{AB_L^n})^+$, $\eta_{B_R^nC}\in B(\Ha_{B_R^nC})^+$.
+for some states $\eta_{AB_L^n}$ on $\mathcal {H}_{AB_L^n}$ and $\eta_{B_R^nC}$ on $\mathcal {H}_{B_R^nC}$
+and a probability distribution $\{p_n\}$.
 
 \end{enumerate}
-Moreover, a BS-QMC $\rho_{ABC}$ is a QMC if and only if $\rho_B^{it}\eta_{AB}\rho_B^{-it}$
-commutes with $\eta_{BC}$ for all $t\in \mathbb R$.
+
+\end{theorem}
 
 
 
-
-\end{prop}
-
-
-\begin{proof} The equivalence (i) $\iff$ (ii) was proved in \cite{}. If (ii) holds, then 
-clearly $\rho_{ABC}=\rho_B^{1/2}\eta_{AB}\eta_{BC}\rho_B^{1/2}=\rho_{ABC}^*$.
-Since $\rho_B$ is invertible, 
-$[\eta_{AB},\eta_{BC}]=0$. 
-
-Assume (iii). Then $\eta_{BC}$ commutes with all
-elements of the form 
+\begin{proof} The equivalence (i) $\iff$ (ii) was proved in
+\cite{BluhmCapel-BSentropy-2019}. If (ii) holds, then 
+clearly $\rho_{ABC}=d_B^2\rho_B^{1/2}\eta_{AB}\eta_{BC}\rho_B^{1/2}=\rho_{ABC}^*$.
+Since $\rho_B$ is invertible, this implies that 
+$[\eta_{AB},\eta_{BC}]=0$, so that (iii) holds. 
+Assume (iii), then since $\eta_B=d_B^{-1}I_B=\tau_B$, we obtain 
 \[
-\eta_{AB}^{1/2}X_A\eta_{AB}^{1/2}, \qquad X_A\in B(\Ha_A).
+\eta_{ABC}=d_B\eta_{AB}\eta_{BC}=\eta_{AB}^{1/2}\eta_B^{-1/2}\eta_{BC}\eta_B^{-1/2}\eta_{AB}^{1/2}
 \]
-Let $\Gamma(X_{A})=\eta_{AB}^{1/2}X_A\eta_{AB}^{1/2}$, then $\eta_{BC}$ must be in the
-commutant of $(\Gamma(B(\Ha_A)))$ in $B(\Ha_{ABC})$, which is equal to
-$\Gamma(B(\Ha_A))'\otimes B(\Ha_C)$. Since $\Gamma$ defines a completely positive map
-$B(\Ha_A)\to B(\Ha_{AB})$, it follows by the Arveson commutant lifting theorem
-\cite[1.3.1]{arveson1969subalgebras} that any element  $T_{AB}\in \Gamma(B(\Ha_A))'$ must
-commute with $\eta_{AB}$ and be of the form $T_{AB}=I_A\otimes T_B$. Put
-\begin{equation}\label{eq:decomp}
-\Be:=\{T_B\in B(\Ha_B),\ T_B \text{ commutes with } \eta_{AB}\},
-\end{equation}
-then $\Be$ is a *-subalgebra in $B(\Ha_B)$ and we must have $\eta_{BC}\in \Be\otimes
-B(\Ha_C)$. It is also clear from the definition of $\Be$ that $\eta_{AB}\in (I_A\otimes
-\Be)'=B(\Ha_A)\otimes \Be'$. 
-
-For any subalgebra $\Be\subseteq B(\Ha_B)$, there is a decomposition and a unitary $U_B$
-as in (iv) such that
+so that $\eta_{ABC}$ is a QMC. If (iv) holds, then there are Hilbert spaces $\mathcal{H}_{B_n^L}$, $\mathcal{H}_{B_n^R}$ and a
+unitary  $U_B:\mathcal{H}_B \to \oplus_{n=1}^N\left( \mathcal{H}_{B_n^L} \otimes \mathcal{H}_{B_n^R}\right)$ such that
 \[
-\Be=U_B\left(\oplus_n I_{B_L^n}\otimes B(\Ha_{B_R^n})\right)U_B^*,\qquad \Be'=U_B\left(\oplus_n
-B(\Ha_{B_L^n})\otimes I_{B_R^n}\right)U_B^*.
+\eta_{ABC}=U^*_B\left(\oplus_n p_n \eta_{AB_{L}^n}\otimes
+\eta_{B_R^nC}\right)U_B,
 \]
-Since 
+this proves (v). Finally, suppose that (v) holds, then from
 \[
-\eta_{BC}\in (\Be\otimes B(\Ha_C))^+=U_B^*\left(\oplus_n I_{B_L^n}\otimes
-B(\Ha_{B_R^nC})^+\right)U_B,
-\]
-we must have $\eta_{BC}=U_B^*\left(\oplus_n I_{B_L^n}\otimes\eta_{B_R^nC}\right)U_B$ for
-some $\eta_{B_R^nC}\in B(\Ha_{B_R^nC})^+$. Similarly, $\eta_{AB}=U_B^*\left(\oplus_n
-\eta_{AB_L^n}\otimes I_{B_R^n}\right)U_B$ for some $\eta_{AB_L^n}\in B(\Ha_{AB_L^n})^+$. 
-The statement (iv) now follows from $\rho_{ABC}=\rho_B^{1/2}\eta_{AB}\eta_{BC}\rho_B^{1/2}$.
-
-
-Suppose (iv) holds, then from
-\[
-I_B=\Tr_{AC}\rho_B^{-1/2}\rho_{ABC}\rho_B^{-1/2}=U_B^*\left(\oplus_n \eta_{B_L^n}\otimes
+\tau_B=d_B^{-1}\Tr_{AC}\rho_B^{-1/2}\rho_{ABC}\rho_B^{-1/2}=U_B^*\left(\oplus_n p_n\eta_{B_L^n}\otimes
 \eta_{B_R^n}\right)U_B
 \]
-we infer that $\eta_{B_L^n}=I_{B_L^n}$ and $\eta_{B_R^n}=I_{B_R^n}$. It follows that
-$\rho_{AB}=\rho_B^{1/2}U^*_B\left(\oplus_n \eta_{AB_L^n}\otimes
-I_{B_R^n}\right)U_B\rho_B^{1/2}$ and
-similarly $\rho_{BC}=\rho_B^{1/2}U^*_B\left(\oplus_n I_{B_L^n}\otimes
+we infer that $\eta_{B_L^n}=\tau_{B_L^n}$ and $\eta_{B_R^n}=\tau_{B_R^n}$. It follows that
+$\rho_{AB}=\rho_B^{1/2}U^*_B\left(\oplus_n d_Bp_n\eta_{AB_L^n}\otimes
+\tau_{B_R^n}\right)U_B\rho_B^{1/2}$ and
+similarly $\rho_{BC}=\rho_B^{1/2}U^*_B\left(\oplus_n d_Bp_n\tau_{B_L^n}\otimes
 \eta_{B_R^nC}\right)U_B\rho_B^{1/2}$. The condition (ii) is immediate from this.
 
-
-Assume now that $\rho_{ABC}$ is a QMC. By \cite{hayden2004structure}, there is a
-decomposition and unitary $U_B:\Ha_B\to \oplus_n \Ha_{B_L^n}\otimes \Ha_{B_R^n}$, such
-that 
-\begin{equation}\label{eq:QMC}
-\rho_{ABC}=U_B^*\left(\oplus_n p_n \rho_{AB_L^n}\otimes \rho_{B_R^nC}\right)U_B,
-\end{equation}
-where $\rho_{AB_L^n}\in B(\Ha_{AB_L^n})$ and $\rho_{B_R^nC}\in B(\Ha_{B_R^nC})$ are states
-and $\{p_n\}_n$ is a probability distribution. It follows from this that 
-\begin{equation}\label{eq:invariant}
-\rho_B=U_B^*\left(\oplus_n p_n \rho_{B_L^n}\otimes \rho_{B_R^n}\right)U_B,
-\end{equation}
-and $\eta_{AB}=U_B^*\left(\oplus_n
-\rho_{B_L^n}^{-1/2}\rho_{AB_L^n}\rho_{B_L^n}^{-1/2}\otimes I_{B_R^n}\right)U_B$, 
-$\eta_{BC}=U_B^*\left(\oplus_nI_{B_L^n}\otimes
-\rho_{B_R^n}^{-1/2}\rho_{B_R^nC}\rho_{B_R^n}^{-1/2}\right)U_B$. It is clear from this that
-$\rho_{ABC}$ is a BS-QMC and that $\rho_B^{it}\eta_{AB}\rho_B^{-it}$ commutes with
-$\eta_{BC}$ for all $t\in \mathbb R$. 
-
-For the converse, note that the condition implies that $\eta_{BC}\in \tilde \Be\otimes
-B(\Ha_C)$, where
-\[
-\tilde \Be:=\{T_B\in B(\Ha_B),\ T_B \text{ commutes with }
-\rho_B^{it}\eta_{AB}\rho_B^{-it},\ \forall t\}.
-\]
-Then $\tilde \Be$ is a subalgebra invariant under $\rho_B^{it}\cdot \rho_B^{-it}$. It also
-follows that $\eta_{AB}\in B(\Ha_A)\otimes \tilde \Be'$, where the commutant $\tilde \Be'$
-is also invariant under $\rho_B^{it}\cdot \rho_B^{-it}$. Assume that  $\tilde \Be$ has a
-decomposition as in \eqref{eq:decomp}, then $\rho_{ABC}$ has the form given in the
-statement  (iv), but the invariance condition implies that $\rho_B$ has the form
-\eqref{eq:invariant}. It folows that $\rho_{ABC}$ has the form \eqref{eq:QMC}, so that it
-sis a QMC.
 
 
 \end{proof}
 
 
+\begin{remark}
+The condition in Proposition \ref{prop:Structure} is not clear to me. The decomposition of
+$\mathcal{H}_B$ for $\rho_{ABC}$ is not unique, so the decomposition for $\rho_B$ should
+not be fixed to one particular choice of the decomposition. The statement should be more
+like that there is some decomposition of $\mathcal {H}_B$ that works for both $\rho_{ABC}$ and
+$\rho_B$.  
+
+It would be nicer to have this condition stated directly in terms of $\eta_{ABC}$ and
+$\rho_B$. One such statement is as follows: A  BS-QMC $\rho_{ABC}$ is a QMC if and only if $\rho_B^{it}\eta_{AB}\rho_B^{-it}$
+commutes with $\eta_{BC}$ for all $t\in \mathbb R$. Indeed, the condition is easily
+checked for a QMC, using the decomposition of a QMC. For the converse, one can proceed as
+follows: since $\rho^{it}(\rho_B^{-1/2}\rho_{AB}\rho_B^{-1/2})\rho^{-it}$ is in the
+commutant of $\eta_{BC}$ for all $t$, one can show that the commutant of $\eta_{BC}$ is a
+sufficient subalgebra for $\{\rho_{AB},\rho_B\}$, and this implies that
+it contains also $\rho_{AB}^{1/2}\rho_B^{-1/2}$ (there should be  a more direct proof of
+this).  Consider the polar decomposition
+$\rho_{AB}^{1/2}\rho_B^{-1/2}=d_B^{1/2}W_{AB}\eta_{AB}^{1/2}$, then both $\eta_{AB}$ and  the unitary
+$W_{AB}$ must be contained in the commutant. We then get, using the computations in
+Corollary 4.7
+\begin{align*}
+\rho_{ABC}&=d_B^2\rho_{B}^{1/2}\eta_{AB}\eta_{BC}\rho_B^{1/2}=d_B^2\rho_{B}^{1/2}\eta^{1/2}_{AB}\eta_{BC}\eta^{1/2}_{AB}\rho_B^{1/2}=d_B\rho_{AB}^{1/2}W_{AB}\eta_{BC}W_{AB}^*\rho_{AB}^{1/2}\\
+&=d_B\rho_{AB}^{1/2}\eta_{BC}\rho_{AB}^{1/2}=\rho_{AB}^{1/2}\rho_B^{-1/2}\rho_{BC}\rho_B^{-1/2}\rho_{AB}^{1/2}.
+\end{align*}
+
+This is probably not the most efficient condition, finding equivalent ones might help to
+understand the relation of the BS-QMC and QMC better.
+
+
+\end{remark}
+
+
 
 \end{document}
 
-Let $\rho, \sigma\in B(\Ha)^+$. The Belavkin-Staszewski relative entropy is defined as
+Let $\rho, \sigma\in B(\mathcal {H})^+$. The Belavkin-Staszewski relative entropy is defined as
 \[
 \hat D(\rho\|\sigma):=\Tr\rho\log(\rho^{1/2}\sigma^{-1}\rho^{1/2})=\Tr\sigma
 f(\sigma^{-1/2}\rho\sigma^{-1/2}),
 \]
 with $f(t)=t\log t$. By \cite[Cor. 3.31]{hiai2017different}, $\hat D$ is nonincreasing
-under positive trace preserving maps $\Phi:B(\Ha)\to B(\Ka)$, and by \cite[Thm. 3.34
+under positive trace preserving maps $\Phi:B(\mathcal {H})\to B(\Ka)$, and by \cite[Thm. 3.34
 (h)]{hiai2017different}, the equality
 \begin{equation}\label{eq:eq}
 \hat D(\Phi(\rho)\|\Phi(\sigma))=\hat D(\rho\|\sigma)

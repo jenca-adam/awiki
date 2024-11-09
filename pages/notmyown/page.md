@@ -43,6 +43,9 @@ iitle: Not my own papers
 [buscemi2012comparison](buscemi2012comparison), [buscemi2015degradable](buscemi2015degradable), [buscemi2017comparison](buscemi2017comparison), [buscemi2019aninformation](buscemi2019aninformation)
 
 ### C
+[chiribella2008memory](chiribella2008memory),
+[chiribella2008quantum](chiribella2008quantum),
+[chiribella2008transforming](chiribella2008transforming),
 [carlen2018inequalities](carlen2018inequalities),
 
 [choi1974aschwarz](choi1974aschwarz),    
@@ -110,6 +113,7 @@ iitle: Not my own papers
 
 
 ### G
+[gutoski2007toward](gutoski2007toward),
 [grinko2024oncompatibility](grinko2024oncompatibility),
 [gao2021recoverability](gao2021recoverability),
 [gao2023sufficient](gao2023sufficient),
@@ -233,6 +237,7 @@ iitle: Not my own papers
 [nguyen2018quantum](nguyen2018quantum), [nagaoka1995differential](nagaoka1995differential), 
 
 ### O
+[oreshkov2019time](oreshkov2018time),
 [oreshkov2016causal](oreshkov2016causal),
 [oreshkov2012quantum](oreshkov2012quantum),
 [ogawa2000strong](ogawa2000strong),
@@ -305,6 +310,8 @@ iitle: Not my own papers
 [umanita2006classification](umanita2006classification), [umegaki1962conditional](umegaki1962conditional)
 
 ### V
+[vanrietvelde2020routed](vanrietvelde2020routed),
+[vanrietvelde2022consistent](vanrietvelde2022consistent),
 [verhagen2024matrix](verhagen2024matrix),
 [van2020commutativity](van2020commutativity),
 [vetterlein2019orthogonality](vetterlein2019orthogonality)
@@ -333,6 +340,7 @@ iitle: Not my own papers
 
 
 ### Z
+[ziman2008process](ziman2008process),
 [zhang2020equality](zhang2020equality),
 [zhang2020fromwyd](zhang2020fromwyd),
 [zjawin2021quantifying](zjawin2021quantifying),

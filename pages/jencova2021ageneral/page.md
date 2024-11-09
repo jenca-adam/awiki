@@ -12,7 +12,11 @@ Anna Jenčová, A general theory of comparison of quantum channels (and beyond),
 
 [published version](jencova2021ageneral/published.pdf) 
 
+[doi](https://doi.org/10.1109/TIT.2021.3070120)   
  
+
+
+
 **referee reports:** [report1](jencova2021ageneral/report1.pdf), [report2](jencova2021ageneral/report2.pdf)
 
 

@@ -24,7 +24,9 @@ characterized. Special cases include quantum combs and process POVMs.
 
     
 [arxiv:1105.1899](https://arxiv.org/abs/1105.1899)
-[View at aip.scitation.org](https://aip.scitation.org/doi/abs/10.1063/1.3676294)
 [View at Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=1105.1899) 
+
+[doi](https://doi.org/10.1063/1.3676294)    
+
 
 [published version](jencova2012generalized/published.pdf)
