@@ -4,7 +4,7 @@ from .err import AwikiError
 from .server import run_app
 from .config import AwikiConfig
 from .data import find_awiki_data_dir
-from .awiki import awiki_init, awiki_reload_data, awiki_fix_notmyown, awiki_fix_myown
+from .awiki import awiki_init, awiki_reload_data, awiki_fix_notmyown, awiki_fix_myown, awiki_view
 
 import sys
 
@@ -50,7 +50,14 @@ def run(port):
 def init(pages_dir, static_dir, awiki_dir, name):
     awiki_init(pages_dir, static_dir, awiki_dir, name)
 
-
+@main.command()
+@click.argument("page", type=str)
+@click.option(
+    "-b", "--bib", help="view bib instead of markdown", is_flag=True)
+@wrap_error
+def view(page,bib):
+    cnf = AwikiConfig()
+    awiki_view(page, bib, cnf)
 @main.command()
 @wrap_error
 def fix_notmyown():
