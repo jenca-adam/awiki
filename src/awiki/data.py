@@ -4,7 +4,7 @@ import site
 from .err import AwikiError
 
 AWIKI_DATA_DIR = None
-AWIKI_DIR_SEARCH_DIRS = ["/usr", "/usr/local", site.USER_BASE]
+AWIKI_DIR_SEARCH_DIRS = [pathlib.Path.home()/".local", "/usr", "/usr/local", site.USER_BASE]
 
 
 def find_awiki_data_dir():

@@ -75,4 +75,4 @@ def awiki_fix_notmyown():
 def awiki_fix_myown():
     awiki_config = AwikiConfig()
     pages = get_myown_pages(awiki_config)
-    write_myown_pages(pages, awiki_config)
+    write_myown_pages(*pages, awiki_config)
