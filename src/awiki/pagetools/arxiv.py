@@ -7,6 +7,8 @@ import re
 from awiki.config import AwikiConfig
 from awiki.page import Page
 from awiki.markdown_templates import get_md_template
+from awiki.myown import get_myown_pages, write_myown_pages
+from awiki.notmyown import get_notmyown_pages, write_notmyown_pages
 import unidecode
 import datetime
 import collections
@@ -30,7 +32,7 @@ class ArxivPage:
     ):
         self.title = title
         self.authors = authors
-        self.author_names = [Author(*(authors.rsplit(None, 1))) for author in authors]
+        self.author_names = [Author(*(author.rsplit(None, 1))) for author in authors]
         self.arxiv_id = re.sub(r"v\d+$", "", arxiv_id)
         self.doi = doi
         self.jref = jref
@@ -52,7 +54,7 @@ class ArxivPage:
             parsed = bibtools.Bib.parse_string(bib)
         except:
             return bibtools.Bib.plain(self.page_id)
-        parsed.name = self.page_id
+        parsed.citekey = self.page_id
         return parsed
 
     def get_page_id(self, awiki_config=None):
@@ -84,28 +86,43 @@ class ArxivPage:
         if self.existing_page is not None:
             return self.existing_page.page_name
         page = Page(self.page_id)
+        page.makedir()
         page_template = get_md_template("page")
         markdown = page_template.render(page=self)
         metadata = {
             "title": self.title,
-            "authors": self.authors.split(","),
+            "authors": list(self.authors),
             "arxiv_id": self.arxiv_id,
         }
+        if self.jref:
+            metadata["jref"] = self.jref
         if self.doi:
             metadata["doi"] = self.doi
         if self.comment:
             metadata["arxiv_comment"] = self.comment
         if self.published:
-            metadata["published"] = self.published
+            metadata["published"] = self.published.timestamp()
         bibtex = self.get_bibtex()
         # write bib
         with open(os.path.join(page.root, "bib.bib"), "w") as f:
-            f.write(bibtex.serialize(style=self.awiki_config.bibtex_style))
+            f.write(bibtex.serialise(style=self.awiki_config.bibtex_style))
         # write page
         page.save(metadata, markdown)
         # edit myown / notmyown
         if self.myown:
-            pass
+            myown_pages=get_myown_pages(self.awiki_config)
+            if str(self.published.year) not in myown_pages:
+                myown_pages[self.published.year]=[]
+            myown_pages[str(self.published.year)].append(("1",self.page_id,""))
+            write_myown_pages(myown_pages, self.awiki_config)
+        else:
+            notmyown_pages=get_notmyown_pages(self.awiki_config)
+            if self.page_id[0].upper() not in notmyown_pages:
+                notmyown_pages[self.page_id[0].upper()]=[]
+            notmyown_pages[self.page_id[0].upper()].append(self.page_id)
+            write_notmyown_pages(notmyown_pages, self.awiki_config)
+        #done
+        return self.page_id
 
 
 def arxiv_search(query, field, max_results, awiki_config):

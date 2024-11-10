@@ -1,34 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="block-group" id="container">
-  <div class="header block" id="header">
-    <h1>{{meta.title}}</h1>
-  </div>
-  <div class="content block" id="content">
+ <div class="header block" id="header">
+  <h1>
+   {{meta.title}}
+  </h1>
+ </div>
+ <div class="content block" id="content">
   {% if form.errors %}
-      <ul class="formerrors">
-          {% for field_name, field_errors in form.errors|dictsort if field_errors %}
+  <ul class="formerrors">
+   {% for field_name, field_errors in form.errors|dictsort if field_errors %}
               {% for error in field_errors %}
-                  <li>{{ form[field_name].label }}: {{ error }}</li>
-              {% endfor %}
+   <li>
+    {{ form[field_name].label }}: {{ error }}
+   </li>
+   {% endfor %}
           {% endfor %}
-      </ul>
+  </ul>
   {% endif %}
-    <form method="post">
-    <div>
-      <label class="formlabel" for="title">Titulok:</label>
-      {{form.title}}
-    </div>
-    <div id="mddiv">
+  <form method="post">
+   <div>
+    <label class="formlabel" for="title">
+     Titulok:
+    </label>
+    {{form.title}}
+   </div>
+   <div id="mddiv">
     {{form.markdown}}
-    </div>
-    <div>
-    <label class="formlabel" for="commit_message">Commit message</label></td>
+   </div>
+   <div>
+    <label class="formlabel" for="commit_message">
+     Commit message
+    </label>
     {{form.commit_message}}
-    <input type="submit" value="Commit">
-    </div>
-    </form>
-  </div>
+    <input type="submit" value="Commit"/>
+   </div>
+  </form>
+ </div>
 </div>
 {% endblock %}
-

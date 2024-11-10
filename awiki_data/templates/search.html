@@ -1,42 +1,92 @@
 {%extends "stripbase.html"%}
 {%block meta%}
-<title>Search ArXiv</title>
-<script src="/static/js/jquery.js"></script>
+<title>
+ Search ArXiv
+</title>
+<script src="/static/js/jquery.js">
+</script>
 {%endblock%}
 {%block head%}
-<h1>Search ArXiv</h1>
+<h1>
+ Search ArXiv
+</h1>
 {%endblock%}
 {%block content%}
-<hr>
+<hr/>
 <form action="/search/" method="POST">
-<p><label for="query">Search query:<input name="query" value="{{query}}"></p>
-<label for="fields">Fields:</label>
-<select name="fields">
-              <option value="all" selected="selected">All fields</option>
-              <option value="ti">Title</option>
-              <option value="au">Author</option>
-              <option value="abs">Abstract</option>
-              <option value="co">Comments</option>
-              <option value="jr">Journal reference</option>
-              <option value="id">arXiv identifier</option>
-              <option value="cat">Category</option>
-              <option value="orcid">ORCID</option>
-              <option value="rn">Reported number</option>
-</select>
-<p><label for="mr">Max results count: </label><input type="number" name="mr" value="100"></input></p>
-<input type="submit"/>
+ <p>
+  <label for="query">
+   Search query:
+   <input name="query" value="{{query}}"/>
+  </label>
+ </p>
+ <label for="fields">
+  Fields:
+ </label>
+ <select name="fields">
+  <option selected="selected" value="all">
+   All fields
+  </option>
+  <option value="ti">
+   Title
+  </option>
+  <option value="au">
+   Author
+  </option>
+  <option value="abs">
+   Abstract
+  </option>
+  <option value="co">
+   Comments
+  </option>
+  <option value="jr">
+   Journal reference
+  </option>
+  <option value="id">
+   arXiv identifier
+  </option>
+  <option value="cat">
+   Category
+  </option>
+  <option value="orcid">
+   ORCID
+  </option>
+  <option value="rn">
+   Reported number
+  </option>
+ </select>
+ <p>
+  <label for="mr">
+   Max results count:
+  </label>
+  <input name="mr" type="number" value="100"/>
+ </p>
+ <input type="submit">
+ </input>
 </form>
-<hr>
+<hr/>
 <ol>
-{%for result in results%}
-<li>
-	<p><a href="/arxiv/{{result.arxiv_id}}">{{result.title}}</a></p>
-<p>{{", ".join(result.authors)}}</p>
-{% if result.doi is not none %}
-<p>DOI: <a href="https://doi.org/{{result.doi}}">{{result.doi}}</a></p>
-{%endif%}
-</li>
-{%endfor%}
+ {%for result in results%}
+ <li>
+  <p>
+   <a href="/arxiv/{{result.arxiv_id}}">
+    {{result.title}}
+   </a>
+  </p>
+  <p>
+   {{", ".join(result.authors)}}
+  </p>
+  {% if result.doi is not none %}
+  <p>
+   DOI:
+   <a href="https://doi.org/{{result.doi}}">
+    {{result.doi}}
+   </a>
+  </p>
+  {%endif%}
+ </li>
+ {%endfor%}
 </ol>
 <script src="/static/js/results.js">
+</script>
 {%endblock%}

@@ -25,6 +25,8 @@ def awiki_init(pages_dir, static_dir, awiki_dir, name):
     if not os.path.isdir(static_dir):
         raise AwikiError(f"{static_dir}: not a directory")
     shutil.copytree(get_path(""), awiki_dir)
+    bibtex_style = click.prompt("enter the preferred bibtex style",default="best",type=click.Choice(("brace","quote","best")))
+
     project_root = os.getcwd()
     awk_dict = DEFAULT_CONFIG
     awk_dict.update(
@@ -33,6 +35,7 @@ def awiki_init(pages_dir, static_dir, awiki_dir, name):
             "awiki_dir": awiki_dir,
             "static_dir": static_dir,
             "project_root": project_root,
+            "bibtex_style": bibtex_style,
             "name": unidecode.unidecode(name).lower(),
         }
     )

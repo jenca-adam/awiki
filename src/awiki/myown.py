@@ -26,8 +26,9 @@ def write_myown_pages(pages, awiki_config=None):
     myown = Page(awiki_config.myown)
     meta, _, _ = myown.load()
     lines = []
+    print(pages.keys())
     for year in sorted(pages.keys(), reverse=True):
         lines.append(f"### {year}")
-        for num, link, comment in pages[year]:
+        for num, link, comment in sorted(pages[year], key = lambda tup:tup[1]):
             lines.append(f"{num}. [{link}]({link}){comment}")
     myown.save(meta, "\n".join(lines))

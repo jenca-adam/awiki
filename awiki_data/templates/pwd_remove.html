@@ -1,11 +1,19 @@
 <body>
-{%if error%}
-<p color="red">Invalid password</p>
-{%endif%}
-<h2>Before removing a page, you need to type your password</h2>
-<form action="/remove/{{pagename}}" method="POST">
-  
-  <p><label for="pwd">Password:</label><input type="password" name="pwd"/></p>
+ {%if error%}
+ <p color="red">
+  Invalid password
+ </p>
+ {%endif%}
+ <h2>
+  Before removing a page, you need to type your password
+ </h2>
+ <form action="/remove/{{pagename}}" method="POST">
+  <p>
+   <label for="pwd">
+    Password:
+   </label>
+   <input name="pwd" type="password"/>
+  </p>
   <input type="submit" value="Sumbit"/>
-</form>
+ </form>
 </body>

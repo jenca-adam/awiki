@@ -28,10 +28,11 @@ def main():
 
 
 @main.command()
+@click.option("-p", "--port", help="Port to run Flask on (defaults to config)", type=int)
 @wrap_error
-def run():
+def run(port):
     conf = AwikiConfig()
-    run_app(conf, debug=True, port=conf.port)
+    run_app(conf, debug=True, port=port or conf.port)
 
 
 @main.command()

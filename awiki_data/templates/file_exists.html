@@ -1,42 +1,53 @@
 <html>
-
-<head>
-<link rel="stylesheet" href="/static/css/pocketgrid.min.css">
-<link rel="stylesheet" href="/static/css/style.css">
-<link rel="shortcut icon" href="/static/favicon/favicon.ico">
-<script src="/static/js/jquery.js"></script>
-<title>ERROR in Awiki</title>
-</head>
-<body>
-<div id="container">
-<div id="error_traceback">
-Error during running pagetools.loadpage:<br>
-<div id="error_traceback_details">
-{{type}}:{{msg}}
-</div>
-</div>
-<div id="cleanup">
-{%if cleanup%}
-<div id="cleanup-success">
-Cleaned up this(these) page(s):<span id="cleanup-pages">{{','.join(cleanup)}}</span>
-</div>
-{%else%}
-<div id="cleanup-fail">Cleanup Failed</div>
-{%endif%}
-</div>
-
-<p ><a id="tbshow" href="#">Show full traceback</a></p>
-<div id="tback" style="display:none;">
-<pre>
+ <head>
+  <link href="/static/css/pocketgrid.min.css" rel="stylesheet"/>
+  <link href="/static/css/style.css" rel="stylesheet"/>
+  <link href="/static/favicon/favicon.ico" rel="shortcut icon"/>
+  <script src="/static/js/jquery.js">
+  </script>
+  <title>
+   ERROR in Awiki
+  </title>
+ </head>
+ <body>
+  <div id="container">
+   <div id="error_traceback">
+    Error during running pagetools.loadpage:
+    <br/>
+    <div id="error_traceback_details">
+     {{type}}:{{msg}}
+    </div>
+   </div>
+   <div id="cleanup">
+    {%if cleanup%}
+    <div id="cleanup-success">
+     Cleaned up this(these) page(s):
+     <span id="cleanup-pages">
+      {{','.join(cleanup)}}
+     </span>
+    </div>
+    {%else%}
+    <div id="cleanup-fail">
+     Cleanup Failed
+    </div>
+    {%endif%}
+   </div>
+   <p>
+    <a href="#" id="tbshow">
+     Show full traceback
+    </a>
+   </p>
+   <div id="tback" style="display:none;">
+    <pre>
 <code>
 {{traceback}}
 </code>
 </pre>
-</div>
-</DIV>  
-</div>
-</div>
-<script src="/static/js/clup.js"></script>
-<script src="/static/js/popup.js"></script>
-</body>
+   </div>
+  </div>
+  <script src="/static/js/clup.js">
+  </script>
+  <script src="/static/js/popup.js">
+  </script>
+ </body>
 </html>

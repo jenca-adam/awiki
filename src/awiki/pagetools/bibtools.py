@@ -120,7 +120,8 @@ class BibParser:
                 self.accum = []
                 self.state = BibParserState.READING_FIELD_KEY
             elif char not in BibParserCharTypes.WSPCE:
-                raise BibParseError(f"disallowed char {char} in the self.citekey")
+                #raise BibParseError(f"disallowed char {char} in the citekey")
+                self.accum.append(char)#this is fine?
         elif self.state == BibParserState.READING_FIELD_KEY:
             char = char.lower()
             if char in BibParserCharTypes.FDKEY:

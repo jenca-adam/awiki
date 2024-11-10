@@ -3,9 +3,9 @@ import os
 import sys
 import glob
 import mimetypes
+from time import strftime, gmtime
 from .page import Page
 from bs4 import BeautifulSoup
-from stat import S_ISREG, ST_CTIME, ST_MODE
 from werkzeug.utils import safe_join
 from flask import (
     Flask,
@@ -47,6 +47,8 @@ def view_page(pagename):
         content=html,
         current=pagename,
         prohibited=["index", "myown", "notmyown", "referee", "students", "DT_garant"],
+        strftime=strftime,
+        gmtime=gmtime
     )
 
 
@@ -110,19 +112,13 @@ def edit_page(pagename):
 
 
 @app.route("/addpage/<path:id>")
-def auth(id):
-    global addpageform
-    id = id.split("?")[0]
-    beh = pagetools.add(id, **request.args)
-    print(beh)
-    if beh and beh["status"] == "error":
-        return get_template("file_exists.html").render(
-            msg=beh["response"]["message"],
-            type=beh["response"]["type"],
-            cleanup=beh["cleanup"],
-            traceback=beh["tb"],
-        )
-    return redirect("/")
+def addpage(id):
+    try:
+        arxiv_page = next(pagetools.arxiv.arxiv_search(id, "id", 1, AWIKI_CONFIG))
+    except StopIteration:
+        abort(404)
+    page_id=arxiv_page.add()
+    return redirect(f"/view/{page_id}")
 
 
 @app.route("/remove/<string:pagename>", methods=["POST", "GET"])

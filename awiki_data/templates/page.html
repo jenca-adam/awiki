@@ -1,33 +1,87 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="block-group" id="container">
-    <div class="header block" id="header">
-    <h1>{{meta.title}}</h1>
-    <form action="/my_search/" method="POST" id="form">
-  <p>
-    <input type="text"name="q" placeholder="Search"/>
-  <input type="submit" id="search-btn"value="Search"></button></input></p>
+ <div class="header block" id="header">
+  <h1>
+   {{meta.title}}
+  </h1>
+  <form action="/my_search/" id="form" method="POST">
+   <p>
+    <input name="q" placeholder="Search" type="text"/>
+    <input id="search-btn" type="submit" value="Search"/>
+   </p>
   </form>
-  </div>
-  
-  <div class="content block" id="content">
+ </div>
+ <div class="content block" id="content">
   <div id="buttons">
-  <div id="buttons-left">
-  <a  href="/add/">Add a page</a>
-  {%if current not in prohibited%}
-  <a  href="/remove/{{current}}">Remove this page</a>
-  {%endif%}
-  <button id="cite">Cite!</button>
-  <a  href="/search/">Search ArXiv</a>
+   <div id="buttons-left">
+    <a href="/add/">
+     Add a page
+    </a>
+    {%if current not in prohibited%}
+    <a href="/remove/{{current}}">
+     Remove this page
+    </a>
+    {%endif%}
+    <button id="cite">
+     Cite!
+    </button>
+    <a href="/search/">
+     Search ArXiv
+    </a>
+   </div>
+   <div id="buttons-right">
+    <a href="/edit/{{current}}">
+     Edit
+    </a>
+    <a href="/makebib/{{current}}.bib">
+     BibTeX
+    </a>
+    <a href="/">
+     ⌂
+    </a>
+   </div>
   </div>
-  <div id="buttons-right">
-  <a href="/edit/{{current}}">Edit</a>
-  <a href="/makebib/{{current}}.bib">BibTeX</a>
-  <a href="/">&#8962;</a>
+  {{content}}
+ </div>
+ <hr/>
+ <footer id="metadata-footer">
+  <h4>
+   Metadata
+  </h4>
+  <div id="metadata-inner">
+   {%if "doi" in meta%}
+   <p id="metadata-doi">
+    DOI:
+    <a href="https://doi.org/{{meta.doi}}">
+     {{meta.doi}}
+    </a>
+   </p>
+   {%endif%}
+	  {%if "arxiv_id" in meta%}
+   <p id="metadata-arxiv-id">
+    arXiv:
+    <a href="https://arxiv.org/abs/{{meta.arxiv_id}}">
+     {{meta.arxiv_id}}
+    </a>
+   </p>
+   {%endif%}
+	  {%if "arxiv_comment" in meta%}
+   <p id="metadata-arxiv-comment">
+    arXiv comment:
+    <span>
+     {{meta.arxiv_comment}}
+    </span>
+    {%endif%}
+	  {%if "published" in meta%}
+    <p id="metadata-arxiv-published">
+     published:
+     <span>
+      {{strftime("%d %b %Y",gmtime(meta.published))}}
+     </span>
+    </p>
+    {%endif%}
   </div>
-  </div>
-    {{content}}
-  </div>
+ </footer>
 </div>
 {% endblock %}
-

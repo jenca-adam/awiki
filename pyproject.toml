@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name="awiki"
-version="0.0"
+version="0.1"
 dependencies=[
 	"flask",
 	"pyaml",
@@ -77,5 +77,9 @@ where = ["src"]
     "awiki_data/templates/base.html",
     "awiki_data/templates/results.html",
     "awiki_data/templates/arxiv_page.html",
+]
+
+"share/awiki/markdown_templates" = [
+    "awiki_data/markdown_templates/page.template.md"
 ]
 

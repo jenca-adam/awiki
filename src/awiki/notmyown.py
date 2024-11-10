@@ -28,6 +28,6 @@ def write_notmyown_pages(pages, awiki_config=None):
     lines = []
     for letter in "ABDEFGHIJKLMNOPQRSTUVWXYZ":
         lines.append(f"### {letter}")
-        for page in pages.get(letter, ()):
+        for page in sorted(pages.get(letter, ())):
             lines.append(f"* [{page}]({page})")
     notmyown.save(meta, "\n".join(lines))

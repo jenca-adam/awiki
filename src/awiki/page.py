@@ -36,7 +36,6 @@ class Page:
                 meta_lines.append(line)
             md = f.read()
         meta_yaml = "".join(meta_lines).replace(":", ": ")
-        print(meta_yaml)
         meta = yaml.safe_load(meta_yaml)
         html = markdown.markdown(md)
         return meta, html, md
@@ -45,8 +44,12 @@ class Page:
         """
         Writes metadata and page content to page.md
         """
+        self.makedir()
         meta_yaml = yaml.dump(meta)
         with open(self.md_path, "w") as f:
             f.write(meta_yaml)
             f.write("---\n")
             f.write(md)
+
+    def makedir(self):
+        os.makedirs(self.root, exist_ok=True)
