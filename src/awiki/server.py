@@ -7,18 +7,33 @@ from .page import Page
 from bs4 import BeautifulSoup
 from stat import S_ISREG, ST_CTIME, ST_MODE
 from werkzeug.utils import safe_join
-from flask import Flask, request, url_for, redirect, Response, abort, send_from_directory
+from flask import (
+    Flask,
+    request,
+    url_for,
+    redirect,
+    Response,
+    abort,
+    send_from_directory,
+)
 from wtforms import Form, validators, TextAreaField, StringField
 import yaml
 import markdown
 from jinja2 import Template, FileSystemLoader, Environment
 from . import pagetools
+
 # import pagetools,pagetools.search_works
 app = Flask(__name__, static_folder=None)
 AWIKI_CONFIG = None
+
+
 def get_template(template_name):
-    env = Environment(loader=FileSystemLoader(os.path.join(AWIKI_CONFIG.awiki_dir,"templates")))
+    env = Environment(
+        loader=FileSystemLoader(os.path.join(AWIKI_CONFIG.awiki_dir, "templates"))
+    )
     return env.get_template(template_name)
+
+
 @app.route("/view/<string:pagename>")
 def view_page(pagename):
     print(pagename)
@@ -40,7 +55,7 @@ def get_bib(pagename):
 
     page = Page(pagename)
     try:
-        meta, html, md =page.load()
+        meta, html, md = page.load()
     except FileNotFoundError:
         abort(404)
     soup = BeautifulSoup(html, "lxml")
@@ -74,7 +89,7 @@ def edit_page(pagename):
     try:
         meta, html, md = mdf.load()
     except FileNotFoundError:
-        meta,html,md={"title":""},"",""
+        meta, html, md = {"title": ""}, "", ""
     if request.method == "POST":
         form = EditForm(request.form)
         if form.validate():
@@ -128,14 +143,19 @@ def remove(pagename):
 
 @app.route("/search/", methods=["GET", "POST"])
 def search():
-    search_t =get_template("search.html")
+    search_t = get_template("search.html")
     if request.method == "POST":
         form = request.form
     else:
         form = request.args
     try:
         print(form["query"])
-        results = pagetools.arxiv_search(form["query"], form.get("fields", "all"), int(form.get("mr",100)), AWIKI_CONFIG)
+        results = pagetools.arxiv_search(
+            form["query"],
+            form.get("fields", "all"),
+            int(form.get("mr", 100)),
+            AWIKI_CONFIG,
+        )
         # print(results[0][2])
         return search_t.render(results=results, query=form["query"])
     except KeyError:
@@ -154,13 +174,16 @@ def arxivview(id):
 
 @app.route("/my_search/", methods=["GET", "POST"])
 def ms():
-    search_t =get_template("results.html")
+    search_t = get_template("results.html")
 
     if request.method == "POST":
         f = request.form
         q = f["q"]
-        return search_t.render(results=list(pagetools.search_pages.search_pages(q, AWIKI_CONFIG)), q=q)
+        return search_t.render(
+            results=list(pagetools.search_pages.search_pages(q, AWIKI_CONFIG)), q=q
+        )
     return abort(405)
+
 
 @app.route("/cite/<string:page>")
 def cite(page):
@@ -172,16 +195,22 @@ def cite(page):
         abort(404)
     return Response(bibcite, mimetype="text/plain")
 
+
 @app.route("/static/<path:static_path>")
 def static_get(static_path):
     static_dir = safe_join(AWIKI_CONFIG.project_root, AWIKI_CONFIG.awiki_dir, "static")
     file_path = safe_join(static_dir, static_path)
     if not os.path.isfile(file_path):
-        return send_from_directory(safe_join(AWIKI_CONFIG.project_root,AWIKI_CONFIG.static_dir),static_path)
+        return send_from_directory(
+            safe_join(AWIKI_CONFIG.project_root, AWIKI_CONFIG.static_dir), static_path
+        )
     return send_from_directory(static_dir, static_path)
+
+
 @app.route("/")
 def index():
     return redirect("/view/index")
+
 
 def run_app(awiki_config, *args, **kwargs):
     global AWIKI_CONFIG

@@ -4,8 +4,12 @@ import os
 import shutil
 import pyaml
 from .err import AwikiError
+from .notmyown import get_notmyown_pages, write_notmyown_pages
+from .myown import get_myown_pages, write_myown_pages
 import click
 import unidecode
+
+
 def awiki_init(pages_dir, static_dir, awiki_dir, name):
     if os.path.exists(awiki_dir):
         if not click.confirm(f"directory exists: {awiki_dir!r} . overwrite?"):
@@ -24,14 +28,30 @@ def awiki_init(pages_dir, static_dir, awiki_dir, name):
     project_root = os.getcwd()
     awk_dict = DEFAULT_CONFIG
     awk_dict.update(
-            {"pages_dir": pages_dir, "awiki_dir":awiki_dir, "static_dir": static_dir, "project_root": project_root, "name": unidecode.unidecode(name).lower()}
+        {
+            "pages_dir": pages_dir,
+            "awiki_dir": awiki_dir,
+            "static_dir": static_dir,
+            "project_root": project_root,
+            "name": unidecode.unidecode(name).lower(),
+        }
     )
     with open("awiki_config.yaml", "w") as f:
         pyaml.dump({"awiki": awk_dict}, f)
 
+
 def awiki_reload_data():
-    awiki_config=AwikiConfig()
+    awiki_config = AwikiConfig()
     if os.path.exists(awiki_config.awiki_dir):
         shutil.rmtree(awiki_config.awiki_dir)
     shutil.copytree(get_path(""), awiki_config.awiki_dir)
 
+
+def awiki_fix_notmyown():
+    awiki_config = AwikiConfig()
+    pages = get_notmyown_pages(awiki_config)
+    write_notmyown_pages(pages, awiki_config)
+def awiki_fix_myown():
+    awiki_config = AwikiConfig()
+    pages = get_myown_pages(awiki_config)
+    write_myown_pages(pages, awiki_config)
