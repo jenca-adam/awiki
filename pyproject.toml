@@ -11,12 +11,9 @@ dependencies=[
 	"pyaml",
 	"WTForms",
 	"markdown",
-	"colorama",
 	"lxml",
 	"requests",
 	"beautifulsoup4",
-	"pybtex",
-	"parse",
 	"unidecode",
 	"python-magic"
 ]
