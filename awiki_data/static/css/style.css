@@ -163,14 +163,52 @@ table {
 table, th, td {
   border: 1px solid black;
 }
-
+#metadata-tags{
+  display: flex;
+  width: 100%;
+  align-items:center;
+}
+.form-line{
+  margin: 0.3em;
+  }
+.tag{
+  background :#ccf;
+  padding: 0.2em;
+  border-radius: 0.25em;
+  margin: 0.3em;
+}
+.tag a{
+  color: #126 !important;
+  text-decoration: none;
+}
+a[disabled]{
+  pointer-events:none;
+}
+#metadata-tags-h{
+  display:flex;
+  width:100%;
+  justify-content:space-between;
+  align-items:center;
+}
+#metadata-tags-h>*{
+  margin:0.3em;
+}
+#metadata-tags-edit, #metadata-tags-confirm{
+ font-size:15pt;
+ cursor:pointer;
+ }
 @media (min-width: 768px) {
   .content { width: 100%; }
   #content p,#content li {
     text-align:justify;
   }
 }
-
+.tag-remove{
+ color: #126;
+ margin-left: 0.5em;
+ font-weight: bolder;
+ cursor: pointer;
+ }
 @media (min-width: 1024px) {
   html {
   	background-color:#aaa;

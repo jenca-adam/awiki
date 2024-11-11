@@ -172,13 +172,15 @@ def arxivview(id):
 def ms():
     search_t = get_template("results.html")
 
-    if request.method == "POST":
-        f = request.form
-        q = f["q"]
-        return search_t.render(
-            results=list(pagetools.search_pages.search_pages(q, AWIKI_CONFIG)), q=q
-        )
-    return abort(405)
+    q = request.form.get("q", request.args.get("q",""))
+    tags_string = request.form.get("tags", request.args.get("tags"))
+    if tags_string is None:
+        tags=[]
+    else:
+        tags=[t.strip() for t in tags_string.split(",")]
+    return search_t.render(
+        results=list(pagetools.search_pages.search_pages(q, tags, AWIKI_CONFIG)), q=q, tags=tags_string, tags_list=tags
+    )
 
 
 @app.route("/cite/<string:page>")
@@ -191,7 +193,18 @@ def cite(page):
         abort(404)
     return Response(bibcite, mimetype="text/plain")
 
-
+@app.route("/api/set-tags/<string:page>")
+def set_tags(page):
+    p = Page(page)
+    if not p.exists:
+        return "no such page"
+    tags = request.args.get("tags")
+    if tags is None:
+        return "no tags"
+    metadata, html, markdown = p.load()
+    metadata['tags']=[t.strip() for t in tags.split(",")]
+    p.save(metadata, markdown)
+    return "ok"
 @app.route("/static/<path:static_path>")
 def static_get(static_path):
     static_dir = safe_join(AWIKI_CONFIG.project_root, AWIKI_CONFIG.awiki_dir, "static")

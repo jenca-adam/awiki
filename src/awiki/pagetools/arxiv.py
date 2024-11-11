@@ -126,7 +126,7 @@ class ArxivPage:
 
 
 def arxiv_search(query, field, max_results, awiki_config):
-    query = unidecode.unidecode(query)
+    query = unidecode.unidecode(query.replace(";", " AND "))
     url = f"https://export.arxiv.org/api/query?search_query={field}:{query}&max_results={max_results}"
     content = requests.get(url).content
     soup = bs(content, "xml")  # yes, barbaric

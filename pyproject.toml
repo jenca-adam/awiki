@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name="awiki"
-version="0.1.1"
+version="0.1.2"
 dependencies=[
 	"flask",
 	"pyaml",
@@ -24,19 +24,12 @@ where = ["src"]
 [tool.setuptools.data-files]
 # Static JavaScript files
 "share/awiki/static/js" = [
-    "awiki_data/static/js/jquery.js",
-    "awiki_data/static/js/clup.js",
-    "awiki_data/static/js/cite.js",
-    "awiki_data/static/js/results.js",
-    "awiki_data/static/js/popup.js",
+    "awiki_data/static/js/*",
 ]
 
 # Static CSS files
 "share/awiki/static/css" = [
-    "awiki_data/static/css/codemirror.css",
-    "awiki_data/static/css/font-awesome.min.css",
-    "awiki_data/static/css/style.css",
-    "awiki_data/static/css/pocketgrid.min.css",
+    "awiki_data/static/css/*",
 ]
 
 # Static CodeMirror related files
@@ -52,31 +45,22 @@ where = ["src"]
 
 # CodeMirror Markdown mode directory (subdirectory)
 "share/awiki/static/codemirror/mode/markdown" = [
-    "awiki_data/static/codemirror/mode/markdown/index.html",
-    "awiki_data/static/codemirror/mode/markdown/markdown.js",
-    "awiki_data/static/codemirror/mode/markdown/test.js",
+    "awiki_data/static/codemirror/mode/markdown/*",
 ]
 
 # Favicon file
 "share/awiki/static/favicon" = [
-    "awiki_data/static/favicon/favicon.ico",
+    "awiki_data/static/favicon/*",
 ]
-
+# FontAwesome
+"share/awiki/static/fonts" = [
+    "awiki_data/static/fonts/*"
+]
 # Template files
 "share/awiki/templates" = [
-    "awiki_data/templates/page.html",
-    "awiki_data/templates/file_exists.html",
-    "awiki_data/templates/pwd_add.html",
-    "awiki_data/templates/pwd_remove.html",
-    "awiki_data/templates/stripbase.html",
-    "awiki_data/templates/edit_page.html",
-    "awiki_data/templates/search.html",
-    "awiki_data/templates/base.html",
-    "awiki_data/templates/results.html",
-    "awiki_data/templates/arxiv_page.html",
+    "awiki_data/templates/*"
 ]
 
 "share/awiki/markdown_templates" = [
     "awiki_data/markdown_templates/page.template.md"
 ]
-

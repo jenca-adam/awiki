@@ -5,12 +5,13 @@
   <h1>
    {{meta.title}}
   </h1>
-  <form action="/my_search/" id="form" method="POST">
-   <p>
-    <input name="q" placeholder="Search" type="text"/>
-    <input id="search-btn" type="submit" value="Search"/>
-   </p>
-  </form>
+ <form action="/my_search/" id="form" method="POST">
+	<div class="form-line"><input name="q" value="{{q}}" placeholder="Search" type="text"></div>
+	<div class="form-line"><input name="tags" value="{% if tags %}{{tags}}{% endif%}" placeholder="tag1, tag2, ...", type="text"></div>
+	<div class="form-line"><input id="search-btn" type="submit" value="Search"></div>
+    
+</form>
+
  </div>
  <div class="content block" id="content">
   <div id="buttons">
@@ -46,9 +47,9 @@
  </div>
  <hr/>
  <footer id="metadata-footer">
-  <h4>
+  <h2>
    Metadata
-  </h4>
+  </h2>
   <div id="metadata-inner">
    {%if "doi" in meta%}
    <p id="metadata-doi">
@@ -81,6 +82,15 @@
      </span>
     </p>
     {%endif%}
+    <div id="metadata-tags-h"><h3>Tags</h3><span class="fa fa-edit" id="metadata-tags-edit"></span><span class="fa fa-check" style="display:none;" id="metadata-tags-confirm"></span></div>
+    <div id="metadata-tags">
+    <div id="metadata-tags-tags">
+    {%for tag in meta.tags%}
+    <span class="tag"><a class="tag-link" href="/my_search?tags={{tag}}">{{tag}}</a><span class="tag-remove" style="display:none;">×</span></span>
+    {%endfor%}
+    </div>
+    <form id="addtag-form" style="display:none;"><input type="text" id="addtag-tag" placeholder="Add a tag..."></form>
+    </div>
   </div>
  </footer>
 </div>

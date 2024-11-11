@@ -20,6 +20,12 @@
  No results
 </h1>
 {%endif%}
+<form action="/my_search/" id="form" method="POST">
+	<div class="form-line"><input name="q" value="{{q}}" placeholder="Search" type="text"></div>
+	<div class="form-line"><input name="tags" value="{% if tags %}{{tags}}{% endif%}" placeholder="tag1, tag2, ...", type="text"></div>
+	<div class="form-line"><input id="search-btn" type="submit" value="Search"></div>
+    
+</form>
 
 {%endblock%}
 {%block content%}
