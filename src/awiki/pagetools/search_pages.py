@@ -18,7 +18,7 @@ def search_pages(query, tags=[], awiki_config=None):
         if not page.exists:
             continue
         meta, html, md = page.load()
-        if not tag_set.issubset(meta.get("tags",set())):
+        if not tag_set.issubset(meta.get("tags", set())):
             continue
         # search meta and md
         for val in [*meta.values(), page_name]:

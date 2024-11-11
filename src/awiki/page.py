@@ -35,7 +35,7 @@ class Page:
                     break
                 meta_lines.append(line)
             md = f.read()
-        meta_yaml = "".join(meta_lines).replace("title:","title: ")
+        meta_yaml = "".join(meta_lines).replace("title:", "title: ")
         meta = yaml.safe_load(meta_yaml)
         html = markdown.markdown(md)
         return meta, html, md

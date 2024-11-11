@@ -110,18 +110,18 @@ class ArxivPage:
         page.save(metadata, markdown)
         # edit myown / notmyown
         if self.myown:
-            myown_pages, after=get_myown_pages(self.awiki_config)
+            myown_pages, after = get_myown_pages(self.awiki_config)
             if str(self.published.year) not in myown_pages:
-                myown_pages[self.published.year]=[]
-            myown_pages[str(self.published.year)].append(("1",self.page_id,""))
+                myown_pages[self.published.year] = []
+            myown_pages[str(self.published.year)].append(("1", self.page_id, ""))
             write_myown_pages(myown_pages, after, self.awiki_config)
         else:
-            notmyown_pages=get_notmyown_pages(self.awiki_config)
+            notmyown_pages = get_notmyown_pages(self.awiki_config)
             if self.page_id[0].upper() not in notmyown_pages:
-                notmyown_pages[self.page_id[0].upper()]=[]
+                notmyown_pages[self.page_id[0].upper()] = []
             notmyown_pages[self.page_id[0].upper()].append(self.page_id)
             write_notmyown_pages(notmyown_pages, self.awiki_config)
-        #done
+        # done
         return self.page_id
 
 

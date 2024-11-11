@@ -6,7 +6,9 @@ from jinja2 import Environment, FileSystemLoader
 
 def get_md_template(template_name, awiki_config=None):
     awiki_config = awiki_config or AwikiConfig()
-    templates_dir = os.path.join(awiki_config.project_root, awiki_config.awiki_dir, "markdown_templates")
+    templates_dir = os.path.join(
+        awiki_config.project_root, awiki_config.awiki_dir, "markdown_templates"
+    )
     template_filename = f"{template_name}.template.md"
     template_path = os.path.join(templates_dir, template_filename)
     if not os.path.exists(template_path):

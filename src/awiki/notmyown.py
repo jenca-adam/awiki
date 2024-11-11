@@ -11,7 +11,7 @@ def get_notmyown_pages(awiki_config=None):
     notmyown = Page(awiki_config.notmyown)
     pages = {}
     current = None
-    _, _ ,notmyown_md = notmyown.load()
+    _, _, notmyown_md = notmyown.load()
     for link_match in pagelink_regex.findall(notmyown_md):
         if not link_match:
             continue

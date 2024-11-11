@@ -8,12 +8,18 @@ from .err import AwikiError
 from .notmyown import get_notmyown_pages, write_notmyown_pages
 from .myown import get_myown_pages, write_myown_pages
 from .page import Page
+from .taglist import add_tags, get_all_tags
 import click
 import unidecode
 
+
+def awiki_mk_taglist(awiki_config=None):
+    add_tags(get_all_tags(), awiki_config=awiki_config)
+
+
 def awiki_view(page_name, bib=False, awiki_config=None):
     awiki_config = awiki_config or AwikiConfig()
-    page=Page(page_name)
+    page = Page(page_name)
     if not page.exists:
         raise AwikiError(f"page {page_name} doesn't exist")
     if bib:
@@ -23,6 +29,8 @@ def awiki_view(page_name, bib=False, awiki_config=None):
     else:
         file_path = page.md_path
     subprocess.run([awiki_config.editor, file_path])
+
+
 def awiki_init(pages_dir, static_dir, awiki_dir, name):
     if os.path.exists(awiki_dir):
         if not click.confirm(f"directory exists: {awiki_dir!r} . overwrite?"):
@@ -38,7 +46,11 @@ def awiki_init(pages_dir, static_dir, awiki_dir, name):
     if not os.path.isdir(static_dir):
         raise AwikiError(f"{static_dir}: not a directory")
     shutil.copytree(get_path(""), awiki_dir)
-    bibtex_style = click.prompt("enter the preferred bibtex style",default="best",type=click.Choice(("brace","quote","best")))
+    bibtex_style = click.prompt(
+        "enter the preferred bibtex style",
+        default="best",
+        type=click.Choice(("brace", "quote", "best")),
+    )
     editor = click.prompt("enter the editor path for awiki view", type=str)
     editor_path = shutil.which(editor)
     if editor_path is None:
@@ -54,7 +66,7 @@ def awiki_init(pages_dir, static_dir, awiki_dir, name):
             "project_root": project_root,
             "bibtex_style": bibtex_style,
             "name": unidecode.unidecode(name).lower(),
-            "editor":editor_path
+            "editor": editor_path,
         }
     )
     with open("awiki_config.yaml", "w") as f:
@@ -72,6 +84,8 @@ def awiki_fix_notmyown():
     awiki_config = AwikiConfig()
     pages = get_notmyown_pages(awiki_config)
     write_notmyown_pages(pages, awiki_config)
+
+
 def awiki_fix_myown():
     awiki_config = AwikiConfig()
     pages = get_myown_pages(awiki_config)

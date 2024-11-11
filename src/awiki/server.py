@@ -21,6 +21,7 @@ import yaml
 import markdown
 from jinja2 import Template, FileSystemLoader, Environment
 from . import pagetools
+from .taglist import get_taglist_tags, add_tags
 
 # import pagetools,pagetools.search_works
 app = Flask(__name__, static_folder=None)
@@ -36,7 +37,6 @@ def get_template(template_name):
 
 @app.route("/view/<string:pagename>")
 def view_page(pagename):
-    print(pagename)
     page = Page(pagename, AWIKI_CONFIG)
     if not page.exists:
         return redirect(f"/edit/{pagename}")
@@ -48,7 +48,8 @@ def view_page(pagename):
         current=pagename,
         prohibited=["index", "myown", "notmyown", "referee", "students", "DT_garant"],
         strftime=strftime,
-        gmtime=gmtime
+        gmtime=gmtime,
+        taglist_tags=sorted(get_taglist_tags()),
     )
 
 
@@ -117,7 +118,7 @@ def addpage(id):
         arxiv_page = next(pagetools.arxiv.arxiv_search(id, "id", 1, AWIKI_CONFIG))
     except StopIteration:
         abort(404)
-    page_id=arxiv_page.add()
+    page_id = arxiv_page.add()
     return redirect(f"/view/{page_id}")
 
 
@@ -172,14 +173,17 @@ def arxivview(id):
 def ms():
     search_t = get_template("results.html")
 
-    q = request.form.get("q", request.args.get("q",""))
+    q = request.form.get("q", request.args.get("q", ""))
     tags_string = request.form.get("tags", request.args.get("tags"))
     if tags_string is None:
-        tags=[]
+        tags = []
     else:
-        tags=[t.strip() for t in tags_string.split(",")]
+        tags = [t.strip() for t in tags_string.split(",")]
     return search_t.render(
-        results=list(pagetools.search_pages.search_pages(q, tags, AWIKI_CONFIG)), q=q, tags=tags_string, tags_list=tags
+        results=list(pagetools.search_pages.search_pages(q, tags, AWIKI_CONFIG)),
+        q=q,
+        tags=tags_string,
+        tags_list=tags,
     )
 
 
@@ -193,6 +197,7 @@ def cite(page):
         abort(404)
     return Response(bibcite, mimetype="text/plain")
 
+
 @app.route("/api/set-tags/<string:page>")
 def set_tags(page):
     p = Page(page)
@@ -202,9 +207,16 @@ def set_tags(page):
     if tags is None:
         return "no tags"
     metadata, html, markdown = p.load()
-    metadata['tags']=[t.strip() for t in tags.split(",")]
+    tag_list = [t.strip() for t in tags.split(",")]
+    add_tags(tag_list, AWIKI_CONFIG)
+    metadata["tags"] = tag_list
     p.save(metadata, markdown)
     return "ok"
+
+@app.route("/api/get-taglist")
+def get_taglist():
+    return ",".join(sorted(get_taglist_tags()))
+
 @app.route("/static/<path:static_path>")
 def static_get(static_path):
     static_dir = safe_join(AWIKI_CONFIG.project_root, AWIKI_CONFIG.awiki_dir, "static")

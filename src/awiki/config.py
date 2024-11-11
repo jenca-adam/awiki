@@ -7,7 +7,7 @@ DEFAULT_CONFIG = {
     "port": 8000,
     "max_title_chars": 18,
     "notmyown": "notmyown",
-    "myown": "myown"
+    "myown": "myown",
 }
 
 
