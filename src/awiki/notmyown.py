@@ -23,6 +23,7 @@ def get_notmyown_pages(awiki_config=None):
 
 
 def write_notmyown_pages(pages, awiki_config=None):
+    awiki_config = awiki_config or AwikiConfig()
     notmyown = Page(awiki_config.notmyown)
     meta, _, _ = notmyown.load()
     lines = []
@@ -31,3 +32,13 @@ def write_notmyown_pages(pages, awiki_config=None):
         for page in sorted(pages.get(letter, ())):
             lines.append(f"* [{page}]({page})")
     notmyown.save(meta, "\n".join(lines))
+
+
+def add_notmyown_page(page_name, awiki_config=None):
+    awiki_config = awiki_config or AwikiConfig()
+    letter = page_name[0].upper()
+    pages = get_notmyown_pages(awiki_config)
+    if letter not in pages:
+        pages[letter] = []
+    pages[letter].append(page_name)
+    write_notmyown_pages(pages, awiki_config)

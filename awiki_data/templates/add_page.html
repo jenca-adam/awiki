@@ -1,0 +1,42 @@
+{%extends "stripbase.html"%}
+{%block meta%}
+<title>Add a page - Awiki</title>
+{%endblock%}
+{%block head%}
+<h1>Add a page</h1>
+{%endblock%}
+{%block content%}
+<form  method="POST" id="addpage-form">
+<div><label for="pagename">Page name:</label><input type="text" name="pagename" required="required"></div>
+<div><label for="pagetitle">Page title:</label><input type="text" name="pagetitle" required="required"></div>
+<div><label for="pageadd">Add to:</label><select name="pageadd">
+		<option value=""></option>
+		<option value="myown">myown</option>
+		<option value="notmyown">notmyown</option>
+	</select>
+</div>
+<div><b>METADATA:</b></div>
+<div id="addpage-form-meta">
+	<div><label for="pagemeta-arxiv_id">arXiv id:</label><input name="pagemeta-arxiv_id" type="text"></input></div>
+	<div><label for="pagemeta-doi">DOI:</label><input name="pagemeta-doi" type="text"></input></div>
+	<div><label for="pagemeta-published">Published:</label><input name="pagemeta-published" type="datetime-local"></input></div>
+	<div><label for="pagemeta-authors">Authors(comma-separated):</label><input name="pagemeta-authors" type="text"></input></div>
+	<div><label for="pagemeta-jref">JREF:</label><input name="pagemeta-jref" type="text"></input></div>
+	<div><label for="pagemeta-comment">Comment:</label><input name="pagemeta-comment" type="text"></input></div>
+	<div><label for="pagemeta-tags">Tags(comma-separated:</label><input name="pagemeta-tags" type="text"></input></div>
+</div>
+<div id="mddiv"><textarea id="markdown" name="markdown"></textarea></div>
+<input type="submit" value="Add this page">
+</form>
+{%endblock%}
+{%block scripts%} 
+
+<script type="text/javascript">
+  var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("markdown"),
+  {lineWrapping:true,
+  theme:"darcula",
+  showCursorWhenSelecting: true
+  });
+document.getElementById("markdown").focus();
+ </script>
+ {%endblock%}

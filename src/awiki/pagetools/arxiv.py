@@ -7,8 +7,8 @@ import re
 from awiki.config import AwikiConfig
 from awiki.page import Page
 from awiki.markdown_templates import get_md_template
-from awiki.myown import get_myown_pages, write_myown_pages
-from awiki.notmyown import get_notmyown_pages, write_notmyown_pages
+from awiki.myown import add_myown_page
+from awiki.notmyown import add_notmyown_page
 import unidecode
 import datetime
 import collections
@@ -110,17 +110,11 @@ class ArxivPage:
         page.save(metadata, markdown)
         # edit myown / notmyown
         if self.myown:
-            myown_pages, after = get_myown_pages(self.awiki_config)
-            if str(self.published.year) not in myown_pages:
-                myown_pages[self.published.year] = []
-            myown_pages[str(self.published.year)].append(("1", self.page_id, ""))
-            write_myown_pages(myown_pages, after, self.awiki_config)
+            add_myown_page(
+                self.page_id, year=self.published.year, awiki_config=self.awiki_config
+            )
         else:
-            notmyown_pages = get_notmyown_pages(self.awiki_config)
-            if self.page_id[0].upper() not in notmyown_pages:
-                notmyown_pages[self.page_id[0].upper()] = []
-            notmyown_pages[self.page_id[0].upper()].append(self.page_id)
-            write_notmyown_pages(notmyown_pages, self.awiki_config)
+            add_notmyown_page(self.page_id, awiki_config=self.awiki_config)
         # done
         return self.page_id
 

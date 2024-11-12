@@ -22,7 +22,8 @@ import markdown
 from jinja2 import Template, FileSystemLoader, Environment
 from . import pagetools
 from .taglist import get_taglist_tags, add_tags
-
+from .myown import add_myown_page 
+from .notmyown import add_notmyown_page
 # import pagetools,pagetools.search_works
 app = Flask(__name__, static_folder=None)
 AWIKI_CONFIG = None
@@ -110,6 +111,48 @@ def edit_page(pagename):
         form["markdown"].process_data(md)
     t = get_template("edit_page.html")
     return t.render(meta=meta, content=html, form=form)
+
+
+@app.route("/add/", methods=["GET", "POST"])
+def add():
+    if request.method == "POST":
+        date = None
+        page = Page(request.form["pagename"].strip())
+        if page.exists:
+            return redirect(f"/edit/{page.page_name}")
+        meta = {"title": request.form["pagetitle"]}
+        if request.form["pagemeta-arxiv_id"]:
+            meta["arxiv_id"] = request.form["pagemeta-arxiv_id"].strip()
+        if request.form["pagemeta-doi"]:
+            meta["doi"] = request.form["pagemeta-doi"].strip()
+        if request.form["pagemeta-published"]:
+            try:
+                date = datetime.fromisoformat(request.form["pagemeta-published"])
+                meta["published"] = date.timestamp()
+            except:
+                pass
+        if request.form["pagemeta-authors"]:
+            meta["authors"] = [
+                author.strip() for author in request.form["pagemeta-authors"].split(",")
+            ]
+        if request.form["pagemeta-jref"]:
+            meta["jref"] = request.form["pagemeta-jref"].strip()
+        if request.form["pagemeta-comment"]:
+            meta["arxiv_comment"] = request.form["pagemeta-comment"].strip()
+        if request.form["pagemeta-tags"]:
+            meta["tags"] = [tag.strip() for tag in request.form["pagemeta-tags"].split(",")]
+        page.save(meta, request.form["markdown"])
+        if request.form["pageadd"] == "myown":
+            add_myown_page(
+                page.page_name,
+                year=getattr(date, "year", None),
+                awiki_config=AWIKI_CONFIG,
+            )
+        elif request.form["pageadd"] == "notmyown":
+            add_notmyown_page(page.page_name, awiki_config=AWIKI_CONFIG)
+        return redirect(f"/view/{page.page_name}")
+
+    return get_template("add_page.html").render(errors=[])
 
 
 @app.route("/addpage/<path:id>")
@@ -213,9 +256,11 @@ def set_tags(page):
     p.save(metadata, markdown)
     return "ok"
 
+
 @app.route("/api/get-taglist")
 def get_taglist():
     return ",".join(sorted(get_taglist_tags()))
+
 
 @app.route("/static/<path:static_path>")
 def static_get(static_path):

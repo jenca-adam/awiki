@@ -47,3 +47,18 @@ def write_myown_pages(pages, after, awiki_config=None):
             lines.extend(after.get(link, []))
     lines.extend(after.get("_END", []))
     myown.save(meta, "\n".join(lines))
+
+
+def add_myown_page(page_name, year=None, num="1", comment="", awiki_config=None):
+    pages, after = get_myown_pages()
+    if year is None:
+        pagename_match = pagename_regex.search(page_name)
+        if not pagename_match:
+            year = "0"
+        else:
+            year = pagename_match.group(1)
+    year = str(year)
+    if year not in pages:
+        pages[year] = []
+    pages[year].append((num, page_name, comment))
+    write_myown_pages(pages, after, awiki_config)
