@@ -22,8 +22,9 @@ import markdown
 from jinja2 import Template, FileSystemLoader, Environment
 from . import pagetools
 from .taglist import get_taglist_tags, add_tags
-from .myown import add_myown_page 
+from .myown import add_myown_page
 from .notmyown import add_notmyown_page
+
 # import pagetools,pagetools.search_works
 app = Flask(__name__, static_folder=None)
 AWIKI_CONFIG = None
@@ -140,7 +141,9 @@ def add():
         if request.form["pagemeta-comment"]:
             meta["arxiv_comment"] = request.form["pagemeta-comment"].strip()
         if request.form["pagemeta-tags"]:
-            meta["tags"] = [tag.strip() for tag in request.form["pagemeta-tags"].split(",")]
+            meta["tags"] = [
+                tag.strip() for tag in request.form["pagemeta-tags"].split(",")
+            ]
         page.save(meta, request.form["markdown"])
         if request.form["pageadd"] == "myown":
             add_myown_page(
