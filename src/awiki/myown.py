@@ -4,8 +4,8 @@ import re
 
 pagelink_regex = re.compile(r"(\d+). \[([a-zA-Z0-9_-]+)\]\(\2\)([^\[]*)")
 pagename_regex = re.compile(r"[a-zA-Z_-]+(\d+)[a-zA-Z_-]+")
-year_regex = re.compile("^#+\s*\d+$")
-other_regex = re.compile("^#+\s*\S*")
+year_regex = re.compile(r"^#+\s*\d+$")
+other_regex = re.compile(r"^#+\s*\S*")
 
 
 def get_myown_pages(awiki_config=None):

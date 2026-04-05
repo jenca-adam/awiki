@@ -161,7 +161,9 @@ def add():
 @app.route("/addpage/<path:id>")
 def addpage(id):
     try:
-        arxiv_page = next(pagetools.arxiv.arxiv_search(id, "id", 1, AWIKI_CONFIG))
+        arxiv_page = next(
+            pagetools.arxiv.arxiv_search(id, "id", 1, AWIKI_CONFIG, use_id_list=True)
+        )
     except StopIteration:
         abort(404)
     page_id = arxiv_page.add()
@@ -198,6 +200,7 @@ def search():
             form.get("fields", "all"),
             int(form.get("mr", 100)),
             AWIKI_CONFIG,
+            use_id_list=True,
         )
         # print(results[0][2])
         return search_t.render(results=results, query=form["query"])
@@ -209,9 +212,11 @@ def search():
 @app.route("/arxiv/<path:id>")
 def arxivview(id):
     try:
-        page = next(pagetools.arxiv.arxiv_search(id, "id", 1, AWIKI_CONFIG))
+        page = next(
+            pagetools.arxiv.arxiv_search(id, "id", 1, AWIKI_CONFIG, use_id_list=True)
+        )
     except StopIteration:
-        abort(404)
+        return Response("no such page", status=404, mimetype="text/plain")
     return get_template("arxiv_page.html").render(page=page)
 
 

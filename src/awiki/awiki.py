@@ -30,7 +30,6 @@ def awiki_view(page_name, bib=False, awiki_config=None):
         file_path = page.md_path
     subprocess.run([awiki_config.editor, file_path])
 
-
 def awiki_init(pages_dir, static_dir, awiki_dir, name):
     if os.path.exists(awiki_dir):
         if not click.confirm(f"directory exists: {awiki_dir!r} . overwrite?"):

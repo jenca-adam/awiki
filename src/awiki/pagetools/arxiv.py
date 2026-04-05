@@ -119,16 +119,21 @@ class ArxivPage:
         return self.page_id
 
 
-def arxiv_search(query, field, max_results, awiki_config):
+def arxiv_search(query, field, max_results, awiki_config, use_id_list=False):
     query = unidecode.unidecode(query.replace(";", " AND "))
-    url = f"https://export.arxiv.org/api/query?search_query={field}:{query}&max_results={max_results}"
+    if use_id_list and field == "id":
+        url = f"https://export.arxiv.org/api/query?id_list={query}&max_results={max_results}"
+    else:
+        url = f"https://export.arxiv.org/api/query?search_query={field}:{query}&max_results={max_results}"
     content = requests.get(url).content
     soup = bs(content, "xml")  # yes, barbaric
+    print(soup)
+    print("URL", url)
     for entry in soup.findAll("entry"):
         yield ArxivPage(
             entry.title.text,
             tuple(q.find("name").text for q in entry.find_all("author")),
-            entry.id.text.split("abs/", 1)[1],
+            query if use_id_list else entry.id.text.split("abs/", 1)[1],
             getattr(entry.find("arxiv:doi"), "text", None),
             getattr(entry.find("arxiv:journal_ref"), "text", None),
             getattr(entry.find("arxiv:comment"), "text", None),
