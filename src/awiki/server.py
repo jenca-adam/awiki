@@ -200,7 +200,7 @@ def search():
             form.get("fields", "all"),
             int(form.get("mr", 100)),
             AWIKI_CONFIG,
-            use_id_list=True,
+            use_id_list=False,
         )
         # print(results[0][2])
         return search_t.render(results=results, query=form["query"])
