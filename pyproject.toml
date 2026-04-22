@@ -18,7 +18,8 @@ dependencies=[
 	"python-magic",
 	"chardet",
         "click",
-        "auto_click_auto"
+        "auto_click_auto",
+        "pybtex"
 ]
 [project.scripts]
 awiki = "awiki:main"
