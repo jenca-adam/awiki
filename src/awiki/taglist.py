@@ -4,6 +4,13 @@ import yaml
 import os
 
 
+def get_taglist_file(awiki_config=None):
+    awiki_config = awiki_config or AwikiConfig()
+    return os.path.join(
+        awiki_config.project_root, awiki_config.awiki_dir, "taglist.yaml"
+    )
+
+
 def get_all_tags(awiki_config=None):
     awiki_config = awiki_config or AwikiConfig()
     tags = set()
@@ -20,9 +27,7 @@ def get_all_tags(awiki_config=None):
 
 def get_taglist_tags(awiki_config=None):
     awiki_config = awiki_config or AwikiConfig()
-    tags_file = os.path.join(
-        awiki_config.project_root, awiki_config.awiki_dir, "taglist.yaml"
-    )
+    tags_file = get_taglist_file(awiki_config)
     if not os.path.exists(tags_file):
         return []
     with open(tags_file, "r") as f:
@@ -32,9 +37,7 @@ def get_taglist_tags(awiki_config=None):
 def add_tags(tags, awiki_config=None):
     awiki_config = awiki_config or AwikiConfig()
     current_tags = set(get_taglist_tags())
-    tags_file = os.path.join(
-        awiki_config.project_root, awiki_config.awiki_dir, "taglist.yaml"
-    )
+    tags_file = get_taglist_file(awiki_config)
     current_tags.update(set(tags))
     with open(tags_file, "w") as f:
         yaml.safe_dump(list(current_tags), f)

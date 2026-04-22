@@ -82,13 +82,7 @@ class ArxivPage:
             if page.exists:
                 return page
 
-    def add(self):
-        if self.existing_page is not None:
-            return self.existing_page.page_name
-        page = Page(self.page_id)
-        page.makedir()
-        page_template = get_md_template("page")
-        markdown = page_template.render(page=self)
+    def get_metadata(self):
         metadata = {
             "title": self.title,
             "authors": list(self.authors),
@@ -102,6 +96,16 @@ class ArxivPage:
             metadata["arxiv_comment"] = self.comment
         if self.published:
             metadata["published"] = self.published.timestamp()
+        return metadata
+
+    def add(self):
+        if self.existing_page is not None:
+            return self.existing_page.page_name
+        page = Page(self.page_id)
+        page.makedir()
+        page_template = get_md_template("page")
+        markdown = page_template.render(page=self)
+        metadata = self.get_metadata()
         bibtex = self.get_bibtex()
         # write bib
         with open(os.path.join(page.root, "bib.bib"), "w") as f:
@@ -127,8 +131,6 @@ def arxiv_search(query, field, max_results, awiki_config, use_id_list=False):
         url = f"https://export.arxiv.org/api/query?search_query={field}:{query}&max_results={max_results}"
     content = requests.get(url).content
     soup = bs(content, "xml")  # yes, barbaric
-    print(soup)
-    print("URL", url)
     for entry in soup.findAll("entry"):
         yield ArxivPage(
             entry.title.text,

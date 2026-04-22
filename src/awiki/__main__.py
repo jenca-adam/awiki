@@ -1,4 +1,6 @@
 import click
+from auto_click_auto import enable_click_shell_completion
+from auto_click_auto.constants import ShellType
 import functools
 from .err import AwikiError
 from .server import run_app
@@ -11,8 +13,10 @@ from .awiki import (
     awiki_fix_myown,
     awiki_view,
     awiki_mk_taglist,
+    awiki_fix_archive_prefix,
+    awiki_fix_page,
 )
-
+import os
 import sys
 
 
@@ -54,7 +58,7 @@ def run(port):
 @click.option(
     "-a", "--awiki_dir", prompt="Directory to store internal data in", default=".awiki"
 )
-@click.option("-n", "name", prompt="Your SURNAME (for page sorting)", required=True)
+@click.option("-n", "--name", prompt="Your SURNAME (for page sorting)", required=True)
 @wrap_error
 def init(pages_dir, static_dir, awiki_dir, name):
     awiki_init(pages_dir, static_dir, awiki_dir, name)
@@ -94,5 +98,48 @@ def mk_taglist():
     awiki_mk_taglist()
 
 
+@main.command()
+@click.argument("page", type=str)
+@click.option(
+    "-m",
+    "--metadata",
+    help="Generate metadata by fetching arXiv page ID",
+    default=False,
+    is_flag=True,
+)
+@click.option(
+    "-b", "--arxiv-bib", help="Add bib fields from ArXiv", default=False, is_flag=True
+)
+def fix_page(page, metadata, arxiv_bib):
+    awiki_fix_page(page, metadata, arxiv_bib)
+
+
+@main.command()
+@click.option(
+    "-m",
+    "--metadata",
+    help="Generate metadata by fetching arXiv page IDs",
+    is_flag=True,
+    default=False,
+)
+@click.option(
+    "-b", "--arxiv-bib", help="Add bib fields from ArXiv", default=False, is_flag=True
+)
+@wrap_error
+def fix_archive_prefix(metadata, arxiv_bib):
+    awiki_fix_archive_prefix(metadata, arxiv_bib)
+
+
+@main.command()
+def complete():
+    enable_click_shell_completion(
+        program_name="awiki",
+        shells={ShellType.BASH, ShellType.ZSH},
+    )
+
+
 if __name__ == "__main__":
+    src_dir = os.getcwd()
+
     main()
+    os.chdir(src_dir)

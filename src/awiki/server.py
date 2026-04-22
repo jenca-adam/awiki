@@ -57,7 +57,6 @@ def view_page(pagename):
 
 @app.route("/makebib/<string:pagename>.bib")
 def get_bib(pagename):
-
     page = Page(pagename)
     try:
         meta, html, md = page.load()
@@ -75,7 +74,6 @@ def get_bib(pagename):
 
 @app.route("/view/<string:pagename>/<string:attachment>")
 def view_attachment(pagename, attachment):
-
     mimetype, encoding = mimetypes.guess_type(attachment)
     content = open("pages/%s/%s" % (pagename, attachment), "rb").read()
     return Response(content, mimetype=mimetype)
@@ -89,7 +87,6 @@ class EditForm(Form):
 
 @app.route("/edit/<string:pagename>", methods=["GET", "POST"])
 def edit_page(pagename):
-
     mdf = Page(pagename)
     try:
         meta, html, md = mdf.load()
@@ -258,7 +255,7 @@ def set_tags(page):
     if tags is None:
         return "no tags"
     metadata, html, markdown = p.load()
-    tag_list = [t.strip() for t in tags.split(",")]
+    tag_list = [t.strip() for t in tags.split(",") if t.strip()]
     add_tags(tag_list, AWIKI_CONFIG)
     metadata["tags"] = tag_list
     p.save(metadata, markdown)

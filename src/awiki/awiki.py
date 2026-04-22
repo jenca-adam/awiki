@@ -7,13 +7,17 @@ import pyaml
 from .err import AwikiError
 from .notmyown import get_notmyown_pages, write_notmyown_pages
 from .myown import get_myown_pages, write_myown_pages
+from .archprefix import fix_archive_prefix, fix_page_archive_prefix
 from .page import Page
-from .taglist import add_tags, get_all_tags
+from .taglist import add_tags, get_all_tags, get_taglist_file
 import click
 import unidecode
 
 
 def awiki_mk_taglist(awiki_config=None):
+    taglist_file = get_taglist_file(awiki_config)
+    if os.path.exists(taglist_file):
+        os.remove(taglist_file)
     add_tags(get_all_tags(), awiki_config=awiki_config)
 
 
@@ -29,6 +33,7 @@ def awiki_view(page_name, bib=False, awiki_config=None):
     else:
         file_path = page.md_path
     subprocess.run([awiki_config.editor, file_path])
+
 
 def awiki_init(pages_dir, static_dir, awiki_dir, name):
     if os.path.exists(awiki_dir):
@@ -89,3 +94,13 @@ def awiki_fix_myown():
     awiki_config = AwikiConfig()
     pages = get_myown_pages(awiki_config)
     write_myown_pages(*pages, awiki_config)
+
+
+def awiki_fix_archive_prefix(fix_metadata, arxiv_bib):
+    awiki_config = AwikiConfig()
+    fix_archive_prefix(awiki_config, fix_metadata, arxiv_bib)
+
+
+def awiki_fix_page(page_name, fix_metadata, arxiv_bib):
+    awiki_config = AwikiConfig()
+    fix_page_archive_prefix(page_name, fix_metadata, arxiv_bib, awiki_config)

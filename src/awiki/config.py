@@ -13,9 +13,17 @@ DEFAULT_CONFIG = {
 
 class AwikiConfig:
     def __init__(self):
-        if not os.path.exists("awiki_config.yaml"):
+        cnf_dir = os.getcwd()
+        found = False
+        while cnf_dir != "/":
+            if os.path.exists(os.path.join(cnf_dir, "awiki_config.yaml")):
+                found = True
+                break
+            cnf_dir = os.path.realpath(os.path.join(cnf_dir, os.pardir))
+        os.chdir(cnf_dir)
+        if not found:
             raise AwikiError(
-                "can't find project config file 'awiki_config.yaml'\ncheck that you're in the correct directory and try again\nalternatively, run 'awiki init'"
+                "can't find project config file 'awiki_config.yaml' (here or in any parent)\ncheck that you're in the correct directory and try again\nalternatively, run 'awiki init'"
             )
         with open("awiki_config.yaml") as f:
             config_dict = yaml.load(f, yaml.Loader)

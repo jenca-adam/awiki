@@ -1,6 +1,12 @@
 import enum
 import io
-import re
+import regex as re
+from requests.structures import CaseInsensitiveDict
+
+try:
+    import pybtex.database
+except ImportError:
+    pybtex = None
 
 
 class BibParseError(ValueError):
@@ -8,11 +14,14 @@ class BibParseError(ValueError):
 
 
 def smart_quote(value):
-    return '"{}"'.format(value.replace('"', '\\"'))
+
+    pattern = re.compile(r'(?<!([^\\]|^)(\\(\\\\)*))"')
+    escaped = pattern.sub(r"\"", value)
+    return '"{}"'.format(escaped)
 
 
 def smart_brace(value):
-    return "{{{}}}".format(value.replace("{", "\\{").replace("}", "\\}"))
+    return "{{{}}}".format(value)
 
 
 def smart_escape(value, style):
@@ -44,8 +53,8 @@ class BibParserCharTypes:
     ASCII = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'\"()*+,-./:;<=>?@[\\]^_`{|}~"
     CTKEY = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_:/."
     BTYPE = "abcdefghijklmnopqrstuvwxyz"
-    FDKEY = "abcdefghijklmnopqrstuvwxyz"
-    IDVAL = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-"
+    FDKEY = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_"
+    IDVAL = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-._:/"
     LBRAC = "{"
     RBRAC = "}"
     QUOTE = '"'
@@ -56,17 +65,17 @@ class BibParserCharTypes:
     EQUAL = "="
 
 
-class BibParser:
+class LegacyBibParser:
     def __init__(self):
         self.bib_type = None
         self.citekey = None
         self.fields = []
         self.state = BibParserState.IDLE
+        self.brace_cnt = 0
         self.accum = []
         self.done = False
 
     def feed(self, char):
-
         if not char:
             raise BibParseError("unexpected end of input")
         if self.state == BibParserState.IDLE:
@@ -76,29 +85,27 @@ class BibParser:
 
             elif char in BibParserCharTypes.RBRAC:
                 if self.bib_type is None:
-                    raise BibParseError("disallowed char } before entry type")
+                    return  # raise BibParseError("disallowed char } before entry type")
                 if self.citekey is None:
                     self.citekey = "".join(self.accum)  # assume empty
                 self.done = True
             elif char in BibParserCharTypes.COMMA:
                 if self.bib_type is None:
-                    raise BibParseError("disallowed char , before entry type")
+                    return  # raise BibParseError("disallowed char , before entry type")
                 if self.citekey is None:
                     self.citekey = "".join(self.accum)
                 self.state = BibParserState.READING_FIELD_KEY
             elif char in BibParserCharTypes.EQUAL:
                 if self.bib_type is None:
-                    raise BibParseError("disallowed char = before entry type")
+                    return  # raise BibParseError("disallowed char = before entry type")
                 if self.citekey is None:
-                    raise BibParseError("disallowed char = before self.citekey")
+                    return  # raise BibParseError("disallowed char = before the citekey")
                 if not self.fields or self.fields[-1][1] is not None:
-                    raise BibParseError("disallowed char = before the field key")
+                    return  # raise BibParseError("disallowed char = before the field key")
                 self.state = BibParserState.READING_VALUE
             elif char not in BibParserCharTypes.WSPCE:
-                raise BibParseError(
-                    f"disallowed char {char} outside a field, the self.citekey, or the type"
-                )
-
+                ### be more lenient
+                return
         elif self.state == BibParserState.READING_TYPE:
             char = char.lower()
             if char in BibParserCharTypes.BTYPE:
@@ -138,6 +145,7 @@ class BibParser:
                 raise BibParseError(f"disallowed char {char} in the field key")
         elif self.state == BibParserState.READING_FIELD_VALUE:
             if char in BibParserCharTypes.LBRAC:
+                self.brace_cnt += 1
                 self.state = BibParserState.READING_FIELD_VALUE_BRACED
             elif char in BibParserCharTypes.QUOTE:
                 self.state = BibParserState.READING_FIELD_VALUE_QUOTED
@@ -149,24 +157,24 @@ class BibParser:
                     f"disallowed char {char} while determining the field value style"
                 )
         elif self.state == BibParserState.READING_FIELD_VALUE_BRACED:
+            if char in BibParserCharTypes.LBRAC:
+                self.brace_cnt += 1
             if char in BibParserCharTypes.RBRAC:
-                if self.accum and self.accum[-1] == "\\":
-                    self.accum.append(char)
-                else:
+                self.brace_cnt -= 1
+                if self.brace_cnt == 0:
                     self.fields[-1][1] = "".join(self.accum)
                     self.accum = []
                     self.state = BibParserState.IDLE
+                else:
+                    self.accum.append(char)
             else:
                 self.accum.append(char)
 
         elif self.state == BibParserState.READING_FIELD_VALUE_QUOTED:
             if char in BibParserCharTypes.QUOTE:
-                if self.accum and self.accum[-1] == "\\":
-                    self.accum.append(char)
-                else:
-                    self.fields[-1][1] = "".join(self.accum)
-                    self.accum = []
-                    self.state = BibParserState.IDLE
+                self.fields[-1][1] = "".join(self.accum)
+                self.accum = []
+                self.state = BibParserState.IDLE
             else:
                 self.accum.append(char)
         elif self.state == BibParserState.READING_FIELD_VALUE_ID:
@@ -188,18 +196,44 @@ class BibParser:
         else:
             raise NotImplementedError(f"unimplemented self.state:{self.state}")
 
+    def parse(self, stream):
+        while not self.done:
+            self.feed(stream.read(1))
+
+
+class PybtexBibParser:
+    def __init__(self):
+        self.bib_type = None
+        self.citekey = None
+        self.fields = []
+
+    def parse(self, stream):
+        try:
+            parsed = pybtex.database.parse_string(stream.read(), "bibtex")
+        except Exception as e:
+            raise BibParseError(str(e)) from e
+        vals = list(parsed.entries.values())
+        if not vals:
+            raise BibParseError("No entries in bib")
+        entry = vals[0]
+        self.fields = entry.fields
+        self.citekey = entry.key
+        self.bib_type = entry.type
+
+
+BibParser = PybtexBibParser if pybtex else LegacyBibParserg
+
 
 class Bib:
     def __init__(self, bib_type, citekey, fields):
         self.type = bib_type
         self.citekey = citekey
-        self.fields = dict(fields)
+        self.fields = CaseInsensitiveDict(fields)
 
     @classmethod
     def parse(cls, stream):
         parser = BibParser()
-        while not parser.done:
-            parser.feed(stream.read(1))
+        parser.parse(stream)
         return cls(parser.bib_type, parser.citekey, parser.fields)
 
     def __repr__(self):
