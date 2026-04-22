@@ -5,7 +5,9 @@ from requests.structures import CaseInsensitiveDict
 
 try:
     import pybtex.database
+    from pybtex.database.output.bibtex import Writer as _PybtexWriter
 except ImportError:
+    raise 
     pybtex = None
 
 
@@ -36,7 +38,6 @@ def smart_escape(value, style):
             return smart_quote(value)
         else:
             return smart_brace(value)
-
 
 class BibParserState(enum.Enum):
     IDLE = 0
@@ -206,6 +207,7 @@ class PybtexBibParser:
         self.bib_type = None
         self.citekey = None
         self.fields = []
+        self._pybtex = None
 
     def parse(self, stream):
         try:
@@ -217,11 +219,15 @@ class PybtexBibParser:
             raise BibParseError("No entries in bib")
         entry = vals[0]
         self.fields = entry.fields
+        for role, people in entry.persons.items():
+            writer = _PybtexWriter()
+            self.fields[role]=" and ".join(writer._format_name(None, person) for person in people)
+            
         self.citekey = entry.key
         self.bib_type = entry.type
 
 
-BibParser = PybtexBibParser if pybtex else LegacyBibParserg
+BibParser = PybtexBibParser if pybtex else LegacyBibParser
 
 
 class Bib:
@@ -249,6 +255,7 @@ class Bib:
         return cls(type, citekey, [])
 
     def serialise(self, style="best", spaces=None, sep="\n"):
+
         assert (
             sep.isspace()
         ), "separator must be white-space to avoid producing invalid files"

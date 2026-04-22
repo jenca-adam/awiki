@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name="awiki"
-version="0.1.8"
+version="0.1.9"
 dependencies=[
 	"flask",
 	"pyaml",
@@ -19,7 +19,8 @@ dependencies=[
 	"chardet",
         "click",
         "auto_click_auto",
-        "pybtex"
+        "pybtex",
+        "regex"
 ]
 [project.scripts]
 awiki = "awiki:main"
